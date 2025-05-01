@@ -22,7 +22,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-in-org)`.
-    func reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output
+    func reactionsListForTeamDiscussionCommentInOrg(_ input: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input) async throws -> Operations.ReactionsListForTeamDiscussionCommentInOrg.Output
     /// Create reaction for a team discussion comment
     ///
     /// Create a reaction to a [team discussion comment](https://docs.github.com/rest/teams/discussion-comments#get-a-discussion-comment).
@@ -36,7 +36,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-in-org)`.
-    func reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output
+    func reactionsCreateForTeamDiscussionCommentInOrg(_ input: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input) async throws -> Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output
     /// Delete team discussion comment reaction
     ///
     /// > [!NOTE]
@@ -48,7 +48,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion-comment)`.
-    func reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment(_ input: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Input) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Output
+    func reactionsDeleteForTeamDiscussionComment(_ input: Operations.ReactionsDeleteForTeamDiscussionComment.Input) async throws -> Operations.ReactionsDeleteForTeamDiscussionComment.Output
     /// List reactions for a team discussion
     ///
     /// List the reactions to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
@@ -60,7 +60,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-in-org)`.
-    func reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output
+    func reactionsListForTeamDiscussionInOrg(_ input: Operations.ReactionsListForTeamDiscussionInOrg.Input) async throws -> Operations.ReactionsListForTeamDiscussionInOrg.Output
     /// Create reaction for a team discussion
     ///
     /// Create a reaction to a [team discussion](https://docs.github.com/rest/teams/discussions#get-a-discussion).
@@ -74,7 +74,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-in-org)`.
-    func reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output
+    func reactionsCreateForTeamDiscussionInOrg(_ input: Operations.ReactionsCreateForTeamDiscussionInOrg.Input) async throws -> Operations.ReactionsCreateForTeamDiscussionInOrg.Output
     /// Delete team discussion reaction
     ///
     /// > [!NOTE]
@@ -86,21 +86,21 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion)`.
-    func reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion(_ input: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Input) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Output
+    func reactionsDeleteForTeamDiscussion(_ input: Operations.ReactionsDeleteForTeamDiscussion.Input) async throws -> Operations.ReactionsDeleteForTeamDiscussion.Output
     /// List reactions for a commit comment
     ///
     /// List the reactions to a [commit comment](https://docs.github.com/rest/commits/comments#get-a-commit-comment).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/get(reactions/list-for-commit-comment)`.
-    func reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Output
+    func reactionsListForCommitComment(_ input: Operations.ReactionsListForCommitComment.Input) async throws -> Operations.ReactionsListForCommitComment.Output
     /// Create reaction for a commit comment
     ///
     /// Create a reaction to a [commit comment](https://docs.github.com/rest/commits/comments#get-a-commit-comment). A response with an HTTP `200` status means that you already added the reaction type to this commit comment.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/post(reactions/create-for-commit-comment)`.
-    func reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output
+    func reactionsCreateForCommitComment(_ input: Operations.ReactionsCreateForCommitComment.Input) async throws -> Operations.ReactionsCreateForCommitComment.Output
     /// Delete a commit comment reaction
     ///
     /// > [!NOTE]
@@ -110,21 +110,21 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-commit-comment)`.
-    func reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment(_ input: Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Input) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Output
+    func reactionsDeleteForCommitComment(_ input: Operations.ReactionsDeleteForCommitComment.Input) async throws -> Operations.ReactionsDeleteForCommitComment.Output
     /// List reactions for an issue comment
     ///
     /// List the reactions to an [issue comment](https://docs.github.com/rest/issues/comments#get-an-issue-comment).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/get(reactions/list-for-issue-comment)`.
-    func reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Output
+    func reactionsListForIssueComment(_ input: Operations.ReactionsListForIssueComment.Input) async throws -> Operations.ReactionsListForIssueComment.Output
     /// Create reaction for an issue comment
     ///
     /// Create a reaction to an [issue comment](https://docs.github.com/rest/issues/comments#get-an-issue-comment). A response with an HTTP `200` status means that you already added the reaction type to this issue comment.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/post(reactions/create-for-issue-comment)`.
-    func reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output
+    func reactionsCreateForIssueComment(_ input: Operations.ReactionsCreateForIssueComment.Input) async throws -> Operations.ReactionsCreateForIssueComment.Output
     /// Delete an issue comment reaction
     ///
     /// > [!NOTE]
@@ -134,21 +134,21 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-issue-comment)`.
-    func reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment(_ input: Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Input) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Output
+    func reactionsDeleteForIssueComment(_ input: Operations.ReactionsDeleteForIssueComment.Input) async throws -> Operations.ReactionsDeleteForIssueComment.Output
     /// List reactions for an issue
     ///
     /// List the reactions to an [issue](https://docs.github.com/rest/issues/issues#get-an-issue).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/{issue_number}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/get(reactions/list-for-issue)`.
-    func reactions_sol_list_hyphen_for_hyphen_issue(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_issue.Output
+    func reactionsListForIssue(_ input: Operations.ReactionsListForIssue.Input) async throws -> Operations.ReactionsListForIssue.Output
     /// Create reaction for an issue
     ///
     /// Create a reaction to an [issue](https://docs.github.com/rest/issues/issues#get-an-issue). A response with an HTTP `200` status means that you already added the reaction type to this issue.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/{issue_number}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/post(reactions/create-for-issue)`.
-    func reactions_sol_create_hyphen_for_hyphen_issue(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output
+    func reactionsCreateForIssue(_ input: Operations.ReactionsCreateForIssue.Input) async throws -> Operations.ReactionsCreateForIssue.Output
     /// Delete an issue reaction
     ///
     /// > [!NOTE]
@@ -158,21 +158,21 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/delete(reactions/delete-for-issue)`.
-    func reactions_sol_delete_hyphen_for_hyphen_issue(_ input: Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Input) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Output
+    func reactionsDeleteForIssue(_ input: Operations.ReactionsDeleteForIssue.Input) async throws -> Operations.ReactionsDeleteForIssue.Output
     /// List reactions for a pull request review comment
     ///
     /// List the reactions to a [pull request review comment](https://docs.github.com/rest/pulls/comments#get-a-review-comment-for-a-pull-request).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/get(reactions/list-for-pull-request-review-comment)`.
-    func reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output
+    func reactionsListForPullRequestReviewComment(_ input: Operations.ReactionsListForPullRequestReviewComment.Input) async throws -> Operations.ReactionsListForPullRequestReviewComment.Output
     /// Create reaction for a pull request review comment
     ///
     /// Create a reaction to a [pull request review comment](https://docs.github.com/rest/pulls/comments#get-a-review-comment-for-a-pull-request). A response with an HTTP `200` status means that you already added the reaction type to this pull request review comment.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/post(reactions/create-for-pull-request-review-comment)`.
-    func reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output
+    func reactionsCreateForPullRequestReviewComment(_ input: Operations.ReactionsCreateForPullRequestReviewComment.Input) async throws -> Operations.ReactionsCreateForPullRequestReviewComment.Output
     /// Delete a pull request comment reaction
     ///
     /// > [!NOTE]
@@ -182,21 +182,21 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-pull-request-comment)`.
-    func reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment(_ input: Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Input) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Output
+    func reactionsDeleteForPullRequestComment(_ input: Operations.ReactionsDeleteForPullRequestComment.Input) async throws -> Operations.ReactionsDeleteForPullRequestComment.Output
     /// List reactions for a release
     ///
     /// List the reactions to a [release](https://docs.github.com/rest/releases/releases#get-a-release).
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/releases/{release_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/get(reactions/list-for-release)`.
-    func reactions_sol_list_hyphen_for_hyphen_release(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_release.Output
+    func reactionsListForRelease(_ input: Operations.ReactionsListForRelease.Input) async throws -> Operations.ReactionsListForRelease.Output
     /// Create reaction for a release
     ///
     /// Create a reaction to a [release](https://docs.github.com/rest/releases/releases#get-a-release). A response with a `Status: 200 OK` means that you already added the reaction type to this release.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/releases/{release_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/post(reactions/create-for-release)`.
-    func reactions_sol_create_hyphen_for_hyphen_release(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_release.Output
+    func reactionsCreateForRelease(_ input: Operations.ReactionsCreateForRelease.Input) async throws -> Operations.ReactionsCreateForRelease.Output
     /// Delete a release reaction
     ///
     /// > [!NOTE]
@@ -206,7 +206,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/delete(reactions/delete-for-release)`.
-    func reactions_sol_delete_hyphen_for_hyphen_release(_ input: Operations.reactions_sol_delete_hyphen_for_hyphen_release.Input) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_release.Output
+    func reactionsDeleteForRelease(_ input: Operations.ReactionsDeleteForRelease.Input) async throws -> Operations.ReactionsDeleteForRelease.Output
     /// List reactions for a team discussion comment (Legacy)
     ///
     /// > [!WARNING]
@@ -219,7 +219,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-legacy)`.
     @available(*, deprecated)
-    func reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output
+    func reactionsListForTeamDiscussionCommentLegacy(_ input: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input) async throws -> Operations.ReactionsListForTeamDiscussionCommentLegacy.Output
     /// Create reaction for a team discussion comment (Legacy)
     ///
     /// > [!WARNING]
@@ -234,7 +234,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-legacy)`.
     @available(*, deprecated)
-    func reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output
+    func reactionsCreateForTeamDiscussionCommentLegacy(_ input: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input) async throws -> Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Output
     /// List reactions for a team discussion (Legacy)
     ///
     /// > [!WARNING]
@@ -247,7 +247,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-legacy)`.
     @available(*, deprecated)
-    func reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy(_ input: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output
+    func reactionsListForTeamDiscussionLegacy(_ input: Operations.ReactionsListForTeamDiscussionLegacy.Input) async throws -> Operations.ReactionsListForTeamDiscussionLegacy.Output
     /// Create reaction for a team discussion (Legacy)
     ///
     /// > [!WARNING]
@@ -262,7 +262,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-legacy)`.
     @available(*, deprecated)
-    func reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy(_ input: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output
+    func reactionsCreateForTeamDiscussionLegacy(_ input: Operations.ReactionsCreateForTeamDiscussionLegacy.Input) async throws -> Operations.ReactionsCreateForTeamDiscussionLegacy.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -278,12 +278,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-in-org)`.
-    public func reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input(
+    public func reactionsListForTeamDiscussionCommentInOrg(
+        path: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Path,
+        query: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Query = .init(),
+        headers: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForTeamDiscussionCommentInOrg.Output {
+        try await reactionsListForTeamDiscussionCommentInOrg(Operations.ReactionsListForTeamDiscussionCommentInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -302,12 +302,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-in-org)`.
-    public func reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input(
+    public func reactionsCreateForTeamDiscussionCommentInOrg(
+        path: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Path,
+        headers: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Body
+    ) async throws -> Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output {
+        try await reactionsCreateForTeamDiscussionCommentInOrg(Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -324,8 +324,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion-comment)`.
-    public func reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment(path: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Input.Path) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Output {
-        try await reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment(Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Input(path: path))
+    public func reactionsDeleteForTeamDiscussionComment(path: Operations.ReactionsDeleteForTeamDiscussionComment.Input.Path) async throws -> Operations.ReactionsDeleteForTeamDiscussionComment.Output {
+        try await reactionsDeleteForTeamDiscussionComment(Operations.ReactionsDeleteForTeamDiscussionComment.Input(path: path))
     }
     /// List reactions for a team discussion
     ///
@@ -338,12 +338,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-in-org)`.
-    public func reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org(Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input(
+    public func reactionsListForTeamDiscussionInOrg(
+        path: Operations.ReactionsListForTeamDiscussionInOrg.Input.Path,
+        query: Operations.ReactionsListForTeamDiscussionInOrg.Input.Query = .init(),
+        headers: Operations.ReactionsListForTeamDiscussionInOrg.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForTeamDiscussionInOrg.Output {
+        try await reactionsListForTeamDiscussionInOrg(Operations.ReactionsListForTeamDiscussionInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -362,12 +362,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-in-org)`.
-    public func reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input(
+    public func reactionsCreateForTeamDiscussionInOrg(
+        path: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Path,
+        headers: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Body
+    ) async throws -> Operations.ReactionsCreateForTeamDiscussionInOrg.Output {
+        try await reactionsCreateForTeamDiscussionInOrg(Operations.ReactionsCreateForTeamDiscussionInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -384,8 +384,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion)`.
-    public func reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion(path: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Input.Path) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Output {
-        try await reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion(Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Input(path: path))
+    public func reactionsDeleteForTeamDiscussion(path: Operations.ReactionsDeleteForTeamDiscussion.Input.Path) async throws -> Operations.ReactionsDeleteForTeamDiscussion.Output {
+        try await reactionsDeleteForTeamDiscussion(Operations.ReactionsDeleteForTeamDiscussion.Input(path: path))
     }
     /// List reactions for a commit comment
     ///
@@ -393,12 +393,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/get(reactions/list-for-commit-comment)`.
-    public func reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment(Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input(
+    public func reactionsListForCommitComment(
+        path: Operations.ReactionsListForCommitComment.Input.Path,
+        query: Operations.ReactionsListForCommitComment.Input.Query = .init(),
+        headers: Operations.ReactionsListForCommitComment.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForCommitComment.Output {
+        try await reactionsListForCommitComment(Operations.ReactionsListForCommitComment.Input(
             path: path,
             query: query,
             headers: headers
@@ -410,12 +410,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/post(reactions/create-for-commit-comment)`.
-    public func reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment(Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input(
+    public func reactionsCreateForCommitComment(
+        path: Operations.ReactionsCreateForCommitComment.Input.Path,
+        headers: Operations.ReactionsCreateForCommitComment.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForCommitComment.Input.Body
+    ) async throws -> Operations.ReactionsCreateForCommitComment.Output {
+        try await reactionsCreateForCommitComment(Operations.ReactionsCreateForCommitComment.Input(
             path: path,
             headers: headers,
             body: body
@@ -430,8 +430,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-commit-comment)`.
-    public func reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment(path: Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Input.Path) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Output {
-        try await reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment(Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Input(path: path))
+    public func reactionsDeleteForCommitComment(path: Operations.ReactionsDeleteForCommitComment.Input.Path) async throws -> Operations.ReactionsDeleteForCommitComment.Output {
+        try await reactionsDeleteForCommitComment(Operations.ReactionsDeleteForCommitComment.Input(path: path))
     }
     /// List reactions for an issue comment
     ///
@@ -439,12 +439,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/get(reactions/list-for-issue-comment)`.
-    public func reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment(Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input(
+    public func reactionsListForIssueComment(
+        path: Operations.ReactionsListForIssueComment.Input.Path,
+        query: Operations.ReactionsListForIssueComment.Input.Query = .init(),
+        headers: Operations.ReactionsListForIssueComment.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForIssueComment.Output {
+        try await reactionsListForIssueComment(Operations.ReactionsListForIssueComment.Input(
             path: path,
             query: query,
             headers: headers
@@ -456,12 +456,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/post(reactions/create-for-issue-comment)`.
-    public func reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment(Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input(
+    public func reactionsCreateForIssueComment(
+        path: Operations.ReactionsCreateForIssueComment.Input.Path,
+        headers: Operations.ReactionsCreateForIssueComment.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForIssueComment.Input.Body
+    ) async throws -> Operations.ReactionsCreateForIssueComment.Output {
+        try await reactionsCreateForIssueComment(Operations.ReactionsCreateForIssueComment.Input(
             path: path,
             headers: headers,
             body: body
@@ -476,8 +476,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-issue-comment)`.
-    public func reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment(path: Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Input.Path) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Output {
-        try await reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment(Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Input(path: path))
+    public func reactionsDeleteForIssueComment(path: Operations.ReactionsDeleteForIssueComment.Input.Path) async throws -> Operations.ReactionsDeleteForIssueComment.Output {
+        try await reactionsDeleteForIssueComment(Operations.ReactionsDeleteForIssueComment.Input(path: path))
     }
     /// List reactions for an issue
     ///
@@ -485,12 +485,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/{issue_number}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/get(reactions/list-for-issue)`.
-    public func reactions_sol_list_hyphen_for_hyphen_issue(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_issue.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_issue(Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input(
+    public func reactionsListForIssue(
+        path: Operations.ReactionsListForIssue.Input.Path,
+        query: Operations.ReactionsListForIssue.Input.Query = .init(),
+        headers: Operations.ReactionsListForIssue.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForIssue.Output {
+        try await reactionsListForIssue(Operations.ReactionsListForIssue.Input(
             path: path,
             query: query,
             headers: headers
@@ -502,12 +502,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/{issue_number}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/post(reactions/create-for-issue)`.
-    public func reactions_sol_create_hyphen_for_hyphen_issue(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_issue(Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input(
+    public func reactionsCreateForIssue(
+        path: Operations.ReactionsCreateForIssue.Input.Path,
+        headers: Operations.ReactionsCreateForIssue.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForIssue.Input.Body
+    ) async throws -> Operations.ReactionsCreateForIssue.Output {
+        try await reactionsCreateForIssue(Operations.ReactionsCreateForIssue.Input(
             path: path,
             headers: headers,
             body: body
@@ -522,8 +522,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/delete(reactions/delete-for-issue)`.
-    public func reactions_sol_delete_hyphen_for_hyphen_issue(path: Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Input.Path) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Output {
-        try await reactions_sol_delete_hyphen_for_hyphen_issue(Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Input(path: path))
+    public func reactionsDeleteForIssue(path: Operations.ReactionsDeleteForIssue.Input.Path) async throws -> Operations.ReactionsDeleteForIssue.Output {
+        try await reactionsDeleteForIssue(Operations.ReactionsDeleteForIssue.Input(path: path))
     }
     /// List reactions for a pull request review comment
     ///
@@ -531,12 +531,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/get(reactions/list-for-pull-request-review-comment)`.
-    public func reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input(
+    public func reactionsListForPullRequestReviewComment(
+        path: Operations.ReactionsListForPullRequestReviewComment.Input.Path,
+        query: Operations.ReactionsListForPullRequestReviewComment.Input.Query = .init(),
+        headers: Operations.ReactionsListForPullRequestReviewComment.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForPullRequestReviewComment.Output {
+        try await reactionsListForPullRequestReviewComment(Operations.ReactionsListForPullRequestReviewComment.Input(
             path: path,
             query: query,
             headers: headers
@@ -548,12 +548,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/post(reactions/create-for-pull-request-review-comment)`.
-    public func reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input(
+    public func reactionsCreateForPullRequestReviewComment(
+        path: Operations.ReactionsCreateForPullRequestReviewComment.Input.Path,
+        headers: Operations.ReactionsCreateForPullRequestReviewComment.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForPullRequestReviewComment.Input.Body
+    ) async throws -> Operations.ReactionsCreateForPullRequestReviewComment.Output {
+        try await reactionsCreateForPullRequestReviewComment(Operations.ReactionsCreateForPullRequestReviewComment.Input(
             path: path,
             headers: headers,
             body: body
@@ -568,8 +568,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-pull-request-comment)`.
-    public func reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment(path: Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Input.Path) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Output {
-        try await reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment(Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Input(path: path))
+    public func reactionsDeleteForPullRequestComment(path: Operations.ReactionsDeleteForPullRequestComment.Input.Path) async throws -> Operations.ReactionsDeleteForPullRequestComment.Output {
+        try await reactionsDeleteForPullRequestComment(Operations.ReactionsDeleteForPullRequestComment.Input(path: path))
     }
     /// List reactions for a release
     ///
@@ -577,12 +577,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/releases/{release_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/get(reactions/list-for-release)`.
-    public func reactions_sol_list_hyphen_for_hyphen_release(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_release.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_release(Operations.reactions_sol_list_hyphen_for_hyphen_release.Input(
+    public func reactionsListForRelease(
+        path: Operations.ReactionsListForRelease.Input.Path,
+        query: Operations.ReactionsListForRelease.Input.Query = .init(),
+        headers: Operations.ReactionsListForRelease.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForRelease.Output {
+        try await reactionsListForRelease(Operations.ReactionsListForRelease.Input(
             path: path,
             query: query,
             headers: headers
@@ -594,12 +594,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/releases/{release_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/post(reactions/create-for-release)`.
-    public func reactions_sol_create_hyphen_for_hyphen_release(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_release.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_release(Operations.reactions_sol_create_hyphen_for_hyphen_release.Input(
+    public func reactionsCreateForRelease(
+        path: Operations.ReactionsCreateForRelease.Input.Path,
+        headers: Operations.ReactionsCreateForRelease.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForRelease.Input.Body
+    ) async throws -> Operations.ReactionsCreateForRelease.Output {
+        try await reactionsCreateForRelease(Operations.ReactionsCreateForRelease.Input(
             path: path,
             headers: headers,
             body: body
@@ -614,8 +614,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/delete(reactions/delete-for-release)`.
-    public func reactions_sol_delete_hyphen_for_hyphen_release(path: Operations.reactions_sol_delete_hyphen_for_hyphen_release.Input.Path) async throws -> Operations.reactions_sol_delete_hyphen_for_hyphen_release.Output {
-        try await reactions_sol_delete_hyphen_for_hyphen_release(Operations.reactions_sol_delete_hyphen_for_hyphen_release.Input(path: path))
+    public func reactionsDeleteForRelease(path: Operations.ReactionsDeleteForRelease.Input.Path) async throws -> Operations.ReactionsDeleteForRelease.Output {
+        try await reactionsDeleteForRelease(Operations.ReactionsDeleteForRelease.Input(path: path))
     }
     /// List reactions for a team discussion comment (Legacy)
     ///
@@ -629,12 +629,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy(Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input(
+    public func reactionsListForTeamDiscussionCommentLegacy(
+        path: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Path,
+        query: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Query = .init(),
+        headers: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForTeamDiscussionCommentLegacy.Output {
+        try await reactionsListForTeamDiscussionCommentLegacy(Operations.ReactionsListForTeamDiscussionCommentLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -654,12 +654,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input(
+    public func reactionsCreateForTeamDiscussionCommentLegacy(
+        path: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Path,
+        headers: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Body
+    ) async throws -> Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Output {
+        try await reactionsCreateForTeamDiscussionCommentLegacy(Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -677,12 +677,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-legacy)`.
     @available(*, deprecated)
-    public func reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy(
-        path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Path,
-        query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output {
-        try await reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy(Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input(
+    public func reactionsListForTeamDiscussionLegacy(
+        path: Operations.ReactionsListForTeamDiscussionLegacy.Input.Path,
+        query: Operations.ReactionsListForTeamDiscussionLegacy.Input.Query = .init(),
+        headers: Operations.ReactionsListForTeamDiscussionLegacy.Input.Headers = .init()
+    ) async throws -> Operations.ReactionsListForTeamDiscussionLegacy.Output {
+        try await reactionsListForTeamDiscussionLegacy(Operations.ReactionsListForTeamDiscussionLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -702,12 +702,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-legacy)`.
     @available(*, deprecated)
-    public func reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy(
-        path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Path,
-        headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Body
-    ) async throws -> Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output {
-        try await reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input(
+    public func reactionsCreateForTeamDiscussionLegacy(
+        path: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Path,
+        headers: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Headers = .init(),
+        body: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Body
+    ) async throws -> Operations.ReactionsCreateForTeamDiscussionLegacy.Output {
+        try await reactionsCreateForTeamDiscussionLegacy(Operations.ReactionsCreateForTeamDiscussionLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -717,6 +717,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -732,36 +741,36 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -769,30 +778,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -831,9 +840,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -848,7 +857,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -867,34 +876,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -904,152 +913,152 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Reactions to conversations provide a way to help people express their feelings more simply and effectively.
         ///
         /// - Remark: Generated from `#/components/schemas/reaction`.
-        public struct reaction: Codable, Hashable, Sendable {
+        public struct Reaction: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/reaction/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/reaction/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/reaction/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// The reaction to use
             ///
             /// - Remark: Generated from `#/components/schemas/reaction/content`.
-            @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case _plus_1 = "+1"
                 case _hyphen_1 = "-1"
                 case laugh = "laugh"
@@ -1062,36 +1071,36 @@ public enum Components {
             /// The reaction to use
             ///
             /// - Remark: Generated from `#/components/schemas/reaction/content`.
-            public var content: Components.Schemas.reaction.contentPayload
+            public var content: Components.Schemas.Reaction.ContentPayload
             /// - Remark: Generated from `#/components/schemas/reaction/created_at`.
-            public var created_at: Foundation.Date
-            /// Creates a new `reaction`.
+            public var createdAt: Foundation.Date
+            /// Creates a new `Reaction`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - user:
             ///   - content: The reaction to use
-            ///   - created_at:
+            ///   - createdAt:
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                content: Components.Schemas.reaction.contentPayload,
-                created_at: Foundation.Date
+                nodeId: Swift.String,
+                user: Components.Schemas.NullableSimpleUser? = nil,
+                content: Components.Schemas.Reaction.ContentPayload,
+                createdAt: Foundation.Date
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.user = user
                 self.content = content
-                self.created_at = created_at
+                self.createdAt = createdAt
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case user
                 case content
-                case created_at
+                case createdAt = "created_at"
             }
         }
     }
@@ -1100,70 +1109,70 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The unique identifier of the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-id`.
-        public typealias comment_hyphen_id = Swift.Int64
+        public typealias CommentId = Swift.Int64
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The slug of the team name.
         ///
         /// - Remark: Generated from `#/components/parameters/team-slug`.
-        public typealias team_hyphen_slug = Swift.String
+        public typealias TeamSlug = Swift.String
         /// The number that identifies the discussion.
         ///
         /// - Remark: Generated from `#/components/parameters/discussion-number`.
-        public typealias discussion_hyphen_number = Swift.Int
+        public typealias DiscussionNumber = Swift.Int
         /// The number that identifies the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-number`.
-        public typealias comment_hyphen_number = Swift.Int
+        public typealias CommentNumber = Swift.Int
         /// The unique identifier of the reaction.
         ///
         /// - Remark: Generated from `#/components/parameters/reaction-id`.
-        public typealias reaction_hyphen_id = Swift.Int
+        public typealias ReactionId = Swift.Int
         /// The number that identifies the issue.
         ///
         /// - Remark: Generated from `#/components/parameters/issue-number`.
-        public typealias issue_hyphen_number = Swift.Int
+        public typealias IssueNumber = Swift.Int
         /// The unique identifier of the release.
         ///
         /// - Remark: Generated from `#/components/parameters/release-id`.
-        public typealias release_hyphen_id = Swift.Int
+        public typealias ReleaseId = Swift.Int
         /// The unique identifier of the team.
         ///
         /// - Remark: Generated from `#/components/parameters/team-id`.
-        public typealias team_hyphen_id = Swift.Int
+        public typealias TeamId = Swift.Int
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1173,25 +1182,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1201,25 +1210,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct gone: Sendable, Hashable {
+        public struct Gone: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/gone/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/gone/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1229,12 +1238,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.gone.Body
-            /// Creates a new `gone`.
+            public var body: Components.Responses.Gone.Body
+            /// Creates a new `Gone`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.gone.Body) {
+            public init(body: Components.Responses.Gone.Body) {
                 self.body = body
             }
         }
@@ -1242,7 +1251,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -1259,7 +1268,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-in-org)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org {
+    public enum ReactionsListForTeamDiscussionCommentInOrg {
         public static let id: Swift.String = "reactions/list-for-team-discussion-comment-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path`.
@@ -1267,43 +1276,43 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -1316,44 +1325,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion comment.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion comment.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForTeamDiscussionCommentInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForTeamDiscussionCommentInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1361,9 +1370,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Path,
+                query: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Query = .init(),
+                headers: Operations.ReactionsListForTeamDiscussionCommentInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1375,26 +1384,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForTeamDiscussionCommentInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1404,15 +1413,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.ReactionsListForTeamDiscussionCommentInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.ReactionsListForTeamDiscussionCommentInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForTeamDiscussionCommentInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1423,12 +1432,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.ReactionsListForTeamDiscussionCommentInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.ReactionsListForTeamDiscussionCommentInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1485,7 +1494,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-in-org)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org {
+    public enum ReactionsCreateForTeamDiscussionCommentInOrg {
         public static let id: Swift.String = "reactions/create-for-team-discussion-comment-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path`.
@@ -1493,59 +1502,59 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForTeamDiscussionCommentInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForTeamDiscussionCommentInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion comment.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -1558,12 +1567,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion comment.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion comment.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -1571,9 +1580,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
+            public var body: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1581,9 +1590,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
+                path: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Path,
+                headers: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -1595,12 +1604,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1610,12 +1619,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1624,12 +1633,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1646,12 +1655,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1661,12 +1670,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created.Body
+                public var body: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -1675,12 +1684,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-in-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created)
+            case created(Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created {
+            public var created: Operations.ReactionsCreateForTeamDiscussionCommentInOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -1735,7 +1744,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion-comment)`.
-    public enum reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment {
+    public enum ReactionsDeleteForTeamDiscussionComment {
         public static let id: Swift.String = "reactions/delete-for-team-discussion-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/DELETE/path`.
@@ -1743,51 +1752,51 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/DELETE/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/DELETE/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/DELETE/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// The unique identifier of the reaction.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/DELETE/path/reaction_id`.
-                public var reaction_id: Components.Parameters.reaction_hyphen_id
+                public var reactionId: Components.Parameters.ReactionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
-                ///   - reaction_id: The unique identifier of the reaction.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
+                ///   - reactionId: The unique identifier of the reaction.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number,
-                    reaction_id: Components.Parameters.reaction_hyphen_id
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber,
+                    reactionId: Components.Parameters.ReactionId
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
-                    self.reaction_id = reaction_id
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
+                    self.reactionId = reactionId
                 }
             }
-            public var path: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsDeleteForTeamDiscussionComment.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Input.Path) {
+            public init(path: Operations.ReactionsDeleteForTeamDiscussionComment.Input.Path) {
                 self.path = path
             }
         }
@@ -1801,12 +1810,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion-comment)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Output.NoContent)
+            case noContent(Operations.ReactionsDeleteForTeamDiscussionComment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Output.NoContent {
+            public var noContent: Operations.ReactionsDeleteForTeamDiscussionComment.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -1836,7 +1853,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-in-org)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org {
+    public enum ReactionsListForTeamDiscussionInOrg {
         public static let id: Swift.String = "reactions/list-for-team-discussion-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/path`.
@@ -1844,36 +1861,36 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.ReactionsListForTeamDiscussionInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -1886,44 +1903,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForTeamDiscussionInOrg.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForTeamDiscussionInOrg.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.ReactionsListForTeamDiscussionInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForTeamDiscussionInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForTeamDiscussionInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.ReactionsListForTeamDiscussionInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1931,9 +1948,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.ReactionsListForTeamDiscussionInOrg.Input.Path,
+                query: Operations.ReactionsListForTeamDiscussionInOrg.Input.Query = .init(),
+                headers: Operations.ReactionsListForTeamDiscussionInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1945,26 +1962,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForTeamDiscussionInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1974,15 +1991,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.ReactionsListForTeamDiscussionInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.ReactionsListForTeamDiscussionInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForTeamDiscussionInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1993,12 +2010,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.ReactionsListForTeamDiscussionInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.ReactionsListForTeamDiscussionInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2055,7 +2072,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-in-org)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org {
+    public enum ReactionsCreateForTeamDiscussionInOrg {
         public static let id: Swift.String = "reactions/create-for-team-discussion-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/path`.
@@ -2063,52 +2080,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForTeamDiscussionInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForTeamDiscussionInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -2121,12 +2138,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -2134,9 +2151,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Body
+            public var body: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2144,9 +2161,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Input.Body
+                path: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Path,
+                headers: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForTeamDiscussionInOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -2158,12 +2175,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2173,12 +2190,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.ReactionsCreateForTeamDiscussionInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.ReactionsCreateForTeamDiscussionInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2187,12 +2204,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.ReactionsCreateForTeamDiscussionInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.ReactionsCreateForTeamDiscussionInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2209,12 +2226,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2224,12 +2241,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Created.Body
+                public var body: Operations.ReactionsCreateForTeamDiscussionInOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForTeamDiscussionInOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -2238,12 +2255,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-in-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Created)
+            case created(Operations.ReactionsCreateForTeamDiscussionInOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_in_hyphen_org.Output.Created {
+            public var created: Operations.ReactionsCreateForTeamDiscussionInOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -2298,7 +2315,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion)`.
-    public enum reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion {
+    public enum ReactionsDeleteForTeamDiscussion {
         public static let id: Swift.String = "reactions/delete-for-team-discussion"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/DELETE/path`.
@@ -2306,44 +2323,44 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/DELETE/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/DELETE/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The unique identifier of the reaction.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/DELETE/path/reaction_id`.
-                public var reaction_id: Components.Parameters.reaction_hyphen_id
+                public var reactionId: Components.Parameters.ReactionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - reaction_id: The unique identifier of the reaction.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - reactionId: The unique identifier of the reaction.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    reaction_id: Components.Parameters.reaction_hyphen_id
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    reactionId: Components.Parameters.ReactionId
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
-                    self.reaction_id = reaction_id
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
+                    self.reactionId = reactionId
                 }
             }
-            public var path: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Input.Path
+            public var path: Operations.ReactionsDeleteForTeamDiscussion.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Input.Path) {
+            public init(path: Operations.ReactionsDeleteForTeamDiscussion.Input.Path) {
                 self.path = path
             }
         }
@@ -2357,12 +2374,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Output.NoContent)
+            case noContent(Operations.ReactionsDeleteForTeamDiscussion.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Output.NoContent {
+            public var noContent: Operations.ReactionsDeleteForTeamDiscussion.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -2387,7 +2412,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/get(reactions/list-for-commit-comment)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment {
+    public enum ReactionsListForCommitComment {
         public static let id: Swift.String = "reactions/list-for-commit-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/path`.
@@ -2395,36 +2420,36 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsListForCommitComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -2437,44 +2462,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a commit comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForCommitComment.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a commit comment.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForCommitComment.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Query
+            public var query: Operations.ReactionsListForCommitComment.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForCommitComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForCommitComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Headers
+            public var headers: Operations.ReactionsListForCommitComment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2482,9 +2507,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Input.Headers = .init()
+                path: Operations.ReactionsListForCommitComment.Input.Path,
+                query: Operations.ReactionsListForCommitComment.Input.Query = .init(),
+                headers: Operations.ReactionsListForCommitComment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -2496,26 +2521,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForCommitComment.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2525,15 +2550,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok.Body
+                public var body: Operations.ReactionsListForCommitComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok.Body
+                    headers: Operations.ReactionsListForCommitComment.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForCommitComment.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -2544,12 +2569,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/get(reactions/list-for-commit-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok)
+            case ok(Operations.ReactionsListForCommitComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok {
+            public var ok: Operations.ReactionsListForCommitComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2567,12 +2592,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/get(reactions/list-for-commit-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2622,7 +2647,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/post(reactions/create-for-commit-comment)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment {
+    public enum ReactionsCreateForCommitComment {
         public static let id: Swift.String = "reactions/create-for-commit-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/path`.
@@ -2630,52 +2655,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsCreateForCommitComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForCommitComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForCommitComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Headers
+            public var headers: Operations.ReactionsCreateForCommitComment.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the commit comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -2688,12 +2713,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the commit comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForCommitComment.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the commit comment.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForCommitComment.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -2701,9 +2726,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForCommitComment.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Body
+            public var body: Operations.ReactionsCreateForCommitComment.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2711,9 +2736,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Input.Body
+                path: Operations.ReactionsCreateForCommitComment.Input.Path,
+                headers: Operations.ReactionsCreateForCommitComment.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForCommitComment.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -2725,12 +2750,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2740,12 +2765,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok.Body
+                public var body: Operations.ReactionsCreateForCommitComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok.Body) {
+                public init(body: Operations.ReactionsCreateForCommitComment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2754,12 +2779,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/post(reactions/create-for-commit-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok)
+            case ok(Operations.ReactionsCreateForCommitComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output.Ok {
+            public var ok: Operations.ReactionsCreateForCommitComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2776,12 +2801,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2791,12 +2816,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output.Created.Body
+                public var body: Operations.ReactionsCreateForCommitComment.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForCommitComment.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -2805,12 +2830,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/post(reactions/create-for-commit-comment)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output.Created)
+            case created(Operations.ReactionsCreateForCommitComment.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_commit_hyphen_comment.Output.Created {
+            public var created: Operations.ReactionsCreateForCommitComment.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -2828,12 +2853,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/post(reactions/create-for-commit-comment)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2886,7 +2911,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-commit-comment)`.
-    public enum reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment {
+    public enum ReactionsDeleteForCommitComment {
         public static let id: Swift.String = "reactions/delete-for-commit-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/DELETE/path`.
@@ -2894,44 +2919,44 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// The unique identifier of the reaction.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/reaction_id`.
-                public var reaction_id: Components.Parameters.reaction_hyphen_id
+                public var reactionId: Components.Parameters.ReactionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
-                ///   - reaction_id: The unique identifier of the reaction.
+                ///   - commentId: The unique identifier of the comment.
+                ///   - reactionId: The unique identifier of the reaction.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id,
-                    reaction_id: Components.Parameters.reaction_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId,
+                    reactionId: Components.Parameters.ReactionId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
-                    self.reaction_id = reaction_id
+                    self.commentId = commentId
+                    self.reactionId = reactionId
                 }
             }
-            public var path: Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsDeleteForCommitComment.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Input.Path) {
+            public init(path: Operations.ReactionsDeleteForCommitComment.Input.Path) {
                 self.path = path
             }
         }
@@ -2945,12 +2970,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-commit-comment)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Output.NoContent)
+            case noContent(Operations.ReactionsDeleteForCommitComment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-commit-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Output.NoContent {
+            public var noContent: Operations.ReactionsDeleteForCommitComment.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -2975,7 +3008,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/get(reactions/list-for-issue-comment)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment {
+    public enum ReactionsListForIssueComment {
         public static let id: Swift.String = "reactions/list-for-issue-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/path`.
@@ -2983,36 +3016,36 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsListForIssueComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -3025,44 +3058,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to an issue comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForIssueComment.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to an issue comment.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForIssueComment.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query
+            public var query: Operations.ReactionsListForIssueComment.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForIssueComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForIssueComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Headers
+            public var headers: Operations.ReactionsListForIssueComment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3070,9 +3103,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Headers = .init()
+                path: Operations.ReactionsListForIssueComment.Input.Path,
+                query: Operations.ReactionsListForIssueComment.Input.Query = .init(),
+                headers: Operations.ReactionsListForIssueComment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -3084,26 +3117,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForIssueComment.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3113,15 +3146,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok.Body
+                public var body: Operations.ReactionsListForIssueComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok.Body
+                    headers: Operations.ReactionsListForIssueComment.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForIssueComment.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3132,12 +3165,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/get(reactions/list-for-issue-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok)
+            case ok(Operations.ReactionsListForIssueComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok {
+            public var ok: Operations.ReactionsListForIssueComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3155,12 +3188,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/get(reactions/list-for-issue-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3210,7 +3243,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/post(reactions/create-for-issue-comment)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment {
+    public enum ReactionsCreateForIssueComment {
         public static let id: Swift.String = "reactions/create-for-issue-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/path`.
@@ -3218,52 +3251,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsCreateForIssueComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForIssueComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForIssueComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Headers
+            public var headers: Operations.ReactionsCreateForIssueComment.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the issue comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -3276,12 +3309,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the issue comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForIssueComment.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the issue comment.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForIssueComment.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -3289,9 +3322,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForIssueComment.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Body
+            public var body: Operations.ReactionsCreateForIssueComment.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3299,9 +3332,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Input.Body
+                path: Operations.ReactionsCreateForIssueComment.Input.Path,
+                headers: Operations.ReactionsCreateForIssueComment.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForIssueComment.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3313,12 +3346,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3328,12 +3361,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok.Body
+                public var body: Operations.ReactionsCreateForIssueComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok.Body) {
+                public init(body: Operations.ReactionsCreateForIssueComment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3342,12 +3375,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/post(reactions/create-for-issue-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok)
+            case ok(Operations.ReactionsCreateForIssueComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output.Ok {
+            public var ok: Operations.ReactionsCreateForIssueComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3364,12 +3397,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3379,12 +3412,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output.Created.Body
+                public var body: Operations.ReactionsCreateForIssueComment.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForIssueComment.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -3393,12 +3426,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/post(reactions/create-for-issue-comment)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output.Created)
+            case created(Operations.ReactionsCreateForIssueComment.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_issue_hyphen_comment.Output.Created {
+            public var created: Operations.ReactionsCreateForIssueComment.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -3416,12 +3449,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/post(reactions/create-for-issue-comment)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3474,7 +3507,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-issue-comment)`.
-    public enum reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment {
+    public enum ReactionsDeleteForIssueComment {
         public static let id: Swift.String = "reactions/delete-for-issue-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/DELETE/path`.
@@ -3482,44 +3515,44 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// The unique identifier of the reaction.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/reaction_id`.
-                public var reaction_id: Components.Parameters.reaction_hyphen_id
+                public var reactionId: Components.Parameters.ReactionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
-                ///   - reaction_id: The unique identifier of the reaction.
+                ///   - commentId: The unique identifier of the comment.
+                ///   - reactionId: The unique identifier of the reaction.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id,
-                    reaction_id: Components.Parameters.reaction_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId,
+                    reactionId: Components.Parameters.ReactionId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
-                    self.reaction_id = reaction_id
+                    self.commentId = commentId
+                    self.reactionId = reactionId
                 }
             }
-            public var path: Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsDeleteForIssueComment.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Input.Path) {
+            public init(path: Operations.ReactionsDeleteForIssueComment.Input.Path) {
                 self.path = path
             }
         }
@@ -3533,12 +3566,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-issue-comment)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Output.NoContent)
+            case noContent(Operations.ReactionsDeleteForIssueComment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-issue-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Output.NoContent {
+            public var noContent: Operations.ReactionsDeleteForIssueComment.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -3563,7 +3604,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/issues/{issue_number}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/get(reactions/list-for-issue)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_issue {
+    public enum ReactionsListForIssue {
         public static let id: Swift.String = "reactions/list-for-issue"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/path`.
@@ -3571,36 +3612,36 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the issue.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/path/issue_number`.
-                public var issue_number: Components.Parameters.issue_hyphen_number
+                public var issueNumber: Components.Parameters.IssueNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - issue_number: The number that identifies the issue.
+                ///   - issueNumber: The number that identifies the issue.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    issue_number: Components.Parameters.issue_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    issueNumber: Components.Parameters.IssueNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.issue_number = issue_number
+                    self.issueNumber = issueNumber
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Path
+            public var path: Operations.ReactionsListForIssue.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -3613,44 +3654,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to an issue.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForIssue.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to an issue.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForIssue.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Query
+            public var query: Operations.ReactionsListForIssue.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_issue.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForIssue.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_issue.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForIssue.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Headers
+            public var headers: Operations.ReactionsListForIssue.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3658,9 +3699,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Input.Headers = .init()
+                path: Operations.ReactionsListForIssue.Input.Path,
+                query: Operations.ReactionsListForIssue.Input.Query = .init(),
+                headers: Operations.ReactionsListForIssue.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -3672,26 +3713,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForIssue.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3701,15 +3742,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Output.Ok.Body
+                public var body: Operations.ReactionsListForIssue.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Output.Ok.Body
+                    headers: Operations.ReactionsListForIssue.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForIssue.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3720,12 +3761,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/get(reactions/list-for-issue)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_issue.Output.Ok)
+            case ok(Operations.ReactionsListForIssue.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_issue.Output.Ok {
+            public var ok: Operations.ReactionsListForIssue.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3743,12 +3784,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/get(reactions/list-for-issue)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3766,12 +3807,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/get(reactions/list-for-issue)/responses/410`.
             ///
             /// HTTP response code: `410 gone`.
-            case gone(Components.Responses.gone)
+            case gone(Components.Responses.Gone)
             /// The associated value of the enum case if `self` is `.gone`.
             ///
             /// - Throws: An error if `self` is not `.gone`.
             /// - SeeAlso: `.gone`.
-            public var gone: Components.Responses.gone {
+            public var gone: Components.Responses.Gone {
                 get throws {
                     switch self {
                     case let .gone(response):
@@ -3821,7 +3862,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/issues/{issue_number}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/post(reactions/create-for-issue)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_issue {
+    public enum ReactionsCreateForIssue {
         public static let id: Swift.String = "reactions/create-for-issue"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/path`.
@@ -3829,52 +3870,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the issue.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/path/issue_number`.
-                public var issue_number: Components.Parameters.issue_hyphen_number
+                public var issueNumber: Components.Parameters.IssueNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - issue_number: The number that identifies the issue.
+                ///   - issueNumber: The number that identifies the issue.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    issue_number: Components.Parameters.issue_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    issueNumber: Components.Parameters.IssueNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.issue_number = issue_number
+                    self.issueNumber = issueNumber
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Path
+            public var path: Operations.ReactionsCreateForIssue.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_issue.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForIssue.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_issue.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForIssue.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Headers
+            public var headers: Operations.ReactionsCreateForIssue.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the issue.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -3887,12 +3928,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the issue.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the issue.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -3900,9 +3941,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForIssue.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Body
+            public var body: Operations.ReactionsCreateForIssue.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3910,9 +3951,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Input.Body
+                path: Operations.ReactionsCreateForIssue.Input.Path,
+                headers: Operations.ReactionsCreateForIssue.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForIssue.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3924,12 +3965,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3939,12 +3980,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output.Ok.Body
+                public var body: Operations.ReactionsCreateForIssue.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output.Ok.Body) {
+                public init(body: Operations.ReactionsCreateForIssue.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3953,12 +3994,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/post(reactions/create-for-issue)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output.Ok)
+            case ok(Operations.ReactionsCreateForIssue.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output.Ok {
+            public var ok: Operations.ReactionsCreateForIssue.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3975,12 +4016,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3990,12 +4031,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output.Created.Body
+                public var body: Operations.ReactionsCreateForIssue.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForIssue.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -4004,12 +4045,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/post(reactions/create-for-issue)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output.Created)
+            case created(Operations.ReactionsCreateForIssue.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_issue.Output.Created {
+            public var created: Operations.ReactionsCreateForIssue.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4027,12 +4068,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/post(reactions/create-for-issue)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4085,7 +4126,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/delete(reactions/delete-for-issue)`.
-    public enum reactions_sol_delete_hyphen_for_hyphen_issue {
+    public enum ReactionsDeleteForIssue {
         public static let id: Swift.String = "reactions/delete-for-issue"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/DELETE/path`.
@@ -4093,44 +4134,44 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the issue.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/DELETE/path/issue_number`.
-                public var issue_number: Components.Parameters.issue_hyphen_number
+                public var issueNumber: Components.Parameters.IssueNumber
                 /// The unique identifier of the reaction.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/DELETE/path/reaction_id`.
-                public var reaction_id: Components.Parameters.reaction_hyphen_id
+                public var reactionId: Components.Parameters.ReactionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - issue_number: The number that identifies the issue.
-                ///   - reaction_id: The unique identifier of the reaction.
+                ///   - issueNumber: The number that identifies the issue.
+                ///   - reactionId: The unique identifier of the reaction.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    issue_number: Components.Parameters.issue_hyphen_number,
-                    reaction_id: Components.Parameters.reaction_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    issueNumber: Components.Parameters.IssueNumber,
+                    reactionId: Components.Parameters.ReactionId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.issue_number = issue_number
-                    self.reaction_id = reaction_id
+                    self.issueNumber = issueNumber
+                    self.reactionId = reactionId
                 }
             }
-            public var path: Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Input.Path
+            public var path: Operations.ReactionsDeleteForIssue.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Input.Path) {
+            public init(path: Operations.ReactionsDeleteForIssue.Input.Path) {
                 self.path = path
             }
         }
@@ -4144,12 +4185,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/delete(reactions/delete-for-issue)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Output.NoContent)
+            case noContent(Operations.ReactionsDeleteForIssue.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/delete(reactions/delete-for-issue)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Output.NoContent {
+            public var noContent: Operations.ReactionsDeleteForIssue.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4174,7 +4223,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/get(reactions/list-for-pull-request-review-comment)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment {
+    public enum ReactionsListForPullRequestReviewComment {
         public static let id: Swift.String = "reactions/list-for-pull-request-review-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/path`.
@@ -4182,36 +4231,36 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsListForPullRequestReviewComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -4224,44 +4273,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a pull request review comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForPullRequestReviewComment.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a pull request review comment.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForPullRequestReviewComment.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query
+            public var query: Operations.ReactionsListForPullRequestReviewComment.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForPullRequestReviewComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForPullRequestReviewComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Headers
+            public var headers: Operations.ReactionsListForPullRequestReviewComment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4269,9 +4318,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Headers = .init()
+                path: Operations.ReactionsListForPullRequestReviewComment.Input.Path,
+                query: Operations.ReactionsListForPullRequestReviewComment.Input.Query = .init(),
+                headers: Operations.ReactionsListForPullRequestReviewComment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4283,26 +4332,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForPullRequestReviewComment.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4312,15 +4361,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok.Body
+                public var body: Operations.ReactionsListForPullRequestReviewComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok.Body
+                    headers: Operations.ReactionsListForPullRequestReviewComment.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForPullRequestReviewComment.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4331,12 +4380,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/get(reactions/list-for-pull-request-review-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok)
+            case ok(Operations.ReactionsListForPullRequestReviewComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok {
+            public var ok: Operations.ReactionsListForPullRequestReviewComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4354,12 +4403,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/get(reactions/list-for-pull-request-review-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4409,7 +4458,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/post(reactions/create-for-pull-request-review-comment)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment {
+    public enum ReactionsCreateForPullRequestReviewComment {
         public static let id: Swift.String = "reactions/create-for-pull-request-review-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/path`.
@@ -4417,52 +4466,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsCreateForPullRequestReviewComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForPullRequestReviewComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForPullRequestReviewComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Headers
+            public var headers: Operations.ReactionsCreateForPullRequestReviewComment.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the pull request review comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -4475,12 +4524,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the pull request review comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForPullRequestReviewComment.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the pull request review comment.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForPullRequestReviewComment.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -4488,9 +4537,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForPullRequestReviewComment.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Body
+            public var body: Operations.ReactionsCreateForPullRequestReviewComment.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4498,9 +4547,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Body
+                path: Operations.ReactionsCreateForPullRequestReviewComment.Input.Path,
+                headers: Operations.ReactionsCreateForPullRequestReviewComment.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForPullRequestReviewComment.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4512,12 +4561,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4527,12 +4576,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok.Body
+                public var body: Operations.ReactionsCreateForPullRequestReviewComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok.Body) {
+                public init(body: Operations.ReactionsCreateForPullRequestReviewComment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4541,12 +4590,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/post(reactions/create-for-pull-request-review-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok)
+            case ok(Operations.ReactionsCreateForPullRequestReviewComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Ok {
+            public var ok: Operations.ReactionsCreateForPullRequestReviewComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4563,12 +4612,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4578,12 +4627,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Created.Body
+                public var body: Operations.ReactionsCreateForPullRequestReviewComment.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForPullRequestReviewComment.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -4592,12 +4641,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/post(reactions/create-for-pull-request-review-comment)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Created)
+            case created(Operations.ReactionsCreateForPullRequestReviewComment.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Output.Created {
+            public var created: Operations.ReactionsCreateForPullRequestReviewComment.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4615,12 +4664,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/post(reactions/create-for-pull-request-review-comment)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4673,7 +4722,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-pull-request-comment)`.
-    public enum reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment {
+    public enum ReactionsDeleteForPullRequestComment {
         public static let id: Swift.String = "reactions/delete-for-pull-request-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/DELETE/path`.
@@ -4681,44 +4730,44 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// The unique identifier of the reaction.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/DELETE/path/reaction_id`.
-                public var reaction_id: Components.Parameters.reaction_hyphen_id
+                public var reactionId: Components.Parameters.ReactionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
-                ///   - reaction_id: The unique identifier of the reaction.
+                ///   - commentId: The unique identifier of the comment.
+                ///   - reactionId: The unique identifier of the reaction.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id,
-                    reaction_id: Components.Parameters.reaction_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId,
+                    reactionId: Components.Parameters.ReactionId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
-                    self.reaction_id = reaction_id
+                    self.commentId = commentId
+                    self.reactionId = reactionId
                 }
             }
-            public var path: Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Input.Path
+            public var path: Operations.ReactionsDeleteForPullRequestComment.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Input.Path) {
+            public init(path: Operations.ReactionsDeleteForPullRequestComment.Input.Path) {
                 self.path = path
             }
         }
@@ -4732,12 +4781,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-pull-request-comment)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Output.NoContent)
+            case noContent(Operations.ReactionsDeleteForPullRequestComment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-pull-request-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Output.NoContent {
+            public var noContent: Operations.ReactionsDeleteForPullRequestComment.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4762,7 +4819,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/releases/{release_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/get(reactions/list-for-release)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_release {
+    public enum ReactionsListForRelease {
         public static let id: Swift.String = "reactions/list-for-release"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/path`.
@@ -4770,36 +4827,36 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the release.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/path/release_id`.
-                public var release_id: Components.Parameters.release_hyphen_id
+                public var releaseId: Components.Parameters.ReleaseId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - release_id: The unique identifier of the release.
+                ///   - releaseId: The unique identifier of the release.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    release_id: Components.Parameters.release_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    releaseId: Components.Parameters.ReleaseId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.release_id = release_id
+                    self.releaseId = releaseId
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Path
+            public var path: Operations.ReactionsListForRelease.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case laugh = "laugh"
                     case heart = "heart"
@@ -4810,44 +4867,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a release.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForRelease.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a release.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForRelease.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Query
+            public var query: Operations.ReactionsListForRelease.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_release.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForRelease.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_release.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForRelease.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Headers
+            public var headers: Operations.ReactionsListForRelease.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4855,9 +4912,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_release.Input.Headers = .init()
+                path: Operations.ReactionsListForRelease.Input.Path,
+                query: Operations.ReactionsListForRelease.Input.Query = .init(),
+                headers: Operations.ReactionsListForRelease.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4869,26 +4926,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_release.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForRelease.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4898,15 +4955,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_release.Output.Ok.Body
+                public var body: Operations.ReactionsListForRelease.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_release.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_release.Output.Ok.Body
+                    headers: Operations.ReactionsListForRelease.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForRelease.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4917,12 +4974,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/get(reactions/list-for-release)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_release.Output.Ok)
+            case ok(Operations.ReactionsListForRelease.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_release.Output.Ok {
+            public var ok: Operations.ReactionsListForRelease.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4940,12 +4997,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/get(reactions/list-for-release)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4995,7 +5052,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/releases/{release_id}/reactions`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/post(reactions/create-for-release)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_release {
+    public enum ReactionsCreateForRelease {
         public static let id: Swift.String = "reactions/create-for-release"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/path`.
@@ -5003,52 +5060,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the release.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/path/release_id`.
-                public var release_id: Components.Parameters.release_hyphen_id
+                public var releaseId: Components.Parameters.ReleaseId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - release_id: The unique identifier of the release.
+                ///   - releaseId: The unique identifier of the release.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    release_id: Components.Parameters.release_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    releaseId: Components.Parameters.ReleaseId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.release_id = release_id
+                    self.releaseId = releaseId
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Path
+            public var path: Operations.ReactionsCreateForRelease.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_release.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForRelease.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_release.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForRelease.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Headers
+            public var headers: Operations.ReactionsCreateForRelease.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the release.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case laugh = "laugh"
                         case heart = "heart"
@@ -5059,12 +5116,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the release.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForRelease.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the release.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForRelease.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -5072,9 +5129,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForRelease.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Body
+            public var body: Operations.ReactionsCreateForRelease.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5082,9 +5139,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_release.Input.Body
+                path: Operations.ReactionsCreateForRelease.Input.Path,
+                headers: Operations.ReactionsCreateForRelease.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForRelease.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -5096,12 +5153,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5111,12 +5168,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_release.Output.Ok.Body
+                public var body: Operations.ReactionsCreateForRelease.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_release.Output.Ok.Body) {
+                public init(body: Operations.ReactionsCreateForRelease.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5125,12 +5182,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/post(reactions/create-for-release)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_create_hyphen_for_hyphen_release.Output.Ok)
+            case ok(Operations.ReactionsCreateForRelease.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_create_hyphen_for_hyphen_release.Output.Ok {
+            public var ok: Operations.ReactionsCreateForRelease.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5147,12 +5204,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5162,12 +5219,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_release.Output.Created.Body
+                public var body: Operations.ReactionsCreateForRelease.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_release.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForRelease.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -5176,12 +5233,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/post(reactions/create-for-release)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_release.Output.Created)
+            case created(Operations.ReactionsCreateForRelease.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_release.Output.Created {
+            public var created: Operations.ReactionsCreateForRelease.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5199,12 +5256,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/post(reactions/create-for-release)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5257,7 +5314,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/delete(reactions/delete-for-release)`.
-    public enum reactions_sol_delete_hyphen_for_hyphen_release {
+    public enum ReactionsDeleteForRelease {
         public static let id: Swift.String = "reactions/delete-for-release"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/DELETE/path`.
@@ -5265,44 +5322,44 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the release.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/DELETE/path/release_id`.
-                public var release_id: Components.Parameters.release_hyphen_id
+                public var releaseId: Components.Parameters.ReleaseId
                 /// The unique identifier of the reaction.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/DELETE/path/reaction_id`.
-                public var reaction_id: Components.Parameters.reaction_hyphen_id
+                public var reactionId: Components.Parameters.ReactionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - release_id: The unique identifier of the release.
-                ///   - reaction_id: The unique identifier of the reaction.
+                ///   - releaseId: The unique identifier of the release.
+                ///   - reactionId: The unique identifier of the reaction.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    release_id: Components.Parameters.release_hyphen_id,
-                    reaction_id: Components.Parameters.reaction_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    releaseId: Components.Parameters.ReleaseId,
+                    reactionId: Components.Parameters.ReactionId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.release_id = release_id
-                    self.reaction_id = reaction_id
+                    self.releaseId = releaseId
+                    self.reactionId = reactionId
                 }
             }
-            public var path: Operations.reactions_sol_delete_hyphen_for_hyphen_release.Input.Path
+            public var path: Operations.ReactionsDeleteForRelease.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.reactions_sol_delete_hyphen_for_hyphen_release.Input.Path) {
+            public init(path: Operations.ReactionsDeleteForRelease.Input.Path) {
                 self.path = path
             }
         }
@@ -5316,12 +5373,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/delete(reactions/delete-for-release)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_release.Output.NoContent)
+            case noContent(Operations.ReactionsDeleteForRelease.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/delete(reactions/delete-for-release)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.reactions_sol_delete_hyphen_for_hyphen_release.Output.NoContent {
+            public var noContent: Operations.ReactionsDeleteForRelease.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5351,7 +5416,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-legacy)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy {
+    public enum ReactionsListForTeamDiscussionCommentLegacy {
         public static let id: Swift.String = "reactions/list-for-team-discussion-comment-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path`.
@@ -5359,36 +5424,36 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path
+            public var path: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -5401,44 +5466,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion comment.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion comment.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Query
+            public var query: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForTeamDiscussionCommentLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForTeamDiscussionCommentLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers
+            public var headers: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5446,9 +5511,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init()
+                path: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Path,
+                query: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Query = .init(),
+                headers: Operations.ReactionsListForTeamDiscussionCommentLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5460,26 +5525,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForTeamDiscussionCommentLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5489,15 +5554,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.ReactionsListForTeamDiscussionCommentLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.ReactionsListForTeamDiscussionCommentLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForTeamDiscussionCommentLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5508,12 +5573,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/get(reactions/list-for-team-discussion-comment-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok)
+            case ok(Operations.ReactionsListForTeamDiscussionCommentLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok {
+            public var ok: Operations.ReactionsListForTeamDiscussionCommentLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5570,7 +5635,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-legacy)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy {
+    public enum ReactionsCreateForTeamDiscussionCommentLegacy {
         public static let id: Swift.String = "reactions/create-for-team-discussion-comment-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path`.
@@ -5578,52 +5643,52 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path
+            public var path: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForTeamDiscussionCommentLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForTeamDiscussionCommentLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers
+            public var headers: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion comment.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -5636,12 +5701,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion comment.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion comment.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -5649,9 +5714,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
+            public var body: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5659,9 +5724,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
+                path: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Path,
+                headers: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -5673,12 +5738,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5688,12 +5753,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created.Body
+                public var body: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -5702,12 +5767,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/post(reactions/create-for-team-discussion-comment-legacy)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created)
+            case created(Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created {
+            public var created: Operations.ReactionsCreateForTeamDiscussionCommentLegacy.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5762,7 +5827,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-legacy)`.
-    public enum reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy {
+    public enum ReactionsListForTeamDiscussionLegacy {
         public static let id: Swift.String = "reactions/list-for-team-discussion-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/path`.
@@ -5770,29 +5835,29 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Path
+            public var path: Operations.ReactionsListForTeamDiscussionLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -5805,44 +5870,44 @@ public enum Operations {
                 /// Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query/content`.
-                public var content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Query.contentPayload?
+                public var content: Operations.ReactionsListForTeamDiscussionLegacy.Input.Query.ContentPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - content: Returns a single [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions). Omit this parameter to list all reactions to a team discussion.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    content: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Query.contentPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    content: Operations.ReactionsListForTeamDiscussionLegacy.Input.Query.ContentPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.content = content
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Query
+            public var query: Operations.ReactionsListForTeamDiscussionLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForTeamDiscussionLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsListForTeamDiscussionLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Headers
+            public var headers: Operations.ReactionsListForTeamDiscussionLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5850,9 +5915,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Path,
-                query: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Headers = .init()
+                path: Operations.ReactionsListForTeamDiscussionLegacy.Input.Path,
+                query: Operations.ReactionsListForTeamDiscussionLegacy.Input.Query = .init(),
+                headers: Operations.ReactionsListForTeamDiscussionLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5864,26 +5929,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.ReactionsListForTeamDiscussionLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.reaction])
+                    case json([Components.Schemas.Reaction])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.reaction] {
+                    public var json: [Components.Schemas.Reaction] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5893,15 +5958,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.ReactionsListForTeamDiscussionLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.ReactionsListForTeamDiscussionLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.ReactionsListForTeamDiscussionLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5912,12 +5977,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/get(reactions/list-for-team-discussion-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Ok)
+            case ok(Operations.ReactionsListForTeamDiscussionLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.reactions_sol_list_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Ok {
+            public var ok: Operations.ReactionsListForTeamDiscussionLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5974,7 +6039,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/reactions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-legacy)`.
-    public enum reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy {
+    public enum ReactionsCreateForTeamDiscussionLegacy {
         public static let id: Swift.String = "reactions/create-for-team-discussion-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/path`.
@@ -5982,45 +6047,45 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Path
+            public var path: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForTeamDiscussionLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ReactionsCreateForTeamDiscussionLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Headers
+            public var headers: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ContentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -6033,12 +6098,12 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/requestBody/json/content`.
-                    public var content: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Body.jsonPayload.contentPayload
-                    /// Creates a new `jsonPayload`.
+                    public var content: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Body.JsonPayload.ContentPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion.
-                    public init(content: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Body.jsonPayload.contentPayload) {
+                    public init(content: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Body.JsonPayload.ContentPayload) {
                         self.content = content
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -6046,9 +6111,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/requestBody/content/application\/json`.
-                case json(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Body
+            public var body: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6056,9 +6121,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Path,
-                headers: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Input.Body
+                path: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Path,
+                headers: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Headers = .init(),
+                body: Operations.ReactionsCreateForTeamDiscussionLegacy.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -6070,12 +6135,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.reaction)
+                    case json(Components.Schemas.Reaction)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.reaction {
+                    public var json: Components.Schemas.Reaction {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6085,12 +6150,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Created.Body
+                public var body: Operations.ReactionsCreateForTeamDiscussionLegacy.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Created.Body) {
+                public init(body: Operations.ReactionsCreateForTeamDiscussionLegacy.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -6099,12 +6164,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/reactions/post(reactions/create-for-team-discussion-legacy)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Created)
+            case created(Operations.ReactionsCreateForTeamDiscussionLegacy.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.reactions_sol_create_hyphen_for_hyphen_team_hyphen_discussion_hyphen_legacy.Output.Created {
+            public var created: Operations.ReactionsCreateForTeamDiscussionLegacy.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
