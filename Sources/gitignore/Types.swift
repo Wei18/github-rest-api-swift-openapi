@@ -17,7 +17,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /gitignore/templates`.
     /// - Remark: Generated from `#/paths//gitignore/templates/get(gitignore/get-all-templates)`.
-    func gitignore_sol_get_hyphen_all_hyphen_templates(_ input: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Input) async throws -> Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output
+    func gitignoreGetAllTemplates(_ input: Operations.GitignoreGetAllTemplates.Input) async throws -> Operations.GitignoreGetAllTemplates.Output
     /// Get a gitignore template
     ///
     /// Get the content of a gitignore template.
@@ -28,7 +28,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /gitignore/templates/{name}`.
     /// - Remark: Generated from `#/paths//gitignore/templates/{name}/get(gitignore/get-template)`.
-    func gitignore_sol_get_hyphen_template(_ input: Operations.gitignore_sol_get_hyphen_template.Input) async throws -> Operations.gitignore_sol_get_hyphen_template.Output
+    func gitignoreGetTemplate(_ input: Operations.GitignoreGetTemplate.Input) async throws -> Operations.GitignoreGetTemplate.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -39,8 +39,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gitignore/templates`.
     /// - Remark: Generated from `#/paths//gitignore/templates/get(gitignore/get-all-templates)`.
-    public func gitignore_sol_get_hyphen_all_hyphen_templates(headers: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Input.Headers = .init()) async throws -> Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output {
-        try await gitignore_sol_get_hyphen_all_hyphen_templates(Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Input(headers: headers))
+    public func gitignoreGetAllTemplates(headers: Operations.GitignoreGetAllTemplates.Input.Headers = .init()) async throws -> Operations.GitignoreGetAllTemplates.Output {
+        try await gitignoreGetAllTemplates(Operations.GitignoreGetAllTemplates.Input(headers: headers))
     }
     /// Get a gitignore template
     ///
@@ -52,11 +52,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gitignore/templates/{name}`.
     /// - Remark: Generated from `#/paths//gitignore/templates/{name}/get(gitignore/get-template)`.
-    public func gitignore_sol_get_hyphen_template(
-        path: Operations.gitignore_sol_get_hyphen_template.Input.Path,
-        headers: Operations.gitignore_sol_get_hyphen_template.Input.Headers = .init()
-    ) async throws -> Operations.gitignore_sol_get_hyphen_template.Output {
-        try await gitignore_sol_get_hyphen_template(Operations.gitignore_sol_get_hyphen_template.Input(
+    public func gitignoreGetTemplate(
+        path: Operations.GitignoreGetTemplate.Input.Path,
+        headers: Operations.GitignoreGetTemplate.Input.Headers = .init()
+    ) async throws -> Operations.GitignoreGetTemplate.Output {
+        try await gitignoreGetTemplate(Operations.GitignoreGetTemplate.Input(
             path: path,
             headers: headers
         ))
@@ -65,6 +65,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -80,12 +89,12 @@ public enum Components {
         /// Gitignore Template
         ///
         /// - Remark: Generated from `#/components/schemas/gitignore-template`.
-        public struct gitignore_hyphen_template: Codable, Hashable, Sendable {
+        public struct GitignoreTemplate: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/gitignore-template/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/gitignore-template/source`.
             public var source: Swift.String
-            /// Creates a new `gitignore_hyphen_template`.
+            /// Creates a new `GitignoreTemplate`.
             ///
             /// - Parameters:
             ///   - name:
@@ -109,8 +118,8 @@ public enum Components {
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
     }
@@ -126,26 +135,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gitignore/templates`.
     /// - Remark: Generated from `#/paths//gitignore/templates/get(gitignore/get-all-templates)`.
-    public enum gitignore_sol_get_hyphen_all_hyphen_templates {
+    public enum GitignoreGetAllTemplates {
         public static let id: Swift.String = "gitignore/get-all-templates"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gitignore/templates/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gitignore_sol_get_hyphen_all_hyphen_templates.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitignoreGetAllTemplates.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gitignore_sol_get_hyphen_all_hyphen_templates.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitignoreGetAllTemplates.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Input.Headers
+            public var headers: Operations.GitignoreGetAllTemplates.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Input.Headers = .init()) {
+            public init(headers: Operations.GitignoreGetAllTemplates.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -169,12 +178,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output.Ok.Body
+                public var body: Operations.GitignoreGetAllTemplates.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output.Ok.Body) {
+                public init(body: Operations.GitignoreGetAllTemplates.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -183,12 +192,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gitignore/templates/get(gitignore/get-all-templates)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output.Ok)
+            case ok(Operations.GitignoreGetAllTemplates.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output.Ok {
+            public var ok: Operations.GitignoreGetAllTemplates.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -206,12 +215,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gitignore/templates/get(gitignore/get-all-templates)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gitignore/templates/get(gitignore/get-all-templates)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -265,7 +282,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gitignore/templates/{name}`.
     /// - Remark: Generated from `#/paths//gitignore/templates/{name}/get(gitignore/get-template)`.
-    public enum gitignore_sol_get_hyphen_template {
+    public enum GitignoreGetTemplate {
         public static let id: Swift.String = "gitignore/get-template"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gitignore/templates/{name}/GET/path`.
@@ -280,27 +297,27 @@ public enum Operations {
                     self.name = name
                 }
             }
-            public var path: Operations.gitignore_sol_get_hyphen_template.Input.Path
+            public var path: Operations.GitignoreGetTemplate.Input.Path
             /// - Remark: Generated from `#/paths/gitignore/templates/{name}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gitignore_sol_get_hyphen_template.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitignoreGetTemplate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gitignore_sol_get_hyphen_template.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitignoreGetTemplate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gitignore_sol_get_hyphen_template.Input.Headers
+            public var headers: Operations.GitignoreGetTemplate.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gitignore_sol_get_hyphen_template.Input.Path,
-                headers: Operations.gitignore_sol_get_hyphen_template.Input.Headers = .init()
+                path: Operations.GitignoreGetTemplate.Input.Path,
+                headers: Operations.GitignoreGetTemplate.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -311,12 +328,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gitignore/templates/{name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gitignore/templates/{name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.gitignore_hyphen_template)
+                    case json(Components.Schemas.GitignoreTemplate)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gitignore_hyphen_template {
+                    public var json: Components.Schemas.GitignoreTemplate {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -326,12 +343,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gitignore_sol_get_hyphen_template.Output.Ok.Body
+                public var body: Operations.GitignoreGetTemplate.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.gitignore_sol_get_hyphen_template.Output.Ok.Body) {
+                public init(body: Operations.GitignoreGetTemplate.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -340,12 +357,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gitignore/templates/{name}/get(gitignore/get-template)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gitignore_sol_get_hyphen_template.Output.Ok)
+            case ok(Operations.GitignoreGetTemplate.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gitignore_sol_get_hyphen_template.Output.Ok {
+            public var ok: Operations.GitignoreGetTemplate.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -363,12 +380,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gitignore/templates/{name}/get(gitignore/get-template)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gitignore/templates/{name}/get(gitignore/get-template)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):

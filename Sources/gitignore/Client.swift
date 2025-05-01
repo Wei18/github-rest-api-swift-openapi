@@ -44,10 +44,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /gitignore/templates`.
     /// - Remark: Generated from `#/paths//gitignore/templates/get(gitignore/get-all-templates)`.
-    public func gitignore_sol_get_hyphen_all_hyphen_templates(_ input: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Input) async throws -> Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output {
+    public func gitignoreGetAllTemplates(_ input: Operations.GitignoreGetAllTemplates.Input) async throws -> Operations.GitignoreGetAllTemplates.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.id,
+            forOperation: Operations.GitignoreGetAllTemplates.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/gitignore/templates",
@@ -68,7 +68,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output.Ok.Body
+                    let body: Operations.GitignoreGetAllTemplates.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -112,10 +112,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /gitignore/templates/{name}`.
     /// - Remark: Generated from `#/paths//gitignore/templates/{name}/get(gitignore/get-template)`.
-    public func gitignore_sol_get_hyphen_template(_ input: Operations.gitignore_sol_get_hyphen_template.Input) async throws -> Operations.gitignore_sol_get_hyphen_template.Output {
+    public func gitignoreGetTemplate(_ input: Operations.GitignoreGetTemplate.Input) async throws -> Operations.GitignoreGetTemplate.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.gitignore_sol_get_hyphen_template.id,
+            forOperation: Operations.GitignoreGetTemplate.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/gitignore/templates/{}",
@@ -138,7 +138,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.gitignore_sol_get_hyphen_template.Output.Ok.Body
+                    let body: Operations.GitignoreGetTemplate.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -148,7 +148,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.gitignore_hyphen_template.self,
+                            Components.Schemas.GitignoreTemplate.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
