@@ -17,14 +17,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependency-graph/compare/{basehead}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/compare/{basehead}/get(dependency-graph/diff-range)`.
-    func dependency_hyphen_graph_sol_diff_hyphen_range(_ input: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input) async throws -> Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Output
+    func dependencyGraphDiffRange(_ input: Operations.DependencyGraphDiffRange.Input) async throws -> Operations.DependencyGraphDiffRange.Output
     /// Export a software bill of materials (SBOM) for a repository.
     ///
     /// Exports the software bill of materials (SBOM) for a repository in SPDX JSON format.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependency-graph/sbom`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/sbom/get(dependency-graph/export-sbom)`.
-    func dependency_hyphen_graph_sol_export_hyphen_sbom(_ input: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input) async throws -> Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output
+    func dependencyGraphExportSbom(_ input: Operations.DependencyGraphExportSbom.Input) async throws -> Operations.DependencyGraphExportSbom.Output
     /// Create a snapshot of dependencies for a repository
     ///
     /// Create a new snapshot of a repository's dependencies.
@@ -35,7 +35,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dependency-graph/snapshots`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/snapshots/post(dependency-graph/create-repository-snapshot)`.
-    func dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot(_ input: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input) async throws -> Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Output
+    func dependencyGraphCreateRepositorySnapshot(_ input: Operations.DependencyGraphCreateRepositorySnapshot.Input) async throws -> Operations.DependencyGraphCreateRepositorySnapshot.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -46,12 +46,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependency-graph/compare/{basehead}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/compare/{basehead}/get(dependency-graph/diff-range)`.
-    public func dependency_hyphen_graph_sol_diff_hyphen_range(
-        path: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Path,
-        query: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Query = .init(),
-        headers: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Headers = .init()
-    ) async throws -> Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Output {
-        try await dependency_hyphen_graph_sol_diff_hyphen_range(Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input(
+    public func dependencyGraphDiffRange(
+        path: Operations.DependencyGraphDiffRange.Input.Path,
+        query: Operations.DependencyGraphDiffRange.Input.Query = .init(),
+        headers: Operations.DependencyGraphDiffRange.Input.Headers = .init()
+    ) async throws -> Operations.DependencyGraphDiffRange.Output {
+        try await dependencyGraphDiffRange(Operations.DependencyGraphDiffRange.Input(
             path: path,
             query: query,
             headers: headers
@@ -63,11 +63,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependency-graph/sbom`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/sbom/get(dependency-graph/export-sbom)`.
-    public func dependency_hyphen_graph_sol_export_hyphen_sbom(
-        path: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input.Path,
-        headers: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input.Headers = .init()
-    ) async throws -> Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output {
-        try await dependency_hyphen_graph_sol_export_hyphen_sbom(Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input(
+    public func dependencyGraphExportSbom(
+        path: Operations.DependencyGraphExportSbom.Input.Path,
+        headers: Operations.DependencyGraphExportSbom.Input.Headers = .init()
+    ) async throws -> Operations.DependencyGraphExportSbom.Output {
+        try await dependencyGraphExportSbom(Operations.DependencyGraphExportSbom.Input(
             path: path,
             headers: headers
         ))
@@ -82,12 +82,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dependency-graph/snapshots`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/snapshots/post(dependency-graph/create-repository-snapshot)`.
-    public func dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot(
-        path: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Path,
-        headers: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Headers = .init(),
-        body: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Body
-    ) async throws -> Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Output {
-        try await dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot(Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input(
+    public func dependencyGraphCreateRepositorySnapshot(
+        path: Operations.DependencyGraphCreateRepositorySnapshot.Input.Path,
+        headers: Operations.DependencyGraphCreateRepositorySnapshot.Input.Headers = .init(),
+        body: Operations.DependencyGraphCreateRepositorySnapshot.Input.Body
+    ) async throws -> Operations.DependencyGraphCreateRepositorySnapshot.Output {
+        try await dependencyGraphCreateRepositorySnapshot(Operations.DependencyGraphCreateRepositorySnapshot.Input(
             path: path,
             headers: headers,
             body: body
@@ -97,6 +97,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -112,159 +121,159 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
         }
-        /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff`.
-        public struct dependency_hyphen_graph_hyphen_diffPayload: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/change_type`.
-            @frozen public enum change_typePayload: String, Codable, Hashable, Sendable {
+        /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff`.
+        public struct DependencyGraphDiffPayload: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/change_type`.
+            @frozen public enum ChangeTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case added = "added"
                 case removed = "removed"
             }
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/change_type`.
-            public var change_type: Components.Schemas.dependency_hyphen_graph_hyphen_diffPayload.change_typePayload
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/manifest`.
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/change_type`.
+            public var changeType: Components.Schemas.DependencyGraphDiffPayload.ChangeTypePayload
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/manifest`.
             public var manifest: Swift.String
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/ecosystem`.
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/ecosystem`.
             public var ecosystem: Swift.String
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/name`.
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/name`.
             public var name: Swift.String
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/version`.
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/version`.
             public var version: Swift.String
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/package_url`.
-            public var package_url: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/license`.
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/package_url`.
+            public var packageUrl: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/license`.
             public var license: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/source_repository_url`.
-            public var source_repository_url: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/vulnerabilitiesPayload`.
-            public struct vulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/vulnerabilitiesPayload/severity`.
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/source_repository_url`.
+            public var sourceRepositoryUrl: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/VulnerabilitiesPayload`.
+            public struct VulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/VulnerabilitiesPayload/severity`.
                 public var severity: Swift.String
-                /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/vulnerabilitiesPayload/advisory_ghsa_id`.
-                public var advisory_ghsa_id: Swift.String
-                /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/vulnerabilitiesPayload/advisory_summary`.
-                public var advisory_summary: Swift.String
-                /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/vulnerabilitiesPayload/advisory_url`.
-                public var advisory_url: Swift.String
-                /// Creates a new `vulnerabilitiesPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/VulnerabilitiesPayload/advisory_ghsa_id`.
+                public var advisoryGhsaId: Swift.String
+                /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/VulnerabilitiesPayload/advisory_summary`.
+                public var advisorySummary: Swift.String
+                /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/VulnerabilitiesPayload/advisory_url`.
+                public var advisoryUrl: Swift.String
+                /// Creates a new `VulnerabilitiesPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - severity:
-                ///   - advisory_ghsa_id:
-                ///   - advisory_summary:
-                ///   - advisory_url:
+                ///   - advisoryGhsaId:
+                ///   - advisorySummary:
+                ///   - advisoryUrl:
                 public init(
                     severity: Swift.String,
-                    advisory_ghsa_id: Swift.String,
-                    advisory_summary: Swift.String,
-                    advisory_url: Swift.String
+                    advisoryGhsaId: Swift.String,
+                    advisorySummary: Swift.String,
+                    advisoryUrl: Swift.String
                 ) {
                     self.severity = severity
-                    self.advisory_ghsa_id = advisory_ghsa_id
-                    self.advisory_summary = advisory_summary
-                    self.advisory_url = advisory_url
+                    self.advisoryGhsaId = advisoryGhsaId
+                    self.advisorySummary = advisorySummary
+                    self.advisoryUrl = advisoryUrl
                 }
                 public enum CodingKeys: String, CodingKey {
                     case severity
-                    case advisory_ghsa_id
-                    case advisory_summary
-                    case advisory_url
+                    case advisoryGhsaId = "advisory_ghsa_id"
+                    case advisorySummary = "advisory_summary"
+                    case advisoryUrl = "advisory_url"
                 }
             }
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/vulnerabilities`.
-            public typealias vulnerabilitiesPayload = [Components.Schemas.dependency_hyphen_graph_hyphen_diffPayload.vulnerabilitiesPayloadPayload]
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/vulnerabilities`.
-            public var vulnerabilities: Components.Schemas.dependency_hyphen_graph_hyphen_diffPayload.vulnerabilitiesPayload
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/vulnerabilities`.
+            public typealias VulnerabilitiesPayload = [Components.Schemas.DependencyGraphDiffPayload.VulnerabilitiesPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/vulnerabilities`.
+            public var vulnerabilities: Components.Schemas.DependencyGraphDiffPayload.VulnerabilitiesPayload
             /// Where the dependency is utilized. `development` means that the dependency is only utilized in the development environment. `runtime` means that the dependency is utilized at runtime and in the development environment.
             ///
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/scope`.
-            @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/scope`.
+            @frozen public enum ScopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case unknown = "unknown"
                 case runtime = "runtime"
                 case development = "development"
             }
             /// Where the dependency is utilized. `development` means that the dependency is only utilized in the development environment. `runtime` means that the dependency is utilized at runtime and in the development environment.
             ///
-            /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/scope`.
-            public var scope: Components.Schemas.dependency_hyphen_graph_hyphen_diffPayload.scopePayload
-            /// Creates a new `dependency_hyphen_graph_hyphen_diffPayload`.
+            /// - Remark: Generated from `#/components/schemas/DependencyGraphDiff/scope`.
+            public var scope: Components.Schemas.DependencyGraphDiffPayload.ScopePayload
+            /// Creates a new `DependencyGraphDiffPayload`.
             ///
             /// - Parameters:
-            ///   - change_type:
+            ///   - changeType:
             ///   - manifest:
             ///   - ecosystem:
             ///   - name:
             ///   - version:
-            ///   - package_url:
+            ///   - packageUrl:
             ///   - license:
-            ///   - source_repository_url:
+            ///   - sourceRepositoryUrl:
             ///   - vulnerabilities:
             ///   - scope: Where the dependency is utilized. `development` means that the dependency is only utilized in the development environment. `runtime` means that the dependency is utilized at runtime and in the development environment.
             public init(
-                change_type: Components.Schemas.dependency_hyphen_graph_hyphen_diffPayload.change_typePayload,
+                changeType: Components.Schemas.DependencyGraphDiffPayload.ChangeTypePayload,
                 manifest: Swift.String,
                 ecosystem: Swift.String,
                 name: Swift.String,
                 version: Swift.String,
-                package_url: Swift.String? = nil,
+                packageUrl: Swift.String? = nil,
                 license: Swift.String? = nil,
-                source_repository_url: Swift.String? = nil,
-                vulnerabilities: Components.Schemas.dependency_hyphen_graph_hyphen_diffPayload.vulnerabilitiesPayload,
-                scope: Components.Schemas.dependency_hyphen_graph_hyphen_diffPayload.scopePayload
+                sourceRepositoryUrl: Swift.String? = nil,
+                vulnerabilities: Components.Schemas.DependencyGraphDiffPayload.VulnerabilitiesPayload,
+                scope: Components.Schemas.DependencyGraphDiffPayload.ScopePayload
             ) {
-                self.change_type = change_type
+                self.changeType = changeType
                 self.manifest = manifest
                 self.ecosystem = ecosystem
                 self.name = name
                 self.version = version
-                self.package_url = package_url
+                self.packageUrl = packageUrl
                 self.license = license
-                self.source_repository_url = source_repository_url
+                self.sourceRepositoryUrl = sourceRepositoryUrl
                 self.vulnerabilities = vulnerabilities
                 self.scope = scope
             }
             public enum CodingKeys: String, CodingKey {
-                case change_type
+                case changeType = "change_type"
                 case manifest
                 case ecosystem
                 case name
                 case version
-                case package_url
+                case packageUrl = "package_url"
                 case license
-                case source_repository_url
+                case sourceRepositoryUrl = "source_repository_url"
                 case vulnerabilities
                 case scope
             }
@@ -272,17 +281,17 @@ public enum Components {
         /// A diff of the dependencies between two commits.
         ///
         /// - Remark: Generated from `#/components/schemas/dependency-graph-diff`.
-        public typealias dependency_hyphen_graph_hyphen_diff = [Components.Schemas.dependency_hyphen_graph_hyphen_diffPayload]
+        public typealias DependencyGraphDiff = [Components.Schemas.DependencyGraphDiffPayload]
         /// A schema for the SPDX JSON format returned by the Dependency Graph.
         ///
         /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom`.
-        public struct dependency_hyphen_graph_hyphen_spdx_hyphen_sbom: Codable, Hashable, Sendable {
+        public struct DependencyGraphSpdxSbom: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom`.
-            public struct sbomPayload: Codable, Hashable, Sendable {
+            public struct SbomPayload: Codable, Hashable, Sendable {
                 /// The SPDX identifier for the SPDX document.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/SPDXID`.
-                public var SPDXID: Swift.String
+                public var spdxid: Swift.String
                 /// The version of the SPDX specification that this document conforms to.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/spdxVersion`.
@@ -292,7 +301,7 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/comment`.
                 public var comment: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/creationInfo`.
-                public struct creationInfoPayload: Codable, Hashable, Sendable {
+                public struct CreationInfoPayload: Codable, Hashable, Sendable {
                     /// The date and time the SPDX document was created.
                     ///
                     /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/creationInfo/created`.
@@ -301,7 +310,7 @@ public enum Components {
                     ///
                     /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/creationInfo/creators`.
                     public var creators: [Swift.String]
-                    /// Creates a new `creationInfoPayload`.
+                    /// Creates a new `CreationInfoPayload`.
                     ///
                     /// - Parameters:
                     ///   - created: The date and time the SPDX document was created.
@@ -319,7 +328,7 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/creationInfo`.
-                public var creationInfo: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.creationInfoPayload
+                public var creationInfo: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.CreationInfoPayload
                 /// The name of the SPDX document.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/name`.
@@ -332,63 +341,63 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/documentNamespace`.
                 public var documentNamespace: Swift.String
-                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload`.
-                public struct packagesPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload`.
+                public struct PackagesPayloadPayload: Codable, Hashable, Sendable {
                     /// A unique SPDX identifier for the package.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/SPDXID`.
-                    public var SPDXID: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/SPDXID`.
+                    public var spdxid: Swift.String?
                     /// The name of the package.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/name`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/name`.
                     public var name: Swift.String?
                     /// The version of the package. If the package does not have an exact version specified,
                     /// a version range is given.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/versionInfo`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/versionInfo`.
                     public var versionInfo: Swift.String?
                     /// The location where the package can be downloaded,
                     /// or NOASSERTION if this has not been determined.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/downloadLocation`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/downloadLocation`.
                     public var downloadLocation: Swift.String?
                     /// Whether the package's file content has been subjected to
                     /// analysis during the creation of the SPDX document.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/filesAnalyzed`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/filesAnalyzed`.
                     public var filesAnalyzed: Swift.Bool?
                     /// The license of the package as determined while creating the SPDX document.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/licenseConcluded`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/licenseConcluded`.
                     public var licenseConcluded: Swift.String?
                     /// The license of the package as declared by its author, or NOASSERTION if this information
                     /// was not available when the SPDX document was created.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/licenseDeclared`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/licenseDeclared`.
                     public var licenseDeclared: Swift.String?
                     /// The distribution source of this package, or NOASSERTION if this was not determined.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/supplier`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/supplier`.
                     public var supplier: Swift.String?
                     /// The copyright holders of the package, and any dates present with those notices, if available.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/copyrightText`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/copyrightText`.
                     public var copyrightText: Swift.String?
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/externalRefsPayload`.
-                    public struct externalRefsPayloadPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/ExternalRefsPayload`.
+                    public struct ExternalRefsPayloadPayload: Codable, Hashable, Sendable {
                         /// The category of reference to an external resource this reference refers to.
                         ///
-                        /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/externalRefsPayload/referenceCategory`.
+                        /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/ExternalRefsPayload/referenceCategory`.
                         public var referenceCategory: Swift.String
                         /// A locator for the particular external resource this reference refers to.
                         ///
-                        /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/externalRefsPayload/referenceLocator`.
+                        /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/ExternalRefsPayload/referenceLocator`.
                         public var referenceLocator: Swift.String
                         /// The category of reference to an external resource this reference refers to.
                         ///
-                        /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/externalRefsPayload/referenceType`.
+                        /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/ExternalRefsPayload/referenceType`.
                         public var referenceType: Swift.String
-                        /// Creates a new `externalRefsPayloadPayload`.
+                        /// Creates a new `ExternalRefsPayloadPayload`.
                         ///
                         /// - Parameters:
                         ///   - referenceCategory: The category of reference to an external resource this reference refers to.
@@ -409,14 +418,14 @@ public enum Components {
                             case referenceType
                         }
                     }
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/externalRefs`.
-                    public typealias externalRefsPayload = [Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayloadPayload.externalRefsPayloadPayload]
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packagesPayload/externalRefs`.
-                    public var externalRefs: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayloadPayload.externalRefsPayload?
-                    /// Creates a new `packagesPayloadPayload`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/externalRefs`.
+                    public typealias ExternalRefsPayload = [Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.PackagesPayloadPayload.ExternalRefsPayloadPayload]
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/PackagesPayload/externalRefs`.
+                    public var externalRefs: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.PackagesPayloadPayload.ExternalRefsPayload?
+                    /// Creates a new `PackagesPayloadPayload`.
                     ///
                     /// - Parameters:
-                    ///   - SPDXID: A unique SPDX identifier for the package.
+                    ///   - spdxid: A unique SPDX identifier for the package.
                     ///   - name: The name of the package.
                     ///   - versionInfo: The version of the package. If the package does not have an exact version specified,
                     ///   - downloadLocation: The location where the package can be downloaded,
@@ -427,7 +436,7 @@ public enum Components {
                     ///   - copyrightText: The copyright holders of the package, and any dates present with those notices, if available.
                     ///   - externalRefs:
                     public init(
-                        SPDXID: Swift.String? = nil,
+                        spdxid: Swift.String? = nil,
                         name: Swift.String? = nil,
                         versionInfo: Swift.String? = nil,
                         downloadLocation: Swift.String? = nil,
@@ -436,9 +445,9 @@ public enum Components {
                         licenseDeclared: Swift.String? = nil,
                         supplier: Swift.String? = nil,
                         copyrightText: Swift.String? = nil,
-                        externalRefs: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayloadPayload.externalRefsPayload? = nil
+                        externalRefs: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.PackagesPayloadPayload.ExternalRefsPayload? = nil
                     ) {
-                        self.SPDXID = SPDXID
+                        self.spdxid = spdxid
                         self.name = name
                         self.versionInfo = versionInfo
                         self.downloadLocation = downloadLocation
@@ -450,7 +459,7 @@ public enum Components {
                         self.externalRefs = externalRefs
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case SPDXID
+                        case spdxid = "SPDXID"
                         case name
                         case versionInfo
                         case downloadLocation
@@ -463,24 +472,24 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packages`.
-                public typealias packagesPayload = [Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayloadPayload]
+                public typealias PackagesPayload = [Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.PackagesPayloadPayload]
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/packages`.
-                public var packages: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayload
-                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationshipsPayload`.
-                public struct relationshipsPayloadPayload: Codable, Hashable, Sendable {
+                public var packages: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.PackagesPayload
+                /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/RelationshipsPayload`.
+                public struct RelationshipsPayloadPayload: Codable, Hashable, Sendable {
                     /// The type of relationship between the two SPDX elements.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationshipsPayload/relationshipType`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/RelationshipsPayload/relationshipType`.
                     public var relationshipType: Swift.String?
                     /// The SPDX identifier of the package that is the source of the relationship.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationshipsPayload/spdxElementId`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/RelationshipsPayload/spdxElementId`.
                     public var spdxElementId: Swift.String?
                     /// The SPDX identifier of the package that is the target of the relationship.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationshipsPayload/relatedSpdxElement`.
+                    /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/RelationshipsPayload/relatedSpdxElement`.
                     public var relatedSpdxElement: Swift.String?
-                    /// Creates a new `relationshipsPayloadPayload`.
+                    /// Creates a new `RelationshipsPayloadPayload`.
                     ///
                     /// - Parameters:
                     ///   - relationshipType: The type of relationship between the two SPDX elements.
@@ -502,13 +511,13 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationships`.
-                public typealias relationshipsPayload = [Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.relationshipsPayloadPayload]
+                public typealias RelationshipsPayload = [Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.RelationshipsPayloadPayload]
                 /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom/relationships`.
-                public var relationships: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.relationshipsPayload?
-                /// Creates a new `sbomPayload`.
+                public var relationships: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.RelationshipsPayload?
+                /// Creates a new `SbomPayload`.
                 ///
                 /// - Parameters:
-                ///   - SPDXID: The SPDX identifier for the SPDX document.
+                ///   - spdxid: The SPDX identifier for the SPDX document.
                 ///   - spdxVersion: The version of the SPDX specification that this document conforms to.
                 ///   - comment: An optional comment about the SPDX document.
                 ///   - creationInfo:
@@ -518,17 +527,17 @@ public enum Components {
                 ///   - packages:
                 ///   - relationships:
                 public init(
-                    SPDXID: Swift.String,
+                    spdxid: Swift.String,
                     spdxVersion: Swift.String,
                     comment: Swift.String? = nil,
-                    creationInfo: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.creationInfoPayload,
+                    creationInfo: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.CreationInfoPayload,
                     name: Swift.String,
                     dataLicense: Swift.String,
                     documentNamespace: Swift.String,
-                    packages: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.packagesPayload,
-                    relationships: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload.relationshipsPayload? = nil
+                    packages: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.PackagesPayload,
+                    relationships: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload.RelationshipsPayload? = nil
                 ) {
-                    self.SPDXID = SPDXID
+                    self.spdxid = spdxid
                     self.spdxVersion = spdxVersion
                     self.comment = comment
                     self.creationInfo = creationInfo
@@ -539,7 +548,7 @@ public enum Components {
                     self.relationships = relationships
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case SPDXID
+                    case spdxid = "SPDXID"
                     case spdxVersion
                     case comment
                     case creationInfo
@@ -551,12 +560,12 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/dependency-graph-spdx-sbom/sbom`.
-            public var sbom: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload
-            /// Creates a new `dependency_hyphen_graph_hyphen_spdx_hyphen_sbom`.
+            public var sbom: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload
+            /// Creates a new `DependencyGraphSpdxSbom`.
             ///
             /// - Parameters:
             ///   - sbom:
-            public init(sbom: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom.sbomPayload) {
+            public init(sbom: Components.Schemas.DependencyGraphSpdxSbom.SbomPayload) {
                 self.sbom = sbom
             }
             public enum CodingKeys: String, CodingKey {
@@ -566,16 +575,16 @@ public enum Components {
         /// User-defined metadata to store domain-specific information limited to 8 keys with scalar values.
         ///
         /// - Remark: Generated from `#/components/schemas/metadata`.
-        public struct metadata: Codable, Hashable, Sendable {
+        public struct Metadata: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/metadata/additionalProperties`.
-            public struct additionalPropertiesPayload: Codable, Hashable, Sendable {
+            public struct AdditionalPropertiesPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/metadata/additionalProperties/value1`.
                 public var value1: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/metadata/additionalProperties/value2`.
                 public var value2: Swift.Double?
                 /// - Remark: Generated from `#/components/schemas/metadata/additionalProperties/value3`.
                 public var value3: Swift.Bool?
-                /// Creates a new `additionalPropertiesPayload`.
+                /// Creates a new `AdditionalPropertiesPayload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
@@ -593,25 +602,25 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try decoder.decodeFromSingleValueContainer()
+                        self.value1 = try decoder.decodeFromSingleValueContainer()
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try decoder.decodeFromSingleValueContainer()
+                        self.value2 = try decoder.decodeFromSingleValueContainer()
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value3 = try decoder.decodeFromSingleValueContainer()
+                        self.value3 = try decoder.decodeFromSingleValueContainer()
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2,
-                            value3
+                            self.value1,
+                            self.value2,
+                            self.value3
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -620,19 +629,19 @@ public enum Components {
                 }
                 public func encode(to encoder: any Encoder) throws {
                     try encoder.encodeFirstNonNilValueToSingleValueContainer([
-                        value1,
-                        value2,
-                        value3
+                        self.value1,
+                        self.value2,
+                        self.value3
                     ])
                 }
             }
             /// A container of undocumented properties.
-            public var additionalProperties: [String: Components.Schemas.metadata.additionalPropertiesPayload?]
-            /// Creates a new `metadata`.
+            public var additionalProperties: [String: Components.Schemas.Metadata.AdditionalPropertiesPayload?]
+            /// Creates a new `Metadata`.
             ///
             /// - Parameters:
             ///   - additionalProperties: A container of undocumented properties.
-            public init(additionalProperties: [String: Components.Schemas.metadata.additionalPropertiesPayload?] = .init()) {
+            public init(additionalProperties: [String: Components.Schemas.Metadata.AdditionalPropertiesPayload?] = .init()) {
                 self.additionalProperties = additionalProperties
             }
             public init(from decoder: any Decoder) throws {
@@ -643,62 +652,62 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/dependency`.
-        public struct dependency: Codable, Hashable, Sendable {
+        public struct Dependency: Codable, Hashable, Sendable {
             /// Package-url (PURL) of dependency. See https://github.com/package-url/purl-spec for more details.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency/package_url`.
-            public var package_url: Swift.String?
+            public var packageUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/dependency/metadata`.
-            public var metadata: Components.Schemas.metadata?
+            public var metadata: Components.Schemas.Metadata?
             /// A notation of whether a dependency is requested directly by this manifest or is a dependency of another dependency.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency/relationship`.
-            @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RelationshipPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case direct = "direct"
                 case indirect = "indirect"
             }
             /// A notation of whether a dependency is requested directly by this manifest or is a dependency of another dependency.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency/relationship`.
-            public var relationship: Components.Schemas.dependency.relationshipPayload?
+            public var relationship: Components.Schemas.Dependency.RelationshipPayload?
             /// A notation of whether the dependency is required for the primary build artifact (runtime) or is only used for development. Future versions of this specification may allow for more granular scopes.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency/scope`.
-            @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ScopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case runtime = "runtime"
                 case development = "development"
             }
             /// A notation of whether the dependency is required for the primary build artifact (runtime) or is only used for development. Future versions of this specification may allow for more granular scopes.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency/scope`.
-            public var scope: Components.Schemas.dependency.scopePayload?
+            public var scope: Components.Schemas.Dependency.ScopePayload?
             /// Array of package-url (PURLs) of direct child dependencies.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency/dependencies`.
             public var dependencies: [Swift.String]?
-            /// Creates a new `dependency`.
+            /// Creates a new `Dependency`.
             ///
             /// - Parameters:
-            ///   - package_url: Package-url (PURL) of dependency. See https://github.com/package-url/purl-spec for more details.
+            ///   - packageUrl: Package-url (PURL) of dependency. See https://github.com/package-url/purl-spec for more details.
             ///   - metadata:
             ///   - relationship: A notation of whether a dependency is requested directly by this manifest or is a dependency of another dependency.
             ///   - scope: A notation of whether the dependency is required for the primary build artifact (runtime) or is only used for development. Future versions of this specification may allow for more granular scopes.
             ///   - dependencies: Array of package-url (PURLs) of direct child dependencies.
             public init(
-                package_url: Swift.String? = nil,
-                metadata: Components.Schemas.metadata? = nil,
-                relationship: Components.Schemas.dependency.relationshipPayload? = nil,
-                scope: Components.Schemas.dependency.scopePayload? = nil,
+                packageUrl: Swift.String? = nil,
+                metadata: Components.Schemas.Metadata? = nil,
+                relationship: Components.Schemas.Dependency.RelationshipPayload? = nil,
+                scope: Components.Schemas.Dependency.ScopePayload? = nil,
                 dependencies: [Swift.String]? = nil
             ) {
-                self.package_url = package_url
+                self.packageUrl = packageUrl
                 self.metadata = metadata
                 self.relationship = relationship
                 self.scope = scope
                 self.dependencies = dependencies
             }
             public enum CodingKeys: String, CodingKey {
-                case package_url
+                case packageUrl = "package_url"
                 case metadata
                 case relationship
                 case scope
@@ -706,23 +715,23 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                package_url = try container.decodeIfPresent(
+                self.packageUrl = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .package_url
+                    forKey: .packageUrl
                 )
-                metadata = try container.decodeIfPresent(
-                    Components.Schemas.metadata.self,
+                self.metadata = try container.decodeIfPresent(
+                    Components.Schemas.Metadata.self,
                     forKey: .metadata
                 )
-                relationship = try container.decodeIfPresent(
-                    Components.Schemas.dependency.relationshipPayload.self,
+                self.relationship = try container.decodeIfPresent(
+                    Components.Schemas.Dependency.RelationshipPayload.self,
                     forKey: .relationship
                 )
-                scope = try container.decodeIfPresent(
-                    Components.Schemas.dependency.scopePayload.self,
+                self.scope = try container.decodeIfPresent(
+                    Components.Schemas.Dependency.ScopePayload.self,
                     forKey: .scope
                 )
-                dependencies = try container.decodeIfPresent(
+                self.dependencies = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .dependencies
                 )
@@ -736,32 +745,32 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/manifest`.
-        public struct manifest: Codable, Hashable, Sendable {
+        public struct Manifest: Codable, Hashable, Sendable {
             /// The name of the manifest.
             ///
             /// - Remark: Generated from `#/components/schemas/manifest/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/manifest/file`.
-            public struct filePayload: Codable, Hashable, Sendable {
+            public struct FilePayload: Codable, Hashable, Sendable {
                 /// The path of the manifest file relative to the root of the Git repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/manifest/file/source_location`.
-                public var source_location: Swift.String?
-                /// Creates a new `filePayload`.
+                public var sourceLocation: Swift.String?
+                /// Creates a new `FilePayload`.
                 ///
                 /// - Parameters:
-                ///   - source_location: The path of the manifest file relative to the root of the Git repository.
-                public init(source_location: Swift.String? = nil) {
-                    self.source_location = source_location
+                ///   - sourceLocation: The path of the manifest file relative to the root of the Git repository.
+                public init(sourceLocation: Swift.String? = nil) {
+                    self.sourceLocation = sourceLocation
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case source_location
+                    case sourceLocation = "source_location"
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    source_location = try container.decodeIfPresent(
+                    self.sourceLocation = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .source_location
+                        forKey: .sourceLocation
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
                         "source_location"
@@ -769,20 +778,20 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/manifest/file`.
-            public var file: Components.Schemas.manifest.filePayload?
+            public var file: Components.Schemas.Manifest.FilePayload?
             /// - Remark: Generated from `#/components/schemas/manifest/metadata`.
-            public var metadata: Components.Schemas.metadata?
+            public var metadata: Components.Schemas.Metadata?
             /// A collection of resolved package dependencies.
             ///
             /// - Remark: Generated from `#/components/schemas/manifest/resolved`.
-            public struct resolvedPayload: Codable, Hashable, Sendable {
+            public struct ResolvedPayload: Codable, Hashable, Sendable {
                 /// A container of undocumented properties.
-                public var additionalProperties: [String: Components.Schemas.dependency]
-                /// Creates a new `resolvedPayload`.
+                public var additionalProperties: [String: Components.Schemas.Dependency]
+                /// Creates a new `ResolvedPayload`.
                 ///
                 /// - Parameters:
                 ///   - additionalProperties: A container of undocumented properties.
-                public init(additionalProperties: [String: Components.Schemas.dependency] = .init()) {
+                public init(additionalProperties: [String: Components.Schemas.Dependency] = .init()) {
                     self.additionalProperties = additionalProperties
                 }
                 public init(from decoder: any Decoder) throws {
@@ -795,8 +804,8 @@ public enum Components {
             /// A collection of resolved package dependencies.
             ///
             /// - Remark: Generated from `#/components/schemas/manifest/resolved`.
-            public var resolved: Components.Schemas.manifest.resolvedPayload?
-            /// Creates a new `manifest`.
+            public var resolved: Components.Schemas.Manifest.ResolvedPayload?
+            /// Creates a new `Manifest`.
             ///
             /// - Parameters:
             ///   - name: The name of the manifest.
@@ -805,9 +814,9 @@ public enum Components {
             ///   - resolved: A collection of resolved package dependencies.
             public init(
                 name: Swift.String,
-                file: Components.Schemas.manifest.filePayload? = nil,
-                metadata: Components.Schemas.metadata? = nil,
-                resolved: Components.Schemas.manifest.resolvedPayload? = nil
+                file: Components.Schemas.Manifest.FilePayload? = nil,
+                metadata: Components.Schemas.Metadata? = nil,
+                resolved: Components.Schemas.Manifest.ResolvedPayload? = nil
             ) {
                 self.name = name
                 self.file = file
@@ -822,20 +831,20 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                name = try container.decode(
+                self.name = try container.decode(
                     Swift.String.self,
                     forKey: .name
                 )
-                file = try container.decodeIfPresent(
-                    Components.Schemas.manifest.filePayload.self,
+                self.file = try container.decodeIfPresent(
+                    Components.Schemas.Manifest.FilePayload.self,
                     forKey: .file
                 )
-                metadata = try container.decodeIfPresent(
-                    Components.Schemas.metadata.self,
+                self.metadata = try container.decodeIfPresent(
+                    Components.Schemas.Metadata.self,
                     forKey: .metadata
                 )
-                resolved = try container.decodeIfPresent(
-                    Components.Schemas.manifest.resolvedPayload.self,
+                self.resolved = try container.decodeIfPresent(
+                    Components.Schemas.Manifest.ResolvedPayload.self,
                     forKey: .resolved
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
@@ -849,13 +858,13 @@ public enum Components {
         /// Create a new snapshot of a repository's dependencies.
         ///
         /// - Remark: Generated from `#/components/schemas/snapshot`.
-        public struct snapshot: Codable, Hashable, Sendable {
+        public struct Snapshot: Codable, Hashable, Sendable {
             /// The version of the repository snapshot submission.
             ///
             /// - Remark: Generated from `#/components/schemas/snapshot/version`.
             public var version: Swift.Int
             /// - Remark: Generated from `#/components/schemas/snapshot/job`.
-            public struct jobPayload: Codable, Hashable, Sendable {
+            public struct JobPayload: Codable, Hashable, Sendable {
                 /// The external ID of the job.
                 ///
                 /// - Remark: Generated from `#/components/schemas/snapshot/job/id`.
@@ -867,40 +876,40 @@ public enum Components {
                 /// The url for the job.
                 ///
                 /// - Remark: Generated from `#/components/schemas/snapshot/job/html_url`.
-                public var html_url: Swift.String?
-                /// Creates a new `jobPayload`.
+                public var htmlUrl: Swift.String?
+                /// Creates a new `JobPayload`.
                 ///
                 /// - Parameters:
                 ///   - id: The external ID of the job.
                 ///   - correlator: Correlator provides a key that is used to group snapshots submitted over time. Only the "latest" submitted snapshot for a given combination of `job.correlator` and `detector.name` will be considered when calculating a repository's current dependencies. Correlator should be as unique as it takes to distinguish all detection runs for a given "wave" of CI workflow you run. If you're using GitHub Actions, a good default value for this could be the environment variables GITHUB_WORKFLOW and GITHUB_JOB concatenated together. If you're using a build matrix, then you'll also need to add additional key(s) to distinguish between each submission inside a matrix variation.
-                ///   - html_url: The url for the job.
+                ///   - htmlUrl: The url for the job.
                 public init(
                     id: Swift.String,
                     correlator: Swift.String,
-                    html_url: Swift.String? = nil
+                    htmlUrl: Swift.String? = nil
                 ) {
                     self.id = id
                     self.correlator = correlator
-                    self.html_url = html_url
+                    self.htmlUrl = htmlUrl
                 }
                 public enum CodingKeys: String, CodingKey {
                     case id
                     case correlator
-                    case html_url
+                    case htmlUrl = "html_url"
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    id = try container.decode(
+                    self.id = try container.decode(
                         Swift.String.self,
                         forKey: .id
                     )
-                    correlator = try container.decode(
+                    self.correlator = try container.decode(
                         Swift.String.self,
                         forKey: .correlator
                     )
-                    html_url = try container.decodeIfPresent(
+                    self.htmlUrl = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .html_url
+                        forKey: .htmlUrl
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
                         "id",
@@ -910,7 +919,7 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/snapshot/job`.
-            public var job: Components.Schemas.snapshot.jobPayload
+            public var job: Components.Schemas.Snapshot.JobPayload
             /// The commit SHA associated with this dependency snapshot. Maximum length: 40 characters.
             ///
             /// - Remark: Generated from `#/components/schemas/snapshot/sha`.
@@ -922,7 +931,7 @@ public enum Components {
             /// A description of the detector used.
             ///
             /// - Remark: Generated from `#/components/schemas/snapshot/detector`.
-            public struct detectorPayload: Codable, Hashable, Sendable {
+            public struct DetectorPayload: Codable, Hashable, Sendable {
                 /// The name of the detector used.
                 ///
                 /// - Remark: Generated from `#/components/schemas/snapshot/detector/name`.
@@ -935,7 +944,7 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/snapshot/detector/url`.
                 public var url: Swift.String
-                /// Creates a new `detectorPayload`.
+                /// Creates a new `DetectorPayload`.
                 ///
                 /// - Parameters:
                 ///   - name: The name of the detector used.
@@ -957,15 +966,15 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    name = try container.decode(
+                    self.name = try container.decode(
                         Swift.String.self,
                         forKey: .name
                     )
-                    version = try container.decode(
+                    self.version = try container.decode(
                         Swift.String.self,
                         forKey: .version
                     )
-                    url = try container.decode(
+                    self.url = try container.decode(
                         Swift.String.self,
                         forKey: .url
                     )
@@ -979,20 +988,20 @@ public enum Components {
             /// A description of the detector used.
             ///
             /// - Remark: Generated from `#/components/schemas/snapshot/detector`.
-            public var detector: Components.Schemas.snapshot.detectorPayload
+            public var detector: Components.Schemas.Snapshot.DetectorPayload
             /// - Remark: Generated from `#/components/schemas/snapshot/metadata`.
-            public var metadata: Components.Schemas.metadata?
+            public var metadata: Components.Schemas.Metadata?
             /// A collection of package manifests, which are a collection of related dependencies declared in a file or representing a logical group of dependencies.
             ///
             /// - Remark: Generated from `#/components/schemas/snapshot/manifests`.
-            public struct manifestsPayload: Codable, Hashable, Sendable {
+            public struct ManifestsPayload: Codable, Hashable, Sendable {
                 /// A container of undocumented properties.
-                public var additionalProperties: [String: Components.Schemas.manifest]
-                /// Creates a new `manifestsPayload`.
+                public var additionalProperties: [String: Components.Schemas.Manifest]
+                /// Creates a new `ManifestsPayload`.
                 ///
                 /// - Parameters:
                 ///   - additionalProperties: A container of undocumented properties.
-                public init(additionalProperties: [String: Components.Schemas.manifest] = .init()) {
+                public init(additionalProperties: [String: Components.Schemas.Manifest] = .init()) {
                     self.additionalProperties = additionalProperties
                 }
                 public init(from decoder: any Decoder) throws {
@@ -1005,12 +1014,12 @@ public enum Components {
             /// A collection of package manifests, which are a collection of related dependencies declared in a file or representing a logical group of dependencies.
             ///
             /// - Remark: Generated from `#/components/schemas/snapshot/manifests`.
-            public var manifests: Components.Schemas.snapshot.manifestsPayload?
+            public var manifests: Components.Schemas.Snapshot.ManifestsPayload?
             /// The time at which the snapshot was scanned.
             ///
             /// - Remark: Generated from `#/components/schemas/snapshot/scanned`.
             public var scanned: Foundation.Date
-            /// Creates a new `snapshot`.
+            /// Creates a new `Snapshot`.
             ///
             /// - Parameters:
             ///   - version: The version of the repository snapshot submission.
@@ -1023,12 +1032,12 @@ public enum Components {
             ///   - scanned: The time at which the snapshot was scanned.
             public init(
                 version: Swift.Int,
-                job: Components.Schemas.snapshot.jobPayload,
+                job: Components.Schemas.Snapshot.JobPayload,
                 sha: Swift.String,
                 ref: Swift.String,
-                detector: Components.Schemas.snapshot.detectorPayload,
-                metadata: Components.Schemas.metadata? = nil,
-                manifests: Components.Schemas.snapshot.manifestsPayload? = nil,
+                detector: Components.Schemas.Snapshot.DetectorPayload,
+                metadata: Components.Schemas.Metadata? = nil,
+                manifests: Components.Schemas.Snapshot.ManifestsPayload? = nil,
                 scanned: Foundation.Date
             ) {
                 self.version = version
@@ -1052,35 +1061,35 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                version = try container.decode(
+                self.version = try container.decode(
                     Swift.Int.self,
                     forKey: .version
                 )
-                job = try container.decode(
-                    Components.Schemas.snapshot.jobPayload.self,
+                self.job = try container.decode(
+                    Components.Schemas.Snapshot.JobPayload.self,
                     forKey: .job
                 )
-                sha = try container.decode(
+                self.sha = try container.decode(
                     Swift.String.self,
                     forKey: .sha
                 )
-                ref = try container.decode(
+                self.ref = try container.decode(
                     Swift.String.self,
                     forKey: .ref
                 )
-                detector = try container.decode(
-                    Components.Schemas.snapshot.detectorPayload.self,
+                self.detector = try container.decode(
+                    Components.Schemas.Snapshot.DetectorPayload.self,
                     forKey: .detector
                 )
-                metadata = try container.decodeIfPresent(
-                    Components.Schemas.metadata.self,
+                self.metadata = try container.decodeIfPresent(
+                    Components.Schemas.Metadata.self,
                     forKey: .metadata
                 )
-                manifests = try container.decodeIfPresent(
-                    Components.Schemas.snapshot.manifestsPayload.self,
+                self.manifests = try container.decodeIfPresent(
+                    Components.Schemas.Snapshot.ManifestsPayload.self,
                     forKey: .manifests
                 )
-                scanned = try container.decode(
+                self.scanned = try container.decode(
                     Foundation.Date.self,
                     forKey: .scanned
                 )
@@ -1102,30 +1111,30 @@ public enum Components {
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The full path, relative to the repository root, of the dependency manifest file.
         ///
         /// - Remark: Generated from `#/components/parameters/manifest-path`.
-        public typealias manifest_hyphen_path = Swift.String
+        public typealias ManifestPath = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1135,25 +1144,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1163,25 +1172,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct dependency_review_forbidden: Sendable, Hashable {
+        public struct DependencyReviewForbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/dependency_review_forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/dependency_review_forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1191,12 +1200,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.dependency_review_forbidden.Body
-            /// Creates a new `dependency_review_forbidden`.
+            public var body: Components.Responses.DependencyReviewForbidden.Body
+            /// Creates a new `DependencyReviewForbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.dependency_review_forbidden.Body) {
+            public init(body: Components.Responses.DependencyReviewForbidden.Body) {
                 self.body = body
             }
         }
@@ -1204,7 +1213,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -1216,7 +1225,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependency-graph/compare/{basehead}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/compare/{basehead}/get(dependency-graph/diff-range)`.
-    public enum dependency_hyphen_graph_sol_diff_hyphen_range {
+    public enum DependencyGraphDiffRange {
         public static let id: Swift.String = "dependency-graph/diff-range"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/path`.
@@ -1224,11 +1233,11 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The base and head Git revisions to compare. The Git revisions will be resolved to commit SHAs. Named revisions will be resolved to their corresponding HEAD commits, and an appropriate merge base will be determined. This parameter expects the format `{base}...{head}`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/path/basehead`.
@@ -1240,8 +1249,8 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - basehead: The base and head Git revisions to compare. The Git revisions will be resolved to commit SHAs. Named revisions will be resolved to their corresponding HEAD commits, and an appropriate merge base will be determined. This parameter expects the format `{base}...{head}`.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
                     basehead: Swift.String
                 ) {
                     self.owner = owner
@@ -1249,34 +1258,34 @@ public enum Operations {
                     self.basehead = basehead
                 }
             }
-            public var path: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Path
+            public var path: Operations.DependencyGraphDiffRange.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The full path, relative to the repository root, of the dependency manifest file.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/query/name`.
-                public var name: Components.Parameters.manifest_hyphen_path?
+                public var name: Components.Parameters.ManifestPath?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - name: The full path, relative to the repository root, of the dependency manifest file.
-                public init(name: Components.Parameters.manifest_hyphen_path? = nil) {
+                public init(name: Components.Parameters.ManifestPath? = nil) {
                     self.name = name
                 }
             }
-            public var query: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Query
+            public var query: Operations.DependencyGraphDiffRange.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependency_hyphen_graph_sol_diff_hyphen_range.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependencyGraphDiffRange.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependency_hyphen_graph_sol_diff_hyphen_range.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependencyGraphDiffRange.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Headers
+            public var headers: Operations.DependencyGraphDiffRange.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1284,9 +1293,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Path,
-                query: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Query = .init(),
-                headers: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Input.Headers = .init()
+                path: Operations.DependencyGraphDiffRange.Input.Path,
+                query: Operations.DependencyGraphDiffRange.Input.Query = .init(),
+                headers: Operations.DependencyGraphDiffRange.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1298,26 +1307,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Output.Ok.Headers
+                public var headers: Operations.DependencyGraphDiffRange.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/compare/{basehead}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.dependency_hyphen_graph_hyphen_diff)
+                    case json(Components.Schemas.DependencyGraphDiff)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.dependency_hyphen_graph_hyphen_diff {
+                    public var json: Components.Schemas.DependencyGraphDiff {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1327,15 +1336,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Output.Ok.Body
+                public var body: Operations.DependencyGraphDiffRange.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Output.Ok.Headers = .init(),
-                    body: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Output.Ok.Body
+                    headers: Operations.DependencyGraphDiffRange.Output.Ok.Headers = .init(),
+                    body: Operations.DependencyGraphDiffRange.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1346,12 +1355,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/compare/{basehead}/get(dependency-graph/diff-range)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Output.Ok)
+            case ok(Operations.DependencyGraphDiffRange.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependency_hyphen_graph_sol_diff_hyphen_range.Output.Ok {
+            public var ok: Operations.DependencyGraphDiffRange.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1369,12 +1378,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/compare/{basehead}/get(dependency-graph/diff-range)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1392,12 +1401,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/compare/{basehead}/get(dependency-graph/diff-range)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.dependency_review_forbidden)
+            case forbidden(Components.Responses.DependencyReviewForbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.dependency_review_forbidden {
+            public var forbidden: Components.Responses.DependencyReviewForbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -1447,7 +1456,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/dependency-graph/sbom`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/sbom/get(dependency-graph/export-sbom)`.
-    public enum dependency_hyphen_graph_sol_export_hyphen_sbom {
+    public enum DependencyGraphExportSbom {
         public static let id: Swift.String = "dependency-graph/export-sbom"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/sbom/GET/path`.
@@ -1455,45 +1464,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/sbom/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/sbom/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input.Path
+            public var path: Operations.DependencyGraphExportSbom.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/sbom/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependencyGraphExportSbom.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependencyGraphExportSbom.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input.Headers
+            public var headers: Operations.DependencyGraphExportSbom.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input.Path,
-                headers: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input.Headers = .init()
+                path: Operations.DependencyGraphExportSbom.Input.Path,
+                headers: Operations.DependencyGraphExportSbom.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1504,26 +1513,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/sbom/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/sbom/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output.Ok.Headers
+                public var headers: Operations.DependencyGraphExportSbom.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/sbom/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/sbom/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom)
+                    case json(Components.Schemas.DependencyGraphSpdxSbom)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.dependency_hyphen_graph_hyphen_spdx_hyphen_sbom {
+                    public var json: Components.Schemas.DependencyGraphSpdxSbom {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1533,15 +1542,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output.Ok.Body
+                public var body: Operations.DependencyGraphExportSbom.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output.Ok.Headers = .init(),
-                    body: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output.Ok.Body
+                    headers: Operations.DependencyGraphExportSbom.Output.Ok.Headers = .init(),
+                    body: Operations.DependencyGraphExportSbom.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1552,12 +1561,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/sbom/get(dependency-graph/export-sbom)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output.Ok)
+            case ok(Operations.DependencyGraphExportSbom.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output.Ok {
+            public var ok: Operations.DependencyGraphExportSbom.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1575,12 +1584,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/sbom/get(dependency-graph/export-sbom)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1598,12 +1607,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/sbom/get(dependency-graph/export-sbom)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -1657,7 +1666,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/dependency-graph/snapshots`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/snapshots/post(dependency-graph/create-repository-snapshot)`.
-    public enum dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot {
+    public enum DependencyGraphCreateRepositorySnapshot {
         public static let id: Swift.String = "dependency-graph/create-repository-snapshot"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/path`.
@@ -1665,43 +1674,43 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Path
+            public var path: Operations.DependencyGraphCreateRepositorySnapshot.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependencyGraphCreateRepositorySnapshot.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.DependencyGraphCreateRepositorySnapshot.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Headers
+            public var headers: Operations.DependencyGraphCreateRepositorySnapshot.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/requestBody/content/application\/json`.
-                case json(Components.Schemas.snapshot)
+                case json(Components.Schemas.Snapshot)
             }
-            public var body: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Body
+            public var body: Operations.DependencyGraphCreateRepositorySnapshot.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1709,9 +1718,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Path,
-                headers: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Headers = .init(),
-                body: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Input.Body
+                path: Operations.DependencyGraphCreateRepositorySnapshot.Input.Path,
+                headers: Operations.DependencyGraphCreateRepositorySnapshot.Input.Headers = .init(),
+                body: Operations.DependencyGraphCreateRepositorySnapshot.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -1723,7 +1732,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/responses/201/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// ID of the created snapshot.
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/responses/201/content/json/id`.
@@ -1731,7 +1740,7 @@ public enum Operations {
                         /// The time at which the snapshot was created.
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/responses/201/content/json/created_at`.
-                        public var created_at: Swift.String
+                        public var createdAt: Swift.String
                         /// Either "SUCCESS", "ACCEPTED", or "INVALID". "SUCCESS" indicates that the snapshot was successfully created and the repository's dependencies were updated. "ACCEPTED" indicates that the snapshot was successfully created, but the repository's dependencies were not updated. "INVALID" indicates that the snapshot was malformed.
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/responses/201/content/json/result`.
@@ -1740,38 +1749,38 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/responses/201/content/json/message`.
                         public var message: Swift.String
-                        /// Creates a new `jsonPayload`.
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - id: ID of the created snapshot.
-                        ///   - created_at: The time at which the snapshot was created.
+                        ///   - createdAt: The time at which the snapshot was created.
                         ///   - result: Either "SUCCESS", "ACCEPTED", or "INVALID". "SUCCESS" indicates that the snapshot was successfully created and the repository's dependencies were updated. "ACCEPTED" indicates that the snapshot was successfully created, but the repository's dependencies were not updated. "INVALID" indicates that the snapshot was malformed.
                         ///   - message: A message providing further details about the result, such as why the dependencies were not updated.
                         public init(
                             id: Swift.Int,
-                            created_at: Swift.String,
+                            createdAt: Swift.String,
                             result: Swift.String,
                             message: Swift.String
                         ) {
                             self.id = id
-                            self.created_at = created_at
+                            self.createdAt = createdAt
                             self.result = result
                             self.message = message
                         }
                         public enum CodingKeys: String, CodingKey {
                             case id
-                            case created_at
+                            case createdAt = "created_at"
                             case result
                             case message
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependency-graph/snapshots/POST/responses/201/content/application\/json`.
-                    case json(Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Output.Created.Body.jsonPayload)
+                    case json(Operations.DependencyGraphCreateRepositorySnapshot.Output.Created.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Output.Created.Body.jsonPayload {
+                    public var json: Operations.DependencyGraphCreateRepositorySnapshot.Output.Created.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1781,12 +1790,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Output.Created.Body
+                public var body: Operations.DependencyGraphCreateRepositorySnapshot.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Output.Created.Body) {
+                public init(body: Operations.DependencyGraphCreateRepositorySnapshot.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -1795,12 +1804,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependency-graph/snapshots/post(dependency-graph/create-repository-snapshot)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Output.Created)
+            case created(Operations.DependencyGraphCreateRepositorySnapshot.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot.Output.Created {
+            public var created: Operations.DependencyGraphCreateRepositorySnapshot.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
