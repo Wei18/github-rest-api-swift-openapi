@@ -17,7 +17,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /`.
     /// - Remark: Generated from `#/paths///get(meta/root)`.
-    func meta_sol_root(_ input: Operations.meta_sol_root.Input) async throws -> Operations.meta_sol_root.Output
+    func metaRoot(_ input: Operations.MetaRoot.Input) async throws -> Operations.MetaRoot.Output
     /// Get GitHub meta information
     ///
     /// Returns meta information about GitHub, including a list of GitHub's IP addresses. For more information, see "[About GitHub's IP addresses](https://docs.github.com/articles/about-github-s-ip-addresses/)."
@@ -31,28 +31,28 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /meta`.
     /// - Remark: Generated from `#/paths//meta/get(meta/get)`.
-    func meta_sol_get(_ input: Operations.meta_sol_get.Input) async throws -> Operations.meta_sol_get.Output
+    func metaGet(_ input: Operations.MetaGet.Input) async throws -> Operations.MetaGet.Output
     /// Get Octocat
     ///
     /// Get the octocat as ASCII art
     ///
     /// - Remark: HTTP `GET /octocat`.
     /// - Remark: Generated from `#/paths//octocat/get(meta/get-octocat)`.
-    func meta_sol_get_hyphen_octocat(_ input: Operations.meta_sol_get_hyphen_octocat.Input) async throws -> Operations.meta_sol_get_hyphen_octocat.Output
+    func metaGetOctocat(_ input: Operations.MetaGetOctocat.Input) async throws -> Operations.MetaGetOctocat.Output
     /// Get all API versions
     ///
     /// Get all supported GitHub API versions.
     ///
     /// - Remark: HTTP `GET /versions`.
     /// - Remark: Generated from `#/paths//versions/get(meta/get-all-versions)`.
-    func meta_sol_get_hyphen_all_hyphen_versions(_ input: Operations.meta_sol_get_hyphen_all_hyphen_versions.Input) async throws -> Operations.meta_sol_get_hyphen_all_hyphen_versions.Output
+    func metaGetAllVersions(_ input: Operations.MetaGetAllVersions.Input) async throws -> Operations.MetaGetAllVersions.Output
     /// Get the Zen of GitHub
     ///
     /// Get a random sentence from the Zen of GitHub
     ///
     /// - Remark: HTTP `GET /zen`.
     /// - Remark: Generated from `#/paths//zen/get(meta/get-zen)`.
-    func meta_sol_get_hyphen_zen(_ input: Operations.meta_sol_get_hyphen_zen.Input) async throws -> Operations.meta_sol_get_hyphen_zen.Output
+    func metaGetZen(_ input: Operations.MetaGetZen.Input) async throws -> Operations.MetaGetZen.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -63,8 +63,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /`.
     /// - Remark: Generated from `#/paths///get(meta/root)`.
-    public func meta_sol_root(headers: Operations.meta_sol_root.Input.Headers = .init()) async throws -> Operations.meta_sol_root.Output {
-        try await meta_sol_root(Operations.meta_sol_root.Input(headers: headers))
+    public func metaRoot(headers: Operations.MetaRoot.Input.Headers = .init()) async throws -> Operations.MetaRoot.Output {
+        try await metaRoot(Operations.MetaRoot.Input(headers: headers))
     }
     /// Get GitHub meta information
     ///
@@ -79,8 +79,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /meta`.
     /// - Remark: Generated from `#/paths//meta/get(meta/get)`.
-    public func meta_sol_get(headers: Operations.meta_sol_get.Input.Headers = .init()) async throws -> Operations.meta_sol_get.Output {
-        try await meta_sol_get(Operations.meta_sol_get.Input(headers: headers))
+    public func metaGet(headers: Operations.MetaGet.Input.Headers = .init()) async throws -> Operations.MetaGet.Output {
+        try await metaGet(Operations.MetaGet.Input(headers: headers))
     }
     /// Get Octocat
     ///
@@ -88,11 +88,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /octocat`.
     /// - Remark: Generated from `#/paths//octocat/get(meta/get-octocat)`.
-    public func meta_sol_get_hyphen_octocat(
-        query: Operations.meta_sol_get_hyphen_octocat.Input.Query = .init(),
-        headers: Operations.meta_sol_get_hyphen_octocat.Input.Headers = .init()
-    ) async throws -> Operations.meta_sol_get_hyphen_octocat.Output {
-        try await meta_sol_get_hyphen_octocat(Operations.meta_sol_get_hyphen_octocat.Input(
+    public func metaGetOctocat(
+        query: Operations.MetaGetOctocat.Input.Query = .init(),
+        headers: Operations.MetaGetOctocat.Input.Headers = .init()
+    ) async throws -> Operations.MetaGetOctocat.Output {
+        try await metaGetOctocat(Operations.MetaGetOctocat.Input(
             query: query,
             headers: headers
         ))
@@ -103,8 +103,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /versions`.
     /// - Remark: Generated from `#/paths//versions/get(meta/get-all-versions)`.
-    public func meta_sol_get_hyphen_all_hyphen_versions(headers: Operations.meta_sol_get_hyphen_all_hyphen_versions.Input.Headers = .init()) async throws -> Operations.meta_sol_get_hyphen_all_hyphen_versions.Output {
-        try await meta_sol_get_hyphen_all_hyphen_versions(Operations.meta_sol_get_hyphen_all_hyphen_versions.Input(headers: headers))
+    public func metaGetAllVersions(headers: Operations.MetaGetAllVersions.Input.Headers = .init()) async throws -> Operations.MetaGetAllVersions.Output {
+        try await metaGetAllVersions(Operations.MetaGetAllVersions.Input(headers: headers))
     }
     /// Get the Zen of GitHub
     ///
@@ -112,13 +112,22 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /zen`.
     /// - Remark: Generated from `#/paths//zen/get(meta/get-zen)`.
-    public func meta_sol_get_hyphen_zen(headers: Operations.meta_sol_get_hyphen_zen.Input.Headers = .init()) async throws -> Operations.meta_sol_get_hyphen_zen.Output {
-        try await meta_sol_get_hyphen_zen(Operations.meta_sol_get_hyphen_zen.Input(headers: headers))
+    public func metaGetZen(headers: Operations.MetaGetZen.Input.Headers = .init()) async throws -> Operations.MetaGetZen.Output {
+        try await metaGetZen(Operations.MetaGetZen.Input(headers: headers))
     }
 }
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -132,248 +141,248 @@ public enum Components {
     /// Types generated from the `#/components/schemas` section of the OpenAPI document.
     public enum Schemas {
         /// - Remark: Generated from `#/components/schemas/root`.
-        public struct root: Codable, Hashable, Sendable {
+        public struct Root: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/root/current_user_url`.
-            public var current_user_url: Swift.String
+            public var currentUserUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/current_user_authorizations_html_url`.
-            public var current_user_authorizations_html_url: Swift.String
+            public var currentUserAuthorizationsHtmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/authorizations_url`.
-            public var authorizations_url: Swift.String
+            public var authorizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/code_search_url`.
-            public var code_search_url: Swift.String
+            public var codeSearchUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/commit_search_url`.
-            public var commit_search_url: Swift.String
+            public var commitSearchUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/emails_url`.
-            public var emails_url: Swift.String
+            public var emailsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/emojis_url`.
-            public var emojis_url: Swift.String
+            public var emojisUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/feeds_url`.
-            public var feeds_url: Swift.String
+            public var feedsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/hub_url`.
             @available(*, deprecated)
-            public var hub_url: Swift.String?
+            public var hubUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/root/issue_search_url`.
-            public var issue_search_url: Swift.String
+            public var issueSearchUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/label_search_url`.
-            public var label_search_url: Swift.String
+            public var labelSearchUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/organization_url`.
-            public var organization_url: Swift.String
+            public var organizationUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/organization_repositories_url`.
-            public var organization_repositories_url: Swift.String
+            public var organizationRepositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/organization_teams_url`.
-            public var organization_teams_url: Swift.String
+            public var organizationTeamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/public_gists_url`.
-            public var public_gists_url: Swift.String
+            public var publicGistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/rate_limit_url`.
-            public var rate_limit_url: Swift.String
+            public var rateLimitUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/repository_url`.
-            public var repository_url: Swift.String
+            public var repositoryUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/repository_search_url`.
-            public var repository_search_url: Swift.String
+            public var repositorySearchUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/current_user_repositories_url`.
-            public var current_user_repositories_url: Swift.String
+            public var currentUserRepositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/starred_gists_url`.
-            public var starred_gists_url: Swift.String
+            public var starredGistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/topic_search_url`.
-            public var topic_search_url: Swift.String?
+            public var topicSearchUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/root/user_url`.
-            public var user_url: Swift.String
+            public var userUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/user_organizations_url`.
-            public var user_organizations_url: Swift.String
+            public var userOrganizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/user_repositories_url`.
-            public var user_repositories_url: Swift.String
+            public var userRepositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/root/user_search_url`.
-            public var user_search_url: Swift.String
-            /// Creates a new `root`.
+            public var userSearchUrl: Swift.String
+            /// Creates a new `Root`.
             ///
             /// - Parameters:
-            ///   - current_user_url:
-            ///   - current_user_authorizations_html_url:
-            ///   - authorizations_url:
-            ///   - code_search_url:
-            ///   - commit_search_url:
-            ///   - emails_url:
-            ///   - emojis_url:
-            ///   - events_url:
-            ///   - feeds_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - hub_url:
-            ///   - issue_search_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - label_search_url:
-            ///   - notifications_url:
-            ///   - organization_url:
-            ///   - organization_repositories_url:
-            ///   - organization_teams_url:
-            ///   - public_gists_url:
-            ///   - rate_limit_url:
-            ///   - repository_url:
-            ///   - repository_search_url:
-            ///   - current_user_repositories_url:
-            ///   - starred_url:
-            ///   - starred_gists_url:
-            ///   - topic_search_url:
-            ///   - user_url:
-            ///   - user_organizations_url:
-            ///   - user_repositories_url:
-            ///   - user_search_url:
+            ///   - currentUserUrl:
+            ///   - currentUserAuthorizationsHtmlUrl:
+            ///   - authorizationsUrl:
+            ///   - codeSearchUrl:
+            ///   - commitSearchUrl:
+            ///   - emailsUrl:
+            ///   - emojisUrl:
+            ///   - eventsUrl:
+            ///   - feedsUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - hubUrl:
+            ///   - issueSearchUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelSearchUrl:
+            ///   - notificationsUrl:
+            ///   - organizationUrl:
+            ///   - organizationRepositoriesUrl:
+            ///   - organizationTeamsUrl:
+            ///   - publicGistsUrl:
+            ///   - rateLimitUrl:
+            ///   - repositoryUrl:
+            ///   - repositorySearchUrl:
+            ///   - currentUserRepositoriesUrl:
+            ///   - starredUrl:
+            ///   - starredGistsUrl:
+            ///   - topicSearchUrl:
+            ///   - userUrl:
+            ///   - userOrganizationsUrl:
+            ///   - userRepositoriesUrl:
+            ///   - userSearchUrl:
             public init(
-                current_user_url: Swift.String,
-                current_user_authorizations_html_url: Swift.String,
-                authorizations_url: Swift.String,
-                code_search_url: Swift.String,
-                commit_search_url: Swift.String,
-                emails_url: Swift.String,
-                emojis_url: Swift.String,
-                events_url: Swift.String,
-                feeds_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                hub_url: Swift.String? = nil,
-                issue_search_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                label_search_url: Swift.String,
-                notifications_url: Swift.String,
-                organization_url: Swift.String,
-                organization_repositories_url: Swift.String,
-                organization_teams_url: Swift.String,
-                public_gists_url: Swift.String,
-                rate_limit_url: Swift.String,
-                repository_url: Swift.String,
-                repository_search_url: Swift.String,
-                current_user_repositories_url: Swift.String,
-                starred_url: Swift.String,
-                starred_gists_url: Swift.String,
-                topic_search_url: Swift.String? = nil,
-                user_url: Swift.String,
-                user_organizations_url: Swift.String,
-                user_repositories_url: Swift.String,
-                user_search_url: Swift.String
+                currentUserUrl: Swift.String,
+                currentUserAuthorizationsHtmlUrl: Swift.String,
+                authorizationsUrl: Swift.String,
+                codeSearchUrl: Swift.String,
+                commitSearchUrl: Swift.String,
+                emailsUrl: Swift.String,
+                emojisUrl: Swift.String,
+                eventsUrl: Swift.String,
+                feedsUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                hubUrl: Swift.String? = nil,
+                issueSearchUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelSearchUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                organizationUrl: Swift.String,
+                organizationRepositoriesUrl: Swift.String,
+                organizationTeamsUrl: Swift.String,
+                publicGistsUrl: Swift.String,
+                rateLimitUrl: Swift.String,
+                repositoryUrl: Swift.String,
+                repositorySearchUrl: Swift.String,
+                currentUserRepositoriesUrl: Swift.String,
+                starredUrl: Swift.String,
+                starredGistsUrl: Swift.String,
+                topicSearchUrl: Swift.String? = nil,
+                userUrl: Swift.String,
+                userOrganizationsUrl: Swift.String,
+                userRepositoriesUrl: Swift.String,
+                userSearchUrl: Swift.String
             ) {
-                self.current_user_url = current_user_url
-                self.current_user_authorizations_html_url = current_user_authorizations_html_url
-                self.authorizations_url = authorizations_url
-                self.code_search_url = code_search_url
-                self.commit_search_url = commit_search_url
-                self.emails_url = emails_url
-                self.emojis_url = emojis_url
-                self.events_url = events_url
-                self.feeds_url = feeds_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.hub_url = hub_url
-                self.issue_search_url = issue_search_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.label_search_url = label_search_url
-                self.notifications_url = notifications_url
-                self.organization_url = organization_url
-                self.organization_repositories_url = organization_repositories_url
-                self.organization_teams_url = organization_teams_url
-                self.public_gists_url = public_gists_url
-                self.rate_limit_url = rate_limit_url
-                self.repository_url = repository_url
-                self.repository_search_url = repository_search_url
-                self.current_user_repositories_url = current_user_repositories_url
-                self.starred_url = starred_url
-                self.starred_gists_url = starred_gists_url
-                self.topic_search_url = topic_search_url
-                self.user_url = user_url
-                self.user_organizations_url = user_organizations_url
-                self.user_repositories_url = user_repositories_url
-                self.user_search_url = user_search_url
+                self.currentUserUrl = currentUserUrl
+                self.currentUserAuthorizationsHtmlUrl = currentUserAuthorizationsHtmlUrl
+                self.authorizationsUrl = authorizationsUrl
+                self.codeSearchUrl = codeSearchUrl
+                self.commitSearchUrl = commitSearchUrl
+                self.emailsUrl = emailsUrl
+                self.emojisUrl = emojisUrl
+                self.eventsUrl = eventsUrl
+                self.feedsUrl = feedsUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.hubUrl = hubUrl
+                self.issueSearchUrl = issueSearchUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelSearchUrl = labelSearchUrl
+                self.notificationsUrl = notificationsUrl
+                self.organizationUrl = organizationUrl
+                self.organizationRepositoriesUrl = organizationRepositoriesUrl
+                self.organizationTeamsUrl = organizationTeamsUrl
+                self.publicGistsUrl = publicGistsUrl
+                self.rateLimitUrl = rateLimitUrl
+                self.repositoryUrl = repositoryUrl
+                self.repositorySearchUrl = repositorySearchUrl
+                self.currentUserRepositoriesUrl = currentUserRepositoriesUrl
+                self.starredUrl = starredUrl
+                self.starredGistsUrl = starredGistsUrl
+                self.topicSearchUrl = topicSearchUrl
+                self.userUrl = userUrl
+                self.userOrganizationsUrl = userOrganizationsUrl
+                self.userRepositoriesUrl = userRepositoriesUrl
+                self.userSearchUrl = userSearchUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case current_user_url
-                case current_user_authorizations_html_url
-                case authorizations_url
-                case code_search_url
-                case commit_search_url
-                case emails_url
-                case emojis_url
-                case events_url
-                case feeds_url
-                case followers_url
-                case following_url
-                case gists_url
-                case hub_url
-                case issue_search_url
-                case issues_url
-                case keys_url
-                case label_search_url
-                case notifications_url
-                case organization_url
-                case organization_repositories_url
-                case organization_teams_url
-                case public_gists_url
-                case rate_limit_url
-                case repository_url
-                case repository_search_url
-                case current_user_repositories_url
-                case starred_url
-                case starred_gists_url
-                case topic_search_url
-                case user_url
-                case user_organizations_url
-                case user_repositories_url
-                case user_search_url
+                case currentUserUrl = "current_user_url"
+                case currentUserAuthorizationsHtmlUrl = "current_user_authorizations_html_url"
+                case authorizationsUrl = "authorizations_url"
+                case codeSearchUrl = "code_search_url"
+                case commitSearchUrl = "commit_search_url"
+                case emailsUrl = "emails_url"
+                case emojisUrl = "emojis_url"
+                case eventsUrl = "events_url"
+                case feedsUrl = "feeds_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case hubUrl = "hub_url"
+                case issueSearchUrl = "issue_search_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelSearchUrl = "label_search_url"
+                case notificationsUrl = "notifications_url"
+                case organizationUrl = "organization_url"
+                case organizationRepositoriesUrl = "organization_repositories_url"
+                case organizationTeamsUrl = "organization_teams_url"
+                case publicGistsUrl = "public_gists_url"
+                case rateLimitUrl = "rate_limit_url"
+                case repositoryUrl = "repository_url"
+                case repositorySearchUrl = "repository_search_url"
+                case currentUserRepositoriesUrl = "current_user_repositories_url"
+                case starredUrl = "starred_url"
+                case starredGistsUrl = "starred_gists_url"
+                case topicSearchUrl = "topic_search_url"
+                case userUrl = "user_url"
+                case userOrganizationsUrl = "user_organizations_url"
+                case userRepositoriesUrl = "user_repositories_url"
+                case userSearchUrl = "user_search_url"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -381,52 +390,52 @@ public enum Components {
         /// Api Overview
         ///
         /// - Remark: Generated from `#/components/schemas/api-overview`.
-        public struct api_hyphen_overview: Codable, Hashable, Sendable {
+        public struct ApiOverview: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/api-overview/verifiable_password_authentication`.
-            public var verifiable_password_authentication: Swift.Bool
+            public var verifiablePasswordAuthentication: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/api-overview/ssh_key_fingerprints`.
-            public struct ssh_key_fingerprintsPayload: Codable, Hashable, Sendable {
+            public struct SshKeyFingerprintsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/api-overview/ssh_key_fingerprints/SHA256_RSA`.
-                public var SHA256_RSA: Swift.String?
+                public var sha256Rsa: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/api-overview/ssh_key_fingerprints/SHA256_DSA`.
-                public var SHA256_DSA: Swift.String?
+                public var sha256Dsa: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/api-overview/ssh_key_fingerprints/SHA256_ECDSA`.
-                public var SHA256_ECDSA: Swift.String?
+                public var sha256Ecdsa: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/api-overview/ssh_key_fingerprints/SHA256_ED25519`.
-                public var SHA256_ED25519: Swift.String?
-                /// Creates a new `ssh_key_fingerprintsPayload`.
+                public var sha256Ed25519: Swift.String?
+                /// Creates a new `SshKeyFingerprintsPayload`.
                 ///
                 /// - Parameters:
-                ///   - SHA256_RSA:
-                ///   - SHA256_DSA:
-                ///   - SHA256_ECDSA:
-                ///   - SHA256_ED25519:
+                ///   - sha256Rsa:
+                ///   - sha256Dsa:
+                ///   - sha256Ecdsa:
+                ///   - sha256Ed25519:
                 public init(
-                    SHA256_RSA: Swift.String? = nil,
-                    SHA256_DSA: Swift.String? = nil,
-                    SHA256_ECDSA: Swift.String? = nil,
-                    SHA256_ED25519: Swift.String? = nil
+                    sha256Rsa: Swift.String? = nil,
+                    sha256Dsa: Swift.String? = nil,
+                    sha256Ecdsa: Swift.String? = nil,
+                    sha256Ed25519: Swift.String? = nil
                 ) {
-                    self.SHA256_RSA = SHA256_RSA
-                    self.SHA256_DSA = SHA256_DSA
-                    self.SHA256_ECDSA = SHA256_ECDSA
-                    self.SHA256_ED25519 = SHA256_ED25519
+                    self.sha256Rsa = sha256Rsa
+                    self.sha256Dsa = sha256Dsa
+                    self.sha256Ecdsa = sha256Ecdsa
+                    self.sha256Ed25519 = sha256Ed25519
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case SHA256_RSA
-                    case SHA256_DSA
-                    case SHA256_ECDSA
-                    case SHA256_ED25519
+                    case sha256Rsa = "SHA256_RSA"
+                    case sha256Dsa = "SHA256_DSA"
+                    case sha256Ecdsa = "SHA256_ECDSA"
+                    case sha256Ed25519 = "SHA256_ED25519"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/api-overview/ssh_key_fingerprints`.
-            public var ssh_key_fingerprints: Components.Schemas.api_hyphen_overview.ssh_key_fingerprintsPayload?
+            public var sshKeyFingerprints: Components.Schemas.ApiOverview.SshKeyFingerprintsPayload?
             /// - Remark: Generated from `#/components/schemas/api-overview/ssh_keys`.
-            public var ssh_keys: [Swift.String]?
+            public var sshKeys: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/hooks`.
             public var hooks: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/github_enterprise_importer`.
-            public var github_enterprise_importer: [Swift.String]?
+            public var githubEnterpriseImporter: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/web`.
             public var web: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/api`.
@@ -442,7 +451,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/api-overview/actions`.
             public var actions: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/actions_macos`.
-            public var actions_macos: [Swift.String]?
+            public var actionsMacos: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/codespaces`.
             public var codespaces: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/dependabot`.
@@ -450,7 +459,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/api-overview/copilot`.
             public var copilot: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/api-overview/domains`.
-            public struct domainsPayload: Codable, Hashable, Sendable {
+            public struct DomainsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/website`.
                 public var website: [Swift.String]?
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/codespaces`.
@@ -462,56 +471,56 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions`.
                 public var actions: [Swift.String]?
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions_inbound`.
-                public struct actions_inboundPayload: Codable, Hashable, Sendable {
+                public struct ActionsInboundPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions_inbound/full_domains`.
-                    public var full_domains: [Swift.String]?
+                    public var fullDomains: [Swift.String]?
                     /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions_inbound/wildcard_domains`.
-                    public var wildcard_domains: [Swift.String]?
-                    /// Creates a new `actions_inboundPayload`.
+                    public var wildcardDomains: [Swift.String]?
+                    /// Creates a new `ActionsInboundPayload`.
                     ///
                     /// - Parameters:
-                    ///   - full_domains:
-                    ///   - wildcard_domains:
+                    ///   - fullDomains:
+                    ///   - wildcardDomains:
                     public init(
-                        full_domains: [Swift.String]? = nil,
-                        wildcard_domains: [Swift.String]? = nil
+                        fullDomains: [Swift.String]? = nil,
+                        wildcardDomains: [Swift.String]? = nil
                     ) {
-                        self.full_domains = full_domains
-                        self.wildcard_domains = wildcard_domains
+                        self.fullDomains = fullDomains
+                        self.wildcardDomains = wildcardDomains
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case full_domains
-                        case wildcard_domains
+                        case fullDomains = "full_domains"
+                        case wildcardDomains = "wildcard_domains"
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/actions_inbound`.
-                public var actions_inbound: Components.Schemas.api_hyphen_overview.domainsPayload.actions_inboundPayload?
+                public var actionsInbound: Components.Schemas.ApiOverview.DomainsPayload.ActionsInboundPayload?
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations`.
-                public struct artifact_attestationsPayload: Codable, Hashable, Sendable {
+                public struct ArtifactAttestationsPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations/trust_domain`.
-                    public var trust_domain: Swift.String?
+                    public var trustDomain: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations/services`.
                     public var services: [Swift.String]?
-                    /// Creates a new `artifact_attestationsPayload`.
+                    /// Creates a new `ArtifactAttestationsPayload`.
                     ///
                     /// - Parameters:
-                    ///   - trust_domain:
+                    ///   - trustDomain:
                     ///   - services:
                     public init(
-                        trust_domain: Swift.String? = nil,
+                        trustDomain: Swift.String? = nil,
                         services: [Swift.String]? = nil
                     ) {
-                        self.trust_domain = trust_domain
+                        self.trustDomain = trustDomain
                         self.services = services
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case trust_domain
+                        case trustDomain = "trust_domain"
                         case services
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/api-overview/domains/artifact_attestations`.
-                public var artifact_attestations: Components.Schemas.api_hyphen_overview.domainsPayload.artifact_attestationsPayload?
-                /// Creates a new `domainsPayload`.
+                public var artifactAttestations: Components.Schemas.ApiOverview.DomainsPayload.ArtifactAttestationsPayload?
+                /// Creates a new `DomainsPayload`.
                 ///
                 /// - Parameters:
                 ///   - website:
@@ -519,24 +528,24 @@ public enum Components {
                 ///   - copilot:
                 ///   - packages:
                 ///   - actions:
-                ///   - actions_inbound:
-                ///   - artifact_attestations:
+                ///   - actionsInbound:
+                ///   - artifactAttestations:
                 public init(
                     website: [Swift.String]? = nil,
                     codespaces: [Swift.String]? = nil,
                     copilot: [Swift.String]? = nil,
                     packages: [Swift.String]? = nil,
                     actions: [Swift.String]? = nil,
-                    actions_inbound: Components.Schemas.api_hyphen_overview.domainsPayload.actions_inboundPayload? = nil,
-                    artifact_attestations: Components.Schemas.api_hyphen_overview.domainsPayload.artifact_attestationsPayload? = nil
+                    actionsInbound: Components.Schemas.ApiOverview.DomainsPayload.ActionsInboundPayload? = nil,
+                    artifactAttestations: Components.Schemas.ApiOverview.DomainsPayload.ArtifactAttestationsPayload? = nil
                 ) {
                     self.website = website
                     self.codespaces = codespaces
                     self.copilot = copilot
                     self.packages = packages
                     self.actions = actions
-                    self.actions_inbound = actions_inbound
-                    self.artifact_attestations = artifact_attestations
+                    self.actionsInbound = actionsInbound
+                    self.artifactAttestations = artifactAttestations
                 }
                 public enum CodingKeys: String, CodingKey {
                     case website
@@ -544,20 +553,20 @@ public enum Components {
                     case copilot
                     case packages
                     case actions
-                    case actions_inbound
-                    case artifact_attestations
+                    case actionsInbound = "actions_inbound"
+                    case artifactAttestations = "artifact_attestations"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/api-overview/domains`.
-            public var domains: Components.Schemas.api_hyphen_overview.domainsPayload?
-            /// Creates a new `api_hyphen_overview`.
+            public var domains: Components.Schemas.ApiOverview.DomainsPayload?
+            /// Creates a new `ApiOverview`.
             ///
             /// - Parameters:
-            ///   - verifiable_password_authentication:
-            ///   - ssh_key_fingerprints:
-            ///   - ssh_keys:
+            ///   - verifiablePasswordAuthentication:
+            ///   - sshKeyFingerprints:
+            ///   - sshKeys:
             ///   - hooks:
-            ///   - github_enterprise_importer:
+            ///   - githubEnterpriseImporter:
             ///   - web:
             ///   - api:
             ///   - git:
@@ -565,17 +574,17 @@ public enum Components {
             ///   - pages:
             ///   - importer:
             ///   - actions:
-            ///   - actions_macos:
+            ///   - actionsMacos:
             ///   - codespaces:
             ///   - dependabot:
             ///   - copilot:
             ///   - domains:
             public init(
-                verifiable_password_authentication: Swift.Bool,
-                ssh_key_fingerprints: Components.Schemas.api_hyphen_overview.ssh_key_fingerprintsPayload? = nil,
-                ssh_keys: [Swift.String]? = nil,
+                verifiablePasswordAuthentication: Swift.Bool,
+                sshKeyFingerprints: Components.Schemas.ApiOverview.SshKeyFingerprintsPayload? = nil,
+                sshKeys: [Swift.String]? = nil,
                 hooks: [Swift.String]? = nil,
-                github_enterprise_importer: [Swift.String]? = nil,
+                githubEnterpriseImporter: [Swift.String]? = nil,
                 web: [Swift.String]? = nil,
                 api: [Swift.String]? = nil,
                 git: [Swift.String]? = nil,
@@ -583,17 +592,17 @@ public enum Components {
                 pages: [Swift.String]? = nil,
                 importer: [Swift.String]? = nil,
                 actions: [Swift.String]? = nil,
-                actions_macos: [Swift.String]? = nil,
+                actionsMacos: [Swift.String]? = nil,
                 codespaces: [Swift.String]? = nil,
                 dependabot: [Swift.String]? = nil,
                 copilot: [Swift.String]? = nil,
-                domains: Components.Schemas.api_hyphen_overview.domainsPayload? = nil
+                domains: Components.Schemas.ApiOverview.DomainsPayload? = nil
             ) {
-                self.verifiable_password_authentication = verifiable_password_authentication
-                self.ssh_key_fingerprints = ssh_key_fingerprints
-                self.ssh_keys = ssh_keys
+                self.verifiablePasswordAuthentication = verifiablePasswordAuthentication
+                self.sshKeyFingerprints = sshKeyFingerprints
+                self.sshKeys = sshKeys
                 self.hooks = hooks
-                self.github_enterprise_importer = github_enterprise_importer
+                self.githubEnterpriseImporter = githubEnterpriseImporter
                 self.web = web
                 self.api = api
                 self.git = git
@@ -601,18 +610,18 @@ public enum Components {
                 self.pages = pages
                 self.importer = importer
                 self.actions = actions
-                self.actions_macos = actions_macos
+                self.actionsMacos = actionsMacos
                 self.codespaces = codespaces
                 self.dependabot = dependabot
                 self.copilot = copilot
                 self.domains = domains
             }
             public enum CodingKeys: String, CodingKey {
-                case verifiable_password_authentication
-                case ssh_key_fingerprints
-                case ssh_keys
+                case verifiablePasswordAuthentication = "verifiable_password_authentication"
+                case sshKeyFingerprints = "ssh_key_fingerprints"
+                case sshKeys = "ssh_keys"
                 case hooks
-                case github_enterprise_importer
+                case githubEnterpriseImporter = "github_enterprise_importer"
                 case web
                 case api
                 case git
@@ -620,7 +629,7 @@ public enum Components {
                 case pages
                 case importer
                 case actions
-                case actions_macos
+                case actionsMacos = "actions_macos"
                 case codespaces
                 case dependabot
                 case copilot
@@ -634,16 +643,16 @@ public enum Components {
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -653,17 +662,17 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
     }
@@ -679,26 +688,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /`.
     /// - Remark: Generated from `#/paths///get(meta/root)`.
-    public enum meta_sol_root {
+    public enum MetaRoot {
         public static let id: Swift.String = "meta/root"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_root.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaRoot.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_root.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaRoot.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.meta_sol_root.Input.Headers
+            public var headers: Operations.MetaRoot.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.meta_sol_root.Input.Headers = .init()) {
+            public init(headers: Operations.MetaRoot.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -707,12 +716,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.root)
+                    case json(Components.Schemas.Root)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.root {
+                    public var json: Components.Schemas.Root {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -722,12 +731,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.meta_sol_root.Output.Ok.Body
+                public var body: Operations.MetaRoot.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.meta_sol_root.Output.Ok.Body) {
+                public init(body: Operations.MetaRoot.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -736,12 +745,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths///get(meta/root)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.meta_sol_root.Output.Ok)
+            case ok(Operations.MetaRoot.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.meta_sol_root.Output.Ok {
+            public var ok: Operations.MetaRoot.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -798,26 +807,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /meta`.
     /// - Remark: Generated from `#/paths//meta/get(meta/get)`.
-    public enum meta_sol_get {
+    public enum MetaGet {
         public static let id: Swift.String = "meta/get"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/meta/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_get.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaGet.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_get.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaGet.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.meta_sol_get.Input.Headers
+            public var headers: Operations.MetaGet.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.meta_sol_get.Input.Headers = .init()) {
+            public init(headers: Operations.MetaGet.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -826,12 +835,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/meta/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/meta/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.api_hyphen_overview)
+                    case json(Components.Schemas.ApiOverview)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.api_hyphen_overview {
+                    public var json: Components.Schemas.ApiOverview {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -841,12 +850,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.meta_sol_get.Output.Ok.Body
+                public var body: Operations.MetaGet.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.meta_sol_get.Output.Ok.Body) {
+                public init(body: Operations.MetaGet.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -855,12 +864,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//meta/get(meta/get)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.meta_sol_get.Output.Ok)
+            case ok(Operations.MetaGet.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.meta_sol_get.Output.Ok {
+            public var ok: Operations.MetaGet.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -878,12 +887,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//meta/get(meta/get)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//meta/get(meta/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -933,7 +950,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /octocat`.
     /// - Remark: Generated from `#/paths//octocat/get(meta/get-octocat)`.
-    public enum meta_sol_get_hyphen_octocat {
+    public enum MetaGetOctocat {
         public static let id: Swift.String = "meta/get-octocat"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/octocat/GET/query`.
@@ -950,27 +967,27 @@ public enum Operations {
                     self.s = s
                 }
             }
-            public var query: Operations.meta_sol_get_hyphen_octocat.Input.Query
+            public var query: Operations.MetaGetOctocat.Input.Query
             /// - Remark: Generated from `#/paths/octocat/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_get_hyphen_octocat.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaGetOctocat.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_get_hyphen_octocat.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaGetOctocat.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.meta_sol_get_hyphen_octocat.Input.Headers
+            public var headers: Operations.MetaGetOctocat.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.meta_sol_get_hyphen_octocat.Input.Query = .init(),
-                headers: Operations.meta_sol_get_hyphen_octocat.Input.Headers = .init()
+                query: Operations.MetaGetOctocat.Input.Query = .init(),
+                headers: Operations.MetaGetOctocat.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -981,27 +998,27 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/octocat/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/octocat/GET/responses/200/content/application\/octocat-stream`.
-                    case application_octocat_hyphen_stream(OpenAPIRuntime.HTTPBody)
-                    /// The associated value of the enum case if `self` is `.application_octocat_hyphen_stream`.
+                    case applicationOctocatStream(OpenAPIRuntime.HTTPBody)
+                    /// The associated value of the enum case if `self` is `.applicationOctocatStream`.
                     ///
-                    /// - Throws: An error if `self` is not `.application_octocat_hyphen_stream`.
-                    /// - SeeAlso: `.application_octocat_hyphen_stream`.
-                    public var application_octocat_hyphen_stream: OpenAPIRuntime.HTTPBody {
+                    /// - Throws: An error if `self` is not `.applicationOctocatStream`.
+                    /// - SeeAlso: `.applicationOctocatStream`.
+                    public var applicationOctocatStream: OpenAPIRuntime.HTTPBody {
                         get throws {
                             switch self {
-                            case let .application_octocat_hyphen_stream(body):
+                            case let .applicationOctocatStream(body):
                                 return body
                             }
                         }
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.meta_sol_get_hyphen_octocat.Output.Ok.Body
+                public var body: Operations.MetaGetOctocat.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.meta_sol_get_hyphen_octocat.Output.Ok.Body) {
+                public init(body: Operations.MetaGetOctocat.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1010,12 +1027,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//octocat/get(meta/get-octocat)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.meta_sol_get_hyphen_octocat.Output.Ok)
+            case ok(Operations.MetaGetOctocat.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.meta_sol_get_hyphen_octocat.Output.Ok {
+            public var ok: Operations.MetaGetOctocat.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1034,12 +1051,12 @@ public enum Operations {
             case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
-            case application_octocat_hyphen_stream
+            case applicationOctocatStream
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/octocat-stream":
-                    self = .application_octocat_hyphen_stream
+                    self = .applicationOctocatStream
                 default:
                     self = .other(rawValue)
                 }
@@ -1048,13 +1065,13 @@ public enum Operations {
                 switch self {
                 case let .other(string):
                     return string
-                case .application_octocat_hyphen_stream:
+                case .applicationOctocatStream:
                     return "application/octocat-stream"
                 }
             }
             public static var allCases: [Self] {
                 [
-                    .application_octocat_hyphen_stream
+                    .applicationOctocatStream
                 ]
             }
         }
@@ -1065,26 +1082,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /versions`.
     /// - Remark: Generated from `#/paths//versions/get(meta/get-all-versions)`.
-    public enum meta_sol_get_hyphen_all_hyphen_versions {
+    public enum MetaGetAllVersions {
         public static let id: Swift.String = "meta/get-all-versions"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/versions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_get_hyphen_all_hyphen_versions.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaGetAllVersions.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_get_hyphen_all_hyphen_versions.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaGetAllVersions.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.meta_sol_get_hyphen_all_hyphen_versions.Input.Headers
+            public var headers: Operations.MetaGetAllVersions.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.meta_sol_get_hyphen_all_hyphen_versions.Input.Headers = .init()) {
+            public init(headers: Operations.MetaGetAllVersions.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -1108,12 +1125,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.meta_sol_get_hyphen_all_hyphen_versions.Output.Ok.Body
+                public var body: Operations.MetaGetAllVersions.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.meta_sol_get_hyphen_all_hyphen_versions.Output.Ok.Body) {
+                public init(body: Operations.MetaGetAllVersions.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1122,12 +1139,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//versions/get(meta/get-all-versions)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.meta_sol_get_hyphen_all_hyphen_versions.Output.Ok)
+            case ok(Operations.MetaGetAllVersions.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.meta_sol_get_hyphen_all_hyphen_versions.Output.Ok {
+            public var ok: Operations.MetaGetAllVersions.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1145,12 +1162,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//versions/get(meta/get-all-versions)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1200,26 +1217,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /zen`.
     /// - Remark: Generated from `#/paths//zen/get(meta/get-zen)`.
-    public enum meta_sol_get_hyphen_zen {
+    public enum MetaGetZen {
         public static let id: Swift.String = "meta/get-zen"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/zen/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_get_hyphen_zen.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaGetZen.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.meta_sol_get_hyphen_zen.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MetaGetZen.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.meta_sol_get_hyphen_zen.Input.Headers
+            public var headers: Operations.MetaGetZen.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.meta_sol_get_hyphen_zen.Input.Headers = .init()) {
+            public init(headers: Operations.MetaGetZen.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -1243,12 +1260,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.meta_sol_get_hyphen_zen.Output.Ok.Body
+                public var body: Operations.MetaGetZen.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.meta_sol_get_hyphen_zen.Output.Ok.Body) {
+                public init(body: Operations.MetaGetZen.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1257,12 +1274,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//zen/get(meta/get-zen)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.meta_sol_get_hyphen_zen.Output.Ok)
+            case ok(Operations.MetaGetZen.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.meta_sol_get_hyphen_zen.Output.Ok {
+            public var ok: Operations.MetaGetZen.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
