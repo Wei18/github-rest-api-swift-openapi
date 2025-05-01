@@ -10,7 +10,7 @@ final class UsersTests: XCTestCase {
             serverURL: try Servers.server1(),
             transport: URLSessionTransport()
         )
-        let list = try await client.users_sol_list()
+        let list = try await client.usersList()
         XCTAssertGreaterThan(try list.ok.body.json.count, 0)
     }
     
