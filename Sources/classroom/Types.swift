@@ -17,42 +17,42 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/get(classroom/get-an-assignment)`.
-    func classroom_sol_get_hyphen_an_hyphen_assignment(_ input: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input) async throws -> Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Output
+    func classroomGetAnAssignment(_ input: Operations.ClassroomGetAnAssignment.Input) async throws -> Operations.ClassroomGetAnAssignment.Output
     /// List accepted assignments for an assignment
     ///
     /// Lists any assignment repositories that have been created by students accepting a GitHub Classroom assignment. Accepted assignments will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/accepted_assignments`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)`.
-    func classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment(_ input: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output
+    func classroomListAcceptedAssignmentsForAnAssignment(_ input: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input) async throws -> Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Output
     /// Get assignment grades
     ///
     /// Gets grades for a GitHub Classroom assignment. Grades will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/grades`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/grades/get(classroom/get-assignment-grades)`.
-    func classroom_sol_get_hyphen_assignment_hyphen_grades(_ input: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input) async throws -> Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output
+    func classroomGetAssignmentGrades(_ input: Operations.ClassroomGetAssignmentGrades.Input) async throws -> Operations.ClassroomGetAssignmentGrades.Output
     /// List classrooms
     ///
     /// Lists GitHub Classroom classrooms for the current user. Classrooms will only be returned if the current user is an administrator of one or more GitHub Classrooms.
     ///
     /// - Remark: HTTP `GET /classrooms`.
     /// - Remark: Generated from `#/paths//classrooms/get(classroom/list-classrooms)`.
-    func classroom_sol_list_hyphen_classrooms(_ input: Operations.classroom_sol_list_hyphen_classrooms.Input) async throws -> Operations.classroom_sol_list_hyphen_classrooms.Output
+    func classroomListClassrooms(_ input: Operations.ClassroomListClassrooms.Input) async throws -> Operations.ClassroomListClassrooms.Output
     /// Get a classroom
     ///
     /// Gets a GitHub Classroom classroom for the current user. Classroom will only be returned if the current user is an administrator of the GitHub Classroom.
     ///
     /// - Remark: HTTP `GET /classrooms/{classroom_id}`.
     /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/get(classroom/get-a-classroom)`.
-    func classroom_sol_get_hyphen_a_hyphen_classroom(_ input: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input) async throws -> Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Output
+    func classroomGetAClassroom(_ input: Operations.ClassroomGetAClassroom.Input) async throws -> Operations.ClassroomGetAClassroom.Output
     /// List assignments for a classroom
     ///
     /// Lists GitHub Classroom assignments for a classroom. Assignments will only be returned if the current user is an administrator of the GitHub Classroom.
     ///
     /// - Remark: HTTP `GET /classrooms/{classroom_id}/assignments`.
     /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/assignments/get(classroom/list-assignments-for-a-classroom)`.
-    func classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom(_ input: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input) async throws -> Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Output
+    func classroomListAssignmentsForAClassroom(_ input: Operations.ClassroomListAssignmentsForAClassroom.Input) async throws -> Operations.ClassroomListAssignmentsForAClassroom.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -63,11 +63,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/get(classroom/get-an-assignment)`.
-    public func classroom_sol_get_hyphen_an_hyphen_assignment(
-        path: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input.Path,
-        headers: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input.Headers = .init()
-    ) async throws -> Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Output {
-        try await classroom_sol_get_hyphen_an_hyphen_assignment(Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input(
+    public func classroomGetAnAssignment(
+        path: Operations.ClassroomGetAnAssignment.Input.Path,
+        headers: Operations.ClassroomGetAnAssignment.Input.Headers = .init()
+    ) async throws -> Operations.ClassroomGetAnAssignment.Output {
+        try await classroomGetAnAssignment(Operations.ClassroomGetAnAssignment.Input(
             path: path,
             headers: headers
         ))
@@ -78,12 +78,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/accepted_assignments`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)`.
-    public func classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment(
-        path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path,
-        query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query = .init(),
-        headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers = .init()
-    ) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output {
-        try await classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment(Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input(
+    public func classroomListAcceptedAssignmentsForAnAssignment(
+        path: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Path,
+        query: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Query = .init(),
+        headers: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Headers = .init()
+    ) async throws -> Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Output {
+        try await classroomListAcceptedAssignmentsForAnAssignment(Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input(
             path: path,
             query: query,
             headers: headers
@@ -95,11 +95,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/grades`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/grades/get(classroom/get-assignment-grades)`.
-    public func classroom_sol_get_hyphen_assignment_hyphen_grades(
-        path: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input.Path,
-        headers: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input.Headers = .init()
-    ) async throws -> Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output {
-        try await classroom_sol_get_hyphen_assignment_hyphen_grades(Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input(
+    public func classroomGetAssignmentGrades(
+        path: Operations.ClassroomGetAssignmentGrades.Input.Path,
+        headers: Operations.ClassroomGetAssignmentGrades.Input.Headers = .init()
+    ) async throws -> Operations.ClassroomGetAssignmentGrades.Output {
+        try await classroomGetAssignmentGrades(Operations.ClassroomGetAssignmentGrades.Input(
             path: path,
             headers: headers
         ))
@@ -110,11 +110,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /classrooms`.
     /// - Remark: Generated from `#/paths//classrooms/get(classroom/list-classrooms)`.
-    public func classroom_sol_list_hyphen_classrooms(
-        query: Operations.classroom_sol_list_hyphen_classrooms.Input.Query = .init(),
-        headers: Operations.classroom_sol_list_hyphen_classrooms.Input.Headers = .init()
-    ) async throws -> Operations.classroom_sol_list_hyphen_classrooms.Output {
-        try await classroom_sol_list_hyphen_classrooms(Operations.classroom_sol_list_hyphen_classrooms.Input(
+    public func classroomListClassrooms(
+        query: Operations.ClassroomListClassrooms.Input.Query = .init(),
+        headers: Operations.ClassroomListClassrooms.Input.Headers = .init()
+    ) async throws -> Operations.ClassroomListClassrooms.Output {
+        try await classroomListClassrooms(Operations.ClassroomListClassrooms.Input(
             query: query,
             headers: headers
         ))
@@ -125,11 +125,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /classrooms/{classroom_id}`.
     /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/get(classroom/get-a-classroom)`.
-    public func classroom_sol_get_hyphen_a_hyphen_classroom(
-        path: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input.Path,
-        headers: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input.Headers = .init()
-    ) async throws -> Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Output {
-        try await classroom_sol_get_hyphen_a_hyphen_classroom(Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input(
+    public func classroomGetAClassroom(
+        path: Operations.ClassroomGetAClassroom.Input.Path,
+        headers: Operations.ClassroomGetAClassroom.Input.Headers = .init()
+    ) async throws -> Operations.ClassroomGetAClassroom.Output {
+        try await classroomGetAClassroom(Operations.ClassroomGetAClassroom.Input(
             path: path,
             headers: headers
         ))
@@ -140,12 +140,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /classrooms/{classroom_id}/assignments`.
     /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/assignments/get(classroom/list-assignments-for-a-classroom)`.
-    public func classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom(
-        path: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Path,
-        query: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Query = .init(),
-        headers: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Headers = .init()
-    ) async throws -> Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Output {
-        try await classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom(Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input(
+    public func classroomListAssignmentsForAClassroom(
+        path: Operations.ClassroomListAssignmentsForAClassroom.Input.Path,
+        query: Operations.ClassroomListAssignmentsForAClassroom.Input.Query = .init(),
+        headers: Operations.ClassroomListAssignmentsForAClassroom.Input.Headers = .init()
+    ) async throws -> Operations.ClassroomListAssignmentsForAClassroom.Output {
+        try await classroomListAssignmentsForAClassroom(Operations.ClassroomListAssignmentsForAClassroom.Input(
             path: path,
             query: query,
             headers: headers
@@ -155,6 +155,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -170,36 +179,36 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -207,7 +216,7 @@ public enum Components {
         /// A GitHub repository view for Classroom
         ///
         /// - Remark: Generated from `#/components/schemas/simple-classroom-repository`.
-        public struct simple_hyphen_classroom_hyphen_repository: Codable, Hashable, Sendable {
+        public struct SimpleClassroomRepository: Codable, Hashable, Sendable {
             /// A unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-repository/id`.
@@ -215,15 +224,15 @@ public enum Components {
             /// The full, globally unique name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// The URL to view the repository on GitHub.com.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The GraphQL identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// Whether the repository is private.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-repository/private`.
@@ -231,93 +240,93 @@ public enum Components {
             /// The default branch for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-repository/default_branch`.
-            public var default_branch: Swift.String
-            /// Creates a new `simple_hyphen_classroom_hyphen_repository`.
+            public var defaultBranch: Swift.String
+            /// Creates a new `SimpleClassroomRepository`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier of the repository.
-            ///   - full_name: The full, globally unique name of the repository.
-            ///   - html_url: The URL to view the repository on GitHub.com.
-            ///   - node_id: The GraphQL identifier of the repository.
+            ///   - fullName: The full, globally unique name of the repository.
+            ///   - htmlUrl: The URL to view the repository on GitHub.com.
+            ///   - nodeId: The GraphQL identifier of the repository.
             ///   - _private: Whether the repository is private.
-            ///   - default_branch: The default branch for the repository.
+            ///   - defaultBranch: The default branch for the repository.
             public init(
                 id: Swift.Int,
-                full_name: Swift.String,
-                html_url: Swift.String,
-                node_id: Swift.String,
+                fullName: Swift.String,
+                htmlUrl: Swift.String,
+                nodeId: Swift.String,
                 _private: Swift.Bool,
-                default_branch: Swift.String
+                defaultBranch: Swift.String
             ) {
                 self.id = id
-                self.full_name = full_name
-                self.html_url = html_url
-                self.node_id = node_id
+                self.fullName = fullName
+                self.htmlUrl = htmlUrl
+                self.nodeId = nodeId
                 self._private = _private
-                self.default_branch = default_branch
+                self.defaultBranch = defaultBranch
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case full_name
-                case html_url
-                case node_id
+                case fullName = "full_name"
+                case htmlUrl = "html_url"
+                case nodeId = "node_id"
                 case _private = "private"
-                case default_branch
+                case defaultBranch = "default_branch"
             }
         }
         /// A GitHub organization.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-classroom-organization`.
-        public struct simple_hyphen_classroom_hyphen_organization: Codable, Hashable, Sendable {
+        public struct SimpleClassroomOrganization: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-classroom-organization/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/simple-classroom-organization/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-classroom-organization/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-classroom-organization/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-classroom-organization/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-classroom-organization/avatar_url`.
-            public var avatar_url: Swift.String
-            /// Creates a new `simple_hyphen_classroom_hyphen_organization`.
+            public var avatarUrl: Swift.String
+            /// Creates a new `SimpleClassroomOrganization`.
             ///
             /// - Parameters:
             ///   - id:
             ///   - login:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - nodeId:
+            ///   - htmlUrl:
             ///   - name:
-            ///   - avatar_url:
+            ///   - avatarUrl:
             public init(
                 id: Swift.Int,
                 login: Swift.String,
-                node_id: Swift.String,
-                html_url: Swift.String,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String,
                 name: Swift.String? = nil,
-                avatar_url: Swift.String
+                avatarUrl: Swift.String
             ) {
                 self.id = id
                 self.login = login
-                self.node_id = node_id
-                self.html_url = html_url
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
                 self.name = name
-                self.avatar_url = avatar_url
+                self.avatarUrl = avatarUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case login
-                case node_id
-                case html_url
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
                 case name
-                case avatar_url
+                case avatarUrl = "avatar_url"
             }
         }
         /// A GitHub Classroom classroom
         ///
         /// - Remark: Generated from `#/components/schemas/classroom`.
-        public struct classroom: Codable, Hashable, Sendable {
+        public struct Classroom: Codable, Hashable, Sendable {
             /// Unique identifier of the classroom.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom/id`.
@@ -331,12 +340,12 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/classroom/archived`.
             public var archived: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/classroom/organization`.
-            public var organization: Components.Schemas.simple_hyphen_classroom_hyphen_organization
+            public var organization: Components.Schemas.SimpleClassroomOrganization
             /// The URL of the classroom on GitHub Classroom.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom/url`.
             public var url: Swift.String
-            /// Creates a new `classroom`.
+            /// Creates a new `Classroom`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the classroom.
@@ -348,7 +357,7 @@ public enum Components {
                 id: Swift.Int,
                 name: Swift.String,
                 archived: Swift.Bool,
-                organization: Components.Schemas.simple_hyphen_classroom_hyphen_organization,
+                organization: Components.Schemas.SimpleClassroomOrganization,
                 url: Swift.String
             ) {
                 self.id = id
@@ -368,7 +377,7 @@ public enum Components {
         /// A GitHub Classroom assignment
         ///
         /// - Remark: Generated from `#/components/schemas/classroom-assignment`.
-        public struct classroom_hyphen_assignment: Codable, Hashable, Sendable {
+        public struct ClassroomAssignment: Codable, Hashable, Sendable {
             /// Unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/id`.
@@ -376,7 +385,7 @@ public enum Components {
             /// Whether an accepted assignment creates a public repository.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/public_repo`.
-            public var public_repo: Swift.Bool
+            public var publicRepo: Swift.Bool
             /// Assignment title.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/title`.
@@ -384,22 +393,22 @@ public enum Components {
             /// Whether it's a group assignment or individual assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case individual = "individual"
                 case group = "group"
             }
             /// Whether it's a group assignment or individual assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/type`.
-            public var _type: Components.Schemas.classroom_hyphen_assignment._typePayload
+            public var _type: Components.Schemas.ClassroomAssignment._TypePayload
             /// The link that a student can use to accept the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/invite_link`.
-            public var invite_link: Swift.String
+            public var inviteLink: Swift.String
             /// Whether the invitation link is enabled. Visiting an enabled invitation link will accept the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/invitations_enabled`.
-            public var invitations_enabled: Swift.Bool
+            public var invitationsEnabled: Swift.Bool
             /// Sluggified name of the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/slug`.
@@ -407,19 +416,19 @@ public enum Components {
             /// Whether students are admins on created repository when a student accepts the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/students_are_repo_admins`.
-            public var students_are_repo_admins: Swift.Bool
+            public var studentsAreRepoAdmins: Swift.Bool
             /// Whether feedback pull request will be created when a student accepts the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/feedback_pull_requests_enabled`.
-            public var feedback_pull_requests_enabled: Swift.Bool
+            public var feedbackPullRequestsEnabled: Swift.Bool
             /// The maximum allowable teams for the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/max_teams`.
-            public var max_teams: Swift.Int?
+            public var maxTeams: Swift.Int?
             /// The maximum allowable members per team.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/max_members`.
-            public var max_members: Swift.Int?
+            public var maxMembers: Swift.Int?
             /// The selected editor for the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/editor`.
@@ -445,135 +454,135 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/deadline`.
             public var deadline: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/starter_code_repository`.
-            public var starter_code_repository: Components.Schemas.simple_hyphen_classroom_hyphen_repository
+            public var starterCodeRepository: Components.Schemas.SimpleClassroomRepository
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/classroom`.
-            public var classroom: Components.Schemas.classroom
-            /// Creates a new `classroom_hyphen_assignment`.
+            public var classroom: Components.Schemas.Classroom
+            /// Creates a new `ClassroomAssignment`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository.
-            ///   - public_repo: Whether an accepted assignment creates a public repository.
+            ///   - publicRepo: Whether an accepted assignment creates a public repository.
             ///   - title: Assignment title.
             ///   - _type: Whether it's a group assignment or individual assignment.
-            ///   - invite_link: The link that a student can use to accept the assignment.
-            ///   - invitations_enabled: Whether the invitation link is enabled. Visiting an enabled invitation link will accept the assignment.
+            ///   - inviteLink: The link that a student can use to accept the assignment.
+            ///   - invitationsEnabled: Whether the invitation link is enabled. Visiting an enabled invitation link will accept the assignment.
             ///   - slug: Sluggified name of the assignment.
-            ///   - students_are_repo_admins: Whether students are admins on created repository when a student accepts the assignment.
-            ///   - feedback_pull_requests_enabled: Whether feedback pull request will be created when a student accepts the assignment.
-            ///   - max_teams: The maximum allowable teams for the assignment.
-            ///   - max_members: The maximum allowable members per team.
+            ///   - studentsAreRepoAdmins: Whether students are admins on created repository when a student accepts the assignment.
+            ///   - feedbackPullRequestsEnabled: Whether feedback pull request will be created when a student accepts the assignment.
+            ///   - maxTeams: The maximum allowable teams for the assignment.
+            ///   - maxMembers: The maximum allowable members per team.
             ///   - editor: The selected editor for the assignment.
             ///   - accepted: The number of students that have accepted the assignment.
             ///   - submitted: The number of students that have submitted the assignment.
             ///   - passing: The number of students that have passed the assignment.
             ///   - language: The programming language used in the assignment.
             ///   - deadline: The time at which the assignment is due.
-            ///   - starter_code_repository:
+            ///   - starterCodeRepository:
             ///   - classroom:
             public init(
                 id: Swift.Int,
-                public_repo: Swift.Bool,
+                publicRepo: Swift.Bool,
                 title: Swift.String,
-                _type: Components.Schemas.classroom_hyphen_assignment._typePayload,
-                invite_link: Swift.String,
-                invitations_enabled: Swift.Bool,
+                _type: Components.Schemas.ClassroomAssignment._TypePayload,
+                inviteLink: Swift.String,
+                invitationsEnabled: Swift.Bool,
                 slug: Swift.String,
-                students_are_repo_admins: Swift.Bool,
-                feedback_pull_requests_enabled: Swift.Bool,
-                max_teams: Swift.Int? = nil,
-                max_members: Swift.Int? = nil,
+                studentsAreRepoAdmins: Swift.Bool,
+                feedbackPullRequestsEnabled: Swift.Bool,
+                maxTeams: Swift.Int? = nil,
+                maxMembers: Swift.Int? = nil,
                 editor: Swift.String,
                 accepted: Swift.Int,
                 submitted: Swift.Int,
                 passing: Swift.Int,
                 language: Swift.String,
                 deadline: Foundation.Date? = nil,
-                starter_code_repository: Components.Schemas.simple_hyphen_classroom_hyphen_repository,
-                classroom: Components.Schemas.classroom
+                starterCodeRepository: Components.Schemas.SimpleClassroomRepository,
+                classroom: Components.Schemas.Classroom
             ) {
                 self.id = id
-                self.public_repo = public_repo
+                self.publicRepo = publicRepo
                 self.title = title
                 self._type = _type
-                self.invite_link = invite_link
-                self.invitations_enabled = invitations_enabled
+                self.inviteLink = inviteLink
+                self.invitationsEnabled = invitationsEnabled
                 self.slug = slug
-                self.students_are_repo_admins = students_are_repo_admins
-                self.feedback_pull_requests_enabled = feedback_pull_requests_enabled
-                self.max_teams = max_teams
-                self.max_members = max_members
+                self.studentsAreRepoAdmins = studentsAreRepoAdmins
+                self.feedbackPullRequestsEnabled = feedbackPullRequestsEnabled
+                self.maxTeams = maxTeams
+                self.maxMembers = maxMembers
                 self.editor = editor
                 self.accepted = accepted
                 self.submitted = submitted
                 self.passing = passing
                 self.language = language
                 self.deadline = deadline
-                self.starter_code_repository = starter_code_repository
+                self.starterCodeRepository = starterCodeRepository
                 self.classroom = classroom
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case public_repo
+                case publicRepo = "public_repo"
                 case title
                 case _type = "type"
-                case invite_link
-                case invitations_enabled
+                case inviteLink = "invite_link"
+                case invitationsEnabled = "invitations_enabled"
                 case slug
-                case students_are_repo_admins
-                case feedback_pull_requests_enabled
-                case max_teams
-                case max_members
+                case studentsAreRepoAdmins = "students_are_repo_admins"
+                case feedbackPullRequestsEnabled = "feedback_pull_requests_enabled"
+                case maxTeams = "max_teams"
+                case maxMembers = "max_members"
                 case editor
                 case accepted
                 case submitted
                 case passing
                 case language
                 case deadline
-                case starter_code_repository
+                case starterCodeRepository = "starter_code_repository"
                 case classroom
             }
         }
         /// A GitHub user simplified for Classroom.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-classroom-user`.
-        public struct simple_hyphen_classroom_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleClassroomUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-classroom-user/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/simple-classroom-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-classroom-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-classroom-user/html_url`.
-            public var html_url: Swift.String
-            /// Creates a new `simple_hyphen_classroom_hyphen_user`.
+            public var htmlUrl: Swift.String
+            /// Creates a new `SimpleClassroomUser`.
             ///
             /// - Parameters:
             ///   - id:
             ///   - login:
-            ///   - avatar_url:
-            ///   - html_url:
+            ///   - avatarUrl:
+            ///   - htmlUrl:
             public init(
                 id: Swift.Int,
                 login: Swift.String,
-                avatar_url: Swift.String,
-                html_url: Swift.String
+                avatarUrl: Swift.String,
+                htmlUrl: Swift.String
             ) {
                 self.id = id
                 self.login = login
-                self.avatar_url = avatar_url
-                self.html_url = html_url
+                self.avatarUrl = avatarUrl
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case login
-                case avatar_url
-                case html_url
+                case avatarUrl = "avatar_url"
+                case htmlUrl = "html_url"
             }
         }
         /// A GitHub Classroom classroom
         ///
         /// - Remark: Generated from `#/components/schemas/simple-classroom`.
-        public struct simple_hyphen_classroom: Codable, Hashable, Sendable {
+        public struct SimpleClassroom: Codable, Hashable, Sendable {
             /// Unique identifier of the classroom.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom/id`.
@@ -590,7 +599,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom/url`.
             public var url: Swift.String
-            /// Creates a new `simple_hyphen_classroom`.
+            /// Creates a new `SimpleClassroom`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the classroom.
@@ -618,7 +627,7 @@ public enum Components {
         /// A GitHub Classroom assignment
         ///
         /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment`.
-        public struct simple_hyphen_classroom_hyphen_assignment: Codable, Hashable, Sendable {
+        public struct SimpleClassroomAssignment: Codable, Hashable, Sendable {
             /// Unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/id`.
@@ -626,7 +635,7 @@ public enum Components {
             /// Whether an accepted assignment creates a public repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/public_repo`.
-            public var public_repo: Swift.Bool
+            public var publicRepo: Swift.Bool
             /// Assignment title.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/title`.
@@ -634,22 +643,22 @@ public enum Components {
             /// Whether it's a Group Assignment or Individual Assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case individual = "individual"
                 case group = "group"
             }
             /// Whether it's a Group Assignment or Individual Assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/type`.
-            public var _type: Components.Schemas.simple_hyphen_classroom_hyphen_assignment._typePayload
+            public var _type: Components.Schemas.SimpleClassroomAssignment._TypePayload
             /// The link that a student can use to accept the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/invite_link`.
-            public var invite_link: Swift.String
+            public var inviteLink: Swift.String
             /// Whether the invitation link is enabled. Visiting an enabled invitation link will accept the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/invitations_enabled`.
-            public var invitations_enabled: Swift.Bool
+            public var invitationsEnabled: Swift.Bool
             /// Sluggified name of the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/slug`.
@@ -657,19 +666,19 @@ public enum Components {
             /// Whether students are admins on created repository on accepted assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/students_are_repo_admins`.
-            public var students_are_repo_admins: Swift.Bool
+            public var studentsAreRepoAdmins: Swift.Bool
             /// Whether feedback pull request will be created on assignment acceptance.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/feedback_pull_requests_enabled`.
-            public var feedback_pull_requests_enabled: Swift.Bool
+            public var feedbackPullRequestsEnabled: Swift.Bool
             /// The maximum allowable teams for the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/max_teams`.
-            public var max_teams: Swift.Int?
+            public var maxTeams: Swift.Int?
             /// The maximum allowable members per team.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/max_members`.
-            public var max_members: Swift.Int?
+            public var maxMembers: Swift.Int?
             /// The selected editor for the assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/editor`.
@@ -695,21 +704,21 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/deadline`.
             public var deadline: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/classroom`.
-            public var classroom: Components.Schemas.simple_hyphen_classroom
-            /// Creates a new `simple_hyphen_classroom_hyphen_assignment`.
+            public var classroom: Components.Schemas.SimpleClassroom
+            /// Creates a new `SimpleClassroomAssignment`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository.
-            ///   - public_repo: Whether an accepted assignment creates a public repository.
+            ///   - publicRepo: Whether an accepted assignment creates a public repository.
             ///   - title: Assignment title.
             ///   - _type: Whether it's a Group Assignment or Individual Assignment.
-            ///   - invite_link: The link that a student can use to accept the assignment.
-            ///   - invitations_enabled: Whether the invitation link is enabled. Visiting an enabled invitation link will accept the assignment.
+            ///   - inviteLink: The link that a student can use to accept the assignment.
+            ///   - invitationsEnabled: Whether the invitation link is enabled. Visiting an enabled invitation link will accept the assignment.
             ///   - slug: Sluggified name of the assignment.
-            ///   - students_are_repo_admins: Whether students are admins on created repository on accepted assignment.
-            ///   - feedback_pull_requests_enabled: Whether feedback pull request will be created on assignment acceptance.
-            ///   - max_teams: The maximum allowable teams for the assignment.
-            ///   - max_members: The maximum allowable members per team.
+            ///   - studentsAreRepoAdmins: Whether students are admins on created repository on accepted assignment.
+            ///   - feedbackPullRequestsEnabled: Whether feedback pull request will be created on assignment acceptance.
+            ///   - maxTeams: The maximum allowable teams for the assignment.
+            ///   - maxMembers: The maximum allowable members per team.
             ///   - editor: The selected editor for the assignment.
             ///   - accepted: The number of students that have accepted the assignment.
             ///   - submitted: The number of students that have submitted the assignment.
@@ -719,35 +728,35 @@ public enum Components {
             ///   - classroom:
             public init(
                 id: Swift.Int,
-                public_repo: Swift.Bool,
+                publicRepo: Swift.Bool,
                 title: Swift.String,
-                _type: Components.Schemas.simple_hyphen_classroom_hyphen_assignment._typePayload,
-                invite_link: Swift.String,
-                invitations_enabled: Swift.Bool,
+                _type: Components.Schemas.SimpleClassroomAssignment._TypePayload,
+                inviteLink: Swift.String,
+                invitationsEnabled: Swift.Bool,
                 slug: Swift.String,
-                students_are_repo_admins: Swift.Bool,
-                feedback_pull_requests_enabled: Swift.Bool,
-                max_teams: Swift.Int? = nil,
-                max_members: Swift.Int? = nil,
+                studentsAreRepoAdmins: Swift.Bool,
+                feedbackPullRequestsEnabled: Swift.Bool,
+                maxTeams: Swift.Int? = nil,
+                maxMembers: Swift.Int? = nil,
                 editor: Swift.String,
                 accepted: Swift.Int,
                 submitted: Swift.Int,
                 passing: Swift.Int,
                 language: Swift.String,
                 deadline: Foundation.Date? = nil,
-                classroom: Components.Schemas.simple_hyphen_classroom
+                classroom: Components.Schemas.SimpleClassroom
             ) {
                 self.id = id
-                self.public_repo = public_repo
+                self.publicRepo = publicRepo
                 self.title = title
                 self._type = _type
-                self.invite_link = invite_link
-                self.invitations_enabled = invitations_enabled
+                self.inviteLink = inviteLink
+                self.invitationsEnabled = invitationsEnabled
                 self.slug = slug
-                self.students_are_repo_admins = students_are_repo_admins
-                self.feedback_pull_requests_enabled = feedback_pull_requests_enabled
-                self.max_teams = max_teams
-                self.max_members = max_members
+                self.studentsAreRepoAdmins = studentsAreRepoAdmins
+                self.feedbackPullRequestsEnabled = feedbackPullRequestsEnabled
+                self.maxTeams = maxTeams
+                self.maxMembers = maxMembers
                 self.editor = editor
                 self.accepted = accepted
                 self.submitted = submitted
@@ -758,16 +767,16 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case public_repo
+                case publicRepo = "public_repo"
                 case title
                 case _type = "type"
-                case invite_link
-                case invitations_enabled
+                case inviteLink = "invite_link"
+                case invitationsEnabled = "invitations_enabled"
                 case slug
-                case students_are_repo_admins
-                case feedback_pull_requests_enabled
-                case max_teams
-                case max_members
+                case studentsAreRepoAdmins = "students_are_repo_admins"
+                case feedbackPullRequestsEnabled = "feedback_pull_requests_enabled"
+                case maxTeams = "max_teams"
+                case maxMembers = "max_members"
                 case editor
                 case accepted
                 case submitted
@@ -780,7 +789,7 @@ public enum Components {
         /// A GitHub Classroom accepted assignment
         ///
         /// - Remark: Generated from `#/components/schemas/classroom-accepted-assignment`.
-        public struct classroom_hyphen_accepted_hyphen_assignment: Codable, Hashable, Sendable {
+        public struct ClassroomAcceptedAssignment: Codable, Hashable, Sendable {
             /// Unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-accepted-assignment/id`.
@@ -796,24 +805,24 @@ public enum Components {
             /// Count of student commits.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-accepted-assignment/commit_count`.
-            public var commit_count: Swift.Int
+            public var commitCount: Swift.Int
             /// Most recent grade.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-accepted-assignment/grade`.
             public var grade: Swift.String
             /// - Remark: Generated from `#/components/schemas/classroom-accepted-assignment/students`.
-            public var students: [Components.Schemas.simple_hyphen_classroom_hyphen_user]
+            public var students: [Components.Schemas.SimpleClassroomUser]
             /// - Remark: Generated from `#/components/schemas/classroom-accepted-assignment/repository`.
-            public var repository: Components.Schemas.simple_hyphen_classroom_hyphen_repository
+            public var repository: Components.Schemas.SimpleClassroomRepository
             /// - Remark: Generated from `#/components/schemas/classroom-accepted-assignment/assignment`.
-            public var assignment: Components.Schemas.simple_hyphen_classroom_hyphen_assignment
-            /// Creates a new `classroom_hyphen_accepted_hyphen_assignment`.
+            public var assignment: Components.Schemas.SimpleClassroomAssignment
+            /// Creates a new `ClassroomAcceptedAssignment`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository.
             ///   - submitted: Whether an accepted assignment has been submitted.
             ///   - passing: Whether a submission passed.
-            ///   - commit_count: Count of student commits.
+            ///   - commitCount: Count of student commits.
             ///   - grade: Most recent grade.
             ///   - students:
             ///   - repository:
@@ -822,16 +831,16 @@ public enum Components {
                 id: Swift.Int,
                 submitted: Swift.Bool,
                 passing: Swift.Bool,
-                commit_count: Swift.Int,
+                commitCount: Swift.Int,
                 grade: Swift.String,
-                students: [Components.Schemas.simple_hyphen_classroom_hyphen_user],
-                repository: Components.Schemas.simple_hyphen_classroom_hyphen_repository,
-                assignment: Components.Schemas.simple_hyphen_classroom_hyphen_assignment
+                students: [Components.Schemas.SimpleClassroomUser],
+                repository: Components.Schemas.SimpleClassroomRepository,
+                assignment: Components.Schemas.SimpleClassroomAssignment
             ) {
                 self.id = id
                 self.submitted = submitted
                 self.passing = passing
-                self.commit_count = commit_count
+                self.commitCount = commitCount
                 self.grade = grade
                 self.students = students
                 self.repository = repository
@@ -841,7 +850,7 @@ public enum Components {
                 case id
                 case submitted
                 case passing
-                case commit_count
+                case commitCount = "commit_count"
                 case grade
                 case students
                 case repository
@@ -851,102 +860,102 @@ public enum Components {
         /// Grade for a student or groups GitHub Classroom assignment
         ///
         /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade`.
-        public struct classroom_hyphen_assignment_hyphen_grade: Codable, Hashable, Sendable {
+        public struct ClassroomAssignmentGrade: Codable, Hashable, Sendable {
             /// Name of the assignment
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/assignment_name`.
-            public var assignment_name: Swift.String
+            public var assignmentName: Swift.String
             /// URL of the assignment
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/assignment_url`.
-            public var assignment_url: Swift.String
+            public var assignmentUrl: Swift.String
             /// URL of the starter code for the assignment
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/starter_code_url`.
-            public var starter_code_url: Swift.String
+            public var starterCodeUrl: Swift.String
             /// GitHub username of the student
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/github_username`.
-            public var github_username: Swift.String
+            public var githubUsername: Swift.String
             /// Roster identifier of the student
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/roster_identifier`.
-            public var roster_identifier: Swift.String
+            public var rosterIdentifier: Swift.String
             /// Name of the student's assignment repository
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/student_repository_name`.
-            public var student_repository_name: Swift.String
+            public var studentRepositoryName: Swift.String
             /// URL of the student's assignment repository
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/student_repository_url`.
-            public var student_repository_url: Swift.String
+            public var studentRepositoryUrl: Swift.String
             /// Timestamp of the student's assignment submission
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/submission_timestamp`.
-            public var submission_timestamp: Swift.String
+            public var submissionTimestamp: Swift.String
             /// Number of points awarded to the student
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/points_awarded`.
-            public var points_awarded: Swift.Int
+            public var pointsAwarded: Swift.Int
             /// Number of points available for the assignment
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/points_available`.
-            public var points_available: Swift.Int
+            public var pointsAvailable: Swift.Int
             /// If a group assignment, name of the group the student is in
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment-grade/group_name`.
-            public var group_name: Swift.String?
-            /// Creates a new `classroom_hyphen_assignment_hyphen_grade`.
+            public var groupName: Swift.String?
+            /// Creates a new `ClassroomAssignmentGrade`.
             ///
             /// - Parameters:
-            ///   - assignment_name: Name of the assignment
-            ///   - assignment_url: URL of the assignment
-            ///   - starter_code_url: URL of the starter code for the assignment
-            ///   - github_username: GitHub username of the student
-            ///   - roster_identifier: Roster identifier of the student
-            ///   - student_repository_name: Name of the student's assignment repository
-            ///   - student_repository_url: URL of the student's assignment repository
-            ///   - submission_timestamp: Timestamp of the student's assignment submission
-            ///   - points_awarded: Number of points awarded to the student
-            ///   - points_available: Number of points available for the assignment
-            ///   - group_name: If a group assignment, name of the group the student is in
+            ///   - assignmentName: Name of the assignment
+            ///   - assignmentUrl: URL of the assignment
+            ///   - starterCodeUrl: URL of the starter code for the assignment
+            ///   - githubUsername: GitHub username of the student
+            ///   - rosterIdentifier: Roster identifier of the student
+            ///   - studentRepositoryName: Name of the student's assignment repository
+            ///   - studentRepositoryUrl: URL of the student's assignment repository
+            ///   - submissionTimestamp: Timestamp of the student's assignment submission
+            ///   - pointsAwarded: Number of points awarded to the student
+            ///   - pointsAvailable: Number of points available for the assignment
+            ///   - groupName: If a group assignment, name of the group the student is in
             public init(
-                assignment_name: Swift.String,
-                assignment_url: Swift.String,
-                starter_code_url: Swift.String,
-                github_username: Swift.String,
-                roster_identifier: Swift.String,
-                student_repository_name: Swift.String,
-                student_repository_url: Swift.String,
-                submission_timestamp: Swift.String,
-                points_awarded: Swift.Int,
-                points_available: Swift.Int,
-                group_name: Swift.String? = nil
+                assignmentName: Swift.String,
+                assignmentUrl: Swift.String,
+                starterCodeUrl: Swift.String,
+                githubUsername: Swift.String,
+                rosterIdentifier: Swift.String,
+                studentRepositoryName: Swift.String,
+                studentRepositoryUrl: Swift.String,
+                submissionTimestamp: Swift.String,
+                pointsAwarded: Swift.Int,
+                pointsAvailable: Swift.Int,
+                groupName: Swift.String? = nil
             ) {
-                self.assignment_name = assignment_name
-                self.assignment_url = assignment_url
-                self.starter_code_url = starter_code_url
-                self.github_username = github_username
-                self.roster_identifier = roster_identifier
-                self.student_repository_name = student_repository_name
-                self.student_repository_url = student_repository_url
-                self.submission_timestamp = submission_timestamp
-                self.points_awarded = points_awarded
-                self.points_available = points_available
-                self.group_name = group_name
+                self.assignmentName = assignmentName
+                self.assignmentUrl = assignmentUrl
+                self.starterCodeUrl = starterCodeUrl
+                self.githubUsername = githubUsername
+                self.rosterIdentifier = rosterIdentifier
+                self.studentRepositoryName = studentRepositoryName
+                self.studentRepositoryUrl = studentRepositoryUrl
+                self.submissionTimestamp = submissionTimestamp
+                self.pointsAwarded = pointsAwarded
+                self.pointsAvailable = pointsAvailable
+                self.groupName = groupName
             }
             public enum CodingKeys: String, CodingKey {
-                case assignment_name
-                case assignment_url
-                case starter_code_url
-                case github_username
-                case roster_identifier
-                case student_repository_name
-                case student_repository_url
-                case submission_timestamp
-                case points_awarded
-                case points_available
-                case group_name
+                case assignmentName = "assignment_name"
+                case assignmentUrl = "assignment_url"
+                case starterCodeUrl = "starter_code_url"
+                case githubUsername = "github_username"
+                case rosterIdentifier = "roster_identifier"
+                case studentRepositoryName = "student_repository_name"
+                case studentRepositoryUrl = "student_repository_url"
+                case submissionTimestamp = "submission_timestamp"
+                case pointsAwarded = "points_awarded"
+                case pointsAvailable = "points_available"
+                case groupName = "group_name"
             }
         }
     }
@@ -955,34 +964,34 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The unique identifier of the classroom assignment.
         ///
         /// - Remark: Generated from `#/components/parameters/assignment-id`.
-        public typealias assignment_hyphen_id = Swift.Int
+        public typealias AssignmentId = Swift.Int
         /// The unique identifier of the classroom.
         ///
         /// - Remark: Generated from `#/components/parameters/classroom-id`.
-        public typealias classroom_hyphen_id = Swift.Int
+        public typealias ClassroomId = Swift.Int
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -992,12 +1001,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
@@ -1014,7 +1023,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/get(classroom/get-an-assignment)`.
-    public enum classroom_sol_get_hyphen_an_hyphen_assignment {
+    public enum ClassroomGetAnAssignment {
         public static let id: Swift.String = "classroom/get-an-assignment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/GET/path`.
@@ -1022,36 +1031,36 @@ public enum Operations {
                 /// The unique identifier of the classroom assignment.
                 ///
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/GET/path/assignment_id`.
-                public var assignment_id: Components.Parameters.assignment_hyphen_id
+                public var assignmentId: Components.Parameters.AssignmentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - assignment_id: The unique identifier of the classroom assignment.
-                public init(assignment_id: Components.Parameters.assignment_hyphen_id) {
-                    self.assignment_id = assignment_id
+                ///   - assignmentId: The unique identifier of the classroom assignment.
+                public init(assignmentId: Components.Parameters.AssignmentId) {
+                    self.assignmentId = assignmentId
                 }
             }
-            public var path: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input.Path
+            public var path: Operations.ClassroomGetAnAssignment.Input.Path
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_get_hyphen_an_hyphen_assignment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomGetAnAssignment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_get_hyphen_an_hyphen_assignment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomGetAnAssignment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input.Headers
+            public var headers: Operations.ClassroomGetAnAssignment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input.Path,
-                headers: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input.Headers = .init()
+                path: Operations.ClassroomGetAnAssignment.Input.Path,
+                headers: Operations.ClassroomGetAnAssignment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1062,12 +1071,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/assignments/{assignment_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.classroom_hyphen_assignment)
+                    case json(Components.Schemas.ClassroomAssignment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.classroom_hyphen_assignment {
+                    public var json: Components.Schemas.ClassroomAssignment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1077,12 +1086,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Output.Ok.Body
+                public var body: Operations.ClassroomGetAnAssignment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Output.Ok.Body) {
+                public init(body: Operations.ClassroomGetAnAssignment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1091,12 +1100,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//assignments/{assignment_id}/get(classroom/get-an-assignment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Output.Ok)
+            case ok(Operations.ClassroomGetAnAssignment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Output.Ok {
+            public var ok: Operations.ClassroomGetAnAssignment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1114,12 +1123,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//assignments/{assignment_id}/get(classroom/get-an-assignment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1169,7 +1178,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/accepted_assignments`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)`.
-    public enum classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment {
+    public enum ClassroomListAcceptedAssignmentsForAnAssignment {
         public static let id: Swift.String = "classroom/list-accepted-assignments-for-an-assignment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/path`.
@@ -1177,52 +1186,52 @@ public enum Operations {
                 /// The unique identifier of the classroom assignment.
                 ///
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/path/assignment_id`.
-                public var assignment_id: Components.Parameters.assignment_hyphen_id
+                public var assignmentId: Components.Parameters.AssignmentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - assignment_id: The unique identifier of the classroom assignment.
-                public init(assignment_id: Components.Parameters.assignment_hyphen_id) {
-                    self.assignment_id = assignment_id
+                ///   - assignmentId: The unique identifier of the classroom assignment.
+                public init(assignmentId: Components.Parameters.AssignmentId) {
+                    self.assignmentId = assignmentId
                 }
             }
-            public var path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path
+            public var path: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Path
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query
+            public var query: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Query
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomListAcceptedAssignmentsForAnAssignment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomListAcceptedAssignmentsForAnAssignment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers
+            public var headers: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1230,9 +1239,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Path,
-                query: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Query = .init(),
-                headers: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input.Headers = .init()
+                path: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Path,
+                query: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Query = .init(),
+                headers: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1244,12 +1253,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/assignments/{assignment_id}/accepted_assignments/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.classroom_hyphen_accepted_hyphen_assignment])
+                    case json([Components.Schemas.ClassroomAcceptedAssignment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.classroom_hyphen_accepted_hyphen_assignment] {
+                    public var json: [Components.Schemas.ClassroomAcceptedAssignment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1259,12 +1268,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body
+                public var body: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body) {
+                public init(body: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1273,12 +1282,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok)
+            case ok(Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok {
+            public var ok: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1328,7 +1337,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/grades`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/grades/get(classroom/get-assignment-grades)`.
-    public enum classroom_sol_get_hyphen_assignment_hyphen_grades {
+    public enum ClassroomGetAssignmentGrades {
         public static let id: Swift.String = "classroom/get-assignment-grades"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/grades/GET/path`.
@@ -1336,36 +1345,36 @@ public enum Operations {
                 /// The unique identifier of the classroom assignment.
                 ///
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/grades/GET/path/assignment_id`.
-                public var assignment_id: Components.Parameters.assignment_hyphen_id
+                public var assignmentId: Components.Parameters.AssignmentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - assignment_id: The unique identifier of the classroom assignment.
-                public init(assignment_id: Components.Parameters.assignment_hyphen_id) {
-                    self.assignment_id = assignment_id
+                ///   - assignmentId: The unique identifier of the classroom assignment.
+                public init(assignmentId: Components.Parameters.AssignmentId) {
+                    self.assignmentId = assignmentId
                 }
             }
-            public var path: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input.Path
+            public var path: Operations.ClassroomGetAssignmentGrades.Input.Path
             /// - Remark: Generated from `#/paths/assignments/{assignment_id}/grades/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomGetAssignmentGrades.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomGetAssignmentGrades.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input.Headers
+            public var headers: Operations.ClassroomGetAssignmentGrades.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input.Path,
-                headers: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input.Headers = .init()
+                path: Operations.ClassroomGetAssignmentGrades.Input.Path,
+                headers: Operations.ClassroomGetAssignmentGrades.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1376,12 +1385,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/assignments/{assignment_id}/grades/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/assignments/{assignment_id}/grades/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.classroom_hyphen_assignment_hyphen_grade])
+                    case json([Components.Schemas.ClassroomAssignmentGrade])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.classroom_hyphen_assignment_hyphen_grade] {
+                    public var json: [Components.Schemas.ClassroomAssignmentGrade] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1391,12 +1400,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output.Ok.Body
+                public var body: Operations.ClassroomGetAssignmentGrades.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output.Ok.Body) {
+                public init(body: Operations.ClassroomGetAssignmentGrades.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1405,12 +1414,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//assignments/{assignment_id}/grades/get(classroom/get-assignment-grades)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output.Ok)
+            case ok(Operations.ClassroomGetAssignmentGrades.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output.Ok {
+            public var ok: Operations.ClassroomGetAssignmentGrades.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1428,12 +1437,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//assignments/{assignment_id}/grades/get(classroom/get-assignment-grades)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1483,7 +1492,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /classrooms`.
     /// - Remark: Generated from `#/paths//classrooms/get(classroom/list-classrooms)`.
-    public enum classroom_sol_list_hyphen_classrooms {
+    public enum ClassroomListClassrooms {
         public static let id: Swift.String = "classroom/list-classrooms"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/classrooms/GET/query`.
@@ -1491,45 +1500,45 @@ public enum Operations {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.classroom_sol_list_hyphen_classrooms.Input.Query
+            public var query: Operations.ClassroomListClassrooms.Input.Query
             /// - Remark: Generated from `#/paths/classrooms/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_classrooms.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomListClassrooms.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_classrooms.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomListClassrooms.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.classroom_sol_list_hyphen_classrooms.Input.Headers
+            public var headers: Operations.ClassroomListClassrooms.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.classroom_sol_list_hyphen_classrooms.Input.Query = .init(),
-                headers: Operations.classroom_sol_list_hyphen_classrooms.Input.Headers = .init()
+                query: Operations.ClassroomListClassrooms.Input.Query = .init(),
+                headers: Operations.ClassroomListClassrooms.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -1540,12 +1549,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/classrooms/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/classrooms/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_classroom])
+                    case json([Components.Schemas.SimpleClassroom])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_classroom] {
+                    public var json: [Components.Schemas.SimpleClassroom] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1555,12 +1564,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.classroom_sol_list_hyphen_classrooms.Output.Ok.Body
+                public var body: Operations.ClassroomListClassrooms.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.classroom_sol_list_hyphen_classrooms.Output.Ok.Body) {
+                public init(body: Operations.ClassroomListClassrooms.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1569,12 +1578,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//classrooms/get(classroom/list-classrooms)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.classroom_sol_list_hyphen_classrooms.Output.Ok)
+            case ok(Operations.ClassroomListClassrooms.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.classroom_sol_list_hyphen_classrooms.Output.Ok {
+            public var ok: Operations.ClassroomListClassrooms.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1624,7 +1633,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /classrooms/{classroom_id}`.
     /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/get(classroom/get-a-classroom)`.
-    public enum classroom_sol_get_hyphen_a_hyphen_classroom {
+    public enum ClassroomGetAClassroom {
         public static let id: Swift.String = "classroom/get-a-classroom"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/GET/path`.
@@ -1632,36 +1641,36 @@ public enum Operations {
                 /// The unique identifier of the classroom.
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/GET/path/classroom_id`.
-                public var classroom_id: Components.Parameters.classroom_hyphen_id
+                public var classroomId: Components.Parameters.ClassroomId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - classroom_id: The unique identifier of the classroom.
-                public init(classroom_id: Components.Parameters.classroom_hyphen_id) {
-                    self.classroom_id = classroom_id
+                ///   - classroomId: The unique identifier of the classroom.
+                public init(classroomId: Components.Parameters.ClassroomId) {
+                    self.classroomId = classroomId
                 }
             }
-            public var path: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input.Path
+            public var path: Operations.ClassroomGetAClassroom.Input.Path
             /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_get_hyphen_a_hyphen_classroom.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomGetAClassroom.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_get_hyphen_a_hyphen_classroom.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomGetAClassroom.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input.Headers
+            public var headers: Operations.ClassroomGetAClassroom.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input.Path,
-                headers: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input.Headers = .init()
+                path: Operations.ClassroomGetAClassroom.Input.Path,
+                headers: Operations.ClassroomGetAClassroom.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1672,12 +1681,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.classroom)
+                    case json(Components.Schemas.Classroom)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.classroom {
+                    public var json: Components.Schemas.Classroom {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1687,12 +1696,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Output.Ok.Body
+                public var body: Operations.ClassroomGetAClassroom.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Output.Ok.Body) {
+                public init(body: Operations.ClassroomGetAClassroom.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1701,12 +1710,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/get(classroom/get-a-classroom)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Output.Ok)
+            case ok(Operations.ClassroomGetAClassroom.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Output.Ok {
+            public var ok: Operations.ClassroomGetAClassroom.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1724,12 +1733,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/get(classroom/get-a-classroom)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1779,7 +1788,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /classrooms/{classroom_id}/assignments`.
     /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/assignments/get(classroom/list-assignments-for-a-classroom)`.
-    public enum classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom {
+    public enum ClassroomListAssignmentsForAClassroom {
         public static let id: Swift.String = "classroom/list-assignments-for-a-classroom"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/path`.
@@ -1787,52 +1796,52 @@ public enum Operations {
                 /// The unique identifier of the classroom.
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/path/classroom_id`.
-                public var classroom_id: Components.Parameters.classroom_hyphen_id
+                public var classroomId: Components.Parameters.ClassroomId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - classroom_id: The unique identifier of the classroom.
-                public init(classroom_id: Components.Parameters.classroom_hyphen_id) {
-                    self.classroom_id = classroom_id
+                ///   - classroomId: The unique identifier of the classroom.
+                public init(classroomId: Components.Parameters.ClassroomId) {
+                    self.classroomId = classroomId
                 }
             }
-            public var path: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Path
+            public var path: Operations.ClassroomListAssignmentsForAClassroom.Input.Path
             /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Query
+            public var query: Operations.ClassroomListAssignmentsForAClassroom.Input.Query
             /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomListAssignmentsForAClassroom.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.ClassroomListAssignmentsForAClassroom.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Headers
+            public var headers: Operations.ClassroomListAssignmentsForAClassroom.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1840,9 +1849,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Path,
-                query: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Query = .init(),
-                headers: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input.Headers = .init()
+                path: Operations.ClassroomListAssignmentsForAClassroom.Input.Path,
+                query: Operations.ClassroomListAssignmentsForAClassroom.Input.Query = .init(),
+                headers: Operations.ClassroomListAssignmentsForAClassroom.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1854,12 +1863,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/classrooms/{classroom_id}/assignments/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_classroom_hyphen_assignment])
+                    case json([Components.Schemas.SimpleClassroomAssignment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_classroom_hyphen_assignment] {
+                    public var json: [Components.Schemas.SimpleClassroomAssignment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1869,12 +1878,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Output.Ok.Body
+                public var body: Operations.ClassroomListAssignmentsForAClassroom.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Output.Ok.Body) {
+                public init(body: Operations.ClassroomListAssignmentsForAClassroom.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1883,12 +1892,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/assignments/get(classroom/list-assignments-for-a-classroom)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Output.Ok)
+            case ok(Operations.ClassroomListAssignmentsForAClassroom.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Output.Ok {
+            public var ok: Operations.ClassroomListAssignmentsForAClassroom.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):

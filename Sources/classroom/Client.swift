@@ -44,15 +44,15 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/get(classroom/get-an-assignment)`.
-    public func classroom_sol_get_hyphen_an_hyphen_assignment(_ input: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Input) async throws -> Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Output {
+    public func classroomGetAnAssignment(_ input: Operations.ClassroomGetAnAssignment.Input) async throws -> Operations.ClassroomGetAnAssignment.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.id,
+            forOperation: Operations.ClassroomGetAnAssignment.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/assignments/{}",
                     parameters: [
-                        input.path.assignment_id
+                        input.path.assignmentId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -70,7 +70,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.classroom_sol_get_hyphen_an_hyphen_assignment.Output.Ok.Body
+                    let body: Operations.ClassroomGetAnAssignment.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -80,7 +80,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.classroom_hyphen_assignment.self,
+                            Components.Schemas.ClassroomAssignment.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -92,7 +92,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -102,7 +102,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -130,15 +130,15 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/accepted_assignments`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/accepted_assignments/get(classroom/list-accepted-assignments-for-an-assignment)`.
-    public func classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment(_ input: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Input) async throws -> Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output {
+    public func classroomListAcceptedAssignmentsForAnAssignment(_ input: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Input) async throws -> Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.id,
+            forOperation: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/assignments/{}/accepted_assignments",
                     parameters: [
-                        input.path.assignment_id
+                        input.path.assignmentId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -158,7 +158,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -170,7 +170,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.classroom_sol_list_hyphen_accepted_hyphen_assignments_hyphen_for_hyphen_an_hyphen_assignment.Output.Ok.Body
+                    let body: Operations.ClassroomListAcceptedAssignmentsForAnAssignment.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -180,7 +180,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.classroom_hyphen_accepted_hyphen_assignment].self,
+                            [Components.Schemas.ClassroomAcceptedAssignment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -208,15 +208,15 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /assignments/{assignment_id}/grades`.
     /// - Remark: Generated from `#/paths//assignments/{assignment_id}/grades/get(classroom/get-assignment-grades)`.
-    public func classroom_sol_get_hyphen_assignment_hyphen_grades(_ input: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input) async throws -> Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output {
+    public func classroomGetAssignmentGrades(_ input: Operations.ClassroomGetAssignmentGrades.Input) async throws -> Operations.ClassroomGetAssignmentGrades.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.id,
+            forOperation: Operations.ClassroomGetAssignmentGrades.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/assignments/{}/grades",
                     parameters: [
-                        input.path.assignment_id
+                        input.path.assignmentId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -234,7 +234,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output.Ok.Body
+                    let body: Operations.ClassroomGetAssignmentGrades.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -244,7 +244,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.classroom_hyphen_assignment_hyphen_grade].self,
+                            [Components.Schemas.ClassroomAssignmentGrade].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -256,7 +256,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -266,7 +266,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -294,10 +294,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /classrooms`.
     /// - Remark: Generated from `#/paths//classrooms/get(classroom/list-classrooms)`.
-    public func classroom_sol_list_hyphen_classrooms(_ input: Operations.classroom_sol_list_hyphen_classrooms.Input) async throws -> Operations.classroom_sol_list_hyphen_classrooms.Output {
+    public func classroomListClassrooms(_ input: Operations.ClassroomListClassrooms.Input) async throws -> Operations.ClassroomListClassrooms.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.classroom_sol_list_hyphen_classrooms.id,
+            forOperation: Operations.ClassroomListClassrooms.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/classrooms",
@@ -320,7 +320,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -332,7 +332,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.classroom_sol_list_hyphen_classrooms.Output.Ok.Body
+                    let body: Operations.ClassroomListClassrooms.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -342,7 +342,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.simple_hyphen_classroom].self,
+                            [Components.Schemas.SimpleClassroom].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -370,15 +370,15 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /classrooms/{classroom_id}`.
     /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/get(classroom/get-a-classroom)`.
-    public func classroom_sol_get_hyphen_a_hyphen_classroom(_ input: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Input) async throws -> Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Output {
+    public func classroomGetAClassroom(_ input: Operations.ClassroomGetAClassroom.Input) async throws -> Operations.ClassroomGetAClassroom.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.id,
+            forOperation: Operations.ClassroomGetAClassroom.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/classrooms/{}",
                     parameters: [
-                        input.path.classroom_id
+                        input.path.classroomId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -396,7 +396,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.classroom_sol_get_hyphen_a_hyphen_classroom.Output.Ok.Body
+                    let body: Operations.ClassroomGetAClassroom.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -406,7 +406,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.classroom.self,
+                            Components.Schemas.Classroom.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -418,7 +418,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -428,7 +428,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -456,15 +456,15 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /classrooms/{classroom_id}/assignments`.
     /// - Remark: Generated from `#/paths//classrooms/{classroom_id}/assignments/get(classroom/list-assignments-for-a-classroom)`.
-    public func classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom(_ input: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Input) async throws -> Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Output {
+    public func classroomListAssignmentsForAClassroom(_ input: Operations.ClassroomListAssignmentsForAClassroom.Input) async throws -> Operations.ClassroomListAssignmentsForAClassroom.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.id,
+            forOperation: Operations.ClassroomListAssignmentsForAClassroom.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/classrooms/{}/assignments",
                     parameters: [
-                        input.path.classroom_id
+                        input.path.classroomId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -484,7 +484,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 converter.setAcceptHeader(
                     in: &request.headerFields,
@@ -496,7 +496,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.classroom_sol_list_hyphen_assignments_hyphen_for_hyphen_a_hyphen_classroom.Output.Ok.Body
+                    let body: Operations.ClassroomListAssignmentsForAClassroom.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -506,7 +506,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            [Components.Schemas.simple_hyphen_classroom_hyphen_assignment].self,
+                            [Components.Schemas.SimpleClassroomAssignment].self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
