@@ -21,7 +21,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)`.
-    func code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org(_ input: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output
+    func codeScanningListAlertsForOrg(_ input: Operations.CodeScanningListAlertsForOrg.Input) async throws -> Operations.CodeScanningListAlertsForOrg.Output
     /// List code scanning alerts for a repository
     ///
     /// Lists code scanning alerts.
@@ -34,7 +34,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)`.
-    func code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(_ input: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output
+    func codeScanningListAlertsForRepo(_ input: Operations.CodeScanningListAlertsForRepo.Input) async throws -> Operations.CodeScanningListAlertsForRepo.Output
     /// Get a code scanning alert
     ///
     /// Gets a single code scanning alert.
@@ -43,7 +43,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)`.
-    func code_hyphen_scanning_sol_get_hyphen_alert(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_alert.Output
+    func codeScanningGetAlert(_ input: Operations.CodeScanningGetAlert.Input) async throws -> Operations.CodeScanningGetAlert.Output
     /// Update a code scanning alert
     ///
     /// Updates the status of a single code scanning alert.
@@ -51,7 +51,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)`.
-    func code_hyphen_scanning_sol_update_hyphen_alert(_ input: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input) async throws -> Operations.code_hyphen_scanning_sol_update_hyphen_alert.Output
+    func codeScanningUpdateAlert(_ input: Operations.CodeScanningUpdateAlert.Input) async throws -> Operations.CodeScanningUpdateAlert.Output
     /// Get the status of an autofix for a code scanning alert
     ///
     /// Gets the status and description of an autofix for a code scanning alert.
@@ -60,7 +60,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/get(code-scanning/get-autofix)`.
-    func code_hyphen_scanning_sol_get_hyphen_autofix(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Output
+    func codeScanningGetAutofix(_ input: Operations.CodeScanningGetAutofix.Input) async throws -> Operations.CodeScanningGetAutofix.Output
     /// Create an autofix for a code scanning alert
     ///
     /// Creates an autofix for a code scanning alert.
@@ -73,7 +73,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)`.
-    func code_hyphen_scanning_sol_create_hyphen_autofix(_ input: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Input) async throws -> Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output
+    func codeScanningCreateAutofix(_ input: Operations.CodeScanningCreateAutofix.Input) async throws -> Operations.CodeScanningCreateAutofix.Output
     /// Commit an autofix for a code scanning alert
     ///
     /// Commits an autofix for a code scanning alert.
@@ -84,7 +84,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)`.
-    func code_hyphen_scanning_sol_commit_hyphen_autofix(_ input: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input) async throws -> Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output
+    func codeScanningCommitAutofix(_ input: Operations.CodeScanningCommitAutofix.Input) async throws -> Operations.CodeScanningCommitAutofix.Output
     /// List instances of a code scanning alert
     ///
     /// Lists all instances of the specified code scanning alert.
@@ -93,7 +93,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)`.
-    func code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances(_ input: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Output
+    func codeScanningListAlertInstances(_ input: Operations.CodeScanningListAlertInstances.Input) async throws -> Operations.CodeScanningListAlertInstances.Output
     /// List code scanning analyses for a repository
     ///
     /// Lists the details of all code scanning analyses for a repository,
@@ -114,7 +114,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)`.
-    func code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses(_ input: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Output
+    func codeScanningListRecentAnalyses(_ input: Operations.CodeScanningListRecentAnalyses.Input) async throws -> Operations.CodeScanningListRecentAnalyses.Output
     /// Get a code scanning analysis for a repository
     ///
     /// Gets a specified code scanning analysis for a repository.
@@ -137,7 +137,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)`.
-    func code_hyphen_scanning_sol_get_hyphen_analysis(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Output
+    func codeScanningGetAnalysis(_ input: Operations.CodeScanningGetAnalysis.Input) async throws -> Operations.CodeScanningGetAnalysis.Output
     /// Delete a code scanning analysis from a repository
     ///
     /// Deletes a specified code scanning analysis from a repository.
@@ -207,7 +207,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)`.
-    func code_hyphen_scanning_sol_delete_hyphen_analysis(_ input: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input) async throws -> Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Output
+    func codeScanningDeleteAnalysis(_ input: Operations.CodeScanningDeleteAnalysis.Input) async throws -> Operations.CodeScanningDeleteAnalysis.Output
     /// List CodeQL databases for a repository
     ///
     /// Lists the CodeQL databases that are available in a repository.
@@ -216,7 +216,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
-    func code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases(_ input: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Input) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output
+    func codeScanningListCodeqlDatabases(_ input: Operations.CodeScanningListCodeqlDatabases.Input) async throws -> Operations.CodeScanningListCodeqlDatabases.Output
     /// Get a CodeQL database for a repository
     ///
     /// Gets a CodeQL database for a language in a repository.
@@ -231,7 +231,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
-    func code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output
+    func codeScanningGetCodeqlDatabase(_ input: Operations.CodeScanningGetCodeqlDatabase.Input) async throws -> Operations.CodeScanningGetCodeqlDatabase.Output
     /// Delete a CodeQL database
     ///
     /// Deletes a CodeQL database for a language in a repository.
@@ -240,7 +240,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)`.
-    func code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database(_ input: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input) async throws -> Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output
+    func codeScanningDeleteCodeqlDatabase(_ input: Operations.CodeScanningDeleteCodeqlDatabase.Input) async throws -> Operations.CodeScanningDeleteCodeqlDatabase.Output
     /// Create a CodeQL variant analysis
     ///
     /// Creates a new CodeQL variant analysis, which will run a CodeQL query against one or more repositories.
@@ -254,7 +254,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)`.
-    func code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis(_ input: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input) async throws -> Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output
+    func codeScanningCreateVariantAnalysis(_ input: Operations.CodeScanningCreateVariantAnalysis.Input) async throws -> Operations.CodeScanningCreateVariantAnalysis.Output
     /// Get the summary of a CodeQL variant analysis
     ///
     /// Gets the summary of a CodeQL variant analysis.
@@ -263,7 +263,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)`.
-    func code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output
+    func codeScanningGetVariantAnalysis(_ input: Operations.CodeScanningGetVariantAnalysis.Input) async throws -> Operations.CodeScanningGetVariantAnalysis.Output
     /// Get the analysis status of a repository in a CodeQL variant analysis
     ///
     /// Gets the analysis status of a repository in a CodeQL variant analysis.
@@ -272,7 +272,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)`.
-    func code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output
+    func codeScanningGetVariantAnalysisRepoTask(_ input: Operations.CodeScanningGetVariantAnalysisRepoTask.Input) async throws -> Operations.CodeScanningGetVariantAnalysisRepoTask.Output
     /// Get a code scanning default setup configuration
     ///
     /// Gets a code scanning default setup configuration.
@@ -281,7 +281,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)`.
-    func code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Output
+    func codeScanningGetDefaultSetup(_ input: Operations.CodeScanningGetDefaultSetup.Input) async throws -> Operations.CodeScanningGetDefaultSetup.Output
     /// Update a code scanning default setup configuration
     ///
     /// Updates a code scanning default setup configuration.
@@ -290,7 +290,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)`.
-    func code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup(_ input: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input) async throws -> Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output
+    func codeScanningUpdateDefaultSetup(_ input: Operations.CodeScanningUpdateDefaultSetup.Input) async throws -> Operations.CodeScanningUpdateDefaultSetup.Output
     /// Upload an analysis as SARIF data
     ///
     /// Uploads SARIF data containing the results of a code scanning analysis to make the results available in a repository. For troubleshooting information, see "[Troubleshooting SARIF uploads](https://docs.github.com/code-security/code-scanning/troubleshooting-sarif)."
@@ -330,7 +330,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
-    func code_hyphen_scanning_sol_upload_hyphen_sarif(_ input: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input) async throws -> Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output
+    func codeScanningUploadSarif(_ input: Operations.CodeScanningUploadSarif.Input) async throws -> Operations.CodeScanningUploadSarif.Output
     /// Get information about a SARIF upload
     ///
     /// Gets information about a SARIF upload, including the status and the URL of the analysis that was uploaded so that you can retrieve details of the analysis. For more information, see "[Get a code scanning analysis for a repository](/rest/code-scanning/code-scanning#get-a-code-scanning-analysis-for-a-repository)."
@@ -338,7 +338,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)`.
-    func code_hyphen_scanning_sol_get_hyphen_sarif(_ input: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Input) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output
+    func codeScanningGetSarif(_ input: Operations.CodeScanningGetSarif.Input) async throws -> Operations.CodeScanningGetSarif.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -353,12 +353,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)`.
-    public func code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org(
-        path: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output {
-        try await code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org(Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input(
+    public func codeScanningListAlertsForOrg(
+        path: Operations.CodeScanningListAlertsForOrg.Input.Path,
+        query: Operations.CodeScanningListAlertsForOrg.Input.Query = .init(),
+        headers: Operations.CodeScanningListAlertsForOrg.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningListAlertsForOrg.Output {
+        try await codeScanningListAlertsForOrg(Operations.CodeScanningListAlertsForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -376,12 +376,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)`.
-    public func code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(
-        path: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path,
-        query: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query = .init(),
-        headers: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output {
-        try await code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input(
+    public func codeScanningListAlertsForRepo(
+        path: Operations.CodeScanningListAlertsForRepo.Input.Path,
+        query: Operations.CodeScanningListAlertsForRepo.Input.Query = .init(),
+        headers: Operations.CodeScanningListAlertsForRepo.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningListAlertsForRepo.Output {
+        try await codeScanningListAlertsForRepo(Operations.CodeScanningListAlertsForRepo.Input(
             path: path,
             query: query,
             headers: headers
@@ -395,11 +395,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)`.
-    public func code_hyphen_scanning_sol_get_hyphen_alert(
-        path: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_alert.Output {
-        try await code_hyphen_scanning_sol_get_hyphen_alert(Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input(
+    public func codeScanningGetAlert(
+        path: Operations.CodeScanningGetAlert.Input.Path,
+        headers: Operations.CodeScanningGetAlert.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningGetAlert.Output {
+        try await codeScanningGetAlert(Operations.CodeScanningGetAlert.Input(
             path: path,
             headers: headers
         ))
@@ -411,12 +411,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)`.
-    public func code_hyphen_scanning_sol_update_hyphen_alert(
-        path: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Headers = .init(),
-        body: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Body
-    ) async throws -> Operations.code_hyphen_scanning_sol_update_hyphen_alert.Output {
-        try await code_hyphen_scanning_sol_update_hyphen_alert(Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input(
+    public func codeScanningUpdateAlert(
+        path: Operations.CodeScanningUpdateAlert.Input.Path,
+        headers: Operations.CodeScanningUpdateAlert.Input.Headers = .init(),
+        body: Operations.CodeScanningUpdateAlert.Input.Body
+    ) async throws -> Operations.CodeScanningUpdateAlert.Output {
+        try await codeScanningUpdateAlert(Operations.CodeScanningUpdateAlert.Input(
             path: path,
             headers: headers,
             body: body
@@ -430,11 +430,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/get(code-scanning/get-autofix)`.
-    public func code_hyphen_scanning_sol_get_hyphen_autofix(
-        path: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Output {
-        try await code_hyphen_scanning_sol_get_hyphen_autofix(Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Input(
+    public func codeScanningGetAutofix(
+        path: Operations.CodeScanningGetAutofix.Input.Path,
+        headers: Operations.CodeScanningGetAutofix.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningGetAutofix.Output {
+        try await codeScanningGetAutofix(Operations.CodeScanningGetAutofix.Input(
             path: path,
             headers: headers
         ))
@@ -451,11 +451,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)`.
-    public func code_hyphen_scanning_sol_create_hyphen_autofix(
-        path: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output {
-        try await code_hyphen_scanning_sol_create_hyphen_autofix(Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Input(
+    public func codeScanningCreateAutofix(
+        path: Operations.CodeScanningCreateAutofix.Input.Path,
+        headers: Operations.CodeScanningCreateAutofix.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningCreateAutofix.Output {
+        try await codeScanningCreateAutofix(Operations.CodeScanningCreateAutofix.Input(
             path: path,
             headers: headers
         ))
@@ -470,12 +470,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)`.
-    public func code_hyphen_scanning_sol_commit_hyphen_autofix(
-        path: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Headers = .init(),
-        body: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Body? = nil
-    ) async throws -> Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output {
-        try await code_hyphen_scanning_sol_commit_hyphen_autofix(Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input(
+    public func codeScanningCommitAutofix(
+        path: Operations.CodeScanningCommitAutofix.Input.Path,
+        headers: Operations.CodeScanningCommitAutofix.Input.Headers = .init(),
+        body: Operations.CodeScanningCommitAutofix.Input.Body? = nil
+    ) async throws -> Operations.CodeScanningCommitAutofix.Output {
+        try await codeScanningCommitAutofix(Operations.CodeScanningCommitAutofix.Input(
             path: path,
             headers: headers,
             body: body
@@ -489,12 +489,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)`.
-    public func code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances(
-        path: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Path,
-        query: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Query = .init(),
-        headers: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Output {
-        try await code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances(Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input(
+    public func codeScanningListAlertInstances(
+        path: Operations.CodeScanningListAlertInstances.Input.Path,
+        query: Operations.CodeScanningListAlertInstances.Input.Query = .init(),
+        headers: Operations.CodeScanningListAlertInstances.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningListAlertInstances.Output {
+        try await codeScanningListAlertInstances(Operations.CodeScanningListAlertInstances.Input(
             path: path,
             query: query,
             headers: headers
@@ -520,12 +520,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)`.
-    public func code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses(
-        path: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Path,
-        query: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Query = .init(),
-        headers: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Output {
-        try await code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses(Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input(
+    public func codeScanningListRecentAnalyses(
+        path: Operations.CodeScanningListRecentAnalyses.Input.Path,
+        query: Operations.CodeScanningListRecentAnalyses.Input.Query = .init(),
+        headers: Operations.CodeScanningListRecentAnalyses.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningListRecentAnalyses.Output {
+        try await codeScanningListRecentAnalyses(Operations.CodeScanningListRecentAnalyses.Input(
             path: path,
             query: query,
             headers: headers
@@ -553,11 +553,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)`.
-    public func code_hyphen_scanning_sol_get_hyphen_analysis(
-        path: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Output {
-        try await code_hyphen_scanning_sol_get_hyphen_analysis(Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input(
+    public func codeScanningGetAnalysis(
+        path: Operations.CodeScanningGetAnalysis.Input.Path,
+        headers: Operations.CodeScanningGetAnalysis.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningGetAnalysis.Output {
+        try await codeScanningGetAnalysis(Operations.CodeScanningGetAnalysis.Input(
             path: path,
             headers: headers
         ))
@@ -631,12 +631,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)`.
-    public func code_hyphen_scanning_sol_delete_hyphen_analysis(
-        path: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Path,
-        query: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Query = .init(),
-        headers: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Output {
-        try await code_hyphen_scanning_sol_delete_hyphen_analysis(Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input(
+    public func codeScanningDeleteAnalysis(
+        path: Operations.CodeScanningDeleteAnalysis.Input.Path,
+        query: Operations.CodeScanningDeleteAnalysis.Input.Query = .init(),
+        headers: Operations.CodeScanningDeleteAnalysis.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningDeleteAnalysis.Output {
+        try await codeScanningDeleteAnalysis(Operations.CodeScanningDeleteAnalysis.Input(
             path: path,
             query: query,
             headers: headers
@@ -650,11 +650,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
-    public func code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases(
-        path: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output {
-        try await code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases(Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Input(
+    public func codeScanningListCodeqlDatabases(
+        path: Operations.CodeScanningListCodeqlDatabases.Input.Path,
+        headers: Operations.CodeScanningListCodeqlDatabases.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningListCodeqlDatabases.Output {
+        try await codeScanningListCodeqlDatabases(Operations.CodeScanningListCodeqlDatabases.Input(
             path: path,
             headers: headers
         ))
@@ -673,11 +673,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
-    public func code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database(
-        path: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output {
-        try await code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database(Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input(
+    public func codeScanningGetCodeqlDatabase(
+        path: Operations.CodeScanningGetCodeqlDatabase.Input.Path,
+        headers: Operations.CodeScanningGetCodeqlDatabase.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningGetCodeqlDatabase.Output {
+        try await codeScanningGetCodeqlDatabase(Operations.CodeScanningGetCodeqlDatabase.Input(
             path: path,
             headers: headers
         ))
@@ -690,11 +690,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)`.
-    public func code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database(
-        path: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output {
-        try await code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database(Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input(
+    public func codeScanningDeleteCodeqlDatabase(
+        path: Operations.CodeScanningDeleteCodeqlDatabase.Input.Path,
+        headers: Operations.CodeScanningDeleteCodeqlDatabase.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningDeleteCodeqlDatabase.Output {
+        try await codeScanningDeleteCodeqlDatabase(Operations.CodeScanningDeleteCodeqlDatabase.Input(
             path: path,
             headers: headers
         ))
@@ -712,12 +712,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)`.
-    public func code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis(
-        path: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Headers = .init(),
-        body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body
-    ) async throws -> Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output {
-        try await code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input(
+    public func codeScanningCreateVariantAnalysis(
+        path: Operations.CodeScanningCreateVariantAnalysis.Input.Path,
+        headers: Operations.CodeScanningCreateVariantAnalysis.Input.Headers = .init(),
+        body: Operations.CodeScanningCreateVariantAnalysis.Input.Body
+    ) async throws -> Operations.CodeScanningCreateVariantAnalysis.Output {
+        try await codeScanningCreateVariantAnalysis(Operations.CodeScanningCreateVariantAnalysis.Input(
             path: path,
             headers: headers,
             body: body
@@ -731,11 +731,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)`.
-    public func code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis(
-        path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output {
-        try await code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis(Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input(
+    public func codeScanningGetVariantAnalysis(
+        path: Operations.CodeScanningGetVariantAnalysis.Input.Path,
+        headers: Operations.CodeScanningGetVariantAnalysis.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningGetVariantAnalysis.Output {
+        try await codeScanningGetVariantAnalysis(Operations.CodeScanningGetVariantAnalysis.Input(
             path: path,
             headers: headers
         ))
@@ -748,11 +748,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)`.
-    public func code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task(
-        path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output {
-        try await code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task(Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input(
+    public func codeScanningGetVariantAnalysisRepoTask(
+        path: Operations.CodeScanningGetVariantAnalysisRepoTask.Input.Path,
+        headers: Operations.CodeScanningGetVariantAnalysisRepoTask.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningGetVariantAnalysisRepoTask.Output {
+        try await codeScanningGetVariantAnalysisRepoTask(Operations.CodeScanningGetVariantAnalysisRepoTask.Input(
             path: path,
             headers: headers
         ))
@@ -765,11 +765,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)`.
-    public func code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup(
-        path: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Output {
-        try await code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup(Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Input(
+    public func codeScanningGetDefaultSetup(
+        path: Operations.CodeScanningGetDefaultSetup.Input.Path,
+        headers: Operations.CodeScanningGetDefaultSetup.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningGetDefaultSetup.Output {
+        try await codeScanningGetDefaultSetup(Operations.CodeScanningGetDefaultSetup.Input(
             path: path,
             headers: headers
         ))
@@ -782,12 +782,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)`.
-    public func code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup(
-        path: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Headers = .init(),
-        body: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Body
-    ) async throws -> Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output {
-        try await code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup(Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input(
+    public func codeScanningUpdateDefaultSetup(
+        path: Operations.CodeScanningUpdateDefaultSetup.Input.Path,
+        headers: Operations.CodeScanningUpdateDefaultSetup.Input.Headers = .init(),
+        body: Operations.CodeScanningUpdateDefaultSetup.Input.Body
+    ) async throws -> Operations.CodeScanningUpdateDefaultSetup.Output {
+        try await codeScanningUpdateDefaultSetup(Operations.CodeScanningUpdateDefaultSetup.Input(
             path: path,
             headers: headers,
             body: body
@@ -832,12 +832,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
-    public func code_hyphen_scanning_sol_upload_hyphen_sarif(
-        path: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Headers = .init(),
-        body: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Body
-    ) async throws -> Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output {
-        try await code_hyphen_scanning_sol_upload_hyphen_sarif(Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input(
+    public func codeScanningUploadSarif(
+        path: Operations.CodeScanningUploadSarif.Input.Path,
+        headers: Operations.CodeScanningUploadSarif.Input.Headers = .init(),
+        body: Operations.CodeScanningUploadSarif.Input.Body
+    ) async throws -> Operations.CodeScanningUploadSarif.Output {
+        try await codeScanningUploadSarif(Operations.CodeScanningUploadSarif.Input(
             path: path,
             headers: headers,
             body: body
@@ -850,11 +850,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)`.
-    public func code_hyphen_scanning_sol_get_hyphen_sarif(
-        path: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Input.Path,
-        headers: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Input.Headers = .init()
-    ) async throws -> Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output {
-        try await code_hyphen_scanning_sol_get_hyphen_sarif(Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Input(
+    public func codeScanningGetSarif(
+        path: Operations.CodeScanningGetSarif.Input.Path,
+        headers: Operations.CodeScanningGetSarif.Input.Headers = .init()
+    ) async throws -> Operations.CodeScanningGetSarif.Output {
+        try await codeScanningGetSarif(Operations.CodeScanningGetSarif.Input(
             path: path,
             headers: headers
         ))
@@ -863,6 +863,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -878,7 +887,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -888,171 +897,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -1060,11 +1069,11 @@ public enum Components {
         /// Scim Error
         ///
         /// - Remark: Generated from `#/components/schemas/scim-error`.
-        public struct scim_hyphen_error: Codable, Hashable, Sendable {
+        public struct ScimError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/scim-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
             public var detail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/status`.
@@ -1073,25 +1082,25 @@ public enum Components {
             public var scimType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
             public var schemas: [Swift.String]?
-            /// Creates a new `scim_hyphen_error`.
+            /// Creates a new `ScimError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - detail:
             ///   - status:
             ///   - scimType:
             ///   - schemas:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 detail: Swift.String? = nil,
                 status: Swift.Int? = nil,
                 scimType: Swift.String? = nil,
                 schemas: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.detail = detail
                 self.status = status
                 self.scimType = scimType
@@ -1099,7 +1108,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case detail
                 case status
                 case scimType
@@ -1109,7 +1118,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -1119,142 +1128,142 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// A GitHub repository.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-repository`.
-        public struct simple_hyphen_repository: Codable, Hashable, Sendable {
+        public struct SimpleRepository: Codable, Hashable, Sendable {
             /// A unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/id`.
@@ -1262,7 +1271,7 @@ public enum Components {
             /// The GraphQL identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/name`.
@@ -1270,9 +1279,9 @@ public enum Components {
             /// The full, globally unique, name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/private`.
@@ -1280,7 +1289,7 @@ public enum Components {
             /// The URL to view the repository on GitHub.com.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The repository description.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/description`.
@@ -1296,373 +1305,373 @@ public enum Components {
             /// A template for the API URL to download the repository as an archive.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// A template for the API URL to list the available assignees for issues in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// A template for the API URL to create or retrieve a raw Git blob in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// A template for the API URL to get information about branches in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// A template for the API URL to get information about collaborators of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// A template for the API URL to get information about comments on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// A template for the API URL to get information about commits on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// A template for the API URL to compare two commits or refs.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// A template for the API URL to get the contents of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// A template for the API URL to list the contributors to the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// The API URL to list the deployments of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// The API URL to list the downloads on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// The API URL to list the events of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// The API URL to list the forks of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// A template for the API URL to get information about Git commits of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// A template for the API URL to get information about Git refs of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// A template for the API URL to get information about Git tags of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// A template for the API URL to get information about issue comments on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// A template for the API URL to get information about issue events on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// A template for the API URL to get information about issues on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// A template for the API URL to get information about deploy keys on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// A template for the API URL to get information about labels of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// The API URL to get information about the languages of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// The API URL to merge branches in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// A template for the API URL to get information about milestones of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// A template for the API URL to get information about notifications on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// A template for the API URL to get information about pull requests on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// A template for the API URL to get information about releases on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// The API URL to list the stargazers on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// A template for the API URL to get information about statuses of a commit.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// The API URL to list the subscribers on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// The API URL to subscribe to notifications for this repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// The API URL to get information about tags on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// The API URL to list the teams on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// A template for the API URL to create or retrieve a raw Git tree of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// The API URL to list the hooks on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/hooks_url`.
-            public var hooks_url: Swift.String
-            /// Creates a new `simple_hyphen_repository`.
+            public var hooksUrl: Swift.String
+            /// Creates a new `SimpleRepository`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier of the repository.
-            ///   - node_id: The GraphQL identifier of the repository.
+            ///   - nodeId: The GraphQL identifier of the repository.
             ///   - name: The name of the repository.
-            ///   - full_name: The full, globally unique, name of the repository.
+            ///   - fullName: The full, globally unique, name of the repository.
             ///   - owner:
             ///   - _private: Whether the repository is private.
-            ///   - html_url: The URL to view the repository on GitHub.com.
+            ///   - htmlUrl: The URL to view the repository on GitHub.com.
             ///   - description: The repository description.
             ///   - fork: Whether the repository is a fork.
             ///   - url: The URL to get more information about the repository from the GitHub API.
-            ///   - archive_url: A template for the API URL to download the repository as an archive.
-            ///   - assignees_url: A template for the API URL to list the available assignees for issues in the repository.
-            ///   - blobs_url: A template for the API URL to create or retrieve a raw Git blob in the repository.
-            ///   - branches_url: A template for the API URL to get information about branches in the repository.
-            ///   - collaborators_url: A template for the API URL to get information about collaborators of the repository.
-            ///   - comments_url: A template for the API URL to get information about comments on the repository.
-            ///   - commits_url: A template for the API URL to get information about commits on the repository.
-            ///   - compare_url: A template for the API URL to compare two commits or refs.
-            ///   - contents_url: A template for the API URL to get the contents of the repository.
-            ///   - contributors_url: A template for the API URL to list the contributors to the repository.
-            ///   - deployments_url: The API URL to list the deployments of the repository.
-            ///   - downloads_url: The API URL to list the downloads on the repository.
-            ///   - events_url: The API URL to list the events of the repository.
-            ///   - forks_url: The API URL to list the forks of the repository.
-            ///   - git_commits_url: A template for the API URL to get information about Git commits of the repository.
-            ///   - git_refs_url: A template for the API URL to get information about Git refs of the repository.
-            ///   - git_tags_url: A template for the API URL to get information about Git tags of the repository.
-            ///   - issue_comment_url: A template for the API URL to get information about issue comments on the repository.
-            ///   - issue_events_url: A template for the API URL to get information about issue events on the repository.
-            ///   - issues_url: A template for the API URL to get information about issues on the repository.
-            ///   - keys_url: A template for the API URL to get information about deploy keys on the repository.
-            ///   - labels_url: A template for the API URL to get information about labels of the repository.
-            ///   - languages_url: The API URL to get information about the languages of the repository.
-            ///   - merges_url: The API URL to merge branches in the repository.
-            ///   - milestones_url: A template for the API URL to get information about milestones of the repository.
-            ///   - notifications_url: A template for the API URL to get information about notifications on the repository.
-            ///   - pulls_url: A template for the API URL to get information about pull requests on the repository.
-            ///   - releases_url: A template for the API URL to get information about releases on the repository.
-            ///   - stargazers_url: The API URL to list the stargazers on the repository.
-            ///   - statuses_url: A template for the API URL to get information about statuses of a commit.
-            ///   - subscribers_url: The API URL to list the subscribers on the repository.
-            ///   - subscription_url: The API URL to subscribe to notifications for this repository.
-            ///   - tags_url: The API URL to get information about tags on the repository.
-            ///   - teams_url: The API URL to list the teams on the repository.
-            ///   - trees_url: A template for the API URL to create or retrieve a raw Git tree of the repository.
-            ///   - hooks_url: The API URL to list the hooks on the repository.
+            ///   - archiveUrl: A template for the API URL to download the repository as an archive.
+            ///   - assigneesUrl: A template for the API URL to list the available assignees for issues in the repository.
+            ///   - blobsUrl: A template for the API URL to create or retrieve a raw Git blob in the repository.
+            ///   - branchesUrl: A template for the API URL to get information about branches in the repository.
+            ///   - collaboratorsUrl: A template for the API URL to get information about collaborators of the repository.
+            ///   - commentsUrl: A template for the API URL to get information about comments on the repository.
+            ///   - commitsUrl: A template for the API URL to get information about commits on the repository.
+            ///   - compareUrl: A template for the API URL to compare two commits or refs.
+            ///   - contentsUrl: A template for the API URL to get the contents of the repository.
+            ///   - contributorsUrl: A template for the API URL to list the contributors to the repository.
+            ///   - deploymentsUrl: The API URL to list the deployments of the repository.
+            ///   - downloadsUrl: The API URL to list the downloads on the repository.
+            ///   - eventsUrl: The API URL to list the events of the repository.
+            ///   - forksUrl: The API URL to list the forks of the repository.
+            ///   - gitCommitsUrl: A template for the API URL to get information about Git commits of the repository.
+            ///   - gitRefsUrl: A template for the API URL to get information about Git refs of the repository.
+            ///   - gitTagsUrl: A template for the API URL to get information about Git tags of the repository.
+            ///   - issueCommentUrl: A template for the API URL to get information about issue comments on the repository.
+            ///   - issueEventsUrl: A template for the API URL to get information about issue events on the repository.
+            ///   - issuesUrl: A template for the API URL to get information about issues on the repository.
+            ///   - keysUrl: A template for the API URL to get information about deploy keys on the repository.
+            ///   - labelsUrl: A template for the API URL to get information about labels of the repository.
+            ///   - languagesUrl: The API URL to get information about the languages of the repository.
+            ///   - mergesUrl: The API URL to merge branches in the repository.
+            ///   - milestonesUrl: A template for the API URL to get information about milestones of the repository.
+            ///   - notificationsUrl: A template for the API URL to get information about notifications on the repository.
+            ///   - pullsUrl: A template for the API URL to get information about pull requests on the repository.
+            ///   - releasesUrl: A template for the API URL to get information about releases on the repository.
+            ///   - stargazersUrl: The API URL to list the stargazers on the repository.
+            ///   - statusesUrl: A template for the API URL to get information about statuses of a commit.
+            ///   - subscribersUrl: The API URL to list the subscribers on the repository.
+            ///   - subscriptionUrl: The API URL to subscribe to notifications for this repository.
+            ///   - tagsUrl: The API URL to get information about tags on the repository.
+            ///   - teamsUrl: The API URL to list the teams on the repository.
+            ///   - treesUrl: A template for the API URL to create or retrieve a raw Git tree of the repository.
+            ///   - hooksUrl: The API URL to list the hooks on the repository.
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                hooks_url: Swift.String
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                hooksUrl: Swift.String
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.hooks_url = hooks_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.hooksUrl = hooksUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case hooks_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case hooksUrl = "hooks_url"
             }
         }
         /// The security alert number.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-number`.
-        public typealias alert_hyphen_number = Swift.Int
+        public typealias AlertNumber = Swift.Int
         /// The REST API URL of the alert resource.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-url`.
-        public typealias alert_hyphen_url = Swift.String
+        public typealias AlertUrl = Swift.String
         /// The GitHub URL of the alert resource.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-html-url`.
-        public typealias alert_hyphen_html_hyphen_url = Swift.String
+        public typealias AlertHtmlUrl = Swift.String
         /// The time that the alert was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-created-at`.
-        public typealias alert_hyphen_created_hyphen_at = Foundation.Date
+        public typealias AlertCreatedAt = Foundation.Date
         /// The time that the alert was last updated in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-updated-at`.
-        public typealias alert_hyphen_updated_hyphen_at = Foundation.Date
+        public typealias AlertUpdatedAt = Foundation.Date
         /// The time that the alert was dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-dismissed-at`.
-        public typealias alert_hyphen_dismissed_hyphen_at = Foundation.Date
+        public typealias AlertDismissedAt = Foundation.Date
         /// The time that the alert was no longer detected and was considered fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-fixed-at`.
-        public typealias alert_hyphen_fixed_hyphen_at = Foundation.Date
+        public typealias AlertFixedAt = Foundation.Date
         /// An object without any properties.
         ///
         /// - Remark: Generated from `#/components/schemas/empty-object`.
-        public struct empty_hyphen_object: Codable, Hashable, Sendable {
-            /// Creates a new `empty_hyphen_object`.
+        public struct EmptyObject: Codable, Hashable, Sendable {
+            /// Creates a new `EmptyObject`.
             public init() {}
             public init(from decoder: any Decoder) throws {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [])
@@ -1671,15 +1680,15 @@ public enum Components {
         /// The name of the tool used to generate the code scanning analysis.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-tool-name`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_name = Swift.String
+        public typealias CodeScanningAnalysisToolName = Swift.String
         /// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-tool-guid`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_guid = Swift.String
+        public typealias CodeScanningAnalysisToolGuid = Swift.String
         /// State of a code scanning alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-state-query`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query: String, Codable, Hashable, Sendable {
+        @frozen public enum CodeScanningAlertStateQuery: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case closed = "closed"
             case dismissed = "dismissed"
@@ -1688,7 +1697,7 @@ public enum Components {
         /// Severity of a code scanning alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-severity`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_severity: String, Codable, Hashable, Sendable {
+        @frozen public enum CodeScanningAlertSeverity: String, Codable, Hashable, Sendable, CaseIterable {
             case critical = "critical"
             case high = "high"
             case medium = "medium"
@@ -1700,11 +1709,11 @@ public enum Components {
         /// The REST API URL for fetching the list of instances for an alert.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-instances-url`.
-        public typealias alert_hyphen_instances_hyphen_url = Swift.String
+        public typealias AlertInstancesUrl = Swift.String
         /// State of a code scanning alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-state`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum CodeScanningAlertState: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case dismissed = "dismissed"
             case fixed = "fixed"
@@ -1712,17 +1721,17 @@ public enum Components {
         /// **Required when the state is dismissed.** The reason for dismissing or closing the alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-dismissed-reason`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason: String, Codable, Hashable, Sendable {
-            case false_space_positive = "false positive"
-            case won_apos_t_space_fix = "won't fix"
-            case used_space_in_space_tests = "used in tests"
+        @frozen public enum CodeScanningAlertDismissedReason: String, Codable, Hashable, Sendable, CaseIterable {
+            case falsePositive = "false positive"
+            case won_apos_tFix = "won't fix"
+            case usedInTests = "used in tests"
         }
         /// The dismissal comment associated with the dismissal of the alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-dismissed-comment`.
-        public typealias code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment = Swift.String
+        public typealias CodeScanningAlertDismissedComment = Swift.String
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary`.
-        public struct code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary: Codable, Hashable, Sendable {
+        public struct CodeScanningAlertRuleSummary: Codable, Hashable, Sendable {
             /// A unique identifier for the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/id`.
@@ -1734,7 +1743,7 @@ public enum Components {
             /// The severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case note = "note"
                 case warning = "warning"
@@ -1743,11 +1752,11 @@ public enum Components {
             /// The severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/severity`.
-            public var severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary.severityPayload?
+            public var severity: Components.Schemas.CodeScanningAlertRuleSummary.SeverityPayload?
             /// The security severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/security_severity_level`.
-            @frozen public enum security_severity_levelPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SecuritySeverityLevelPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case low = "low"
                 case medium = "medium"
                 case high = "high"
@@ -1756,7 +1765,7 @@ public enum Components {
             /// The security severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/security_severity_level`.
-            public var security_severity_level: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary.security_severity_levelPayload?
+            public var securitySeverityLevel: Components.Schemas.CodeScanningAlertRuleSummary.SecuritySeverityLevelPayload?
             /// A short description of the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/description`.
@@ -1764,7 +1773,7 @@ public enum Components {
             /// A description of the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/full_description`.
-            public var full_description: Swift.String?
+            public var fullDescription: Swift.String?
             /// A set of tags applicable for the rule.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/tags`.
@@ -1776,74 +1785,74 @@ public enum Components {
             /// A link to the documentation for the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/help_uri`.
-            public var help_uri: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary`.
+            public var helpUri: Swift.String?
+            /// Creates a new `CodeScanningAlertRuleSummary`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier for the rule used to detect the alert.
             ///   - name: The name of the rule used to detect the alert.
             ///   - severity: The severity of the alert.
-            ///   - security_severity_level: The security severity of the alert.
+            ///   - securitySeverityLevel: The security severity of the alert.
             ///   - description: A short description of the rule used to detect the alert.
-            ///   - full_description: A description of the rule used to detect the alert.
+            ///   - fullDescription: A description of the rule used to detect the alert.
             ///   - tags: A set of tags applicable for the rule.
             ///   - help: Detailed documentation for the rule as GitHub Flavored Markdown.
-            ///   - help_uri: A link to the documentation for the rule used to detect the alert.
+            ///   - helpUri: A link to the documentation for the rule used to detect the alert.
             public init(
                 id: Swift.String? = nil,
                 name: Swift.String? = nil,
-                severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary.severityPayload? = nil,
-                security_severity_level: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary.security_severity_levelPayload? = nil,
+                severity: Components.Schemas.CodeScanningAlertRuleSummary.SeverityPayload? = nil,
+                securitySeverityLevel: Components.Schemas.CodeScanningAlertRuleSummary.SecuritySeverityLevelPayload? = nil,
                 description: Swift.String? = nil,
-                full_description: Swift.String? = nil,
+                fullDescription: Swift.String? = nil,
                 tags: [Swift.String]? = nil,
                 help: Swift.String? = nil,
-                help_uri: Swift.String? = nil
+                helpUri: Swift.String? = nil
             ) {
                 self.id = id
                 self.name = name
                 self.severity = severity
-                self.security_severity_level = security_severity_level
+                self.securitySeverityLevel = securitySeverityLevel
                 self.description = description
-                self.full_description = full_description
+                self.fullDescription = fullDescription
                 self.tags = tags
                 self.help = help
-                self.help_uri = help_uri
+                self.helpUri = helpUri
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
                 case severity
-                case security_severity_level
+                case securitySeverityLevel = "security_severity_level"
                 case description
-                case full_description
+                case fullDescription = "full_description"
                 case tags
                 case help
-                case help_uri
+                case helpUri = "help_uri"
             }
         }
         /// The version of the tool used to generate the code scanning analysis.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-tool-version`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_version = Swift.String
+        public typealias CodeScanningAnalysisToolVersion = Swift.String
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-tool`.
-        public struct code_hyphen_scanning_hyphen_analysis_hyphen_tool: Codable, Hashable, Sendable {
+        public struct CodeScanningAnalysisTool: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-tool/name`.
-            public var name: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_name?
+            public var name: Components.Schemas.CodeScanningAnalysisToolName?
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-tool/version`.
-            public var version: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_version?
+            public var version: Components.Schemas.CodeScanningAnalysisToolVersion?
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-tool/guid`.
-            public var guid: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_guid?
-            /// Creates a new `code_hyphen_scanning_hyphen_analysis_hyphen_tool`.
+            public var guid: Components.Schemas.CodeScanningAnalysisToolGuid?
+            /// Creates a new `CodeScanningAnalysisTool`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - version:
             ///   - guid:
             public init(
-                name: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_name? = nil,
-                version: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_version? = nil,
-                guid: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_guid? = nil
+                name: Components.Schemas.CodeScanningAnalysisToolName? = nil,
+                version: Components.Schemas.CodeScanningAnalysisToolVersion? = nil,
+                guid: Components.Schemas.CodeScanningAnalysisToolGuid? = nil
             ) {
                 self.name = name
                 self.version = version
@@ -1859,90 +1868,90 @@ public enum Components {
         /// `refs/heads/<branch name>` or simply `<branch name>`.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-ref`.
-        public typealias code_hyphen_scanning_hyphen_ref = Swift.String
+        public typealias CodeScanningRef = Swift.String
         /// Identifies the configuration under which the analysis was executed. For example, in GitHub Actions this includes the workflow filename and job name.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-analysis-key`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_analysis_hyphen_key = Swift.String
+        public typealias CodeScanningAnalysisAnalysisKey = Swift.String
         /// Identifies the variable values associated with the environment in which the analysis that generated this alert instance was performed, such as the language that was analyzed.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-environment`.
-        public typealias code_hyphen_scanning_hyphen_alert_hyphen_environment = Swift.String
+        public typealias CodeScanningAlertEnvironment = Swift.String
         /// Identifies the configuration under which the analysis was executed. Used to distinguish between multiple analyses for the same tool and commit, but performed on different languages or different parts of the code.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-category`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_category = Swift.String
+        public typealias CodeScanningAnalysisCategory = Swift.String
         /// Describe a region within a file for the alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-location`.
-        public struct code_hyphen_scanning_hyphen_alert_hyphen_location: Codable, Hashable, Sendable {
+        public struct CodeScanningAlertLocation: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-location/path`.
             public var path: Swift.String?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-location/start_line`.
-            public var start_line: Swift.Int?
+            public var startLine: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-location/end_line`.
-            public var end_line: Swift.Int?
+            public var endLine: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-location/start_column`.
-            public var start_column: Swift.Int?
+            public var startColumn: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-location/end_column`.
-            public var end_column: Swift.Int?
-            /// Creates a new `code_hyphen_scanning_hyphen_alert_hyphen_location`.
+            public var endColumn: Swift.Int?
+            /// Creates a new `CodeScanningAlertLocation`.
             ///
             /// - Parameters:
             ///   - path:
-            ///   - start_line:
-            ///   - end_line:
-            ///   - start_column:
-            ///   - end_column:
+            ///   - startLine:
+            ///   - endLine:
+            ///   - startColumn:
+            ///   - endColumn:
             public init(
                 path: Swift.String? = nil,
-                start_line: Swift.Int? = nil,
-                end_line: Swift.Int? = nil,
-                start_column: Swift.Int? = nil,
-                end_column: Swift.Int? = nil
+                startLine: Swift.Int? = nil,
+                endLine: Swift.Int? = nil,
+                startColumn: Swift.Int? = nil,
+                endColumn: Swift.Int? = nil
             ) {
                 self.path = path
-                self.start_line = start_line
-                self.end_line = end_line
-                self.start_column = start_column
-                self.end_column = end_column
+                self.startLine = startLine
+                self.endLine = endLine
+                self.startColumn = startColumn
+                self.endColumn = endColumn
             }
             public enum CodingKeys: String, CodingKey {
                 case path
-                case start_line
-                case end_line
-                case start_column
-                case end_column
+                case startLine = "start_line"
+                case endLine = "end_line"
+                case startColumn = "start_column"
+                case endColumn = "end_column"
             }
         }
         /// A classification of the file. For example to identify it as generated.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-classification`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_classification: String, Codable, Hashable, Sendable {
+        @frozen public enum CodeScanningAlertClassification: String, Codable, Hashable, Sendable, CaseIterable {
             case source = "source"
             case generated = "generated"
             case test = "test"
             case library = "library"
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance`.
-        public struct code_hyphen_scanning_hyphen_alert_hyphen_instance: Codable, Hashable, Sendable {
+        public struct CodeScanningAlertInstance: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/ref`.
-            public var ref: Components.Schemas.code_hyphen_scanning_hyphen_ref?
+            public var ref: Components.Schemas.CodeScanningRef?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/analysis_key`.
-            public var analysis_key: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_analysis_hyphen_key?
+            public var analysisKey: Components.Schemas.CodeScanningAnalysisAnalysisKey?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/environment`.
-            public var environment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_environment?
+            public var environment: Components.Schemas.CodeScanningAlertEnvironment?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/category`.
-            public var category: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_category?
+            public var category: Components.Schemas.CodeScanningAnalysisCategory?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state?
+            public var state: Components.Schemas.CodeScanningAlertState?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/commit_sha`.
-            public var commit_sha: Swift.String?
+            public var commitSha: Swift.String?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/message`.
-            public struct messagePayload: Codable, Hashable, Sendable {
+            public struct MessagePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/message/text`.
                 public var text: Swift.String?
-                /// Creates a new `messagePayload`.
+                /// Creates a new `MessagePayload`.
                 ///
                 /// - Parameters:
                 ///   - text:
@@ -1954,287 +1963,287 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/message`.
-            public var message: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance.messagePayload?
+            public var message: Components.Schemas.CodeScanningAlertInstance.MessagePayload?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/location`.
-            public var location: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_location?
+            public var location: Components.Schemas.CodeScanningAlertLocation?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/html_url`.
-            public var html_url: Swift.String?
+            public var htmlUrl: Swift.String?
             /// Classifications that have been applied to the file that triggered the alert.
             /// For example identifying it as documentation, or a generated file.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-instance/classifications`.
-            public var classifications: [Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_classification]?
-            /// Creates a new `code_hyphen_scanning_hyphen_alert_hyphen_instance`.
+            public var classifications: [Components.Schemas.CodeScanningAlertClassification]?
+            /// Creates a new `CodeScanningAlertInstance`.
             ///
             /// - Parameters:
             ///   - ref:
-            ///   - analysis_key:
+            ///   - analysisKey:
             ///   - environment:
             ///   - category:
             ///   - state:
-            ///   - commit_sha:
+            ///   - commitSha:
             ///   - message:
             ///   - location:
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - classifications: Classifications that have been applied to the file that triggered the alert.
             public init(
-                ref: Components.Schemas.code_hyphen_scanning_hyphen_ref? = nil,
-                analysis_key: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_analysis_hyphen_key? = nil,
-                environment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_environment? = nil,
-                category: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_category? = nil,
-                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                commit_sha: Swift.String? = nil,
-                message: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance.messagePayload? = nil,
-                location: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_location? = nil,
-                html_url: Swift.String? = nil,
-                classifications: [Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_classification]? = nil
+                ref: Components.Schemas.CodeScanningRef? = nil,
+                analysisKey: Components.Schemas.CodeScanningAnalysisAnalysisKey? = nil,
+                environment: Components.Schemas.CodeScanningAlertEnvironment? = nil,
+                category: Components.Schemas.CodeScanningAnalysisCategory? = nil,
+                state: Components.Schemas.CodeScanningAlertState? = nil,
+                commitSha: Swift.String? = nil,
+                message: Components.Schemas.CodeScanningAlertInstance.MessagePayload? = nil,
+                location: Components.Schemas.CodeScanningAlertLocation? = nil,
+                htmlUrl: Swift.String? = nil,
+                classifications: [Components.Schemas.CodeScanningAlertClassification]? = nil
             ) {
                 self.ref = ref
-                self.analysis_key = analysis_key
+                self.analysisKey = analysisKey
                 self.environment = environment
                 self.category = category
                 self.state = state
-                self.commit_sha = commit_sha
+                self.commitSha = commitSha
                 self.message = message
                 self.location = location
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.classifications = classifications
             }
             public enum CodingKeys: String, CodingKey {
                 case ref
-                case analysis_key
+                case analysisKey = "analysis_key"
                 case environment
                 case category
                 case state
-                case commit_sha
+                case commitSha = "commit_sha"
                 case message
                 case location
-                case html_url
+                case htmlUrl = "html_url"
                 case classifications
             }
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items`.
-        public struct code_hyphen_scanning_hyphen_organization_hyphen_alert_hyphen_items: Codable, Hashable, Sendable {
+        public struct CodeScanningOrganizationAlertItems: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/number`.
-            public var number: Components.Schemas.alert_hyphen_number
+            public var number: Components.Schemas.AlertNumber
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/created_at`.
-            public var created_at: Components.Schemas.alert_hyphen_created_hyphen_at
+            public var createdAt: Components.Schemas.AlertCreatedAt
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/updated_at`.
-            public var updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at?
+            public var updatedAt: Components.Schemas.AlertUpdatedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/url`.
-            public var url: Components.Schemas.alert_hyphen_url
+            public var url: Components.Schemas.AlertUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/html_url`.
-            public var html_url: Components.Schemas.alert_hyphen_html_hyphen_url
+            public var htmlUrl: Components.Schemas.AlertHtmlUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/instances_url`.
-            public var instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url
+            public var instancesUrl: Components.Schemas.AlertInstancesUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state?
+            public var state: Components.Schemas.CodeScanningAlertState?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/fixed_at`.
-            public var fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at?
+            public var fixedAt: Components.Schemas.AlertFixedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/dismissed_by`.
-            public var dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var dismissedBy: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/dismissed_at`.
-            public var dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at?
+            public var dismissedAt: Components.Schemas.AlertDismissedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/dismissed_reason`.
-            public var dismissed_reason: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason?
+            public var dismissedReason: Components.Schemas.CodeScanningAlertDismissedReason?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/dismissed_comment`.
-            public var dismissed_comment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment?
+            public var dismissedComment: Components.Schemas.CodeScanningAlertDismissedComment?
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/rule`.
-            public var rule: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary
+            public var rule: Components.Schemas.CodeScanningAlertRuleSummary
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/tool`.
-            public var tool: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool
+            public var tool: Components.Schemas.CodeScanningAnalysisTool
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/most_recent_instance`.
-            public var most_recent_instance: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance
+            public var mostRecentInstance: Components.Schemas.CodeScanningAlertInstance
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/repository`.
-            public var repository: Components.Schemas.simple_hyphen_repository
+            public var repository: Components.Schemas.SimpleRepository
             /// - Remark: Generated from `#/components/schemas/code-scanning-organization-alert-items/dismissal_approved_by`.
-            public var dismissal_approved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
-            /// Creates a new `code_hyphen_scanning_hyphen_organization_hyphen_alert_hyphen_items`.
+            public var dismissalApprovedBy: Components.Schemas.NullableSimpleUser?
+            /// Creates a new `CodeScanningOrganizationAlertItems`.
             ///
             /// - Parameters:
             ///   - number:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - url:
-            ///   - html_url:
-            ///   - instances_url:
+            ///   - htmlUrl:
+            ///   - instancesUrl:
             ///   - state:
-            ///   - fixed_at:
-            ///   - dismissed_by:
-            ///   - dismissed_at:
-            ///   - dismissed_reason:
-            ///   - dismissed_comment:
+            ///   - fixedAt:
+            ///   - dismissedBy:
+            ///   - dismissedAt:
+            ///   - dismissedReason:
+            ///   - dismissedComment:
             ///   - rule:
             ///   - tool:
-            ///   - most_recent_instance:
+            ///   - mostRecentInstance:
             ///   - repository:
-            ///   - dismissal_approved_by:
+            ///   - dismissalApprovedBy:
             public init(
-                number: Components.Schemas.alert_hyphen_number,
-                created_at: Components.Schemas.alert_hyphen_created_hyphen_at,
-                updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at? = nil,
-                url: Components.Schemas.alert_hyphen_url,
-                html_url: Components.Schemas.alert_hyphen_html_hyphen_url,
-                instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url,
-                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at? = nil,
-                dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at? = nil,
-                dismissed_reason: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason? = nil,
-                dismissed_comment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment? = nil,
-                rule: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary,
-                tool: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool,
-                most_recent_instance: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance,
-                repository: Components.Schemas.simple_hyphen_repository,
-                dismissal_approved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil
+                number: Components.Schemas.AlertNumber,
+                createdAt: Components.Schemas.AlertCreatedAt,
+                updatedAt: Components.Schemas.AlertUpdatedAt? = nil,
+                url: Components.Schemas.AlertUrl,
+                htmlUrl: Components.Schemas.AlertHtmlUrl,
+                instancesUrl: Components.Schemas.AlertInstancesUrl,
+                state: Components.Schemas.CodeScanningAlertState? = nil,
+                fixedAt: Components.Schemas.AlertFixedAt? = nil,
+                dismissedBy: Components.Schemas.NullableSimpleUser? = nil,
+                dismissedAt: Components.Schemas.AlertDismissedAt? = nil,
+                dismissedReason: Components.Schemas.CodeScanningAlertDismissedReason? = nil,
+                dismissedComment: Components.Schemas.CodeScanningAlertDismissedComment? = nil,
+                rule: Components.Schemas.CodeScanningAlertRuleSummary,
+                tool: Components.Schemas.CodeScanningAnalysisTool,
+                mostRecentInstance: Components.Schemas.CodeScanningAlertInstance,
+                repository: Components.Schemas.SimpleRepository,
+                dismissalApprovedBy: Components.Schemas.NullableSimpleUser? = nil
             ) {
                 self.number = number
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.url = url
-                self.html_url = html_url
-                self.instances_url = instances_url
+                self.htmlUrl = htmlUrl
+                self.instancesUrl = instancesUrl
                 self.state = state
-                self.fixed_at = fixed_at
-                self.dismissed_by = dismissed_by
-                self.dismissed_at = dismissed_at
-                self.dismissed_reason = dismissed_reason
-                self.dismissed_comment = dismissed_comment
+                self.fixedAt = fixedAt
+                self.dismissedBy = dismissedBy
+                self.dismissedAt = dismissedAt
+                self.dismissedReason = dismissedReason
+                self.dismissedComment = dismissedComment
                 self.rule = rule
                 self.tool = tool
-                self.most_recent_instance = most_recent_instance
+                self.mostRecentInstance = mostRecentInstance
                 self.repository = repository
-                self.dismissal_approved_by = dismissal_approved_by
+                self.dismissalApprovedBy = dismissalApprovedBy
             }
             public enum CodingKeys: String, CodingKey {
                 case number
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case url
-                case html_url
-                case instances_url
+                case htmlUrl = "html_url"
+                case instancesUrl = "instances_url"
                 case state
-                case fixed_at
-                case dismissed_by
-                case dismissed_at
-                case dismissed_reason
-                case dismissed_comment
+                case fixedAt = "fixed_at"
+                case dismissedBy = "dismissed_by"
+                case dismissedAt = "dismissed_at"
+                case dismissedReason = "dismissed_reason"
+                case dismissedComment = "dismissed_comment"
                 case rule
                 case tool
-                case most_recent_instance
+                case mostRecentInstance = "most_recent_instance"
                 case repository
-                case dismissal_approved_by
+                case dismissalApprovedBy = "dismissal_approved_by"
             }
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items`.
-        public struct code_hyphen_scanning_hyphen_alert_hyphen_items: Codable, Hashable, Sendable {
+        public struct CodeScanningAlertItems: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/number`.
-            public var number: Components.Schemas.alert_hyphen_number
+            public var number: Components.Schemas.AlertNumber
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/created_at`.
-            public var created_at: Components.Schemas.alert_hyphen_created_hyphen_at
+            public var createdAt: Components.Schemas.AlertCreatedAt
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/updated_at`.
-            public var updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at?
+            public var updatedAt: Components.Schemas.AlertUpdatedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/url`.
-            public var url: Components.Schemas.alert_hyphen_url
+            public var url: Components.Schemas.AlertUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/html_url`.
-            public var html_url: Components.Schemas.alert_hyphen_html_hyphen_url
+            public var htmlUrl: Components.Schemas.AlertHtmlUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/instances_url`.
-            public var instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url
+            public var instancesUrl: Components.Schemas.AlertInstancesUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state?
+            public var state: Components.Schemas.CodeScanningAlertState?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/fixed_at`.
-            public var fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at?
+            public var fixedAt: Components.Schemas.AlertFixedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/dismissed_by`.
-            public var dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var dismissedBy: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/dismissed_at`.
-            public var dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at?
+            public var dismissedAt: Components.Schemas.AlertDismissedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/dismissed_reason`.
-            public var dismissed_reason: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason?
+            public var dismissedReason: Components.Schemas.CodeScanningAlertDismissedReason?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/dismissed_comment`.
-            public var dismissed_comment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment?
+            public var dismissedComment: Components.Schemas.CodeScanningAlertDismissedComment?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/rule`.
-            public var rule: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary
+            public var rule: Components.Schemas.CodeScanningAlertRuleSummary
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/tool`.
-            public var tool: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool
+            public var tool: Components.Schemas.CodeScanningAnalysisTool
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/most_recent_instance`.
-            public var most_recent_instance: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance
+            public var mostRecentInstance: Components.Schemas.CodeScanningAlertInstance
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-items/dismissal_approved_by`.
-            public var dismissal_approved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
-            /// Creates a new `code_hyphen_scanning_hyphen_alert_hyphen_items`.
+            public var dismissalApprovedBy: Components.Schemas.NullableSimpleUser?
+            /// Creates a new `CodeScanningAlertItems`.
             ///
             /// - Parameters:
             ///   - number:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - url:
-            ///   - html_url:
-            ///   - instances_url:
+            ///   - htmlUrl:
+            ///   - instancesUrl:
             ///   - state:
-            ///   - fixed_at:
-            ///   - dismissed_by:
-            ///   - dismissed_at:
-            ///   - dismissed_reason:
-            ///   - dismissed_comment:
+            ///   - fixedAt:
+            ///   - dismissedBy:
+            ///   - dismissedAt:
+            ///   - dismissedReason:
+            ///   - dismissedComment:
             ///   - rule:
             ///   - tool:
-            ///   - most_recent_instance:
-            ///   - dismissal_approved_by:
+            ///   - mostRecentInstance:
+            ///   - dismissalApprovedBy:
             public init(
-                number: Components.Schemas.alert_hyphen_number,
-                created_at: Components.Schemas.alert_hyphen_created_hyphen_at,
-                updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at? = nil,
-                url: Components.Schemas.alert_hyphen_url,
-                html_url: Components.Schemas.alert_hyphen_html_hyphen_url,
-                instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url,
-                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at? = nil,
-                dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at? = nil,
-                dismissed_reason: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason? = nil,
-                dismissed_comment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment? = nil,
-                rule: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule_hyphen_summary,
-                tool: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool,
-                most_recent_instance: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance,
-                dismissal_approved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil
+                number: Components.Schemas.AlertNumber,
+                createdAt: Components.Schemas.AlertCreatedAt,
+                updatedAt: Components.Schemas.AlertUpdatedAt? = nil,
+                url: Components.Schemas.AlertUrl,
+                htmlUrl: Components.Schemas.AlertHtmlUrl,
+                instancesUrl: Components.Schemas.AlertInstancesUrl,
+                state: Components.Schemas.CodeScanningAlertState? = nil,
+                fixedAt: Components.Schemas.AlertFixedAt? = nil,
+                dismissedBy: Components.Schemas.NullableSimpleUser? = nil,
+                dismissedAt: Components.Schemas.AlertDismissedAt? = nil,
+                dismissedReason: Components.Schemas.CodeScanningAlertDismissedReason? = nil,
+                dismissedComment: Components.Schemas.CodeScanningAlertDismissedComment? = nil,
+                rule: Components.Schemas.CodeScanningAlertRuleSummary,
+                tool: Components.Schemas.CodeScanningAnalysisTool,
+                mostRecentInstance: Components.Schemas.CodeScanningAlertInstance,
+                dismissalApprovedBy: Components.Schemas.NullableSimpleUser? = nil
             ) {
                 self.number = number
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.url = url
-                self.html_url = html_url
-                self.instances_url = instances_url
+                self.htmlUrl = htmlUrl
+                self.instancesUrl = instancesUrl
                 self.state = state
-                self.fixed_at = fixed_at
-                self.dismissed_by = dismissed_by
-                self.dismissed_at = dismissed_at
-                self.dismissed_reason = dismissed_reason
-                self.dismissed_comment = dismissed_comment
+                self.fixedAt = fixedAt
+                self.dismissedBy = dismissedBy
+                self.dismissedAt = dismissedAt
+                self.dismissedReason = dismissedReason
+                self.dismissedComment = dismissedComment
                 self.rule = rule
                 self.tool = tool
-                self.most_recent_instance = most_recent_instance
-                self.dismissal_approved_by = dismissal_approved_by
+                self.mostRecentInstance = mostRecentInstance
+                self.dismissalApprovedBy = dismissalApprovedBy
             }
             public enum CodingKeys: String, CodingKey {
                 case number
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case url
-                case html_url
-                case instances_url
+                case htmlUrl = "html_url"
+                case instancesUrl = "instances_url"
                 case state
-                case fixed_at
-                case dismissed_by
-                case dismissed_at
-                case dismissed_reason
-                case dismissed_comment
+                case fixedAt = "fixed_at"
+                case dismissedBy = "dismissed_by"
+                case dismissedAt = "dismissed_at"
+                case dismissedReason = "dismissed_reason"
+                case dismissedComment = "dismissed_comment"
                 case rule
                 case tool
-                case most_recent_instance
-                case dismissal_approved_by
+                case mostRecentInstance = "most_recent_instance"
+                case dismissalApprovedBy = "dismissal_approved_by"
             }
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule`.
-        public struct code_hyphen_scanning_hyphen_alert_hyphen_rule: Codable, Hashable, Sendable {
+        public struct CodeScanningAlertRule: Codable, Hashable, Sendable {
             /// A unique identifier for the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/id`.
@@ -2246,7 +2255,7 @@ public enum Components {
             /// The severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case note = "note"
                 case warning = "warning"
@@ -2255,11 +2264,11 @@ public enum Components {
             /// The severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/severity`.
-            public var severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule.severityPayload?
+            public var severity: Components.Schemas.CodeScanningAlertRule.SeverityPayload?
             /// The security severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/security_severity_level`.
-            @frozen public enum security_severity_levelPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SecuritySeverityLevelPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case low = "low"
                 case medium = "medium"
                 case high = "high"
@@ -2268,7 +2277,7 @@ public enum Components {
             /// The security severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/security_severity_level`.
-            public var security_severity_level: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule.security_severity_levelPayload?
+            public var securitySeverityLevel: Components.Schemas.CodeScanningAlertRule.SecuritySeverityLevelPayload?
             /// A short description of the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/description`.
@@ -2276,7 +2285,7 @@ public enum Components {
             /// A description of the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/full_description`.
-            public var full_description: Swift.String?
+            public var fullDescription: Swift.String?
             /// A set of tags applicable for the rule.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/tags`.
@@ -2288,174 +2297,174 @@ public enum Components {
             /// A link to the documentation for the rule used to detect the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/help_uri`.
-            public var help_uri: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_alert_hyphen_rule`.
+            public var helpUri: Swift.String?
+            /// Creates a new `CodeScanningAlertRule`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier for the rule used to detect the alert.
             ///   - name: The name of the rule used to detect the alert.
             ///   - severity: The severity of the alert.
-            ///   - security_severity_level: The security severity of the alert.
+            ///   - securitySeverityLevel: The security severity of the alert.
             ///   - description: A short description of the rule used to detect the alert.
-            ///   - full_description: A description of the rule used to detect the alert.
+            ///   - fullDescription: A description of the rule used to detect the alert.
             ///   - tags: A set of tags applicable for the rule.
             ///   - help: Detailed documentation for the rule as GitHub Flavored Markdown.
-            ///   - help_uri: A link to the documentation for the rule used to detect the alert.
+            ///   - helpUri: A link to the documentation for the rule used to detect the alert.
             public init(
                 id: Swift.String? = nil,
                 name: Swift.String? = nil,
-                severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule.severityPayload? = nil,
-                security_severity_level: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule.security_severity_levelPayload? = nil,
+                severity: Components.Schemas.CodeScanningAlertRule.SeverityPayload? = nil,
+                securitySeverityLevel: Components.Schemas.CodeScanningAlertRule.SecuritySeverityLevelPayload? = nil,
                 description: Swift.String? = nil,
-                full_description: Swift.String? = nil,
+                fullDescription: Swift.String? = nil,
                 tags: [Swift.String]? = nil,
                 help: Swift.String? = nil,
-                help_uri: Swift.String? = nil
+                helpUri: Swift.String? = nil
             ) {
                 self.id = id
                 self.name = name
                 self.severity = severity
-                self.security_severity_level = security_severity_level
+                self.securitySeverityLevel = securitySeverityLevel
                 self.description = description
-                self.full_description = full_description
+                self.fullDescription = fullDescription
                 self.tags = tags
                 self.help = help
-                self.help_uri = help_uri
+                self.helpUri = helpUri
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
                 case severity
-                case security_severity_level
+                case securitySeverityLevel = "security_severity_level"
                 case description
-                case full_description
+                case fullDescription = "full_description"
                 case tags
                 case help
-                case help_uri
+                case helpUri = "help_uri"
             }
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert`.
-        public struct code_hyphen_scanning_hyphen_alert: Codable, Hashable, Sendable {
+        public struct CodeScanningAlert: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/number`.
-            public var number: Components.Schemas.alert_hyphen_number
+            public var number: Components.Schemas.AlertNumber
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/created_at`.
-            public var created_at: Components.Schemas.alert_hyphen_created_hyphen_at
+            public var createdAt: Components.Schemas.AlertCreatedAt
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/updated_at`.
-            public var updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at?
+            public var updatedAt: Components.Schemas.AlertUpdatedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/url`.
-            public var url: Components.Schemas.alert_hyphen_url
+            public var url: Components.Schemas.AlertUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/html_url`.
-            public var html_url: Components.Schemas.alert_hyphen_html_hyphen_url
+            public var htmlUrl: Components.Schemas.AlertHtmlUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/instances_url`.
-            public var instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url
+            public var instancesUrl: Components.Schemas.AlertInstancesUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state?
+            public var state: Components.Schemas.CodeScanningAlertState?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/fixed_at`.
-            public var fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at?
+            public var fixedAt: Components.Schemas.AlertFixedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/dismissed_by`.
-            public var dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var dismissedBy: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/dismissed_at`.
-            public var dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at?
+            public var dismissedAt: Components.Schemas.AlertDismissedAt?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/dismissed_reason`.
-            public var dismissed_reason: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason?
+            public var dismissedReason: Components.Schemas.CodeScanningAlertDismissedReason?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/dismissed_comment`.
-            public var dismissed_comment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment?
+            public var dismissedComment: Components.Schemas.CodeScanningAlertDismissedComment?
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/rule`.
-            public var rule: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule
+            public var rule: Components.Schemas.CodeScanningAlertRule
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/tool`.
-            public var tool: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool
+            public var tool: Components.Schemas.CodeScanningAnalysisTool
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/most_recent_instance`.
-            public var most_recent_instance: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance
+            public var mostRecentInstance: Components.Schemas.CodeScanningAlertInstance
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert/dismissal_approved_by`.
-            public var dismissal_approved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
-            /// Creates a new `code_hyphen_scanning_hyphen_alert`.
+            public var dismissalApprovedBy: Components.Schemas.NullableSimpleUser?
+            /// Creates a new `CodeScanningAlert`.
             ///
             /// - Parameters:
             ///   - number:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - url:
-            ///   - html_url:
-            ///   - instances_url:
+            ///   - htmlUrl:
+            ///   - instancesUrl:
             ///   - state:
-            ///   - fixed_at:
-            ///   - dismissed_by:
-            ///   - dismissed_at:
-            ///   - dismissed_reason:
-            ///   - dismissed_comment:
+            ///   - fixedAt:
+            ///   - dismissedBy:
+            ///   - dismissedAt:
+            ///   - dismissedReason:
+            ///   - dismissedComment:
             ///   - rule:
             ///   - tool:
-            ///   - most_recent_instance:
-            ///   - dismissal_approved_by:
+            ///   - mostRecentInstance:
+            ///   - dismissalApprovedBy:
             public init(
-                number: Components.Schemas.alert_hyphen_number,
-                created_at: Components.Schemas.alert_hyphen_created_hyphen_at,
-                updated_at: Components.Schemas.alert_hyphen_updated_hyphen_at? = nil,
-                url: Components.Schemas.alert_hyphen_url,
-                html_url: Components.Schemas.alert_hyphen_html_hyphen_url,
-                instances_url: Components.Schemas.alert_hyphen_instances_hyphen_url,
-                state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                fixed_at: Components.Schemas.alert_hyphen_fixed_hyphen_at? = nil,
-                dismissed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                dismissed_at: Components.Schemas.alert_hyphen_dismissed_hyphen_at? = nil,
-                dismissed_reason: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason? = nil,
-                dismissed_comment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment? = nil,
-                rule: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_rule,
-                tool: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool,
-                most_recent_instance: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance,
-                dismissal_approved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil
+                number: Components.Schemas.AlertNumber,
+                createdAt: Components.Schemas.AlertCreatedAt,
+                updatedAt: Components.Schemas.AlertUpdatedAt? = nil,
+                url: Components.Schemas.AlertUrl,
+                htmlUrl: Components.Schemas.AlertHtmlUrl,
+                instancesUrl: Components.Schemas.AlertInstancesUrl,
+                state: Components.Schemas.CodeScanningAlertState? = nil,
+                fixedAt: Components.Schemas.AlertFixedAt? = nil,
+                dismissedBy: Components.Schemas.NullableSimpleUser? = nil,
+                dismissedAt: Components.Schemas.AlertDismissedAt? = nil,
+                dismissedReason: Components.Schemas.CodeScanningAlertDismissedReason? = nil,
+                dismissedComment: Components.Schemas.CodeScanningAlertDismissedComment? = nil,
+                rule: Components.Schemas.CodeScanningAlertRule,
+                tool: Components.Schemas.CodeScanningAnalysisTool,
+                mostRecentInstance: Components.Schemas.CodeScanningAlertInstance,
+                dismissalApprovedBy: Components.Schemas.NullableSimpleUser? = nil
             ) {
                 self.number = number
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.url = url
-                self.html_url = html_url
-                self.instances_url = instances_url
+                self.htmlUrl = htmlUrl
+                self.instancesUrl = instancesUrl
                 self.state = state
-                self.fixed_at = fixed_at
-                self.dismissed_by = dismissed_by
-                self.dismissed_at = dismissed_at
-                self.dismissed_reason = dismissed_reason
-                self.dismissed_comment = dismissed_comment
+                self.fixedAt = fixedAt
+                self.dismissedBy = dismissedBy
+                self.dismissedAt = dismissedAt
+                self.dismissedReason = dismissedReason
+                self.dismissedComment = dismissedComment
                 self.rule = rule
                 self.tool = tool
-                self.most_recent_instance = most_recent_instance
-                self.dismissal_approved_by = dismissal_approved_by
+                self.mostRecentInstance = mostRecentInstance
+                self.dismissalApprovedBy = dismissalApprovedBy
             }
             public enum CodingKeys: String, CodingKey {
                 case number
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case url
-                case html_url
-                case instances_url
+                case htmlUrl = "html_url"
+                case instancesUrl = "instances_url"
                 case state
-                case fixed_at
-                case dismissed_by
-                case dismissed_at
-                case dismissed_reason
-                case dismissed_comment
+                case fixedAt = "fixed_at"
+                case dismissedBy = "dismissed_by"
+                case dismissedAt = "dismissed_at"
+                case dismissedReason = "dismissed_reason"
+                case dismissedComment = "dismissed_comment"
                 case rule
                 case tool
-                case most_recent_instance
-                case dismissal_approved_by
+                case mostRecentInstance = "most_recent_instance"
+                case dismissalApprovedBy = "dismissal_approved_by"
             }
         }
         /// Sets the state of the code scanning alert. You must provide `dismissed_reason` when you set the state to `dismissed`.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-set-state`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_set_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum CodeScanningAlertSetState: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case dismissed = "dismissed"
         }
         /// If `true`, attempt to create an alert dismissal request.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-create-request`.
-        public typealias code_hyphen_scanning_hyphen_alert_hyphen_create_hyphen_request = Swift.Bool
+        public typealias CodeScanningAlertCreateRequest = Swift.Bool
         /// The status of an autofix.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-status`.
-        @frozen public enum code_hyphen_scanning_hyphen_autofix_hyphen_status: String, Codable, Hashable, Sendable {
+        @frozen public enum CodeScanningAutofixStatus: String, Codable, Hashable, Sendable, CaseIterable {
             case pending = "pending"
             case error = "error"
             case success = "success"
@@ -2464,220 +2473,220 @@ public enum Components {
         /// The description of an autofix.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-description`.
-        public typealias code_hyphen_scanning_hyphen_autofix_hyphen_description = Swift.String
+        public typealias CodeScanningAutofixDescription = Swift.String
         /// The start time of an autofix in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-started-at`.
-        public typealias code_hyphen_scanning_hyphen_autofix_hyphen_started_hyphen_at = Foundation.Date
+        public typealias CodeScanningAutofixStartedAt = Foundation.Date
         /// - Remark: Generated from `#/components/schemas/code-scanning-autofix`.
-        public struct code_hyphen_scanning_hyphen_autofix: Codable, Hashable, Sendable {
+        public struct CodeScanningAutofix: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-autofix/status`.
-            public var status: Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_status
+            public var status: Components.Schemas.CodeScanningAutofixStatus
             /// - Remark: Generated from `#/components/schemas/code-scanning-autofix/description`.
-            public var description: Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_description?
+            public var description: Components.Schemas.CodeScanningAutofixDescription?
             /// - Remark: Generated from `#/components/schemas/code-scanning-autofix/started_at`.
-            public var started_at: Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_started_hyphen_at
-            /// Creates a new `code_hyphen_scanning_hyphen_autofix`.
+            public var startedAt: Components.Schemas.CodeScanningAutofixStartedAt
+            /// Creates a new `CodeScanningAutofix`.
             ///
             /// - Parameters:
             ///   - status:
             ///   - description:
-            ///   - started_at:
+            ///   - startedAt:
             public init(
-                status: Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_status,
-                description: Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_description? = nil,
-                started_at: Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_started_hyphen_at
+                status: Components.Schemas.CodeScanningAutofixStatus,
+                description: Components.Schemas.CodeScanningAutofixDescription? = nil,
+                startedAt: Components.Schemas.CodeScanningAutofixStartedAt
             ) {
                 self.status = status
                 self.description = description
-                self.started_at = started_at
+                self.startedAt = startedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case status
                 case description
-                case started_at
+                case startedAt = "started_at"
             }
         }
         /// Commit an autofix for a code scanning alert
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-commits`.
-        public struct code_hyphen_scanning_hyphen_autofix_hyphen_commits: Codable, Hashable, Sendable {
+        public struct CodeScanningAutofixCommits: Codable, Hashable, Sendable {
             /// The Git reference of target branch for the commit. Branch needs to already exist.  For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-commits/target_ref`.
-            public var target_ref: Swift.String?
+            public var targetRef: Swift.String?
             /// Commit message to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-commits/message`.
             public var message: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_autofix_hyphen_commits`.
+            /// Creates a new `CodeScanningAutofixCommits`.
             ///
             /// - Parameters:
-            ///   - target_ref: The Git reference of target branch for the commit. Branch needs to already exist.  For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+            ///   - targetRef: The Git reference of target branch for the commit. Branch needs to already exist.  For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
             ///   - message: Commit message to be used.
             public init(
-                target_ref: Swift.String? = nil,
+                targetRef: Swift.String? = nil,
                 message: Swift.String? = nil
             ) {
-                self.target_ref = target_ref
+                self.targetRef = targetRef
                 self.message = message
             }
             public enum CodingKeys: String, CodingKey {
-                case target_ref
+                case targetRef = "target_ref"
                 case message
             }
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-commits-response`.
-        public struct code_hyphen_scanning_hyphen_autofix_hyphen_commits_hyphen_response: Codable, Hashable, Sendable {
+        public struct CodeScanningAutofixCommitsResponse: Codable, Hashable, Sendable {
             /// The Git reference of target branch for the commit. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-commits-response/target_ref`.
-            public var target_ref: Swift.String?
+            public var targetRef: Swift.String?
             /// SHA of commit with autofix.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-commits-response/sha`.
             public var sha: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_autofix_hyphen_commits_hyphen_response`.
+            /// Creates a new `CodeScanningAutofixCommitsResponse`.
             ///
             /// - Parameters:
-            ///   - target_ref: The Git reference of target branch for the commit. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
+            ///   - targetRef: The Git reference of target branch for the commit. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
             ///   - sha: SHA of commit with autofix.
             public init(
-                target_ref: Swift.String? = nil,
+                targetRef: Swift.String? = nil,
                 sha: Swift.String? = nil
             ) {
-                self.target_ref = target_ref
+                self.targetRef = targetRef
                 self.sha = sha
             }
             public enum CodingKeys: String, CodingKey {
-                case target_ref
+                case targetRef = "target_ref"
                 case sha
             }
         }
         /// An identifier for the upload.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-sarif-id`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id = Swift.String
+        public typealias CodeScanningAnalysisSarifId = Swift.String
         /// The SHA of the commit to which the analysis you are uploading relates.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-commit-sha`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_commit_hyphen_sha = Swift.String
+        public typealias CodeScanningAnalysisCommitSha = Swift.String
         /// Identifies the variable values associated with the environment in which this analysis was performed.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-environment`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_environment = Swift.String
+        public typealias CodeScanningAnalysisEnvironment = Swift.String
         /// The time that the analysis was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-created-at`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_created_hyphen_at = Foundation.Date
+        public typealias CodeScanningAnalysisCreatedAt = Foundation.Date
         /// The REST API URL of the analysis resource.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-url`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_url = Swift.String
+        public typealias CodeScanningAnalysisUrl = Swift.String
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis`.
-        public struct code_hyphen_scanning_hyphen_analysis: Codable, Hashable, Sendable {
+        public struct CodeScanningAnalysis: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/ref`.
-            public var ref: Components.Schemas.code_hyphen_scanning_hyphen_ref
+            public var ref: Components.Schemas.CodeScanningRef
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/commit_sha`.
-            public var commit_sha: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_commit_hyphen_sha
+            public var commitSha: Components.Schemas.CodeScanningAnalysisCommitSha
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/analysis_key`.
-            public var analysis_key: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_analysis_hyphen_key
+            public var analysisKey: Components.Schemas.CodeScanningAnalysisAnalysisKey
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/environment`.
-            public var environment: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_environment
+            public var environment: Components.Schemas.CodeScanningAnalysisEnvironment
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/category`.
-            public var category: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_category?
+            public var category: Components.Schemas.CodeScanningAnalysisCategory?
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/error`.
             public var error: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/created_at`.
-            public var created_at: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_created_hyphen_at
+            public var createdAt: Components.Schemas.CodeScanningAnalysisCreatedAt
             /// The total number of results in the analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/results_count`.
-            public var results_count: Swift.Int
+            public var resultsCount: Swift.Int
             /// The total number of rules used in the analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/rules_count`.
-            public var rules_count: Swift.Int
+            public var rulesCount: Swift.Int
             /// Unique identifier for this analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/url`.
-            public var url: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_url
+            public var url: Components.Schemas.CodeScanningAnalysisUrl
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/sarif_id`.
-            public var sarif_id: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id
+            public var sarifId: Components.Schemas.CodeScanningAnalysisSarifId
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/tool`.
-            public var tool: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool
+            public var tool: Components.Schemas.CodeScanningAnalysisTool
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/deletable`.
             public var deletable: Swift.Bool
             /// Warning generated when processing the analysis
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis/warning`.
             public var warning: Swift.String
-            /// Creates a new `code_hyphen_scanning_hyphen_analysis`.
+            /// Creates a new `CodeScanningAnalysis`.
             ///
             /// - Parameters:
             ///   - ref:
-            ///   - commit_sha:
-            ///   - analysis_key:
+            ///   - commitSha:
+            ///   - analysisKey:
             ///   - environment:
             ///   - category:
             ///   - error:
-            ///   - created_at:
-            ///   - results_count: The total number of results in the analysis.
-            ///   - rules_count: The total number of rules used in the analysis.
+            ///   - createdAt:
+            ///   - resultsCount: The total number of results in the analysis.
+            ///   - rulesCount: The total number of rules used in the analysis.
             ///   - id: Unique identifier for this analysis.
             ///   - url:
-            ///   - sarif_id:
+            ///   - sarifId:
             ///   - tool:
             ///   - deletable:
             ///   - warning: Warning generated when processing the analysis
             public init(
-                ref: Components.Schemas.code_hyphen_scanning_hyphen_ref,
-                commit_sha: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_commit_hyphen_sha,
-                analysis_key: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_analysis_hyphen_key,
-                environment: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_environment,
-                category: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_category? = nil,
+                ref: Components.Schemas.CodeScanningRef,
+                commitSha: Components.Schemas.CodeScanningAnalysisCommitSha,
+                analysisKey: Components.Schemas.CodeScanningAnalysisAnalysisKey,
+                environment: Components.Schemas.CodeScanningAnalysisEnvironment,
+                category: Components.Schemas.CodeScanningAnalysisCategory? = nil,
                 error: Swift.String,
-                created_at: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_created_hyphen_at,
-                results_count: Swift.Int,
-                rules_count: Swift.Int,
+                createdAt: Components.Schemas.CodeScanningAnalysisCreatedAt,
+                resultsCount: Swift.Int,
+                rulesCount: Swift.Int,
                 id: Swift.Int,
-                url: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_url,
-                sarif_id: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id,
-                tool: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool,
+                url: Components.Schemas.CodeScanningAnalysisUrl,
+                sarifId: Components.Schemas.CodeScanningAnalysisSarifId,
+                tool: Components.Schemas.CodeScanningAnalysisTool,
                 deletable: Swift.Bool,
                 warning: Swift.String
             ) {
                 self.ref = ref
-                self.commit_sha = commit_sha
-                self.analysis_key = analysis_key
+                self.commitSha = commitSha
+                self.analysisKey = analysisKey
                 self.environment = environment
                 self.category = category
                 self.error = error
-                self.created_at = created_at
-                self.results_count = results_count
-                self.rules_count = rules_count
+                self.createdAt = createdAt
+                self.resultsCount = resultsCount
+                self.rulesCount = rulesCount
                 self.id = id
                 self.url = url
-                self.sarif_id = sarif_id
+                self.sarifId = sarifId
                 self.tool = tool
                 self.deletable = deletable
                 self.warning = warning
             }
             public enum CodingKeys: String, CodingKey {
                 case ref
-                case commit_sha
-                case analysis_key
+                case commitSha = "commit_sha"
+                case analysisKey = "analysis_key"
                 case environment
                 case category
                 case error
-                case created_at
-                case results_count
-                case rules_count
+                case createdAt = "created_at"
+                case resultsCount = "results_count"
+                case rulesCount = "rules_count"
                 case id
                 case url
-                case sarif_id
+                case sarifId = "sarif_id"
                 case tool
                 case deletable
                 case warning
@@ -2686,36 +2695,36 @@ public enum Components {
         /// Successful deletion of a code scanning analysis
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-deletion`.
-        public struct code_hyphen_scanning_hyphen_analysis_hyphen_deletion: Codable, Hashable, Sendable {
+        public struct CodeScanningAnalysisDeletion: Codable, Hashable, Sendable {
             /// Next deletable analysis in chain, without last analysis deletion confirmation
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-deletion/next_analysis_url`.
-            public var next_analysis_url: Swift.String?
+            public var nextAnalysisUrl: Swift.String?
             /// Next deletable analysis in chain, with last analysis deletion confirmation
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-deletion/confirm_delete_url`.
-            public var confirm_delete_url: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_analysis_hyphen_deletion`.
+            public var confirmDeleteUrl: Swift.String?
+            /// Creates a new `CodeScanningAnalysisDeletion`.
             ///
             /// - Parameters:
-            ///   - next_analysis_url: Next deletable analysis in chain, without last analysis deletion confirmation
-            ///   - confirm_delete_url: Next deletable analysis in chain, with last analysis deletion confirmation
+            ///   - nextAnalysisUrl: Next deletable analysis in chain, without last analysis deletion confirmation
+            ///   - confirmDeleteUrl: Next deletable analysis in chain, with last analysis deletion confirmation
             public init(
-                next_analysis_url: Swift.String? = nil,
-                confirm_delete_url: Swift.String? = nil
+                nextAnalysisUrl: Swift.String? = nil,
+                confirmDeleteUrl: Swift.String? = nil
             ) {
-                self.next_analysis_url = next_analysis_url
-                self.confirm_delete_url = confirm_delete_url
+                self.nextAnalysisUrl = nextAnalysisUrl
+                self.confirmDeleteUrl = confirmDeleteUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case next_analysis_url
-                case confirm_delete_url
+                case nextAnalysisUrl = "next_analysis_url"
+                case confirmDeleteUrl = "confirm_delete_url"
             }
         }
         /// A CodeQL database.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database`.
-        public struct code_hyphen_scanning_hyphen_codeql_hyphen_database: Codable, Hashable, Sendable {
+        public struct CodeScanningCodeqlDatabase: Codable, Hashable, Sendable {
             /// The ID of the CodeQL database.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/id`.
@@ -2729,11 +2738,11 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/language`.
             public var language: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/uploader`.
-            public var uploader: Components.Schemas.simple_hyphen_user
+            public var uploader: Components.Schemas.SimpleUser
             /// The MIME type of the CodeQL database file.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/content_type`.
-            public var content_type: Swift.String
+            public var contentType: Swift.String
             /// The size of the CodeQL database file in bytes.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/size`.
@@ -2741,11 +2750,11 @@ public enum Components {
             /// The date and time at which the CodeQL database was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// The date and time at which the CodeQL database was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// The URL at which to download the CodeQL database. The `Accept` header must be set to the value of the `content_type` property.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/url`.
@@ -2753,60 +2762,60 @@ public enum Components {
             /// The commit SHA of the repository at the time the CodeQL database was created.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-codeql-database/commit_oid`.
-            public var commit_oid: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_codeql_hyphen_database`.
+            public var commitOid: Swift.String?
+            /// Creates a new `CodeScanningCodeqlDatabase`.
             ///
             /// - Parameters:
             ///   - id: The ID of the CodeQL database.
             ///   - name: The name of the CodeQL database.
             ///   - language: The language of the CodeQL database.
             ///   - uploader:
-            ///   - content_type: The MIME type of the CodeQL database file.
+            ///   - contentType: The MIME type of the CodeQL database file.
             ///   - size: The size of the CodeQL database file in bytes.
-            ///   - created_at: The date and time at which the CodeQL database was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-            ///   - updated_at: The date and time at which the CodeQL database was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - createdAt: The date and time at which the CodeQL database was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - updatedAt: The date and time at which the CodeQL database was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///   - url: The URL at which to download the CodeQL database. The `Accept` header must be set to the value of the `content_type` property.
-            ///   - commit_oid: The commit SHA of the repository at the time the CodeQL database was created.
+            ///   - commitOid: The commit SHA of the repository at the time the CodeQL database was created.
             public init(
                 id: Swift.Int,
                 name: Swift.String,
                 language: Swift.String,
-                uploader: Components.Schemas.simple_hyphen_user,
-                content_type: Swift.String,
+                uploader: Components.Schemas.SimpleUser,
+                contentType: Swift.String,
                 size: Swift.Int,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
                 url: Swift.String,
-                commit_oid: Swift.String? = nil
+                commitOid: Swift.String? = nil
             ) {
                 self.id = id
                 self.name = name
                 self.language = language
                 self.uploader = uploader
-                self.content_type = content_type
+                self.contentType = contentType
                 self.size = size
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.url = url
-                self.commit_oid = commit_oid
+                self.commitOid = commitOid
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
                 case language
                 case uploader
-                case content_type
+                case contentType = "content_type"
                 case size
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case url
-                case commit_oid
+                case commitOid = "commit_oid"
             }
         }
         /// The language targeted by the CodeQL query
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-language`.
-        @frozen public enum code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_language: String, Codable, Hashable, Sendable {
+        @frozen public enum CodeScanningVariantAnalysisLanguage: String, Codable, Hashable, Sendable, CaseIterable {
             case cpp = "cpp"
             case csharp = "csharp"
             case go = "go"
@@ -2820,7 +2829,7 @@ public enum Components {
         /// Repository Identifier
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository`.
-        public struct code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository: Codable, Hashable, Sendable {
+        public struct CodeScanningVariantAnalysisRepository: Codable, Hashable, Sendable {
             /// A unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/id`.
@@ -2832,415 +2841,415 @@ public enum Components {
             /// The full, globally unique, name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// Whether the repository is private.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int
+            public var stargazersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repository/updated_at`.
-            public var updated_at: Foundation.Date?
-            /// Creates a new `code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository`.
+            public var updatedAt: Foundation.Date?
+            /// Creates a new `CodeScanningVariantAnalysisRepository`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier of the repository.
             ///   - name: The name of the repository.
-            ///   - full_name: The full, globally unique, name of the repository.
+            ///   - fullName: The full, globally unique, name of the repository.
             ///   - _private: Whether the repository is private.
-            ///   - stargazers_count:
-            ///   - updated_at:
+            ///   - stargazersCount:
+            ///   - updatedAt:
             public init(
                 id: Swift.Int,
                 name: Swift.String,
-                full_name: Swift.String,
+                fullName: Swift.String,
                 _private: Swift.Bool,
-                stargazers_count: Swift.Int,
-                updated_at: Foundation.Date? = nil
+                stargazersCount: Swift.Int,
+                updatedAt: Foundation.Date? = nil
             ) {
                 self.id = id
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self._private = _private
-                self.stargazers_count = stargazers_count
-                self.updated_at = updated_at
+                self.stargazersCount = stargazersCount
+                self.updatedAt = updatedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
-                case full_name
+                case fullName = "full_name"
                 case _private = "private"
-                case stargazers_count
-                case updated_at
+                case stargazersCount = "stargazers_count"
+                case updatedAt = "updated_at"
             }
         }
         /// The new status of the CodeQL variant analysis repository task.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-status`.
-        @frozen public enum code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status: String, Codable, Hashable, Sendable {
+        @frozen public enum CodeScanningVariantAnalysisStatus: String, Codable, Hashable, Sendable, CaseIterable {
             case pending = "pending"
-            case in_progress = "in_progress"
+            case inProgress = "in_progress"
             case succeeded = "succeeded"
             case failed = "failed"
             case canceled = "canceled"
-            case timed_out = "timed_out"
+            case timedOut = "timed_out"
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-skipped-repo-group`.
-        public struct code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group: Codable, Hashable, Sendable {
+        public struct CodeScanningVariantAnalysisSkippedRepoGroup: Codable, Hashable, Sendable {
             /// The total number of repositories that were skipped for this reason.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-skipped-repo-group/repository_count`.
-            public var repository_count: Swift.Int
+            public var repositoryCount: Swift.Int
             /// A list of repositories that were skipped. This list may not include all repositories that were skipped. This is only available when the repository was found and the user has access to it.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-skipped-repo-group/repositories`.
-            public var repositories: [Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository]
-            /// Creates a new `code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group`.
+            public var repositories: [Components.Schemas.CodeScanningVariantAnalysisRepository]
+            /// Creates a new `CodeScanningVariantAnalysisSkippedRepoGroup`.
             ///
             /// - Parameters:
-            ///   - repository_count: The total number of repositories that were skipped for this reason.
+            ///   - repositoryCount: The total number of repositories that were skipped for this reason.
             ///   - repositories: A list of repositories that were skipped. This list may not include all repositories that were skipped. This is only available when the repository was found and the user has access to it.
             public init(
-                repository_count: Swift.Int,
-                repositories: [Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository]
+                repositoryCount: Swift.Int,
+                repositories: [Components.Schemas.CodeScanningVariantAnalysisRepository]
             ) {
-                self.repository_count = repository_count
+                self.repositoryCount = repositoryCount
                 self.repositories = repositories
             }
             public enum CodingKeys: String, CodingKey {
-                case repository_count
+                case repositoryCount = "repository_count"
                 case repositories
             }
         }
         /// A run of a CodeQL query against one or more repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis`.
-        public struct code_hyphen_scanning_hyphen_variant_hyphen_analysis: Codable, Hashable, Sendable {
+        public struct CodeScanningVariantAnalysis: Codable, Hashable, Sendable {
             /// The ID of the variant analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/controller_repo`.
-            public var controller_repo: Components.Schemas.simple_hyphen_repository
+            public var controllerRepo: Components.Schemas.SimpleRepository
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/actor`.
-            public var actor: Components.Schemas.simple_hyphen_user
+            public var actor: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/query_language`.
-            public var query_language: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_language
+            public var queryLanguage: Components.Schemas.CodeScanningVariantAnalysisLanguage
             /// The download url for the query pack.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/query_pack_url`.
-            public var query_pack_url: Swift.String
+            public var queryPackUrl: Swift.String
             /// The date and time at which the variant analysis was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// The date and time at which the variant analysis was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// The date and time at which the variant analysis was completed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the variant analysis has not yet completed or this information is not available.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/completed_at`.
-            public var completed_at: Foundation.Date?
+            public var completedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
-                case in_progress = "in_progress"
+            @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case inProgress = "in_progress"
                 case succeeded = "succeeded"
                 case failed = "failed"
                 case cancelled = "cancelled"
             }
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/status`.
-            public var status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.statusPayload
+            public var status: Components.Schemas.CodeScanningVariantAnalysis.StatusPayload
             /// The GitHub Actions workflow run used to execute this variant analysis. This is only available if the workflow run has started.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/actions_workflow_run_id`.
-            public var actions_workflow_run_id: Swift.Int?
+            public var actionsWorkflowRunId: Swift.Int?
             /// The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/failure_reason`.
-            @frozen public enum failure_reasonPayload: String, Codable, Hashable, Sendable {
-                case no_repos_queried = "no_repos_queried"
-                case actions_workflow_run_failed = "actions_workflow_run_failed"
-                case internal_error = "internal_error"
+            @frozen public enum FailureReasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case noReposQueried = "no_repos_queried"
+                case actionsWorkflowRunFailed = "actions_workflow_run_failed"
+                case internalError = "internal_error"
             }
             /// The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/failure_reason`.
-            public var failure_reason: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.failure_reasonPayload?
-            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload`.
-            public struct scanned_repositoriesPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/repository`.
-                public var repository: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository
-                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/analysis_status`.
-                public var analysis_status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status
+            public var failureReason: Components.Schemas.CodeScanningVariantAnalysis.FailureReasonPayload?
+            /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/ScannedRepositoriesPayload`.
+            public struct ScannedRepositoriesPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/ScannedRepositoriesPayload/repository`.
+                public var repository: Components.Schemas.CodeScanningVariantAnalysisRepository
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/ScannedRepositoriesPayload/analysis_status`.
+                public var analysisStatus: Components.Schemas.CodeScanningVariantAnalysisStatus
                 /// The number of results in the case of a successful analysis. This is only available for successful analyses.
                 ///
-                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/result_count`.
-                public var result_count: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/ScannedRepositoriesPayload/result_count`.
+                public var resultCount: Swift.Int?
                 /// The size of the artifact. This is only available for successful analyses.
                 ///
-                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/artifact_size_in_bytes`.
-                public var artifact_size_in_bytes: Swift.Int?
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/ScannedRepositoriesPayload/artifact_size_in_bytes`.
+                public var artifactSizeInBytes: Swift.Int?
                 /// The reason of the failure of this repo task. This is only available if the repository task has failed.
                 ///
-                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositoriesPayload/failure_message`.
-                public var failure_message: Swift.String?
-                /// Creates a new `scanned_repositoriesPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/ScannedRepositoriesPayload/failure_message`.
+                public var failureMessage: Swift.String?
+                /// Creates a new `ScannedRepositoriesPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - repository:
-                ///   - analysis_status:
-                ///   - result_count: The number of results in the case of a successful analysis. This is only available for successful analyses.
-                ///   - artifact_size_in_bytes: The size of the artifact. This is only available for successful analyses.
-                ///   - failure_message: The reason of the failure of this repo task. This is only available if the repository task has failed.
+                ///   - analysisStatus:
+                ///   - resultCount: The number of results in the case of a successful analysis. This is only available for successful analyses.
+                ///   - artifactSizeInBytes: The size of the artifact. This is only available for successful analyses.
+                ///   - failureMessage: The reason of the failure of this repo task. This is only available if the repository task has failed.
                 public init(
-                    repository: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repository,
-                    analysis_status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status,
-                    result_count: Swift.Int? = nil,
-                    artifact_size_in_bytes: Swift.Int? = nil,
-                    failure_message: Swift.String? = nil
+                    repository: Components.Schemas.CodeScanningVariantAnalysisRepository,
+                    analysisStatus: Components.Schemas.CodeScanningVariantAnalysisStatus,
+                    resultCount: Swift.Int? = nil,
+                    artifactSizeInBytes: Swift.Int? = nil,
+                    failureMessage: Swift.String? = nil
                 ) {
                     self.repository = repository
-                    self.analysis_status = analysis_status
-                    self.result_count = result_count
-                    self.artifact_size_in_bytes = artifact_size_in_bytes
-                    self.failure_message = failure_message
+                    self.analysisStatus = analysisStatus
+                    self.resultCount = resultCount
+                    self.artifactSizeInBytes = artifactSizeInBytes
+                    self.failureMessage = failureMessage
                 }
                 public enum CodingKeys: String, CodingKey {
                     case repository
-                    case analysis_status
-                    case result_count
-                    case artifact_size_in_bytes
-                    case failure_message
+                    case analysisStatus = "analysis_status"
+                    case resultCount = "result_count"
+                    case artifactSizeInBytes = "artifact_size_in_bytes"
+                    case failureMessage = "failure_message"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositories`.
-            public typealias scanned_repositoriesPayload = [Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.scanned_repositoriesPayloadPayload]
+            public typealias ScannedRepositoriesPayload = [Components.Schemas.CodeScanningVariantAnalysis.ScannedRepositoriesPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/scanned_repositories`.
-            public var scanned_repositories: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.scanned_repositoriesPayload?
+            public var scannedRepositories: Components.Schemas.CodeScanningVariantAnalysis.ScannedRepositoriesPayload?
             /// Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories`.
-            public struct skipped_repositoriesPayload: Codable, Hashable, Sendable {
+            public struct SkippedRepositoriesPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/access_mismatch_repos`.
-                public var access_mismatch_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group
+                public var accessMismatchRepos: Components.Schemas.CodeScanningVariantAnalysisSkippedRepoGroup
                 /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/not_found_repos`.
-                public struct not_found_reposPayload: Codable, Hashable, Sendable {
+                public struct NotFoundReposPayload: Codable, Hashable, Sendable {
                     /// The total number of repositories that were skipped for this reason.
                     ///
                     /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/not_found_repos/repository_count`.
-                    public var repository_count: Swift.Int
+                    public var repositoryCount: Swift.Int
                     /// A list of full repository names that were skipped. This list may not include all repositories that were skipped.
                     ///
                     /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/not_found_repos/repository_full_names`.
-                    public var repository_full_names: [Swift.String]
-                    /// Creates a new `not_found_reposPayload`.
+                    public var repositoryFullNames: [Swift.String]
+                    /// Creates a new `NotFoundReposPayload`.
                     ///
                     /// - Parameters:
-                    ///   - repository_count: The total number of repositories that were skipped for this reason.
-                    ///   - repository_full_names: A list of full repository names that were skipped. This list may not include all repositories that were skipped.
+                    ///   - repositoryCount: The total number of repositories that were skipped for this reason.
+                    ///   - repositoryFullNames: A list of full repository names that were skipped. This list may not include all repositories that were skipped.
                     public init(
-                        repository_count: Swift.Int,
-                        repository_full_names: [Swift.String]
+                        repositoryCount: Swift.Int,
+                        repositoryFullNames: [Swift.String]
                     ) {
-                        self.repository_count = repository_count
-                        self.repository_full_names = repository_full_names
+                        self.repositoryCount = repositoryCount
+                        self.repositoryFullNames = repositoryFullNames
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case repository_count
-                        case repository_full_names
+                        case repositoryCount = "repository_count"
+                        case repositoryFullNames = "repository_full_names"
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/not_found_repos`.
-                public var not_found_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.skipped_repositoriesPayload.not_found_reposPayload
+                public var notFoundRepos: Components.Schemas.CodeScanningVariantAnalysis.SkippedRepositoriesPayload.NotFoundReposPayload
                 /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/no_codeql_db_repos`.
-                public var no_codeql_db_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group
+                public var noCodeqlDbRepos: Components.Schemas.CodeScanningVariantAnalysisSkippedRepoGroup
                 /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories/over_limit_repos`.
-                public var over_limit_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group
-                /// Creates a new `skipped_repositoriesPayload`.
+                public var overLimitRepos: Components.Schemas.CodeScanningVariantAnalysisSkippedRepoGroup
+                /// Creates a new `SkippedRepositoriesPayload`.
                 ///
                 /// - Parameters:
-                ///   - access_mismatch_repos:
-                ///   - not_found_repos:
-                ///   - no_codeql_db_repos:
-                ///   - over_limit_repos:
+                ///   - accessMismatchRepos:
+                ///   - notFoundRepos:
+                ///   - noCodeqlDbRepos:
+                ///   - overLimitRepos:
                 public init(
-                    access_mismatch_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group,
-                    not_found_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.skipped_repositoriesPayload.not_found_reposPayload,
-                    no_codeql_db_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group,
-                    over_limit_repos: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_skipped_hyphen_repo_hyphen_group
+                    accessMismatchRepos: Components.Schemas.CodeScanningVariantAnalysisSkippedRepoGroup,
+                    notFoundRepos: Components.Schemas.CodeScanningVariantAnalysis.SkippedRepositoriesPayload.NotFoundReposPayload,
+                    noCodeqlDbRepos: Components.Schemas.CodeScanningVariantAnalysisSkippedRepoGroup,
+                    overLimitRepos: Components.Schemas.CodeScanningVariantAnalysisSkippedRepoGroup
                 ) {
-                    self.access_mismatch_repos = access_mismatch_repos
-                    self.not_found_repos = not_found_repos
-                    self.no_codeql_db_repos = no_codeql_db_repos
-                    self.over_limit_repos = over_limit_repos
+                    self.accessMismatchRepos = accessMismatchRepos
+                    self.notFoundRepos = notFoundRepos
+                    self.noCodeqlDbRepos = noCodeqlDbRepos
+                    self.overLimitRepos = overLimitRepos
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case access_mismatch_repos
-                    case not_found_repos
-                    case no_codeql_db_repos
-                    case over_limit_repos
+                    case accessMismatchRepos = "access_mismatch_repos"
+                    case notFoundRepos = "not_found_repos"
+                    case noCodeqlDbRepos = "no_codeql_db_repos"
+                    case overLimitRepos = "over_limit_repos"
                 }
             }
             /// Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/skipped_repositories`.
-            public var skipped_repositories: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.skipped_repositoriesPayload?
-            /// Creates a new `code_hyphen_scanning_hyphen_variant_hyphen_analysis`.
+            public var skippedRepositories: Components.Schemas.CodeScanningVariantAnalysis.SkippedRepositoriesPayload?
+            /// Creates a new `CodeScanningVariantAnalysis`.
             ///
             /// - Parameters:
             ///   - id: The ID of the variant analysis.
-            ///   - controller_repo:
+            ///   - controllerRepo:
             ///   - actor:
-            ///   - query_language:
-            ///   - query_pack_url: The download url for the query pack.
-            ///   - created_at: The date and time at which the variant analysis was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-            ///   - updated_at: The date and time at which the variant analysis was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-            ///   - completed_at: The date and time at which the variant analysis was completed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the variant analysis has not yet completed or this information is not available.
+            ///   - queryLanguage:
+            ///   - queryPackUrl: The download url for the query pack.
+            ///   - createdAt: The date and time at which the variant analysis was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - updatedAt: The date and time at which the variant analysis was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+            ///   - completedAt: The date and time at which the variant analysis was completed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the variant analysis has not yet completed or this information is not available.
             ///   - status:
-            ///   - actions_workflow_run_id: The GitHub Actions workflow run used to execute this variant analysis. This is only available if the workflow run has started.
-            ///   - failure_reason: The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
-            ///   - scanned_repositories:
-            ///   - skipped_repositories: Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
+            ///   - actionsWorkflowRunId: The GitHub Actions workflow run used to execute this variant analysis. This is only available if the workflow run has started.
+            ///   - failureReason: The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
+            ///   - scannedRepositories:
+            ///   - skippedRepositories: Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
             public init(
                 id: Swift.Int,
-                controller_repo: Components.Schemas.simple_hyphen_repository,
-                actor: Components.Schemas.simple_hyphen_user,
-                query_language: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_language,
-                query_pack_url: Swift.String,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                completed_at: Foundation.Date? = nil,
-                status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.statusPayload,
-                actions_workflow_run_id: Swift.Int? = nil,
-                failure_reason: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.failure_reasonPayload? = nil,
-                scanned_repositories: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.scanned_repositoriesPayload? = nil,
-                skipped_repositories: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis.skipped_repositoriesPayload? = nil
+                controllerRepo: Components.Schemas.SimpleRepository,
+                actor: Components.Schemas.SimpleUser,
+                queryLanguage: Components.Schemas.CodeScanningVariantAnalysisLanguage,
+                queryPackUrl: Swift.String,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                completedAt: Foundation.Date? = nil,
+                status: Components.Schemas.CodeScanningVariantAnalysis.StatusPayload,
+                actionsWorkflowRunId: Swift.Int? = nil,
+                failureReason: Components.Schemas.CodeScanningVariantAnalysis.FailureReasonPayload? = nil,
+                scannedRepositories: Components.Schemas.CodeScanningVariantAnalysis.ScannedRepositoriesPayload? = nil,
+                skippedRepositories: Components.Schemas.CodeScanningVariantAnalysis.SkippedRepositoriesPayload? = nil
             ) {
                 self.id = id
-                self.controller_repo = controller_repo
+                self.controllerRepo = controllerRepo
                 self.actor = actor
-                self.query_language = query_language
-                self.query_pack_url = query_pack_url
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.completed_at = completed_at
+                self.queryLanguage = queryLanguage
+                self.queryPackUrl = queryPackUrl
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.completedAt = completedAt
                 self.status = status
-                self.actions_workflow_run_id = actions_workflow_run_id
-                self.failure_reason = failure_reason
-                self.scanned_repositories = scanned_repositories
-                self.skipped_repositories = skipped_repositories
+                self.actionsWorkflowRunId = actionsWorkflowRunId
+                self.failureReason = failureReason
+                self.scannedRepositories = scannedRepositories
+                self.skippedRepositories = skippedRepositories
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case controller_repo
+                case controllerRepo = "controller_repo"
                 case actor
-                case query_language
-                case query_pack_url
-                case created_at
-                case updated_at
-                case completed_at
+                case queryLanguage = "query_language"
+                case queryPackUrl = "query_pack_url"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case completedAt = "completed_at"
                 case status
-                case actions_workflow_run_id
-                case failure_reason
-                case scanned_repositories
-                case skipped_repositories
+                case actionsWorkflowRunId = "actions_workflow_run_id"
+                case failureReason = "failure_reason"
+                case scannedRepositories = "scanned_repositories"
+                case skippedRepositories = "skipped_repositories"
             }
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task`.
-        public struct code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task: Codable, Hashable, Sendable {
+        public struct CodeScanningVariantAnalysisRepoTask: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/repository`.
-            public var repository: Components.Schemas.simple_hyphen_repository
+            public var repository: Components.Schemas.SimpleRepository
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/analysis_status`.
-            public var analysis_status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status
+            public var analysisStatus: Components.Schemas.CodeScanningVariantAnalysisStatus
             /// The size of the artifact. This is only available for successful analyses.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/artifact_size_in_bytes`.
-            public var artifact_size_in_bytes: Swift.Int?
+            public var artifactSizeInBytes: Swift.Int?
             /// The number of results in the case of a successful analysis. This is only available for successful analyses.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/result_count`.
-            public var result_count: Swift.Int?
+            public var resultCount: Swift.Int?
             /// The reason of the failure of this repo task. This is only available if the repository task has failed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/failure_message`.
-            public var failure_message: Swift.String?
+            public var failureMessage: Swift.String?
             /// The SHA of the commit the CodeQL database was built against. This is only available for successful analyses.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/database_commit_sha`.
-            public var database_commit_sha: Swift.String?
+            public var databaseCommitSha: Swift.String?
             /// The source location prefix to use. This is only available for successful analyses.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/source_location_prefix`.
-            public var source_location_prefix: Swift.String?
+            public var sourceLocationPrefix: Swift.String?
             /// The URL of the artifact. This is only available for successful analyses.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-repo-task/artifact_url`.
-            public var artifact_url: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task`.
+            public var artifactUrl: Swift.String?
+            /// Creates a new `CodeScanningVariantAnalysisRepoTask`.
             ///
             /// - Parameters:
             ///   - repository:
-            ///   - analysis_status:
-            ///   - artifact_size_in_bytes: The size of the artifact. This is only available for successful analyses.
-            ///   - result_count: The number of results in the case of a successful analysis. This is only available for successful analyses.
-            ///   - failure_message: The reason of the failure of this repo task. This is only available if the repository task has failed.
-            ///   - database_commit_sha: The SHA of the commit the CodeQL database was built against. This is only available for successful analyses.
-            ///   - source_location_prefix: The source location prefix to use. This is only available for successful analyses.
-            ///   - artifact_url: The URL of the artifact. This is only available for successful analyses.
+            ///   - analysisStatus:
+            ///   - artifactSizeInBytes: The size of the artifact. This is only available for successful analyses.
+            ///   - resultCount: The number of results in the case of a successful analysis. This is only available for successful analyses.
+            ///   - failureMessage: The reason of the failure of this repo task. This is only available if the repository task has failed.
+            ///   - databaseCommitSha: The SHA of the commit the CodeQL database was built against. This is only available for successful analyses.
+            ///   - sourceLocationPrefix: The source location prefix to use. This is only available for successful analyses.
+            ///   - artifactUrl: The URL of the artifact. This is only available for successful analyses.
             public init(
-                repository: Components.Schemas.simple_hyphen_repository,
-                analysis_status: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status,
-                artifact_size_in_bytes: Swift.Int? = nil,
-                result_count: Swift.Int? = nil,
-                failure_message: Swift.String? = nil,
-                database_commit_sha: Swift.String? = nil,
-                source_location_prefix: Swift.String? = nil,
-                artifact_url: Swift.String? = nil
+                repository: Components.Schemas.SimpleRepository,
+                analysisStatus: Components.Schemas.CodeScanningVariantAnalysisStatus,
+                artifactSizeInBytes: Swift.Int? = nil,
+                resultCount: Swift.Int? = nil,
+                failureMessage: Swift.String? = nil,
+                databaseCommitSha: Swift.String? = nil,
+                sourceLocationPrefix: Swift.String? = nil,
+                artifactUrl: Swift.String? = nil
             ) {
                 self.repository = repository
-                self.analysis_status = analysis_status
-                self.artifact_size_in_bytes = artifact_size_in_bytes
-                self.result_count = result_count
-                self.failure_message = failure_message
-                self.database_commit_sha = database_commit_sha
-                self.source_location_prefix = source_location_prefix
-                self.artifact_url = artifact_url
+                self.analysisStatus = analysisStatus
+                self.artifactSizeInBytes = artifactSizeInBytes
+                self.resultCount = resultCount
+                self.failureMessage = failureMessage
+                self.databaseCommitSha = databaseCommitSha
+                self.sourceLocationPrefix = sourceLocationPrefix
+                self.artifactUrl = artifactUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case repository
-                case analysis_status
-                case artifact_size_in_bytes
-                case result_count
-                case failure_message
-                case database_commit_sha
-                case source_location_prefix
-                case artifact_url
+                case analysisStatus = "analysis_status"
+                case artifactSizeInBytes = "artifact_size_in_bytes"
+                case resultCount = "result_count"
+                case failureMessage = "failure_message"
+                case databaseCommitSha = "database_commit_sha"
+                case sourceLocationPrefix = "source_location_prefix"
+                case artifactUrl = "artifact_url"
             }
         }
         /// Configuration for code scanning default setup.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup`.
-        public struct code_hyphen_scanning_hyphen_default_hyphen_setup: Codable, Hashable, Sendable {
+        public struct CodeScanningDefaultSetup: Codable, Hashable, Sendable {
             /// Code scanning default setup has been configured or not.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case configured = "configured"
-                case not_hyphen_configured = "not-configured"
+                case notConfigured = "not-configured"
             }
             /// Code scanning default setup has been configured or not.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.statePayload?
-            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/languagesPayload`.
-            @frozen public enum languagesPayloadPayload: String, Codable, Hashable, Sendable {
+            public var state: Components.Schemas.CodeScanningDefaultSetup.StatePayload?
+            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/LanguagesPayload`.
+            @frozen public enum LanguagesPayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case actions = "actions"
-                case c_hyphen_cpp = "c-cpp"
+                case cCpp = "c-cpp"
                 case csharp = "csharp"
                 case go = "go"
-                case java_hyphen_kotlin = "java-kotlin"
-                case javascript_hyphen_typescript = "javascript-typescript"
+                case javaKotlin = "java-kotlin"
+                case javascriptTypescript = "javascript-typescript"
                 case javascript = "javascript"
                 case python = "python"
                 case ruby = "ruby"
@@ -3250,137 +3259,137 @@ public enum Components {
             /// Languages to be analyzed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/languages`.
-            public typealias languagesPayload = [Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.languagesPayloadPayload]
+            public typealias LanguagesPayload = [Components.Schemas.CodeScanningDefaultSetup.LanguagesPayloadPayload]
             /// Languages to be analyzed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/languages`.
-            public var languages: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.languagesPayload?
+            public var languages: Components.Schemas.CodeScanningDefaultSetup.LanguagesPayload?
             /// Runner type to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/runner_type`.
-            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RunnerTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case standard = "standard"
                 case labeled = "labeled"
             }
             /// Runner type to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/runner_type`.
-            public var runner_type: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.runner_typePayload?
+            public var runnerType: Components.Schemas.CodeScanningDefaultSetup.RunnerTypePayload?
             /// Runner label to be used if the runner type is labeled.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/runner_label`.
-            public var runner_label: Swift.String?
+            public var runnerLabel: Swift.String?
             /// CodeQL query suite to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/query_suite`.
-            @frozen public enum query_suitePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum QuerySuitePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case _default = "default"
                 case extended = "extended"
             }
             /// CodeQL query suite to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/query_suite`.
-            public var query_suite: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.query_suitePayload?
+            public var querySuite: Components.Schemas.CodeScanningDefaultSetup.QuerySuitePayload?
             /// Timestamp of latest configuration update.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// The frequency of the periodic analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/schedule`.
-            @frozen public enum schedulePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SchedulePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case weekly = "weekly"
             }
             /// The frequency of the periodic analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/schedule`.
-            public var schedule: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.schedulePayload?
-            /// Creates a new `code_hyphen_scanning_hyphen_default_hyphen_setup`.
+            public var schedule: Components.Schemas.CodeScanningDefaultSetup.SchedulePayload?
+            /// Creates a new `CodeScanningDefaultSetup`.
             ///
             /// - Parameters:
             ///   - state: Code scanning default setup has been configured or not.
             ///   - languages: Languages to be analyzed.
-            ///   - runner_type: Runner type to be used.
-            ///   - runner_label: Runner label to be used if the runner type is labeled.
-            ///   - query_suite: CodeQL query suite to be used.
-            ///   - updated_at: Timestamp of latest configuration update.
+            ///   - runnerType: Runner type to be used.
+            ///   - runnerLabel: Runner label to be used if the runner type is labeled.
+            ///   - querySuite: CodeQL query suite to be used.
+            ///   - updatedAt: Timestamp of latest configuration update.
             ///   - schedule: The frequency of the periodic analysis.
             public init(
-                state: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.statePayload? = nil,
-                languages: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.languagesPayload? = nil,
-                runner_type: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.runner_typePayload? = nil,
-                runner_label: Swift.String? = nil,
-                query_suite: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.query_suitePayload? = nil,
-                updated_at: Foundation.Date? = nil,
-                schedule: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.schedulePayload? = nil
+                state: Components.Schemas.CodeScanningDefaultSetup.StatePayload? = nil,
+                languages: Components.Schemas.CodeScanningDefaultSetup.LanguagesPayload? = nil,
+                runnerType: Components.Schemas.CodeScanningDefaultSetup.RunnerTypePayload? = nil,
+                runnerLabel: Swift.String? = nil,
+                querySuite: Components.Schemas.CodeScanningDefaultSetup.QuerySuitePayload? = nil,
+                updatedAt: Foundation.Date? = nil,
+                schedule: Components.Schemas.CodeScanningDefaultSetup.SchedulePayload? = nil
             ) {
                 self.state = state
                 self.languages = languages
-                self.runner_type = runner_type
-                self.runner_label = runner_label
-                self.query_suite = query_suite
-                self.updated_at = updated_at
+                self.runnerType = runnerType
+                self.runnerLabel = runnerLabel
+                self.querySuite = querySuite
+                self.updatedAt = updatedAt
                 self.schedule = schedule
             }
             public enum CodingKeys: String, CodingKey {
                 case state
                 case languages
-                case runner_type
-                case runner_label
-                case query_suite
-                case updated_at
+                case runnerType = "runner_type"
+                case runnerLabel = "runner_label"
+                case querySuite = "query_suite"
+                case updatedAt = "updated_at"
                 case schedule
             }
         }
         /// Configuration for code scanning default setup.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update`.
-        public struct code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update: Codable, Hashable, Sendable {
+        public struct CodeScanningDefaultSetupUpdate: Codable, Hashable, Sendable {
             /// The desired state of code scanning default setup.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case configured = "configured"
-                case not_hyphen_configured = "not-configured"
+                case notConfigured = "not-configured"
             }
             /// The desired state of code scanning default setup.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/state`.
-            public var state: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.statePayload?
+            public var state: Components.Schemas.CodeScanningDefaultSetupUpdate.StatePayload?
             /// Runner type to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/runner_type`.
-            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RunnerTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case standard = "standard"
                 case labeled = "labeled"
             }
             /// Runner type to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/runner_type`.
-            public var runner_type: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.runner_typePayload?
+            public var runnerType: Components.Schemas.CodeScanningDefaultSetupUpdate.RunnerTypePayload?
             /// Runner label to be used if the runner type is labeled.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/runner_label`.
-            public var runner_label: Swift.String?
+            public var runnerLabel: Swift.String?
             /// CodeQL query suite to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/query_suite`.
-            @frozen public enum query_suitePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum QuerySuitePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case _default = "default"
                 case extended = "extended"
             }
             /// CodeQL query suite to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/query_suite`.
-            public var query_suite: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.query_suitePayload?
-            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/languagesPayload`.
-            @frozen public enum languagesPayloadPayload: String, Codable, Hashable, Sendable {
+            public var querySuite: Components.Schemas.CodeScanningDefaultSetupUpdate.QuerySuitePayload?
+            /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/LanguagesPayload`.
+            @frozen public enum LanguagesPayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case actions = "actions"
-                case c_hyphen_cpp = "c-cpp"
+                case cCpp = "c-cpp"
                 case csharp = "csharp"
                 case go = "go"
-                case java_hyphen_kotlin = "java-kotlin"
-                case javascript_hyphen_typescript = "javascript-typescript"
+                case javaKotlin = "java-kotlin"
+                case javascriptTypescript = "javascript-typescript"
                 case python = "python"
                 case ruby = "ruby"
                 case swift = "swift"
@@ -3388,59 +3397,59 @@ public enum Components {
             /// CodeQL languages to be analyzed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/languages`.
-            public typealias languagesPayload = [Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.languagesPayloadPayload]
+            public typealias LanguagesPayload = [Components.Schemas.CodeScanningDefaultSetupUpdate.LanguagesPayloadPayload]
             /// CodeQL languages to be analyzed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/languages`.
-            public var languages: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.languagesPayload?
-            /// Creates a new `code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update`.
+            public var languages: Components.Schemas.CodeScanningDefaultSetupUpdate.LanguagesPayload?
+            /// Creates a new `CodeScanningDefaultSetupUpdate`.
             ///
             /// - Parameters:
             ///   - state: The desired state of code scanning default setup.
-            ///   - runner_type: Runner type to be used.
-            ///   - runner_label: Runner label to be used if the runner type is labeled.
-            ///   - query_suite: CodeQL query suite to be used.
+            ///   - runnerType: Runner type to be used.
+            ///   - runnerLabel: Runner label to be used if the runner type is labeled.
+            ///   - querySuite: CodeQL query suite to be used.
             ///   - languages: CodeQL languages to be analyzed.
             public init(
-                state: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.statePayload? = nil,
-                runner_type: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.runner_typePayload? = nil,
-                runner_label: Swift.String? = nil,
-                query_suite: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.query_suitePayload? = nil,
-                languages: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.languagesPayload? = nil
+                state: Components.Schemas.CodeScanningDefaultSetupUpdate.StatePayload? = nil,
+                runnerType: Components.Schemas.CodeScanningDefaultSetupUpdate.RunnerTypePayload? = nil,
+                runnerLabel: Swift.String? = nil,
+                querySuite: Components.Schemas.CodeScanningDefaultSetupUpdate.QuerySuitePayload? = nil,
+                languages: Components.Schemas.CodeScanningDefaultSetupUpdate.LanguagesPayload? = nil
             ) {
                 self.state = state
-                self.runner_type = runner_type
-                self.runner_label = runner_label
-                self.query_suite = query_suite
+                self.runnerType = runnerType
+                self.runnerLabel = runnerLabel
+                self.querySuite = querySuite
                 self.languages = languages
             }
             public enum CodingKeys: String, CodingKey {
                 case state
-                case runner_type
-                case runner_label
-                case query_suite
+                case runnerType = "runner_type"
+                case runnerLabel = "runner_label"
+                case querySuite = "query_suite"
                 case languages
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                state = try container.decodeIfPresent(
-                    Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.statePayload.self,
+                self.state = try container.decodeIfPresent(
+                    Components.Schemas.CodeScanningDefaultSetupUpdate.StatePayload.self,
                     forKey: .state
                 )
-                runner_type = try container.decodeIfPresent(
-                    Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.runner_typePayload.self,
-                    forKey: .runner_type
+                self.runnerType = try container.decodeIfPresent(
+                    Components.Schemas.CodeScanningDefaultSetupUpdate.RunnerTypePayload.self,
+                    forKey: .runnerType
                 )
-                runner_label = try container.decodeIfPresent(
+                self.runnerLabel = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .runner_label
+                    forKey: .runnerLabel
                 )
-                query_suite = try container.decodeIfPresent(
-                    Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.query_suitePayload.self,
-                    forKey: .query_suite
+                self.querySuite = try container.decodeIfPresent(
+                    Components.Schemas.CodeScanningDefaultSetupUpdate.QuerySuitePayload.self,
+                    forKey: .querySuite
                 )
-                languages = try container.decodeIfPresent(
-                    Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.languagesPayload.self,
+                self.languages = try container.decodeIfPresent(
+                    Components.Schemas.CodeScanningDefaultSetupUpdate.LanguagesPayload.self,
                     forKey: .languages
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
@@ -3456,56 +3465,56 @@ public enum Components {
         /// You should not rely on this always being an actions workflow run object.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update-response`.
-        public struct code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update_hyphen_response: Codable, Hashable, Sendable {
+        public struct CodeScanningDefaultSetupUpdateResponse: Codable, Hashable, Sendable {
             /// ID of the corresponding run.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update-response/run_id`.
-            public var run_id: Swift.Int?
+            public var runId: Swift.Int?
             /// URL of the corresponding run.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update-response/run_url`.
-            public var run_url: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update_hyphen_response`.
+            public var runUrl: Swift.String?
+            /// Creates a new `CodeScanningDefaultSetupUpdateResponse`.
             ///
             /// - Parameters:
-            ///   - run_id: ID of the corresponding run.
-            ///   - run_url: URL of the corresponding run.
+            ///   - runId: ID of the corresponding run.
+            ///   - runUrl: URL of the corresponding run.
             public init(
-                run_id: Swift.Int? = nil,
-                run_url: Swift.String? = nil
+                runId: Swift.Int? = nil,
+                runUrl: Swift.String? = nil
             ) {
-                self.run_id = run_id
-                self.run_url = run_url
+                self.runId = runId
+                self.runUrl = runUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case run_id
-                case run_url
+                case runId = "run_id"
+                case runUrl = "run_url"
             }
         }
         /// The full Git reference, formatted as `refs/heads/<branch name>`,
         /// `refs/tags/<tag>`, `refs/pull/<number>/merge`, or `refs/pull/<number>/head`.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-ref-full`.
-        public typealias code_hyphen_scanning_hyphen_ref_hyphen_full = Swift.String
+        public typealias CodeScanningRefFull = Swift.String
         /// A Base64 string representing the SARIF file to upload. You must first compress your SARIF file using [`gzip`](http://www.gnu.org/software/gzip/manual/gzip.html) and then translate the contents of the file into a Base64 encoding string. For more information, see "[SARIF support for code scanning](https://docs.github.com/code-security/secure-coding/sarif-support-for-code-scanning)."
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-analysis-sarif-file`.
-        public typealias code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_file = Swift.String
+        public typealias CodeScanningAnalysisSarifFile = Swift.String
         /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-receipt`.
-        public struct code_hyphen_scanning_hyphen_sarifs_hyphen_receipt: Codable, Hashable, Sendable {
+        public struct CodeScanningSarifsReceipt: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-receipt/id`.
-            public var id: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id?
+            public var id: Components.Schemas.CodeScanningAnalysisSarifId?
             /// The REST API URL for checking the status of the upload.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-receipt/url`.
             public var url: Swift.String?
-            /// Creates a new `code_hyphen_scanning_hyphen_sarifs_hyphen_receipt`.
+            /// Creates a new `CodeScanningSarifsReceipt`.
             ///
             /// - Parameters:
             ///   - id:
             ///   - url: The REST API URL for checking the status of the upload.
             public init(
-                id: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id? = nil,
+                id: Components.Schemas.CodeScanningAnalysisSarifId? = nil,
                 url: Swift.String? = nil
             ) {
                 self.id = id
@@ -3517,11 +3526,11 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-status`.
-        public struct code_hyphen_scanning_hyphen_sarifs_hyphen_status: Codable, Hashable, Sendable {
+        public struct CodeScanningSarifsStatus: Codable, Hashable, Sendable {
             /// `pending` files have not yet been processed, while `complete` means results from the SARIF have been stored. `failed` files have either not been processed at all, or could only be partially processed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-status/processing_status`.
-            @frozen public enum processing_statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ProcessingStatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case pending = "pending"
                 case complete = "complete"
                 case failed = "failed"
@@ -3529,33 +3538,33 @@ public enum Components {
             /// `pending` files have not yet been processed, while `complete` means results from the SARIF have been stored. `failed` files have either not been processed at all, or could only be partially processed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-status/processing_status`.
-            public var processing_status: Components.Schemas.code_hyphen_scanning_hyphen_sarifs_hyphen_status.processing_statusPayload?
+            public var processingStatus: Components.Schemas.CodeScanningSarifsStatus.ProcessingStatusPayload?
             /// The REST API URL for getting the analyses associated with the upload.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-status/analyses_url`.
-            public var analyses_url: Swift.String?
+            public var analysesUrl: Swift.String?
             /// Any errors that ocurred during processing of the delivery.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-status/errors`.
             public var errors: [Swift.String]?
-            /// Creates a new `code_hyphen_scanning_hyphen_sarifs_hyphen_status`.
+            /// Creates a new `CodeScanningSarifsStatus`.
             ///
             /// - Parameters:
-            ///   - processing_status: `pending` files have not yet been processed, while `complete` means results from the SARIF have been stored. `failed` files have either not been processed at all, or could only be partially processed.
-            ///   - analyses_url: The REST API URL for getting the analyses associated with the upload.
+            ///   - processingStatus: `pending` files have not yet been processed, while `complete` means results from the SARIF have been stored. `failed` files have either not been processed at all, or could only be partially processed.
+            ///   - analysesUrl: The REST API URL for getting the analyses associated with the upload.
             ///   - errors: Any errors that ocurred during processing of the delivery.
             public init(
-                processing_status: Components.Schemas.code_hyphen_scanning_hyphen_sarifs_hyphen_status.processing_statusPayload? = nil,
-                analyses_url: Swift.String? = nil,
+                processingStatus: Components.Schemas.CodeScanningSarifsStatus.ProcessingStatusPayload? = nil,
+                analysesUrl: Swift.String? = nil,
                 errors: [Swift.String]? = nil
             ) {
-                self.processing_status = processing_status
-                self.analyses_url = analyses_url
+                self.processingStatus = processingStatus
+                self.analysesUrl = analysesUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
-                case processing_status
-                case analyses_url
+                case processingStatus = "processing_status"
+                case analysesUrl = "analyses_url"
                 case errors
             }
         }
@@ -3565,73 +3574,73 @@ public enum Components {
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-before`.
-        public typealias pagination_hyphen_before = Swift.String
+        public typealias PaginationBefore = Swift.String
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-after`.
-        public typealias pagination_hyphen_after = Swift.String
+        public typealias PaginationAfter = Swift.String
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
         ///
         /// - Remark: Generated from `#/components/parameters/tool-name`.
-        public typealias tool_hyphen_name = Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_name
+        public typealias ToolName = Components.Schemas.CodeScanningAnalysisToolName
         /// The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
         ///
         /// - Remark: Generated from `#/components/parameters/tool-guid`.
-        public typealias tool_hyphen_guid = Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_tool_hyphen_guid
+        public typealias ToolGuid = Components.Schemas.CodeScanningAnalysisToolGuid
         /// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
         ///
         /// - Remark: Generated from `#/components/parameters/git-ref`.
-        public typealias git_hyphen_ref = Components.Schemas.code_hyphen_scanning_hyphen_ref
+        public typealias GitRef = Components.Schemas.CodeScanningRef
         /// The number of the pull request for the results you want to list.
         ///
         /// - Remark: Generated from `#/components/parameters/pr-alias`.
-        public typealias pr_hyphen_alias = Swift.Int
+        public typealias PrAlias = Swift.Int
         /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
         ///
         /// - Remark: Generated from `#/components/parameters/alert-number`.
-        public typealias alert_hyphen_number = Components.Schemas.alert_hyphen_number
+        public typealias AlertNumber = Components.Schemas.AlertNumber
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3641,25 +3650,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct bad_request: Sendable, Hashable {
+        public struct BadRequest: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/bad_request/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3673,15 +3682,15 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/scim+json`.
-                case application_scim_plus_json(Components.Schemas.scim_hyphen_error)
-                /// The associated value of the enum case if `self` is `.application_scim_plus_json`.
+                case applicationScimJson(Components.Schemas.ScimError)
+                /// The associated value of the enum case if `self` is `.applicationScimJson`.
                 ///
-                /// - Throws: An error if `self` is not `.application_scim_plus_json`.
-                /// - SeeAlso: `.application_scim_plus_json`.
-                public var application_scim_plus_json: Components.Schemas.scim_hyphen_error {
+                /// - Throws: An error if `self` is not `.applicationScimJson`.
+                /// - SeeAlso: `.applicationScimJson`.
+                public var applicationScimJson: Components.Schemas.ScimError {
                     get throws {
                         switch self {
-                        case let .application_scim_plus_json(body):
+                        case let .applicationScimJson(body):
                             return body
                         default:
                             try throwUnexpectedResponseBody(
@@ -3693,58 +3702,58 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.bad_request.Body
-            /// Creates a new `bad_request`.
+            public var body: Components.Responses.BadRequest.Body
+            /// Creates a new `BadRequest`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.bad_request.Body) {
+            public init(body: Components.Responses.BadRequest.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct service_unavailable: Sendable, Hashable {
+        public struct ServiceUnavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/service_unavailable/content/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/code`.
                     public var code: Swift.String?
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/message`.
                     public var message: Swift.String?
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/documentation_url`.
-                    public var documentation_url: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var documentationUrl: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - code:
                     ///   - message:
-                    ///   - documentation_url:
+                    ///   - documentationUrl:
                     public init(
                         code: Swift.String? = nil,
                         message: Swift.String? = nil,
-                        documentation_url: Swift.String? = nil
+                        documentationUrl: Swift.String? = nil
                     ) {
                         self.code = code
                         self.message = message
-                        self.documentation_url = documentation_url
+                        self.documentationUrl = documentationUrl
                     }
                     public enum CodingKeys: String, CodingKey {
                         case code
                         case message
-                        case documentation_url
+                        case documentationUrl = "documentation_url"
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/service_unavailable/content/application\/json`.
-                case json(Components.Responses.service_unavailable.Body.jsonPayload)
+                case json(Components.Responses.ServiceUnavailable.Body.JsonPayload)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Responses.service_unavailable.Body.jsonPayload {
+                public var json: Components.Responses.ServiceUnavailable.Body.JsonPayload {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3754,25 +3763,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.service_unavailable.Body
-            /// Creates a new `service_unavailable`.
+            public var body: Components.Responses.ServiceUnavailable.Body
+            /// Creates a new `ServiceUnavailable`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.service_unavailable.Body) {
+            public init(body: Components.Responses.ServiceUnavailable.Body) {
                 self.body = body
             }
         }
-        public struct code_scanning_forbidden_read: Sendable, Hashable {
+        public struct CodeScanningForbiddenRead: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/code_scanning_forbidden_read/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/code_scanning_forbidden_read/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3782,25 +3791,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.code_scanning_forbidden_read.Body
-            /// Creates a new `code_scanning_forbidden_read`.
+            public var body: Components.Responses.CodeScanningForbiddenRead.Body
+            /// Creates a new `CodeScanningForbiddenRead`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.code_scanning_forbidden_read.Body) {
+            public init(body: Components.Responses.CodeScanningForbiddenRead.Body) {
                 self.body = body
             }
         }
-        public struct code_scanning_forbidden_write: Sendable, Hashable {
+        public struct CodeScanningForbiddenWrite: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/code_scanning_forbidden_write/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/code_scanning_forbidden_write/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3810,25 +3819,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.code_scanning_forbidden_write.Body
-            /// Creates a new `code_scanning_forbidden_write`.
+            public var body: Components.Responses.CodeScanningForbiddenWrite.Body
+            /// Creates a new `CodeScanningForbiddenWrite`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.code_scanning_forbidden_write.Body) {
+            public init(body: Components.Responses.CodeScanningForbiddenWrite.Body) {
                 self.body = body
             }
         }
-        public struct code_scanning_bad_request: Sendable, Hashable {
+        public struct CodeScanningBadRequest: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/code_scanning_bad_request/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/code_scanning_bad_request/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3838,25 +3847,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.code_scanning_bad_request.Body
-            /// Creates a new `code_scanning_bad_request`.
+            public var body: Components.Responses.CodeScanningBadRequest.Body
+            /// Creates a new `CodeScanningBadRequest`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.code_scanning_bad_request.Body) {
+            public init(body: Components.Responses.CodeScanningBadRequest.Body) {
                 self.body = body
             }
         }
-        public struct code_scanning_autofix_create_forbidden: Sendable, Hashable {
+        public struct CodeScanningAutofixCreateForbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/code_scanning_autofix_create_forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/code_scanning_autofix_create_forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3866,29 +3875,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.code_scanning_autofix_create_forbidden.Body
-            /// Creates a new `code_scanning_autofix_create_forbidden`.
+            public var body: Components.Responses.CodeScanningAutofixCreateForbidden.Body
+            /// Creates a new `CodeScanningAutofixCreateForbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.code_scanning_autofix_create_forbidden.Body) {
+            public init(body: Components.Responses.CodeScanningAutofixCreateForbidden.Body) {
                 self.body = body
             }
         }
-        public struct found: Sendable, Hashable {
-            /// Creates a new `found`.
-            public init() {}
-        }
-        public struct code_scanning_conflict: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/code_scanning_conflict/content`.
+        public struct UnprocessableAnalysis: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/unprocessable_analysis/content`.
             @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/code_scanning_conflict/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                /// - Remark: Generated from `#/components/responses/unprocessable_analysis/content/application\/json`.
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3898,12 +3903,44 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.code_scanning_conflict.Body
-            /// Creates a new `code_scanning_conflict`.
+            public var body: Components.Responses.UnprocessableAnalysis.Body
+            /// Creates a new `UnprocessableAnalysis`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.code_scanning_conflict.Body) {
+            public init(body: Components.Responses.UnprocessableAnalysis.Body) {
+                self.body = body
+            }
+        }
+        public struct Found: Sendable, Hashable {
+            /// Creates a new `Found`.
+            public init() {}
+        }
+        public struct CodeScanningConflict: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/code_scanning_conflict/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/code_scanning_conflict/content/application\/json`.
+                case json(Components.Schemas.BasicError)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.BasicError {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.CodeScanningConflict.Body
+            /// Creates a new `CodeScanningConflict`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.CodeScanningConflict.Body) {
                 self.body = body
             }
         }
@@ -3911,7 +3948,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -3927,7 +3964,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)`.
-    public enum code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org {
+    public enum CodeScanningListAlertsForOrg {
         public static let id: Swift.String = "code-scanning/list-alerts-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/path`.
@@ -3935,118 +3972,118 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.CodeScanningListAlertsForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/tool_name`.
-                public var tool_name: Components.Parameters.tool_hyphen_name?
+                public var toolName: Components.Parameters.ToolName?
                 /// The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/tool_guid`.
-                public var tool_guid: Components.Parameters.tool_hyphen_guid?
+                public var toolGuid: Components.Parameters.ToolGuid?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// If specified, only code scanning alerts with this state will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/state`.
-                public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query?
+                public var state: Components.Schemas.CodeScanningAlertStateQuery?
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
                 /// The property by which to sort the results.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/sort`.
-                public var sort: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query.sortPayload?
+                public var sort: Operations.CodeScanningListAlertsForOrg.Input.Query.SortPayload?
                 /// If specified, only code scanning alerts with this severity will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/severity`.
-                public var severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_severity?
+                public var severity: Components.Schemas.CodeScanningAlertSeverity?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - tool_name: The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
-                ///   - tool_guid: The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
+                ///   - toolName: The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
+                ///   - toolGuid: The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
                 ///   - state: If specified, only code scanning alerts with this state will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - severity: If specified, only code scanning alerts with this severity will be returned.
                 public init(
-                    tool_name: Components.Parameters.tool_hyphen_name? = nil,
-                    tool_guid: Components.Parameters.tool_hyphen_guid? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query? = nil,
-                    sort: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query.sortPayload? = nil,
-                    severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_severity? = nil
+                    toolName: Components.Parameters.ToolName? = nil,
+                    toolGuid: Components.Parameters.ToolGuid? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    state: Components.Schemas.CodeScanningAlertStateQuery? = nil,
+                    sort: Operations.CodeScanningListAlertsForOrg.Input.Query.SortPayload? = nil,
+                    severity: Components.Schemas.CodeScanningAlertSeverity? = nil
                 ) {
-                    self.tool_name = tool_name
-                    self.tool_guid = tool_guid
+                    self.toolName = toolName
+                    self.toolGuid = toolGuid
                     self.before = before
                     self.after = after
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.direction = direction
                     self.state = state
                     self.sort = sort
                     self.severity = severity
                 }
             }
-            public var query: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.CodeScanningListAlertsForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListAlertsForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListAlertsForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.CodeScanningListAlertsForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4054,9 +4091,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.CodeScanningListAlertsForOrg.Input.Path,
+                query: Operations.CodeScanningListAlertsForOrg.Input.Query = .init(),
+                headers: Operations.CodeScanningListAlertsForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4068,26 +4105,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.CodeScanningListAlertsForOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.code_hyphen_scanning_hyphen_organization_hyphen_alert_hyphen_items])
+                    case json([Components.Schemas.CodeScanningOrganizationAlertItems])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.code_hyphen_scanning_hyphen_organization_hyphen_alert_hyphen_items] {
+                    public var json: [Components.Schemas.CodeScanningOrganizationAlertItems] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4097,15 +4134,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.CodeScanningListAlertsForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Body
+                    headers: Operations.CodeScanningListAlertsForOrg.Output.Ok.Headers = .init(),
+                    body: Operations.CodeScanningListAlertsForOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4116,12 +4153,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.CodeScanningListAlertsForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.CodeScanningListAlertsForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4139,12 +4176,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4162,12 +4199,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/code-scanning/alerts/get(code-scanning/list-alerts-for-org)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -4223,7 +4260,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)`.
-    public enum code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo {
+    public enum CodeScanningListAlertsForRepo {
         public static let id: Swift.String = "code-scanning/list-alerts-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/path`.
@@ -4231,92 +4268,92 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.CodeScanningListAlertsForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/tool_name`.
-                public var tool_name: Components.Parameters.tool_hyphen_name?
+                public var toolName: Components.Parameters.ToolName?
                 /// The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/tool_guid`.
-                public var tool_guid: Components.Parameters.tool_hyphen_guid?
+                public var toolGuid: Components.Parameters.ToolGuid?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/ref`.
-                public var ref: Components.Parameters.git_hyphen_ref?
+                public var ref: Components.Parameters.GitRef?
                 /// The number of the pull request for the results you want to list.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/pr`.
-                public var pr: Components.Parameters.pr_hyphen_alias?
+                public var pr: Components.Parameters.PrAlias?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
                 /// The property by which to sort the results.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/sort`.
-                public var sort: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query.sortPayload?
+                public var sort: Operations.CodeScanningListAlertsForRepo.Input.Query.SortPayload?
                 /// If specified, only code scanning alerts with this state will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/state`.
-                public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query?
+                public var state: Components.Schemas.CodeScanningAlertStateQuery?
                 /// If specified, only code scanning alerts with this severity will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/severity`.
-                public var severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_severity?
+                public var severity: Components.Schemas.CodeScanningAlertSeverity?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - tool_name: The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
-                ///   - tool_guid: The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
+                ///   - toolName: The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
+                ///   - toolGuid: The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - ref: The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///   - pr: The number of the pull request for the results you want to list.
                 ///   - direction: The direction to sort the results by.
@@ -4326,23 +4363,23 @@ public enum Operations {
                 ///   - state: If specified, only code scanning alerts with this state will be returned.
                 ///   - severity: If specified, only code scanning alerts with this severity will be returned.
                 public init(
-                    tool_name: Components.Parameters.tool_hyphen_name? = nil,
-                    tool_guid: Components.Parameters.tool_hyphen_guid? = nil,
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    ref: Components.Parameters.git_hyphen_ref? = nil,
-                    pr: Components.Parameters.pr_hyphen_alias? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    sort: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query.sortPayload? = nil,
-                    state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query? = nil,
-                    severity: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_severity? = nil
+                    toolName: Components.Parameters.ToolName? = nil,
+                    toolGuid: Components.Parameters.ToolGuid? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    ref: Components.Parameters.GitRef? = nil,
+                    pr: Components.Parameters.PrAlias? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    sort: Operations.CodeScanningListAlertsForRepo.Input.Query.SortPayload? = nil,
+                    state: Components.Schemas.CodeScanningAlertStateQuery? = nil,
+                    severity: Components.Schemas.CodeScanningAlertSeverity? = nil
                 ) {
-                    self.tool_name = tool_name
-                    self.tool_guid = tool_guid
+                    self.toolName = toolName
+                    self.toolGuid = toolGuid
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.ref = ref
                     self.pr = pr
                     self.direction = direction
@@ -4353,19 +4390,19 @@ public enum Operations {
                     self.severity = severity
                 }
             }
-            public var query: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query
+            public var query: Operations.CodeScanningListAlertsForRepo.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListAlertsForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListAlertsForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.CodeScanningListAlertsForRepo.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4373,9 +4410,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path,
-                query: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query = .init(),
-                headers: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers = .init()
+                path: Operations.CodeScanningListAlertsForRepo.Input.Path,
+                query: Operations.CodeScanningListAlertsForRepo.Input.Query = .init(),
+                headers: Operations.CodeScanningListAlertsForRepo.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4387,12 +4424,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_items])
+                    case json([Components.Schemas.CodeScanningAlertItems])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_items] {
+                    public var json: [Components.Schemas.CodeScanningAlertItems] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4402,12 +4439,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok.Body
+                public var body: Operations.CodeScanningListAlertsForRepo.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningListAlertsForRepo.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4416,12 +4453,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok)
+            case ok(Operations.CodeScanningListAlertsForRepo.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok {
+            public var ok: Operations.CodeScanningListAlertsForRepo.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4439,12 +4476,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4462,12 +4507,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4485,12 +4530,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4508,12 +4553,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -4565,7 +4610,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)`.
-    public enum code_hyphen_scanning_sol_get_hyphen_alert {
+    public enum CodeScanningGetAlert {
         public static let id: Swift.String = "code-scanning/get-alert"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/GET/path`.
@@ -4573,52 +4618,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/GET/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input.Path
+            public var path: Operations.CodeScanningGetAlert.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_alert.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetAlert.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_alert.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetAlert.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input.Headers
+            public var headers: Operations.CodeScanningGetAlert.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Input.Headers = .init()
+                path: Operations.CodeScanningGetAlert.Input.Path,
+                headers: Operations.CodeScanningGetAlert.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4629,12 +4674,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_alert)
+                    case json(Components.Schemas.CodeScanningAlert)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_alert {
+                    public var json: Components.Schemas.CodeScanningAlert {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4644,12 +4689,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Output.Ok.Body
+                public var body: Operations.CodeScanningGetAlert.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningGetAlert.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4658,12 +4703,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_alert.Output.Ok)
+            case ok(Operations.CodeScanningGetAlert.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_alert.Output.Ok {
+            public var ok: Operations.CodeScanningGetAlert.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4681,12 +4726,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4704,12 +4757,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4727,12 +4780,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4750,12 +4803,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -4806,7 +4859,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)`.
-    public enum code_hyphen_scanning_sol_update_hyphen_alert {
+    public enum CodeScanningUpdateAlert {
         public static let id: Swift.String = "code-scanning/update-alert"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/path`.
@@ -4814,85 +4867,85 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Path
+            public var path: Operations.CodeScanningUpdateAlert.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_update_hyphen_alert.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningUpdateAlert.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_update_hyphen_alert.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningUpdateAlert.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Headers
+            public var headers: Operations.CodeScanningUpdateAlert.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/requestBody/json/state`.
-                    public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_set_hyphen_state
+                    public var state: Components.Schemas.CodeScanningAlertSetState
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/requestBody/json/dismissed_reason`.
-                    public var dismissed_reason: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason?
+                    public var dismissedReason: Components.Schemas.CodeScanningAlertDismissedReason?
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/requestBody/json/dismissed_comment`.
-                    public var dismissed_comment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment?
+                    public var dismissedComment: Components.Schemas.CodeScanningAlertDismissedComment?
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/requestBody/json/create_request`.
-                    public var create_request: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_create_hyphen_request?
-                    /// Creates a new `jsonPayload`.
+                    public var createRequest: Components.Schemas.CodeScanningAlertCreateRequest?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - state:
-                    ///   - dismissed_reason:
-                    ///   - dismissed_comment:
-                    ///   - create_request:
+                    ///   - dismissedReason:
+                    ///   - dismissedComment:
+                    ///   - createRequest:
                     public init(
-                        state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_set_hyphen_state,
-                        dismissed_reason: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason? = nil,
-                        dismissed_comment: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_comment? = nil,
-                        create_request: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_create_hyphen_request? = nil
+                        state: Components.Schemas.CodeScanningAlertSetState,
+                        dismissedReason: Components.Schemas.CodeScanningAlertDismissedReason? = nil,
+                        dismissedComment: Components.Schemas.CodeScanningAlertDismissedComment? = nil,
+                        createRequest: Components.Schemas.CodeScanningAlertCreateRequest? = nil
                     ) {
                         self.state = state
-                        self.dismissed_reason = dismissed_reason
-                        self.dismissed_comment = dismissed_comment
-                        self.create_request = create_request
+                        self.dismissedReason = dismissedReason
+                        self.dismissedComment = dismissedComment
+                        self.createRequest = createRequest
                     }
                     public enum CodingKeys: String, CodingKey {
                         case state
-                        case dismissed_reason
-                        case dismissed_comment
-                        case create_request
+                        case dismissedReason = "dismissed_reason"
+                        case dismissedComment = "dismissed_comment"
+                        case createRequest = "create_request"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Body.jsonPayload)
+                case json(Operations.CodeScanningUpdateAlert.Input.Body.JsonPayload)
             }
-            public var body: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Body
+            public var body: Operations.CodeScanningUpdateAlert.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4900,9 +4953,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Headers = .init(),
-                body: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Input.Body
+                path: Operations.CodeScanningUpdateAlert.Input.Path,
+                headers: Operations.CodeScanningUpdateAlert.Input.Headers = .init(),
+                body: Operations.CodeScanningUpdateAlert.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4914,12 +4967,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_alert)
+                    case json(Components.Schemas.CodeScanningAlert)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_alert {
+                    public var json: Components.Schemas.CodeScanningAlert {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4929,12 +4982,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Output.Ok.Body
+                public var body: Operations.CodeScanningUpdateAlert.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningUpdateAlert.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4943,12 +4996,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_update_hyphen_alert.Output.Ok)
+            case ok(Operations.CodeScanningUpdateAlert.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_update_hyphen_alert.Output.Ok {
+            public var ok: Operations.CodeScanningUpdateAlert.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4966,12 +5019,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -4989,12 +5042,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_write)
+            case forbidden(Components.Responses.CodeScanningForbiddenWrite)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_write {
+            public var forbidden: Components.Responses.CodeScanningForbiddenWrite {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5012,12 +5065,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5035,12 +5088,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/patch(code-scanning/update-alert)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5060,14 +5113,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -5078,14 +5131,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -5098,7 +5151,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/get(code-scanning/get-autofix)`.
-    public enum code_hyphen_scanning_sol_get_hyphen_autofix {
+    public enum CodeScanningGetAutofix {
         public static let id: Swift.String = "code-scanning/get-autofix"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/GET/path`.
@@ -5106,52 +5159,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/GET/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Input.Path
+            public var path: Operations.CodeScanningGetAutofix.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_autofix.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetAutofix.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_autofix.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetAutofix.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Input.Headers
+            public var headers: Operations.CodeScanningGetAutofix.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Input.Headers = .init()
+                path: Operations.CodeScanningGetAutofix.Input.Path,
+                headers: Operations.CodeScanningGetAutofix.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5162,12 +5215,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_autofix)
+                    case json(Components.Schemas.CodeScanningAutofix)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_autofix {
+                    public var json: Components.Schemas.CodeScanningAutofix {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5177,12 +5230,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Output.Ok.Body
+                public var body: Operations.CodeScanningGetAutofix.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningGetAutofix.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5191,12 +5244,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/get(code-scanning/get-autofix)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Output.Ok)
+            case ok(Operations.CodeScanningGetAutofix.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_autofix.Output.Ok {
+            public var ok: Operations.CodeScanningGetAutofix.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5214,12 +5267,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/get(code-scanning/get-autofix)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.code_scanning_bad_request)
+            case badRequest(Components.Responses.CodeScanningBadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.code_scanning_bad_request {
+            public var badRequest: Components.Responses.CodeScanningBadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -5237,12 +5290,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/get(code-scanning/get-autofix)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5260,12 +5313,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/get(code-scanning/get-autofix)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5283,12 +5336,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/get(code-scanning/get-autofix)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5344,7 +5397,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)`.
-    public enum code_hyphen_scanning_sol_create_hyphen_autofix {
+    public enum CodeScanningCreateAutofix {
         public static let id: Swift.String = "code-scanning/create-autofix"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/path`.
@@ -5352,52 +5405,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Input.Path
+            public var path: Operations.CodeScanningCreateAutofix.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_create_hyphen_autofix.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningCreateAutofix.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_create_hyphen_autofix.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningCreateAutofix.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Input.Headers
+            public var headers: Operations.CodeScanningCreateAutofix.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Input.Headers = .init()
+                path: Operations.CodeScanningCreateAutofix.Input.Path,
+                headers: Operations.CodeScanningCreateAutofix.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5408,12 +5461,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_autofix)
+                    case json(Components.Schemas.CodeScanningAutofix)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_autofix {
+                    public var json: Components.Schemas.CodeScanningAutofix {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5423,12 +5476,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.Ok.Body
+                public var body: Operations.CodeScanningCreateAutofix.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningCreateAutofix.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5437,12 +5490,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.Ok)
+            case ok(Operations.CodeScanningCreateAutofix.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.Ok {
+            public var ok: Operations.CodeScanningCreateAutofix.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5459,12 +5512,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/responses/202/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/POST/responses/202/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_autofix)
+                    case json(Components.Schemas.CodeScanningAutofix)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_autofix {
+                    public var json: Components.Schemas.CodeScanningAutofix {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5474,12 +5527,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.Accepted.Body
+                public var body: Operations.CodeScanningCreateAutofix.Output.Accepted.Body
                 /// Creates a new `Accepted`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.Accepted.Body) {
+                public init(body: Operations.CodeScanningCreateAutofix.Output.Accepted.Body) {
                     self.body = body
                 }
             }
@@ -5488,12 +5541,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/202`.
             ///
             /// HTTP response code: `202 accepted`.
-            case accepted(Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.Accepted)
+            case accepted(Operations.CodeScanningCreateAutofix.Output.Accepted)
             /// The associated value of the enum case if `self` is `.accepted`.
             ///
             /// - Throws: An error if `self` is not `.accepted`.
             /// - SeeAlso: `.accepted`.
-            public var accepted: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.Accepted {
+            public var accepted: Operations.CodeScanningCreateAutofix.Output.Accepted {
                 get throws {
                     switch self {
                     case let .accepted(response):
@@ -5511,12 +5564,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.code_scanning_bad_request)
+            case badRequest(Components.Responses.CodeScanningBadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.code_scanning_bad_request {
+            public var badRequest: Components.Responses.CodeScanningBadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -5534,12 +5587,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_autofix_create_forbidden)
+            case forbidden(Components.Responses.CodeScanningAutofixCreateForbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_autofix_create_forbidden {
+            public var forbidden: Components.Responses.CodeScanningAutofixCreateForbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5557,12 +5610,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5584,12 +5637,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.UnprocessableContent)
+            case unprocessableContent(Operations.CodeScanningCreateAutofix.Output.UnprocessableContent)
+            /// Unprocessable Entity
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.CodeScanningCreateAutofix.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5607,12 +5668,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5666,7 +5727,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)`.
-    public enum code_hyphen_scanning_sol_commit_hyphen_autofix {
+    public enum CodeScanningCommitAutofix {
         public static let id: Swift.String = "code-scanning/commit-autofix"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/path`.
@@ -5674,50 +5735,50 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Path
+            public var path: Operations.CodeScanningCommitAutofix.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningCommitAutofix.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningCommitAutofix.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Headers
+            public var headers: Operations.CodeScanningCommitAutofix.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/requestBody/content/application\/json`.
-                case json(Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_commits)
+                case json(Components.Schemas.CodeScanningAutofixCommits)
             }
-            public var body: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Body?
+            public var body: Operations.CodeScanningCommitAutofix.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5725,9 +5786,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Headers = .init(),
-                body: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Body? = nil
+                path: Operations.CodeScanningCommitAutofix.Input.Path,
+                headers: Operations.CodeScanningCommitAutofix.Input.Headers = .init(),
+                body: Operations.CodeScanningCommitAutofix.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -5739,12 +5800,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_commits_hyphen_response)
+                    case json(Components.Schemas.CodeScanningAutofixCommitsResponse)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_autofix_hyphen_commits_hyphen_response {
+                    public var json: Components.Schemas.CodeScanningAutofixCommitsResponse {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5754,12 +5815,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output.Created.Body
+                public var body: Operations.CodeScanningCommitAutofix.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output.Created.Body) {
+                public init(body: Operations.CodeScanningCommitAutofix.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -5768,12 +5829,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output.Created)
+            case created(Operations.CodeScanningCommitAutofix.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output.Created {
+            public var created: Operations.CodeScanningCommitAutofix.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5791,12 +5852,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.code_scanning_bad_request)
+            case badRequest(Components.Responses.CodeScanningBadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.code_scanning_bad_request {
+            public var badRequest: Components.Responses.CodeScanningBadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -5814,12 +5875,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_write)
+            case forbidden(Components.Responses.CodeScanningForbiddenWrite)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_write {
+            public var forbidden: Components.Responses.CodeScanningForbiddenWrite {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5837,12 +5898,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5864,12 +5925,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output.UnprocessableContent)
+            case unprocessableContent(Operations.CodeScanningCommitAutofix.Output.UnprocessableContent)
+            /// Unprocessable Entity
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.CodeScanningCommitAutofix.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5887,12 +5956,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5944,7 +6013,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)`.
-    public enum code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances {
+    public enum CodeScanningListAlertInstances {
         public static let id: Swift.String = "code-scanning/list-alert-instances"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/path`.
@@ -5952,82 +6021,82 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Path
+            public var path: Operations.CodeScanningListAlertInstances.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/query/ref`.
-                public var ref: Components.Parameters.git_hyphen_ref?
+                public var ref: Components.Parameters.GitRef?
                 /// The number of the pull request for the results you want to list.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/query/pr`.
-                public var pr: Components.Parameters.pr_hyphen_alias?
+                public var pr: Components.Parameters.PrAlias?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - ref: The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///   - pr: The number of the pull request for the results you want to list.
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    ref: Components.Parameters.git_hyphen_ref? = nil,
-                    pr: Components.Parameters.pr_hyphen_alias? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    ref: Components.Parameters.GitRef? = nil,
+                    pr: Components.Parameters.PrAlias? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.ref = ref
                     self.pr = pr
                 }
             }
-            public var query: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Query
+            public var query: Operations.CodeScanningListAlertInstances.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListAlertInstances.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListAlertInstances.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Headers
+            public var headers: Operations.CodeScanningListAlertInstances.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6035,9 +6104,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Path,
-                query: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Query = .init(),
-                headers: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Input.Headers = .init()
+                path: Operations.CodeScanningListAlertInstances.Input.Path,
+                query: Operations.CodeScanningListAlertInstances.Input.Query = .init(),
+                headers: Operations.CodeScanningListAlertInstances.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6049,12 +6118,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance])
+                    case json([Components.Schemas.CodeScanningAlertInstance])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_instance] {
+                    public var json: [Components.Schemas.CodeScanningAlertInstance] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6064,12 +6133,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Output.Ok.Body
+                public var body: Operations.CodeScanningListAlertInstances.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningListAlertInstances.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6078,12 +6147,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Output.Ok)
+            case ok(Operations.CodeScanningListAlertInstances.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_list_hyphen_alert_hyphen_instances.Output.Ok {
+            public var ok: Operations.CodeScanningListAlertInstances.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6101,12 +6170,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6124,12 +6193,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6147,12 +6216,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances/get(code-scanning/list-alert-instances)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -6216,7 +6285,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)`.
-    public enum code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses {
+    public enum CodeScanningListRecentAnalyses {
         public static let id: Swift.String = "code-scanning/list-recent-analyses"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/path`.
@@ -6224,119 +6293,119 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Path
+            public var path: Operations.CodeScanningListRecentAnalyses.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/tool_name`.
-                public var tool_name: Components.Parameters.tool_hyphen_name?
+                public var toolName: Components.Parameters.ToolName?
                 /// The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/tool_guid`.
-                public var tool_guid: Components.Parameters.tool_hyphen_guid?
+                public var toolGuid: Components.Parameters.ToolGuid?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The number of the pull request for the results you want to list.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/pr`.
-                public var pr: Components.Parameters.pr_hyphen_alias?
+                public var pr: Components.Parameters.PrAlias?
                 /// The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/ref`.
-                public var ref: Components.Schemas.code_hyphen_scanning_hyphen_ref?
+                public var ref: Components.Schemas.CodeScanningRef?
                 /// Filter analyses belonging to the same SARIF upload.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/sarif_id`.
-                public var sarif_id: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id?
+                public var sarifId: Components.Schemas.CodeScanningAnalysisSarifId?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                 }
                 /// The property by which to sort the results.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/sort`.
-                public var sort: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Query.sortPayload?
+                public var sort: Operations.CodeScanningListRecentAnalyses.Input.Query.SortPayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - tool_name: The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
-                ///   - tool_guid: The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
+                ///   - toolName: The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
+                ///   - toolGuid: The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - pr: The number of the pull request for the results you want to list.
                 ///   - ref: The Git reference for the analyses you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
-                ///   - sarif_id: Filter analyses belonging to the same SARIF upload.
+                ///   - sarifId: Filter analyses belonging to the same SARIF upload.
                 ///   - direction: The direction to sort the results by.
                 ///   - sort: The property by which to sort the results.
                 public init(
-                    tool_name: Components.Parameters.tool_hyphen_name? = nil,
-                    tool_guid: Components.Parameters.tool_hyphen_guid? = nil,
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    pr: Components.Parameters.pr_hyphen_alias? = nil,
-                    ref: Components.Schemas.code_hyphen_scanning_hyphen_ref? = nil,
-                    sarif_id: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    sort: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Query.sortPayload? = nil
+                    toolName: Components.Parameters.ToolName? = nil,
+                    toolGuid: Components.Parameters.ToolGuid? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    pr: Components.Parameters.PrAlias? = nil,
+                    ref: Components.Schemas.CodeScanningRef? = nil,
+                    sarifId: Components.Schemas.CodeScanningAnalysisSarifId? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    sort: Operations.CodeScanningListRecentAnalyses.Input.Query.SortPayload? = nil
                 ) {
-                    self.tool_name = tool_name
-                    self.tool_guid = tool_guid
+                    self.toolName = toolName
+                    self.toolGuid = toolGuid
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.pr = pr
                     self.ref = ref
-                    self.sarif_id = sarif_id
+                    self.sarifId = sarifId
                     self.direction = direction
                     self.sort = sort
                 }
             }
-            public var query: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Query
+            public var query: Operations.CodeScanningListRecentAnalyses.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListRecentAnalyses.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListRecentAnalyses.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Headers
+            public var headers: Operations.CodeScanningListRecentAnalyses.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6344,9 +6413,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Path,
-                query: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Query = .init(),
-                headers: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Input.Headers = .init()
+                path: Operations.CodeScanningListRecentAnalyses.Input.Path,
+                query: Operations.CodeScanningListRecentAnalyses.Input.Query = .init(),
+                headers: Operations.CodeScanningListRecentAnalyses.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6358,12 +6427,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.code_hyphen_scanning_hyphen_analysis])
+                    case json([Components.Schemas.CodeScanningAnalysis])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.code_hyphen_scanning_hyphen_analysis] {
+                    public var json: [Components.Schemas.CodeScanningAnalysis] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6373,12 +6442,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Output.Ok.Body
+                public var body: Operations.CodeScanningListRecentAnalyses.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningListRecentAnalyses.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6387,12 +6456,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Output.Ok)
+            case ok(Operations.CodeScanningListRecentAnalyses.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_list_hyphen_recent_hyphen_analyses.Output.Ok {
+            public var ok: Operations.CodeScanningListRecentAnalyses.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6410,12 +6479,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6433,12 +6502,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6456,12 +6525,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/get(code-scanning/list-recent-analyses)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -6527,7 +6596,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)`.
-    public enum code_hyphen_scanning_sol_get_hyphen_analysis {
+    public enum CodeScanningGetAnalysis {
         public static let id: Swift.String = "code-scanning/get-analysis"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/GET/path`.
@@ -6535,52 +6604,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The ID of the analysis, as returned from the `GET /repos/{owner}/{repo}/code-scanning/analyses` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/GET/path/analysis_id`.
-                public var analysis_id: Swift.Int
+                public var analysisId: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - analysis_id: The ID of the analysis, as returned from the `GET /repos/{owner}/{repo}/code-scanning/analyses` operation.
+                ///   - analysisId: The ID of the analysis, as returned from the `GET /repos/{owner}/{repo}/code-scanning/analyses` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    analysis_id: Swift.Int
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    analysisId: Swift.Int
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.analysis_id = analysis_id
+                    self.analysisId = analysisId
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input.Path
+            public var path: Operations.CodeScanningGetAnalysis.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_analysis.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetAnalysis.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_analysis.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetAnalysis.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input.Headers
+            public var headers: Operations.CodeScanningGetAnalysis.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Input.Headers = .init()
+                path: Operations.CodeScanningGetAnalysis.Input.Path,
+                headers: Operations.CodeScanningGetAnalysis.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6591,12 +6660,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_analysis)
+                    case json(Components.Schemas.CodeScanningAnalysis)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_analysis {
+                    public var json: Components.Schemas.CodeScanningAnalysis {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6610,15 +6679,15 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/GET/responses/200/content/application\/json+sarif`.
-                    case application_json_plus_sarif(OpenAPIRuntime.HTTPBody)
-                    /// The associated value of the enum case if `self` is `.application_json_plus_sarif`.
+                    case applicationJsonSarif(OpenAPIRuntime.HTTPBody)
+                    /// The associated value of the enum case if `self` is `.applicationJsonSarif`.
                     ///
-                    /// - Throws: An error if `self` is not `.application_json_plus_sarif`.
-                    /// - SeeAlso: `.application_json_plus_sarif`.
-                    public var application_json_plus_sarif: OpenAPIRuntime.HTTPBody {
+                    /// - Throws: An error if `self` is not `.applicationJsonSarif`.
+                    /// - SeeAlso: `.applicationJsonSarif`.
+                    public var applicationJsonSarif: OpenAPIRuntime.HTTPBody {
                         get throws {
                             switch self {
-                            case let .application_json_plus_sarif(body):
+                            case let .applicationJsonSarif(body):
                                 return body
                             default:
                                 try throwUnexpectedResponseBody(
@@ -6630,12 +6699,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Output.Ok.Body
+                public var body: Operations.CodeScanningGetAnalysis.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningGetAnalysis.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6644,12 +6713,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Output.Ok)
+            case ok(Operations.CodeScanningGetAnalysis.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_analysis.Output.Ok {
+            public var ok: Operations.CodeScanningGetAnalysis.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6667,12 +6736,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6690,12 +6759,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6708,17 +6777,40 @@ public enum Operations {
                     }
                 }
             }
+            /// Response if analysis could not be processed
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.UnprocessableAnalysis)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.UnprocessableAnalysis {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
+                            response: self
+                        )
+                    }
+                }
+            }
             /// Service unavailable
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -6738,14 +6830,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_json_plus_sarif
+            case applicationJsonSarif
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/json+sarif":
-                    self = .application_json_plus_sarif
+                    self = .applicationJsonSarif
                 default:
                     self = .other(rawValue)
                 }
@@ -6756,14 +6848,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_json_plus_sarif:
+                case .applicationJsonSarif:
                     return "application/json+sarif"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_json_plus_sarif
+                    .applicationJsonSarif
                 ]
             }
         }
@@ -6837,7 +6929,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)`.
-    public enum code_hyphen_scanning_sol_delete_hyphen_analysis {
+    public enum CodeScanningDeleteAnalysis {
         public static let id: Swift.String = "code-scanning/delete-analysis"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/path`.
@@ -6845,59 +6937,59 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The ID of the analysis, as returned from the `GET /repos/{owner}/{repo}/code-scanning/analyses` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/path/analysis_id`.
-                public var analysis_id: Swift.Int
+                public var analysisId: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - analysis_id: The ID of the analysis, as returned from the `GET /repos/{owner}/{repo}/code-scanning/analyses` operation.
+                ///   - analysisId: The ID of the analysis, as returned from the `GET /repos/{owner}/{repo}/code-scanning/analyses` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    analysis_id: Swift.Int
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    analysisId: Swift.Int
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.analysis_id = analysis_id
+                    self.analysisId = analysisId
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Path
+            public var path: Operations.CodeScanningDeleteAnalysis.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/query`.
             public struct Query: Sendable, Hashable {
                 /// Allow deletion if the specified analysis is the last in a set. If you attempt to delete the final analysis in a set without setting this parameter to `true`, you'll get a 400 response with the message: `Analysis is last of its type and deletion may result in the loss of historical alert data. Please specify confirm_delete.`
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/query/confirm_delete`.
-                public var confirm_delete: Swift.String?
+                public var confirmDelete: Swift.String?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - confirm_delete: Allow deletion if the specified analysis is the last in a set. If you attempt to delete the final analysis in a set without setting this parameter to `true`, you'll get a 400 response with the message: `Analysis is last of its type and deletion may result in the loss of historical alert data. Please specify confirm_delete.`
-                public init(confirm_delete: Swift.String? = nil) {
-                    self.confirm_delete = confirm_delete
+                ///   - confirmDelete: Allow deletion if the specified analysis is the last in a set. If you attempt to delete the final analysis in a set without setting this parameter to `true`, you'll get a 400 response with the message: `Analysis is last of its type and deletion may result in the loss of historical alert data. Please specify confirm_delete.`
+                public init(confirmDelete: Swift.String? = nil) {
+                    self.confirmDelete = confirmDelete
                 }
             }
-            public var query: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Query
+            public var query: Operations.CodeScanningDeleteAnalysis.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningDeleteAnalysis.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningDeleteAnalysis.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Headers
+            public var headers: Operations.CodeScanningDeleteAnalysis.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6905,9 +6997,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Path,
-                query: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Query = .init(),
-                headers: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Input.Headers = .init()
+                path: Operations.CodeScanningDeleteAnalysis.Input.Path,
+                query: Operations.CodeScanningDeleteAnalysis.Input.Query = .init(),
+                headers: Operations.CodeScanningDeleteAnalysis.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6919,12 +7011,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/DELETE/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_deletion)
+                    case json(Components.Schemas.CodeScanningAnalysisDeletion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_deletion {
+                    public var json: Components.Schemas.CodeScanningAnalysisDeletion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6934,12 +7026,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Output.Ok.Body
+                public var body: Operations.CodeScanningDeleteAnalysis.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningDeleteAnalysis.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6948,12 +7040,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Output.Ok)
+            case ok(Operations.CodeScanningDeleteAnalysis.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_delete_hyphen_analysis.Output.Ok {
+            public var ok: Operations.CodeScanningDeleteAnalysis.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6971,12 +7063,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -6994,12 +7086,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_write)
+            case forbidden(Components.Responses.CodeScanningForbiddenWrite)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_write {
+            public var forbidden: Components.Responses.CodeScanningForbiddenWrite {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7017,12 +7109,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7040,12 +7132,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/delete(code-scanning/delete-analysis)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -7065,14 +7157,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -7083,14 +7175,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -7103,7 +7195,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)`.
-    public enum code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases {
+    public enum CodeScanningListCodeqlDatabases {
         public static let id: Swift.String = "code-scanning/list-codeql-databases"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/GET/path`.
@@ -7111,45 +7203,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Input.Path
+            public var path: Operations.CodeScanningListCodeqlDatabases.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListCodeqlDatabases.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningListCodeqlDatabases.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Input.Headers
+            public var headers: Operations.CodeScanningListCodeqlDatabases.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Input.Headers = .init()
+                path: Operations.CodeScanningListCodeqlDatabases.Input.Path,
+                headers: Operations.CodeScanningListCodeqlDatabases.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7160,12 +7252,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.code_hyphen_scanning_hyphen_codeql_hyphen_database])
+                    case json([Components.Schemas.CodeScanningCodeqlDatabase])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.code_hyphen_scanning_hyphen_codeql_hyphen_database] {
+                    public var json: [Components.Schemas.CodeScanningCodeqlDatabase] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7175,12 +7267,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output.Ok.Body
+                public var body: Operations.CodeScanningListCodeqlDatabases.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningListCodeqlDatabases.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7189,12 +7281,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output.Ok)
+            case ok(Operations.CodeScanningListCodeqlDatabases.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output.Ok {
+            public var ok: Operations.CodeScanningListCodeqlDatabases.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7212,12 +7304,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7235,12 +7327,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7258,12 +7350,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/get(code-scanning/list-codeql-databases)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -7321,7 +7413,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)`.
-    public enum code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database {
+    public enum CodeScanningGetCodeqlDatabase {
         public static let id: Swift.String = "code-scanning/get-codeql-database"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/GET/path`.
@@ -7329,11 +7421,11 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The language of the CodeQL database.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/GET/path/language`.
@@ -7345,8 +7437,8 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - language: The language of the CodeQL database.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
                     language: Swift.String
                 ) {
                     self.owner = owner
@@ -7354,27 +7446,27 @@ public enum Operations {
                     self.language = language
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input.Path
+            public var path: Operations.CodeScanningGetCodeqlDatabase.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetCodeqlDatabase.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetCodeqlDatabase.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input.Headers
+            public var headers: Operations.CodeScanningGetCodeqlDatabase.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Input.Headers = .init()
+                path: Operations.CodeScanningGetCodeqlDatabase.Input.Path,
+                headers: Operations.CodeScanningGetCodeqlDatabase.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7385,12 +7477,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_codeql_hyphen_database)
+                    case json(Components.Schemas.CodeScanningCodeqlDatabase)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_codeql_hyphen_database {
+                    public var json: Components.Schemas.CodeScanningCodeqlDatabase {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7400,12 +7492,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output.Ok.Body
+                public var body: Operations.CodeScanningGetCodeqlDatabase.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningGetCodeqlDatabase.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7414,12 +7506,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output.Ok)
+            case ok(Operations.CodeScanningGetCodeqlDatabase.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_codeql_hyphen_database.Output.Ok {
+            public var ok: Operations.CodeScanningGetCodeqlDatabase.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7437,12 +7529,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/302`.
             ///
             /// HTTP response code: `302 found`.
-            case found(Components.Responses.found)
+            case found(Components.Responses.Found)
+            /// Found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/302`.
+            ///
+            /// HTTP response code: `302 found`.
+            public static var found: Self {
+                .found(.init())
+            }
             /// The associated value of the enum case if `self` is `.found`.
             ///
             /// - Throws: An error if `self` is not `.found`.
             /// - SeeAlso: `.found`.
-            public var found: Components.Responses.found {
+            public var found: Components.Responses.Found {
                 get throws {
                     switch self {
                     case let .found(response):
@@ -7460,12 +7560,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7483,12 +7583,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7506,12 +7606,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -7563,7 +7663,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/code-scanning/codeql/databases/{language}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)`.
-    public enum code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database {
+    public enum CodeScanningDeleteCodeqlDatabase {
         public static let id: Swift.String = "code-scanning/delete-codeql-database"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/path`.
@@ -7571,11 +7671,11 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The language of the CodeQL database.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/path/language`.
@@ -7587,8 +7687,8 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - language: The language of the CodeQL database.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
                     language: Swift.String
                 ) {
                     self.owner = owner
@@ -7596,27 +7696,27 @@ public enum Operations {
                     self.language = language
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Path
+            public var path: Operations.CodeScanningDeleteCodeqlDatabase.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningDeleteCodeqlDatabase.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningDeleteCodeqlDatabase.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Headers
+            public var headers: Operations.CodeScanningDeleteCodeqlDatabase.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Input.Headers = .init()
+                path: Operations.CodeScanningDeleteCodeqlDatabase.Input.Path,
+                headers: Operations.CodeScanningDeleteCodeqlDatabase.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7632,12 +7732,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output.NoContent)
+            case noContent(Operations.CodeScanningDeleteCodeqlDatabase.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output.NoContent {
+            public var noContent: Operations.CodeScanningDeleteCodeqlDatabase.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7655,12 +7763,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_write)
+            case forbidden(Components.Responses.CodeScanningForbiddenWrite)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_write {
+            public var forbidden: Components.Responses.CodeScanningForbiddenWrite {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7678,12 +7786,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7701,12 +7809,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -7763,7 +7871,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)`.
-    public enum code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis {
+    public enum CodeScanningCreateVariantAnalysis {
         public static let id: Swift.String = "code-scanning/create-variant-analysis"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/path`.
@@ -7771,62 +7879,62 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Path
+            public var path: Operations.CodeScanningCreateVariantAnalysis.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningCreateVariantAnalysis.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningCreateVariantAnalysis.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Headers
+            public var headers: Operations.CodeScanningCreateVariantAnalysis.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json`.
-                @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                @frozen public enum JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case1`.
                     public struct Case1Payload: Codable, Hashable, Sendable {
                         /// Creates a new `Case1Payload`.
                         public init() {}
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case1`.
-                    case case1(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body.jsonPayload.Case1Payload)
+                    case case1(Operations.CodeScanningCreateVariantAnalysis.Input.Body.JsonPayload.Case1Payload)
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case2`.
                     public struct Case2Payload: Codable, Hashable, Sendable {
                         /// Creates a new `Case2Payload`.
                         public init() {}
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case2`.
-                    case case2(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body.jsonPayload.Case2Payload)
+                    case case2(Operations.CodeScanningCreateVariantAnalysis.Input.Body.JsonPayload.Case2Payload)
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case3`.
                     public struct Case3Payload: Codable, Hashable, Sendable {
                         /// Creates a new `Case3Payload`.
                         public init() {}
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/json/case3`.
-                    case case3(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body.jsonPayload.Case3Payload)
+                    case case3(Operations.CodeScanningCreateVariantAnalysis.Input.Body.JsonPayload.Case3Payload)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
@@ -7865,9 +7973,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/requestBody/content/application\/json`.
-                case json(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body.jsonPayload)
+                case json(Operations.CodeScanningCreateVariantAnalysis.Input.Body.JsonPayload)
             }
-            public var body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body
+            public var body: Operations.CodeScanningCreateVariantAnalysis.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7875,9 +7983,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Headers = .init(),
-                body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input.Body
+                path: Operations.CodeScanningCreateVariantAnalysis.Input.Path,
+                headers: Operations.CodeScanningCreateVariantAnalysis.Input.Headers = .init(),
+                body: Operations.CodeScanningCreateVariantAnalysis.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7889,12 +7997,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis)
+                    case json(Components.Schemas.CodeScanningVariantAnalysis)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis {
+                    public var json: Components.Schemas.CodeScanningVariantAnalysis {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7904,12 +8012,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.Created.Body
+                public var body: Operations.CodeScanningCreateVariantAnalysis.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.Created.Body) {
+                public init(body: Operations.CodeScanningCreateVariantAnalysis.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -7918,12 +8026,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.Created)
+            case created(Operations.CodeScanningCreateVariantAnalysis.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.Created {
+            public var created: Operations.CodeScanningCreateVariantAnalysis.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7941,12 +8049,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7963,12 +8071,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/responses/422/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/POST/responses/422/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7978,12 +8086,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.UnprocessableContent.Body
+                public var body: Operations.CodeScanningCreateVariantAnalysis.Output.UnprocessableContent.Body
                 /// Creates a new `UnprocessableContent`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.UnprocessableContent.Body) {
+                public init(body: Operations.CodeScanningCreateVariantAnalysis.Output.UnprocessableContent.Body) {
                     self.body = body
                 }
             }
@@ -7992,12 +8100,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.UnprocessableContent)
+            case unprocessableContent(Operations.CodeScanningCreateVariantAnalysis.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.CodeScanningCreateVariantAnalysis.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8015,12 +8123,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/post(code-scanning/create-variant-analysis)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -8072,7 +8180,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)`.
-    public enum code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis {
+    public enum CodeScanningGetVariantAnalysis {
         public static let id: Swift.String = "code-scanning/get-variant-analysis"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/path`.
@@ -8080,52 +8188,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the variant analysis.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/path/codeql_variant_analysis_id`.
-                public var codeql_variant_analysis_id: Swift.Int
+                public var codeqlVariantAnalysisId: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - codeql_variant_analysis_id: The unique identifier of the variant analysis.
+                ///   - codeqlVariantAnalysisId: The unique identifier of the variant analysis.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    codeql_variant_analysis_id: Swift.Int
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    codeqlVariantAnalysisId: Swift.Int
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.codeql_variant_analysis_id = codeql_variant_analysis_id
+                    self.codeqlVariantAnalysisId = codeqlVariantAnalysisId
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Path
+            public var path: Operations.CodeScanningGetVariantAnalysis.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetVariantAnalysis.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetVariantAnalysis.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Headers
+            public var headers: Operations.CodeScanningGetVariantAnalysis.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Input.Headers = .init()
+                path: Operations.CodeScanningGetVariantAnalysis.Input.Path,
+                headers: Operations.CodeScanningGetVariantAnalysis.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8136,12 +8244,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis)
+                    case json(Components.Schemas.CodeScanningVariantAnalysis)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis {
+                    public var json: Components.Schemas.CodeScanningVariantAnalysis {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8151,12 +8259,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output.Ok.Body
+                public var body: Operations.CodeScanningGetVariantAnalysis.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningGetVariantAnalysis.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8165,12 +8273,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output.Ok)
+            case ok(Operations.CodeScanningGetVariantAnalysis.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis.Output.Ok {
+            public var ok: Operations.CodeScanningGetVariantAnalysis.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8188,12 +8296,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8211,12 +8319,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/get(code-scanning/get-variant-analysis)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -8268,7 +8376,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)`.
-    public enum code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task {
+    public enum CodeScanningGetVariantAnalysisRepoTask {
         public static let id: Swift.String = "code-scanning/get-variant-analysis-repo-task"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path`.
@@ -8276,7 +8384,7 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the controller repository.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/repo`.
@@ -8284,58 +8392,58 @@ public enum Operations {
                 /// The ID of the variant analysis.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/codeql_variant_analysis_id`.
-                public var codeql_variant_analysis_id: Swift.Int
+                public var codeqlVariantAnalysisId: Swift.Int
                 /// The account owner of the variant analysis repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/repo_owner`.
-                public var repo_owner: Swift.String
+                public var repoOwner: Swift.String
                 /// The name of the variant analysis repository.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/path/repo_name`.
-                public var repo_name: Swift.String
+                public var repoName: Swift.String
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the controller repository.
-                ///   - codeql_variant_analysis_id: The ID of the variant analysis.
-                ///   - repo_owner: The account owner of the variant analysis repository. The name is not case sensitive.
-                ///   - repo_name: The name of the variant analysis repository.
+                ///   - codeqlVariantAnalysisId: The ID of the variant analysis.
+                ///   - repoOwner: The account owner of the variant analysis repository. The name is not case sensitive.
+                ///   - repoName: The name of the variant analysis repository.
                 public init(
-                    owner: Components.Parameters.owner,
+                    owner: Components.Parameters.Owner,
                     repo: Swift.String,
-                    codeql_variant_analysis_id: Swift.Int,
-                    repo_owner: Swift.String,
-                    repo_name: Swift.String
+                    codeqlVariantAnalysisId: Swift.Int,
+                    repoOwner: Swift.String,
+                    repoName: Swift.String
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.codeql_variant_analysis_id = codeql_variant_analysis_id
-                    self.repo_owner = repo_owner
-                    self.repo_name = repo_name
+                    self.codeqlVariantAnalysisId = codeqlVariantAnalysisId
+                    self.repoOwner = repoOwner
+                    self.repoName = repoName
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Path
+            public var path: Operations.CodeScanningGetVariantAnalysisRepoTask.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetVariantAnalysisRepoTask.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetVariantAnalysisRepoTask.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Headers
+            public var headers: Operations.CodeScanningGetVariantAnalysisRepoTask.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Input.Headers = .init()
+                path: Operations.CodeScanningGetVariantAnalysisRepoTask.Input.Path,
+                headers: Operations.CodeScanningGetVariantAnalysisRepoTask.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8346,12 +8454,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task)
+                    case json(Components.Schemas.CodeScanningVariantAnalysisRepoTask)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task {
+                    public var json: Components.Schemas.CodeScanningVariantAnalysisRepoTask {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8361,12 +8469,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output.Ok.Body
+                public var body: Operations.CodeScanningGetVariantAnalysisRepoTask.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningGetVariantAnalysisRepoTask.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8375,12 +8483,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output.Ok)
+            case ok(Operations.CodeScanningGetVariantAnalysisRepoTask.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_variant_hyphen_analysis_hyphen_repo_hyphen_task.Output.Ok {
+            public var ok: Operations.CodeScanningGetVariantAnalysisRepoTask.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8398,12 +8506,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8421,12 +8529,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}/get(code-scanning/get-variant-analysis-repo-task)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -8478,7 +8586,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)`.
-    public enum code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup {
+    public enum CodeScanningGetDefaultSetup {
         public static let id: Swift.String = "code-scanning/get-default-setup"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/GET/path`.
@@ -8486,45 +8594,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Input.Path
+            public var path: Operations.CodeScanningGetDefaultSetup.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetDefaultSetup.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetDefaultSetup.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Input.Headers
+            public var headers: Operations.CodeScanningGetDefaultSetup.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Input.Headers = .init()
+                path: Operations.CodeScanningGetDefaultSetup.Input.Path,
+                headers: Operations.CodeScanningGetDefaultSetup.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8535,12 +8643,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup)
+                    case json(Components.Schemas.CodeScanningDefaultSetup)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup {
+                    public var json: Components.Schemas.CodeScanningDefaultSetup {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8550,12 +8658,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Output.Ok.Body
+                public var body: Operations.CodeScanningGetDefaultSetup.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningGetDefaultSetup.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8564,12 +8672,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Output.Ok)
+            case ok(Operations.CodeScanningGetDefaultSetup.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_default_hyphen_setup.Output.Ok {
+            public var ok: Operations.CodeScanningGetDefaultSetup.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8587,12 +8695,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8610,12 +8718,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8633,12 +8741,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/get(code-scanning/get-default-setup)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -8690,7 +8798,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/code-scanning/default-setup`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)`.
-    public enum code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup {
+    public enum CodeScanningUpdateDefaultSetup {
         public static let id: Swift.String = "code-scanning/update-default-setup"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/path`.
@@ -8698,43 +8806,43 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Path
+            public var path: Operations.CodeScanningUpdateDefaultSetup.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningUpdateDefaultSetup.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningUpdateDefaultSetup.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Headers
+            public var headers: Operations.CodeScanningUpdateDefaultSetup.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/requestBody/content/application\/json`.
-                case json(Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update)
+                case json(Components.Schemas.CodeScanningDefaultSetupUpdate)
             }
-            public var body: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Body
+            public var body: Operations.CodeScanningUpdateDefaultSetup.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8742,9 +8850,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Headers = .init(),
-                body: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Input.Body
+                path: Operations.CodeScanningUpdateDefaultSetup.Input.Path,
+                headers: Operations.CodeScanningUpdateDefaultSetup.Input.Headers = .init(),
+                body: Operations.CodeScanningUpdateDefaultSetup.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -8756,12 +8864,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.empty_hyphen_object)
+                    case json(Components.Schemas.EmptyObject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.empty_hyphen_object {
+                    public var json: Components.Schemas.EmptyObject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8771,12 +8879,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output.Ok.Body
+                public var body: Operations.CodeScanningUpdateDefaultSetup.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningUpdateDefaultSetup.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8785,12 +8893,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output.Ok)
+            case ok(Operations.CodeScanningUpdateDefaultSetup.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output.Ok {
+            public var ok: Operations.CodeScanningUpdateDefaultSetup.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8807,12 +8915,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/responses/202/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/default-setup/PATCH/responses/202/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update_hyphen_response)
+                    case json(Components.Schemas.CodeScanningDefaultSetupUpdateResponse)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update_hyphen_response {
+                    public var json: Components.Schemas.CodeScanningDefaultSetupUpdateResponse {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8822,12 +8930,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output.Accepted.Body
+                public var body: Operations.CodeScanningUpdateDefaultSetup.Output.Accepted.Body
                 /// Creates a new `Accepted`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output.Accepted.Body) {
+                public init(body: Operations.CodeScanningUpdateDefaultSetup.Output.Accepted.Body) {
                     self.body = body
                 }
             }
@@ -8836,12 +8944,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)/responses/202`.
             ///
             /// HTTP response code: `202 accepted`.
-            case accepted(Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output.Accepted)
+            case accepted(Operations.CodeScanningUpdateDefaultSetup.Output.Accepted)
             /// The associated value of the enum case if `self` is `.accepted`.
             ///
             /// - Throws: An error if `self` is not `.accepted`.
             /// - SeeAlso: `.accepted`.
-            public var accepted: Operations.code_hyphen_scanning_sol_update_hyphen_default_hyphen_setup.Output.Accepted {
+            public var accepted: Operations.CodeScanningUpdateDefaultSetup.Output.Accepted {
                 get throws {
                     switch self {
                     case let .accepted(response):
@@ -8859,12 +8967,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_write)
+            case forbidden(Components.Responses.CodeScanningForbiddenWrite)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_write {
+            public var forbidden: Components.Responses.CodeScanningForbiddenWrite {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8882,12 +8990,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8905,12 +9013,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.code_scanning_conflict)
+            case conflict(Components.Responses.CodeScanningConflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.code_scanning_conflict {
+            public var conflict: Components.Responses.CodeScanningConflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -8928,12 +9036,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/default-setup/patch(code-scanning/update-default-setup)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -9016,7 +9124,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/code-scanning/sarifs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)`.
-    public enum code_hyphen_scanning_sol_upload_hyphen_sarif {
+    public enum CodeScanningUploadSarif {
         public static let id: Swift.String = "code-scanning/upload-sarif"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/path`.
@@ -9024,128 +9132,128 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Path
+            public var path: Operations.CodeScanningUploadSarif.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningUploadSarif.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningUploadSarif.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Headers
+            public var headers: Operations.CodeScanningUploadSarif.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/json/commit_sha`.
-                    public var commit_sha: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_commit_hyphen_sha
+                    public var commitSha: Components.Schemas.CodeScanningAnalysisCommitSha
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/json/ref`.
-                    public var ref: Components.Schemas.code_hyphen_scanning_hyphen_ref_hyphen_full
+                    public var ref: Components.Schemas.CodeScanningRefFull
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/json/sarif`.
-                    public var sarif: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_file
+                    public var sarif: Components.Schemas.CodeScanningAnalysisSarifFile
                     /// The base directory used in the analysis, as it appears in the SARIF file.
                     /// This property is used to convert file paths from absolute to relative, so that alerts can be mapped to their correct location in the repository.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/json/checkout_uri`.
-                    public var checkout_uri: Swift.String?
+                    public var checkoutUri: Swift.String?
                     /// The time that the analysis run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/json/started_at`.
-                    public var started_at: Foundation.Date?
+                    public var startedAt: Foundation.Date?
                     /// The name of the tool used to generate the code scanning analysis. If this parameter is not used, the tool name defaults to "API". If the uploaded SARIF contains a tool GUID, this will be available for filtering using the `tool_guid` parameter of operations such as `GET /repos/{owner}/{repo}/code-scanning/alerts`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/json/tool_name`.
-                    public var tool_name: Swift.String?
+                    public var toolName: Swift.String?
                     /// Whether the SARIF file will be validated according to the code scanning specifications.
                     /// This parameter is intended to help integrators ensure that the uploaded SARIF files are correctly rendered by code scanning.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/json/validate`.
                     public var validate: Swift.Bool?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - commit_sha:
+                    ///   - commitSha:
                     ///   - ref:
                     ///   - sarif:
-                    ///   - checkout_uri: The base directory used in the analysis, as it appears in the SARIF file.
-                    ///   - started_at: The time that the analysis run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                    ///   - tool_name: The name of the tool used to generate the code scanning analysis. If this parameter is not used, the tool name defaults to "API". If the uploaded SARIF contains a tool GUID, this will be available for filtering using the `tool_guid` parameter of operations such as `GET /repos/{owner}/{repo}/code-scanning/alerts`.
+                    ///   - checkoutUri: The base directory used in the analysis, as it appears in the SARIF file.
+                    ///   - startedAt: The time that the analysis run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+                    ///   - toolName: The name of the tool used to generate the code scanning analysis. If this parameter is not used, the tool name defaults to "API". If the uploaded SARIF contains a tool GUID, this will be available for filtering using the `tool_guid` parameter of operations such as `GET /repos/{owner}/{repo}/code-scanning/alerts`.
                     ///   - validate: Whether the SARIF file will be validated according to the code scanning specifications.
                     public init(
-                        commit_sha: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_commit_hyphen_sha,
-                        ref: Components.Schemas.code_hyphen_scanning_hyphen_ref_hyphen_full,
-                        sarif: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_file,
-                        checkout_uri: Swift.String? = nil,
-                        started_at: Foundation.Date? = nil,
-                        tool_name: Swift.String? = nil,
+                        commitSha: Components.Schemas.CodeScanningAnalysisCommitSha,
+                        ref: Components.Schemas.CodeScanningRefFull,
+                        sarif: Components.Schemas.CodeScanningAnalysisSarifFile,
+                        checkoutUri: Swift.String? = nil,
+                        startedAt: Foundation.Date? = nil,
+                        toolName: Swift.String? = nil,
                         validate: Swift.Bool? = nil
                     ) {
-                        self.commit_sha = commit_sha
+                        self.commitSha = commitSha
                         self.ref = ref
                         self.sarif = sarif
-                        self.checkout_uri = checkout_uri
-                        self.started_at = started_at
-                        self.tool_name = tool_name
+                        self.checkoutUri = checkoutUri
+                        self.startedAt = startedAt
+                        self.toolName = toolName
                         self.validate = validate
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case commit_sha
+                        case commitSha = "commit_sha"
                         case ref
                         case sarif
-                        case checkout_uri
-                        case started_at
-                        case tool_name
+                        case checkoutUri = "checkout_uri"
+                        case startedAt = "started_at"
+                        case toolName = "tool_name"
                         case validate
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        commit_sha = try container.decode(
-                            Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_commit_hyphen_sha.self,
-                            forKey: .commit_sha
+                        self.commitSha = try container.decode(
+                            Components.Schemas.CodeScanningAnalysisCommitSha.self,
+                            forKey: .commitSha
                         )
-                        ref = try container.decode(
-                            Components.Schemas.code_hyphen_scanning_hyphen_ref_hyphen_full.self,
+                        self.ref = try container.decode(
+                            Components.Schemas.CodeScanningRefFull.self,
                             forKey: .ref
                         )
-                        sarif = try container.decode(
-                            Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_file.self,
+                        self.sarif = try container.decode(
+                            Components.Schemas.CodeScanningAnalysisSarifFile.self,
                             forKey: .sarif
                         )
-                        checkout_uri = try container.decodeIfPresent(
+                        self.checkoutUri = try container.decodeIfPresent(
                             Swift.String.self,
-                            forKey: .checkout_uri
+                            forKey: .checkoutUri
                         )
-                        started_at = try container.decodeIfPresent(
+                        self.startedAt = try container.decodeIfPresent(
                             Foundation.Date.self,
-                            forKey: .started_at
+                            forKey: .startedAt
                         )
-                        tool_name = try container.decodeIfPresent(
+                        self.toolName = try container.decodeIfPresent(
                             Swift.String.self,
-                            forKey: .tool_name
+                            forKey: .toolName
                         )
-                        validate = try container.decodeIfPresent(
+                        self.validate = try container.decodeIfPresent(
                             Swift.Bool.self,
                             forKey: .validate
                         )
@@ -9161,9 +9269,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/requestBody/content/application\/json`.
-                case json(Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Body.jsonPayload)
+                case json(Operations.CodeScanningUploadSarif.Input.Body.JsonPayload)
             }
-            public var body: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Body
+            public var body: Operations.CodeScanningUploadSarif.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -9171,9 +9279,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Headers = .init(),
-                body: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Input.Body
+                path: Operations.CodeScanningUploadSarif.Input.Path,
+                headers: Operations.CodeScanningUploadSarif.Input.Headers = .init(),
+                body: Operations.CodeScanningUploadSarif.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -9185,12 +9293,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/responses/202/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/POST/responses/202/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_sarifs_hyphen_receipt)
+                    case json(Components.Schemas.CodeScanningSarifsReceipt)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_sarifs_hyphen_receipt {
+                    public var json: Components.Schemas.CodeScanningSarifsReceipt {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9200,12 +9308,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.Accepted.Body
+                public var body: Operations.CodeScanningUploadSarif.Output.Accepted.Body
                 /// Creates a new `Accepted`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.Accepted.Body) {
+                public init(body: Operations.CodeScanningUploadSarif.Output.Accepted.Body) {
                     self.body = body
                 }
             }
@@ -9214,12 +9322,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/202`.
             ///
             /// HTTP response code: `202 accepted`.
-            case accepted(Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.Accepted)
+            case accepted(Operations.CodeScanningUploadSarif.Output.Accepted)
             /// The associated value of the enum case if `self` is `.accepted`.
             ///
             /// - Throws: An error if `self` is not `.accepted`.
             /// - SeeAlso: `.accepted`.
-            public var accepted: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.Accepted {
+            public var accepted: Operations.CodeScanningUploadSarif.Output.Accepted {
                 get throws {
                     switch self {
                     case let .accepted(response):
@@ -9241,12 +9349,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.BadRequest)
+            case badRequest(Operations.CodeScanningUploadSarif.Output.BadRequest)
+            /// Bad Request if the sarif field is invalid
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.BadRequest {
+            public var badRequest: Operations.CodeScanningUploadSarif.Output.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -9264,12 +9380,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_write)
+            case forbidden(Components.Responses.CodeScanningForbiddenWrite)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_write {
+            public var forbidden: Components.Responses.CodeScanningForbiddenWrite {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9287,12 +9403,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9314,12 +9430,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/413`.
             ///
             /// HTTP response code: `413 contentTooLarge`.
-            case contentTooLarge(Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.ContentTooLarge)
+            case contentTooLarge(Operations.CodeScanningUploadSarif.Output.ContentTooLarge)
+            /// Payload Too Large if the sarif field is too large
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/413`.
+            ///
+            /// HTTP response code: `413 contentTooLarge`.
+            public static var contentTooLarge: Self {
+                .contentTooLarge(.init())
+            }
             /// The associated value of the enum case if `self` is `.contentTooLarge`.
             ///
             /// - Throws: An error if `self` is not `.contentTooLarge`.
             /// - SeeAlso: `.contentTooLarge`.
-            public var contentTooLarge: Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.ContentTooLarge {
+            public var contentTooLarge: Operations.CodeScanningUploadSarif.Output.ContentTooLarge {
                 get throws {
                     switch self {
                     case let .contentTooLarge(response):
@@ -9337,12 +9461,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -9393,7 +9517,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)`.
-    public enum code_hyphen_scanning_sol_get_hyphen_sarif {
+    public enum CodeScanningGetSarif {
         public static let id: Swift.String = "code-scanning/get-sarif"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/GET/path`.
@@ -9401,52 +9525,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The SARIF ID obtained after uploading.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/GET/path/sarif_id`.
-                public var sarif_id: Swift.String
+                public var sarifId: Swift.String
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - sarif_id: The SARIF ID obtained after uploading.
+                ///   - sarifId: The SARIF ID obtained after uploading.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    sarif_id: Swift.String
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    sarifId: Swift.String
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.sarif_id = sarif_id
+                    self.sarifId = sarifId
                 }
             }
-            public var path: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Input.Path
+            public var path: Operations.CodeScanningGetSarif.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_sarif.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetSarif.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.code_hyphen_scanning_sol_get_hyphen_sarif.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.CodeScanningGetSarif.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Input.Headers
+            public var headers: Operations.CodeScanningGetSarif.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Input.Path,
-                headers: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Input.Headers = .init()
+                path: Operations.CodeScanningGetSarif.Input.Path,
+                headers: Operations.CodeScanningGetSarif.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -9457,12 +9581,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.code_hyphen_scanning_hyphen_sarifs_hyphen_status)
+                    case json(Components.Schemas.CodeScanningSarifsStatus)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.code_hyphen_scanning_hyphen_sarifs_hyphen_status {
+                    public var json: Components.Schemas.CodeScanningSarifsStatus {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9472,12 +9596,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output.Ok.Body
+                public var body: Operations.CodeScanningGetSarif.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output.Ok.Body) {
+                public init(body: Operations.CodeScanningGetSarif.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -9486,12 +9610,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output.Ok)
+            case ok(Operations.CodeScanningGetSarif.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output.Ok {
+            public var ok: Operations.CodeScanningGetSarif.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9509,12 +9633,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.code_scanning_forbidden_read)
+            case forbidden(Components.Responses.CodeScanningForbiddenRead)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.code_scanning_forbidden_read {
+            public var forbidden: Components.Responses.CodeScanningForbiddenRead {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9536,12 +9660,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output.NotFound)
+            case notFound(Operations.CodeScanningGetSarif.Output.NotFound)
+            /// Not Found if the sarif id does not match any upload
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output.NotFound {
+            public var notFound: Operations.CodeScanningGetSarif.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9559,12 +9691,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
