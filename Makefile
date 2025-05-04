@@ -16,7 +16,7 @@ MINT_BIN       := $(HOME)/.mint/bin/mint
 .PHONY: commit
 commit:
 	git add "$(file)"
-	git commit -m "Commit via running $make $(file)" >/dev/null \
+	git commit -m "Commit via running: make $(file)" >/dev/null \
 		&& echo "::notice:: git commit $(file)\n" \
 		|| true;
 	touch "$(file)";
