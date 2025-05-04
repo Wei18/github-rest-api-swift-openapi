@@ -19,7 +19,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/docker/conflicts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-organization)`.
-    func packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization(_ input: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Input) async throws -> Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Output
+    func packagesListDockerMigrationConflictingPackagesForOrganization(_ input: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Input) async throws -> Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Output
     /// List packages for an organization
     ///
     /// Lists packages in an organization readable by the user.
@@ -28,7 +28,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)`.
-    func packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization(_ input: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input) async throws -> Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Output
+    func packagesListPackagesForOrganization(_ input: Operations.PackagesListPackagesForOrganization.Input) async throws -> Operations.PackagesListPackagesForOrganization.Output
     /// Get a package for an organization
     ///
     /// Gets a specific package in an organization.
@@ -37,7 +37,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/get(packages/get-package-for-organization)`.
-    func packages_sol_get_hyphen_package_hyphen_for_hyphen_organization(_ input: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Input) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Output
+    func packagesGetPackageForOrganization(_ input: Operations.PackagesGetPackageForOrganization.Input) async throws -> Operations.PackagesGetPackageForOrganization.Output
     /// Delete a package for an organization
     ///
     /// Deletes an entire package in an organization. You cannot delete a public package if any version of the package has more than 5,000 downloads. In this scenario, contact GitHub support for further assistance.
@@ -48,7 +48,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)`.
-    func packages_sol_delete_hyphen_package_hyphen_for_hyphen_org(_ input: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Input) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Output
+    func packagesDeletePackageForOrg(_ input: Operations.PackagesDeletePackageForOrg.Input) async throws -> Operations.PackagesDeletePackageForOrg.Output
     /// Restore a package for an organization
     ///
     /// Restores an entire package in an organization.
@@ -63,7 +63,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)`.
-    func packages_sol_restore_hyphen_package_hyphen_for_hyphen_org(_ input: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Output
+    func packagesRestorePackageForOrg(_ input: Operations.PackagesRestorePackageForOrg.Input) async throws -> Operations.PackagesRestorePackageForOrg.Output
     /// List package versions for a package owned by an organization
     ///
     /// Lists package versions for a package owned by an organization.
@@ -72,7 +72,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-org)`.
-    func packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org(_ input: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input) async throws -> Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Output
+    func packagesGetAllPackageVersionsForPackageOwnedByOrg(_ input: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input) async throws -> Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Output
     /// Get a package version for an organization
     ///
     /// Gets a specific package version in an organization.
@@ -81,7 +81,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-organization)`.
-    func packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(_ input: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Output
+    func packagesGetPackageVersionForOrganization(_ input: Operations.PackagesGetPackageVersionForOrganization.Input) async throws -> Operations.PackagesGetPackageVersionForOrganization.Output
     /// Delete package version for an organization
     ///
     /// Deletes a specific package version in an organization. If the package is public and the package version has more than 5,000 downloads, you cannot delete the package version. In this scenario, contact GitHub support for further assistance.
@@ -92,7 +92,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)`.
-    func packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org(_ input: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output
+    func packagesDeletePackageVersionForOrg(_ input: Operations.PackagesDeletePackageVersionForOrg.Input) async throws -> Operations.PackagesDeletePackageVersionForOrg.Output
     /// Restore package version for an organization
     ///
     /// Restores a specific package version in an organization.
@@ -107,7 +107,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)`.
-    func packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org(_ input: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output
+    func packagesRestorePackageVersionForOrg(_ input: Operations.PackagesRestorePackageVersionForOrg.Input) async throws -> Operations.PackagesRestorePackageVersionForOrg.Output
     /// Get list of conflicting packages during Docker migration for authenticated-user
     ///
     /// Lists all packages that are owned by the authenticated user within the user's namespace, and that encountered a conflict during a Docker migration.
@@ -116,7 +116,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/docker/conflicts`.
     /// - Remark: Generated from `#/paths//user/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-authenticated-user)`.
-    func packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func packagesListDockerMigrationConflictingPackagesForAuthenticatedUser(_ input: Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Input) async throws -> Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Output
     /// List packages for the authenticated user's namespace
     ///
     /// Lists packages owned by the authenticated user within the user's namespace.
@@ -125,7 +125,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/packages`.
     /// - Remark: Generated from `#/paths//user/packages/get(packages/list-packages-for-authenticated-user)`.
-    func packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func packagesListPackagesForAuthenticatedUser(_ input: Operations.PackagesListPackagesForAuthenticatedUser.Input) async throws -> Operations.PackagesListPackagesForAuthenticatedUser.Output
     /// Get a package for the authenticated user
     ///
     /// Gets a specific package for a package owned by the authenticated user.
@@ -134,7 +134,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/get(packages/get-package-for-authenticated-user)`.
-    func packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func packagesGetPackageForAuthenticatedUser(_ input: Operations.PackagesGetPackageForAuthenticatedUser.Input) async throws -> Operations.PackagesGetPackageForAuthenticatedUser.Output
     /// Delete a package for the authenticated user
     ///
     /// Deletes a package owned by the authenticated user. You cannot delete a public package if any version of the package has more than 5,000 downloads. In this scenario, contact GitHub support for further assistance.
@@ -143,7 +143,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /user/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)`.
-    func packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func packagesDeletePackageForAuthenticatedUser(_ input: Operations.PackagesDeletePackageForAuthenticatedUser.Input) async throws -> Operations.PackagesDeletePackageForAuthenticatedUser.Output
     /// Restore a package for the authenticated user
     ///
     /// Restores a package owned by the authenticated user.
@@ -156,7 +156,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /user/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)`.
-    func packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func packagesRestorePackageForAuthenticatedUser(_ input: Operations.PackagesRestorePackageForAuthenticatedUser.Input) async throws -> Operations.PackagesRestorePackageForAuthenticatedUser.Output
     /// List package versions for a package owned by the authenticated user
     ///
     /// Lists package versions for a package owned by the authenticated user.
@@ -165,7 +165,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-authenticated-user)`.
-    func packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Output
+    func packagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser(_ input: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input) async throws -> Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Output
     /// Get a package version for the authenticated user
     ///
     /// Gets a specific package version for a package owned by the authenticated user.
@@ -174,7 +174,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-authenticated-user)`.
-    func packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func packagesGetPackageVersionForAuthenticatedUser(_ input: Operations.PackagesGetPackageVersionForAuthenticatedUser.Input) async throws -> Operations.PackagesGetPackageVersionForAuthenticatedUser.Output
     /// Delete a package version for the authenticated user
     ///
     /// Deletes a specific package version for a package owned by the authenticated user.  If the package is public and the package version has more than 5,000 downloads, you cannot delete the package version. In this scenario, contact GitHub support for further assistance.
@@ -185,7 +185,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /user/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)`.
-    func packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func packagesDeletePackageVersionForAuthenticatedUser(_ input: Operations.PackagesDeletePackageVersionForAuthenticatedUser.Input) async throws -> Operations.PackagesDeletePackageVersionForAuthenticatedUser.Output
     /// Restore a package version for the authenticated user
     ///
     /// Restores a package version owned by the authenticated user.
@@ -198,7 +198,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)`.
-    func packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func packagesRestorePackageVersionForAuthenticatedUser(_ input: Operations.PackagesRestorePackageVersionForAuthenticatedUser.Input) async throws -> Operations.PackagesRestorePackageVersionForAuthenticatedUser.Output
     /// Get list of conflicting packages during Docker migration for user
     ///
     /// Lists all packages that are in a specific user's namespace, that the requesting user has access to, and that encountered a conflict during Docker migration.
@@ -207,7 +207,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}/docker/conflicts`.
     /// - Remark: Generated from `#/paths//users/{username}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-user)`.
-    func packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user(_ input: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Input) async throws -> Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Output
+    func packagesListDockerMigrationConflictingPackagesForUser(_ input: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Input) async throws -> Operations.PackagesListDockerMigrationConflictingPackagesForUser.Output
     /// List packages for a user
     ///
     /// Lists all packages in a user's namespace for which the requesting user has access.
@@ -216,7 +216,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)`.
-    func packages_sol_list_hyphen_packages_hyphen_for_hyphen_user(_ input: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input) async throws -> Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Output
+    func packagesListPackagesForUser(_ input: Operations.PackagesListPackagesForUser.Input) async throws -> Operations.PackagesListPackagesForUser.Output
     /// Get a package for a user
     ///
     /// Gets a specific package metadata for a public package owned by a user.
@@ -225,7 +225,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/get(packages/get-package-for-user)`.
-    func packages_sol_get_hyphen_package_hyphen_for_hyphen_user(_ input: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Input) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Output
+    func packagesGetPackageForUser(_ input: Operations.PackagesGetPackageForUser.Input) async throws -> Operations.PackagesGetPackageForUser.Output
     /// Delete a package for a user
     ///
     /// Deletes an entire package for a user. You cannot delete a public package if any version of the package has more than 5,000 downloads. In this scenario, contact GitHub support for further assistance.
@@ -236,7 +236,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /users/{username}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)`.
-    func packages_sol_delete_hyphen_package_hyphen_for_hyphen_user(_ input: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Output
+    func packagesDeletePackageForUser(_ input: Operations.PackagesDeletePackageForUser.Input) async throws -> Operations.PackagesDeletePackageForUser.Output
     /// Restore a package for a user
     ///
     /// Restores an entire package for a user.
@@ -251,7 +251,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /users/{username}/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)`.
-    func packages_sol_restore_hyphen_package_hyphen_for_hyphen_user(_ input: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Output
+    func packagesRestorePackageForUser(_ input: Operations.PackagesRestorePackageForUser.Input) async throws -> Operations.PackagesRestorePackageForUser.Output
     /// List package versions for a package owned by a user
     ///
     /// Lists package versions for a public package owned by a specified user.
@@ -260,7 +260,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-user)`.
-    func packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user(_ input: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Input) async throws -> Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Output
+    func packagesGetAllPackageVersionsForPackageOwnedByUser(_ input: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Input) async throws -> Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Output
     /// Get a package version for a user
     ///
     /// Gets a specific package version for a public package owned by a specified user.
@@ -269,7 +269,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-user)`.
-    func packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user(_ input: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output
+    func packagesGetPackageVersionForUser(_ input: Operations.PackagesGetPackageVersionForUser.Input) async throws -> Operations.PackagesGetPackageVersionForUser.Output
     /// Delete package version for a user
     ///
     /// Deletes a specific package version for a user. If the package is public and the package version has more than 5,000 downloads, you cannot delete the package version. In this scenario, contact GitHub support for further assistance.
@@ -280,7 +280,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)`.
-    func packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user(_ input: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output
+    func packagesDeletePackageVersionForUser(_ input: Operations.PackagesDeletePackageVersionForUser.Input) async throws -> Operations.PackagesDeletePackageVersionForUser.Output
     /// Restore package version for a user
     ///
     /// Restores a specific package version for a user.
@@ -295,7 +295,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)`.
-    func packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user(_ input: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output
+    func packagesRestorePackageVersionForUser(_ input: Operations.PackagesRestorePackageVersionForUser.Input) async throws -> Operations.PackagesRestorePackageVersionForUser.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -308,11 +308,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/docker/conflicts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-organization)`.
-    public func packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization(
-        path: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Input.Path,
-        headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Output {
-        try await packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization(Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Input(
+    public func packagesListDockerMigrationConflictingPackagesForOrganization(
+        path: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Input.Path,
+        headers: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Input.Headers = .init()
+    ) async throws -> Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Output {
+        try await packagesListDockerMigrationConflictingPackagesForOrganization(Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Input(
             path: path,
             headers: headers
         ))
@@ -325,12 +325,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)`.
-    public func packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization(
-        path: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Path,
-        query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Query,
-        headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Output {
-        try await packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization(Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input(
+    public func packagesListPackagesForOrganization(
+        path: Operations.PackagesListPackagesForOrganization.Input.Path,
+        query: Operations.PackagesListPackagesForOrganization.Input.Query,
+        headers: Operations.PackagesListPackagesForOrganization.Input.Headers = .init()
+    ) async throws -> Operations.PackagesListPackagesForOrganization.Output {
+        try await packagesListPackagesForOrganization(Operations.PackagesListPackagesForOrganization.Input(
             path: path,
             query: query,
             headers: headers
@@ -344,11 +344,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/get(packages/get-package-for-organization)`.
-    public func packages_sol_get_hyphen_package_hyphen_for_hyphen_organization(
-        path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Input.Path,
-        headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Output {
-        try await packages_sol_get_hyphen_package_hyphen_for_hyphen_organization(Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Input(
+    public func packagesGetPackageForOrganization(
+        path: Operations.PackagesGetPackageForOrganization.Input.Path,
+        headers: Operations.PackagesGetPackageForOrganization.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetPackageForOrganization.Output {
+        try await packagesGetPackageForOrganization(Operations.PackagesGetPackageForOrganization.Input(
             path: path,
             headers: headers
         ))
@@ -363,11 +363,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)`.
-    public func packages_sol_delete_hyphen_package_hyphen_for_hyphen_org(
-        path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Output {
-        try await packages_sol_delete_hyphen_package_hyphen_for_hyphen_org(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Input(
+    public func packagesDeletePackageForOrg(
+        path: Operations.PackagesDeletePackageForOrg.Input.Path,
+        headers: Operations.PackagesDeletePackageForOrg.Input.Headers = .init()
+    ) async throws -> Operations.PackagesDeletePackageForOrg.Output {
+        try await packagesDeletePackageForOrg(Operations.PackagesDeletePackageForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -386,12 +386,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)`.
-    public func packages_sol_restore_hyphen_package_hyphen_for_hyphen_org(
-        path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Output {
-        try await packages_sol_restore_hyphen_package_hyphen_for_hyphen_org(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input(
+    public func packagesRestorePackageForOrg(
+        path: Operations.PackagesRestorePackageForOrg.Input.Path,
+        query: Operations.PackagesRestorePackageForOrg.Input.Query = .init(),
+        headers: Operations.PackagesRestorePackageForOrg.Input.Headers = .init()
+    ) async throws -> Operations.PackagesRestorePackageForOrg.Output {
+        try await packagesRestorePackageForOrg(Operations.PackagesRestorePackageForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -405,12 +405,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-org)`.
-    public func packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org(
-        path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Path,
-        query: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Query = .init(),
-        headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Output {
-        try await packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org(Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input(
+    public func packagesGetAllPackageVersionsForPackageOwnedByOrg(
+        path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Path,
+        query: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Query = .init(),
+        headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Output {
+        try await packagesGetAllPackageVersionsForPackageOwnedByOrg(Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -424,11 +424,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-organization)`.
-    public func packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(
-        path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input.Path,
-        headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Output {
-        try await packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization(Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input(
+    public func packagesGetPackageVersionForOrganization(
+        path: Operations.PackagesGetPackageVersionForOrganization.Input.Path,
+        headers: Operations.PackagesGetPackageVersionForOrganization.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetPackageVersionForOrganization.Output {
+        try await packagesGetPackageVersionForOrganization(Operations.PackagesGetPackageVersionForOrganization.Input(
             path: path,
             headers: headers
         ))
@@ -443,11 +443,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)`.
-    public func packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org(
-        path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output {
-        try await packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input(
+    public func packagesDeletePackageVersionForOrg(
+        path: Operations.PackagesDeletePackageVersionForOrg.Input.Path,
+        headers: Operations.PackagesDeletePackageVersionForOrg.Input.Headers = .init()
+    ) async throws -> Operations.PackagesDeletePackageVersionForOrg.Output {
+        try await packagesDeletePackageVersionForOrg(Operations.PackagesDeletePackageVersionForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -466,11 +466,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)`.
-    public func packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org(
-        path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output {
-        try await packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input(
+    public func packagesRestorePackageVersionForOrg(
+        path: Operations.PackagesRestorePackageVersionForOrg.Input.Path,
+        headers: Operations.PackagesRestorePackageVersionForOrg.Input.Headers = .init()
+    ) async throws -> Operations.PackagesRestorePackageVersionForOrg.Output {
+        try await packagesRestorePackageVersionForOrg(Operations.PackagesRestorePackageVersionForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -483,8 +483,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/docker/conflicts`.
     /// - Remark: Generated from `#/paths//user/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-authenticated-user)`.
-    public func packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user(headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()) async throws -> Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user(Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input(headers: headers))
+    public func packagesListDockerMigrationConflictingPackagesForAuthenticatedUser(headers: Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Input.Headers = .init()) async throws -> Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Output {
+        try await packagesListDockerMigrationConflictingPackagesForAuthenticatedUser(Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Input(headers: headers))
     }
     /// List packages for the authenticated user's namespace
     ///
@@ -494,11 +494,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/packages`.
     /// - Remark: Generated from `#/paths//user/packages/get(packages/list-packages-for-authenticated-user)`.
-    public func packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query,
-        headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user(Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func packagesListPackagesForAuthenticatedUser(
+        query: Operations.PackagesListPackagesForAuthenticatedUser.Input.Query,
+        headers: Operations.PackagesListPackagesForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesListPackagesForAuthenticatedUser.Output {
+        try await packagesListPackagesForAuthenticatedUser(Operations.PackagesListPackagesForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -511,11 +511,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/get(packages/get-package-for-authenticated-user)`.
-    public func packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func packagesGetPackageForAuthenticatedUser(
+        path: Operations.PackagesGetPackageForAuthenticatedUser.Input.Path,
+        headers: Operations.PackagesGetPackageForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetPackageForAuthenticatedUser.Output {
+        try await packagesGetPackageForAuthenticatedUser(Operations.PackagesGetPackageForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -528,11 +528,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)`.
-    public func packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func packagesDeletePackageForAuthenticatedUser(
+        path: Operations.PackagesDeletePackageForAuthenticatedUser.Input.Path,
+        headers: Operations.PackagesDeletePackageForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesDeletePackageForAuthenticatedUser.Output {
+        try await packagesDeletePackageForAuthenticatedUser(Operations.PackagesDeletePackageForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -549,12 +549,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /user/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)`.
-    public func packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func packagesRestorePackageForAuthenticatedUser(
+        path: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Path,
+        query: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesRestorePackageForAuthenticatedUser.Output {
+        try await packagesRestorePackageForAuthenticatedUser(Operations.PackagesRestorePackageForAuthenticatedUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -568,12 +568,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-authenticated-user)`.
-    public func packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user(
-        path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Path,
-        query: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user(Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input(
+    public func packagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser(
+        path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Path,
+        query: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Output {
+        try await packagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser(Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -587,11 +587,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-authenticated-user)`.
-    public func packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func packagesGetPackageVersionForAuthenticatedUser(
+        path: Operations.PackagesGetPackageVersionForAuthenticatedUser.Input.Path,
+        headers: Operations.PackagesGetPackageVersionForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetPackageVersionForAuthenticatedUser.Output {
+        try await packagesGetPackageVersionForAuthenticatedUser(Operations.PackagesGetPackageVersionForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -606,11 +606,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)`.
-    public func packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func packagesDeletePackageVersionForAuthenticatedUser(
+        path: Operations.PackagesDeletePackageVersionForAuthenticatedUser.Input.Path,
+        headers: Operations.PackagesDeletePackageVersionForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesDeletePackageVersionForAuthenticatedUser.Output {
+        try await packagesDeletePackageVersionForAuthenticatedUser(Operations.PackagesDeletePackageVersionForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -627,11 +627,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)`.
-    public func packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func packagesRestorePackageVersionForAuthenticatedUser(
+        path: Operations.PackagesRestorePackageVersionForAuthenticatedUser.Input.Path,
+        headers: Operations.PackagesRestorePackageVersionForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesRestorePackageVersionForAuthenticatedUser.Output {
+        try await packagesRestorePackageVersionForAuthenticatedUser(Operations.PackagesRestorePackageVersionForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -644,11 +644,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/docker/conflicts`.
     /// - Remark: Generated from `#/paths//users/{username}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-user)`.
-    public func packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user(
-        path: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Output {
-        try await packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user(Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Input(
+    public func packagesListDockerMigrationConflictingPackagesForUser(
+        path: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Input.Path,
+        headers: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesListDockerMigrationConflictingPackagesForUser.Output {
+        try await packagesListDockerMigrationConflictingPackagesForUser(Operations.PackagesListDockerMigrationConflictingPackagesForUser.Input(
             path: path,
             headers: headers
         ))
@@ -661,12 +661,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)`.
-    public func packages_sol_list_hyphen_packages_hyphen_for_hyphen_user(
-        path: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Query,
-        headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Output {
-        try await packages_sol_list_hyphen_packages_hyphen_for_hyphen_user(Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input(
+    public func packagesListPackagesForUser(
+        path: Operations.PackagesListPackagesForUser.Input.Path,
+        query: Operations.PackagesListPackagesForUser.Input.Query,
+        headers: Operations.PackagesListPackagesForUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesListPackagesForUser.Output {
+        try await packagesListPackagesForUser(Operations.PackagesListPackagesForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -680,11 +680,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/get(packages/get-package-for-user)`.
-    public func packages_sol_get_hyphen_package_hyphen_for_hyphen_user(
-        path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Output {
-        try await packages_sol_get_hyphen_package_hyphen_for_hyphen_user(Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Input(
+    public func packagesGetPackageForUser(
+        path: Operations.PackagesGetPackageForUser.Input.Path,
+        headers: Operations.PackagesGetPackageForUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetPackageForUser.Output {
+        try await packagesGetPackageForUser(Operations.PackagesGetPackageForUser.Input(
             path: path,
             headers: headers
         ))
@@ -699,11 +699,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /users/{username}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)`.
-    public func packages_sol_delete_hyphen_package_hyphen_for_hyphen_user(
-        path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Output {
-        try await packages_sol_delete_hyphen_package_hyphen_for_hyphen_user(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input(
+    public func packagesDeletePackageForUser(
+        path: Operations.PackagesDeletePackageForUser.Input.Path,
+        headers: Operations.PackagesDeletePackageForUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesDeletePackageForUser.Output {
+        try await packagesDeletePackageForUser(Operations.PackagesDeletePackageForUser.Input(
             path: path,
             headers: headers
         ))
@@ -722,12 +722,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /users/{username}/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)`.
-    public func packages_sol_restore_hyphen_package_hyphen_for_hyphen_user(
-        path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Output {
-        try await packages_sol_restore_hyphen_package_hyphen_for_hyphen_user(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input(
+    public func packagesRestorePackageForUser(
+        path: Operations.PackagesRestorePackageForUser.Input.Path,
+        query: Operations.PackagesRestorePackageForUser.Input.Query = .init(),
+        headers: Operations.PackagesRestorePackageForUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesRestorePackageForUser.Output {
+        try await packagesRestorePackageForUser(Operations.PackagesRestorePackageForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -741,11 +741,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-user)`.
-    public func packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user(
-        path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Output {
-        try await packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user(Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Input(
+    public func packagesGetAllPackageVersionsForPackageOwnedByUser(
+        path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Input.Path,
+        headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Output {
+        try await packagesGetAllPackageVersionsForPackageOwnedByUser(Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Input(
             path: path,
             headers: headers
         ))
@@ -758,11 +758,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-user)`.
-    public func packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user(
-        path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output {
-        try await packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user(Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input(
+    public func packagesGetPackageVersionForUser(
+        path: Operations.PackagesGetPackageVersionForUser.Input.Path,
+        headers: Operations.PackagesGetPackageVersionForUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesGetPackageVersionForUser.Output {
+        try await packagesGetPackageVersionForUser(Operations.PackagesGetPackageVersionForUser.Input(
             path: path,
             headers: headers
         ))
@@ -777,11 +777,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)`.
-    public func packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user(
-        path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output {
-        try await packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input(
+    public func packagesDeletePackageVersionForUser(
+        path: Operations.PackagesDeletePackageVersionForUser.Input.Path,
+        headers: Operations.PackagesDeletePackageVersionForUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesDeletePackageVersionForUser.Output {
+        try await packagesDeletePackageVersionForUser(Operations.PackagesDeletePackageVersionForUser.Input(
             path: path,
             headers: headers
         ))
@@ -800,11 +800,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)`.
-    public func packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user(
-        path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path,
-        headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output {
-        try await packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input(
+    public func packagesRestorePackageVersionForUser(
+        path: Operations.PackagesRestorePackageVersionForUser.Input.Path,
+        headers: Operations.PackagesRestorePackageVersionForUser.Input.Headers = .init()
+    ) async throws -> Operations.PackagesRestorePackageVersionForUser.Output {
+        try await packagesRestorePackageVersionForUser(Operations.PackagesRestorePackageVersionForUser.Input(
             path: path,
             headers: headers
         ))
@@ -813,6 +813,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -828,7 +837,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -838,171 +847,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -1010,7 +1019,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -1020,142 +1029,142 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Code Of Conduct
         ///
         /// - Remark: Generated from `#/components/schemas/code-of-conduct`.
-        public struct code_hyphen_of_hyphen_conduct: Codable, Hashable, Sendable {
+        public struct CodeOfConduct: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/name`.
@@ -1165,52 +1174,52 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/body`.
             public var body: Swift.String?
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `code_hyphen_of_hyphen_conduct`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `CodeOfConduct`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
             ///   - body:
-            ///   - html_url:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String,
                 body: Swift.String? = nil,
-                html_url: Swift.String? = nil
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
                 self.body = body
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
                 case body
-                case html_url
+                case htmlUrl = "html_url"
             }
         }
         /// - Remark: Generated from `#/components/schemas/security-and-analysis`.
-        public struct security_hyphen_and_hyphen_analysis: Codable, Hashable, Sendable {
+        public struct SecurityAndAnalysis: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public struct advanced_securityPayload: Codable, Hashable, Sendable {
+            public struct AdvancedSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload?
-                /// Creates a new `advanced_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload?
+                /// Creates a new `AdvancedSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1218,21 +1227,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            public var advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public struct code_securityPayload: Codable, Hashable, Sendable {
+            public struct CodeSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
-                /// Creates a new `code_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload?
+                /// Creates a new `CodeSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1240,27 +1249,27 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
+            public var codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public struct dependabot_security_updatesPayload: Codable, Hashable, Sendable {
+            public struct DependabotSecurityUpdatesPayload: Codable, Hashable, Sendable {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload?
-                /// Creates a new `dependabot_security_updatesPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload?
+                /// Creates a new `DependabotSecurityUpdatesPayload`.
                 ///
                 /// - Parameters:
                 ///   - status: The enablement status of Dependabot security updates for the repository.
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1270,21 +1279,21 @@ public enum Components {
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public var dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload?
+            public var dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public struct secret_scanningPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload?
-                /// Creates a new `secret_scanningPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload?
+                /// Creates a new `SecretScanningPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1292,21 +1301,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public var secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload?
+            public var secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPushProtectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_push_protectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningPushProtectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1314,21 +1323,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public var secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload?
+            public var secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningNonProviderPatternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload?
-                /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload?
+                /// Creates a new `SecretScanningNonProviderPatternsPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1336,21 +1345,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            public var secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningAiDetectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningAiDetectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -1358,62 +1367,62 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
-            /// Creates a new `security_hyphen_and_hyphen_analysis`.
+            public var secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload?
+            /// Creates a new `SecurityAndAnalysis`.
             ///
             /// - Parameters:
-            ///   - advanced_security:
-            ///   - code_security:
-            ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
-            ///   - secret_scanning:
-            ///   - secret_scanning_push_protection:
-            ///   - secret_scanning_non_provider_patterns:
-            ///   - secret_scanning_ai_detection:
+            ///   - advancedSecurity:
+            ///   - codeSecurity:
+            ///   - dependabotSecurityUpdates: Enable or disable Dependabot security updates for the repository.
+            ///   - secretScanning:
+            ///   - secretScanningPushProtection:
+            ///   - secretScanningNonProviderPatterns:
+            ///   - secretScanningAiDetection:
             public init(
-                advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
-                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
-                dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
-                secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
-                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
-                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
+                advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload? = nil,
+                codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload? = nil,
+                dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload? = nil,
+                secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload? = nil,
+                secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload? = nil,
+                secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload? = nil,
+                secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload? = nil
             ) {
-                self.advanced_security = advanced_security
-                self.code_security = code_security
-                self.dependabot_security_updates = dependabot_security_updates
-                self.secret_scanning = secret_scanning
-                self.secret_scanning_push_protection = secret_scanning_push_protection
-                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
-                self.secret_scanning_ai_detection = secret_scanning_ai_detection
+                self.advancedSecurity = advancedSecurity
+                self.codeSecurity = codeSecurity
+                self.dependabotSecurityUpdates = dependabotSecurityUpdates
+                self.secretScanning = secretScanning
+                self.secretScanningPushProtection = secretScanningPushProtection
+                self.secretScanningNonProviderPatterns = secretScanningNonProviderPatterns
+                self.secretScanningAiDetection = secretScanningAiDetection
             }
             public enum CodingKeys: String, CodingKey {
-                case advanced_security
-                case code_security
-                case dependabot_security_updates
-                case secret_scanning
-                case secret_scanning_push_protection
-                case secret_scanning_non_provider_patterns
-                case secret_scanning_ai_detection
+                case advancedSecurity = "advanced_security"
+                case codeSecurity = "code_security"
+                case dependabotSecurityUpdates = "dependabot_security_updates"
+                case secretScanning = "secret_scanning"
+                case secretScanningPushProtection = "secret_scanning_push_protection"
+                case secretScanningNonProviderPatterns = "secret_scanning_non_provider_patterns"
+                case secretScanningAiDetection = "secret_scanning_ai_detection"
             }
         }
         /// Minimal Repository
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository`.
-        public struct nullable_hyphen_minimal_hyphen_repository: Codable, Hashable, Sendable {
+        public struct NullableMinimalRepository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/fork`.
@@ -1421,121 +1430,121 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/git_url`.
-            public var git_url: Swift.String?
+            public var gitUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/ssh_url`.
-            public var ssh_url: Swift.String?
+            public var sshUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/clone_url`.
-            public var clone_url: Swift.String?
+            public var cloneUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/svn_url`.
-            public var svn_url: Swift.String?
+            public var svnUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/forks_count`.
-            public var forks_count: Swift.Int?
+            public var forksCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int?
+            public var stargazersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/watchers_count`.
-            public var watchers_count: Swift.Int?
+            public var watchersCount: Swift.Int?
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/size`.
             public var size: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/default_branch`.
-            public var default_branch: Swift.String?
+            public var defaultBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/open_issues_count`.
-            public var open_issues_count: Swift.Int?
+            public var openIssuesCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/topics`.
             public var topics: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/has_issues`.
-            public var has_issues: Swift.Bool?
+            public var hasIssues: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/has_projects`.
-            public var has_projects: Swift.Bool?
+            public var hasProjects: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/has_wiki`.
-            public var has_wiki: Swift.Bool?
+            public var hasWiki: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/has_pages`.
-            public var has_pages: Swift.Bool?
+            public var hasPages: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/has_downloads`.
-            public var has_downloads: Swift.Bool?
+            public var hasDownloads: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/archived`.
             public var archived: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/disabled`.
@@ -1543,13 +1552,13 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/permissions/admin`.
                 public var admin: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/permissions/maintain`.
@@ -1560,7 +1569,7 @@ public enum Components {
                 public var triage: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/permissions/pull`.
                 public var pull: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -1590,435 +1599,435 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/permissions`.
-            public var permissions: Components.Schemas.nullable_hyphen_minimal_hyphen_repository.permissionsPayload?
+            public var permissions: Components.Schemas.NullableMinimalRepository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/role_name`.
-            public var role_name: Swift.String?
+            public var roleName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
+            public var subscribersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/network_count`.
-            public var network_count: Swift.Int?
+            public var networkCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/code_of_conduct`.
-            public var code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct?
+            public var codeOfConduct: Components.Schemas.CodeOfConduct?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/license`.
-            public struct licensePayload: Codable, Hashable, Sendable {
+            public struct LicensePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/license/key`.
                 public var key: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/license/name`.
                 public var name: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/license/spdx_id`.
-                public var spdx_id: Swift.String?
+                public var spdxId: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/license/url`.
                 public var url: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/license/node_id`.
-                public var node_id: Swift.String?
-                /// Creates a new `licensePayload`.
+                public var nodeId: Swift.String?
+                /// Creates a new `LicensePayload`.
                 ///
                 /// - Parameters:
                 ///   - key:
                 ///   - name:
-                ///   - spdx_id:
+                ///   - spdxId:
                 ///   - url:
-                ///   - node_id:
+                ///   - nodeId:
                 public init(
                     key: Swift.String? = nil,
                     name: Swift.String? = nil,
-                    spdx_id: Swift.String? = nil,
+                    spdxId: Swift.String? = nil,
                     url: Swift.String? = nil,
-                    node_id: Swift.String? = nil
+                    nodeId: Swift.String? = nil
                 ) {
                     self.key = key
                     self.name = name
-                    self.spdx_id = spdx_id
+                    self.spdxId = spdxId
                     self.url = url
-                    self.node_id = node_id
+                    self.nodeId = nodeId
                 }
                 public enum CodingKeys: String, CodingKey {
                     case key
                     case name
-                    case spdx_id
+                    case spdxId = "spdx_id"
                     case url
-                    case node_id
+                    case nodeId = "node_id"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/license`.
-            public var license: Components.Schemas.nullable_hyphen_minimal_hyphen_repository.licensePayload?
+            public var license: Components.Schemas.NullableMinimalRepository.LicensePayload?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/forks`.
             public var forks: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/open_issues`.
-            public var open_issues: Swift.Int?
+            public var openIssues: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/watchers`.
             public var watchers: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-minimal-repository/security_and_analysis`.
-            public var security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis?
-            /// Creates a new `nullable_hyphen_minimal_hyphen_repository`.
+            public var securityAndAnalysis: Components.Schemas.SecurityAndAnalysis?
+            /// Creates a new `NullableMinimalRepository`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
-            ///   - full_name:
+            ///   - fullName:
             ///   - owner:
             ///   - _private:
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch:
-            ///   - open_issues_count:
-            ///   - is_template:
+            ///   - defaultBranch:
+            ///   - openIssuesCount:
+            ///   - isTemplate:
             ///   - topics:
-            ///   - has_issues:
-            ///   - has_projects:
-            ///   - has_wiki:
-            ///   - has_pages:
-            ///   - has_downloads:
-            ///   - has_discussions:
+            ///   - hasIssues:
+            ///   - hasProjects:
+            ///   - hasWiki:
+            ///   - hasPages:
+            ///   - hasDownloads:
+            ///   - hasDiscussions:
             ///   - archived:
             ///   - disabled:
             ///   - visibility:
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - permissions:
-            ///   - role_name:
-            ///   - temp_clone_token:
-            ///   - delete_branch_on_merge:
-            ///   - subscribers_count:
-            ///   - network_count:
-            ///   - code_of_conduct:
+            ///   - roleName:
+            ///   - tempCloneToken:
+            ///   - deleteBranchOnMerge:
+            ///   - subscribersCount:
+            ///   - networkCount:
+            ///   - codeOfConduct:
             ///   - license:
             ///   - forks:
-            ///   - open_issues:
+            ///   - openIssues:
             ///   - watchers:
-            ///   - allow_forking:
-            ///   - web_commit_signoff_required:
-            ///   - security_and_analysis:
+            ///   - allowForking:
+            ///   - webCommitSignoffRequired:
+            ///   - securityAndAnalysis:
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String? = nil,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String? = nil,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String? = nil,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String? = nil,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String? = nil,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String? = nil,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String? = nil,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String? = nil,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int? = nil,
-                stargazers_count: Swift.Int? = nil,
-                watchers_count: Swift.Int? = nil,
+                forksCount: Swift.Int? = nil,
+                stargazersCount: Swift.Int? = nil,
+                watchersCount: Swift.Int? = nil,
                 size: Swift.Int? = nil,
-                default_branch: Swift.String? = nil,
-                open_issues_count: Swift.Int? = nil,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String? = nil,
+                openIssuesCount: Swift.Int? = nil,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool? = nil,
-                has_projects: Swift.Bool? = nil,
-                has_wiki: Swift.Bool? = nil,
-                has_pages: Swift.Bool? = nil,
-                has_downloads: Swift.Bool? = nil,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool? = nil,
+                hasProjects: Swift.Bool? = nil,
+                hasWiki: Swift.Bool? = nil,
+                hasPages: Swift.Bool? = nil,
+                hasDownloads: Swift.Bool? = nil,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool? = nil,
                 disabled: Swift.Bool? = nil,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                permissions: Components.Schemas.nullable_hyphen_minimal_hyphen_repository.permissionsPayload? = nil,
-                role_name: Swift.String? = nil,
-                temp_clone_token: Swift.String? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
-                code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct? = nil,
-                license: Components.Schemas.nullable_hyphen_minimal_hyphen_repository.licensePayload? = nil,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                permissions: Components.Schemas.NullableMinimalRepository.PermissionsPayload? = nil,
+                roleName: Swift.String? = nil,
+                tempCloneToken: Swift.String? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                subscribersCount: Swift.Int? = nil,
+                networkCount: Swift.Int? = nil,
+                codeOfConduct: Components.Schemas.CodeOfConduct? = nil,
+                license: Components.Schemas.NullableMinimalRepository.LicensePayload? = nil,
                 forks: Swift.Int? = nil,
-                open_issues: Swift.Int? = nil,
+                openIssues: Swift.Int? = nil,
                 watchers: Swift.Int? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                securityAndAnalysis: Components.Schemas.SecurityAndAnalysis? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.permissions = permissions
-                self.role_name = role_name
-                self.temp_clone_token = temp_clone_token
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
-                self.code_of_conduct = code_of_conduct
+                self.roleName = roleName
+                self.tempCloneToken = tempCloneToken
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.subscribersCount = subscribersCount
+                self.networkCount = networkCount
+                self.codeOfConduct = codeOfConduct
                 self.license = license
                 self.forks = forks
-                self.open_issues = open_issues
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.security_and_analysis = security_and_analysis
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.securityAndAnalysis = securityAndAnalysis
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case permissions
-                case role_name
-                case temp_clone_token
-                case delete_branch_on_merge
-                case subscribers_count
-                case network_count
-                case code_of_conduct
+                case roleName = "role_name"
+                case tempCloneToken = "temp_clone_token"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case subscribersCount = "subscribers_count"
+                case networkCount = "network_count"
+                case codeOfConduct = "code_of_conduct"
                 case license
                 case forks
-                case open_issues
+                case openIssues = "open_issues"
                 case watchers
-                case allow_forking
-                case web_commit_signoff_required
-                case security_and_analysis
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case securityAndAnalysis = "security_and_analysis"
             }
         }
         /// A software package
         ///
         /// - Remark: Generated from `#/components/schemas/package`.
-        public struct package: Codable, Hashable, Sendable {
+        public struct Package: Codable, Hashable, Sendable {
             /// Unique identifier of the package.
             ///
             /// - Remark: Generated from `#/components/schemas/package/id`.
@@ -2028,7 +2037,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/package/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/package/package_type`.
-            @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum PackageTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case npm = "npm"
                 case maven = "maven"
                 case rubygems = "rubygems"
@@ -2037,87 +2046,87 @@ public enum Components {
                 case container = "container"
             }
             /// - Remark: Generated from `#/components/schemas/package/package_type`.
-            public var package_type: Components.Schemas.package.package_typePayload
+            public var packageType: Components.Schemas.Package.PackageTypePayload
             /// - Remark: Generated from `#/components/schemas/package/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/package/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The number of versions of the package.
             ///
             /// - Remark: Generated from `#/components/schemas/package/version_count`.
-            public var version_count: Swift.Int
+            public var versionCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/package/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum VisibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case _private = "private"
                 case _public = "public"
             }
             /// - Remark: Generated from `#/components/schemas/package/visibility`.
-            public var visibility: Components.Schemas.package.visibilityPayload
+            public var visibility: Components.Schemas.Package.VisibilityPayload
             /// - Remark: Generated from `#/components/schemas/package/owner`.
-            public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var owner: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/package/repository`.
-            public var repository: Components.Schemas.nullable_hyphen_minimal_hyphen_repository?
+            public var repository: Components.Schemas.NullableMinimalRepository?
             /// - Remark: Generated from `#/components/schemas/package/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/package/updated_at`.
-            public var updated_at: Foundation.Date
-            /// Creates a new `package`.
+            public var updatedAt: Foundation.Date
+            /// Creates a new `Package`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the package.
             ///   - name: The name of the package.
-            ///   - package_type:
+            ///   - packageType:
             ///   - url:
-            ///   - html_url:
-            ///   - version_count: The number of versions of the package.
+            ///   - htmlUrl:
+            ///   - versionCount: The number of versions of the package.
             ///   - visibility:
             ///   - owner:
             ///   - repository:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             public init(
                 id: Swift.Int,
                 name: Swift.String,
-                package_type: Components.Schemas.package.package_typePayload,
+                packageType: Components.Schemas.Package.PackageTypePayload,
                 url: Swift.String,
-                html_url: Swift.String,
-                version_count: Swift.Int,
-                visibility: Components.Schemas.package.visibilityPayload,
-                owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                repository: Components.Schemas.nullable_hyphen_minimal_hyphen_repository? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date
+                htmlUrl: Swift.String,
+                versionCount: Swift.Int,
+                visibility: Components.Schemas.Package.VisibilityPayload,
+                owner: Components.Schemas.NullableSimpleUser? = nil,
+                repository: Components.Schemas.NullableMinimalRepository? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date
             ) {
                 self.id = id
                 self.name = name
-                self.package_type = package_type
+                self.packageType = packageType
                 self.url = url
-                self.html_url = html_url
-                self.version_count = version_count
+                self.htmlUrl = htmlUrl
+                self.versionCount = versionCount
                 self.visibility = visibility
                 self.owner = owner
                 self.repository = repository
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
-                case package_type
+                case packageType = "package_type"
                 case url
-                case html_url
-                case version_count
+                case htmlUrl = "html_url"
+                case versionCount = "version_count"
                 case visibility
                 case owner
                 case repository
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
             }
         }
         /// A version of a software package
         ///
         /// - Remark: Generated from `#/components/schemas/package-version`.
-        public struct package_hyphen_version: Codable, Hashable, Sendable {
+        public struct PackageVersion: Codable, Hashable, Sendable {
             /// Unique identifier of the package version.
             ///
             /// - Remark: Generated from `#/components/schemas/package-version/id`.
@@ -2129,23 +2138,23 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/package-version/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/package-version/package_html_url`.
-            public var package_html_url: Swift.String
+            public var packageHtmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/package-version/html_url`.
-            public var html_url: Swift.String?
+            public var htmlUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/package-version/license`.
             public var license: Swift.String?
             /// - Remark: Generated from `#/components/schemas/package-version/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/package-version/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/package-version/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/package-version/deleted_at`.
-            public var deleted_at: Foundation.Date?
+            public var deletedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/package-version/metadata`.
-            public struct metadataPayload: Codable, Hashable, Sendable {
+            public struct MetadataPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/package-version/metadata/package_type`.
-                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -2154,12 +2163,12 @@ public enum Components {
                     case container = "container"
                 }
                 /// - Remark: Generated from `#/components/schemas/package-version/metadata/package_type`.
-                public var package_type: Components.Schemas.package_hyphen_version.metadataPayload.package_typePayload
+                public var packageType: Components.Schemas.PackageVersion.MetadataPayload.PackageTypePayload
                 /// - Remark: Generated from `#/components/schemas/package-version/metadata/container`.
-                public struct containerPayload: Codable, Hashable, Sendable {
+                public struct ContainerPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/package-version/metadata/container/tags`.
                     public var tags: [Swift.String]
-                    /// Creates a new `containerPayload`.
+                    /// Creates a new `ContainerPayload`.
                     ///
                     /// - Parameters:
                     ///   - tags:
@@ -2171,12 +2180,12 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/package-version/metadata/container`.
-                public var container: Components.Schemas.package_hyphen_version.metadataPayload.containerPayload?
+                public var container: Components.Schemas.PackageVersion.MetadataPayload.ContainerPayload?
                 /// - Remark: Generated from `#/components/schemas/package-version/metadata/docker`.
-                public struct dockerPayload: Codable, Hashable, Sendable {
+                public struct DockerPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/package-version/metadata/docker/tag`.
                     public var tag: [Swift.String]?
-                    /// Creates a new `dockerPayload`.
+                    /// Creates a new `DockerPayload`.
                     ///
                     /// - Parameters:
                     ///   - tag:
@@ -2188,80 +2197,80 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/package-version/metadata/docker`.
-                public var docker: Components.Schemas.package_hyphen_version.metadataPayload.dockerPayload?
-                /// Creates a new `metadataPayload`.
+                public var docker: Components.Schemas.PackageVersion.MetadataPayload.DockerPayload?
+                /// Creates a new `MetadataPayload`.
                 ///
                 /// - Parameters:
-                ///   - package_type:
+                ///   - packageType:
                 ///   - container:
                 ///   - docker:
                 public init(
-                    package_type: Components.Schemas.package_hyphen_version.metadataPayload.package_typePayload,
-                    container: Components.Schemas.package_hyphen_version.metadataPayload.containerPayload? = nil,
-                    docker: Components.Schemas.package_hyphen_version.metadataPayload.dockerPayload? = nil
+                    packageType: Components.Schemas.PackageVersion.MetadataPayload.PackageTypePayload,
+                    container: Components.Schemas.PackageVersion.MetadataPayload.ContainerPayload? = nil,
+                    docker: Components.Schemas.PackageVersion.MetadataPayload.DockerPayload? = nil
                 ) {
-                    self.package_type = package_type
+                    self.packageType = packageType
                     self.container = container
                     self.docker = docker
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case package_type
+                    case packageType = "package_type"
                     case container
                     case docker
                 }
             }
             /// - Remark: Generated from `#/components/schemas/package-version/metadata`.
-            public var metadata: Components.Schemas.package_hyphen_version.metadataPayload?
-            /// Creates a new `package_hyphen_version`.
+            public var metadata: Components.Schemas.PackageVersion.MetadataPayload?
+            /// Creates a new `PackageVersion`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the package version.
             ///   - name: The name of the package version.
             ///   - url:
-            ///   - package_html_url:
-            ///   - html_url:
+            ///   - packageHtmlUrl:
+            ///   - htmlUrl:
             ///   - license:
             ///   - description:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - deleted_at:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - deletedAt:
             ///   - metadata:
             public init(
                 id: Swift.Int,
                 name: Swift.String,
                 url: Swift.String,
-                package_html_url: Swift.String,
-                html_url: Swift.String? = nil,
+                packageHtmlUrl: Swift.String,
+                htmlUrl: Swift.String? = nil,
                 license: Swift.String? = nil,
                 description: Swift.String? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                deleted_at: Foundation.Date? = nil,
-                metadata: Components.Schemas.package_hyphen_version.metadataPayload? = nil
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                deletedAt: Foundation.Date? = nil,
+                metadata: Components.Schemas.PackageVersion.MetadataPayload? = nil
             ) {
                 self.id = id
                 self.name = name
                 self.url = url
-                self.package_html_url = package_html_url
-                self.html_url = html_url
+                self.packageHtmlUrl = packageHtmlUrl
+                self.htmlUrl = htmlUrl
                 self.license = license
                 self.description = description
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.deleted_at = deleted_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.deletedAt = deletedAt
                 self.metadata = metadata
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case name
                 case url
-                case package_html_url
-                case html_url
+                case packageHtmlUrl = "package_html_url"
+                case htmlUrl = "html_url"
                 case license
                 case description
-                case created_at
-                case updated_at
-                case deleted_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case deletedAt = "deleted_at"
                 case metadata
             }
         }
@@ -2271,26 +2280,26 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The handle for the GitHub user account.
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
-        public typealias username = Swift.String
+        public typealias Username = Swift.String
         /// The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
         ///
         /// The `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.
         /// For the list of GitHub Packages registries that support granular permissions, see "[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages)."
         ///
         /// - Remark: Generated from `#/components/parameters/package-visibility`.
-        @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable {
+        @frozen public enum PackageVisibility: String, Codable, Hashable, Sendable, CaseIterable {
             case _public = "public"
             case _private = "private"
             case _internal = "internal"
@@ -2298,7 +2307,7 @@ public enum Components {
         /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
         ///
         /// - Remark: Generated from `#/components/parameters/package-type`.
-        @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+        @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
             case npm = "npm"
             case maven = "maven"
             case rubygems = "rubygems"
@@ -2309,26 +2318,26 @@ public enum Components {
         /// The name of the package.
         ///
         /// - Remark: Generated from `#/components/parameters/package-name`.
-        public typealias package_hyphen_name = Swift.String
+        public typealias PackageName = Swift.String
         /// Unique identifier of the package version.
         ///
         /// - Remark: Generated from `#/components/parameters/package-version-id`.
-        public typealias package_hyphen_version_hyphen_id = Swift.Int
+        public typealias PackageVersionId = Swift.Int
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2338,25 +2347,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct requires_authentication: Sendable, Hashable {
+        public struct RequiresAuthentication: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/requires_authentication/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/requires_authentication/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2366,25 +2375,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.requires_authentication.Body
-            /// Creates a new `requires_authentication`.
+            public var body: Components.Responses.RequiresAuthentication.Body
+            /// Creates a new `RequiresAuthentication`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.requires_authentication.Body) {
+            public init(body: Components.Responses.RequiresAuthentication.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2394,17 +2403,17 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct package_es_list_error: Sendable, Hashable {
-            /// Creates a new `package_es_list_error`.
+        public struct PackageEsListError: Sendable, Hashable {
+            /// Creates a new `PackageEsListError`.
             public init() {}
         }
     }
@@ -2422,7 +2431,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/docker/conflicts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-organization)`.
-    public enum packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization {
+    public enum PackagesListDockerMigrationConflictingPackagesForOrganization {
         public static let id: Swift.String = "packages/list-docker-migration-conflicting-packages-for-organization"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/docker/conflicts/GET/path`.
@@ -2430,36 +2439,36 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/docker/conflicts/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Input.Path
+            public var path: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/docker/conflicts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Input.Headers
+            public var headers: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Input.Path,
-                headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Input.Headers = .init()
+                path: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Input.Path,
+                headers: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -2470,12 +2479,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/docker/conflicts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/docker/conflicts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package])
+                    case json([Components.Schemas.Package])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package] {
+                    public var json: [Components.Schemas.Package] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2485,12 +2494,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Output.Ok.Body
+                public var body: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Output.Ok.Body) {
+                public init(body: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2499,12 +2508,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-organization)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Output.Ok)
+            case ok(Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_organization.Output.Ok {
+            public var ok: Operations.PackagesListDockerMigrationConflictingPackagesForOrganization.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2522,12 +2531,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-organization)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -2545,12 +2554,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-organization)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -2602,7 +2611,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)`.
-    public enum packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization {
+    public enum PackagesListPackagesForOrganization {
         public static let id: Swift.String = "packages/list-packages-for-organization"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/path`.
@@ -2610,20 +2619,20 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Path
+            public var path: Operations.PackagesListPackagesForOrganization.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/package_type`.
-                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -2634,9 +2643,9 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/package_type`.
-                public var package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Query.package_typePayload
+                public var packageType: Operations.PackagesListPackagesForOrganization.Input.Query.PackageTypePayload
                 /// - Remark: Generated from `#/components/parameters/package-visibility`.
-                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageVisibility: String, Codable, Hashable, Sendable, CaseIterable {
                     case _public = "public"
                     case _private = "private"
                     case _internal = "internal"
@@ -2647,7 +2656,7 @@ public enum Operations {
                 /// For the list of GitHub Packages registries that support granular permissions, see "[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/visibility`.
-                public var visibility: Components.Parameters.package_hyphen_visibility?
+                public var visibility: Components.Parameters.PackageVisibility?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/page`.
@@ -2655,39 +2664,39 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/per_page`.
-                public var per_page: Swift.Int?
+                public var perPage: Swift.Int?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///   - visibility: The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Query.package_typePayload,
-                    visibility: Components.Parameters.package_hyphen_visibility? = nil,
+                    packageType: Operations.PackagesListPackagesForOrganization.Input.Query.PackageTypePayload,
+                    visibility: Components.Parameters.PackageVisibility? = nil,
                     page: Swift.Int? = nil,
-                    per_page: Swift.Int? = nil
+                    perPage: Swift.Int? = nil
                 ) {
-                    self.package_type = package_type
+                    self.packageType = packageType
                     self.visibility = visibility
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Query
+            public var query: Operations.PackagesListPackagesForOrganization.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListPackagesForOrganization.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListPackagesForOrganization.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Headers
+            public var headers: Operations.PackagesListPackagesForOrganization.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2695,9 +2704,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Path,
-                query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Query,
-                headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Headers = .init()
+                path: Operations.PackagesListPackagesForOrganization.Input.Path,
+                query: Operations.PackagesListPackagesForOrganization.Input.Query,
+                headers: Operations.PackagesListPackagesForOrganization.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -2709,12 +2718,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package])
+                    case json([Components.Schemas.Package])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package] {
+                    public var json: [Components.Schemas.Package] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2724,12 +2733,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Output.Ok.Body
+                public var body: Operations.PackagesListPackagesForOrganization.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Output.Ok.Body) {
+                public init(body: Operations.PackagesListPackagesForOrganization.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2738,12 +2747,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Output.Ok)
+            case ok(Operations.PackagesListPackagesForOrganization.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Output.Ok {
+            public var ok: Operations.PackagesListPackagesForOrganization.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2761,12 +2770,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -2784,12 +2793,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -2807,12 +2816,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.package_es_list_error)
+            case badRequest(Components.Responses.PackageEsListError)
+            /// The value of `per_page` multiplied by `page` cannot be greater than 10000.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.package_es_list_error {
+            public var badRequest: Components.Responses.PackageEsListError {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -2864,13 +2881,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/get(packages/get-package-for-organization)`.
-    public enum packages_sol_get_hyphen_package_hyphen_for_hyphen_organization {
+    public enum PackagesGetPackageForOrganization {
         public static let id: Swift.String = "packages/get-package-for-organization"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -2881,52 +2898,52 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - org: The organization name. The name is not case sensitive.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    org: Components.Parameters.org
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    org: Components.Parameters.Org
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.org = org
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Input.Path
+            public var path: Operations.PackagesGetPackageForOrganization.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageForOrganization.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageForOrganization.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Input.Headers
+            public var headers: Operations.PackagesGetPackageForOrganization.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Input.Path,
-                headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Input.Headers = .init()
+                path: Operations.PackagesGetPackageForOrganization.Input.Path,
+                headers: Operations.PackagesGetPackageForOrganization.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -2937,12 +2954,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.package)
+                    case json(Components.Schemas.Package)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.package {
+                    public var json: Components.Schemas.Package {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2952,12 +2969,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Output.Ok.Body
+                public var body: Operations.PackagesGetPackageForOrganization.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetPackageForOrganization.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2966,12 +2983,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/get(packages/get-package-for-organization)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Output.Ok)
+            case ok(Operations.PackagesGetPackageForOrganization.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_organization.Output.Ok {
+            public var ok: Operations.PackagesGetPackageForOrganization.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3025,13 +3042,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)`.
-    public enum packages_sol_delete_hyphen_package_hyphen_for_hyphen_org {
+    public enum PackagesDeletePackageForOrg {
         public static let id: Swift.String = "packages/delete-package-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3042,52 +3059,52 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/DELETE/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/DELETE/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - org: The organization name. The name is not case sensitive.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    org: Components.Parameters.org
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    org: Components.Parameters.Org
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.org = org
                 }
             }
-            public var path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.PackagesDeletePackageForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.PackagesDeletePackageForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.PackagesDeletePackageForOrg.Input.Path,
+                headers: Operations.PackagesDeletePackageForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3103,12 +3120,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Output.NoContent)
+            case noContent(Operations.PackagesDeletePackageForOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Output.NoContent {
+            public var noContent: Operations.PackagesDeletePackageForOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -3126,12 +3151,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3149,12 +3174,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3172,12 +3197,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3235,13 +3260,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)`.
-    public enum packages_sol_restore_hyphen_package_hyphen_for_hyphen_org {
+    public enum PackagesRestorePackageForOrg {
         public static let id: Swift.String = "packages/restore-package-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3252,32 +3277,32 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/restore/POST/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/restore/POST/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/restore/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - org: The organization name. The name is not case sensitive.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    org: Components.Parameters.org
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    org: Components.Parameters.Org
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.org = org
                 }
             }
-            public var path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.PackagesRestorePackageForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/restore/POST/query`.
             public struct Query: Sendable, Hashable {
                 /// package token
@@ -3292,19 +3317,19 @@ public enum Operations {
                     self.token = token
                 }
             }
-            public var query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.PackagesRestorePackageForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/restore/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.PackagesRestorePackageForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3312,9 +3337,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.PackagesRestorePackageForOrg.Input.Path,
+                query: Operations.PackagesRestorePackageForOrg.Input.Query = .init(),
+                headers: Operations.PackagesRestorePackageForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -3331,12 +3356,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Output.NoContent)
+            case noContent(Operations.PackagesRestorePackageForOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Output.NoContent {
+            public var noContent: Operations.PackagesRestorePackageForOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -3354,12 +3387,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3377,12 +3410,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3400,12 +3433,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3457,13 +3490,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-org)`.
-    public enum packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org {
+    public enum PackagesGetAllPackageVersionsForPackageOwnedByOrg {
         public static let id: Swift.String = "packages/get-all-package-versions-for-package-owned-by-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3474,80 +3507,80 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - org: The organization name. The name is not case sensitive.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    org: Components.Parameters.org
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    org: Components.Parameters.Org
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.org = org
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Path
+            public var path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case active = "active"
                     case deleted = "deleted"
                 }
                 /// The state of the package, either active or deleted.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query/state`.
-                public var state: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Query.statePayload?
+                public var state: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Query.StatePayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - state: The state of the package, either active or deleted.
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    state: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Query.statePayload? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    state: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Query.StatePayload? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.state = state
                 }
             }
-            public var query: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Query
+            public var query: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Headers
+            public var headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3555,9 +3588,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Path,
-                query: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Query = .init(),
-                headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Input.Headers = .init()
+                path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Path,
+                query: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Query = .init(),
+                headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -3569,12 +3602,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package_hyphen_version])
+                    case json([Components.Schemas.PackageVersion])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package_hyphen_version] {
+                    public var json: [Components.Schemas.PackageVersion] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3584,12 +3617,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Output.Ok.Body
+                public var body: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3598,12 +3631,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Output.Ok)
+            case ok(Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_org.Output.Ok {
+            public var ok: Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3621,12 +3654,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3644,12 +3677,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3667,12 +3700,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-org)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3724,13 +3757,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-organization)`.
-    public enum packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization {
+    public enum PackagesGetPackageVersionForOrganization {
         public static let id: Swift.String = "packages/get-package-version-for-organization"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3741,59 +3774,59 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageVersionId: Unique identifier of the package version.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    org: Components.Parameters.org,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    org: Components.Parameters.Org,
+                    packageVersionId: Components.Parameters.PackageVersionId
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.org = org
-                    self.package_version_id = package_version_id
+                    self.packageVersionId = packageVersionId
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input.Path
+            public var path: Operations.PackagesGetPackageVersionForOrganization.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageVersionForOrganization.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageVersionForOrganization.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input.Headers
+            public var headers: Operations.PackagesGetPackageVersionForOrganization.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input.Path,
-                headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Input.Headers = .init()
+                path: Operations.PackagesGetPackageVersionForOrganization.Input.Path,
+                headers: Operations.PackagesGetPackageVersionForOrganization.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3804,12 +3837,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.package_hyphen_version)
+                    case json(Components.Schemas.PackageVersion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.package_hyphen_version {
+                    public var json: Components.Schemas.PackageVersion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3819,12 +3852,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Output.Ok.Body
+                public var body: Operations.PackagesGetPackageVersionForOrganization.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetPackageVersionForOrganization.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3833,12 +3866,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-organization)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Output.Ok)
+            case ok(Operations.PackagesGetPackageVersionForOrganization.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_organization.Output.Ok {
+            public var ok: Operations.PackagesGetPackageVersionForOrganization.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3892,13 +3925,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)`.
-    public enum packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org {
+    public enum PackagesDeletePackageVersionForOrg {
         public static let id: Swift.String = "packages/delete-package-version-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3909,59 +3942,59 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageVersionId: Unique identifier of the package version.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    org: Components.Parameters.org,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    org: Components.Parameters.Org,
+                    packageVersionId: Components.Parameters.PackageVersionId
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.org = org
-                    self.package_version_id = package_version_id
+                    self.packageVersionId = packageVersionId
                 }
             }
-            public var path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.PackagesDeletePackageVersionForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageVersionForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageVersionForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.PackagesDeletePackageVersionForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.PackagesDeletePackageVersionForOrg.Input.Path,
+                headers: Operations.PackagesDeletePackageVersionForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3977,12 +4010,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output.NoContent)
+            case noContent(Operations.PackagesDeletePackageVersionForOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output.NoContent {
+            public var noContent: Operations.PackagesDeletePackageVersionForOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4000,12 +4041,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4023,12 +4064,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4046,12 +4087,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4109,13 +4150,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)`.
-    public enum packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org {
+    public enum PackagesRestorePackageVersionForOrg {
         public static let id: Swift.String = "packages/restore-package-version-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -4126,59 +4167,59 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageVersionId: Unique identifier of the package version.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    org: Components.Parameters.org,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    org: Components.Parameters.Org,
+                    packageVersionId: Components.Parameters.PackageVersionId
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.org = org
-                    self.package_version_id = package_version_id
+                    self.packageVersionId = packageVersionId
                 }
             }
-            public var path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.PackagesRestorePackageVersionForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageVersionForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageVersionForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.PackagesRestorePackageVersionForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.PackagesRestorePackageVersionForOrg.Input.Path,
+                headers: Operations.PackagesRestorePackageVersionForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4194,12 +4235,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output.NoContent)
+            case noContent(Operations.PackagesRestorePackageVersionForOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output.NoContent {
+            public var noContent: Operations.PackagesRestorePackageVersionForOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4217,12 +4266,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4240,12 +4289,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4263,12 +4312,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4320,26 +4369,26 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/docker/conflicts`.
     /// - Remark: Generated from `#/paths//user/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-authenticated-user)`.
-    public enum packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser {
         public static let id: Swift.String = "packages/list-docker-migration-conflicting-packages-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/docker/conflicts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
-            public init(headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()) {
+            public init(headers: Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Input.Headers = .init()) {
                 self.headers = headers
             }
         }
@@ -4348,12 +4397,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/docker/conflicts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/docker/conflicts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package])
+                    case json([Components.Schemas.Package])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package] {
+                    public var json: [Components.Schemas.Package] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4363,12 +4412,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4377,12 +4426,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4434,13 +4483,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/packages`.
     /// - Remark: Generated from `#/paths//user/packages/get(packages/list-packages-for-authenticated-user)`.
-    public enum packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum PackagesListPackagesForAuthenticatedUser {
         public static let id: Swift.String = "packages/list-packages-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/packages/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/package_type`.
-                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -4451,9 +4500,9 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/package_type`.
-                public var package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query.package_typePayload
+                public var packageType: Operations.PackagesListPackagesForAuthenticatedUser.Input.Query.PackageTypePayload
                 /// - Remark: Generated from `#/components/parameters/package-visibility`.
-                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageVisibility: String, Codable, Hashable, Sendable, CaseIterable {
                     case _public = "public"
                     case _private = "private"
                     case _internal = "internal"
@@ -4464,55 +4513,55 @@ public enum Operations {
                 /// For the list of GitHub Packages registries that support granular permissions, see "[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/visibility`.
-                public var visibility: Components.Parameters.package_hyphen_visibility?
+                public var visibility: Components.Parameters.PackageVisibility?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///   - visibility: The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query.package_typePayload,
-                    visibility: Components.Parameters.package_hyphen_visibility? = nil,
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    packageType: Operations.PackagesListPackagesForAuthenticatedUser.Input.Query.PackageTypePayload,
+                    visibility: Components.Parameters.PackageVisibility? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
-                    self.package_type = package_type
+                    self.packageType = packageType
                     self.visibility = visibility
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.PackagesListPackagesForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/packages/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListPackagesForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListPackagesForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesListPackagesForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query,
-                headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.PackagesListPackagesForAuthenticatedUser.Input.Query,
+                headers: Operations.PackagesListPackagesForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -4523,12 +4572,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/packages/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/packages/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package])
+                    case json([Components.Schemas.Package])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package] {
+                    public var json: [Components.Schemas.Package] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4538,12 +4587,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesListPackagesForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesListPackagesForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4552,12 +4601,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/get(packages/list-packages-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesListPackagesForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesListPackagesForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4575,12 +4624,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/get(packages/list-packages-for-authenticated-user)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.package_es_list_error)
+            case badRequest(Components.Responses.PackageEsListError)
+            /// The value of `per_page` multiplied by `page` cannot be greater than 10000.
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/get(packages/list-packages-for-authenticated-user)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.package_es_list_error {
+            public var badRequest: Components.Responses.PackageEsListError {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -4632,13 +4689,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/get(packages/get-package-for-authenticated-user)`.
-    public enum packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum PackagesGetPackageForAuthenticatedUser {
         public static let id: Swift.String = "packages/get-package-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -4649,45 +4706,45 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.PackagesGetPackageForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesGetPackageForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesGetPackageForAuthenticatedUser.Input.Path,
+                headers: Operations.PackagesGetPackageForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4698,12 +4755,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.package)
+                    case json(Components.Schemas.Package)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.package {
+                    public var json: Components.Schemas.Package {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4713,12 +4770,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesGetPackageForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetPackageForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4727,12 +4784,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/get(packages/get-package-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesGetPackageForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesGetPackageForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4784,13 +4841,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)`.
-    public enum packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum PackagesDeletePackageForAuthenticatedUser {
         public static let id: Swift.String = "packages/delete-package-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -4801,45 +4858,45 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/DELETE/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/DELETE/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                 }
             }
-            public var path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.PackagesDeletePackageForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesDeletePackageForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesDeletePackageForAuthenticatedUser.Input.Path,
+                headers: Operations.PackagesDeletePackageForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4855,12 +4912,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.PackagesDeletePackageForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.PackagesDeletePackageForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4878,12 +4943,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4901,12 +4966,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4924,12 +4989,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -4985,13 +5050,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)`.
-    public enum packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum PackagesRestorePackageForAuthenticatedUser {
         public static let id: Swift.String = "packages/restore-package-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5002,25 +5067,25 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/restore/POST/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/restore/POST/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                 }
             }
-            public var path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/restore/POST/query`.
             public struct Query: Sendable, Hashable {
                 /// package token
@@ -5035,19 +5100,19 @@ public enum Operations {
                     self.token = token
                 }
             }
-            public var query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/restore/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5055,9 +5120,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Path,
+                query: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.PackagesRestorePackageForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5074,12 +5139,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.PackagesRestorePackageForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.PackagesRestorePackageForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5097,12 +5170,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5120,12 +5193,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5143,12 +5216,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5200,13 +5273,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-authenticated-user)`.
-    public enum packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user {
+    public enum PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser {
         public static let id: Swift.String = "packages/get-all-package-versions-for-package-owned-by-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5217,73 +5290,73 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case active = "active"
                     case deleted = "deleted"
                 }
                 /// The state of the package, either active or deleted.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query/state`.
-                public var state: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query.statePayload?
+                public var state: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Query.StatePayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - state: The state of the package, either active or deleted.
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    state: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query.statePayload? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    state: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Query.StatePayload? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.state = state
                 }
             }
-            public var query: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5291,9 +5364,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Path,
-                query: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Path,
+                query: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5305,12 +5378,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package_hyphen_version])
+                    case json([Components.Schemas.PackageVersion])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package_hyphen_version] {
+                    public var json: [Components.Schemas.PackageVersion] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5320,12 +5393,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5334,12 +5407,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5357,12 +5430,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5380,12 +5453,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5403,12 +5476,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5460,13 +5533,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-authenticated-user)`.
-    public enum packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum PackagesGetPackageVersionForAuthenticatedUser {
         public static let id: Swift.String = "packages/get-package-version-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5477,52 +5550,52 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
+                ///   - packageVersionId: Unique identifier of the package version.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    packageVersionId: Components.Parameters.PackageVersionId
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
-                    self.package_version_id = package_version_id
+                    self.packageType = packageType
+                    self.packageName = packageName
+                    self.packageVersionId = packageVersionId
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.PackagesGetPackageVersionForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageVersionForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageVersionForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesGetPackageVersionForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesGetPackageVersionForAuthenticatedUser.Input.Path,
+                headers: Operations.PackagesGetPackageVersionForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5533,12 +5606,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.package_hyphen_version)
+                    case json(Components.Schemas.PackageVersion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.package_hyphen_version {
+                    public var json: Components.Schemas.PackageVersion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5548,12 +5621,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesGetPackageVersionForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetPackageVersionForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5562,12 +5635,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesGetPackageVersionForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesGetPackageVersionForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5621,13 +5694,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)`.
-    public enum packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum PackagesDeletePackageVersionForAuthenticatedUser {
         public static let id: Swift.String = "packages/delete-package-version-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5638,52 +5711,52 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
+                ///   - packageVersionId: Unique identifier of the package version.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    packageVersionId: Components.Parameters.PackageVersionId
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
-                    self.package_version_id = package_version_id
+                    self.packageType = packageType
+                    self.packageName = packageName
+                    self.packageVersionId = packageVersionId
                 }
             }
-            public var path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.PackagesDeletePackageVersionForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageVersionForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageVersionForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesDeletePackageVersionForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesDeletePackageVersionForAuthenticatedUser.Input.Path,
+                headers: Operations.PackagesDeletePackageVersionForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5699,12 +5772,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.PackagesDeletePackageVersionForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.PackagesDeletePackageVersionForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5722,12 +5803,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5745,12 +5826,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5768,12 +5849,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -5829,13 +5910,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)`.
-    public enum packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum PackagesRestorePackageVersionForAuthenticatedUser {
         public static let id: Swift.String = "packages/restore-package-version-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5846,52 +5927,52 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
+                ///   - packageVersionId: Unique identifier of the package version.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    packageVersionId: Components.Parameters.PackageVersionId
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
-                    self.package_version_id = package_version_id
+                    self.packageType = packageType
+                    self.packageName = packageName
+                    self.packageVersionId = packageVersionId
                 }
             }
-            public var path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.PackagesRestorePackageVersionForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageVersionForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageVersionForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesRestorePackageVersionForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesRestorePackageVersionForAuthenticatedUser.Input.Path,
+                headers: Operations.PackagesRestorePackageVersionForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5907,12 +5988,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.PackagesRestorePackageVersionForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.PackagesRestorePackageVersionForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5930,12 +6019,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5953,12 +6042,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5976,12 +6065,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6033,7 +6122,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/docker/conflicts`.
     /// - Remark: Generated from `#/paths//users/{username}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-user)`.
-    public enum packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user {
+    public enum PackagesListDockerMigrationConflictingPackagesForUser {
         public static let id: Swift.String = "packages/list-docker-migration-conflicting-packages-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/docker/conflicts/GET/path`.
@@ -6041,36 +6130,36 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/docker/conflicts/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/docker/conflicts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListDockerMigrationConflictingPackagesForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListDockerMigrationConflictingPackagesForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Input.Path,
+                headers: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6081,12 +6170,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/docker/conflicts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/docker/conflicts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package])
+                    case json([Components.Schemas.Package])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package] {
+                    public var json: [Components.Schemas.Package] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6096,12 +6185,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6110,12 +6199,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesListDockerMigrationConflictingPackagesForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_list_hyphen_docker_hyphen_migration_hyphen_conflicting_hyphen_packages_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesListDockerMigrationConflictingPackagesForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6133,12 +6222,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6156,12 +6245,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/docker/conflicts/get(packages/list-docker-migration-conflicting-packages-for-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6213,7 +6302,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)`.
-    public enum packages_sol_list_hyphen_packages_hyphen_for_hyphen_user {
+    public enum PackagesListPackagesForUser {
         public static let id: Swift.String = "packages/list-packages-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/packages/GET/path`.
@@ -6221,20 +6310,20 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.PackagesListPackagesForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/package_type`.
-                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -6245,9 +6334,9 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/package_type`.
-                public var package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Query.package_typePayload
+                public var packageType: Operations.PackagesListPackagesForUser.Input.Query.PackageTypePayload
                 /// - Remark: Generated from `#/components/parameters/package-visibility`.
-                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageVisibility: String, Codable, Hashable, Sendable, CaseIterable {
                     case _public = "public"
                     case _private = "private"
                     case _internal = "internal"
@@ -6258,47 +6347,47 @@ public enum Operations {
                 /// For the list of GitHub Packages registries that support granular permissions, see "[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/visibility`.
-                public var visibility: Components.Parameters.package_hyphen_visibility?
+                public var visibility: Components.Parameters.PackageVisibility?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///   - visibility: The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Query.package_typePayload,
-                    visibility: Components.Parameters.package_hyphen_visibility? = nil,
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    packageType: Operations.PackagesListPackagesForUser.Input.Query.PackageTypePayload,
+                    visibility: Components.Parameters.PackageVisibility? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
-                    self.package_type = package_type
+                    self.packageType = packageType
                     self.visibility = visibility
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.PackagesListPackagesForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/packages/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListPackagesForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesListPackagesForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesListPackagesForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6306,9 +6395,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Query,
-                headers: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesListPackagesForUser.Input.Path,
+                query: Operations.PackagesListPackagesForUser.Input.Query,
+                headers: Operations.PackagesListPackagesForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6320,12 +6409,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/packages/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package])
+                    case json([Components.Schemas.Package])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package] {
+                    public var json: [Components.Schemas.Package] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6335,12 +6424,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesListPackagesForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesListPackagesForUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6349,12 +6438,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesListPackagesForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesListPackagesForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6372,12 +6461,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6395,12 +6484,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6418,12 +6507,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.package_es_list_error)
+            case badRequest(Components.Responses.PackageEsListError)
+            /// The value of `per_page` multiplied by `page` cannot be greater than 10000.
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.package_es_list_error {
+            public var badRequest: Components.Responses.PackageEsListError {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -6475,13 +6572,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/get(packages/get-package-for-user)`.
-    public enum packages_sol_get_hyphen_package_hyphen_for_hyphen_user {
+    public enum PackagesGetPackageForUser {
         public static let id: Swift.String = "packages/get-package-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -6492,52 +6589,52 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    username: Components.Parameters.username
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    username: Components.Parameters.Username
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.username = username
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.PackagesGetPackageForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesGetPackageForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesGetPackageForUser.Input.Path,
+                headers: Operations.PackagesGetPackageForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6548,12 +6645,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.package)
+                    case json(Components.Schemas.Package)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.package {
+                    public var json: Components.Schemas.Package {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6563,12 +6660,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesGetPackageForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetPackageForUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6577,12 +6674,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/get(packages/get-package-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesGetPackageForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_package_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesGetPackageForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6636,13 +6733,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /users/{username}/packages/{package_type}/{package_name}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)`.
-    public enum packages_sol_delete_hyphen_package_hyphen_for_hyphen_user {
+    public enum PackagesDeletePackageForUser {
         public static let id: Swift.String = "packages/delete-package-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -6653,52 +6750,52 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/DELETE/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/DELETE/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/DELETE/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    username: Components.Parameters.username
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    username: Components.Parameters.Username
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.username = username
                 }
             }
-            public var path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.PackagesDeletePackageForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesDeletePackageForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesDeletePackageForUser.Input.Path,
+                headers: Operations.PackagesDeletePackageForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6714,12 +6811,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Output.NoContent)
+            case noContent(Operations.PackagesDeletePackageForUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Output.NoContent {
+            public var noContent: Operations.PackagesDeletePackageForUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6737,12 +6842,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6760,12 +6865,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6783,12 +6888,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6846,13 +6951,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /users/{username}/packages/{package_type}/{package_name}/restore`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)`.
-    public enum packages_sol_restore_hyphen_package_hyphen_for_hyphen_user {
+    public enum PackagesRestorePackageForUser {
         public static let id: Swift.String = "packages/restore-package-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -6863,32 +6968,32 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/restore/POST/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/restore/POST/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/restore/POST/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    username: Components.Parameters.username
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    username: Components.Parameters.Username
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.username = username
                 }
             }
-            public var path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.PackagesRestorePackageForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/restore/POST/query`.
             public struct Query: Sendable, Hashable {
                 /// package token
@@ -6903,19 +7008,19 @@ public enum Operations {
                     self.token = token
                 }
             }
-            public var query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.PackagesRestorePackageForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/restore/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesRestorePackageForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6923,9 +7028,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesRestorePackageForUser.Input.Path,
+                query: Operations.PackagesRestorePackageForUser.Input.Query = .init(),
+                headers: Operations.PackagesRestorePackageForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6942,12 +7047,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Output.NoContent)
+            case noContent(Operations.PackagesRestorePackageForUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Output.NoContent {
+            public var noContent: Operations.PackagesRestorePackageForUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6965,12 +7078,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6988,12 +7101,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7011,12 +7124,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7068,13 +7181,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}/versions`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-user)`.
-    public enum packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user {
+    public enum PackagesGetAllPackageVersionsForPackageOwnedByUser {
         public static let id: Swift.String = "packages/get-all-package-versions-for-package-owned-by-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -7085,52 +7198,52 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    username: Components.Parameters.username
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    username: Components.Parameters.Username
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.username = username
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Input.Path
+            public var path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Input.Path,
+                headers: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7141,12 +7254,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.package_hyphen_version])
+                    case json([Components.Schemas.PackageVersion])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.package_hyphen_version] {
+                    public var json: [Components.Schemas.PackageVersion] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7156,12 +7269,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7170,12 +7283,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_all_hyphen_package_hyphen_versions_hyphen_for_hyphen_package_hyphen_owned_hyphen_by_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7193,12 +7306,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7216,12 +7329,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7239,12 +7352,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/get(packages/get-all-package-versions-for-package-owned-by-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7296,13 +7409,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-user)`.
-    public enum packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user {
+    public enum PackagesGetPackageVersionForUser {
         public static let id: Swift.String = "packages/get-package-version-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -7313,59 +7426,59 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
+                ///   - packageVersionId: Unique identifier of the package version.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id,
-                    username: Components.Parameters.username
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    packageVersionId: Components.Parameters.PackageVersionId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
-                    self.package_version_id = package_version_id
+                    self.packageType = packageType
+                    self.packageName = packageName
+                    self.packageVersionId = packageVersionId
                     self.username = username
                 }
             }
-            public var path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.PackagesGetPackageVersionForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageVersionForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesGetPackageVersionForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesGetPackageVersionForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesGetPackageVersionForUser.Input.Path,
+                headers: Operations.PackagesGetPackageVersionForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7376,12 +7489,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.package_hyphen_version)
+                    case json(Components.Schemas.PackageVersion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.package_hyphen_version {
+                    public var json: Components.Schemas.PackageVersion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7391,12 +7504,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.PackagesGetPackageVersionForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.PackagesGetPackageVersionForUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7405,12 +7518,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/get(packages/get-package-version-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.PackagesGetPackageVersionForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.packages_sol_get_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.PackagesGetPackageVersionForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7464,13 +7577,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)`.
-    public enum packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user {
+    public enum PackagesDeletePackageVersionForUser {
         public static let id: Swift.String = "packages/delete-package-version-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -7481,59 +7594,59 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - username: The handle for the GitHub user account.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageVersionId: Unique identifier of the package version.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    username: Components.Parameters.username,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    username: Components.Parameters.Username,
+                    packageVersionId: Components.Parameters.PackageVersionId
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.username = username
-                    self.package_version_id = package_version_id
+                    self.packageVersionId = packageVersionId
                 }
             }
-            public var path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.PackagesDeletePackageVersionForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageVersionForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesDeletePackageVersionForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesDeletePackageVersionForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesDeletePackageVersionForUser.Input.Path,
+                headers: Operations.PackagesDeletePackageVersionForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7549,12 +7662,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.NoContent)
+            case noContent(Operations.PackagesDeletePackageVersionForUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.NoContent {
+            public var noContent: Operations.PackagesDeletePackageVersionForUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7572,12 +7693,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7595,12 +7716,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7618,12 +7739,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7681,13 +7802,13 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore`.
     /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)`.
-    public enum packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user {
+    public enum PackagesRestorePackageVersionForUser {
         public static let id: Swift.String = "packages/restore-package-version-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum PackageType: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -7698,59 +7819,59 @@ public enum Operations {
                 /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_type`.
-                public var package_type: Components.Parameters.package_hyphen_type
+                public var packageType: Components.Parameters.PackageType
                 /// The name of the package.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_name`.
-                public var package_name: Components.Parameters.package_hyphen_name
+                public var packageName: Components.Parameters.PackageName
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Unique identifier of the package version.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path/package_version_id`.
-                public var package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                public var packageVersionId: Components.Parameters.PackageVersionId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - package_type: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
-                ///   - package_name: The name of the package.
+                ///   - packageType: The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+                ///   - packageName: The name of the package.
                 ///   - username: The handle for the GitHub user account.
-                ///   - package_version_id: Unique identifier of the package version.
+                ///   - packageVersionId: Unique identifier of the package version.
                 public init(
-                    package_type: Components.Parameters.package_hyphen_type,
-                    package_name: Components.Parameters.package_hyphen_name,
-                    username: Components.Parameters.username,
-                    package_version_id: Components.Parameters.package_hyphen_version_hyphen_id
+                    packageType: Components.Parameters.PackageType,
+                    packageName: Components.Parameters.PackageName,
+                    username: Components.Parameters.Username,
+                    packageVersionId: Components.Parameters.PackageVersionId
                 ) {
-                    self.package_type = package_type
-                    self.package_name = package_name
+                    self.packageType = packageType
+                    self.packageName = packageName
                     self.username = username
-                    self.package_version_id = package_version_id
+                    self.packageVersionId = packageVersionId
                 }
             }
-            public var path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.PackagesRestorePackageVersionForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageVersionForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PackagesRestorePackageVersionForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.PackagesRestorePackageVersionForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Path,
-                headers: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.PackagesRestorePackageVersionForUser.Input.Path,
+                headers: Operations.PackagesRestorePackageVersionForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7766,12 +7887,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.NoContent)
+            case noContent(Operations.PackagesRestorePackageVersionForUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.NoContent {
+            public var noContent: Operations.PackagesRestorePackageVersionForUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7789,12 +7918,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7812,12 +7941,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7835,12 +7964,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):

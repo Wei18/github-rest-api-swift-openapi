@@ -14,8 +14,8 @@ import GitHubRestAPIUsers
 import OpenAPIRuntime
 import OpenAPIURLSession
 
-let client = Client(serverURL: try Servers.server1(), transport: URLSessionTransport()) 
-let users = try await client.users_sol_list().ok.body.json 
+let client = Client(serverURL: try Servers.Server1.url(), transport: URLSessionTransport())
+let users = try await client.usersList().ok.body.json 
 ```
 
 <details>
@@ -91,23 +91,23 @@ struct GitHubRestAPIIssuesExtension {
         let newBody = "\(body)\n\n\(hidingContent)"
 
         let client = Client(
-            serverURL: try Servers.server1(),
+            serverURL: try Servers.Server1.url(),
             transport: URLSessionTransport(),
             middlewares: [AuthenticationMiddleware(token: nil)]
         )
 
-        let comments = try await client.issues_sol_list_hyphen_comments(
-            path: .init(owner: owner, repo: repo, issue_number: number)
+        let comments = try await client.issuesListComments(
+            path: .init(owner: owner, repo: repo, issueNumber: number)
         ).ok.body.json
 
         if let comment = comments.first(where: { $0.body?.contains(hidingContent) == true }) {
-            _ = try await client.issues_sol_update_hyphen_comment(
-                path: .init(owner: owner, repo: repo, comment_id: Components.Parameters.comment_hyphen_id(comment.id)),
+            _ = try await client.issuesUpdateComment(
+                path: .init(owner: owner, repo: repo, commentId: comment.id),
                 body: .json(.init(body: newBody))
             )
         } else {
-            _ = try await client.issues_sol_create_hyphen_comment(
-                path: .init(owner: owner, repo: repo, issue_number: number),
+            _ = try await client.issuesCreateComment(
+                path: .init(owner: owner, repo: repo, issueNumber: number),
                 body: .json(.init(body: newBody))
             )
         }
@@ -130,7 +130,7 @@ import HTTPTypes
 let token: String = "***"
 
 let client = Client(
-    serverURL: try Servers.server1(),
+    serverURL: try Servers.Server1.url(),
     transport: URLSessionTransport(),
     middlewares: [AuthenticationMiddleware(token: token)]
 )

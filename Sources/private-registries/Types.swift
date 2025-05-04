@@ -21,7 +21,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/get(private-registries/list-org-private-registries)`.
-    func private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries(_ input: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input) async throws -> Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output
+    func privateRegistriesListOrgPrivateRegistries(_ input: Operations.PrivateRegistriesListOrgPrivateRegistries.Input) async throws -> Operations.PrivateRegistriesListOrgPrivateRegistries.Output
     /// Create a private registry for an organization
     ///
     ///
@@ -31,7 +31,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/private-registries`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/post(private-registries/create-org-private-registry)`.
-    func private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry(_ input: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input) async throws -> Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Output
+    func privateRegistriesCreateOrgPrivateRegistry(_ input: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input) async throws -> Operations.PrivateRegistriesCreateOrgPrivateRegistry.Output
     /// Get private registries public key for an organization
     ///
     ///
@@ -41,7 +41,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/public-key/get(private-registries/get-org-public-key)`.
-    func private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key(_ input: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input) async throws -> Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output
+    func privateRegistriesGetOrgPublicKey(_ input: Operations.PrivateRegistriesGetOrgPublicKey.Input) async throws -> Operations.PrivateRegistriesGetOrgPublicKey.Output
     /// Get a private registry for an organization
     ///
     ///
@@ -51,7 +51,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/get(private-registries/get-org-private-registry)`.
-    func private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry(_ input: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input) async throws -> Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Output
+    func privateRegistriesGetOrgPrivateRegistry(_ input: Operations.PrivateRegistriesGetOrgPrivateRegistry.Input) async throws -> Operations.PrivateRegistriesGetOrgPrivateRegistry.Output
     /// Update a private registry for an organization
     ///
     ///
@@ -61,7 +61,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)`.
-    func private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry(_ input: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input) async throws -> Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Output
+    func privateRegistriesUpdateOrgPrivateRegistry(_ input: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input) async throws -> Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Output
     /// Delete a private registry for an organization
     ///
     ///
@@ -71,7 +71,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)`.
-    func private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry(_ input: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input) async throws -> Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Output
+    func privateRegistriesDeleteOrgPrivateRegistry(_ input: Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Input) async throws -> Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -86,12 +86,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/get(private-registries/list-org-private-registries)`.
-    public func private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries(
-        path: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Path,
-        query: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Query = .init(),
-        headers: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Headers = .init()
-    ) async throws -> Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output {
-        try await private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries(Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input(
+    public func privateRegistriesListOrgPrivateRegistries(
+        path: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Path,
+        query: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Query = .init(),
+        headers: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Headers = .init()
+    ) async throws -> Operations.PrivateRegistriesListOrgPrivateRegistries.Output {
+        try await privateRegistriesListOrgPrivateRegistries(Operations.PrivateRegistriesListOrgPrivateRegistries.Input(
             path: path,
             query: query,
             headers: headers
@@ -106,12 +106,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/private-registries`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/post(private-registries/create-org-private-registry)`.
-    public func private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry(
-        path: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Path,
-        headers: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Headers = .init(),
-        body: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body
-    ) async throws -> Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Output {
-        try await private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry(Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input(
+    public func privateRegistriesCreateOrgPrivateRegistry(
+        path: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Path,
+        headers: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Headers = .init(),
+        body: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Body
+    ) async throws -> Operations.PrivateRegistriesCreateOrgPrivateRegistry.Output {
+        try await privateRegistriesCreateOrgPrivateRegistry(Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input(
             path: path,
             headers: headers,
             body: body
@@ -126,11 +126,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/public-key/get(private-registries/get-org-public-key)`.
-    public func private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key(
-        path: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Path,
-        headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Headers = .init()
-    ) async throws -> Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output {
-        try await private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key(Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input(
+    public func privateRegistriesGetOrgPublicKey(
+        path: Operations.PrivateRegistriesGetOrgPublicKey.Input.Path,
+        headers: Operations.PrivateRegistriesGetOrgPublicKey.Input.Headers = .init()
+    ) async throws -> Operations.PrivateRegistriesGetOrgPublicKey.Output {
+        try await privateRegistriesGetOrgPublicKey(Operations.PrivateRegistriesGetOrgPublicKey.Input(
             path: path,
             headers: headers
         ))
@@ -144,11 +144,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/get(private-registries/get-org-private-registry)`.
-    public func private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry(
-        path: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input.Path,
-        headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input.Headers = .init()
-    ) async throws -> Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Output {
-        try await private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry(Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input(
+    public func privateRegistriesGetOrgPrivateRegistry(
+        path: Operations.PrivateRegistriesGetOrgPrivateRegistry.Input.Path,
+        headers: Operations.PrivateRegistriesGetOrgPrivateRegistry.Input.Headers = .init()
+    ) async throws -> Operations.PrivateRegistriesGetOrgPrivateRegistry.Output {
+        try await privateRegistriesGetOrgPrivateRegistry(Operations.PrivateRegistriesGetOrgPrivateRegistry.Input(
             path: path,
             headers: headers
         ))
@@ -162,12 +162,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)`.
-    public func private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry(
-        path: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Path,
-        headers: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Headers = .init(),
-        body: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Body
-    ) async throws -> Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Output {
-        try await private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry(Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input(
+    public func privateRegistriesUpdateOrgPrivateRegistry(
+        path: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Path,
+        headers: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Headers = .init(),
+        body: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body
+    ) async throws -> Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Output {
+        try await privateRegistriesUpdateOrgPrivateRegistry(Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input(
             path: path,
             headers: headers,
             body: body
@@ -182,11 +182,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)`.
-    public func private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry(
-        path: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input.Path,
-        headers: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input.Headers = .init()
-    ) async throws -> Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Output {
-        try await private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry(Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input(
+    public func privateRegistriesDeleteOrgPrivateRegistry(
+        path: Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Input.Path,
+        headers: Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Input.Headers = .init()
+    ) async throws -> Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Output {
+        try await privateRegistriesDeleteOrgPrivateRegistry(Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Input(
             path: path,
             headers: headers
         ))
@@ -195,6 +195,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -210,36 +219,36 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -247,11 +256,11 @@ public enum Components {
         /// Scim Error
         ///
         /// - Remark: Generated from `#/components/schemas/scim-error`.
-        public struct scim_hyphen_error: Codable, Hashable, Sendable {
+        public struct ScimError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/scim-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
             public var detail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/status`.
@@ -260,25 +269,25 @@ public enum Components {
             public var scimType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
             public var schemas: [Swift.String]?
-            /// Creates a new `scim_hyphen_error`.
+            /// Creates a new `ScimError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - detail:
             ///   - status:
             ///   - scimType:
             ///   - schemas:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 detail: Swift.String? = nil,
                 status: Swift.Int? = nil,
                 scimType: Swift.String? = nil,
                 schemas: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.detail = detail
                 self.status = status
                 self.scimType = scimType
@@ -286,7 +295,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case detail
                 case status
                 case scimType
@@ -296,30 +305,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -358,9 +367,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -375,7 +384,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -394,34 +403,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// Private registry configuration for an organization
         ///
         /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration`.
-        public struct org_hyphen_private_hyphen_registry_hyphen_configuration: Codable, Hashable, Sendable {
+        public struct OrgPrivateRegistryConfiguration: Codable, Hashable, Sendable {
             /// The name of the private registry configuration.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/name`.
@@ -429,13 +438,13 @@ public enum Components {
             /// The registry type.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/registry_type`.
-            @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable {
-                case maven_repository = "maven_repository"
+            @frozen public enum RegistryTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case mavenRepository = "maven_repository"
             }
             /// The registry type.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/registry_type`.
-            public var registry_type: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration.registry_typePayload
+            public var registryType: Components.Schemas.OrgPrivateRegistryConfiguration.RegistryTypePayload
             /// The username to use when authenticating with the private registry.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/username`.
@@ -443,7 +452,7 @@ public enum Components {
             /// Which type of organization repositories have access to the private registry.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum VisibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case _private = "private"
                 case selected = "selected"
@@ -451,48 +460,48 @@ public enum Components {
             /// Which type of organization repositories have access to the private registry.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/visibility`.
-            public var visibility: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration.visibilityPayload
+            public var visibility: Components.Schemas.OrgPrivateRegistryConfiguration.VisibilityPayload
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/updated_at`.
-            public var updated_at: Foundation.Date
-            /// Creates a new `org_hyphen_private_hyphen_registry_hyphen_configuration`.
+            public var updatedAt: Foundation.Date
+            /// Creates a new `OrgPrivateRegistryConfiguration`.
             ///
             /// - Parameters:
             ///   - name: The name of the private registry configuration.
-            ///   - registry_type: The registry type.
+            ///   - registryType: The registry type.
             ///   - username: The username to use when authenticating with the private registry.
             ///   - visibility: Which type of organization repositories have access to the private registry.
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             public init(
                 name: Swift.String,
-                registry_type: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration.registry_typePayload,
+                registryType: Components.Schemas.OrgPrivateRegistryConfiguration.RegistryTypePayload,
                 username: Swift.String? = nil,
-                visibility: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration.visibilityPayload,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date
+                visibility: Components.Schemas.OrgPrivateRegistryConfiguration.VisibilityPayload,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date
             ) {
                 self.name = name
-                self.registry_type = registry_type
+                self.registryType = registryType
                 self.username = username
                 self.visibility = visibility
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case name
-                case registry_type
+                case registryType = "registry_type"
                 case username
                 case visibility
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
             }
         }
         /// Private registry configuration for an organization
         ///
         /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories`.
-        public struct org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories: Codable, Hashable, Sendable {
+        public struct OrgPrivateRegistryConfigurationWithSelectedRepositories: Codable, Hashable, Sendable {
             /// The name of the private registry configuration.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/name`.
@@ -500,13 +509,13 @@ public enum Components {
             /// The registry type.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/registry_type`.
-            @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable {
-                case maven_repository = "maven_repository"
+            @frozen public enum RegistryTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case mavenRepository = "maven_repository"
             }
             /// The registry type.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/registry_type`.
-            public var registry_type: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories.registry_typePayload
+            public var registryType: Components.Schemas.OrgPrivateRegistryConfigurationWithSelectedRepositories.RegistryTypePayload
             /// The username to use when authenticating with the private registry.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/username`.
@@ -514,7 +523,7 @@ public enum Components {
             /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum VisibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case _private = "private"
                 case selected = "selected"
@@ -522,50 +531,50 @@ public enum Components {
             /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/visibility`.
-            public var visibility: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories.visibilityPayload
+            public var visibility: Components.Schemas.OrgPrivateRegistryConfigurationWithSelectedRepositories.VisibilityPayload
             /// An array of repository IDs that can access the organization private registry when `visibility` is set to `selected`.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/selected_repository_ids`.
-            public var selected_repository_ids: [Swift.Int]?
+            public var selectedRepositoryIds: [Swift.Int]?
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/updated_at`.
-            public var updated_at: Foundation.Date
-            /// Creates a new `org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories`.
+            public var updatedAt: Foundation.Date
+            /// Creates a new `OrgPrivateRegistryConfigurationWithSelectedRepositories`.
             ///
             /// - Parameters:
             ///   - name: The name of the private registry configuration.
-            ///   - registry_type: The registry type.
+            ///   - registryType: The registry type.
             ///   - username: The username to use when authenticating with the private registry.
             ///   - visibility: Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
-            ///   - selected_repository_ids: An array of repository IDs that can access the organization private registry when `visibility` is set to `selected`.
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - selectedRepositoryIds: An array of repository IDs that can access the organization private registry when `visibility` is set to `selected`.
+            ///   - createdAt:
+            ///   - updatedAt:
             public init(
                 name: Swift.String,
-                registry_type: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories.registry_typePayload,
+                registryType: Components.Schemas.OrgPrivateRegistryConfigurationWithSelectedRepositories.RegistryTypePayload,
                 username: Swift.String? = nil,
-                visibility: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories.visibilityPayload,
-                selected_repository_ids: [Swift.Int]? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date
+                visibility: Components.Schemas.OrgPrivateRegistryConfigurationWithSelectedRepositories.VisibilityPayload,
+                selectedRepositoryIds: [Swift.Int]? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date
             ) {
                 self.name = name
-                self.registry_type = registry_type
+                self.registryType = registryType
                 self.username = username
                 self.visibility = visibility
-                self.selected_repository_ids = selected_repository_ids
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.selectedRepositoryIds = selectedRepositoryIds
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case name
-                case registry_type
+                case registryType = "registry_type"
                 case username
                 case visibility
-                case selected_repository_ids
-                case created_at
-                case updated_at
+                case selectedRepositoryIds = "selected_repository_ids"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
             }
         }
     }
@@ -574,34 +583,34 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The name of the secret.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-name`.
-        public typealias secret_hyphen_name = Swift.String
+        public typealias SecretName = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -611,25 +620,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct bad_request: Sendable, Hashable {
+        public struct BadRequest: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/bad_request/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -643,15 +652,15 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/scim+json`.
-                case application_scim_plus_json(Components.Schemas.scim_hyphen_error)
-                /// The associated value of the enum case if `self` is `.application_scim_plus_json`.
+                case applicationScimJson(Components.Schemas.ScimError)
+                /// The associated value of the enum case if `self` is `.applicationScimJson`.
                 ///
-                /// - Throws: An error if `self` is not `.application_scim_plus_json`.
-                /// - SeeAlso: `.application_scim_plus_json`.
-                public var application_scim_plus_json: Components.Schemas.scim_hyphen_error {
+                /// - Throws: An error if `self` is not `.applicationScimJson`.
+                /// - SeeAlso: `.applicationScimJson`.
+                public var applicationScimJson: Components.Schemas.ScimError {
                     get throws {
                         switch self {
-                        case let .application_scim_plus_json(body):
+                        case let .applicationScimJson(body):
                             return body
                         default:
                             try throwUnexpectedResponseBody(
@@ -663,25 +672,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.bad_request.Body
-            /// Creates a new `bad_request`.
+            public var body: Components.Responses.BadRequest.Body
+            /// Creates a new `BadRequest`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.bad_request.Body) {
+            public init(body: Components.Responses.BadRequest.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -691,12 +700,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
@@ -704,7 +713,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -720,7 +729,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/get(private-registries/list-org-private-registries)`.
-    public enum private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries {
+    public enum PrivateRegistriesListOrgPrivateRegistries {
         public static let id: Swift.String = "private-registries/list-org-private-registries"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/path`.
@@ -728,52 +737,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Path
+            public var path: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Query
+            public var query: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesListOrgPrivateRegistries.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesListOrgPrivateRegistries.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Headers
+            public var headers: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -781,9 +790,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Path,
-                query: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Query = .init(),
-                headers: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Input.Headers = .init()
+                path: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Path,
+                query: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Query = .init(),
+                headers: Operations.PrivateRegistriesListOrgPrivateRegistries.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -795,49 +804,49 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Headers
+                public var headers: Operations.PrivateRegistriesListOrgPrivateRegistries.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/responses/200/content/json/total_count`.
-                        public var total_count: Swift.Int
+                        public var totalCount: Swift.Int
                         /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/responses/200/content/json/configurations`.
-                        public var configurations: [Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration]
-                        /// Creates a new `jsonPayload`.
+                        public var configurations: [Components.Schemas.OrgPrivateRegistryConfiguration]
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - total_count:
+                        ///   - totalCount:
                         ///   - configurations:
                         public init(
-                            total_count: Swift.Int,
-                            configurations: [Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration]
+                            totalCount: Swift.Int,
+                            configurations: [Components.Schemas.OrgPrivateRegistryConfiguration]
                         ) {
-                            self.total_count = total_count
+                            self.totalCount = totalCount
                             self.configurations = configurations
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case total_count
+                            case totalCount = "total_count"
                             case configurations
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/GET/responses/200/content/application\/json`.
-                    case json(Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Body.jsonPayload)
+                    case json(Operations.PrivateRegistriesListOrgPrivateRegistries.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.PrivateRegistriesListOrgPrivateRegistries.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -847,15 +856,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Body
+                public var body: Operations.PrivateRegistriesListOrgPrivateRegistries.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Headers = .init(),
-                    body: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Body
+                    headers: Operations.PrivateRegistriesListOrgPrivateRegistries.Output.Ok.Headers = .init(),
+                    body: Operations.PrivateRegistriesListOrgPrivateRegistries.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -866,12 +875,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/get(private-registries/list-org-private-registries)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok)
+            case ok(Operations.PrivateRegistriesListOrgPrivateRegistries.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok {
+            public var ok: Operations.PrivateRegistriesListOrgPrivateRegistries.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -889,12 +898,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/get(private-registries/list-org-private-registries)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -912,12 +921,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/get(private-registries/list-org-private-registries)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -937,14 +946,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -955,14 +964,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -976,7 +985,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/private-registries`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/post(private-registries/create-org-private-registry)`.
-    public enum private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry {
+    public enum PrivateRegistriesCreateOrgPrivateRegistry {
         public static let id: Swift.String = "private-registries/create-org-private-registry"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/path`.
@@ -984,42 +993,42 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Path
+            public var path: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesCreateOrgPrivateRegistry.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesCreateOrgPrivateRegistry.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Headers
+            public var headers: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The registry type.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/registry_type`.
-                    @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable {
-                        case maven_repository = "maven_repository"
+                    @frozen public enum RegistryTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case mavenRepository = "maven_repository"
                     }
                     /// The registry type.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/registry_type`.
-                    public var registry_type: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.registry_typePayload
+                    public var registryType: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Body.JsonPayload.RegistryTypePayload
                     /// The username to use when authenticating with the private registry. This field should be omitted if the private registry does not require a username for authentication.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/username`.
@@ -1027,15 +1036,15 @@ public enum Operations {
                     /// The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/encrypted_value`.
-                    public var encrypted_value: Swift.String
+                    public var encryptedValue: Swift.String
                     /// The ID of the key you used to encrypt the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/key_id`.
-                    public var key_id: Swift.String
+                    public var keyId: Swift.String
                     /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum VisibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -1043,48 +1052,48 @@ public enum Operations {
                     /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/visibility`.
-                    public var visibility: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.visibilityPayload
+                    public var visibility: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Body.JsonPayload.VisibilityPayload
                     /// An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. You can manage the list of selected repositories using the [Update a private registry for an organization](https://docs.github.com/rest/private-registries/organization-configurations#update-a-private-registry-for-an-organization) endpoint. This field should be omitted if `visibility` is set to `all` or `private`.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/selected_repository_ids`.
-                    public var selected_repository_ids: [Swift.Int]?
-                    /// Creates a new `jsonPayload`.
+                    public var selectedRepositoryIds: [Swift.Int]?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - registry_type: The registry type.
+                    ///   - registryType: The registry type.
                     ///   - username: The username to use when authenticating with the private registry. This field should be omitted if the private registry does not require a username for authentication.
-                    ///   - encrypted_value: The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint.
-                    ///   - key_id: The ID of the key you used to encrypt the secret.
+                    ///   - encryptedValue: The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint.
+                    ///   - keyId: The ID of the key you used to encrypt the secret.
                     ///   - visibility: Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
-                    ///   - selected_repository_ids: An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. You can manage the list of selected repositories using the [Update a private registry for an organization](https://docs.github.com/rest/private-registries/organization-configurations#update-a-private-registry-for-an-organization) endpoint. This field should be omitted if `visibility` is set to `all` or `private`.
+                    ///   - selectedRepositoryIds: An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. You can manage the list of selected repositories using the [Update a private registry for an organization](https://docs.github.com/rest/private-registries/organization-configurations#update-a-private-registry-for-an-organization) endpoint. This field should be omitted if `visibility` is set to `all` or `private`.
                     public init(
-                        registry_type: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.registry_typePayload,
+                        registryType: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Body.JsonPayload.RegistryTypePayload,
                         username: Swift.String? = nil,
-                        encrypted_value: Swift.String,
-                        key_id: Swift.String,
-                        visibility: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.visibilityPayload,
-                        selected_repository_ids: [Swift.Int]? = nil
+                        encryptedValue: Swift.String,
+                        keyId: Swift.String,
+                        visibility: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Body.JsonPayload.VisibilityPayload,
+                        selectedRepositoryIds: [Swift.Int]? = nil
                     ) {
-                        self.registry_type = registry_type
+                        self.registryType = registryType
                         self.username = username
-                        self.encrypted_value = encrypted_value
-                        self.key_id = key_id
+                        self.encryptedValue = encryptedValue
+                        self.keyId = keyId
                         self.visibility = visibility
-                        self.selected_repository_ids = selected_repository_ids
+                        self.selectedRepositoryIds = selectedRepositoryIds
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case registry_type
+                        case registryType = "registry_type"
                         case username
-                        case encrypted_value
-                        case key_id
+                        case encryptedValue = "encrypted_value"
+                        case keyId = "key_id"
                         case visibility
-                        case selected_repository_ids
+                        case selectedRepositoryIds = "selected_repository_ids"
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/content/application\/json`.
-                case json(Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload)
+                case json(Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Body.JsonPayload)
             }
-            public var body: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body
+            public var body: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1092,9 +1101,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Path,
-                headers: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Headers = .init(),
-                body: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body
+                path: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Path,
+                headers: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Headers = .init(),
+                body: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -1106,12 +1115,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories)
+                    case json(Components.Schemas.OrgPrivateRegistryConfigurationWithSelectedRepositories)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration_hyphen_with_hyphen_selected_hyphen_repositories {
+                    public var json: Components.Schemas.OrgPrivateRegistryConfigurationWithSelectedRepositories {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1121,12 +1130,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Output.Created.Body
+                public var body: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Output.Created.Body) {
+                public init(body: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -1135,12 +1144,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/post(private-registries/create-org-private-registry)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Output.Created)
+            case created(Operations.PrivateRegistriesCreateOrgPrivateRegistry.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Output.Created {
+            public var created: Operations.PrivateRegistriesCreateOrgPrivateRegistry.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -1158,12 +1167,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/post(private-registries/create-org-private-registry)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1181,12 +1190,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/post(private-registries/create-org-private-registry)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -1239,7 +1248,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries/public-key`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/public-key/get(private-registries/get-org-public-key)`.
-    public enum private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key {
+    public enum PrivateRegistriesGetOrgPublicKey {
         public static let id: Swift.String = "private-registries/get-org-public-key"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/path`.
@@ -1247,36 +1256,36 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Path
+            public var path: Operations.PrivateRegistriesGetOrgPublicKey.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesGetOrgPublicKey.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesGetOrgPublicKey.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Headers
+            public var headers: Operations.PrivateRegistriesGetOrgPublicKey.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Path,
-                headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Headers = .init()
+                path: Operations.PrivateRegistriesGetOrgPublicKey.Input.Path,
+                headers: Operations.PrivateRegistriesGetOrgPublicKey.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1287,53 +1296,53 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Headers
+                public var headers: Operations.PrivateRegistriesGetOrgPublicKey.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/responses/200/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// The identifier for the key.
                         ///
                         /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/responses/200/content/json/key_id`.
-                        public var key_id: Swift.String
+                        public var keyId: Swift.String
                         /// The Base64 encoded public key.
                         ///
                         /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/responses/200/content/json/key`.
                         public var key: Swift.String
-                        /// Creates a new `jsonPayload`.
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
-                        ///   - key_id: The identifier for the key.
+                        ///   - keyId: The identifier for the key.
                         ///   - key: The Base64 encoded public key.
                         public init(
-                            key_id: Swift.String,
+                            keyId: Swift.String,
                             key: Swift.String
                         ) {
-                            self.key_id = key_id
+                            self.keyId = keyId
                             self.key = key
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case key_id
+                            case keyId = "key_id"
                             case key
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/public-key/GET/responses/200/content/application\/json`.
-                    case json(Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body.jsonPayload)
+                    case json(Operations.PrivateRegistriesGetOrgPublicKey.Output.Ok.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body.jsonPayload {
+                    public var json: Operations.PrivateRegistriesGetOrgPublicKey.Output.Ok.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1343,15 +1352,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body
+                public var body: Operations.PrivateRegistriesGetOrgPublicKey.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Headers = .init(),
-                    body: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body
+                    headers: Operations.PrivateRegistriesGetOrgPublicKey.Output.Ok.Headers = .init(),
+                    body: Operations.PrivateRegistriesGetOrgPublicKey.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1362,12 +1371,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/public-key/get(private-registries/get-org-public-key)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok)
+            case ok(Operations.PrivateRegistriesGetOrgPublicKey.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok {
+            public var ok: Operations.PrivateRegistriesGetOrgPublicKey.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1385,12 +1394,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/public-key/get(private-registries/get-org-public-key)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1443,7 +1452,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/get(private-registries/get-org-private-registry)`.
-    public enum private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry {
+    public enum PrivateRegistriesGetOrgPrivateRegistry {
         public static let id: Swift.String = "private-registries/get-org-private-registry"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/GET/path`.
@@ -1451,45 +1460,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/GET/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input.Path
+            public var path: Operations.PrivateRegistriesGetOrgPrivateRegistry.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesGetOrgPrivateRegistry.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesGetOrgPrivateRegistry.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input.Headers
+            public var headers: Operations.PrivateRegistriesGetOrgPrivateRegistry.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input.Path,
-                headers: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Input.Headers = .init()
+                path: Operations.PrivateRegistriesGetOrgPrivateRegistry.Input.Path,
+                headers: Operations.PrivateRegistriesGetOrgPrivateRegistry.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1500,12 +1509,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration)
+                    case json(Components.Schemas.OrgPrivateRegistryConfiguration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration {
+                    public var json: Components.Schemas.OrgPrivateRegistryConfiguration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1515,12 +1524,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Output.Ok.Body
+                public var body: Operations.PrivateRegistriesGetOrgPrivateRegistry.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Output.Ok.Body) {
+                public init(body: Operations.PrivateRegistriesGetOrgPrivateRegistry.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1529,12 +1538,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/get(private-registries/get-org-private-registry)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Output.Ok)
+            case ok(Operations.PrivateRegistriesGetOrgPrivateRegistry.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.private_hyphen_registries_sol_get_hyphen_org_hyphen_private_hyphen_registry.Output.Ok {
+            public var ok: Operations.PrivateRegistriesGetOrgPrivateRegistry.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1552,12 +1561,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/get(private-registries/get-org-private-registry)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1610,7 +1619,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)`.
-    public enum private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry {
+    public enum PrivateRegistriesUpdateOrgPrivateRegistry {
         public static let id: Swift.String = "private-registries/update-org-private-registry"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/path`.
@@ -1618,51 +1627,51 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Path
+            public var path: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesUpdateOrgPrivateRegistry.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesUpdateOrgPrivateRegistry.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Headers
+            public var headers: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The registry type.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/registry_type`.
-                    @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable {
-                        case maven_repository = "maven_repository"
+                    @frozen public enum RegistryTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case mavenRepository = "maven_repository"
                     }
                     /// The registry type.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/registry_type`.
-                    public var registry_type: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.registry_typePayload?
+                    public var registryType: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body.JsonPayload.RegistryTypePayload?
                     /// The username to use when authenticating with the private registry. This field should be omitted if the private registry does not require a username for authentication.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/username`.
@@ -1670,15 +1679,15 @@ public enum Operations {
                     /// The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/encrypted_value`.
-                    public var encrypted_value: Swift.String?
+                    public var encryptedValue: Swift.String?
                     /// The ID of the key you used to encrypt the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/key_id`.
-                    public var key_id: Swift.String?
+                    public var keyId: Swift.String?
                     /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum VisibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -1686,48 +1695,48 @@ public enum Operations {
                     /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/visibility`.
-                    public var visibility: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.visibilityPayload?
+                    public var visibility: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body.JsonPayload.VisibilityPayload?
                     /// An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. This field should be omitted if `visibility` is set to `all` or `private`.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/selected_repository_ids`.
-                    public var selected_repository_ids: [Swift.Int]?
-                    /// Creates a new `jsonPayload`.
+                    public var selectedRepositoryIds: [Swift.Int]?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - registry_type: The registry type.
+                    ///   - registryType: The registry type.
                     ///   - username: The username to use when authenticating with the private registry. This field should be omitted if the private registry does not require a username for authentication.
-                    ///   - encrypted_value: The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint.
-                    ///   - key_id: The ID of the key you used to encrypt the secret.
+                    ///   - encryptedValue: The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint.
+                    ///   - keyId: The ID of the key you used to encrypt the secret.
                     ///   - visibility: Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
-                    ///   - selected_repository_ids: An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. This field should be omitted if `visibility` is set to `all` or `private`.
+                    ///   - selectedRepositoryIds: An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. This field should be omitted if `visibility` is set to `all` or `private`.
                     public init(
-                        registry_type: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.registry_typePayload? = nil,
+                        registryType: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body.JsonPayload.RegistryTypePayload? = nil,
                         username: Swift.String? = nil,
-                        encrypted_value: Swift.String? = nil,
-                        key_id: Swift.String? = nil,
-                        visibility: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.visibilityPayload? = nil,
-                        selected_repository_ids: [Swift.Int]? = nil
+                        encryptedValue: Swift.String? = nil,
+                        keyId: Swift.String? = nil,
+                        visibility: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body.JsonPayload.VisibilityPayload? = nil,
+                        selectedRepositoryIds: [Swift.Int]? = nil
                     ) {
-                        self.registry_type = registry_type
+                        self.registryType = registryType
                         self.username = username
-                        self.encrypted_value = encrypted_value
-                        self.key_id = key_id
+                        self.encryptedValue = encryptedValue
+                        self.keyId = keyId
                         self.visibility = visibility
-                        self.selected_repository_ids = selected_repository_ids
+                        self.selectedRepositoryIds = selectedRepositoryIds
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case registry_type
+                        case registryType = "registry_type"
                         case username
-                        case encrypted_value
-                        case key_id
+                        case encryptedValue = "encrypted_value"
+                        case keyId = "key_id"
                         case visibility
-                        case selected_repository_ids
+                        case selectedRepositoryIds = "selected_repository_ids"
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload)
+                case json(Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body.JsonPayload)
             }
-            public var body: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Body
+            public var body: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1735,9 +1744,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Path,
-                headers: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Headers = .init(),
-                body: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input.Body
+                path: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Path,
+                headers: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Headers = .init(),
+                body: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -1754,12 +1763,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Output.NoContent)
+            case noContent(Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Output.NoContent {
+            public var noContent: Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -1777,12 +1794,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1800,12 +1817,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -1858,7 +1875,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/private-registries/{secret_name}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)`.
-    public enum private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry {
+    public enum PrivateRegistriesDeleteOrgPrivateRegistry {
         public static let id: Swift.String = "private-registries/delete-org-private-registry"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/DELETE/path`.
@@ -1866,45 +1883,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The name of the secret.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/DELETE/path/secret_name`.
-                public var secret_name: Components.Parameters.secret_hyphen_name
+                public var secretName: Components.Parameters.SecretName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - secret_name: The name of the secret.
+                ///   - secretName: The name of the secret.
                 public init(
-                    org: Components.Parameters.org,
-                    secret_name: Components.Parameters.secret_hyphen_name
+                    org: Components.Parameters.Org,
+                    secretName: Components.Parameters.SecretName
                 ) {
                     self.org = org
-                    self.secret_name = secret_name
+                    self.secretName = secretName
                 }
             }
-            public var path: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input.Path
+            public var path: Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesDeleteOrgPrivateRegistry.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PrivateRegistriesDeleteOrgPrivateRegistry.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input.Headers
+            public var headers: Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input.Path,
-                headers: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Input.Headers = .init()
+                path: Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Input.Path,
+                headers: Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -1920,12 +1937,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Output.NoContent)
+            case noContent(Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Output.NoContent {
+            public var noContent: Operations.PrivateRegistriesDeleteOrgPrivateRegistry.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -1943,12 +1968,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -1966,12 +1991,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1991,14 +2016,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -2009,14 +2034,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }

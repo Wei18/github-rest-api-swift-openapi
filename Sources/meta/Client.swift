@@ -44,10 +44,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /`.
     /// - Remark: Generated from `#/paths///get(meta/root)`.
-    public func meta_sol_root(_ input: Operations.meta_sol_root.Input) async throws -> Operations.meta_sol_root.Output {
+    public func metaRoot(_ input: Operations.MetaRoot.Input) async throws -> Operations.MetaRoot.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.meta_sol_root.id,
+            forOperation: Operations.MetaRoot.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/",
@@ -68,7 +68,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.meta_sol_root.Output.Ok.Body
+                    let body: Operations.MetaRoot.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -78,7 +78,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.root.self,
+                            Components.Schemas.Root.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -113,10 +113,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /meta`.
     /// - Remark: Generated from `#/paths//meta/get(meta/get)`.
-    public func meta_sol_get(_ input: Operations.meta_sol_get.Input) async throws -> Operations.meta_sol_get.Output {
+    public func metaGet(_ input: Operations.MetaGet.Input) async throws -> Operations.MetaGet.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.meta_sol_get.id,
+            forOperation: Operations.MetaGet.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/meta",
@@ -137,7 +137,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.meta_sol_get.Output.Ok.Body
+                    let body: Operations.MetaGet.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -147,7 +147,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.api_hyphen_overview.self,
+                            Components.Schemas.ApiOverview.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -177,10 +177,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /octocat`.
     /// - Remark: Generated from `#/paths//octocat/get(meta/get-octocat)`.
-    public func meta_sol_get_hyphen_octocat(_ input: Operations.meta_sol_get_hyphen_octocat.Input) async throws -> Operations.meta_sol_get_hyphen_octocat.Output {
+    public func metaGetOctocat(_ input: Operations.MetaGetOctocat.Input) async throws -> Operations.MetaGetOctocat.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.meta_sol_get_hyphen_octocat.id,
+            forOperation: Operations.MetaGetOctocat.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/octocat",
@@ -208,7 +208,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.meta_sol_get_hyphen_octocat.Output.Ok.Body
+                    let body: Operations.MetaGetOctocat.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -221,7 +221,7 @@ public struct Client: APIProtocol {
                             OpenAPIRuntime.HTTPBody.self,
                             from: responseBody,
                             transforming: { value in
-                                .application_octocat_hyphen_stream(value)
+                                .applicationOctocatStream(value)
                             }
                         )
                     default:
@@ -246,10 +246,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /versions`.
     /// - Remark: Generated from `#/paths//versions/get(meta/get-all-versions)`.
-    public func meta_sol_get_hyphen_all_hyphen_versions(_ input: Operations.meta_sol_get_hyphen_all_hyphen_versions.Input) async throws -> Operations.meta_sol_get_hyphen_all_hyphen_versions.Output {
+    public func metaGetAllVersions(_ input: Operations.MetaGetAllVersions.Input) async throws -> Operations.MetaGetAllVersions.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.meta_sol_get_hyphen_all_hyphen_versions.id,
+            forOperation: Operations.MetaGetAllVersions.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/versions",
@@ -270,7 +270,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.meta_sol_get_hyphen_all_hyphen_versions.Output.Ok.Body
+                    let body: Operations.MetaGetAllVersions.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -292,7 +292,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -302,7 +302,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -330,10 +330,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /zen`.
     /// - Remark: Generated from `#/paths//zen/get(meta/get-zen)`.
-    public func meta_sol_get_hyphen_zen(_ input: Operations.meta_sol_get_hyphen_zen.Input) async throws -> Operations.meta_sol_get_hyphen_zen.Output {
+    public func metaGetZen(_ input: Operations.MetaGetZen.Input) async throws -> Operations.MetaGetZen.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.meta_sol_get_hyphen_zen.id,
+            forOperation: Operations.MetaGetZen.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/zen",
@@ -354,7 +354,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.meta_sol_get_hyphen_zen.Output.Ok.Body
+                    let body: Operations.MetaGetZen.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [

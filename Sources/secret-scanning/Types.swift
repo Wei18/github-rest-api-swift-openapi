@@ -23,7 +23,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-enterprise)`.
-    func secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(_ input: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output
+    func secretScanningListAlertsForEnterprise(_ input: Operations.SecretScanningListAlertsForEnterprise.Input) async throws -> Operations.SecretScanningListAlertsForEnterprise.Output
     /// List secret scanning alerts for an organization
     ///
     /// Lists secret scanning alerts for eligible repositories in an organization, from newest to oldest.
@@ -34,7 +34,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-org)`.
-    func secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org(_ input: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output
+    func secretScanningListAlertsForOrg(_ input: Operations.SecretScanningListAlertsForOrg.Input) async throws -> Operations.SecretScanningListAlertsForOrg.Output
     /// List secret scanning alerts for a repository
     ///
     /// Lists secret scanning alerts for an eligible repository, from newest to oldest.
@@ -45,7 +45,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)`.
-    func secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(_ input: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output
+    func secretScanningListAlertsForRepo(_ input: Operations.SecretScanningListAlertsForRepo.Input) async throws -> Operations.SecretScanningListAlertsForRepo.Output
     /// Get a secret scanning alert
     ///
     /// Gets a single secret scanning alert detected in an eligible repository.
@@ -56,7 +56,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)`.
-    func secret_hyphen_scanning_sol_get_hyphen_alert(_ input: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Input) async throws -> Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output
+    func secretScanningGetAlert(_ input: Operations.SecretScanningGetAlert.Input) async throws -> Operations.SecretScanningGetAlert.Output
     /// Update a secret scanning alert
     ///
     /// Updates the status of a secret scanning alert in an eligible repository.
@@ -67,7 +67,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)`.
-    func secret_hyphen_scanning_sol_update_hyphen_alert(_ input: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input) async throws -> Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output
+    func secretScanningUpdateAlert(_ input: Operations.SecretScanningUpdateAlert.Input) async throws -> Operations.SecretScanningUpdateAlert.Output
     /// List locations for a secret scanning alert
     ///
     /// Lists all locations for a given secret scanning alert for an eligible repository.
@@ -78,7 +78,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)`.
-    func secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert(_ input: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output
+    func secretScanningListLocationsForAlert(_ input: Operations.SecretScanningListLocationsForAlert.Input) async throws -> Operations.SecretScanningListLocationsForAlert.Output
     /// Create a push protection bypass
     ///
     /// Creates a bypass for a previously push protected secret.
@@ -89,7 +89,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/secret-scanning/push-protection-bypasses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)`.
-    func secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass(_ input: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input) async throws -> Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output
+    func secretScanningCreatePushProtectionBypass(_ input: Operations.SecretScanningCreatePushProtectionBypass.Input) async throws -> Operations.SecretScanningCreatePushProtectionBypass.Output
     /// Get secret scanning scan history for a repository
     ///
     /// Lists the latest default incremental and backfill scans by type for a repository. Scans from Copilot Secret Scanning are not included.
@@ -98,7 +98,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/scan-history`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)`.
-    func secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history(_ input: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input) async throws -> Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output
+    func secretScanningGetScanHistory(_ input: Operations.SecretScanningGetScanHistory.Input) async throws -> Operations.SecretScanningGetScanHistory.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -115,12 +115,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-enterprise)`.
-    public func secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(
-        path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Path,
-        query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query = .init(),
-        headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Headers = .init()
-    ) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output {
-        try await secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise(Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input(
+    public func secretScanningListAlertsForEnterprise(
+        path: Operations.SecretScanningListAlertsForEnterprise.Input.Path,
+        query: Operations.SecretScanningListAlertsForEnterprise.Input.Query = .init(),
+        headers: Operations.SecretScanningListAlertsForEnterprise.Input.Headers = .init()
+    ) async throws -> Operations.SecretScanningListAlertsForEnterprise.Output {
+        try await secretScanningListAlertsForEnterprise(Operations.SecretScanningListAlertsForEnterprise.Input(
             path: path,
             query: query,
             headers: headers
@@ -136,12 +136,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-org)`.
-    public func secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org(
-        path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output {
-        try await secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org(Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input(
+    public func secretScanningListAlertsForOrg(
+        path: Operations.SecretScanningListAlertsForOrg.Input.Path,
+        query: Operations.SecretScanningListAlertsForOrg.Input.Query = .init(),
+        headers: Operations.SecretScanningListAlertsForOrg.Input.Headers = .init()
+    ) async throws -> Operations.SecretScanningListAlertsForOrg.Output {
+        try await secretScanningListAlertsForOrg(Operations.SecretScanningListAlertsForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -157,12 +157,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)`.
-    public func secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(
-        path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path,
-        query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query = .init(),
-        headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers = .init()
-    ) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output {
-        try await secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo(Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input(
+    public func secretScanningListAlertsForRepo(
+        path: Operations.SecretScanningListAlertsForRepo.Input.Path,
+        query: Operations.SecretScanningListAlertsForRepo.Input.Query = .init(),
+        headers: Operations.SecretScanningListAlertsForRepo.Input.Headers = .init()
+    ) async throws -> Operations.SecretScanningListAlertsForRepo.Output {
+        try await secretScanningListAlertsForRepo(Operations.SecretScanningListAlertsForRepo.Input(
             path: path,
             query: query,
             headers: headers
@@ -178,11 +178,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)`.
-    public func secret_hyphen_scanning_sol_get_hyphen_alert(
-        path: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Input.Path,
-        headers: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Input.Headers = .init()
-    ) async throws -> Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output {
-        try await secret_hyphen_scanning_sol_get_hyphen_alert(Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Input(
+    public func secretScanningGetAlert(
+        path: Operations.SecretScanningGetAlert.Input.Path,
+        headers: Operations.SecretScanningGetAlert.Input.Headers = .init()
+    ) async throws -> Operations.SecretScanningGetAlert.Output {
+        try await secretScanningGetAlert(Operations.SecretScanningGetAlert.Input(
             path: path,
             headers: headers
         ))
@@ -197,12 +197,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)`.
-    public func secret_hyphen_scanning_sol_update_hyphen_alert(
-        path: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Path,
-        headers: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Headers = .init(),
-        body: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Body
-    ) async throws -> Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output {
-        try await secret_hyphen_scanning_sol_update_hyphen_alert(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input(
+    public func secretScanningUpdateAlert(
+        path: Operations.SecretScanningUpdateAlert.Input.Path,
+        headers: Operations.SecretScanningUpdateAlert.Input.Headers = .init(),
+        body: Operations.SecretScanningUpdateAlert.Input.Body
+    ) async throws -> Operations.SecretScanningUpdateAlert.Output {
+        try await secretScanningUpdateAlert(Operations.SecretScanningUpdateAlert.Input(
             path: path,
             headers: headers,
             body: body
@@ -218,12 +218,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)`.
-    public func secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert(
-        path: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Path,
-        query: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Query = .init(),
-        headers: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Headers = .init()
-    ) async throws -> Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output {
-        try await secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert(Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input(
+    public func secretScanningListLocationsForAlert(
+        path: Operations.SecretScanningListLocationsForAlert.Input.Path,
+        query: Operations.SecretScanningListLocationsForAlert.Input.Query = .init(),
+        headers: Operations.SecretScanningListLocationsForAlert.Input.Headers = .init()
+    ) async throws -> Operations.SecretScanningListLocationsForAlert.Output {
+        try await secretScanningListLocationsForAlert(Operations.SecretScanningListLocationsForAlert.Input(
             path: path,
             query: query,
             headers: headers
@@ -239,12 +239,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/secret-scanning/push-protection-bypasses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)`.
-    public func secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass(
-        path: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Path,
-        headers: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Headers = .init(),
-        body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body
-    ) async throws -> Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output {
-        try await secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input(
+    public func secretScanningCreatePushProtectionBypass(
+        path: Operations.SecretScanningCreatePushProtectionBypass.Input.Path,
+        headers: Operations.SecretScanningCreatePushProtectionBypass.Input.Headers = .init(),
+        body: Operations.SecretScanningCreatePushProtectionBypass.Input.Body
+    ) async throws -> Operations.SecretScanningCreatePushProtectionBypass.Output {
+        try await secretScanningCreatePushProtectionBypass(Operations.SecretScanningCreatePushProtectionBypass.Input(
             path: path,
             headers: headers,
             body: body
@@ -258,11 +258,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/scan-history`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)`.
-    public func secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history(
-        path: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Path,
-        headers: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Headers = .init()
-    ) async throws -> Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output {
-        try await secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history(Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input(
+    public func secretScanningGetScanHistory(
+        path: Operations.SecretScanningGetScanHistory.Input.Path,
+        headers: Operations.SecretScanningGetScanHistory.Input.Headers = .init()
+    ) async throws -> Operations.SecretScanningGetScanHistory.Output {
+        try await secretScanningGetScanHistory(Operations.SecretScanningGetScanHistory.Input(
             path: path,
             headers: headers
         ))
@@ -271,6 +271,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -286,7 +295,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -296,171 +305,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -468,7 +477,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -478,142 +487,142 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// A GitHub repository.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-repository`.
-        public struct simple_hyphen_repository: Codable, Hashable, Sendable {
+        public struct SimpleRepository: Codable, Hashable, Sendable {
             /// A unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/id`.
@@ -621,7 +630,7 @@ public enum Components {
             /// The GraphQL identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/name`.
@@ -629,9 +638,9 @@ public enum Components {
             /// The full, globally unique, name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/private`.
@@ -639,7 +648,7 @@ public enum Components {
             /// The URL to view the repository on GitHub.com.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The repository description.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/description`.
@@ -655,449 +664,449 @@ public enum Components {
             /// A template for the API URL to download the repository as an archive.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// A template for the API URL to list the available assignees for issues in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// A template for the API URL to create or retrieve a raw Git blob in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// A template for the API URL to get information about branches in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// A template for the API URL to get information about collaborators of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// A template for the API URL to get information about comments on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// A template for the API URL to get information about commits on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// A template for the API URL to compare two commits or refs.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// A template for the API URL to get the contents of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// A template for the API URL to list the contributors to the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// The API URL to list the deployments of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// The API URL to list the downloads on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// The API URL to list the events of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// The API URL to list the forks of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// A template for the API URL to get information about Git commits of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// A template for the API URL to get information about Git refs of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// A template for the API URL to get information about Git tags of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// A template for the API URL to get information about issue comments on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// A template for the API URL to get information about issue events on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// A template for the API URL to get information about issues on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// A template for the API URL to get information about deploy keys on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// A template for the API URL to get information about labels of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// The API URL to get information about the languages of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// The API URL to merge branches in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// A template for the API URL to get information about milestones of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// A template for the API URL to get information about notifications on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// A template for the API URL to get information about pull requests on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// A template for the API URL to get information about releases on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// The API URL to list the stargazers on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// A template for the API URL to get information about statuses of a commit.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// The API URL to list the subscribers on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// The API URL to subscribe to notifications for this repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// The API URL to get information about tags on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// The API URL to list the teams on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// A template for the API URL to create or retrieve a raw Git tree of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// The API URL to list the hooks on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/hooks_url`.
-            public var hooks_url: Swift.String
-            /// Creates a new `simple_hyphen_repository`.
+            public var hooksUrl: Swift.String
+            /// Creates a new `SimpleRepository`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier of the repository.
-            ///   - node_id: The GraphQL identifier of the repository.
+            ///   - nodeId: The GraphQL identifier of the repository.
             ///   - name: The name of the repository.
-            ///   - full_name: The full, globally unique, name of the repository.
+            ///   - fullName: The full, globally unique, name of the repository.
             ///   - owner:
             ///   - _private: Whether the repository is private.
-            ///   - html_url: The URL to view the repository on GitHub.com.
+            ///   - htmlUrl: The URL to view the repository on GitHub.com.
             ///   - description: The repository description.
             ///   - fork: Whether the repository is a fork.
             ///   - url: The URL to get more information about the repository from the GitHub API.
-            ///   - archive_url: A template for the API URL to download the repository as an archive.
-            ///   - assignees_url: A template for the API URL to list the available assignees for issues in the repository.
-            ///   - blobs_url: A template for the API URL to create or retrieve a raw Git blob in the repository.
-            ///   - branches_url: A template for the API URL to get information about branches in the repository.
-            ///   - collaborators_url: A template for the API URL to get information about collaborators of the repository.
-            ///   - comments_url: A template for the API URL to get information about comments on the repository.
-            ///   - commits_url: A template for the API URL to get information about commits on the repository.
-            ///   - compare_url: A template for the API URL to compare two commits or refs.
-            ///   - contents_url: A template for the API URL to get the contents of the repository.
-            ///   - contributors_url: A template for the API URL to list the contributors to the repository.
-            ///   - deployments_url: The API URL to list the deployments of the repository.
-            ///   - downloads_url: The API URL to list the downloads on the repository.
-            ///   - events_url: The API URL to list the events of the repository.
-            ///   - forks_url: The API URL to list the forks of the repository.
-            ///   - git_commits_url: A template for the API URL to get information about Git commits of the repository.
-            ///   - git_refs_url: A template for the API URL to get information about Git refs of the repository.
-            ///   - git_tags_url: A template for the API URL to get information about Git tags of the repository.
-            ///   - issue_comment_url: A template for the API URL to get information about issue comments on the repository.
-            ///   - issue_events_url: A template for the API URL to get information about issue events on the repository.
-            ///   - issues_url: A template for the API URL to get information about issues on the repository.
-            ///   - keys_url: A template for the API URL to get information about deploy keys on the repository.
-            ///   - labels_url: A template for the API URL to get information about labels of the repository.
-            ///   - languages_url: The API URL to get information about the languages of the repository.
-            ///   - merges_url: The API URL to merge branches in the repository.
-            ///   - milestones_url: A template for the API URL to get information about milestones of the repository.
-            ///   - notifications_url: A template for the API URL to get information about notifications on the repository.
-            ///   - pulls_url: A template for the API URL to get information about pull requests on the repository.
-            ///   - releases_url: A template for the API URL to get information about releases on the repository.
-            ///   - stargazers_url: The API URL to list the stargazers on the repository.
-            ///   - statuses_url: A template for the API URL to get information about statuses of a commit.
-            ///   - subscribers_url: The API URL to list the subscribers on the repository.
-            ///   - subscription_url: The API URL to subscribe to notifications for this repository.
-            ///   - tags_url: The API URL to get information about tags on the repository.
-            ///   - teams_url: The API URL to list the teams on the repository.
-            ///   - trees_url: A template for the API URL to create or retrieve a raw Git tree of the repository.
-            ///   - hooks_url: The API URL to list the hooks on the repository.
+            ///   - archiveUrl: A template for the API URL to download the repository as an archive.
+            ///   - assigneesUrl: A template for the API URL to list the available assignees for issues in the repository.
+            ///   - blobsUrl: A template for the API URL to create or retrieve a raw Git blob in the repository.
+            ///   - branchesUrl: A template for the API URL to get information about branches in the repository.
+            ///   - collaboratorsUrl: A template for the API URL to get information about collaborators of the repository.
+            ///   - commentsUrl: A template for the API URL to get information about comments on the repository.
+            ///   - commitsUrl: A template for the API URL to get information about commits on the repository.
+            ///   - compareUrl: A template for the API URL to compare two commits or refs.
+            ///   - contentsUrl: A template for the API URL to get the contents of the repository.
+            ///   - contributorsUrl: A template for the API URL to list the contributors to the repository.
+            ///   - deploymentsUrl: The API URL to list the deployments of the repository.
+            ///   - downloadsUrl: The API URL to list the downloads on the repository.
+            ///   - eventsUrl: The API URL to list the events of the repository.
+            ///   - forksUrl: The API URL to list the forks of the repository.
+            ///   - gitCommitsUrl: A template for the API URL to get information about Git commits of the repository.
+            ///   - gitRefsUrl: A template for the API URL to get information about Git refs of the repository.
+            ///   - gitTagsUrl: A template for the API URL to get information about Git tags of the repository.
+            ///   - issueCommentUrl: A template for the API URL to get information about issue comments on the repository.
+            ///   - issueEventsUrl: A template for the API URL to get information about issue events on the repository.
+            ///   - issuesUrl: A template for the API URL to get information about issues on the repository.
+            ///   - keysUrl: A template for the API URL to get information about deploy keys on the repository.
+            ///   - labelsUrl: A template for the API URL to get information about labels of the repository.
+            ///   - languagesUrl: The API URL to get information about the languages of the repository.
+            ///   - mergesUrl: The API URL to merge branches in the repository.
+            ///   - milestonesUrl: A template for the API URL to get information about milestones of the repository.
+            ///   - notificationsUrl: A template for the API URL to get information about notifications on the repository.
+            ///   - pullsUrl: A template for the API URL to get information about pull requests on the repository.
+            ///   - releasesUrl: A template for the API URL to get information about releases on the repository.
+            ///   - stargazersUrl: The API URL to list the stargazers on the repository.
+            ///   - statusesUrl: A template for the API URL to get information about statuses of a commit.
+            ///   - subscribersUrl: The API URL to list the subscribers on the repository.
+            ///   - subscriptionUrl: The API URL to subscribe to notifications for this repository.
+            ///   - tagsUrl: The API URL to get information about tags on the repository.
+            ///   - teamsUrl: The API URL to list the teams on the repository.
+            ///   - treesUrl: A template for the API URL to create or retrieve a raw Git tree of the repository.
+            ///   - hooksUrl: The API URL to list the hooks on the repository.
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                hooks_url: Swift.String
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                hooksUrl: Swift.String
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.hooks_url = hooks_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.hooksUrl = hooksUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case hooks_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case hooksUrl = "hooks_url"
             }
         }
         /// The security alert number.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-number`.
-        public typealias alert_hyphen_number = Swift.Int
+        public typealias AlertNumber = Swift.Int
         /// The REST API URL of the alert resource.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-url`.
-        public typealias alert_hyphen_url = Swift.String
+        public typealias AlertUrl = Swift.String
         /// The GitHub URL of the alert resource.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-html-url`.
-        public typealias alert_hyphen_html_hyphen_url = Swift.String
+        public typealias AlertHtmlUrl = Swift.String
         /// The time that the alert was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/alert-created-at`.
-        public typealias alert_hyphen_created_hyphen_at = Foundation.Date
+        public typealias AlertCreatedAt = Foundation.Date
         /// The time that the alert was last updated in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-alert-updated-at`.
-        public typealias nullable_hyphen_alert_hyphen_updated_hyphen_at = Foundation.Date
+        public typealias NullableAlertUpdatedAt = Foundation.Date
         /// Sets the state of the secret scanning alert. You must provide `resolution` when you set the state to `resolved`.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert-state`.
-        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum SecretScanningAlertState: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case resolved = "resolved"
         }
         /// **Required when the `state` is `resolved`.** The reason for resolving the alert.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert-resolution`.
-        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_resolution: String, Codable, Hashable, Sendable {
-            case false_positive = "false_positive"
-            case wont_fix = "wont_fix"
+        @frozen public enum SecretScanningAlertResolution: String, Codable, Hashable, Sendable, CaseIterable {
+            case falsePositive = "false_positive"
+            case wontFix = "wont_fix"
             case revoked = "revoked"
-            case used_in_tests = "used_in_tests"
+            case usedInTests = "used_in_tests"
         }
         /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert`.
-        public struct organization_hyphen_secret_hyphen_scanning_hyphen_alert: Codable, Hashable, Sendable {
+        public struct OrganizationSecretScanningAlert: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/number`.
-            public var number: Components.Schemas.alert_hyphen_number?
+            public var number: Components.Schemas.AlertNumber?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/created_at`.
-            public var created_at: Components.Schemas.alert_hyphen_created_hyphen_at?
+            public var createdAt: Components.Schemas.AlertCreatedAt?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/updated_at`.
-            public var updated_at: Components.Schemas.nullable_hyphen_alert_hyphen_updated_hyphen_at?
+            public var updatedAt: Components.Schemas.NullableAlertUpdatedAt?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/url`.
-            public var url: Components.Schemas.alert_hyphen_url?
+            public var url: Components.Schemas.AlertUrl?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/html_url`.
-            public var html_url: Components.Schemas.alert_hyphen_html_hyphen_url?
+            public var htmlUrl: Components.Schemas.AlertHtmlUrl?
             /// The REST API URL of the code locations for this alert.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/locations_url`.
-            public var locations_url: Swift.String?
+            public var locationsUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/state`.
-            public var state: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_state?
+            public var state: Components.Schemas.SecretScanningAlertState?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/resolution`.
-            public var resolution: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
+            public var resolution: Components.Schemas.SecretScanningAlertResolution?
             /// The time that the alert was resolved in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/resolved_at`.
-            public var resolved_at: Foundation.Date?
+            public var resolvedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/resolved_by`.
-            public var resolved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var resolvedBy: Components.Schemas.NullableSimpleUser?
             /// The type of secret that secret scanning detected.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/secret_type`.
-            public var secret_type: Swift.String?
+            public var secretType: Swift.String?
             /// User-friendly name for the detected secret, matching the `secret_type`.
             /// For a list of built-in patterns, see "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/secret_type_display_name`.
-            public var secret_type_display_name: Swift.String?
+            public var secretTypeDisplayName: Swift.String?
             /// The secret that was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/secret`.
             public var secret: Swift.String?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/repository`.
-            public var repository: Components.Schemas.simple_hyphen_repository?
+            public var repository: Components.Schemas.SimpleRepository?
             /// Whether push protection was bypassed for the detected secret.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypassed`.
-            public var push_protection_bypassed: Swift.Bool?
+            public var pushProtectionBypassed: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypassed_by`.
-            public var push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var pushProtectionBypassedBy: Components.Schemas.NullableSimpleUser?
             /// The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypassed_at`.
-            public var push_protection_bypassed_at: Foundation.Date?
+            public var pushProtectionBypassedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_reviewer`.
-            public var push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var pushProtectionBypassRequestReviewer: Components.Schemas.NullableSimpleUser?
             /// An optional comment when reviewing a push protection bypass.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_reviewer_comment`.
-            public var push_protection_bypass_request_reviewer_comment: Swift.String?
+            public var pushProtectionBypassRequestReviewerComment: Swift.String?
             /// An optional comment when requesting a push protection bypass.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_comment`.
-            public var push_protection_bypass_request_comment: Swift.String?
+            public var pushProtectionBypassRequestComment: Swift.String?
             /// The URL to a push protection bypass request.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/push_protection_bypass_request_html_url`.
-            public var push_protection_bypass_request_html_url: Swift.String?
+            public var pushProtectionBypassRequestHtmlUrl: Swift.String?
             /// The comment that was optionally added when this alert was closed
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/resolution_comment`.
-            public var resolution_comment: Swift.String?
+            public var resolutionComment: Swift.String?
             /// The token status as of the latest validity check.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/validity`.
-            @frozen public enum validityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ValidityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case active = "active"
                 case inactive = "inactive"
                 case unknown = "unknown"
@@ -1105,175 +1114,175 @@ public enum Components {
             /// The token status as of the latest validity check.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/validity`.
-            public var validity: Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert.validityPayload?
+            public var validity: Components.Schemas.OrganizationSecretScanningAlert.ValidityPayload?
             /// Whether the secret was publicly leaked.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/publicly_leaked`.
-            public var publicly_leaked: Swift.Bool?
+            public var publiclyLeaked: Swift.Bool?
             /// Whether the detected secret was found in multiple repositories in the same organization or enterprise.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/multi_repo`.
-            public var multi_repo: Swift.Bool?
+            public var multiRepo: Swift.Bool?
             /// A boolean value representing whether or not alert is base64 encoded
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/is_base64_encoded`.
-            public var is_base64_encoded: Swift.Bool?
-            /// Creates a new `organization_hyphen_secret_hyphen_scanning_hyphen_alert`.
+            public var isBase64Encoded: Swift.Bool?
+            /// Creates a new `OrganizationSecretScanningAlert`.
             ///
             /// - Parameters:
             ///   - number:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - url:
-            ///   - html_url:
-            ///   - locations_url: The REST API URL of the code locations for this alert.
+            ///   - htmlUrl:
+            ///   - locationsUrl: The REST API URL of the code locations for this alert.
             ///   - state:
             ///   - resolution:
-            ///   - resolved_at: The time that the alert was resolved in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - resolved_by:
-            ///   - secret_type: The type of secret that secret scanning detected.
-            ///   - secret_type_display_name: User-friendly name for the detected secret, matching the `secret_type`.
+            ///   - resolvedAt: The time that the alert was resolved in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - resolvedBy:
+            ///   - secretType: The type of secret that secret scanning detected.
+            ///   - secretTypeDisplayName: User-friendly name for the detected secret, matching the `secret_type`.
             ///   - secret: The secret that was detected.
             ///   - repository:
-            ///   - push_protection_bypassed: Whether push protection was bypassed for the detected secret.
-            ///   - push_protection_bypassed_by:
-            ///   - push_protection_bypassed_at: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - push_protection_bypass_request_reviewer:
-            ///   - push_protection_bypass_request_reviewer_comment: An optional comment when reviewing a push protection bypass.
-            ///   - push_protection_bypass_request_comment: An optional comment when requesting a push protection bypass.
-            ///   - push_protection_bypass_request_html_url: The URL to a push protection bypass request.
-            ///   - resolution_comment: The comment that was optionally added when this alert was closed
+            ///   - pushProtectionBypassed: Whether push protection was bypassed for the detected secret.
+            ///   - pushProtectionBypassedBy:
+            ///   - pushProtectionBypassedAt: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - pushProtectionBypassRequestReviewer:
+            ///   - pushProtectionBypassRequestReviewerComment: An optional comment when reviewing a push protection bypass.
+            ///   - pushProtectionBypassRequestComment: An optional comment when requesting a push protection bypass.
+            ///   - pushProtectionBypassRequestHtmlUrl: The URL to a push protection bypass request.
+            ///   - resolutionComment: The comment that was optionally added when this alert was closed
             ///   - validity: The token status as of the latest validity check.
-            ///   - publicly_leaked: Whether the secret was publicly leaked.
-            ///   - multi_repo: Whether the detected secret was found in multiple repositories in the same organization or enterprise.
-            ///   - is_base64_encoded: A boolean value representing whether or not alert is base64 encoded
+            ///   - publiclyLeaked: Whether the secret was publicly leaked.
+            ///   - multiRepo: Whether the detected secret was found in multiple repositories in the same organization or enterprise.
+            ///   - isBase64Encoded: A boolean value representing whether or not alert is base64 encoded
             public init(
-                number: Components.Schemas.alert_hyphen_number? = nil,
-                created_at: Components.Schemas.alert_hyphen_created_hyphen_at? = nil,
-                updated_at: Components.Schemas.nullable_hyphen_alert_hyphen_updated_hyphen_at? = nil,
-                url: Components.Schemas.alert_hyphen_url? = nil,
-                html_url: Components.Schemas.alert_hyphen_html_hyphen_url? = nil,
-                locations_url: Swift.String? = nil,
-                state: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                resolution: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_resolution? = nil,
-                resolved_at: Foundation.Date? = nil,
-                resolved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                secret_type: Swift.String? = nil,
-                secret_type_display_name: Swift.String? = nil,
+                number: Components.Schemas.AlertNumber? = nil,
+                createdAt: Components.Schemas.AlertCreatedAt? = nil,
+                updatedAt: Components.Schemas.NullableAlertUpdatedAt? = nil,
+                url: Components.Schemas.AlertUrl? = nil,
+                htmlUrl: Components.Schemas.AlertHtmlUrl? = nil,
+                locationsUrl: Swift.String? = nil,
+                state: Components.Schemas.SecretScanningAlertState? = nil,
+                resolution: Components.Schemas.SecretScanningAlertResolution? = nil,
+                resolvedAt: Foundation.Date? = nil,
+                resolvedBy: Components.Schemas.NullableSimpleUser? = nil,
+                secretType: Swift.String? = nil,
+                secretTypeDisplayName: Swift.String? = nil,
                 secret: Swift.String? = nil,
-                repository: Components.Schemas.simple_hyphen_repository? = nil,
-                push_protection_bypassed: Swift.Bool? = nil,
-                push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                push_protection_bypassed_at: Foundation.Date? = nil,
-                push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                push_protection_bypass_request_reviewer_comment: Swift.String? = nil,
-                push_protection_bypass_request_comment: Swift.String? = nil,
-                push_protection_bypass_request_html_url: Swift.String? = nil,
-                resolution_comment: Swift.String? = nil,
-                validity: Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert.validityPayload? = nil,
-                publicly_leaked: Swift.Bool? = nil,
-                multi_repo: Swift.Bool? = nil,
-                is_base64_encoded: Swift.Bool? = nil
+                repository: Components.Schemas.SimpleRepository? = nil,
+                pushProtectionBypassed: Swift.Bool? = nil,
+                pushProtectionBypassedBy: Components.Schemas.NullableSimpleUser? = nil,
+                pushProtectionBypassedAt: Foundation.Date? = nil,
+                pushProtectionBypassRequestReviewer: Components.Schemas.NullableSimpleUser? = nil,
+                pushProtectionBypassRequestReviewerComment: Swift.String? = nil,
+                pushProtectionBypassRequestComment: Swift.String? = nil,
+                pushProtectionBypassRequestHtmlUrl: Swift.String? = nil,
+                resolutionComment: Swift.String? = nil,
+                validity: Components.Schemas.OrganizationSecretScanningAlert.ValidityPayload? = nil,
+                publiclyLeaked: Swift.Bool? = nil,
+                multiRepo: Swift.Bool? = nil,
+                isBase64Encoded: Swift.Bool? = nil
             ) {
                 self.number = number
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.url = url
-                self.html_url = html_url
-                self.locations_url = locations_url
+                self.htmlUrl = htmlUrl
+                self.locationsUrl = locationsUrl
                 self.state = state
                 self.resolution = resolution
-                self.resolved_at = resolved_at
-                self.resolved_by = resolved_by
-                self.secret_type = secret_type
-                self.secret_type_display_name = secret_type_display_name
+                self.resolvedAt = resolvedAt
+                self.resolvedBy = resolvedBy
+                self.secretType = secretType
+                self.secretTypeDisplayName = secretTypeDisplayName
                 self.secret = secret
                 self.repository = repository
-                self.push_protection_bypassed = push_protection_bypassed
-                self.push_protection_bypassed_by = push_protection_bypassed_by
-                self.push_protection_bypassed_at = push_protection_bypassed_at
-                self.push_protection_bypass_request_reviewer = push_protection_bypass_request_reviewer
-                self.push_protection_bypass_request_reviewer_comment = push_protection_bypass_request_reviewer_comment
-                self.push_protection_bypass_request_comment = push_protection_bypass_request_comment
-                self.push_protection_bypass_request_html_url = push_protection_bypass_request_html_url
-                self.resolution_comment = resolution_comment
+                self.pushProtectionBypassed = pushProtectionBypassed
+                self.pushProtectionBypassedBy = pushProtectionBypassedBy
+                self.pushProtectionBypassedAt = pushProtectionBypassedAt
+                self.pushProtectionBypassRequestReviewer = pushProtectionBypassRequestReviewer
+                self.pushProtectionBypassRequestReviewerComment = pushProtectionBypassRequestReviewerComment
+                self.pushProtectionBypassRequestComment = pushProtectionBypassRequestComment
+                self.pushProtectionBypassRequestHtmlUrl = pushProtectionBypassRequestHtmlUrl
+                self.resolutionComment = resolutionComment
                 self.validity = validity
-                self.publicly_leaked = publicly_leaked
-                self.multi_repo = multi_repo
-                self.is_base64_encoded = is_base64_encoded
+                self.publiclyLeaked = publiclyLeaked
+                self.multiRepo = multiRepo
+                self.isBase64Encoded = isBase64Encoded
             }
             public enum CodingKeys: String, CodingKey {
                 case number
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case url
-                case html_url
-                case locations_url
+                case htmlUrl = "html_url"
+                case locationsUrl = "locations_url"
                 case state
                 case resolution
-                case resolved_at
-                case resolved_by
-                case secret_type
-                case secret_type_display_name
+                case resolvedAt = "resolved_at"
+                case resolvedBy = "resolved_by"
+                case secretType = "secret_type"
+                case secretTypeDisplayName = "secret_type_display_name"
                 case secret
                 case repository
-                case push_protection_bypassed
-                case push_protection_bypassed_by
-                case push_protection_bypassed_at
-                case push_protection_bypass_request_reviewer
-                case push_protection_bypass_request_reviewer_comment
-                case push_protection_bypass_request_comment
-                case push_protection_bypass_request_html_url
-                case resolution_comment
+                case pushProtectionBypassed = "push_protection_bypassed"
+                case pushProtectionBypassedBy = "push_protection_bypassed_by"
+                case pushProtectionBypassedAt = "push_protection_bypassed_at"
+                case pushProtectionBypassRequestReviewer = "push_protection_bypass_request_reviewer"
+                case pushProtectionBypassRequestReviewerComment = "push_protection_bypass_request_reviewer_comment"
+                case pushProtectionBypassRequestComment = "push_protection_bypass_request_comment"
+                case pushProtectionBypassRequestHtmlUrl = "push_protection_bypass_request_html_url"
+                case resolutionComment = "resolution_comment"
                 case validity
-                case publicly_leaked
-                case multi_repo
-                case is_base64_encoded
+                case publiclyLeaked = "publicly_leaked"
+                case multiRepo = "multi_repo"
+                case isBase64Encoded = "is_base64_encoded"
             }
         }
         /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-placeholder-id`.
-        public typealias secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id = Swift.String
+        public typealias SecretScanningPushProtectionBypassPlaceholderId = Swift.String
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert`.
-        public struct secret_hyphen_scanning_hyphen_alert: Codable, Hashable, Sendable {
+        public struct SecretScanningAlert: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/number`.
-            public var number: Components.Schemas.alert_hyphen_number?
+            public var number: Components.Schemas.AlertNumber?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/created_at`.
-            public var created_at: Components.Schemas.alert_hyphen_created_hyphen_at?
+            public var createdAt: Components.Schemas.AlertCreatedAt?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/updated_at`.
-            public var updated_at: Components.Schemas.nullable_hyphen_alert_hyphen_updated_hyphen_at?
+            public var updatedAt: Components.Schemas.NullableAlertUpdatedAt?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/url`.
-            public var url: Components.Schemas.alert_hyphen_url?
+            public var url: Components.Schemas.AlertUrl?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/html_url`.
-            public var html_url: Components.Schemas.alert_hyphen_html_hyphen_url?
+            public var htmlUrl: Components.Schemas.AlertHtmlUrl?
             /// The REST API URL of the code locations for this alert.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/locations_url`.
-            public var locations_url: Swift.String?
+            public var locationsUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/state`.
-            public var state: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_state?
+            public var state: Components.Schemas.SecretScanningAlertState?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/resolution`.
-            public var resolution: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
+            public var resolution: Components.Schemas.SecretScanningAlertResolution?
             /// The time that the alert was resolved in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/resolved_at`.
-            public var resolved_at: Foundation.Date?
+            public var resolvedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/resolved_by`.
-            public var resolved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var resolvedBy: Components.Schemas.NullableSimpleUser?
             /// An optional comment to resolve an alert.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/resolution_comment`.
-            public var resolution_comment: Swift.String?
+            public var resolutionComment: Swift.String?
             /// The type of secret that secret scanning detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/secret_type`.
-            public var secret_type: Swift.String?
+            public var secretType: Swift.String?
             /// User-friendly name for the detected secret, matching the `secret_type`.
             /// For a list of built-in patterns, see "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/secret_type_display_name`.
-            public var secret_type_display_name: Swift.String?
+            public var secretTypeDisplayName: Swift.String?
             /// The secret that was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/secret`.
@@ -1281,31 +1290,31 @@ public enum Components {
             /// Whether push protection was bypassed for the detected secret.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypassed`.
-            public var push_protection_bypassed: Swift.Bool?
+            public var pushProtectionBypassed: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypassed_by`.
-            public var push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var pushProtectionBypassedBy: Components.Schemas.NullableSimpleUser?
             /// The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypassed_at`.
-            public var push_protection_bypassed_at: Foundation.Date?
+            public var pushProtectionBypassedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_reviewer`.
-            public var push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var pushProtectionBypassRequestReviewer: Components.Schemas.NullableSimpleUser?
             /// An optional comment when reviewing a push protection bypass.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_reviewer_comment`.
-            public var push_protection_bypass_request_reviewer_comment: Swift.String?
+            public var pushProtectionBypassRequestReviewerComment: Swift.String?
             /// An optional comment when requesting a push protection bypass.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_comment`.
-            public var push_protection_bypass_request_comment: Swift.String?
+            public var pushProtectionBypassRequestComment: Swift.String?
             /// The URL to a push protection bypass request.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/push_protection_bypass_request_html_url`.
-            public var push_protection_bypass_request_html_url: Swift.String?
+            public var pushProtectionBypassRequestHtmlUrl: Swift.String?
             /// The token status as of the latest validity check.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/validity`.
-            @frozen public enum validityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ValidityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case active = "active"
                 case inactive = "inactive"
                 case unknown = "unknown"
@@ -1313,136 +1322,136 @@ public enum Components {
             /// The token status as of the latest validity check.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/validity`.
-            public var validity: Components.Schemas.secret_hyphen_scanning_hyphen_alert.validityPayload?
+            public var validity: Components.Schemas.SecretScanningAlert.ValidityPayload?
             /// Whether the detected secret was publicly leaked.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/publicly_leaked`.
-            public var publicly_leaked: Swift.Bool?
+            public var publiclyLeaked: Swift.Bool?
             /// Whether the detected secret was found in multiple repositories under the same organization or enterprise.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/multi_repo`.
-            public var multi_repo: Swift.Bool?
+            public var multiRepo: Swift.Bool?
             /// A boolean value representing whether or not alert is base64 encoded
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/is_base64_encoded`.
-            public var is_base64_encoded: Swift.Bool?
-            /// Creates a new `secret_hyphen_scanning_hyphen_alert`.
+            public var isBase64Encoded: Swift.Bool?
+            /// Creates a new `SecretScanningAlert`.
             ///
             /// - Parameters:
             ///   - number:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - url:
-            ///   - html_url:
-            ///   - locations_url: The REST API URL of the code locations for this alert.
+            ///   - htmlUrl:
+            ///   - locationsUrl: The REST API URL of the code locations for this alert.
             ///   - state:
             ///   - resolution:
-            ///   - resolved_at: The time that the alert was resolved in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - resolved_by:
-            ///   - resolution_comment: An optional comment to resolve an alert.
-            ///   - secret_type: The type of secret that secret scanning detected.
-            ///   - secret_type_display_name: User-friendly name for the detected secret, matching the `secret_type`.
+            ///   - resolvedAt: The time that the alert was resolved in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - resolvedBy:
+            ///   - resolutionComment: An optional comment to resolve an alert.
+            ///   - secretType: The type of secret that secret scanning detected.
+            ///   - secretTypeDisplayName: User-friendly name for the detected secret, matching the `secret_type`.
             ///   - secret: The secret that was detected.
-            ///   - push_protection_bypassed: Whether push protection was bypassed for the detected secret.
-            ///   - push_protection_bypassed_by:
-            ///   - push_protection_bypassed_at: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - push_protection_bypass_request_reviewer:
-            ///   - push_protection_bypass_request_reviewer_comment: An optional comment when reviewing a push protection bypass.
-            ///   - push_protection_bypass_request_comment: An optional comment when requesting a push protection bypass.
-            ///   - push_protection_bypass_request_html_url: The URL to a push protection bypass request.
+            ///   - pushProtectionBypassed: Whether push protection was bypassed for the detected secret.
+            ///   - pushProtectionBypassedBy:
+            ///   - pushProtectionBypassedAt: The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - pushProtectionBypassRequestReviewer:
+            ///   - pushProtectionBypassRequestReviewerComment: An optional comment when reviewing a push protection bypass.
+            ///   - pushProtectionBypassRequestComment: An optional comment when requesting a push protection bypass.
+            ///   - pushProtectionBypassRequestHtmlUrl: The URL to a push protection bypass request.
             ///   - validity: The token status as of the latest validity check.
-            ///   - publicly_leaked: Whether the detected secret was publicly leaked.
-            ///   - multi_repo: Whether the detected secret was found in multiple repositories under the same organization or enterprise.
-            ///   - is_base64_encoded: A boolean value representing whether or not alert is base64 encoded
+            ///   - publiclyLeaked: Whether the detected secret was publicly leaked.
+            ///   - multiRepo: Whether the detected secret was found in multiple repositories under the same organization or enterprise.
+            ///   - isBase64Encoded: A boolean value representing whether or not alert is base64 encoded
             public init(
-                number: Components.Schemas.alert_hyphen_number? = nil,
-                created_at: Components.Schemas.alert_hyphen_created_hyphen_at? = nil,
-                updated_at: Components.Schemas.nullable_hyphen_alert_hyphen_updated_hyphen_at? = nil,
-                url: Components.Schemas.alert_hyphen_url? = nil,
-                html_url: Components.Schemas.alert_hyphen_html_hyphen_url? = nil,
-                locations_url: Swift.String? = nil,
-                state: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                resolution: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_resolution? = nil,
-                resolved_at: Foundation.Date? = nil,
-                resolved_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                resolution_comment: Swift.String? = nil,
-                secret_type: Swift.String? = nil,
-                secret_type_display_name: Swift.String? = nil,
+                number: Components.Schemas.AlertNumber? = nil,
+                createdAt: Components.Schemas.AlertCreatedAt? = nil,
+                updatedAt: Components.Schemas.NullableAlertUpdatedAt? = nil,
+                url: Components.Schemas.AlertUrl? = nil,
+                htmlUrl: Components.Schemas.AlertHtmlUrl? = nil,
+                locationsUrl: Swift.String? = nil,
+                state: Components.Schemas.SecretScanningAlertState? = nil,
+                resolution: Components.Schemas.SecretScanningAlertResolution? = nil,
+                resolvedAt: Foundation.Date? = nil,
+                resolvedBy: Components.Schemas.NullableSimpleUser? = nil,
+                resolutionComment: Swift.String? = nil,
+                secretType: Swift.String? = nil,
+                secretTypeDisplayName: Swift.String? = nil,
                 secret: Swift.String? = nil,
-                push_protection_bypassed: Swift.Bool? = nil,
-                push_protection_bypassed_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                push_protection_bypassed_at: Foundation.Date? = nil,
-                push_protection_bypass_request_reviewer: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                push_protection_bypass_request_reviewer_comment: Swift.String? = nil,
-                push_protection_bypass_request_comment: Swift.String? = nil,
-                push_protection_bypass_request_html_url: Swift.String? = nil,
-                validity: Components.Schemas.secret_hyphen_scanning_hyphen_alert.validityPayload? = nil,
-                publicly_leaked: Swift.Bool? = nil,
-                multi_repo: Swift.Bool? = nil,
-                is_base64_encoded: Swift.Bool? = nil
+                pushProtectionBypassed: Swift.Bool? = nil,
+                pushProtectionBypassedBy: Components.Schemas.NullableSimpleUser? = nil,
+                pushProtectionBypassedAt: Foundation.Date? = nil,
+                pushProtectionBypassRequestReviewer: Components.Schemas.NullableSimpleUser? = nil,
+                pushProtectionBypassRequestReviewerComment: Swift.String? = nil,
+                pushProtectionBypassRequestComment: Swift.String? = nil,
+                pushProtectionBypassRequestHtmlUrl: Swift.String? = nil,
+                validity: Components.Schemas.SecretScanningAlert.ValidityPayload? = nil,
+                publiclyLeaked: Swift.Bool? = nil,
+                multiRepo: Swift.Bool? = nil,
+                isBase64Encoded: Swift.Bool? = nil
             ) {
                 self.number = number
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.url = url
-                self.html_url = html_url
-                self.locations_url = locations_url
+                self.htmlUrl = htmlUrl
+                self.locationsUrl = locationsUrl
                 self.state = state
                 self.resolution = resolution
-                self.resolved_at = resolved_at
-                self.resolved_by = resolved_by
-                self.resolution_comment = resolution_comment
-                self.secret_type = secret_type
-                self.secret_type_display_name = secret_type_display_name
+                self.resolvedAt = resolvedAt
+                self.resolvedBy = resolvedBy
+                self.resolutionComment = resolutionComment
+                self.secretType = secretType
+                self.secretTypeDisplayName = secretTypeDisplayName
                 self.secret = secret
-                self.push_protection_bypassed = push_protection_bypassed
-                self.push_protection_bypassed_by = push_protection_bypassed_by
-                self.push_protection_bypassed_at = push_protection_bypassed_at
-                self.push_protection_bypass_request_reviewer = push_protection_bypass_request_reviewer
-                self.push_protection_bypass_request_reviewer_comment = push_protection_bypass_request_reviewer_comment
-                self.push_protection_bypass_request_comment = push_protection_bypass_request_comment
-                self.push_protection_bypass_request_html_url = push_protection_bypass_request_html_url
+                self.pushProtectionBypassed = pushProtectionBypassed
+                self.pushProtectionBypassedBy = pushProtectionBypassedBy
+                self.pushProtectionBypassedAt = pushProtectionBypassedAt
+                self.pushProtectionBypassRequestReviewer = pushProtectionBypassRequestReviewer
+                self.pushProtectionBypassRequestReviewerComment = pushProtectionBypassRequestReviewerComment
+                self.pushProtectionBypassRequestComment = pushProtectionBypassRequestComment
+                self.pushProtectionBypassRequestHtmlUrl = pushProtectionBypassRequestHtmlUrl
                 self.validity = validity
-                self.publicly_leaked = publicly_leaked
-                self.multi_repo = multi_repo
-                self.is_base64_encoded = is_base64_encoded
+                self.publiclyLeaked = publiclyLeaked
+                self.multiRepo = multiRepo
+                self.isBase64Encoded = isBase64Encoded
             }
             public enum CodingKeys: String, CodingKey {
                 case number
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case url
-                case html_url
-                case locations_url
+                case htmlUrl = "html_url"
+                case locationsUrl = "locations_url"
                 case state
                 case resolution
-                case resolved_at
-                case resolved_by
-                case resolution_comment
-                case secret_type
-                case secret_type_display_name
+                case resolvedAt = "resolved_at"
+                case resolvedBy = "resolved_by"
+                case resolutionComment = "resolution_comment"
+                case secretType = "secret_type"
+                case secretTypeDisplayName = "secret_type_display_name"
                 case secret
-                case push_protection_bypassed
-                case push_protection_bypassed_by
-                case push_protection_bypassed_at
-                case push_protection_bypass_request_reviewer
-                case push_protection_bypass_request_reviewer_comment
-                case push_protection_bypass_request_comment
-                case push_protection_bypass_request_html_url
+                case pushProtectionBypassed = "push_protection_bypassed"
+                case pushProtectionBypassedBy = "push_protection_bypassed_by"
+                case pushProtectionBypassedAt = "push_protection_bypassed_at"
+                case pushProtectionBypassRequestReviewer = "push_protection_bypass_request_reviewer"
+                case pushProtectionBypassRequestReviewerComment = "push_protection_bypass_request_reviewer_comment"
+                case pushProtectionBypassRequestComment = "push_protection_bypass_request_comment"
+                case pushProtectionBypassRequestHtmlUrl = "push_protection_bypass_request_html_url"
                 case validity
-                case publicly_leaked
-                case multi_repo
-                case is_base64_encoded
+                case publiclyLeaked = "publicly_leaked"
+                case multiRepo = "multi_repo"
+                case isBase64Encoded = "is_base64_encoded"
             }
         }
         /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert-resolution-comment`.
-        public typealias secret_hyphen_scanning_hyphen_alert_hyphen_resolution_hyphen_comment = Swift.String
+        public typealias SecretScanningAlertResolutionComment = Swift.String
         /// Represents a 'commit' secret scanning location type. This location type shows that a secret was detected inside a commit to a repository.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_commit: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationCommit: Codable, Hashable, Sendable {
             /// The file path in the repository
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/path`.
@@ -1450,84 +1459,84 @@ public enum Components {
             /// Line number at which the secret starts in the file
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/start_line`.
-            public var start_line: Swift.Double
+            public var startLine: Swift.Double
             /// Line number at which the secret ends in the file
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/end_line`.
-            public var end_line: Swift.Double
+            public var endLine: Swift.Double
             /// The column at which the secret starts within the start line when the file is interpreted as 8BIT ASCII
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/start_column`.
-            public var start_column: Swift.Double
+            public var startColumn: Swift.Double
             /// The column at which the secret ends within the end line when the file is interpreted as 8BIT ASCII
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/end_column`.
-            public var end_column: Swift.Double
+            public var endColumn: Swift.Double
             /// SHA-1 hash ID of the associated blob
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/blob_sha`.
-            public var blob_sha: Swift.String
+            public var blobSha: Swift.String
             /// The API URL to get the associated blob resource
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/blob_url`.
-            public var blob_url: Swift.String
+            public var blobUrl: Swift.String
             /// SHA-1 hash ID of the associated commit
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/commit_sha`.
-            public var commit_sha: Swift.String
+            public var commitSha: Swift.String
             /// The API URL to get the associated commit resource
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-commit/commit_url`.
-            public var commit_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_commit`.
+            public var commitUrl: Swift.String
+            /// Creates a new `SecretScanningLocationCommit`.
             ///
             /// - Parameters:
             ///   - path: The file path in the repository
-            ///   - start_line: Line number at which the secret starts in the file
-            ///   - end_line: Line number at which the secret ends in the file
-            ///   - start_column: The column at which the secret starts within the start line when the file is interpreted as 8BIT ASCII
-            ///   - end_column: The column at which the secret ends within the end line when the file is interpreted as 8BIT ASCII
-            ///   - blob_sha: SHA-1 hash ID of the associated blob
-            ///   - blob_url: The API URL to get the associated blob resource
-            ///   - commit_sha: SHA-1 hash ID of the associated commit
-            ///   - commit_url: The API URL to get the associated commit resource
+            ///   - startLine: Line number at which the secret starts in the file
+            ///   - endLine: Line number at which the secret ends in the file
+            ///   - startColumn: The column at which the secret starts within the start line when the file is interpreted as 8BIT ASCII
+            ///   - endColumn: The column at which the secret ends within the end line when the file is interpreted as 8BIT ASCII
+            ///   - blobSha: SHA-1 hash ID of the associated blob
+            ///   - blobUrl: The API URL to get the associated blob resource
+            ///   - commitSha: SHA-1 hash ID of the associated commit
+            ///   - commitUrl: The API URL to get the associated commit resource
             public init(
                 path: Swift.String,
-                start_line: Swift.Double,
-                end_line: Swift.Double,
-                start_column: Swift.Double,
-                end_column: Swift.Double,
-                blob_sha: Swift.String,
-                blob_url: Swift.String,
-                commit_sha: Swift.String,
-                commit_url: Swift.String
+                startLine: Swift.Double,
+                endLine: Swift.Double,
+                startColumn: Swift.Double,
+                endColumn: Swift.Double,
+                blobSha: Swift.String,
+                blobUrl: Swift.String,
+                commitSha: Swift.String,
+                commitUrl: Swift.String
             ) {
                 self.path = path
-                self.start_line = start_line
-                self.end_line = end_line
-                self.start_column = start_column
-                self.end_column = end_column
-                self.blob_sha = blob_sha
-                self.blob_url = blob_url
-                self.commit_sha = commit_sha
-                self.commit_url = commit_url
+                self.startLine = startLine
+                self.endLine = endLine
+                self.startColumn = startColumn
+                self.endColumn = endColumn
+                self.blobSha = blobSha
+                self.blobUrl = blobUrl
+                self.commitSha = commitSha
+                self.commitUrl = commitUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case path
-                case start_line
-                case end_line
-                case start_column
-                case end_column
-                case blob_sha
-                case blob_url
-                case commit_sha
-                case commit_url
+                case startLine = "start_line"
+                case endLine = "end_line"
+                case startColumn = "start_column"
+                case endColumn = "end_column"
+                case blobSha = "blob_sha"
+                case blobUrl = "blob_url"
+                case commitSha = "commit_sha"
+                case commitUrl = "commit_url"
             }
         }
         /// Represents a 'wiki_commit' secret scanning location type. This location type shows that a secret was detected inside a commit to a repository wiki.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationWikiCommit: Codable, Hashable, Sendable {
             /// The file path of the wiki page
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/path`.
@@ -1535,417 +1544,417 @@ public enum Components {
             /// Line number at which the secret starts in the file
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/start_line`.
-            public var start_line: Swift.Double
+            public var startLine: Swift.Double
             /// Line number at which the secret ends in the file
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/end_line`.
-            public var end_line: Swift.Double
+            public var endLine: Swift.Double
             /// The column at which the secret starts within the start line when the file is interpreted as 8-bit ASCII.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/start_column`.
-            public var start_column: Swift.Double
+            public var startColumn: Swift.Double
             /// The column at which the secret ends within the end line when the file is interpreted as 8-bit ASCII.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/end_column`.
-            public var end_column: Swift.Double
+            public var endColumn: Swift.Double
             /// SHA-1 hash ID of the associated blob
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/blob_sha`.
-            public var blob_sha: Swift.String
+            public var blobSha: Swift.String
             /// The GitHub URL to get the associated wiki page
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/page_url`.
-            public var page_url: Swift.String
+            public var pageUrl: Swift.String
             /// SHA-1 hash ID of the associated commit
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/commit_sha`.
-            public var commit_sha: Swift.String
+            public var commitSha: Swift.String
             /// The GitHub URL to get the associated wiki commit
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-wiki-commit/commit_url`.
-            public var commit_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit`.
+            public var commitUrl: Swift.String
+            /// Creates a new `SecretScanningLocationWikiCommit`.
             ///
             /// - Parameters:
             ///   - path: The file path of the wiki page
-            ///   - start_line: Line number at which the secret starts in the file
-            ///   - end_line: Line number at which the secret ends in the file
-            ///   - start_column: The column at which the secret starts within the start line when the file is interpreted as 8-bit ASCII.
-            ///   - end_column: The column at which the secret ends within the end line when the file is interpreted as 8-bit ASCII.
-            ///   - blob_sha: SHA-1 hash ID of the associated blob
-            ///   - page_url: The GitHub URL to get the associated wiki page
-            ///   - commit_sha: SHA-1 hash ID of the associated commit
-            ///   - commit_url: The GitHub URL to get the associated wiki commit
+            ///   - startLine: Line number at which the secret starts in the file
+            ///   - endLine: Line number at which the secret ends in the file
+            ///   - startColumn: The column at which the secret starts within the start line when the file is interpreted as 8-bit ASCII.
+            ///   - endColumn: The column at which the secret ends within the end line when the file is interpreted as 8-bit ASCII.
+            ///   - blobSha: SHA-1 hash ID of the associated blob
+            ///   - pageUrl: The GitHub URL to get the associated wiki page
+            ///   - commitSha: SHA-1 hash ID of the associated commit
+            ///   - commitUrl: The GitHub URL to get the associated wiki commit
             public init(
                 path: Swift.String,
-                start_line: Swift.Double,
-                end_line: Swift.Double,
-                start_column: Swift.Double,
-                end_column: Swift.Double,
-                blob_sha: Swift.String,
-                page_url: Swift.String,
-                commit_sha: Swift.String,
-                commit_url: Swift.String
+                startLine: Swift.Double,
+                endLine: Swift.Double,
+                startColumn: Swift.Double,
+                endColumn: Swift.Double,
+                blobSha: Swift.String,
+                pageUrl: Swift.String,
+                commitSha: Swift.String,
+                commitUrl: Swift.String
             ) {
                 self.path = path
-                self.start_line = start_line
-                self.end_line = end_line
-                self.start_column = start_column
-                self.end_column = end_column
-                self.blob_sha = blob_sha
-                self.page_url = page_url
-                self.commit_sha = commit_sha
-                self.commit_url = commit_url
+                self.startLine = startLine
+                self.endLine = endLine
+                self.startColumn = startColumn
+                self.endColumn = endColumn
+                self.blobSha = blobSha
+                self.pageUrl = pageUrl
+                self.commitSha = commitSha
+                self.commitUrl = commitUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case path
-                case start_line
-                case end_line
-                case start_column
-                case end_column
-                case blob_sha
-                case page_url
-                case commit_sha
-                case commit_url
+                case startLine = "start_line"
+                case endLine = "end_line"
+                case startColumn = "start_column"
+                case endColumn = "end_column"
+                case blobSha = "blob_sha"
+                case pageUrl = "page_url"
+                case commitSha = "commit_sha"
+                case commitUrl = "commit_url"
             }
         }
         /// Represents an 'issue_title' secret scanning location type. This location type shows that a secret was detected in the title of an issue.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-issue-title`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationIssueTitle: Codable, Hashable, Sendable {
             /// The API URL to get the issue where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-issue-title/issue_title_url`.
-            public var issue_title_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title`.
+            public var issueTitleUrl: Swift.String
+            /// Creates a new `SecretScanningLocationIssueTitle`.
             ///
             /// - Parameters:
-            ///   - issue_title_url: The API URL to get the issue where the secret was detected.
-            public init(issue_title_url: Swift.String) {
-                self.issue_title_url = issue_title_url
+            ///   - issueTitleUrl: The API URL to get the issue where the secret was detected.
+            public init(issueTitleUrl: Swift.String) {
+                self.issueTitleUrl = issueTitleUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case issue_title_url
+                case issueTitleUrl = "issue_title_url"
             }
         }
         /// Represents an 'issue_body' secret scanning location type. This location type shows that a secret was detected in the body of an issue.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-issue-body`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationIssueBody: Codable, Hashable, Sendable {
             /// The API URL to get the issue where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-issue-body/issue_body_url`.
-            public var issue_body_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body`.
+            public var issueBodyUrl: Swift.String
+            /// Creates a new `SecretScanningLocationIssueBody`.
             ///
             /// - Parameters:
-            ///   - issue_body_url: The API URL to get the issue where the secret was detected.
-            public init(issue_body_url: Swift.String) {
-                self.issue_body_url = issue_body_url
+            ///   - issueBodyUrl: The API URL to get the issue where the secret was detected.
+            public init(issueBodyUrl: Swift.String) {
+                self.issueBodyUrl = issueBodyUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case issue_body_url
+                case issueBodyUrl = "issue_body_url"
             }
         }
         /// Represents an 'issue_comment' secret scanning location type. This location type shows that a secret was detected in a comment on an issue.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-issue-comment`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationIssueComment: Codable, Hashable, Sendable {
             /// The API URL to get the issue comment where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-issue-comment/issue_comment_url`.
-            public var issue_comment_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment`.
+            public var issueCommentUrl: Swift.String
+            /// Creates a new `SecretScanningLocationIssueComment`.
             ///
             /// - Parameters:
-            ///   - issue_comment_url: The API URL to get the issue comment where the secret was detected.
-            public init(issue_comment_url: Swift.String) {
-                self.issue_comment_url = issue_comment_url
+            ///   - issueCommentUrl: The API URL to get the issue comment where the secret was detected.
+            public init(issueCommentUrl: Swift.String) {
+                self.issueCommentUrl = issueCommentUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case issue_comment_url
+                case issueCommentUrl = "issue_comment_url"
             }
         }
         /// Represents a 'discussion_title' secret scanning location type. This location type shows that a secret was detected in the title of a discussion.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-discussion-title`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationDiscussionTitle: Codable, Hashable, Sendable {
             /// The URL to the discussion where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-discussion-title/discussion_title_url`.
-            public var discussion_title_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title`.
+            public var discussionTitleUrl: Swift.String
+            /// Creates a new `SecretScanningLocationDiscussionTitle`.
             ///
             /// - Parameters:
-            ///   - discussion_title_url: The URL to the discussion where the secret was detected.
-            public init(discussion_title_url: Swift.String) {
-                self.discussion_title_url = discussion_title_url
+            ///   - discussionTitleUrl: The URL to the discussion where the secret was detected.
+            public init(discussionTitleUrl: Swift.String) {
+                self.discussionTitleUrl = discussionTitleUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case discussion_title_url
+                case discussionTitleUrl = "discussion_title_url"
             }
         }
         /// Represents a 'discussion_body' secret scanning location type. This location type shows that a secret was detected in the body of a discussion.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-discussion-body`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationDiscussionBody: Codable, Hashable, Sendable {
             /// The URL to the discussion where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-discussion-body/discussion_body_url`.
-            public var discussion_body_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body`.
+            public var discussionBodyUrl: Swift.String
+            /// Creates a new `SecretScanningLocationDiscussionBody`.
             ///
             /// - Parameters:
-            ///   - discussion_body_url: The URL to the discussion where the secret was detected.
-            public init(discussion_body_url: Swift.String) {
-                self.discussion_body_url = discussion_body_url
+            ///   - discussionBodyUrl: The URL to the discussion where the secret was detected.
+            public init(discussionBodyUrl: Swift.String) {
+                self.discussionBodyUrl = discussionBodyUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case discussion_body_url
+                case discussionBodyUrl = "discussion_body_url"
             }
         }
         /// Represents a 'discussion_comment' secret scanning location type. This location type shows that a secret was detected in a comment on a discussion.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-discussion-comment`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationDiscussionComment: Codable, Hashable, Sendable {
             /// The API URL to get the discussion comment where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-discussion-comment/discussion_comment_url`.
-            public var discussion_comment_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment`.
+            public var discussionCommentUrl: Swift.String
+            /// Creates a new `SecretScanningLocationDiscussionComment`.
             ///
             /// - Parameters:
-            ///   - discussion_comment_url: The API URL to get the discussion comment where the secret was detected.
-            public init(discussion_comment_url: Swift.String) {
-                self.discussion_comment_url = discussion_comment_url
+            ///   - discussionCommentUrl: The API URL to get the discussion comment where the secret was detected.
+            public init(discussionCommentUrl: Swift.String) {
+                self.discussionCommentUrl = discussionCommentUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case discussion_comment_url
+                case discussionCommentUrl = "discussion_comment_url"
             }
         }
         /// Represents a 'pull_request_title' secret scanning location type. This location type shows that a secret was detected in the title of a pull request.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-title`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationPullRequestTitle: Codable, Hashable, Sendable {
             /// The API URL to get the pull request where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-title/pull_request_title_url`.
-            public var pull_request_title_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title`.
+            public var pullRequestTitleUrl: Swift.String
+            /// Creates a new `SecretScanningLocationPullRequestTitle`.
             ///
             /// - Parameters:
-            ///   - pull_request_title_url: The API URL to get the pull request where the secret was detected.
-            public init(pull_request_title_url: Swift.String) {
-                self.pull_request_title_url = pull_request_title_url
+            ///   - pullRequestTitleUrl: The API URL to get the pull request where the secret was detected.
+            public init(pullRequestTitleUrl: Swift.String) {
+                self.pullRequestTitleUrl = pullRequestTitleUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case pull_request_title_url
+                case pullRequestTitleUrl = "pull_request_title_url"
             }
         }
         /// Represents a 'pull_request_body' secret scanning location type. This location type shows that a secret was detected in the body of a pull request.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-body`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationPullRequestBody: Codable, Hashable, Sendable {
             /// The API URL to get the pull request where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-body/pull_request_body_url`.
-            public var pull_request_body_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body`.
+            public var pullRequestBodyUrl: Swift.String
+            /// Creates a new `SecretScanningLocationPullRequestBody`.
             ///
             /// - Parameters:
-            ///   - pull_request_body_url: The API URL to get the pull request where the secret was detected.
-            public init(pull_request_body_url: Swift.String) {
-                self.pull_request_body_url = pull_request_body_url
+            ///   - pullRequestBodyUrl: The API URL to get the pull request where the secret was detected.
+            public init(pullRequestBodyUrl: Swift.String) {
+                self.pullRequestBodyUrl = pullRequestBodyUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case pull_request_body_url
+                case pullRequestBodyUrl = "pull_request_body_url"
             }
         }
         /// Represents a 'pull_request_comment' secret scanning location type. This location type shows that a secret was detected in a comment on a pull request.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-comment`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationPullRequestComment: Codable, Hashable, Sendable {
             /// The API URL to get the pull request comment where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-comment/pull_request_comment_url`.
-            public var pull_request_comment_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment`.
+            public var pullRequestCommentUrl: Swift.String
+            /// Creates a new `SecretScanningLocationPullRequestComment`.
             ///
             /// - Parameters:
-            ///   - pull_request_comment_url: The API URL to get the pull request comment where the secret was detected.
-            public init(pull_request_comment_url: Swift.String) {
-                self.pull_request_comment_url = pull_request_comment_url
+            ///   - pullRequestCommentUrl: The API URL to get the pull request comment where the secret was detected.
+            public init(pullRequestCommentUrl: Swift.String) {
+                self.pullRequestCommentUrl = pullRequestCommentUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case pull_request_comment_url
+                case pullRequestCommentUrl = "pull_request_comment_url"
             }
         }
         /// Represents a 'pull_request_review' secret scanning location type. This location type shows that a secret was detected in a review on a pull request.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-review`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationPullRequestReview: Codable, Hashable, Sendable {
             /// The API URL to get the pull request review where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-review/pull_request_review_url`.
-            public var pull_request_review_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review`.
+            public var pullRequestReviewUrl: Swift.String
+            /// Creates a new `SecretScanningLocationPullRequestReview`.
             ///
             /// - Parameters:
-            ///   - pull_request_review_url: The API URL to get the pull request review where the secret was detected.
-            public init(pull_request_review_url: Swift.String) {
-                self.pull_request_review_url = pull_request_review_url
+            ///   - pullRequestReviewUrl: The API URL to get the pull request review where the secret was detected.
+            public init(pullRequestReviewUrl: Swift.String) {
+                self.pullRequestReviewUrl = pullRequestReviewUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case pull_request_review_url
+                case pullRequestReviewUrl = "pull_request_review_url"
             }
         }
         /// Represents a 'pull_request_review_comment' secret scanning location type. This location type shows that a secret was detected in a review comment on a pull request.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-review-comment`.
-        public struct secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment: Codable, Hashable, Sendable {
+        public struct SecretScanningLocationPullRequestReviewComment: Codable, Hashable, Sendable {
             /// The API URL to get the pull request review comment where the secret was detected.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location-pull-request-review-comment/pull_request_review_comment_url`.
-            public var pull_request_review_comment_url: Swift.String
-            /// Creates a new `secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment`.
+            public var pullRequestReviewCommentUrl: Swift.String
+            /// Creates a new `SecretScanningLocationPullRequestReviewComment`.
             ///
             /// - Parameters:
-            ///   - pull_request_review_comment_url: The API URL to get the pull request review comment where the secret was detected.
-            public init(pull_request_review_comment_url: Swift.String) {
-                self.pull_request_review_comment_url = pull_request_review_comment_url
+            ///   - pullRequestReviewCommentUrl: The API URL to get the pull request review comment where the secret was detected.
+            public init(pullRequestReviewCommentUrl: Swift.String) {
+                self.pullRequestReviewCommentUrl = pullRequestReviewCommentUrl
             }
             public enum CodingKeys: String, CodingKey {
-                case pull_request_review_comment_url
+                case pullRequestReviewCommentUrl = "pull_request_review_comment_url"
             }
         }
         /// - Remark: Generated from `#/components/schemas/secret-scanning-location`.
-        public struct secret_hyphen_scanning_hyphen_location: Codable, Hashable, Sendable {
+        public struct SecretScanningLocation: Codable, Hashable, Sendable {
             /// The location type. Because secrets may be found in different types of resources (ie. code, comments, issues, pull requests, discussions), this field identifies the type of resource where the secret was found.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case commit = "commit"
-                case wiki_commit = "wiki_commit"
-                case issue_title = "issue_title"
-                case issue_body = "issue_body"
-                case issue_comment = "issue_comment"
-                case discussion_title = "discussion_title"
-                case discussion_body = "discussion_body"
-                case discussion_comment = "discussion_comment"
-                case pull_request_title = "pull_request_title"
-                case pull_request_body = "pull_request_body"
-                case pull_request_comment = "pull_request_comment"
-                case pull_request_review = "pull_request_review"
-                case pull_request_review_comment = "pull_request_review_comment"
+                case wikiCommit = "wiki_commit"
+                case issueTitle = "issue_title"
+                case issueBody = "issue_body"
+                case issueComment = "issue_comment"
+                case discussionTitle = "discussion_title"
+                case discussionBody = "discussion_body"
+                case discussionComment = "discussion_comment"
+                case pullRequestTitle = "pull_request_title"
+                case pullRequestBody = "pull_request_body"
+                case pullRequestComment = "pull_request_comment"
+                case pullRequestReview = "pull_request_review"
+                case pullRequestReviewComment = "pull_request_review_comment"
             }
             /// The location type. Because secrets may be found in different types of resources (ie. code, comments, issues, pull requests, discussions), this field identifies the type of resource where the secret was found.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/type`.
-            public var _type: Components.Schemas.secret_hyphen_scanning_hyphen_location._typePayload?
+            public var _type: Components.Schemas.SecretScanningLocation._TypePayload?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details`.
-            @frozen public enum detailsPayload: Codable, Hashable, Sendable {
+            @frozen public enum DetailsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case1`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_commit(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_commit)
+                case SecretScanningLocationCommit(Components.Schemas.SecretScanningLocationCommit)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case2`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit)
+                case SecretScanningLocationWikiCommit(Components.Schemas.SecretScanningLocationWikiCommit)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case3`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title)
+                case SecretScanningLocationIssueTitle(Components.Schemas.SecretScanningLocationIssueTitle)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case4`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body)
+                case SecretScanningLocationIssueBody(Components.Schemas.SecretScanningLocationIssueBody)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case5`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment)
+                case SecretScanningLocationIssueComment(Components.Schemas.SecretScanningLocationIssueComment)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case6`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title)
+                case SecretScanningLocationDiscussionTitle(Components.Schemas.SecretScanningLocationDiscussionTitle)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case7`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body)
+                case SecretScanningLocationDiscussionBody(Components.Schemas.SecretScanningLocationDiscussionBody)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case8`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment)
+                case SecretScanningLocationDiscussionComment(Components.Schemas.SecretScanningLocationDiscussionComment)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case9`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title)
+                case SecretScanningLocationPullRequestTitle(Components.Schemas.SecretScanningLocationPullRequestTitle)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case10`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body)
+                case SecretScanningLocationPullRequestBody(Components.Schemas.SecretScanningLocationPullRequestBody)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case11`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment)
+                case SecretScanningLocationPullRequestComment(Components.Schemas.SecretScanningLocationPullRequestComment)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case12`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review)
+                case SecretScanningLocationPullRequestReview(Components.Schemas.SecretScanningLocationPullRequestReview)
                 /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details/case13`.
-                case secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment)
+                case SecretScanningLocationPullRequestReviewComment(Components.Schemas.SecretScanningLocationPullRequestReviewComment)
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_commit(try .init(from: decoder))
+                        self = .SecretScanningLocationCommit(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit(try .init(from: decoder))
+                        self = .SecretScanningLocationWikiCommit(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title(try .init(from: decoder))
+                        self = .SecretScanningLocationIssueTitle(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body(try .init(from: decoder))
+                        self = .SecretScanningLocationIssueBody(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment(try .init(from: decoder))
+                        self = .SecretScanningLocationIssueComment(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title(try .init(from: decoder))
+                        self = .SecretScanningLocationDiscussionTitle(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body(try .init(from: decoder))
+                        self = .SecretScanningLocationDiscussionBody(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment(try .init(from: decoder))
+                        self = .SecretScanningLocationDiscussionComment(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title(try .init(from: decoder))
+                        self = .SecretScanningLocationPullRequestTitle(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body(try .init(from: decoder))
+                        self = .SecretScanningLocationPullRequestBody(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment(try .init(from: decoder))
+                        self = .SecretScanningLocationPullRequestComment(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review(try .init(from: decoder))
+                        self = .SecretScanningLocationPullRequestReview(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(try .init(from: decoder))
+                        self = .SecretScanningLocationPullRequestReviewComment(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
@@ -1958,45 +1967,45 @@ public enum Components {
                 }
                 public func encode(to encoder: any Encoder) throws {
                     switch self {
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_commit(value):
+                    case let .SecretScanningLocationCommit(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_wiki_hyphen_commit(value):
+                    case let .SecretScanningLocationWikiCommit(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title(value):
+                    case let .SecretScanningLocationIssueTitle(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_body(value):
+                    case let .SecretScanningLocationIssueBody(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_comment(value):
+                    case let .SecretScanningLocationIssueComment(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_title(value):
+                    case let .SecretScanningLocationDiscussionTitle(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_body(value):
+                    case let .SecretScanningLocationDiscussionBody(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_discussion_hyphen_comment(value):
+                    case let .SecretScanningLocationDiscussionComment(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_title(value):
+                    case let .SecretScanningLocationPullRequestTitle(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_body(value):
+                    case let .SecretScanningLocationPullRequestBody(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_comment(value):
+                    case let .SecretScanningLocationPullRequestComment(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review(value):
+                    case let .SecretScanningLocationPullRequestReview(value):
                         try value.encode(to: encoder)
-                    case let .secret_hyphen_scanning_hyphen_location_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment(value):
+                    case let .SecretScanningLocationPullRequestReviewComment(value):
                         try value.encode(to: encoder)
                     }
                 }
             }
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/details`.
-            public var details: Components.Schemas.secret_hyphen_scanning_hyphen_location.detailsPayload?
-            /// Creates a new `secret_hyphen_scanning_hyphen_location`.
+            public var details: Components.Schemas.SecretScanningLocation.DetailsPayload?
+            /// Creates a new `SecretScanningLocation`.
             ///
             /// - Parameters:
             ///   - _type: The location type. Because secrets may be found in different types of resources (ie. code, comments, issues, pull requests, discussions), this field identifies the type of resource where the secret was found.
             ///   - details:
             public init(
-                _type: Components.Schemas.secret_hyphen_scanning_hyphen_location._typePayload? = nil,
-                details: Components.Schemas.secret_hyphen_scanning_hyphen_location.detailsPayload? = nil
+                _type: Components.Schemas.SecretScanningLocation._TypePayload? = nil,
+                details: Components.Schemas.SecretScanningLocation.DetailsPayload? = nil
             ) {
                 self._type = _type
                 self.details = details
@@ -2009,48 +2018,48 @@ public enum Components {
         /// The reason for bypassing push protection.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-reason`.
-        @frozen public enum secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason: String, Codable, Hashable, Sendable {
-            case false_positive = "false_positive"
-            case used_in_tests = "used_in_tests"
-            case will_fix_later = "will_fix_later"
+        @frozen public enum SecretScanningPushProtectionBypassReason: String, Codable, Hashable, Sendable, CaseIterable {
+            case falsePositive = "false_positive"
+            case usedInTests = "used_in_tests"
+            case willFixLater = "will_fix_later"
         }
         /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass`.
-        public struct secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass: Codable, Hashable, Sendable {
+        public struct SecretScanningPushProtectionBypass: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass/reason`.
-            public var reason: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason?
+            public var reason: Components.Schemas.SecretScanningPushProtectionBypassReason?
             /// The time that the bypass will expire in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass/expire_at`.
-            public var expire_at: Foundation.Date?
+            public var expireAt: Foundation.Date?
             /// The token type this bypass is for.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass/token_type`.
-            public var token_type: Swift.String?
-            /// Creates a new `secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass`.
+            public var tokenType: Swift.String?
+            /// Creates a new `SecretScanningPushProtectionBypass`.
             ///
             /// - Parameters:
             ///   - reason:
-            ///   - expire_at: The time that the bypass will expire in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
-            ///   - token_type: The token type this bypass is for.
+            ///   - expireAt: The time that the bypass will expire in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+            ///   - tokenType: The token type this bypass is for.
             public init(
-                reason: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason? = nil,
-                expire_at: Foundation.Date? = nil,
-                token_type: Swift.String? = nil
+                reason: Components.Schemas.SecretScanningPushProtectionBypassReason? = nil,
+                expireAt: Foundation.Date? = nil,
+                tokenType: Swift.String? = nil
             ) {
                 self.reason = reason
-                self.expire_at = expire_at
-                self.token_type = token_type
+                self.expireAt = expireAt
+                self.tokenType = tokenType
             }
             public enum CodingKeys: String, CodingKey {
                 case reason
-                case expire_at
-                case token_type
+                case expireAt = "expire_at"
+                case tokenType = "token_type"
             }
         }
         /// Information on a single scan performed by secret scanning on the repository
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-scan`.
-        public struct secret_hyphen_scanning_hyphen_scan: Codable, Hashable, Sendable {
+        public struct SecretScanningScan: Codable, Hashable, Sendable {
             /// The type of scan
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/type`.
@@ -2062,125 +2071,125 @@ public enum Components {
             /// The time that the scan was completed. Empty if the scan is running
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/completed_at`.
-            public var completed_at: Foundation.Date?
+            public var completedAt: Foundation.Date?
             /// The time that the scan was started. Empty if the scan is pending
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan/started_at`.
-            public var started_at: Foundation.Date?
-            /// Creates a new `secret_hyphen_scanning_hyphen_scan`.
+            public var startedAt: Foundation.Date?
+            /// Creates a new `SecretScanningScan`.
             ///
             /// - Parameters:
             ///   - _type: The type of scan
             ///   - status: The state of the scan. Either "completed", "running", or "pending"
-            ///   - completed_at: The time that the scan was completed. Empty if the scan is running
-            ///   - started_at: The time that the scan was started. Empty if the scan is pending
+            ///   - completedAt: The time that the scan was completed. Empty if the scan is running
+            ///   - startedAt: The time that the scan was started. Empty if the scan is pending
             public init(
                 _type: Swift.String? = nil,
                 status: Swift.String? = nil,
-                completed_at: Foundation.Date? = nil,
-                started_at: Foundation.Date? = nil
+                completedAt: Foundation.Date? = nil,
+                startedAt: Foundation.Date? = nil
             ) {
                 self._type = _type
                 self.status = status
-                self.completed_at = completed_at
-                self.started_at = started_at
+                self.completedAt = completedAt
+                self.startedAt = startedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case _type = "type"
                 case status
-                case completed_at
-                case started_at
+                case completedAt = "completed_at"
+                case startedAt = "started_at"
             }
         }
         /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history`.
-        public struct secret_hyphen_scanning_hyphen_scan_hyphen_history: Codable, Hashable, Sendable {
+        public struct SecretScanningScanHistory: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/incremental_scans`.
-            public var incremental_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]?
+            public var incrementalScans: [Components.Schemas.SecretScanningScan]?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/pattern_update_scans`.
-            public var pattern_update_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]?
+            public var patternUpdateScans: [Components.Schemas.SecretScanningScan]?
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/backfill_scans`.
-            public var backfill_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]?
-            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload`.
-            public struct custom_pattern_backfill_scansPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value1`.
-                public var value1: Components.Schemas.secret_hyphen_scanning_hyphen_scan
-                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value2`.
+            public var backfillScans: [Components.Schemas.SecretScanningScan]?
+            /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/CustomPatternBackfillScansPayload`.
+            public struct CustomPatternBackfillScansPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/CustomPatternBackfillScansPayload/value1`.
+                public var value1: Components.Schemas.SecretScanningScan
+                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/CustomPatternBackfillScansPayload/value2`.
                 public struct Value2Payload: Codable, Hashable, Sendable {
                     /// Name of the custom pattern for custom pattern scans
                     ///
-                    /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value2/pattern_name`.
-                    public var pattern_name: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/CustomPatternBackfillScansPayload/value2/pattern_name`.
+                    public var patternName: Swift.String?
                     /// Level at which the custom pattern is defined, one of "repository", "organization", or "enterprise"
                     ///
-                    /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value2/pattern_scope`.
-                    public var pattern_scope: Swift.String?
+                    /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/CustomPatternBackfillScansPayload/value2/pattern_scope`.
+                    public var patternScope: Swift.String?
                     /// Creates a new `Value2Payload`.
                     ///
                     /// - Parameters:
-                    ///   - pattern_name: Name of the custom pattern for custom pattern scans
-                    ///   - pattern_scope: Level at which the custom pattern is defined, one of "repository", "organization", or "enterprise"
+                    ///   - patternName: Name of the custom pattern for custom pattern scans
+                    ///   - patternScope: Level at which the custom pattern is defined, one of "repository", "organization", or "enterprise"
                     public init(
-                        pattern_name: Swift.String? = nil,
-                        pattern_scope: Swift.String? = nil
+                        patternName: Swift.String? = nil,
+                        patternScope: Swift.String? = nil
                     ) {
-                        self.pattern_name = pattern_name
-                        self.pattern_scope = pattern_scope
+                        self.patternName = patternName
+                        self.patternScope = patternScope
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case pattern_name
-                        case pattern_scope
+                        case patternName = "pattern_name"
+                        case patternScope = "pattern_scope"
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scansPayload/value2`.
-                public var value2: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayloadPayload.Value2Payload
-                /// Creates a new `custom_pattern_backfill_scansPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/CustomPatternBackfillScansPayload/value2`.
+                public var value2: Components.Schemas.SecretScanningScanHistory.CustomPatternBackfillScansPayloadPayload.Value2Payload
+                /// Creates a new `CustomPatternBackfillScansPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
                 ///   - value2:
                 public init(
-                    value1: Components.Schemas.secret_hyphen_scanning_hyphen_scan,
-                    value2: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayloadPayload.Value2Payload
+                    value1: Components.Schemas.SecretScanningScan,
+                    value2: Components.Schemas.SecretScanningScanHistory.CustomPatternBackfillScansPayloadPayload.Value2Payload
                 ) {
                     self.value1 = value1
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scans`.
-            public typealias custom_pattern_backfill_scansPayload = [Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayloadPayload]
+            public typealias CustomPatternBackfillScansPayload = [Components.Schemas.SecretScanningScanHistory.CustomPatternBackfillScansPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scans`.
-            public var custom_pattern_backfill_scans: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayload?
-            /// Creates a new `secret_hyphen_scanning_hyphen_scan_hyphen_history`.
+            public var customPatternBackfillScans: Components.Schemas.SecretScanningScanHistory.CustomPatternBackfillScansPayload?
+            /// Creates a new `SecretScanningScanHistory`.
             ///
             /// - Parameters:
-            ///   - incremental_scans:
-            ///   - pattern_update_scans:
-            ///   - backfill_scans:
-            ///   - custom_pattern_backfill_scans:
+            ///   - incrementalScans:
+            ///   - patternUpdateScans:
+            ///   - backfillScans:
+            ///   - customPatternBackfillScans:
             public init(
-                incremental_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]? = nil,
-                pattern_update_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]? = nil,
-                backfill_scans: [Components.Schemas.secret_hyphen_scanning_hyphen_scan]? = nil,
-                custom_pattern_backfill_scans: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history.custom_pattern_backfill_scansPayload? = nil
+                incrementalScans: [Components.Schemas.SecretScanningScan]? = nil,
+                patternUpdateScans: [Components.Schemas.SecretScanningScan]? = nil,
+                backfillScans: [Components.Schemas.SecretScanningScan]? = nil,
+                customPatternBackfillScans: Components.Schemas.SecretScanningScanHistory.CustomPatternBackfillScansPayload? = nil
             ) {
-                self.incremental_scans = incremental_scans
-                self.pattern_update_scans = pattern_update_scans
-                self.backfill_scans = backfill_scans
-                self.custom_pattern_backfill_scans = custom_pattern_backfill_scans
+                self.incrementalScans = incrementalScans
+                self.patternUpdateScans = patternUpdateScans
+                self.backfillScans = backfillScans
+                self.customPatternBackfillScans = customPatternBackfillScans
             }
             public enum CodingKeys: String, CodingKey {
-                case incremental_scans
-                case pattern_update_scans
-                case backfill_scans
-                case custom_pattern_backfill_scans
+                case incrementalScans = "incremental_scans"
+                case patternUpdateScans = "pattern_update_scans"
+                case backfillScans = "backfill_scans"
+                case customPatternBackfillScans = "custom_pattern_backfill_scans"
             }
         }
     }
@@ -2189,103 +2198,103 @@ public enum Components {
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-before`.
-        public typealias pagination_hyphen_before = Swift.String
+        public typealias PaginationBefore = Swift.String
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-after`.
-        public typealias pagination_hyphen_after = Swift.String
+        public typealias PaginationAfter = Swift.String
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
         ///
         /// - Remark: Generated from `#/components/parameters/enterprise`.
-        public typealias enterprise = Swift.String
+        public typealias Enterprise = Swift.String
         /// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-state`.
-        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum SecretScanningAlertState: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case resolved = "resolved"
         }
         /// A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-secret-type`.
-        public typealias secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type = Swift.String
+        public typealias SecretScanningAlertSecretType = Swift.String
         /// A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-resolution`.
-        public typealias secret_hyphen_scanning_hyphen_alert_hyphen_resolution = Swift.String
+        public typealias SecretScanningAlertResolution = Swift.String
         /// The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-sort`.
-        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+        @frozen public enum SecretScanningAlertSort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
         }
         /// A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-validity`.
-        public typealias secret_hyphen_scanning_hyphen_alert_hyphen_validity = Swift.String
+        public typealias SecretScanningAlertValidity = Swift.String
         /// A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-publicly-leaked`.
-        public typealias secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked = Swift.Bool
+        public typealias SecretScanningAlertPubliclyLeaked = Swift.Bool
         /// A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-multi-repo`.
-        public typealias secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo = Swift.Bool
+        public typealias SecretScanningAlertMultiRepo = Swift.Bool
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty "before" query string.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-pagination-before-org-repo`.
-        public typealias secret_hyphen_scanning_hyphen_pagination_hyphen_before_hyphen_org_hyphen_repo = Swift.String
+        public typealias SecretScanningPaginationBeforeOrgRepo = Swift.String
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty "after" query string.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-pagination-after-org-repo`.
-        public typealias secret_hyphen_scanning_hyphen_pagination_hyphen_after_hyphen_org_hyphen_repo = Swift.String
+        public typealias SecretScanningPaginationAfterOrgRepo = Swift.String
         /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
         ///
         /// - Remark: Generated from `#/components/parameters/alert-number`.
-        public typealias alert_hyphen_number = Components.Schemas.alert_hyphen_number
+        public typealias AlertNumber = Components.Schemas.AlertNumber
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2295,58 +2304,58 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct service_unavailable: Sendable, Hashable {
+        public struct ServiceUnavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/service_unavailable/content/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/code`.
                     public var code: Swift.String?
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/message`.
                     public var message: Swift.String?
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/documentation_url`.
-                    public var documentation_url: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var documentationUrl: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - code:
                     ///   - message:
-                    ///   - documentation_url:
+                    ///   - documentationUrl:
                     public init(
                         code: Swift.String? = nil,
                         message: Swift.String? = nil,
-                        documentation_url: Swift.String? = nil
+                        documentationUrl: Swift.String? = nil
                     ) {
                         self.code = code
                         self.message = message
-                        self.documentation_url = documentation_url
+                        self.documentationUrl = documentationUrl
                     }
                     public enum CodingKeys: String, CodingKey {
                         case code
                         case message
-                        case documentation_url
+                        case documentationUrl = "documentation_url"
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/service_unavailable/content/application\/json`.
-                case json(Components.Responses.service_unavailable.Body.jsonPayload)
+                case json(Components.Responses.ServiceUnavailable.Body.JsonPayload)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Responses.service_unavailable.Body.jsonPayload {
+                public var json: Components.Responses.ServiceUnavailable.Body.JsonPayload {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2356,12 +2365,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.service_unavailable.Body
-            /// Creates a new `service_unavailable`.
+            public var body: Components.Responses.ServiceUnavailable.Body
+            /// Creates a new `ServiceUnavailable`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.service_unavailable.Body) {
+            public init(body: Components.Responses.ServiceUnavailable.Body) {
                 self.body = body
             }
         }
@@ -2369,7 +2378,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -2387,7 +2396,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /enterprises/{enterprise}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//enterprises/{enterprise}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-enterprise)`.
-    public enum secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise {
+    public enum SecretScanningListAlertsForEnterprise {
         public static let id: Swift.String = "secret-scanning/list-alerts-for-enterprise"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/path`.
@@ -2395,130 +2404,130 @@ public enum Operations {
                 /// The slug version of the enterprise name. You can also substitute this value with the enterprise id.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/path/enterprise`.
-                public var enterprise: Components.Parameters.enterprise
+                public var enterprise: Components.Parameters.Enterprise
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - enterprise: The slug version of the enterprise name. You can also substitute this value with the enterprise id.
-                public init(enterprise: Components.Parameters.enterprise) {
+                public init(enterprise: Components.Parameters.Enterprise) {
                     self.enterprise = enterprise
                 }
             }
-            public var path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Path
+            public var path: Operations.SecretScanningListAlertsForEnterprise.Input.Path
             /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-state`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+                @frozen public enum SecretScanningAlertState: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case resolved = "resolved"
                 }
                 /// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/state`.
-                public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
+                public var state: Components.Parameters.SecretScanningAlertState?
                 /// A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/secret_type`.
-                public var secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type?
+                public var secretType: Components.Parameters.SecretScanningAlertSecretType?
                 /// A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/resolution`.
-                public var resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
+                public var resolution: Components.Parameters.SecretScanningAlertResolution?
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-sort`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum SecretScanningAlertSort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
                 /// The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/sort`.
-                public var sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort?
+                public var sort: Components.Parameters.SecretScanningAlertSort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/validity`.
-                public var validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity?
+                public var validity: Components.Parameters.SecretScanningAlertValidity?
                 /// A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/is_publicly_leaked`.
-                public var is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked?
+                public var isPubliclyLeaked: Components.Parameters.SecretScanningAlertPubliclyLeaked?
                 /// A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/is_multi_repo`.
-                public var is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo?
+                public var isMultiRepo: Components.Parameters.SecretScanningAlertMultiRepo?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - state: Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
-                ///   - secret_type: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
+                ///   - secretType: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///   - resolution: A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///   - sort: The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///   - direction: The direction to sort the results by.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - validity: A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
-                ///   - is_publicly_leaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
-                ///   - is_multi_repo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
+                ///   - isPubliclyLeaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///   - isMultiRepo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 public init(
-                    state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                    secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type? = nil,
-                    resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution? = nil,
-                    sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil,
-                    is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked? = nil,
-                    is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo? = nil
+                    state: Components.Parameters.SecretScanningAlertState? = nil,
+                    secretType: Components.Parameters.SecretScanningAlertSecretType? = nil,
+                    resolution: Components.Parameters.SecretScanningAlertResolution? = nil,
+                    sort: Components.Parameters.SecretScanningAlertSort? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    validity: Components.Parameters.SecretScanningAlertValidity? = nil,
+                    isPubliclyLeaked: Components.Parameters.SecretScanningAlertPubliclyLeaked? = nil,
+                    isMultiRepo: Components.Parameters.SecretScanningAlertMultiRepo? = nil
                 ) {
                     self.state = state
-                    self.secret_type = secret_type
+                    self.secretType = secretType
                     self.resolution = resolution
                     self.sort = sort
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.before = before
                     self.after = after
                     self.validity = validity
-                    self.is_publicly_leaked = is_publicly_leaked
-                    self.is_multi_repo = is_multi_repo
+                    self.isPubliclyLeaked = isPubliclyLeaked
+                    self.isMultiRepo = isMultiRepo
                 }
             }
-            public var query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query
+            public var query: Operations.SecretScanningListAlertsForEnterprise.Input.Query
             /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningListAlertsForEnterprise.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningListAlertsForEnterprise.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Headers
+            public var headers: Operations.SecretScanningListAlertsForEnterprise.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2526,9 +2535,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Path,
-                query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query = .init(),
-                headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Headers = .init()
+                path: Operations.SecretScanningListAlertsForEnterprise.Input.Path,
+                query: Operations.SecretScanningListAlertsForEnterprise.Input.Query = .init(),
+                headers: Operations.SecretScanningListAlertsForEnterprise.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -2540,26 +2549,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok.Headers
+                public var headers: Operations.SecretScanningListAlertsForEnterprise.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert])
+                    case json([Components.Schemas.OrganizationSecretScanningAlert])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert] {
+                    public var json: [Components.Schemas.OrganizationSecretScanningAlert] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2569,15 +2578,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                public var body: Operations.SecretScanningListAlertsForEnterprise.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok.Headers = .init(),
-                    body: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok.Body
+                    headers: Operations.SecretScanningListAlertsForEnterprise.Output.Ok.Headers = .init(),
+                    body: Operations.SecretScanningListAlertsForEnterprise.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -2588,12 +2597,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//enterprises/{enterprise}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-enterprise)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok)
+            case ok(Operations.SecretScanningListAlertsForEnterprise.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Output.Ok {
+            public var ok: Operations.SecretScanningListAlertsForEnterprise.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2611,12 +2620,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//enterprises/{enterprise}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-enterprise)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2634,12 +2643,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//enterprises/{enterprise}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-enterprise)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -2693,7 +2702,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//orgs/{org}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-org)`.
-    public enum secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org {
+    public enum SecretScanningListAlertsForOrg {
         public static let id: Swift.String = "secret-scanning/list-alerts-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/path`.
@@ -2701,137 +2710,137 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.SecretScanningListAlertsForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-state`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+                @frozen public enum SecretScanningAlertState: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case resolved = "resolved"
                 }
                 /// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/state`.
-                public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
+                public var state: Components.Parameters.SecretScanningAlertState?
                 /// A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/secret_type`.
-                public var secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type?
+                public var secretType: Components.Parameters.SecretScanningAlertSecretType?
                 /// A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/resolution`.
-                public var resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
+                public var resolution: Components.Parameters.SecretScanningAlertResolution?
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-sort`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum SecretScanningAlertSort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
                 /// The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/sort`.
-                public var sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort?
+                public var sort: Components.Parameters.SecretScanningAlertSort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty "before" query string.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/before`.
-                public var before: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_before_hyphen_org_hyphen_repo?
+                public var before: Components.Parameters.SecretScanningPaginationBeforeOrgRepo?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty "after" query string.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/after`.
-                public var after: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_after_hyphen_org_hyphen_repo?
+                public var after: Components.Parameters.SecretScanningPaginationAfterOrgRepo?
                 /// A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/validity`.
-                public var validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity?
+                public var validity: Components.Parameters.SecretScanningAlertValidity?
                 /// A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/is_publicly_leaked`.
-                public var is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked?
+                public var isPubliclyLeaked: Components.Parameters.SecretScanningAlertPubliclyLeaked?
                 /// A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/is_multi_repo`.
-                public var is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo?
+                public var isMultiRepo: Components.Parameters.SecretScanningAlertMultiRepo?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - state: Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
-                ///   - secret_type: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
+                ///   - secretType: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///   - resolution: A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///   - sort: The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///   - direction: The direction to sort the results by.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty "before" query string.
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty "after" query string.
                 ///   - validity: A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
-                ///   - is_publicly_leaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
-                ///   - is_multi_repo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
+                ///   - isPubliclyLeaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///   - isMultiRepo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 public init(
-                    state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                    secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type? = nil,
-                    resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution? = nil,
-                    sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    before: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_before_hyphen_org_hyphen_repo? = nil,
-                    after: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_after_hyphen_org_hyphen_repo? = nil,
-                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil,
-                    is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked? = nil,
-                    is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo? = nil
+                    state: Components.Parameters.SecretScanningAlertState? = nil,
+                    secretType: Components.Parameters.SecretScanningAlertSecretType? = nil,
+                    resolution: Components.Parameters.SecretScanningAlertResolution? = nil,
+                    sort: Components.Parameters.SecretScanningAlertSort? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    before: Components.Parameters.SecretScanningPaginationBeforeOrgRepo? = nil,
+                    after: Components.Parameters.SecretScanningPaginationAfterOrgRepo? = nil,
+                    validity: Components.Parameters.SecretScanningAlertValidity? = nil,
+                    isPubliclyLeaked: Components.Parameters.SecretScanningAlertPubliclyLeaked? = nil,
+                    isMultiRepo: Components.Parameters.SecretScanningAlertMultiRepo? = nil
                 ) {
                     self.state = state
-                    self.secret_type = secret_type
+                    self.secretType = secretType
                     self.resolution = resolution
                     self.sort = sort
                     self.direction = direction
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.before = before
                     self.after = after
                     self.validity = validity
-                    self.is_publicly_leaked = is_publicly_leaked
-                    self.is_multi_repo = is_multi_repo
+                    self.isPubliclyLeaked = isPubliclyLeaked
+                    self.isMultiRepo = isMultiRepo
                 }
             }
-            public var query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.SecretScanningListAlertsForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningListAlertsForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningListAlertsForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.SecretScanningListAlertsForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2839,9 +2848,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.SecretScanningListAlertsForOrg.Input.Path,
+                query: Operations.SecretScanningListAlertsForOrg.Input.Query = .init(),
+                headers: Operations.SecretScanningListAlertsForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -2853,26 +2862,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.SecretScanningListAlertsForOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert])
+                    case json([Components.Schemas.OrganizationSecretScanningAlert])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.organization_hyphen_secret_hyphen_scanning_hyphen_alert] {
+                    public var json: [Components.Schemas.OrganizationSecretScanningAlert] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2882,15 +2891,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.SecretScanningListAlertsForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok.Body
+                    headers: Operations.SecretScanningListAlertsForOrg.Output.Ok.Headers = .init(),
+                    body: Operations.SecretScanningListAlertsForOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -2901,12 +2910,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.SecretScanningListAlertsForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.SecretScanningListAlertsForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2924,12 +2933,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2947,12 +2956,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-org)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -3006,7 +3015,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)`.
-    public enum secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo {
+    public enum SecretScanningListAlertsForRepo {
         public static let id: Swift.String = "secret-scanning/list-alerts-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/path`.
@@ -3014,146 +3023,146 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.SecretScanningListAlertsForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-state`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+                @frozen public enum SecretScanningAlertState: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case resolved = "resolved"
                 }
                 /// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/state`.
-                public var state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state?
+                public var state: Components.Parameters.SecretScanningAlertState?
                 /// A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/secret_type`.
-                public var secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type?
+                public var secretType: Components.Parameters.SecretScanningAlertSecretType?
                 /// A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/resolution`.
-                public var resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
+                public var resolution: Components.Parameters.SecretScanningAlertResolution?
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-sort`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum SecretScanningAlertSort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
                 /// The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/sort`.
-                public var sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort?
+                public var sort: Components.Parameters.SecretScanningAlertSort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty "before" query string.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/before`.
-                public var before: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_before_hyphen_org_hyphen_repo?
+                public var before: Components.Parameters.SecretScanningPaginationBeforeOrgRepo?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty "after" query string.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/after`.
-                public var after: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_after_hyphen_org_hyphen_repo?
+                public var after: Components.Parameters.SecretScanningPaginationAfterOrgRepo?
                 /// A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/validity`.
-                public var validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity?
+                public var validity: Components.Parameters.SecretScanningAlertValidity?
                 /// A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/is_publicly_leaked`.
-                public var is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked?
+                public var isPubliclyLeaked: Components.Parameters.SecretScanningAlertPubliclyLeaked?
                 /// A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/is_multi_repo`.
-                public var is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo?
+                public var isMultiRepo: Components.Parameters.SecretScanningAlertMultiRepo?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - state: Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
-                ///   - secret_type: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
+                ///   - secretType: A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)" for a complete list of secret types.
                 ///   - resolution: A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
                 ///   - sort: The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
                 ///   - direction: The direction to sort the results by.
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events before this cursor. To receive an initial cursor on your first request, include an empty "before" query string.
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for events after this cursor.  To receive an initial cursor on your first request, include an empty "after" query string.
                 ///   - validity: A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are `active`, `inactive`, and `unknown`.
-                ///   - is_publicly_leaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
-                ///   - is_multi_repo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
+                ///   - isPubliclyLeaked: A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.
+                ///   - isMultiRepo: A boolean value representing whether or not to filter alerts by the multi-repo tag being present.
                 public init(
-                    state: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_state? = nil,
-                    secret_type: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type? = nil,
-                    resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution? = nil,
-                    sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    before: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_before_hyphen_org_hyphen_repo? = nil,
-                    after: Components.Parameters.secret_hyphen_scanning_hyphen_pagination_hyphen_after_hyphen_org_hyphen_repo? = nil,
-                    validity: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_validity? = nil,
-                    is_publicly_leaked: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked? = nil,
-                    is_multi_repo: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo? = nil
+                    state: Components.Parameters.SecretScanningAlertState? = nil,
+                    secretType: Components.Parameters.SecretScanningAlertSecretType? = nil,
+                    resolution: Components.Parameters.SecretScanningAlertResolution? = nil,
+                    sort: Components.Parameters.SecretScanningAlertSort? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    before: Components.Parameters.SecretScanningPaginationBeforeOrgRepo? = nil,
+                    after: Components.Parameters.SecretScanningPaginationAfterOrgRepo? = nil,
+                    validity: Components.Parameters.SecretScanningAlertValidity? = nil,
+                    isPubliclyLeaked: Components.Parameters.SecretScanningAlertPubliclyLeaked? = nil,
+                    isMultiRepo: Components.Parameters.SecretScanningAlertMultiRepo? = nil
                 ) {
                     self.state = state
-                    self.secret_type = secret_type
+                    self.secretType = secretType
                     self.resolution = resolution
                     self.sort = sort
                     self.direction = direction
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.before = before
                     self.after = after
                     self.validity = validity
-                    self.is_publicly_leaked = is_publicly_leaked
-                    self.is_multi_repo = is_multi_repo
+                    self.isPubliclyLeaked = isPubliclyLeaked
+                    self.isMultiRepo = isMultiRepo
                 }
             }
-            public var query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query
+            public var query: Operations.SecretScanningListAlertsForRepo.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningListAlertsForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningListAlertsForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.SecretScanningListAlertsForRepo.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3161,9 +3170,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Path,
-                query: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query = .init(),
-                headers: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Headers = .init()
+                path: Operations.SecretScanningListAlertsForRepo.Input.Path,
+                query: Operations.SecretScanningListAlertsForRepo.Input.Query = .init(),
+                headers: Operations.SecretScanningListAlertsForRepo.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -3175,12 +3184,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.secret_hyphen_scanning_hyphen_alert])
+                    case json([Components.Schemas.SecretScanningAlert])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.secret_hyphen_scanning_hyphen_alert] {
+                    public var json: [Components.Schemas.SecretScanningAlert] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3190,12 +3199,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok.Body
+                public var body: Operations.SecretScanningListAlertsForRepo.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok.Body) {
+                public init(body: Operations.SecretScanningListAlertsForRepo.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3204,12 +3213,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok)
+            case ok(Operations.SecretScanningListAlertsForRepo.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.Ok {
+            public var ok: Operations.SecretScanningListAlertsForRepo.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3231,12 +3240,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.NotFound)
+            case notFound(Operations.SecretScanningListAlertsForRepo.Output.NotFound)
+            /// Repository is public or secret scanning is disabled for the repository
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.NotFound {
+            public var notFound: Operations.SecretScanningListAlertsForRepo.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3254,12 +3271,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -3313,7 +3330,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)`.
-    public enum secret_hyphen_scanning_sol_get_hyphen_alert {
+    public enum SecretScanningGetAlert {
         public static let id: Swift.String = "secret-scanning/get-alert"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/GET/path`.
@@ -3321,52 +3338,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/GET/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Input.Path
+            public var path: Operations.SecretScanningGetAlert.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_get_hyphen_alert.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningGetAlert.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_get_hyphen_alert.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningGetAlert.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Input.Headers
+            public var headers: Operations.SecretScanningGetAlert.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Input.Path,
-                headers: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Input.Headers = .init()
+                path: Operations.SecretScanningGetAlert.Input.Path,
+                headers: Operations.SecretScanningGetAlert.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3377,12 +3394,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.secret_hyphen_scanning_hyphen_alert)
+                    case json(Components.Schemas.SecretScanningAlert)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.secret_hyphen_scanning_hyphen_alert {
+                    public var json: Components.Schemas.SecretScanningAlert {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3392,12 +3409,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output.Ok.Body
+                public var body: Operations.SecretScanningGetAlert.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output.Ok.Body) {
+                public init(body: Operations.SecretScanningGetAlert.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3406,12 +3423,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output.Ok)
+            case ok(Operations.SecretScanningGetAlert.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output.Ok {
+            public var ok: Operations.SecretScanningGetAlert.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3429,12 +3446,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3456,12 +3481,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output.NotFound)
+            case notFound(Operations.SecretScanningGetAlert.Output.NotFound)
+            /// Repository is public, or secret scanning is disabled for the repository, or the resource is not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output.NotFound {
+            public var notFound: Operations.SecretScanningGetAlert.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3479,12 +3512,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -3538,7 +3571,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)`.
-    public enum secret_hyphen_scanning_sol_update_hyphen_alert {
+    public enum SecretScanningUpdateAlert {
         public static let id: Swift.String = "secret-scanning/update-alert"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/path`.
@@ -3546,79 +3579,79 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Path
+            public var path: Operations.SecretScanningUpdateAlert.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_update_hyphen_alert.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningUpdateAlert.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_update_hyphen_alert.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningUpdateAlert.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Headers
+            public var headers: Operations.SecretScanningUpdateAlert.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/requestBody/json/state`.
-                    public var state: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_state
+                    public var state: Components.Schemas.SecretScanningAlertState
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/requestBody/json/resolution`.
-                    public var resolution: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
+                    public var resolution: Components.Schemas.SecretScanningAlertResolution?
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/requestBody/json/resolution_comment`.
-                    public var resolution_comment: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_resolution_hyphen_comment?
-                    /// Creates a new `jsonPayload`.
+                    public var resolutionComment: Components.Schemas.SecretScanningAlertResolutionComment?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - state:
                     ///   - resolution:
-                    ///   - resolution_comment:
+                    ///   - resolutionComment:
                     public init(
-                        state: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_state,
-                        resolution: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_resolution? = nil,
-                        resolution_comment: Components.Schemas.secret_hyphen_scanning_hyphen_alert_hyphen_resolution_hyphen_comment? = nil
+                        state: Components.Schemas.SecretScanningAlertState,
+                        resolution: Components.Schemas.SecretScanningAlertResolution? = nil,
+                        resolutionComment: Components.Schemas.SecretScanningAlertResolutionComment? = nil
                     ) {
                         self.state = state
                         self.resolution = resolution
-                        self.resolution_comment = resolution_comment
+                        self.resolutionComment = resolutionComment
                     }
                     public enum CodingKeys: String, CodingKey {
                         case state
                         case resolution
-                        case resolution_comment
+                        case resolutionComment = "resolution_comment"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Body.jsonPayload)
+                case json(Operations.SecretScanningUpdateAlert.Input.Body.JsonPayload)
             }
-            public var body: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Body
+            public var body: Operations.SecretScanningUpdateAlert.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3626,9 +3659,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Path,
-                headers: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Headers = .init(),
-                body: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Input.Body
+                path: Operations.SecretScanningUpdateAlert.Input.Path,
+                headers: Operations.SecretScanningUpdateAlert.Input.Headers = .init(),
+                body: Operations.SecretScanningUpdateAlert.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3640,12 +3673,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.secret_hyphen_scanning_hyphen_alert)
+                    case json(Components.Schemas.SecretScanningAlert)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.secret_hyphen_scanning_hyphen_alert {
+                    public var json: Components.Schemas.SecretScanningAlert {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3655,12 +3688,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.Ok.Body
+                public var body: Operations.SecretScanningUpdateAlert.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.Ok.Body) {
+                public init(body: Operations.SecretScanningUpdateAlert.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3669,12 +3702,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.Ok)
+            case ok(Operations.SecretScanningUpdateAlert.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.Ok {
+            public var ok: Operations.SecretScanningUpdateAlert.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3696,12 +3729,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.BadRequest)
+            case badRequest(Operations.SecretScanningUpdateAlert.Output.BadRequest)
+            /// Bad request, resolution comment is invalid or the resolution was not changed.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.BadRequest {
+            public var badRequest: Operations.SecretScanningUpdateAlert.Output.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -3723,12 +3764,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.NotFound)
+            case notFound(Operations.SecretScanningUpdateAlert.Output.NotFound)
+            /// Repository is public, or secret scanning is disabled for the repository, or the resource is not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.NotFound {
+            public var notFound: Operations.SecretScanningUpdateAlert.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3750,12 +3799,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.UnprocessableContent)
+            case unprocessableContent(Operations.SecretScanningUpdateAlert.Output.UnprocessableContent)
+            /// State does not match the resolution or resolution comment
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.SecretScanningUpdateAlert.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3773,12 +3830,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -3832,7 +3889,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)`.
-    public enum secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert {
+    public enum SecretScanningListLocationsForAlert {
         public static let id: Swift.String = "secret-scanning/list-locations-for-alert"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/path`.
@@ -3840,68 +3897,68 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/path/alert_number`.
-                public var alert_number: Components.Parameters.alert_hyphen_number
+                public var alertNumber: Components.Parameters.AlertNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - alert_number: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+                ///   - alertNumber: The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    alert_number: Components.Parameters.alert_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    alertNumber: Components.Parameters.AlertNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.alert_number = alert_number
+                    self.alertNumber = alertNumber
                 }
             }
-            public var path: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Path
+            public var path: Operations.SecretScanningListLocationsForAlert.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    page: Components.Parameters.page? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil
+                    page: Components.Parameters.Page? = nil,
+                    perPage: Components.Parameters.PerPage? = nil
                 ) {
                     self.page = page
-                    self.per_page = per_page
+                    self.perPage = perPage
                 }
             }
-            public var query: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Query
+            public var query: Operations.SecretScanningListLocationsForAlert.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningListLocationsForAlert.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningListLocationsForAlert.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Headers
+            public var headers: Operations.SecretScanningListLocationsForAlert.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3909,9 +3966,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Path,
-                query: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Query = .init(),
-                headers: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Input.Headers = .init()
+                path: Operations.SecretScanningListLocationsForAlert.Input.Path,
+                query: Operations.SecretScanningListLocationsForAlert.Input.Query = .init(),
+                headers: Operations.SecretScanningListLocationsForAlert.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -3923,26 +3980,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.Ok.Headers
+                public var headers: Operations.SecretScanningListLocationsForAlert.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.secret_hyphen_scanning_hyphen_location])
+                    case json([Components.Schemas.SecretScanningLocation])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.secret_hyphen_scanning_hyphen_location] {
+                    public var json: [Components.Schemas.SecretScanningLocation] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3952,15 +4009,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.Ok.Body
+                public var body: Operations.SecretScanningListLocationsForAlert.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.Ok.Headers = .init(),
-                    body: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.Ok.Body
+                    headers: Operations.SecretScanningListLocationsForAlert.Output.Ok.Headers = .init(),
+                    body: Operations.SecretScanningListLocationsForAlert.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3971,12 +4028,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.Ok)
+            case ok(Operations.SecretScanningListLocationsForAlert.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.Ok {
+            public var ok: Operations.SecretScanningListLocationsForAlert.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3998,12 +4055,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.NotFound)
+            case notFound(Operations.SecretScanningListLocationsForAlert.Output.NotFound)
+            /// Repository is public, or secret scanning is disabled for the repository, or the resource is not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.NotFound {
+            public var notFound: Operations.SecretScanningListLocationsForAlert.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4021,12 +4086,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -4080,7 +4145,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/secret-scanning/push-protection-bypasses`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)`.
-    public enum secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass {
+    public enum SecretScanningCreatePushProtectionBypass {
         public static let id: Swift.String = "secret-scanning/create-push-protection-bypass"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/path`.
@@ -4088,66 +4153,66 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Path
+            public var path: Operations.SecretScanningCreatePushProtectionBypass.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningCreatePushProtectionBypass.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningCreatePushProtectionBypass.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Headers
+            public var headers: Operations.SecretScanningCreatePushProtectionBypass.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody/json/reason`.
-                    public var reason: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason
+                    public var reason: Components.Schemas.SecretScanningPushProtectionBypassReason
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody/json/placeholder_id`.
-                    public var placeholder_id: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id
-                    /// Creates a new `jsonPayload`.
+                    public var placeholderId: Components.Schemas.SecretScanningPushProtectionBypassPlaceholderId
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - reason:
-                    ///   - placeholder_id:
+                    ///   - placeholderId:
                     public init(
-                        reason: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason,
-                        placeholder_id: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id
+                        reason: Components.Schemas.SecretScanningPushProtectionBypassReason,
+                        placeholderId: Components.Schemas.SecretScanningPushProtectionBypassPlaceholderId
                     ) {
                         self.reason = reason
-                        self.placeholder_id = placeholder_id
+                        self.placeholderId = placeholderId
                     }
                     public enum CodingKeys: String, CodingKey {
                         case reason
-                        case placeholder_id
+                        case placeholderId = "placeholder_id"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/requestBody/content/application\/json`.
-                case json(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body.jsonPayload)
+                case json(Operations.SecretScanningCreatePushProtectionBypass.Input.Body.JsonPayload)
             }
-            public var body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body
+            public var body: Operations.SecretScanningCreatePushProtectionBypass.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4155,9 +4220,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Path,
-                headers: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Headers = .init(),
-                body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body
+                path: Operations.SecretScanningCreatePushProtectionBypass.Input.Path,
+                headers: Operations.SecretScanningCreatePushProtectionBypass.Input.Headers = .init(),
+                body: Operations.SecretScanningCreatePushProtectionBypass.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4169,12 +4234,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass)
+                    case json(Components.Schemas.SecretScanningPushProtectionBypass)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass {
+                    public var json: Components.Schemas.SecretScanningPushProtectionBypass {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4184,12 +4249,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Ok.Body
+                public var body: Operations.SecretScanningCreatePushProtectionBypass.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Ok.Body) {
+                public init(body: Operations.SecretScanningCreatePushProtectionBypass.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4198,12 +4263,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Ok)
+            case ok(Operations.SecretScanningCreatePushProtectionBypass.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Ok {
+            public var ok: Operations.SecretScanningCreatePushProtectionBypass.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4225,12 +4290,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Forbidden)
+            case forbidden(Operations.SecretScanningCreatePushProtectionBypass.Output.Forbidden)
+            /// User does not have enough permissions to perform this action.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Forbidden {
+            public var forbidden: Operations.SecretScanningCreatePushProtectionBypass.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4252,12 +4325,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.NotFound)
+            case notFound(Operations.SecretScanningCreatePushProtectionBypass.Output.NotFound)
+            /// Placeholder ID not found, or push protection is disabled on this repository.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.NotFound {
+            public var notFound: Operations.SecretScanningCreatePushProtectionBypass.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4279,12 +4360,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.UnprocessableContent)
+            case unprocessableContent(Operations.SecretScanningCreatePushProtectionBypass.Output.UnprocessableContent)
+            /// Bad request, input data missing or incorrect.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.SecretScanningCreatePushProtectionBypass.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4302,12 +4391,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -4359,7 +4448,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/secret-scanning/scan-history`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)`.
-    public enum secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history {
+    public enum SecretScanningGetScanHistory {
         public static let id: Swift.String = "secret-scanning/get-scan-history"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/path`.
@@ -4367,45 +4456,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Path
+            public var path: Operations.SecretScanningGetScanHistory.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningGetScanHistory.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecretScanningGetScanHistory.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Headers
+            public var headers: Operations.SecretScanningGetScanHistory.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Path,
-                headers: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Input.Headers = .init()
+                path: Operations.SecretScanningGetScanHistory.Input.Path,
+                headers: Operations.SecretScanningGetScanHistory.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4421,12 +4510,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.NotFound)
+            case notFound(Operations.SecretScanningGetScanHistory.Output.NotFound)
+            /// Repository does not have GitHub Advanced Security or secret scanning enabled
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.NotFound {
+            public var notFound: Operations.SecretScanningGetScanHistory.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4444,12 +4541,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -4466,12 +4563,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/scan-history/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history)
+                    case json(Components.Schemas.SecretScanningScanHistory)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history {
+                    public var json: Components.Schemas.SecretScanningScanHistory {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4481,12 +4578,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok.Body
+                public var body: Operations.SecretScanningGetScanHistory.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok.Body) {
+                public init(body: Operations.SecretScanningGetScanHistory.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4495,12 +4592,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok)
+            case ok(Operations.SecretScanningGetScanHistory.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok {
+            public var ok: Operations.SecretScanningGetScanHistory.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):

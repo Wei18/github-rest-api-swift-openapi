@@ -30,7 +30,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)`.
-    func pulls_sol_list(_ input: Operations.pulls_sol_list.Input) async throws -> Operations.pulls_sol_list.Output
+    func pullsList(_ input: Operations.PullsList.Input) async throws -> Operations.PullsList.Output
     /// Create a pull request
     ///
     /// Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -48,7 +48,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)`.
-    func pulls_sol_create(_ input: Operations.pulls_sol_create.Input) async throws -> Operations.pulls_sol_create.Output
+    func pullsCreate(_ input: Operations.PullsCreate.Input) async throws -> Operations.PullsCreate.Output
     /// List review comments in a repository
     ///
     /// Lists review comments for all pull requests in a repository. By default,
@@ -63,7 +63,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/get(pulls/list-review-comments-for-repo)`.
-    func pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo(_ input: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input) async throws -> Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output
+    func pullsListReviewCommentsForRepo(_ input: Operations.PullsListReviewCommentsForRepo.Input) async throws -> Operations.PullsListReviewCommentsForRepo.Output
     /// Get a review comment for a pull request
     ///
     /// Provides details for a specified review comment.
@@ -77,7 +77,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/get(pulls/get-review-comment)`.
-    func pulls_sol_get_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_get_hyphen_review_hyphen_comment.Output
+    func pullsGetReviewComment(_ input: Operations.PullsGetReviewComment.Input) async throws -> Operations.PullsGetReviewComment.Output
     /// Update a review comment for a pull request
     ///
     /// Edits the content of a specified review comment.
@@ -91,14 +91,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/patch(pulls/update-review-comment)`.
-    func pulls_sol_update_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output
+    func pullsUpdateReviewComment(_ input: Operations.PullsUpdateReviewComment.Input) async throws -> Operations.PullsUpdateReviewComment.Output
     /// Delete a review comment for a pull request
     ///
     /// Deletes a review comment.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/delete(pulls/delete-review-comment)`.
-    func pulls_sol_delete_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Output
+    func pullsDeleteReviewComment(_ input: Operations.PullsDeleteReviewComment.Input) async throws -> Operations.PullsDeleteReviewComment.Output
     /// Get a pull request
     ///
     /// Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -127,7 +127,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)`.
-    func pulls_sol_get(_ input: Operations.pulls_sol_get.Input) async throws -> Operations.pulls_sol_get.Output
+    func pullsGet(_ input: Operations.PullsGet.Input) async throws -> Operations.PullsGet.Output
     /// Update a pull request
     ///
     /// Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -143,7 +143,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)`.
-    func pulls_sol_update(_ input: Operations.pulls_sol_update.Input) async throws -> Operations.pulls_sol_update.Output
+    func pullsUpdate(_ input: Operations.PullsUpdate.Input) async throws -> Operations.PullsUpdate.Output
     /// List review comments on a pull request
     ///
     /// Lists all review comments for a specified pull request. By default, review comments
@@ -158,7 +158,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/get(pulls/list-review-comments)`.
-    func pulls_sol_list_hyphen_review_hyphen_comments(_ input: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input) async throws -> Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output
+    func pullsListReviewComments(_ input: Operations.PullsListReviewComments.Input) async throws -> Operations.PullsListReviewComments.Output
     /// Create a review comment for a pull request
     ///
     /// Creates a review comment on the diff of a specified pull request. To add a regular comment to a pull request timeline, see "[Create an issue comment](https://docs.github.com/rest/issues/comments#create-an-issue-comment)."
@@ -179,7 +179,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/post(pulls/create-review-comment)`.
-    func pulls_sol_create_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output
+    func pullsCreateReviewComment(_ input: Operations.PullsCreateReviewComment.Input) async throws -> Operations.PullsCreateReviewComment.Output
     /// Create a reply for a review comment
     ///
     /// Creates a reply to a review comment for a pull request. For the `comment_id`, provide the ID of the review comment you are replying to. This must be the ID of a _top-level review comment_, not a reply to that comment. Replies to replies are not supported.
@@ -196,7 +196,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/post(pulls/create-reply-for-review-comment)`.
-    func pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment(_ input: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input) async throws -> Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output
+    func pullsCreateReplyForReviewComment(_ input: Operations.PullsCreateReplyForReviewComment.Input) async throws -> Operations.PullsCreateReplyForReviewComment.Output
     /// List commits on a pull request
     ///
     /// Lists a maximum of 250 commits for a pull request. To receive a complete
@@ -212,7 +212,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/commits/get(pulls/list-commits)`.
-    func pulls_sol_list_hyphen_commits(_ input: Operations.pulls_sol_list_hyphen_commits.Input) async throws -> Operations.pulls_sol_list_hyphen_commits.Output
+    func pullsListCommits(_ input: Operations.PullsListCommits.Input) async throws -> Operations.PullsListCommits.Output
     /// List pull requests files
     ///
     /// Lists the files in a specified pull request.
@@ -229,14 +229,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)`.
-    func pulls_sol_list_hyphen_files(_ input: Operations.pulls_sol_list_hyphen_files.Input) async throws -> Operations.pulls_sol_list_hyphen_files.Output
+    func pullsListFiles(_ input: Operations.PullsListFiles.Input) async throws -> Operations.PullsListFiles.Output
     /// Check if a pull request has been merged
     ///
     /// Checks if a pull request has been merged into the base branch. The HTTP status of the response indicates whether or not the pull request has been merged; the response body is empty.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/merge`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)`.
-    func pulls_sol_check_hyphen_if_hyphen_merged(_ input: Operations.pulls_sol_check_hyphen_if_hyphen_merged.Input) async throws -> Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output
+    func pullsCheckIfMerged(_ input: Operations.PullsCheckIfMerged.Input) async throws -> Operations.PullsCheckIfMerged.Output
     /// Merge a pull request
     ///
     /// Merges a pull request into the base branch.
@@ -244,14 +244,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)`.
-    func pulls_sol_merge(_ input: Operations.pulls_sol_merge.Input) async throws -> Operations.pulls_sol_merge.Output
+    func pullsMerge(_ input: Operations.PullsMerge.Input) async throws -> Operations.PullsMerge.Output
     /// Get all requested reviewers for a pull request
     ///
     /// Gets the users or teams whose review is requested for a pull request. Once a requested reviewer submits a review, they are no longer considered a requested reviewer. Their review will instead be returned by the [List reviews for a pull request](https://docs.github.com/rest/pulls/reviews#list-reviews-for-a-pull-request) operation.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/get(pulls/list-requested-reviewers)`.
-    func pulls_sol_list_hyphen_requested_hyphen_reviewers(_ input: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input) async throws -> Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output
+    func pullsListRequestedReviewers(_ input: Operations.PullsListRequestedReviewers.Input) async throws -> Operations.PullsListRequestedReviewers.Output
     /// Request reviewers for a pull request
     ///
     /// Requests reviews for a pull request from a given set of users and/or teams.
@@ -259,14 +259,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)`.
-    func pulls_sol_request_hyphen_reviewers(_ input: Operations.pulls_sol_request_hyphen_reviewers.Input) async throws -> Operations.pulls_sol_request_hyphen_reviewers.Output
+    func pullsRequestReviewers(_ input: Operations.PullsRequestReviewers.Input) async throws -> Operations.PullsRequestReviewers.Output
     /// Remove requested reviewers from a pull request
     ///
     /// Removes review requests from a pull request for a given set of users and/or teams.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/delete(pulls/remove-requested-reviewers)`.
-    func pulls_sol_remove_hyphen_requested_hyphen_reviewers(_ input: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input) async throws -> Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Output
+    func pullsRemoveRequestedReviewers(_ input: Operations.PullsRemoveRequestedReviewers.Input) async throws -> Operations.PullsRemoveRequestedReviewers.Output
     /// List reviews for a pull request
     ///
     /// Lists all reviews for a specified pull request. The list of reviews returns in chronological order.
@@ -280,7 +280,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/get(pulls/list-reviews)`.
-    func pulls_sol_list_hyphen_reviews(_ input: Operations.pulls_sol_list_hyphen_reviews.Input) async throws -> Operations.pulls_sol_list_hyphen_reviews.Output
+    func pullsListReviews(_ input: Operations.PullsListReviews.Input) async throws -> Operations.PullsListReviews.Output
     /// Create a review for a pull request
     ///
     /// Creates a review on a specified pull request.
@@ -303,7 +303,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/post(pulls/create-review)`.
-    func pulls_sol_create_hyphen_review(_ input: Operations.pulls_sol_create_hyphen_review.Input) async throws -> Operations.pulls_sol_create_hyphen_review.Output
+    func pullsCreateReview(_ input: Operations.PullsCreateReview.Input) async throws -> Operations.PullsCreateReview.Output
     /// Get a review for a pull request
     ///
     /// Retrieves a pull request review by its ID.
@@ -317,7 +317,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/get(pulls/get-review)`.
-    func pulls_sol_get_hyphen_review(_ input: Operations.pulls_sol_get_hyphen_review.Input) async throws -> Operations.pulls_sol_get_hyphen_review.Output
+    func pullsGetReview(_ input: Operations.PullsGetReview.Input) async throws -> Operations.PullsGetReview.Output
     /// Update a review for a pull request
     ///
     /// Updates the contents of a specified review summary comment.
@@ -331,7 +331,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/put(pulls/update-review)`.
-    func pulls_sol_update_hyphen_review(_ input: Operations.pulls_sol_update_hyphen_review.Input) async throws -> Operations.pulls_sol_update_hyphen_review.Output
+    func pullsUpdateReview(_ input: Operations.PullsUpdateReview.Input) async throws -> Operations.PullsUpdateReview.Output
     /// Delete a pending review for a pull request
     ///
     /// Deletes a pull request review that has not been submitted. Submitted reviews cannot be deleted.
@@ -345,7 +345,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/delete(pulls/delete-pending-review)`.
-    func pulls_sol_delete_hyphen_pending_hyphen_review(_ input: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input) async throws -> Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Output
+    func pullsDeletePendingReview(_ input: Operations.PullsDeletePendingReview.Input) async throws -> Operations.PullsDeletePendingReview.Output
     /// List comments for a pull request review
     ///
     /// Lists comments for a specific pull request review.
@@ -359,7 +359,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/get(pulls/list-comments-for-review)`.
-    func pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review(_ input: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input) async throws -> Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output
+    func pullsListCommentsForReview(_ input: Operations.PullsListCommentsForReview.Input) async throws -> Operations.PullsListCommentsForReview.Output
     /// Dismiss a review for a pull request
     ///
     /// Dismisses a specified review on a pull request.
@@ -376,7 +376,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/put(pulls/dismiss-review)`.
-    func pulls_sol_dismiss_hyphen_review(_ input: Operations.pulls_sol_dismiss_hyphen_review.Input) async throws -> Operations.pulls_sol_dismiss_hyphen_review.Output
+    func pullsDismissReview(_ input: Operations.PullsDismissReview.Input) async throws -> Operations.PullsDismissReview.Output
     /// Submit a review for a pull request
     ///
     /// Submits a pending review for a pull request. For more information about creating a pending review for a pull request, see "[Create a review for a pull request](https://docs.github.com/rest/pulls/reviews#create-a-review-for-a-pull-request)."
@@ -390,7 +390,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/post(pulls/submit-review)`.
-    func pulls_sol_submit_hyphen_review(_ input: Operations.pulls_sol_submit_hyphen_review.Input) async throws -> Operations.pulls_sol_submit_hyphen_review.Output
+    func pullsSubmitReview(_ input: Operations.PullsSubmitReview.Input) async throws -> Operations.PullsSubmitReview.Output
     /// Update a pull request branch
     ///
     /// Updates the pull request branch with the latest upstream changes by merging HEAD from the base branch into the pull request branch.
@@ -398,7 +398,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)`.
-    func pulls_sol_update_hyphen_branch(_ input: Operations.pulls_sol_update_hyphen_branch.Input) async throws -> Operations.pulls_sol_update_hyphen_branch.Output
+    func pullsUpdateBranch(_ input: Operations.PullsUpdateBranch.Input) async throws -> Operations.PullsUpdateBranch.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -422,12 +422,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)`.
-    public func pulls_sol_list(
-        path: Operations.pulls_sol_list.Input.Path,
-        query: Operations.pulls_sol_list.Input.Query = .init(),
-        headers: Operations.pulls_sol_list.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_list.Output {
-        try await pulls_sol_list(Operations.pulls_sol_list.Input(
+    public func pullsList(
+        path: Operations.PullsList.Input.Path,
+        query: Operations.PullsList.Input.Query = .init(),
+        headers: Operations.PullsList.Input.Headers = .init()
+    ) async throws -> Operations.PullsList.Output {
+        try await pullsList(Operations.PullsList.Input(
             path: path,
             query: query,
             headers: headers
@@ -450,12 +450,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)`.
-    public func pulls_sol_create(
-        path: Operations.pulls_sol_create.Input.Path,
-        headers: Operations.pulls_sol_create.Input.Headers = .init(),
-        body: Operations.pulls_sol_create.Input.Body
-    ) async throws -> Operations.pulls_sol_create.Output {
-        try await pulls_sol_create(Operations.pulls_sol_create.Input(
+    public func pullsCreate(
+        path: Operations.PullsCreate.Input.Path,
+        headers: Operations.PullsCreate.Input.Headers = .init(),
+        body: Operations.PullsCreate.Input.Body
+    ) async throws -> Operations.PullsCreate.Output {
+        try await pullsCreate(Operations.PullsCreate.Input(
             path: path,
             headers: headers,
             body: body
@@ -475,12 +475,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/get(pulls/list-review-comments-for-repo)`.
-    public func pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo(
-        path: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Path,
-        query: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Query = .init(),
-        headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output {
-        try await pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo(Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input(
+    public func pullsListReviewCommentsForRepo(
+        path: Operations.PullsListReviewCommentsForRepo.Input.Path,
+        query: Operations.PullsListReviewCommentsForRepo.Input.Query = .init(),
+        headers: Operations.PullsListReviewCommentsForRepo.Input.Headers = .init()
+    ) async throws -> Operations.PullsListReviewCommentsForRepo.Output {
+        try await pullsListReviewCommentsForRepo(Operations.PullsListReviewCommentsForRepo.Input(
             path: path,
             query: query,
             headers: headers
@@ -499,11 +499,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/get(pulls/get-review-comment)`.
-    public func pulls_sol_get_hyphen_review_hyphen_comment(
-        path: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input.Path,
-        headers: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_get_hyphen_review_hyphen_comment.Output {
-        try await pulls_sol_get_hyphen_review_hyphen_comment(Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input(
+    public func pullsGetReviewComment(
+        path: Operations.PullsGetReviewComment.Input.Path,
+        headers: Operations.PullsGetReviewComment.Input.Headers = .init()
+    ) async throws -> Operations.PullsGetReviewComment.Output {
+        try await pullsGetReviewComment(Operations.PullsGetReviewComment.Input(
             path: path,
             headers: headers
         ))
@@ -521,12 +521,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/patch(pulls/update-review-comment)`.
-    public func pulls_sol_update_hyphen_review_hyphen_comment(
-        path: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Path,
-        headers: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Headers = .init(),
-        body: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Body
-    ) async throws -> Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output {
-        try await pulls_sol_update_hyphen_review_hyphen_comment(Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input(
+    public func pullsUpdateReviewComment(
+        path: Operations.PullsUpdateReviewComment.Input.Path,
+        headers: Operations.PullsUpdateReviewComment.Input.Headers = .init(),
+        body: Operations.PullsUpdateReviewComment.Input.Body
+    ) async throws -> Operations.PullsUpdateReviewComment.Output {
+        try await pullsUpdateReviewComment(Operations.PullsUpdateReviewComment.Input(
             path: path,
             headers: headers,
             body: body
@@ -538,11 +538,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/delete(pulls/delete-review-comment)`.
-    public func pulls_sol_delete_hyphen_review_hyphen_comment(
-        path: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input.Path,
-        headers: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Output {
-        try await pulls_sol_delete_hyphen_review_hyphen_comment(Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input(
+    public func pullsDeleteReviewComment(
+        path: Operations.PullsDeleteReviewComment.Input.Path,
+        headers: Operations.PullsDeleteReviewComment.Input.Headers = .init()
+    ) async throws -> Operations.PullsDeleteReviewComment.Output {
+        try await pullsDeleteReviewComment(Operations.PullsDeleteReviewComment.Input(
             path: path,
             headers: headers
         ))
@@ -575,11 +575,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)`.
-    public func pulls_sol_get(
-        path: Operations.pulls_sol_get.Input.Path,
-        headers: Operations.pulls_sol_get.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_get.Output {
-        try await pulls_sol_get(Operations.pulls_sol_get.Input(
+    public func pullsGet(
+        path: Operations.PullsGet.Input.Path,
+        headers: Operations.PullsGet.Input.Headers = .init()
+    ) async throws -> Operations.PullsGet.Output {
+        try await pullsGet(Operations.PullsGet.Input(
             path: path,
             headers: headers
         ))
@@ -599,12 +599,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)`.
-    public func pulls_sol_update(
-        path: Operations.pulls_sol_update.Input.Path,
-        headers: Operations.pulls_sol_update.Input.Headers = .init(),
-        body: Operations.pulls_sol_update.Input.Body? = nil
-    ) async throws -> Operations.pulls_sol_update.Output {
-        try await pulls_sol_update(Operations.pulls_sol_update.Input(
+    public func pullsUpdate(
+        path: Operations.PullsUpdate.Input.Path,
+        headers: Operations.PullsUpdate.Input.Headers = .init(),
+        body: Operations.PullsUpdate.Input.Body? = nil
+    ) async throws -> Operations.PullsUpdate.Output {
+        try await pullsUpdate(Operations.PullsUpdate.Input(
             path: path,
             headers: headers,
             body: body
@@ -624,12 +624,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/get(pulls/list-review-comments)`.
-    public func pulls_sol_list_hyphen_review_hyphen_comments(
-        path: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Path,
-        query: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Query = .init(),
-        headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output {
-        try await pulls_sol_list_hyphen_review_hyphen_comments(Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input(
+    public func pullsListReviewComments(
+        path: Operations.PullsListReviewComments.Input.Path,
+        query: Operations.PullsListReviewComments.Input.Query = .init(),
+        headers: Operations.PullsListReviewComments.Input.Headers = .init()
+    ) async throws -> Operations.PullsListReviewComments.Output {
+        try await pullsListReviewComments(Operations.PullsListReviewComments.Input(
             path: path,
             query: query,
             headers: headers
@@ -655,12 +655,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/post(pulls/create-review-comment)`.
-    public func pulls_sol_create_hyphen_review_hyphen_comment(
-        path: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Path,
-        headers: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Headers = .init(),
-        body: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body
-    ) async throws -> Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output {
-        try await pulls_sol_create_hyphen_review_hyphen_comment(Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input(
+    public func pullsCreateReviewComment(
+        path: Operations.PullsCreateReviewComment.Input.Path,
+        headers: Operations.PullsCreateReviewComment.Input.Headers = .init(),
+        body: Operations.PullsCreateReviewComment.Input.Body
+    ) async throws -> Operations.PullsCreateReviewComment.Output {
+        try await pullsCreateReviewComment(Operations.PullsCreateReviewComment.Input(
             path: path,
             headers: headers,
             body: body
@@ -682,12 +682,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/post(pulls/create-reply-for-review-comment)`.
-    public func pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment(
-        path: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Path,
-        headers: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Headers = .init(),
-        body: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Body
-    ) async throws -> Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output {
-        try await pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment(Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input(
+    public func pullsCreateReplyForReviewComment(
+        path: Operations.PullsCreateReplyForReviewComment.Input.Path,
+        headers: Operations.PullsCreateReplyForReviewComment.Input.Headers = .init(),
+        body: Operations.PullsCreateReplyForReviewComment.Input.Body
+    ) async throws -> Operations.PullsCreateReplyForReviewComment.Output {
+        try await pullsCreateReplyForReviewComment(Operations.PullsCreateReplyForReviewComment.Input(
             path: path,
             headers: headers,
             body: body
@@ -708,12 +708,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/commits/get(pulls/list-commits)`.
-    public func pulls_sol_list_hyphen_commits(
-        path: Operations.pulls_sol_list_hyphen_commits.Input.Path,
-        query: Operations.pulls_sol_list_hyphen_commits.Input.Query = .init(),
-        headers: Operations.pulls_sol_list_hyphen_commits.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_list_hyphen_commits.Output {
-        try await pulls_sol_list_hyphen_commits(Operations.pulls_sol_list_hyphen_commits.Input(
+    public func pullsListCommits(
+        path: Operations.PullsListCommits.Input.Path,
+        query: Operations.PullsListCommits.Input.Query = .init(),
+        headers: Operations.PullsListCommits.Input.Headers = .init()
+    ) async throws -> Operations.PullsListCommits.Output {
+        try await pullsListCommits(Operations.PullsListCommits.Input(
             path: path,
             query: query,
             headers: headers
@@ -735,12 +735,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)`.
-    public func pulls_sol_list_hyphen_files(
-        path: Operations.pulls_sol_list_hyphen_files.Input.Path,
-        query: Operations.pulls_sol_list_hyphen_files.Input.Query = .init(),
-        headers: Operations.pulls_sol_list_hyphen_files.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_list_hyphen_files.Output {
-        try await pulls_sol_list_hyphen_files(Operations.pulls_sol_list_hyphen_files.Input(
+    public func pullsListFiles(
+        path: Operations.PullsListFiles.Input.Path,
+        query: Operations.PullsListFiles.Input.Query = .init(),
+        headers: Operations.PullsListFiles.Input.Headers = .init()
+    ) async throws -> Operations.PullsListFiles.Output {
+        try await pullsListFiles(Operations.PullsListFiles.Input(
             path: path,
             query: query,
             headers: headers
@@ -752,8 +752,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/merge`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)`.
-    public func pulls_sol_check_hyphen_if_hyphen_merged(path: Operations.pulls_sol_check_hyphen_if_hyphen_merged.Input.Path) async throws -> Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output {
-        try await pulls_sol_check_hyphen_if_hyphen_merged(Operations.pulls_sol_check_hyphen_if_hyphen_merged.Input(path: path))
+    public func pullsCheckIfMerged(path: Operations.PullsCheckIfMerged.Input.Path) async throws -> Operations.PullsCheckIfMerged.Output {
+        try await pullsCheckIfMerged(Operations.PullsCheckIfMerged.Input(path: path))
     }
     /// Merge a pull request
     ///
@@ -762,12 +762,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)`.
-    public func pulls_sol_merge(
-        path: Operations.pulls_sol_merge.Input.Path,
-        headers: Operations.pulls_sol_merge.Input.Headers = .init(),
-        body: Operations.pulls_sol_merge.Input.Body? = nil
-    ) async throws -> Operations.pulls_sol_merge.Output {
-        try await pulls_sol_merge(Operations.pulls_sol_merge.Input(
+    public func pullsMerge(
+        path: Operations.PullsMerge.Input.Path,
+        headers: Operations.PullsMerge.Input.Headers = .init(),
+        body: Operations.PullsMerge.Input.Body? = nil
+    ) async throws -> Operations.PullsMerge.Output {
+        try await pullsMerge(Operations.PullsMerge.Input(
             path: path,
             headers: headers,
             body: body
@@ -779,11 +779,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/get(pulls/list-requested-reviewers)`.
-    public func pulls_sol_list_hyphen_requested_hyphen_reviewers(
-        path: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input.Path,
-        headers: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output {
-        try await pulls_sol_list_hyphen_requested_hyphen_reviewers(Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input(
+    public func pullsListRequestedReviewers(
+        path: Operations.PullsListRequestedReviewers.Input.Path,
+        headers: Operations.PullsListRequestedReviewers.Input.Headers = .init()
+    ) async throws -> Operations.PullsListRequestedReviewers.Output {
+        try await pullsListRequestedReviewers(Operations.PullsListRequestedReviewers.Input(
             path: path,
             headers: headers
         ))
@@ -795,12 +795,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)`.
-    public func pulls_sol_request_hyphen_reviewers(
-        path: Operations.pulls_sol_request_hyphen_reviewers.Input.Path,
-        headers: Operations.pulls_sol_request_hyphen_reviewers.Input.Headers = .init(),
-        body: Operations.pulls_sol_request_hyphen_reviewers.Input.Body? = nil
-    ) async throws -> Operations.pulls_sol_request_hyphen_reviewers.Output {
-        try await pulls_sol_request_hyphen_reviewers(Operations.pulls_sol_request_hyphen_reviewers.Input(
+    public func pullsRequestReviewers(
+        path: Operations.PullsRequestReviewers.Input.Path,
+        headers: Operations.PullsRequestReviewers.Input.Headers = .init(),
+        body: Operations.PullsRequestReviewers.Input.Body? = nil
+    ) async throws -> Operations.PullsRequestReviewers.Output {
+        try await pullsRequestReviewers(Operations.PullsRequestReviewers.Input(
             path: path,
             headers: headers,
             body: body
@@ -812,12 +812,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/delete(pulls/remove-requested-reviewers)`.
-    public func pulls_sol_remove_hyphen_requested_hyphen_reviewers(
-        path: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Path,
-        headers: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Headers = .init(),
-        body: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Body
-    ) async throws -> Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Output {
-        try await pulls_sol_remove_hyphen_requested_hyphen_reviewers(Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input(
+    public func pullsRemoveRequestedReviewers(
+        path: Operations.PullsRemoveRequestedReviewers.Input.Path,
+        headers: Operations.PullsRemoveRequestedReviewers.Input.Headers = .init(),
+        body: Operations.PullsRemoveRequestedReviewers.Input.Body
+    ) async throws -> Operations.PullsRemoveRequestedReviewers.Output {
+        try await pullsRemoveRequestedReviewers(Operations.PullsRemoveRequestedReviewers.Input(
             path: path,
             headers: headers,
             body: body
@@ -836,12 +836,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/get(pulls/list-reviews)`.
-    public func pulls_sol_list_hyphen_reviews(
-        path: Operations.pulls_sol_list_hyphen_reviews.Input.Path,
-        query: Operations.pulls_sol_list_hyphen_reviews.Input.Query = .init(),
-        headers: Operations.pulls_sol_list_hyphen_reviews.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_list_hyphen_reviews.Output {
-        try await pulls_sol_list_hyphen_reviews(Operations.pulls_sol_list_hyphen_reviews.Input(
+    public func pullsListReviews(
+        path: Operations.PullsListReviews.Input.Path,
+        query: Operations.PullsListReviews.Input.Query = .init(),
+        headers: Operations.PullsListReviews.Input.Headers = .init()
+    ) async throws -> Operations.PullsListReviews.Output {
+        try await pullsListReviews(Operations.PullsListReviews.Input(
             path: path,
             query: query,
             headers: headers
@@ -869,12 +869,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/post(pulls/create-review)`.
-    public func pulls_sol_create_hyphen_review(
-        path: Operations.pulls_sol_create_hyphen_review.Input.Path,
-        headers: Operations.pulls_sol_create_hyphen_review.Input.Headers = .init(),
-        body: Operations.pulls_sol_create_hyphen_review.Input.Body? = nil
-    ) async throws -> Operations.pulls_sol_create_hyphen_review.Output {
-        try await pulls_sol_create_hyphen_review(Operations.pulls_sol_create_hyphen_review.Input(
+    public func pullsCreateReview(
+        path: Operations.PullsCreateReview.Input.Path,
+        headers: Operations.PullsCreateReview.Input.Headers = .init(),
+        body: Operations.PullsCreateReview.Input.Body? = nil
+    ) async throws -> Operations.PullsCreateReview.Output {
+        try await pullsCreateReview(Operations.PullsCreateReview.Input(
             path: path,
             headers: headers,
             body: body
@@ -893,11 +893,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/get(pulls/get-review)`.
-    public func pulls_sol_get_hyphen_review(
-        path: Operations.pulls_sol_get_hyphen_review.Input.Path,
-        headers: Operations.pulls_sol_get_hyphen_review.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_get_hyphen_review.Output {
-        try await pulls_sol_get_hyphen_review(Operations.pulls_sol_get_hyphen_review.Input(
+    public func pullsGetReview(
+        path: Operations.PullsGetReview.Input.Path,
+        headers: Operations.PullsGetReview.Input.Headers = .init()
+    ) async throws -> Operations.PullsGetReview.Output {
+        try await pullsGetReview(Operations.PullsGetReview.Input(
             path: path,
             headers: headers
         ))
@@ -915,12 +915,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/put(pulls/update-review)`.
-    public func pulls_sol_update_hyphen_review(
-        path: Operations.pulls_sol_update_hyphen_review.Input.Path,
-        headers: Operations.pulls_sol_update_hyphen_review.Input.Headers = .init(),
-        body: Operations.pulls_sol_update_hyphen_review.Input.Body
-    ) async throws -> Operations.pulls_sol_update_hyphen_review.Output {
-        try await pulls_sol_update_hyphen_review(Operations.pulls_sol_update_hyphen_review.Input(
+    public func pullsUpdateReview(
+        path: Operations.PullsUpdateReview.Input.Path,
+        headers: Operations.PullsUpdateReview.Input.Headers = .init(),
+        body: Operations.PullsUpdateReview.Input.Body
+    ) async throws -> Operations.PullsUpdateReview.Output {
+        try await pullsUpdateReview(Operations.PullsUpdateReview.Input(
             path: path,
             headers: headers,
             body: body
@@ -939,11 +939,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/delete(pulls/delete-pending-review)`.
-    public func pulls_sol_delete_hyphen_pending_hyphen_review(
-        path: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input.Path,
-        headers: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Output {
-        try await pulls_sol_delete_hyphen_pending_hyphen_review(Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input(
+    public func pullsDeletePendingReview(
+        path: Operations.PullsDeletePendingReview.Input.Path,
+        headers: Operations.PullsDeletePendingReview.Input.Headers = .init()
+    ) async throws -> Operations.PullsDeletePendingReview.Output {
+        try await pullsDeletePendingReview(Operations.PullsDeletePendingReview.Input(
             path: path,
             headers: headers
         ))
@@ -961,12 +961,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/get(pulls/list-comments-for-review)`.
-    public func pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review(
-        path: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Path,
-        query: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Query = .init(),
-        headers: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Headers = .init()
-    ) async throws -> Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output {
-        try await pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review(Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input(
+    public func pullsListCommentsForReview(
+        path: Operations.PullsListCommentsForReview.Input.Path,
+        query: Operations.PullsListCommentsForReview.Input.Query = .init(),
+        headers: Operations.PullsListCommentsForReview.Input.Headers = .init()
+    ) async throws -> Operations.PullsListCommentsForReview.Output {
+        try await pullsListCommentsForReview(Operations.PullsListCommentsForReview.Input(
             path: path,
             query: query,
             headers: headers
@@ -988,12 +988,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/put(pulls/dismiss-review)`.
-    public func pulls_sol_dismiss_hyphen_review(
-        path: Operations.pulls_sol_dismiss_hyphen_review.Input.Path,
-        headers: Operations.pulls_sol_dismiss_hyphen_review.Input.Headers = .init(),
-        body: Operations.pulls_sol_dismiss_hyphen_review.Input.Body
-    ) async throws -> Operations.pulls_sol_dismiss_hyphen_review.Output {
-        try await pulls_sol_dismiss_hyphen_review(Operations.pulls_sol_dismiss_hyphen_review.Input(
+    public func pullsDismissReview(
+        path: Operations.PullsDismissReview.Input.Path,
+        headers: Operations.PullsDismissReview.Input.Headers = .init(),
+        body: Operations.PullsDismissReview.Input.Body
+    ) async throws -> Operations.PullsDismissReview.Output {
+        try await pullsDismissReview(Operations.PullsDismissReview.Input(
             path: path,
             headers: headers,
             body: body
@@ -1012,12 +1012,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/post(pulls/submit-review)`.
-    public func pulls_sol_submit_hyphen_review(
-        path: Operations.pulls_sol_submit_hyphen_review.Input.Path,
-        headers: Operations.pulls_sol_submit_hyphen_review.Input.Headers = .init(),
-        body: Operations.pulls_sol_submit_hyphen_review.Input.Body
-    ) async throws -> Operations.pulls_sol_submit_hyphen_review.Output {
-        try await pulls_sol_submit_hyphen_review(Operations.pulls_sol_submit_hyphen_review.Input(
+    public func pullsSubmitReview(
+        path: Operations.PullsSubmitReview.Input.Path,
+        headers: Operations.PullsSubmitReview.Input.Headers = .init(),
+        body: Operations.PullsSubmitReview.Input.Body
+    ) async throws -> Operations.PullsSubmitReview.Output {
+        try await pullsSubmitReview(Operations.PullsSubmitReview.Input(
             path: path,
             headers: headers,
             body: body
@@ -1030,12 +1030,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)`.
-    public func pulls_sol_update_hyphen_branch(
-        path: Operations.pulls_sol_update_hyphen_branch.Input.Path,
-        headers: Operations.pulls_sol_update_hyphen_branch.Input.Headers = .init(),
-        body: Operations.pulls_sol_update_hyphen_branch.Input.Body? = nil
-    ) async throws -> Operations.pulls_sol_update_hyphen_branch.Output {
-        try await pulls_sol_update_hyphen_branch(Operations.pulls_sol_update_hyphen_branch.Input(
+    public func pullsUpdateBranch(
+        path: Operations.PullsUpdateBranch.Input.Path,
+        headers: Operations.PullsUpdateBranch.Input.Headers = .init(),
+        body: Operations.PullsUpdateBranch.Input.Body? = nil
+    ) async throws -> Operations.PullsUpdateBranch.Output {
+        try await pullsUpdateBranch(Operations.PullsUpdateBranch.Input(
             path: path,
             headers: headers,
             body: body
@@ -1045,6 +1045,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1060,7 +1069,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -1070,171 +1079,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -1242,61 +1251,61 @@ public enum Components {
         /// Validation Error Simple
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error-simple`.
-        public struct validation_hyphen_error_hyphen_simple: Codable, Hashable, Sendable {
+        public struct ValidationErrorSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/documentation_url`.
-            public var documentation_url: Swift.String
+            public var documentationUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/errors`.
             public var errors: [Swift.String]?
-            /// Creates a new `validation_hyphen_error_hyphen_simple`.
+            /// Creates a new `ValidationErrorSimple`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
+                documentationUrl: Swift.String,
                 errors: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -1335,9 +1344,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -1352,7 +1361,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -1371,34 +1380,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -1408,142 +1417,142 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// License Simple
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-license-simple`.
-        public struct nullable_hyphen_license_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableLicenseSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/name`.
@@ -1551,66 +1560,66 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/spdx_id`.
-            public var spdx_id: Swift.String?
+            public var spdxId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `nullable_hyphen_license_hyphen_simple`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `NullableLicenseSimple`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
-            ///   - spdx_id:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - spdxId:
+            ///   - nodeId:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String? = nil,
-                spdx_id: Swift.String? = nil,
-                node_id: Swift.String,
-                html_url: Swift.String? = nil
+                spdxId: Swift.String? = nil,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
-                self.spdx_id = spdx_id
-                self.node_id = node_id
-                self.html_url = html_url
+                self.spdxId = spdxId
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
-                case spdx_id
-                case node_id
-                case html_url
+                case spdxId = "spdx_id"
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
             }
         }
         /// A repository on GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/repository`.
-        public struct repository: Codable, Hashable, Sendable {
+        public struct Repository: Codable, Hashable, Sendable {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/license`.
-            public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
+            public var license: Components.Schemas.NullableLicenseSimple?
             /// - Remark: Generated from `#/components/schemas/repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/admin`.
                 public var admin: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/pull`.
@@ -1621,7 +1630,7 @@ public enum Components {
                 public var push: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/maintain`.
                 public var maintain: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -1651,15 +1660,15 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
-            public var permissions: Components.Schemas.repository.permissionsPayload?
+            public var permissions: Components.Schemas.Repository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private or public.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/fork`.
@@ -1667,97 +1676,97 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_url`.
-            public var git_url: Swift.String
+            public var gitUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/ssh_url`.
-            public var ssh_url: Swift.String
+            public var sshUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/clone_url`.
-            public var clone_url: Swift.String
+            public var cloneUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/svn_url`.
-            public var svn_url: Swift.String
+            public var svnUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/forks_count`.
-            public var forks_count: Swift.Int
+            public var forksCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/stargazers_count`.
-            public var stargazers_count: Swift.Int
+            public var stargazersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers_count`.
-            public var watchers_count: Swift.Int
+            public var watchersCount: Swift.Int
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/size`.
@@ -1765,38 +1774,38 @@ public enum Components {
             /// The default branch of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/default_branch`.
-            public var default_branch: Swift.String
+            public var defaultBranch: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/open_issues_count`.
-            public var open_issues_count: Swift.Int
+            public var openIssuesCount: Swift.Int
             /// Whether this repository acts as a template that can be used to generate new repositories.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/topics`.
             public var topics: [Swift.String]?
             /// Whether issues are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_issues`.
-            public var has_issues: Swift.Bool
+            public var hasIssues: Swift.Bool
             /// Whether projects are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_projects`.
-            public var has_projects: Swift.Bool
+            public var hasProjects: Swift.Bool
             /// Whether the wiki is enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_wiki`.
-            public var has_wiki: Swift.Bool
+            public var hasWiki: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/repository/has_pages`.
-            public var has_pages: Swift.Bool
+            public var hasPages: Swift.Bool
             /// Whether downloads are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_downloads`.
             @available(*, deprecated)
-            public var has_downloads: Swift.Bool
+            public var hasDownloads: Swift.Bool
             /// Whether discussions are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// Whether the repository is archived.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/archived`.
@@ -1810,47 +1819,47 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// Whether to allow rebase merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_rebase_merge`.
-            public var allow_rebase_merge: Swift.Bool?
+            public var allowRebaseMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// Whether to allow squash merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_squash_merge`.
-            public var allow_squash_merge: Swift.Bool?
+            public var allowSquashMerge: Swift.Bool?
             /// Whether to allow Auto-merge to be used on pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_auto_merge`.
-            public var allow_auto_merge: Swift.Bool?
+            public var allowAutoMerge: Swift.Bool?
             /// Whether to delete head branches when pull requests are merged
             ///
             /// - Remark: Generated from `#/components/schemas/repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
-            public var allow_update_branch: Swift.Bool?
+            public var allowUpdateBranch: Swift.Bool?
             /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
-            public var use_squash_pr_title_as_default: Swift.Bool?
+            public var useSquashPrTitleAsDefault: Swift.Bool?
             /// The default value for a squash merge commit title:
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
+            @frozen public enum SquashMergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case commitOrPrTitle = "COMMIT_OR_PR_TITLE"
             }
             /// The default value for a squash merge commit title:
             ///
@@ -1858,7 +1867,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            public var squash_merge_commit_title: Components.Schemas.repository.squash_merge_commit_titlePayload?
+            public var squashMergeCommitTitle: Components.Schemas.Repository.SquashMergeCommitTitlePayload?
             /// The default value for a squash merge commit message:
             ///
             /// - `PR_BODY` - default to the pull request's body.
@@ -1866,10 +1875,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                case BLANK = "BLANK"
+            @frozen public enum SquashMergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case commitMessages = "COMMIT_MESSAGES"
+                case blank = "BLANK"
             }
             /// The default value for a squash merge commit message:
             ///
@@ -1878,16 +1887,16 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            public var squash_merge_commit_message: Components.Schemas.repository.squash_merge_commit_messagePayload?
+            public var squashMergeCommitMessage: Components.Schemas.Repository.SquashMergeCommitMessagePayload?
             /// The default value for a merge commit title.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case MERGE_MESSAGE = "MERGE_MESSAGE"
+            @frozen public enum MergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case mergeMessage = "MERGE_MESSAGE"
             }
             /// The default value for a merge commit title.
             ///
@@ -1895,7 +1904,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            public var merge_commit_title: Components.Schemas.repository.merge_commit_titlePayload?
+            public var mergeCommitTitle: Components.Schemas.Repository.MergeCommitTitlePayload?
             /// The default value for a merge commit message.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
@@ -1903,10 +1912,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case PR_TITLE = "PR_TITLE"
-                case BLANK = "BLANK"
+            @frozen public enum MergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case prTitle = "PR_TITLE"
+                case blank = "BLANK"
             }
             /// The default value for a merge commit message.
             ///
@@ -1915,434 +1924,434 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            public var merge_commit_message: Components.Schemas.repository.merge_commit_messagePayload?
+            public var mergeCommitMessage: Components.Schemas.Repository.MergeCommitMessagePayload?
             /// Whether to allow merge commits for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_merge_commit`.
-            public var allow_merge_commit: Swift.Bool?
+            public var allowMergeCommit: Swift.Bool?
             /// Whether to allow forking this repo
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// Whether to require contributors to sign off on web-based commits
             ///
             /// - Remark: Generated from `#/components/schemas/repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/open_issues`.
-            public var open_issues: Swift.Int
+            public var openIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers`.
             public var watchers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/master_branch`.
-            public var master_branch: Swift.String?
+            public var masterBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// Whether anonymous git access is enabled for this repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/anonymous_access_enabled`.
-            public var anonymous_access_enabled: Swift.Bool?
-            /// Creates a new `repository`.
+            public var anonymousAccessEnabled: Swift.Bool?
+            /// Creates a new `Repository`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: The name of the repository.
-            ///   - full_name:
+            ///   - fullName:
             ///   - license:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
             ///   - _private: Whether the repository is private or public.
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch: The default branch of the repository.
-            ///   - open_issues_count:
-            ///   - is_template: Whether this repository acts as a template that can be used to generate new repositories.
+            ///   - defaultBranch: The default branch of the repository.
+            ///   - openIssuesCount:
+            ///   - isTemplate: Whether this repository acts as a template that can be used to generate new repositories.
             ///   - topics:
-            ///   - has_issues: Whether issues are enabled.
-            ///   - has_projects: Whether projects are enabled.
-            ///   - has_wiki: Whether the wiki is enabled.
-            ///   - has_pages:
-            ///   - has_downloads: Whether downloads are enabled.
-            ///   - has_discussions: Whether discussions are enabled.
+            ///   - hasIssues: Whether issues are enabled.
+            ///   - hasProjects: Whether projects are enabled.
+            ///   - hasWiki: Whether the wiki is enabled.
+            ///   - hasPages:
+            ///   - hasDownloads: Whether downloads are enabled.
+            ///   - hasDiscussions: Whether discussions are enabled.
             ///   - archived: Whether the repository is archived.
             ///   - disabled: Returns whether or not this repository disabled.
             ///   - visibility: The repository visibility: public, private, or internal.
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - temp_clone_token:
-            ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
-            ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
-            ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
-            ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
-            ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-            ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-            ///   - merge_commit_title: The default value for a merge commit title.
-            ///   - merge_commit_message: The default value for a merge commit message.
-            ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
-            ///   - allow_forking: Whether to allow forking this repo
-            ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - open_issues:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - allowRebaseMerge: Whether to allow rebase merges for pull requests.
+            ///   - tempCloneToken:
+            ///   - allowSquashMerge: Whether to allow squash merges for pull requests.
+            ///   - allowAutoMerge: Whether to allow Auto-merge to be used on pull requests.
+            ///   - deleteBranchOnMerge: Whether to delete head branches when pull requests are merged
+            ///   - allowUpdateBranch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
+            ///   - useSquashPrTitleAsDefault: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
+            ///   - squashMergeCommitTitle: The default value for a squash merge commit title:
+            ///   - squashMergeCommitMessage: The default value for a squash merge commit message:
+            ///   - mergeCommitTitle: The default value for a merge commit title.
+            ///   - mergeCommitMessage: The default value for a merge commit message.
+            ///   - allowMergeCommit: Whether to allow merge commits for pull requests.
+            ///   - allowForking: Whether to allow forking this repo
+            ///   - webCommitSignoffRequired: Whether to require contributors to sign off on web-based commits
+            ///   - openIssues:
             ///   - watchers:
-            ///   - master_branch:
-            ///   - starred_at:
-            ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
+            ///   - masterBranch:
+            ///   - starredAt:
+            ///   - anonymousAccessEnabled: Whether anonymous git access is enabled for this repository
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
+                fullName: Swift.String,
+                license: Components.Schemas.NullableLicenseSimple? = nil,
                 forks: Swift.Int,
-                permissions: Components.Schemas.repository.permissionsPayload? = nil,
-                owner: Components.Schemas.simple_hyphen_user,
+                permissions: Components.Schemas.Repository.PermissionsPayload? = nil,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int,
-                stargazers_count: Swift.Int,
-                watchers_count: Swift.Int,
+                forksCount: Swift.Int,
+                stargazersCount: Swift.Int,
+                watchersCount: Swift.Int,
                 size: Swift.Int,
-                default_branch: Swift.String,
-                open_issues_count: Swift.Int,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String,
+                openIssuesCount: Swift.Int,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool,
-                has_projects: Swift.Bool,
-                has_wiki: Swift.Bool,
-                has_pages: Swift.Bool,
-                has_downloads: Swift.Bool,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool,
+                hasProjects: Swift.Bool,
+                hasWiki: Swift.Bool,
+                hasPages: Swift.Bool,
+                hasDownloads: Swift.Bool,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool,
                 disabled: Swift.Bool,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                allow_rebase_merge: Swift.Bool? = nil,
-                temp_clone_token: Swift.String? = nil,
-                allow_squash_merge: Swift.Bool? = nil,
-                allow_auto_merge: Swift.Bool? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                allow_update_branch: Swift.Bool? = nil,
-                use_squash_pr_title_as_default: Swift.Bool? = nil,
-                squash_merge_commit_title: Components.Schemas.repository.squash_merge_commit_titlePayload? = nil,
-                squash_merge_commit_message: Components.Schemas.repository.squash_merge_commit_messagePayload? = nil,
-                merge_commit_title: Components.Schemas.repository.merge_commit_titlePayload? = nil,
-                merge_commit_message: Components.Schemas.repository.merge_commit_messagePayload? = nil,
-                allow_merge_commit: Swift.Bool? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                open_issues: Swift.Int,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                allowRebaseMerge: Swift.Bool? = nil,
+                tempCloneToken: Swift.String? = nil,
+                allowSquashMerge: Swift.Bool? = nil,
+                allowAutoMerge: Swift.Bool? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                allowUpdateBranch: Swift.Bool? = nil,
+                useSquashPrTitleAsDefault: Swift.Bool? = nil,
+                squashMergeCommitTitle: Components.Schemas.Repository.SquashMergeCommitTitlePayload? = nil,
+                squashMergeCommitMessage: Components.Schemas.Repository.SquashMergeCommitMessagePayload? = nil,
+                mergeCommitTitle: Components.Schemas.Repository.MergeCommitTitlePayload? = nil,
+                mergeCommitMessage: Components.Schemas.Repository.MergeCommitMessagePayload? = nil,
+                allowMergeCommit: Swift.Bool? = nil,
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                openIssues: Swift.Int,
                 watchers: Swift.Int,
-                master_branch: Swift.String? = nil,
-                starred_at: Swift.String? = nil,
-                anonymous_access_enabled: Swift.Bool? = nil
+                masterBranch: Swift.String? = nil,
+                starredAt: Swift.String? = nil,
+                anonymousAccessEnabled: Swift.Bool? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.license = license
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.allow_rebase_merge = allow_rebase_merge
-                self.temp_clone_token = temp_clone_token
-                self.allow_squash_merge = allow_squash_merge
-                self.allow_auto_merge = allow_auto_merge
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.allow_update_branch = allow_update_branch
-                self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                self.squash_merge_commit_title = squash_merge_commit_title
-                self.squash_merge_commit_message = squash_merge_commit_message
-                self.merge_commit_title = merge_commit_title
-                self.merge_commit_message = merge_commit_message
-                self.allow_merge_commit = allow_merge_commit
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.open_issues = open_issues
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.allowRebaseMerge = allowRebaseMerge
+                self.tempCloneToken = tempCloneToken
+                self.allowSquashMerge = allowSquashMerge
+                self.allowAutoMerge = allowAutoMerge
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.allowUpdateBranch = allowUpdateBranch
+                self.useSquashPrTitleAsDefault = useSquashPrTitleAsDefault
+                self.squashMergeCommitTitle = squashMergeCommitTitle
+                self.squashMergeCommitMessage = squashMergeCommitMessage
+                self.mergeCommitTitle = mergeCommitTitle
+                self.mergeCommitMessage = mergeCommitMessage
+                self.allowMergeCommit = allowMergeCommit
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.master_branch = master_branch
-                self.starred_at = starred_at
-                self.anonymous_access_enabled = anonymous_access_enabled
+                self.masterBranch = masterBranch
+                self.starredAt = starredAt
+                self.anonymousAccessEnabled = anonymousAccessEnabled
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case license
                 case forks
                 case permissions
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
-                case allow_rebase_merge
-                case temp_clone_token
-                case allow_squash_merge
-                case allow_auto_merge
-                case delete_branch_on_merge
-                case allow_update_branch
-                case use_squash_pr_title_as_default
-                case squash_merge_commit_title
-                case squash_merge_commit_message
-                case merge_commit_title
-                case merge_commit_message
-                case allow_merge_commit
-                case allow_forking
-                case web_commit_signoff_required
-                case open_issues
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case allowRebaseMerge = "allow_rebase_merge"
+                case tempCloneToken = "temp_clone_token"
+                case allowSquashMerge = "allow_squash_merge"
+                case allowAutoMerge = "allow_auto_merge"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case allowUpdateBranch = "allow_update_branch"
+                case useSquashPrTitleAsDefault = "use_squash_pr_title_as_default"
+                case squashMergeCommitTitle = "squash_merge_commit_title"
+                case squashMergeCommitMessage = "squash_merge_commit_message"
+                case mergeCommitTitle = "merge_commit_title"
+                case mergeCommitMessage = "merge_commit_message"
+                case allowMergeCommit = "allow_merge_commit"
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case openIssues = "open_issues"
                 case watchers
-                case master_branch
-                case starred_at
-                case anonymous_access_enabled
+                case masterBranch = "master_branch"
+                case starredAt = "starred_at"
+                case anonymousAccessEnabled = "anonymous_access_enabled"
             }
         }
         /// A collection of related issues and pull requests.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-milestone`.
-        public struct nullable_hyphen_milestone: Codable, Hashable, Sendable {
+        public struct NullableMilestone: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The number of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/number`.
@@ -2350,14 +2359,14 @@ public enum Components {
             /// The state of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case open = "open"
                 case closed = "closed"
             }
             /// The state of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
-            public var state: Components.Schemas.nullable_hyphen_milestone.statePayload
+            public var state: Components.Schemas.NullableMilestone.StatePayload
             /// The title of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/title`.
@@ -2365,111 +2374,111 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/creator`.
-            public var creator: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var creator: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/open_issues`.
-            public var open_issues: Swift.Int
+            public var openIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/closed_issues`.
-            public var closed_issues: Swift.Int
+            public var closedIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/closed_at`.
-            public var closed_at: Foundation.Date?
+            public var closedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/due_on`.
-            public var due_on: Foundation.Date?
-            /// Creates a new `nullable_hyphen_milestone`.
+            public var dueOn: Foundation.Date?
+            /// Creates a new `NullableMilestone`.
             ///
             /// - Parameters:
             ///   - url:
-            ///   - html_url:
-            ///   - labels_url:
+            ///   - htmlUrl:
+            ///   - labelsUrl:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - number: The number of the milestone.
             ///   - state: The state of the milestone.
             ///   - title: The title of the milestone.
             ///   - description:
             ///   - creator:
-            ///   - open_issues:
-            ///   - closed_issues:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - closed_at:
-            ///   - due_on:
+            ///   - openIssues:
+            ///   - closedIssues:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - closedAt:
+            ///   - dueOn:
             public init(
                 url: Swift.String,
-                html_url: Swift.String,
-                labels_url: Swift.String,
+                htmlUrl: Swift.String,
+                labelsUrl: Swift.String,
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 number: Swift.Int,
-                state: Components.Schemas.nullable_hyphen_milestone.statePayload,
+                state: Components.Schemas.NullableMilestone.StatePayload,
                 title: Swift.String,
                 description: Swift.String? = nil,
-                creator: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                open_issues: Swift.Int,
-                closed_issues: Swift.Int,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                closed_at: Foundation.Date? = nil,
-                due_on: Foundation.Date? = nil
+                creator: Components.Schemas.NullableSimpleUser? = nil,
+                openIssues: Swift.Int,
+                closedIssues: Swift.Int,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                closedAt: Foundation.Date? = nil,
+                dueOn: Foundation.Date? = nil
             ) {
                 self.url = url
-                self.html_url = html_url
-                self.labels_url = labels_url
+                self.htmlUrl = htmlUrl
+                self.labelsUrl = labelsUrl
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.number = number
                 self.state = state
                 self.title = title
                 self.description = description
                 self.creator = creator
-                self.open_issues = open_issues
-                self.closed_issues = closed_issues
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.closed_at = closed_at
-                self.due_on = due_on
+                self.openIssues = openIssues
+                self.closedIssues = closedIssues
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.closedAt = closedAt
+                self.dueOn = dueOn
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case html_url
-                case labels_url
+                case htmlUrl = "html_url"
+                case labelsUrl = "labels_url"
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case number
                 case state
                 case title
                 case description
                 case creator
-                case open_issues
-                case closed_issues
-                case created_at
-                case updated_at
-                case closed_at
-                case due_on
+                case openIssues = "open_issues"
+                case closedIssues = "closed_issues"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case closedAt = "closed_at"
+                case dueOn = "due_on"
             }
         }
         /// How the author is associated with the repository.
         ///
         /// - Remark: Generated from `#/components/schemas/author-association`.
-        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable {
-            case COLLABORATOR = "COLLABORATOR"
-            case CONTRIBUTOR = "CONTRIBUTOR"
-            case FIRST_TIMER = "FIRST_TIMER"
-            case FIRST_TIME_CONTRIBUTOR = "FIRST_TIME_CONTRIBUTOR"
-            case MANNEQUIN = "MANNEQUIN"
-            case MEMBER = "MEMBER"
-            case NONE = "NONE"
-            case OWNER = "OWNER"
+        @frozen public enum AuthorAssociation: String, Codable, Hashable, Sendable, CaseIterable {
+            case collaborator = "COLLABORATOR"
+            case contributor = "CONTRIBUTOR"
+            case firstTimer = "FIRST_TIMER"
+            case firstTimeContributor = "FIRST_TIME_CONTRIBUTOR"
+            case mannequin = "MANNEQUIN"
+            case member = "MEMBER"
+            case none = "NONE"
+            case owner = "OWNER"
         }
         /// - Remark: Generated from `#/components/schemas/reaction-rollup`.
-        public struct reaction_hyphen_rollup: Codable, Hashable, Sendable {
+        public struct ReactionRollup: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/total_count`.
-            public var total_count: Swift.Int
+            public var totalCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/+1`.
             public var _plus_1: Swift.Int
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/-1`.
@@ -2486,11 +2495,11 @@ public enum Components {
             public var eyes: Swift.Int
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/rocket`.
             public var rocket: Swift.Int
-            /// Creates a new `reaction_hyphen_rollup`.
+            /// Creates a new `ReactionRollup`.
             ///
             /// - Parameters:
             ///   - url:
-            ///   - total_count:
+            ///   - totalCount:
             ///   - _plus_1:
             ///   - _hyphen_1:
             ///   - laugh:
@@ -2501,7 +2510,7 @@ public enum Components {
             ///   - rocket:
             public init(
                 url: Swift.String,
-                total_count: Swift.Int,
+                totalCount: Swift.Int,
                 _plus_1: Swift.Int,
                 _hyphen_1: Swift.Int,
                 laugh: Swift.Int,
@@ -2512,7 +2521,7 @@ public enum Components {
                 rocket: Swift.Int
             ) {
                 self.url = url
-                self.total_count = total_count
+                self.totalCount = totalCount
                 self._plus_1 = _plus_1
                 self._hyphen_1 = _hyphen_1
                 self.laugh = laugh
@@ -2524,7 +2533,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case total_count
+                case totalCount = "total_count"
                 case _plus_1 = "+1"
                 case _hyphen_1 = "-1"
                 case laugh
@@ -2538,8 +2547,8 @@ public enum Components {
         /// An object without any properties.
         ///
         /// - Remark: Generated from `#/components/schemas/empty-object`.
-        public struct empty_hyphen_object: Codable, Hashable, Sendable {
-            /// Creates a new `empty_hyphen_object`.
+        public struct EmptyObject: Codable, Hashable, Sendable {
+            /// Creates a new `EmptyObject`.
             public init() {}
             public init(from decoder: any Decoder) throws {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [])
@@ -2548,19 +2557,19 @@ public enum Components {
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableTeamSimple: Codable, Hashable, Sendable {
             /// Unique identifier of the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// URL for the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// Name of the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
@@ -2580,86 +2589,86 @@ public enum Components {
             /// The notification setting the team has set
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
             public var slug: Swift.String
             /// Distinguished Name (DN) that team maps to within LDAP environment
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            public var ldapDn: Swift.String?
+            /// Creates a new `NullableTeamSimple`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the team
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url: URL for the team
-            ///   - members_url:
+            ///   - membersUrl:
             ///   - name: Name of the team
             ///   - description: Description of the team
             ///   - permission: Permission that the team will have for its repositories
             ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
+            ///   - notificationSetting: The notification setting the team has set
+            ///   - htmlUrl:
+            ///   - repositoriesUrl:
             ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            ///   - ldapDn: Distinguished Name (DN) that team maps to within LDAP environment
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                members_url: Swift.String,
+                membersUrl: Swift.String,
                 name: Swift.String,
                 description: Swift.String? = nil,
                 permission: Swift.String,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
+                notificationSetting: Swift.String? = nil,
+                htmlUrl: Swift.String,
+                repositoriesUrl: Swift.String,
                 slug: Swift.String,
-                ldap_dn: Swift.String? = nil
+                ldapDn: Swift.String? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
-                self.members_url = members_url
+                self.membersUrl = membersUrl
                 self.name = name
                 self.description = description
                 self.permission = permission
                 self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
+                self.notificationSetting = notificationSetting
+                self.htmlUrl = htmlUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.slug = slug
-                self.ldap_dn = ldap_dn
+                self.ldapDn = ldapDn
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case url
-                case members_url
+                case membersUrl = "members_url"
                 case name
                 case description
                 case permission
                 case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
+                case notificationSetting = "notification_setting"
+                case htmlUrl = "html_url"
+                case repositoriesUrl = "repositories_url"
                 case slug
-                case ldap_dn
+                case ldapDn = "ldap_dn"
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
+        public struct Team: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/slug`.
@@ -2669,11 +2678,11 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team/privacy`.
             public var privacy: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team/permission`.
             public var permission: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
                 public var pull: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
@@ -2684,7 +2693,7 @@ public enum Components {
                 public var maintain: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
                 public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - pull:
@@ -2714,98 +2723,98 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
+            public var permissions: Components.Schemas.Team.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/team/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
+            public var parent: Components.Schemas.NullableTeamSimple?
+            /// Creates a new `Team`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
             ///   - slug:
             ///   - description:
             ///   - privacy:
-            ///   - notification_setting:
+            ///   - notificationSetting:
             ///   - permission:
             ///   - permissions:
             ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
+            ///   - htmlUrl:
+            ///   - membersUrl:
+            ///   - repositoriesUrl:
             ///   - parent:
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
                 slug: Swift.String,
                 description: Swift.String? = nil,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
+                notificationSetting: Swift.String? = nil,
                 permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                permissions: Components.Schemas.Team.PermissionsPayload? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+                htmlUrl: Swift.String,
+                membersUrl: Swift.String,
+                repositoriesUrl: Swift.String,
+                parent: Components.Schemas.NullableTeamSimple? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
                 self.slug = slug
                 self.description = description
                 self.privacy = privacy
-                self.notification_setting = notification_setting
+                self.notificationSetting = notificationSetting
                 self.permission = permission
                 self.permissions = permissions
                 self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
+                self.htmlUrl = htmlUrl
+                self.membersUrl = membersUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.parent = parent
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
                 case slug
                 case description
                 case privacy
-                case notification_setting
+                case notificationSetting = "notification_setting"
                 case permission
                 case permissions
                 case url
-                case html_url
-                case members_url
-                case repositories_url
+                case htmlUrl = "html_url"
+                case membersUrl = "members_url"
+                case repositoriesUrl = "repositories_url"
                 case parent
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/team-simple`.
-        public struct team_hyphen_simple: Codable, Hashable, Sendable {
+        public struct TeamSimple: Codable, Hashable, Sendable {
             /// Unique identifier of the team
             ///
             /// - Remark: Generated from `#/components/schemas/team-simple/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// URL for the team
             ///
             /// - Remark: Generated from `#/components/schemas/team-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-simple/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// Name of the team
             ///
             /// - Remark: Generated from `#/components/schemas/team-simple/name`.
@@ -2825,89 +2834,89 @@ public enum Components {
             /// The notification setting the team has set
             ///
             /// - Remark: Generated from `#/components/schemas/team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-simple/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-simple/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-simple/slug`.
             public var slug: Swift.String
             /// Distinguished Name (DN) that team maps to within LDAP environment
             ///
             /// - Remark: Generated from `#/components/schemas/team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `team_hyphen_simple`.
+            public var ldapDn: Swift.String?
+            /// Creates a new `TeamSimple`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the team
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url: URL for the team
-            ///   - members_url:
+            ///   - membersUrl:
             ///   - name: Name of the team
             ///   - description: Description of the team
             ///   - permission: Permission that the team will have for its repositories
             ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
+            ///   - notificationSetting: The notification setting the team has set
+            ///   - htmlUrl:
+            ///   - repositoriesUrl:
             ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            ///   - ldapDn: Distinguished Name (DN) that team maps to within LDAP environment
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                members_url: Swift.String,
+                membersUrl: Swift.String,
                 name: Swift.String,
                 description: Swift.String? = nil,
                 permission: Swift.String,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
+                notificationSetting: Swift.String? = nil,
+                htmlUrl: Swift.String,
+                repositoriesUrl: Swift.String,
                 slug: Swift.String,
-                ldap_dn: Swift.String? = nil
+                ldapDn: Swift.String? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
-                self.members_url = members_url
+                self.membersUrl = membersUrl
                 self.name = name
                 self.description = description
                 self.permission = permission
                 self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
+                self.notificationSetting = notificationSetting
+                self.htmlUrl = htmlUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.slug = slug
-                self.ldap_dn = ldap_dn
+                self.ldapDn = ldapDn
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case url
-                case members_url
+                case membersUrl = "members_url"
                 case name
                 case description
                 case permission
                 case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
+                case notificationSetting = "notification_setting"
+                case htmlUrl = "html_url"
+                case repositoriesUrl = "repositories_url"
                 case slug
-                case ldap_dn
+                case ldapDn = "ldap_dn"
             }
         }
         /// Metaproperties for Git author/committer information.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-git-user`.
-        public struct nullable_hyphen_git_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableGitUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-git-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-git-user/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-git-user/date`.
             public var date: Swift.String?
-            /// Creates a new `nullable_hyphen_git_hyphen_user`.
+            /// Creates a new `NullableGitUser`.
             ///
             /// - Parameters:
             ///   - name:
@@ -2929,7 +2938,7 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/verification`.
-        public struct verification: Codable, Hashable, Sendable {
+        public struct Verification: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/verification/verified`.
             public var verified: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/verification/reason`.
@@ -2939,46 +2948,46 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/verification/signature`.
             public var signature: Swift.String?
             /// - Remark: Generated from `#/components/schemas/verification/verified_at`.
-            public var verified_at: Swift.String?
-            /// Creates a new `verification`.
+            public var verifiedAt: Swift.String?
+            /// Creates a new `Verification`.
             ///
             /// - Parameters:
             ///   - verified:
             ///   - reason:
             ///   - payload:
             ///   - signature:
-            ///   - verified_at:
+            ///   - verifiedAt:
             public init(
                 verified: Swift.Bool,
                 reason: Swift.String,
                 payload: Swift.String? = nil,
                 signature: Swift.String? = nil,
-                verified_at: Swift.String? = nil
+                verifiedAt: Swift.String? = nil
             ) {
                 self.verified = verified
                 self.reason = reason
                 self.payload = payload
                 self.signature = signature
-                self.verified_at = verified_at
+                self.verifiedAt = verifiedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case verified
                 case reason
                 case payload
                 case signature
-                case verified_at
+                case verifiedAt = "verified_at"
             }
         }
         /// Diff Entry
         ///
         /// - Remark: Generated from `#/components/schemas/diff-entry`.
-        public struct diff_hyphen_entry: Codable, Hashable, Sendable {
+        public struct DiffEntry: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/diff-entry/sha`.
             public var sha: Swift.String
             /// - Remark: Generated from `#/components/schemas/diff-entry/filename`.
             public var filename: Swift.String
             /// - Remark: Generated from `#/components/schemas/diff-entry/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case added = "added"
                 case removed = "removed"
                 case modified = "modified"
@@ -2988,7 +2997,7 @@ public enum Components {
                 case unchanged = "unchanged"
             }
             /// - Remark: Generated from `#/components/schemas/diff-entry/status`.
-            public var status: Components.Schemas.diff_hyphen_entry.statusPayload
+            public var status: Components.Schemas.DiffEntry.StatusPayload
             /// - Remark: Generated from `#/components/schemas/diff-entry/additions`.
             public var additions: Swift.Int
             /// - Remark: Generated from `#/components/schemas/diff-entry/deletions`.
@@ -2996,16 +3005,16 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/diff-entry/changes`.
             public var changes: Swift.Int
             /// - Remark: Generated from `#/components/schemas/diff-entry/blob_url`.
-            public var blob_url: Swift.String
+            public var blobUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/diff-entry/raw_url`.
-            public var raw_url: Swift.String
+            public var rawUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/diff-entry/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/diff-entry/patch`.
             public var patch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/diff-entry/previous_filename`.
-            public var previous_filename: Swift.String?
-            /// Creates a new `diff_hyphen_entry`.
+            public var previousFilename: Swift.String?
+            /// Creates a new `DiffEntry`.
             ///
             /// - Parameters:
             ///   - sha:
@@ -3014,23 +3023,23 @@ public enum Components {
             ///   - additions:
             ///   - deletions:
             ///   - changes:
-            ///   - blob_url:
-            ///   - raw_url:
-            ///   - contents_url:
+            ///   - blobUrl:
+            ///   - rawUrl:
+            ///   - contentsUrl:
             ///   - patch:
-            ///   - previous_filename:
+            ///   - previousFilename:
             public init(
                 sha: Swift.String,
                 filename: Swift.String,
-                status: Components.Schemas.diff_hyphen_entry.statusPayload,
+                status: Components.Schemas.DiffEntry.StatusPayload,
                 additions: Swift.Int,
                 deletions: Swift.Int,
                 changes: Swift.Int,
-                blob_url: Swift.String,
-                raw_url: Swift.String,
-                contents_url: Swift.String,
+                blobUrl: Swift.String,
+                rawUrl: Swift.String,
+                contentsUrl: Swift.String,
                 patch: Swift.String? = nil,
-                previous_filename: Swift.String? = nil
+                previousFilename: Swift.String? = nil
             ) {
                 self.sha = sha
                 self.filename = filename
@@ -3038,11 +3047,11 @@ public enum Components {
                 self.additions = additions
                 self.deletions = deletions
                 self.changes = changes
-                self.blob_url = blob_url
-                self.raw_url = raw_url
-                self.contents_url = contents_url
+                self.blobUrl = blobUrl
+                self.rawUrl = rawUrl
+                self.contentsUrl = contentsUrl
                 self.patch = patch
-                self.previous_filename = previous_filename
+                self.previousFilename = previousFilename
             }
             public enum CodingKeys: String, CodingKey {
                 case sha
@@ -3051,46 +3060,46 @@ public enum Components {
                 case additions
                 case deletions
                 case changes
-                case blob_url
-                case raw_url
-                case contents_url
+                case blobUrl = "blob_url"
+                case rawUrl = "raw_url"
+                case contentsUrl = "contents_url"
                 case patch
-                case previous_filename
+                case previousFilename = "previous_filename"
             }
         }
         /// Commit
         ///
         /// - Remark: Generated from `#/components/schemas/commit`.
-        public struct commit: Codable, Hashable, Sendable {
+        public struct Commit: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/commit/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/commit/sha`.
             public var sha: Swift.String
             /// - Remark: Generated from `#/components/schemas/commit/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/commit/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/commit/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/commit/commit`.
-            public struct commitPayload: Codable, Hashable, Sendable {
+            public struct CommitPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/commit/commit/url`.
                 public var url: Swift.String
                 /// - Remark: Generated from `#/components/schemas/commit/commit/author`.
-                public var author: Components.Schemas.nullable_hyphen_git_hyphen_user?
+                public var author: Components.Schemas.NullableGitUser?
                 /// - Remark: Generated from `#/components/schemas/commit/commit/committer`.
-                public var committer: Components.Schemas.nullable_hyphen_git_hyphen_user?
+                public var committer: Components.Schemas.NullableGitUser?
                 /// - Remark: Generated from `#/components/schemas/commit/commit/message`.
                 public var message: Swift.String
                 /// - Remark: Generated from `#/components/schemas/commit/commit/comment_count`.
-                public var comment_count: Swift.Int
+                public var commentCount: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/commit/commit/tree`.
-                public struct treePayload: Codable, Hashable, Sendable {
+                public struct TreePayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/commit/commit/tree/sha`.
                     public var sha: Swift.String
                     /// - Remark: Generated from `#/components/schemas/commit/commit/tree/url`.
                     public var url: Swift.String
-                    /// Creates a new `treePayload`.
+                    /// Creates a new `TreePayload`.
                     ///
                     /// - Parameters:
                     ///   - sha:
@@ -3108,33 +3117,33 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/commit/commit/tree`.
-                public var tree: Components.Schemas.commit.commitPayload.treePayload
+                public var tree: Components.Schemas.Commit.CommitPayload.TreePayload
                 /// - Remark: Generated from `#/components/schemas/commit/commit/verification`.
-                public var verification: Components.Schemas.verification?
-                /// Creates a new `commitPayload`.
+                public var verification: Components.Schemas.Verification?
+                /// Creates a new `CommitPayload`.
                 ///
                 /// - Parameters:
                 ///   - url:
                 ///   - author:
                 ///   - committer:
                 ///   - message:
-                ///   - comment_count:
+                ///   - commentCount:
                 ///   - tree:
                 ///   - verification:
                 public init(
                     url: Swift.String,
-                    author: Components.Schemas.nullable_hyphen_git_hyphen_user? = nil,
-                    committer: Components.Schemas.nullable_hyphen_git_hyphen_user? = nil,
+                    author: Components.Schemas.NullableGitUser? = nil,
+                    committer: Components.Schemas.NullableGitUser? = nil,
                     message: Swift.String,
-                    comment_count: Swift.Int,
-                    tree: Components.Schemas.commit.commitPayload.treePayload,
-                    verification: Components.Schemas.verification? = nil
+                    commentCount: Swift.Int,
+                    tree: Components.Schemas.Commit.CommitPayload.TreePayload,
+                    verification: Components.Schemas.Verification? = nil
                 ) {
                     self.url = url
                     self.author = author
                     self.committer = committer
                     self.message = message
-                    self.comment_count = comment_count
+                    self.commentCount = commentCount
                     self.tree = tree
                     self.verification = verification
                 }
@@ -3143,29 +3152,29 @@ public enum Components {
                     case author
                     case committer
                     case message
-                    case comment_count
+                    case commentCount = "comment_count"
                     case tree
                     case verification
                 }
             }
             /// - Remark: Generated from `#/components/schemas/commit/commit`.
-            public var commit: Components.Schemas.commit.commitPayload
+            public var commit: Components.Schemas.Commit.CommitPayload
             /// - Remark: Generated from `#/components/schemas/commit/author`.
-            @frozen public enum authorPayload: Codable, Hashable, Sendable {
+            @frozen public enum AuthorPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/commit/author/case1`.
-                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                case SimpleUser(Components.Schemas.SimpleUser)
                 /// - Remark: Generated from `#/components/schemas/commit/author/case2`.
-                case empty_hyphen_object(Components.Schemas.empty_hyphen_object)
+                case EmptyObject(Components.Schemas.EmptyObject)
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        self = .simple_hyphen_user(try .init(from: decoder))
+                        self = .SimpleUser(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .empty_hyphen_object(try .init(from: decoder))
+                        self = .EmptyObject(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
@@ -3178,31 +3187,31 @@ public enum Components {
                 }
                 public func encode(to encoder: any Encoder) throws {
                     switch self {
-                    case let .simple_hyphen_user(value):
+                    case let .SimpleUser(value):
                         try value.encode(to: encoder)
-                    case let .empty_hyphen_object(value):
+                    case let .EmptyObject(value):
                         try value.encode(to: encoder)
                     }
                 }
             }
             /// - Remark: Generated from `#/components/schemas/commit/author`.
-            public var author: Components.Schemas.commit.authorPayload?
+            public var author: Components.Schemas.Commit.AuthorPayload?
             /// - Remark: Generated from `#/components/schemas/commit/committer`.
-            @frozen public enum committerPayload: Codable, Hashable, Sendable {
+            @frozen public enum CommitterPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/commit/committer/case1`.
-                case simple_hyphen_user(Components.Schemas.simple_hyphen_user)
+                case SimpleUser(Components.Schemas.SimpleUser)
                 /// - Remark: Generated from `#/components/schemas/commit/committer/case2`.
-                case empty_hyphen_object(Components.Schemas.empty_hyphen_object)
+                case EmptyObject(Components.Schemas.EmptyObject)
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        self = .simple_hyphen_user(try .init(from: decoder))
+                        self = .SimpleUser(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        self = .empty_hyphen_object(try .init(from: decoder))
+                        self = .EmptyObject(try .init(from: decoder))
                         return
                     } catch {
                         errors.append(error)
@@ -3215,57 +3224,57 @@ public enum Components {
                 }
                 public func encode(to encoder: any Encoder) throws {
                     switch self {
-                    case let .simple_hyphen_user(value):
+                    case let .SimpleUser(value):
                         try value.encode(to: encoder)
-                    case let .empty_hyphen_object(value):
+                    case let .EmptyObject(value):
                         try value.encode(to: encoder)
                     }
                 }
             }
             /// - Remark: Generated from `#/components/schemas/commit/committer`.
-            public var committer: Components.Schemas.commit.committerPayload?
-            /// - Remark: Generated from `#/components/schemas/commit/parentsPayload`.
-            public struct parentsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/commit/parentsPayload/sha`.
+            public var committer: Components.Schemas.Commit.CommitterPayload?
+            /// - Remark: Generated from `#/components/schemas/commit/ParentsPayload`.
+            public struct ParentsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/commit/ParentsPayload/sha`.
                 public var sha: Swift.String
-                /// - Remark: Generated from `#/components/schemas/commit/parentsPayload/url`.
+                /// - Remark: Generated from `#/components/schemas/commit/ParentsPayload/url`.
                 public var url: Swift.String
-                /// - Remark: Generated from `#/components/schemas/commit/parentsPayload/html_url`.
-                public var html_url: Swift.String?
-                /// Creates a new `parentsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/commit/ParentsPayload/html_url`.
+                public var htmlUrl: Swift.String?
+                /// Creates a new `ParentsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - sha:
                 ///   - url:
-                ///   - html_url:
+                ///   - htmlUrl:
                 public init(
                     sha: Swift.String,
                     url: Swift.String,
-                    html_url: Swift.String? = nil
+                    htmlUrl: Swift.String? = nil
                 ) {
                     self.sha = sha
                     self.url = url
-                    self.html_url = html_url
+                    self.htmlUrl = htmlUrl
                 }
                 public enum CodingKeys: String, CodingKey {
                     case sha
                     case url
-                    case html_url
+                    case htmlUrl = "html_url"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/commit/parents`.
-            public typealias parentsPayload = [Components.Schemas.commit.parentsPayloadPayload]
+            public typealias ParentsPayload = [Components.Schemas.Commit.ParentsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/commit/parents`.
-            public var parents: Components.Schemas.commit.parentsPayload
+            public var parents: Components.Schemas.Commit.ParentsPayload
             /// - Remark: Generated from `#/components/schemas/commit/stats`.
-            public struct statsPayload: Codable, Hashable, Sendable {
+            public struct StatsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/commit/stats/additions`.
                 public var additions: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/commit/stats/deletions`.
                 public var deletions: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/commit/stats/total`.
                 public var total: Swift.Int?
-                /// Creates a new `statsPayload`.
+                /// Creates a new `StatsPayload`.
                 ///
                 /// - Parameters:
                 ///   - additions:
@@ -3287,17 +3296,17 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/commit/stats`.
-            public var stats: Components.Schemas.commit.statsPayload?
+            public var stats: Components.Schemas.Commit.StatsPayload?
             /// - Remark: Generated from `#/components/schemas/commit/files`.
-            public var files: [Components.Schemas.diff_hyphen_entry]?
-            /// Creates a new `commit`.
+            public var files: [Components.Schemas.DiffEntry]?
+            /// Creates a new `Commit`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - sha:
-            ///   - node_id:
-            ///   - html_url:
-            ///   - comments_url:
+            ///   - nodeId:
+            ///   - htmlUrl:
+            ///   - commentsUrl:
             ///   - commit:
             ///   - author:
             ///   - committer:
@@ -3307,21 +3316,21 @@ public enum Components {
             public init(
                 url: Swift.String,
                 sha: Swift.String,
-                node_id: Swift.String,
-                html_url: Swift.String,
-                comments_url: Swift.String,
-                commit: Components.Schemas.commit.commitPayload,
-                author: Components.Schemas.commit.authorPayload? = nil,
-                committer: Components.Schemas.commit.committerPayload? = nil,
-                parents: Components.Schemas.commit.parentsPayload,
-                stats: Components.Schemas.commit.statsPayload? = nil,
-                files: [Components.Schemas.diff_hyphen_entry]? = nil
+                nodeId: Swift.String,
+                htmlUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commit: Components.Schemas.Commit.CommitPayload,
+                author: Components.Schemas.Commit.AuthorPayload? = nil,
+                committer: Components.Schemas.Commit.CommitterPayload? = nil,
+                parents: Components.Schemas.Commit.ParentsPayload,
+                stats: Components.Schemas.Commit.StatsPayload? = nil,
+                files: [Components.Schemas.DiffEntry]? = nil
             ) {
                 self.url = url
                 self.sha = sha
-                self.node_id = node_id
-                self.html_url = html_url
-                self.comments_url = comments_url
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
+                self.commentsUrl = commentsUrl
                 self.commit = commit
                 self.author = author
                 self.committer = committer
@@ -3332,9 +3341,9 @@ public enum Components {
             public enum CodingKeys: String, CodingKey {
                 case url
                 case sha
-                case node_id
-                case html_url
-                case comments_url
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
+                case commentsUrl = "comments_url"
                 case commit
                 case author
                 case committer
@@ -3346,10 +3355,10 @@ public enum Components {
         /// Hypermedia Link
         ///
         /// - Remark: Generated from `#/components/schemas/link`.
-        public struct link: Codable, Hashable, Sendable {
+        public struct Link: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/link/href`.
             public var href: Swift.String
-            /// Creates a new `link`.
+            /// Creates a new `Link`.
             ///
             /// - Parameters:
             ///   - href:
@@ -3363,13 +3372,13 @@ public enum Components {
         /// The status of auto merging a pull request.
         ///
         /// - Remark: Generated from `#/components/schemas/auto-merge`.
-        public struct auto_hyphen_merge: Codable, Hashable, Sendable {
+        public struct AutoMerge: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/auto-merge/enabled_by`.
-            public var enabled_by: Components.Schemas.simple_hyphen_user
+            public var enabledBy: Components.Schemas.SimpleUser
             /// The merge method to use.
             ///
             /// - Remark: Generated from `#/components/schemas/auto-merge/merge_method`.
-            @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum MergeMethodPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case merge = "merge"
                 case squash = "squash"
                 case rebase = "rebase"
@@ -3377,68 +3386,68 @@ public enum Components {
             /// The merge method to use.
             ///
             /// - Remark: Generated from `#/components/schemas/auto-merge/merge_method`.
-            public var merge_method: Components.Schemas.auto_hyphen_merge.merge_methodPayload
+            public var mergeMethod: Components.Schemas.AutoMerge.MergeMethodPayload
             /// Title for the merge commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/auto-merge/commit_title`.
-            public var commit_title: Swift.String
+            public var commitTitle: Swift.String
             /// Commit message for the merge commit.
             ///
             /// - Remark: Generated from `#/components/schemas/auto-merge/commit_message`.
-            public var commit_message: Swift.String
-            /// Creates a new `auto_hyphen_merge`.
+            public var commitMessage: Swift.String
+            /// Creates a new `AutoMerge`.
             ///
             /// - Parameters:
-            ///   - enabled_by:
-            ///   - merge_method: The merge method to use.
-            ///   - commit_title: Title for the merge commit message.
-            ///   - commit_message: Commit message for the merge commit.
+            ///   - enabledBy:
+            ///   - mergeMethod: The merge method to use.
+            ///   - commitTitle: Title for the merge commit message.
+            ///   - commitMessage: Commit message for the merge commit.
             public init(
-                enabled_by: Components.Schemas.simple_hyphen_user,
-                merge_method: Components.Schemas.auto_hyphen_merge.merge_methodPayload,
-                commit_title: Swift.String,
-                commit_message: Swift.String
+                enabledBy: Components.Schemas.SimpleUser,
+                mergeMethod: Components.Schemas.AutoMerge.MergeMethodPayload,
+                commitTitle: Swift.String,
+                commitMessage: Swift.String
             ) {
-                self.enabled_by = enabled_by
-                self.merge_method = merge_method
-                self.commit_title = commit_title
-                self.commit_message = commit_message
+                self.enabledBy = enabledBy
+                self.mergeMethod = mergeMethod
+                self.commitTitle = commitTitle
+                self.commitMessage = commitMessage
             }
             public enum CodingKeys: String, CodingKey {
-                case enabled_by
-                case merge_method
-                case commit_title
-                case commit_message
+                case enabledBy = "enabled_by"
+                case mergeMethod = "merge_method"
+                case commitTitle = "commit_title"
+                case commitMessage = "commit_message"
             }
         }
         /// Pull Request Simple
         ///
         /// - Remark: Generated from `#/components/schemas/pull-request-simple`.
-        public struct pull_hyphen_request_hyphen_simple: Codable, Hashable, Sendable {
+        public struct PullRequestSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/diff_url`.
-            public var diff_url: Swift.String
+            public var diffUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/patch_url`.
-            public var patch_url: Swift.String
+            public var patchUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/issue_url`.
-            public var issue_url: Swift.String
+            public var issueUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/review_comments_url`.
-            public var review_comments_url: Swift.String
+            public var reviewCommentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/review_comment_url`.
-            public var review_comment_url: Swift.String
+            public var reviewCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/number`.
             public var number: Swift.Int
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/state`.
@@ -3448,30 +3457,30 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/title`.
             public var title: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/body`.
             public var body: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/pull-request-simple/labelsPayload`.
-            public struct labelsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/pull-request-simple/labelsPayload/id`.
+            /// - Remark: Generated from `#/components/schemas/pull-request-simple/LabelsPayload`.
+            public struct LabelsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/pull-request-simple/LabelsPayload/id`.
                 public var id: Swift.Int64
-                /// - Remark: Generated from `#/components/schemas/pull-request-simple/labelsPayload/node_id`.
-                public var node_id: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request-simple/labelsPayload/url`.
+                /// - Remark: Generated from `#/components/schemas/pull-request-simple/LabelsPayload/node_id`.
+                public var nodeId: Swift.String
+                /// - Remark: Generated from `#/components/schemas/pull-request-simple/LabelsPayload/url`.
                 public var url: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request-simple/labelsPayload/name`.
+                /// - Remark: Generated from `#/components/schemas/pull-request-simple/LabelsPayload/name`.
                 public var name: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request-simple/labelsPayload/description`.
+                /// - Remark: Generated from `#/components/schemas/pull-request-simple/LabelsPayload/description`.
                 public var description: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request-simple/labelsPayload/color`.
+                /// - Remark: Generated from `#/components/schemas/pull-request-simple/LabelsPayload/color`.
                 public var color: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request-simple/labelsPayload/default`.
+                /// - Remark: Generated from `#/components/schemas/pull-request-simple/LabelsPayload/default`.
                 public var _default: Swift.Bool
-                /// Creates a new `labelsPayloadPayload`.
+                /// Creates a new `LabelsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - id:
-                ///   - node_id:
+                ///   - nodeId:
                 ///   - url:
                 ///   - name:
                 ///   - description:
@@ -3479,7 +3488,7 @@ public enum Components {
                 ///   - _default:
                 public init(
                     id: Swift.Int64,
-                    node_id: Swift.String,
+                    nodeId: Swift.String,
                     url: Swift.String,
                     name: Swift.String,
                     description: Swift.String,
@@ -3487,7 +3496,7 @@ public enum Components {
                     _default: Swift.Bool
                 ) {
                     self.id = id
-                    self.node_id = node_id
+                    self.nodeId = nodeId
                     self.url = url
                     self.name = name
                     self.description = description
@@ -3496,7 +3505,7 @@ public enum Components {
                 }
                 public enum CodingKeys: String, CodingKey {
                     case id
-                    case node_id
+                    case nodeId = "node_id"
                     case url
                     case name
                     case description
@@ -3505,44 +3514,44 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/labels`.
-            public typealias labelsPayload = [Components.Schemas.pull_hyphen_request_hyphen_simple.labelsPayloadPayload]
+            public typealias LabelsPayload = [Components.Schemas.PullRequestSimple.LabelsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/labels`.
-            public var labels: Components.Schemas.pull_hyphen_request_hyphen_simple.labelsPayload
+            public var labels: Components.Schemas.PullRequestSimple.LabelsPayload
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/milestone`.
-            public var milestone: Components.Schemas.nullable_hyphen_milestone?
+            public var milestone: Components.Schemas.NullableMilestone?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/active_lock_reason`.
-            public var active_lock_reason: Swift.String?
+            public var activeLockReason: Swift.String?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/closed_at`.
-            public var closed_at: Foundation.Date?
+            public var closedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/merged_at`.
-            public var merged_at: Foundation.Date?
+            public var mergedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/merge_commit_sha`.
-            public var merge_commit_sha: Swift.String?
+            public var mergeCommitSha: Swift.String?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/assignee`.
-            public var assignee: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var assignee: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/assignees`.
-            public var assignees: [Components.Schemas.simple_hyphen_user]?
+            public var assignees: [Components.Schemas.SimpleUser]?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/requested_reviewers`.
-            public var requested_reviewers: [Components.Schemas.simple_hyphen_user]?
+            public var requestedReviewers: [Components.Schemas.SimpleUser]?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/requested_teams`.
-            public var requested_teams: [Components.Schemas.team]?
+            public var requestedTeams: [Components.Schemas.Team]?
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/head`.
-            public struct headPayload: Codable, Hashable, Sendable {
+            public struct HeadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/head/label`.
                 public var label: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/head/ref`.
                 public var ref: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/head/repo`.
-                public var repo: Components.Schemas.repository
+                public var repo: Components.Schemas.Repository
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/head/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/head/user`.
-                public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
-                /// Creates a new `headPayload`.
+                public var user: Components.Schemas.NullableSimpleUser?
+                /// Creates a new `HeadPayload`.
                 ///
                 /// - Parameters:
                 ///   - label:
@@ -3553,9 +3562,9 @@ public enum Components {
                 public init(
                     label: Swift.String,
                     ref: Swift.String,
-                    repo: Components.Schemas.repository,
+                    repo: Components.Schemas.Repository,
                     sha: Swift.String,
-                    user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil
+                    user: Components.Schemas.NullableSimpleUser? = nil
                 ) {
                     self.label = label
                     self.ref = ref
@@ -3572,20 +3581,20 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/head`.
-            public var head: Components.Schemas.pull_hyphen_request_hyphen_simple.headPayload
+            public var head: Components.Schemas.PullRequestSimple.HeadPayload
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/base`.
-            public struct basePayload: Codable, Hashable, Sendable {
+            public struct BasePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/base/label`.
                 public var label: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/base/ref`.
                 public var ref: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/base/repo`.
-                public var repo: Components.Schemas.repository
+                public var repo: Components.Schemas.Repository
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/base/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/base/user`.
-                public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
-                /// Creates a new `basePayload`.
+                public var user: Components.Schemas.NullableSimpleUser?
+                /// Creates a new `BasePayload`.
                 ///
                 /// - Parameters:
                 ///   - label:
@@ -3596,9 +3605,9 @@ public enum Components {
                 public init(
                     label: Swift.String,
                     ref: Swift.String,
-                    repo: Components.Schemas.repository,
+                    repo: Components.Schemas.Repository,
                     sha: Swift.String,
-                    user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil
+                    user: Components.Schemas.NullableSimpleUser? = nil
                 ) {
                     self.label = label
                     self.ref = ref
@@ -3615,26 +3624,26 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/base`.
-            public var base: Components.Schemas.pull_hyphen_request_hyphen_simple.basePayload
+            public var base: Components.Schemas.PullRequestSimple.BasePayload
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links`.
-            public struct _linksPayload: Codable, Hashable, Sendable {
+            public struct _LinksPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links/comments`.
-                public var comments: Components.Schemas.link
+                public var comments: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links/commits`.
-                public var commits: Components.Schemas.link
+                public var commits: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links/statuses`.
-                public var statuses: Components.Schemas.link
+                public var statuses: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links/html`.
-                public var html: Components.Schemas.link
+                public var html: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links/issue`.
-                public var issue: Components.Schemas.link
+                public var issue: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links/review_comments`.
-                public var review_comments: Components.Schemas.link
+                public var reviewComments: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links/review_comment`.
-                public var review_comment: Components.Schemas.link
+                public var reviewComment: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links/self`.
-                public var _self: Components.Schemas.link
-                /// Creates a new `_linksPayload`.
+                public var _self: Components.Schemas.Link
+                /// Creates a new `_LinksPayload`.
                 ///
                 /// - Parameters:
                 ///   - comments:
@@ -3642,26 +3651,26 @@ public enum Components {
                 ///   - statuses:
                 ///   - html:
                 ///   - issue:
-                ///   - review_comments:
-                ///   - review_comment:
+                ///   - reviewComments:
+                ///   - reviewComment:
                 ///   - _self:
                 public init(
-                    comments: Components.Schemas.link,
-                    commits: Components.Schemas.link,
-                    statuses: Components.Schemas.link,
-                    html: Components.Schemas.link,
-                    issue: Components.Schemas.link,
-                    review_comments: Components.Schemas.link,
-                    review_comment: Components.Schemas.link,
-                    _self: Components.Schemas.link
+                    comments: Components.Schemas.Link,
+                    commits: Components.Schemas.Link,
+                    statuses: Components.Schemas.Link,
+                    html: Components.Schemas.Link,
+                    issue: Components.Schemas.Link,
+                    reviewComments: Components.Schemas.Link,
+                    reviewComment: Components.Schemas.Link,
+                    _self: Components.Schemas.Link
                 ) {
                     self.comments = comments
                     self.commits = commits
                     self.statuses = statuses
                     self.html = html
                     self.issue = issue
-                    self.review_comments = review_comments
-                    self.review_comment = review_comment
+                    self.reviewComments = reviewComments
+                    self.reviewComment = reviewComment
                     self._self = _self
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -3670,36 +3679,36 @@ public enum Components {
                     case statuses
                     case html
                     case issue
-                    case review_comments
-                    case review_comment
+                    case reviewComments = "review_comments"
+                    case reviewComment = "review_comment"
                     case _self = "self"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/_links`.
-            public var _links: Components.Schemas.pull_hyphen_request_hyphen_simple._linksPayload
+            public var _links: Components.Schemas.PullRequestSimple._LinksPayload
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/author_association`.
-            public var author_association: Components.Schemas.author_hyphen_association
+            public var authorAssociation: Components.Schemas.AuthorAssociation
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/auto_merge`.
-            public var auto_merge: Components.Schemas.auto_hyphen_merge?
+            public var autoMerge: Components.Schemas.AutoMerge?
             /// Indicates whether or not the pull request is a draft.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-simple/draft`.
             public var draft: Swift.Bool?
-            /// Creates a new `pull_hyphen_request_hyphen_simple`.
+            /// Creates a new `PullRequestSimple`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - id:
-            ///   - node_id:
-            ///   - html_url:
-            ///   - diff_url:
-            ///   - patch_url:
-            ///   - issue_url:
-            ///   - commits_url:
-            ///   - review_comments_url:
-            ///   - review_comment_url:
-            ///   - comments_url:
-            ///   - statuses_url:
+            ///   - nodeId:
+            ///   - htmlUrl:
+            ///   - diffUrl:
+            ///   - patchUrl:
+            ///   - issueUrl:
+            ///   - commitsUrl:
+            ///   - reviewCommentsUrl:
+            ///   - reviewCommentUrl:
+            ///   - commentsUrl:
+            ///   - statusesUrl:
             ///   - number:
             ///   - state:
             ///   - locked:
@@ -3708,72 +3717,72 @@ public enum Components {
             ///   - body:
             ///   - labels:
             ///   - milestone:
-            ///   - active_lock_reason:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - closed_at:
-            ///   - merged_at:
-            ///   - merge_commit_sha:
+            ///   - activeLockReason:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - closedAt:
+            ///   - mergedAt:
+            ///   - mergeCommitSha:
             ///   - assignee:
             ///   - assignees:
-            ///   - requested_reviewers:
-            ///   - requested_teams:
+            ///   - requestedReviewers:
+            ///   - requestedTeams:
             ///   - head:
             ///   - base:
             ///   - _links:
-            ///   - author_association:
-            ///   - auto_merge:
+            ///   - authorAssociation:
+            ///   - autoMerge:
             ///   - draft: Indicates whether or not the pull request is a draft.
             public init(
                 url: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                html_url: Swift.String,
-                diff_url: Swift.String,
-                patch_url: Swift.String,
-                issue_url: Swift.String,
-                commits_url: Swift.String,
-                review_comments_url: Swift.String,
-                review_comment_url: Swift.String,
-                comments_url: Swift.String,
-                statuses_url: Swift.String,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String,
+                diffUrl: Swift.String,
+                patchUrl: Swift.String,
+                issueUrl: Swift.String,
+                commitsUrl: Swift.String,
+                reviewCommentsUrl: Swift.String,
+                reviewCommentUrl: Swift.String,
+                commentsUrl: Swift.String,
+                statusesUrl: Swift.String,
                 number: Swift.Int,
                 state: Swift.String,
                 locked: Swift.Bool,
                 title: Swift.String,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                user: Components.Schemas.NullableSimpleUser? = nil,
                 body: Swift.String? = nil,
-                labels: Components.Schemas.pull_hyphen_request_hyphen_simple.labelsPayload,
-                milestone: Components.Schemas.nullable_hyphen_milestone? = nil,
-                active_lock_reason: Swift.String? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                closed_at: Foundation.Date? = nil,
-                merged_at: Foundation.Date? = nil,
-                merge_commit_sha: Swift.String? = nil,
-                assignee: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                assignees: [Components.Schemas.simple_hyphen_user]? = nil,
-                requested_reviewers: [Components.Schemas.simple_hyphen_user]? = nil,
-                requested_teams: [Components.Schemas.team]? = nil,
-                head: Components.Schemas.pull_hyphen_request_hyphen_simple.headPayload,
-                base: Components.Schemas.pull_hyphen_request_hyphen_simple.basePayload,
-                _links: Components.Schemas.pull_hyphen_request_hyphen_simple._linksPayload,
-                author_association: Components.Schemas.author_hyphen_association,
-                auto_merge: Components.Schemas.auto_hyphen_merge? = nil,
+                labels: Components.Schemas.PullRequestSimple.LabelsPayload,
+                milestone: Components.Schemas.NullableMilestone? = nil,
+                activeLockReason: Swift.String? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                closedAt: Foundation.Date? = nil,
+                mergedAt: Foundation.Date? = nil,
+                mergeCommitSha: Swift.String? = nil,
+                assignee: Components.Schemas.NullableSimpleUser? = nil,
+                assignees: [Components.Schemas.SimpleUser]? = nil,
+                requestedReviewers: [Components.Schemas.SimpleUser]? = nil,
+                requestedTeams: [Components.Schemas.Team]? = nil,
+                head: Components.Schemas.PullRequestSimple.HeadPayload,
+                base: Components.Schemas.PullRequestSimple.BasePayload,
+                _links: Components.Schemas.PullRequestSimple._LinksPayload,
+                authorAssociation: Components.Schemas.AuthorAssociation,
+                autoMerge: Components.Schemas.AutoMerge? = nil,
                 draft: Swift.Bool? = nil
             ) {
                 self.url = url
                 self.id = id
-                self.node_id = node_id
-                self.html_url = html_url
-                self.diff_url = diff_url
-                self.patch_url = patch_url
-                self.issue_url = issue_url
-                self.commits_url = commits_url
-                self.review_comments_url = review_comments_url
-                self.review_comment_url = review_comment_url
-                self.comments_url = comments_url
-                self.statuses_url = statuses_url
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
+                self.diffUrl = diffUrl
+                self.patchUrl = patchUrl
+                self.issueUrl = issueUrl
+                self.commitsUrl = commitsUrl
+                self.reviewCommentsUrl = reviewCommentsUrl
+                self.reviewCommentUrl = reviewCommentUrl
+                self.commentsUrl = commentsUrl
+                self.statusesUrl = statusesUrl
                 self.number = number
                 self.state = state
                 self.locked = locked
@@ -3782,36 +3791,36 @@ public enum Components {
                 self.body = body
                 self.labels = labels
                 self.milestone = milestone
-                self.active_lock_reason = active_lock_reason
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.closed_at = closed_at
-                self.merged_at = merged_at
-                self.merge_commit_sha = merge_commit_sha
+                self.activeLockReason = activeLockReason
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.closedAt = closedAt
+                self.mergedAt = mergedAt
+                self.mergeCommitSha = mergeCommitSha
                 self.assignee = assignee
                 self.assignees = assignees
-                self.requested_reviewers = requested_reviewers
-                self.requested_teams = requested_teams
+                self.requestedReviewers = requestedReviewers
+                self.requestedTeams = requestedTeams
                 self.head = head
                 self.base = base
                 self._links = _links
-                self.author_association = author_association
-                self.auto_merge = auto_merge
+                self.authorAssociation = authorAssociation
+                self.autoMerge = autoMerge
                 self.draft = draft
             }
             public enum CodingKeys: String, CodingKey {
                 case url
                 case id
-                case node_id
-                case html_url
-                case diff_url
-                case patch_url
-                case issue_url
-                case commits_url
-                case review_comments_url
-                case review_comment_url
-                case comments_url
-                case statuses_url
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
+                case diffUrl = "diff_url"
+                case patchUrl = "patch_url"
+                case issueUrl = "issue_url"
+                case commitsUrl = "commits_url"
+                case reviewCommentsUrl = "review_comments_url"
+                case reviewCommentUrl = "review_comment_url"
+                case commentsUrl = "comments_url"
+                case statusesUrl = "statuses_url"
                 case number
                 case state
                 case locked
@@ -3820,28 +3829,28 @@ public enum Components {
                 case body
                 case labels
                 case milestone
-                case active_lock_reason
-                case created_at
-                case updated_at
-                case closed_at
-                case merged_at
-                case merge_commit_sha
+                case activeLockReason = "active_lock_reason"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case closedAt = "closed_at"
+                case mergedAt = "merged_at"
+                case mergeCommitSha = "merge_commit_sha"
                 case assignee
                 case assignees
-                case requested_reviewers
-                case requested_teams
+                case requestedReviewers = "requested_reviewers"
+                case requestedTeams = "requested_teams"
                 case head
                 case base
                 case _links
-                case author_association
-                case auto_merge
+                case authorAssociation = "author_association"
+                case autoMerge = "auto_merge"
                 case draft
             }
         }
         /// Pull Request Review Comments are comments on a portion of the Pull Request's diff.
         ///
         /// - Remark: Generated from `#/components/schemas/pull-request-review-comment`.
-        public struct pull_hyphen_request_hyphen_review_hyphen_comment: Codable, Hashable, Sendable {
+        public struct PullRequestReviewComment: Codable, Hashable, Sendable {
             /// URL for the pull request review comment
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/url`.
@@ -3849,7 +3858,7 @@ public enum Components {
             /// The ID of the pull request review to which the comment belongs.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/pull_request_review_id`.
-            public var pull_request_review_id: Swift.Int64?
+            public var pullRequestReviewId: Swift.Int64?
             /// The ID of the pull request review comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/id`.
@@ -3857,11 +3866,11 @@ public enum Components {
             /// The node ID of the pull request review comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The diff of the line that the comment refers to.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/diff_hunk`.
-            public var diff_hunk: Swift.String
+            public var diffHunk: Swift.String
             /// The relative path of the file to which the comment applies.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/path`.
@@ -3873,46 +3882,46 @@ public enum Components {
             /// The index of the original line in the diff to which the comment applies. This field is closing down; use `original_line` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/original_position`.
-            public var original_position: Swift.Int?
+            public var originalPosition: Swift.Int?
             /// The SHA of the commit to which the comment applies.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/commit_id`.
-            public var commit_id: Swift.String
+            public var commitId: Swift.String
             /// The SHA of the original commit to which the comment applies.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/original_commit_id`.
-            public var original_commit_id: Swift.String
+            public var originalCommitId: Swift.String
             /// The comment ID to reply to.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/in_reply_to_id`.
-            public var in_reply_to_id: Swift.Int?
+            public var inReplyToId: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/user`.
-            public var user: Components.Schemas.simple_hyphen_user
+            public var user: Components.Schemas.SimpleUser
             /// The text of the comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/body`.
             public var body: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// HTML URL for the pull request review comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// URL for the pull request that the review comment belongs to.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/pull_request_url`.
-            public var pull_request_url: Swift.String
+            public var pullRequestUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/author_association`.
-            public var author_association: Components.Schemas.author_hyphen_association
+            public var authorAssociation: Components.Schemas.AuthorAssociation
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links`.
-            public struct _linksPayload: Codable, Hashable, Sendable {
+            public struct _LinksPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/self`.
-                public struct _selfPayload: Codable, Hashable, Sendable {
+                public struct _SelfPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/self/href`.
                     public var href: Swift.String
-                    /// Creates a new `_selfPayload`.
+                    /// Creates a new `_SelfPayload`.
                     ///
                     /// - Parameters:
                     ///   - href:
@@ -3924,12 +3933,12 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/self`.
-                public var _self: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment._linksPayload._selfPayload
+                public var _self: Components.Schemas.PullRequestReviewComment._LinksPayload._SelfPayload
                 /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/html`.
-                public struct htmlPayload: Codable, Hashable, Sendable {
+                public struct HtmlPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/html/href`.
                     public var href: Swift.String
-                    /// Creates a new `htmlPayload`.
+                    /// Creates a new `HtmlPayload`.
                     ///
                     /// - Parameters:
                     ///   - href:
@@ -3941,12 +3950,12 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/html`.
-                public var html: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment._linksPayload.htmlPayload
+                public var html: Components.Schemas.PullRequestReviewComment._LinksPayload.HtmlPayload
                 /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/pull_request`.
-                public struct pull_requestPayload: Codable, Hashable, Sendable {
+                public struct PullRequestPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/pull_request/href`.
                     public var href: Swift.String
-                    /// Creates a new `pull_requestPayload`.
+                    /// Creates a new `PullRequestPayload`.
                     ///
                     /// - Parameters:
                     ///   - href:
@@ -3958,49 +3967,49 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links/pull_request`.
-                public var pull_request: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment._linksPayload.pull_requestPayload
-                /// Creates a new `_linksPayload`.
+                public var pullRequest: Components.Schemas.PullRequestReviewComment._LinksPayload.PullRequestPayload
+                /// Creates a new `_LinksPayload`.
                 ///
                 /// - Parameters:
                 ///   - _self:
                 ///   - html:
-                ///   - pull_request:
+                ///   - pullRequest:
                 public init(
-                    _self: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment._linksPayload._selfPayload,
-                    html: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment._linksPayload.htmlPayload,
-                    pull_request: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment._linksPayload.pull_requestPayload
+                    _self: Components.Schemas.PullRequestReviewComment._LinksPayload._SelfPayload,
+                    html: Components.Schemas.PullRequestReviewComment._LinksPayload.HtmlPayload,
+                    pullRequest: Components.Schemas.PullRequestReviewComment._LinksPayload.PullRequestPayload
                 ) {
                     self._self = _self
                     self.html = html
-                    self.pull_request = pull_request
+                    self.pullRequest = pullRequest
                 }
                 public enum CodingKeys: String, CodingKey {
                     case _self = "self"
                     case html
-                    case pull_request
+                    case pullRequest = "pull_request"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/_links`.
-            public var _links: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment._linksPayload
+            public var _links: Components.Schemas.PullRequestReviewComment._LinksPayload
             /// The first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/start_line`.
-            public var start_line: Swift.Int?
+            public var startLine: Swift.Int?
             /// The first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/original_start_line`.
-            public var original_start_line: Swift.Int?
+            public var originalStartLine: Swift.Int?
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/start_side`.
-            @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable {
-                case LEFT = "LEFT"
-                case RIGHT = "RIGHT"
+            @frozen public enum StartSidePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case left = "LEFT"
+                case right = "RIGHT"
             }
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/start_side`.
-            public var start_side: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.start_sidePayload?
+            public var startSide: Components.Schemas.PullRequestReviewComment.StartSidePayload?
             /// The line of the blob to which the comment applies. The last line of the range for a multi-line comment
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/line`.
@@ -4008,188 +4017,188 @@ public enum Components {
             /// The line of the blob to which the comment applies. The last line of the range for a multi-line comment
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/original_line`.
-            public var original_line: Swift.Int?
+            public var originalLine: Swift.Int?
             /// The side of the diff to which the comment applies. The side of the last line of the range for a multi-line comment
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/side`.
-            @frozen public enum sidePayload: String, Codable, Hashable, Sendable {
-                case LEFT = "LEFT"
-                case RIGHT = "RIGHT"
+            @frozen public enum SidePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case left = "LEFT"
+                case right = "RIGHT"
             }
             /// The side of the diff to which the comment applies. The side of the last line of the range for a multi-line comment
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/side`.
-            public var side: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.sidePayload?
+            public var side: Components.Schemas.PullRequestReviewComment.SidePayload?
             /// The level at which the comment is targeted, can be a diff line or a file.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/subject_type`.
-            @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SubjectTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case line = "line"
                 case file = "file"
             }
             /// The level at which the comment is targeted, can be a diff line or a file.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/subject_type`.
-            public var subject_type: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.subject_typePayload?
+            public var subjectType: Components.Schemas.PullRequestReviewComment.SubjectTypePayload?
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/reactions`.
-            public var reactions: Components.Schemas.reaction_hyphen_rollup?
+            public var reactions: Components.Schemas.ReactionRollup?
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/body_html`.
-            public var body_html: Swift.String?
+            public var bodyHtml: Swift.String?
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/body_text`.
-            public var body_text: Swift.String?
-            /// Creates a new `pull_hyphen_request_hyphen_review_hyphen_comment`.
+            public var bodyText: Swift.String?
+            /// Creates a new `PullRequestReviewComment`.
             ///
             /// - Parameters:
             ///   - url: URL for the pull request review comment
-            ///   - pull_request_review_id: The ID of the pull request review to which the comment belongs.
+            ///   - pullRequestReviewId: The ID of the pull request review to which the comment belongs.
             ///   - id: The ID of the pull request review comment.
-            ///   - node_id: The node ID of the pull request review comment.
-            ///   - diff_hunk: The diff of the line that the comment refers to.
+            ///   - nodeId: The node ID of the pull request review comment.
+            ///   - diffHunk: The diff of the line that the comment refers to.
             ///   - path: The relative path of the file to which the comment applies.
             ///   - position: The line index in the diff to which the comment applies. This field is closing down; use `line` instead.
-            ///   - original_position: The index of the original line in the diff to which the comment applies. This field is closing down; use `original_line` instead.
-            ///   - commit_id: The SHA of the commit to which the comment applies.
-            ///   - original_commit_id: The SHA of the original commit to which the comment applies.
-            ///   - in_reply_to_id: The comment ID to reply to.
+            ///   - originalPosition: The index of the original line in the diff to which the comment applies. This field is closing down; use `original_line` instead.
+            ///   - commitId: The SHA of the commit to which the comment applies.
+            ///   - originalCommitId: The SHA of the original commit to which the comment applies.
+            ///   - inReplyToId: The comment ID to reply to.
             ///   - user:
             ///   - body: The text of the comment.
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - html_url: HTML URL for the pull request review comment.
-            ///   - pull_request_url: URL for the pull request that the review comment belongs to.
-            ///   - author_association:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - htmlUrl: HTML URL for the pull request review comment.
+            ///   - pullRequestUrl: URL for the pull request that the review comment belongs to.
+            ///   - authorAssociation:
             ///   - _links:
-            ///   - start_line: The first line of the range for a multi-line comment.
-            ///   - original_start_line: The first line of the range for a multi-line comment.
-            ///   - start_side: The side of the first line of the range for a multi-line comment.
+            ///   - startLine: The first line of the range for a multi-line comment.
+            ///   - originalStartLine: The first line of the range for a multi-line comment.
+            ///   - startSide: The side of the first line of the range for a multi-line comment.
             ///   - line: The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-            ///   - original_line: The line of the blob to which the comment applies. The last line of the range for a multi-line comment
+            ///   - originalLine: The line of the blob to which the comment applies. The last line of the range for a multi-line comment
             ///   - side: The side of the diff to which the comment applies. The side of the last line of the range for a multi-line comment
-            ///   - subject_type: The level at which the comment is targeted, can be a diff line or a file.
+            ///   - subjectType: The level at which the comment is targeted, can be a diff line or a file.
             ///   - reactions:
-            ///   - body_html:
-            ///   - body_text:
+            ///   - bodyHtml:
+            ///   - bodyText:
             public init(
                 url: Swift.String,
-                pull_request_review_id: Swift.Int64? = nil,
+                pullRequestReviewId: Swift.Int64? = nil,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                diff_hunk: Swift.String,
+                nodeId: Swift.String,
+                diffHunk: Swift.String,
                 path: Swift.String,
                 position: Swift.Int? = nil,
-                original_position: Swift.Int? = nil,
-                commit_id: Swift.String,
-                original_commit_id: Swift.String,
-                in_reply_to_id: Swift.Int? = nil,
-                user: Components.Schemas.simple_hyphen_user,
+                originalPosition: Swift.Int? = nil,
+                commitId: Swift.String,
+                originalCommitId: Swift.String,
+                inReplyToId: Swift.Int? = nil,
+                user: Components.Schemas.SimpleUser,
                 body: Swift.String,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                html_url: Swift.String,
-                pull_request_url: Swift.String,
-                author_association: Components.Schemas.author_hyphen_association,
-                _links: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment._linksPayload,
-                start_line: Swift.Int? = nil,
-                original_start_line: Swift.Int? = nil,
-                start_side: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.start_sidePayload? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                htmlUrl: Swift.String,
+                pullRequestUrl: Swift.String,
+                authorAssociation: Components.Schemas.AuthorAssociation,
+                _links: Components.Schemas.PullRequestReviewComment._LinksPayload,
+                startLine: Swift.Int? = nil,
+                originalStartLine: Swift.Int? = nil,
+                startSide: Components.Schemas.PullRequestReviewComment.StartSidePayload? = nil,
                 line: Swift.Int? = nil,
-                original_line: Swift.Int? = nil,
-                side: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.sidePayload? = nil,
-                subject_type: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.subject_typePayload? = nil,
-                reactions: Components.Schemas.reaction_hyphen_rollup? = nil,
-                body_html: Swift.String? = nil,
-                body_text: Swift.String? = nil
+                originalLine: Swift.Int? = nil,
+                side: Components.Schemas.PullRequestReviewComment.SidePayload? = nil,
+                subjectType: Components.Schemas.PullRequestReviewComment.SubjectTypePayload? = nil,
+                reactions: Components.Schemas.ReactionRollup? = nil,
+                bodyHtml: Swift.String? = nil,
+                bodyText: Swift.String? = nil
             ) {
                 self.url = url
-                self.pull_request_review_id = pull_request_review_id
+                self.pullRequestReviewId = pullRequestReviewId
                 self.id = id
-                self.node_id = node_id
-                self.diff_hunk = diff_hunk
+                self.nodeId = nodeId
+                self.diffHunk = diffHunk
                 self.path = path
                 self.position = position
-                self.original_position = original_position
-                self.commit_id = commit_id
-                self.original_commit_id = original_commit_id
-                self.in_reply_to_id = in_reply_to_id
+                self.originalPosition = originalPosition
+                self.commitId = commitId
+                self.originalCommitId = originalCommitId
+                self.inReplyToId = inReplyToId
                 self.user = user
                 self.body = body
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.html_url = html_url
-                self.pull_request_url = pull_request_url
-                self.author_association = author_association
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.htmlUrl = htmlUrl
+                self.pullRequestUrl = pullRequestUrl
+                self.authorAssociation = authorAssociation
                 self._links = _links
-                self.start_line = start_line
-                self.original_start_line = original_start_line
-                self.start_side = start_side
+                self.startLine = startLine
+                self.originalStartLine = originalStartLine
+                self.startSide = startSide
                 self.line = line
-                self.original_line = original_line
+                self.originalLine = originalLine
                 self.side = side
-                self.subject_type = subject_type
+                self.subjectType = subjectType
                 self.reactions = reactions
-                self.body_html = body_html
-                self.body_text = body_text
+                self.bodyHtml = bodyHtml
+                self.bodyText = bodyText
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case pull_request_review_id
+                case pullRequestReviewId = "pull_request_review_id"
                 case id
-                case node_id
-                case diff_hunk
+                case nodeId = "node_id"
+                case diffHunk = "diff_hunk"
                 case path
                 case position
-                case original_position
-                case commit_id
-                case original_commit_id
-                case in_reply_to_id
+                case originalPosition = "original_position"
+                case commitId = "commit_id"
+                case originalCommitId = "original_commit_id"
+                case inReplyToId = "in_reply_to_id"
                 case user
                 case body
-                case created_at
-                case updated_at
-                case html_url
-                case pull_request_url
-                case author_association
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case htmlUrl = "html_url"
+                case pullRequestUrl = "pull_request_url"
+                case authorAssociation = "author_association"
                 case _links
-                case start_line
-                case original_start_line
-                case start_side
+                case startLine = "start_line"
+                case originalStartLine = "original_start_line"
+                case startSide = "start_side"
                 case line
-                case original_line
+                case originalLine = "original_line"
                 case side
-                case subject_type
+                case subjectType = "subject_type"
                 case reactions
-                case body_html
-                case body_text
+                case bodyHtml = "body_html"
+                case bodyText = "body_text"
             }
         }
         /// Pull requests let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.
         ///
         /// - Remark: Generated from `#/components/schemas/pull-request`.
-        public struct pull_hyphen_request: Codable, Hashable, Sendable {
+        public struct PullRequest: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/pull-request/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/diff_url`.
-            public var diff_url: Swift.String
+            public var diffUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/patch_url`.
-            public var patch_url: Swift.String
+            public var patchUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/issue_url`.
-            public var issue_url: Swift.String
+            public var issueUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/review_comments_url`.
-            public var review_comments_url: Swift.String
+            public var reviewCommentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/review_comment_url`.
-            public var review_comment_url: Swift.String
+            public var reviewCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// Number uniquely identifying the pull request within its repository.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request/number`.
@@ -4197,14 +4206,14 @@ public enum Components {
             /// State of this Pull Request. Either `open` or `closed`.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case open = "open"
                 case closed = "closed"
             }
             /// State of this Pull Request. Either `open` or `closed`.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request/state`.
-            public var state: Components.Schemas.pull_hyphen_request.statePayload
+            public var state: Components.Schemas.PullRequest.StatePayload
             /// - Remark: Generated from `#/components/schemas/pull-request/locked`.
             public var locked: Swift.Bool
             /// The title of the pull request.
@@ -4212,30 +4221,30 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request/title`.
             public var title: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/user`.
-            public var user: Components.Schemas.simple_hyphen_user
+            public var user: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/pull-request/body`.
             public var body: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/pull-request/labelsPayload`.
-            public struct labelsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/pull-request/labelsPayload/id`.
+            /// - Remark: Generated from `#/components/schemas/pull-request/LabelsPayload`.
+            public struct LabelsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/pull-request/LabelsPayload/id`.
                 public var id: Swift.Int64
-                /// - Remark: Generated from `#/components/schemas/pull-request/labelsPayload/node_id`.
-                public var node_id: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request/labelsPayload/url`.
+                /// - Remark: Generated from `#/components/schemas/pull-request/LabelsPayload/node_id`.
+                public var nodeId: Swift.String
+                /// - Remark: Generated from `#/components/schemas/pull-request/LabelsPayload/url`.
                 public var url: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request/labelsPayload/name`.
+                /// - Remark: Generated from `#/components/schemas/pull-request/LabelsPayload/name`.
                 public var name: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request/labelsPayload/description`.
+                /// - Remark: Generated from `#/components/schemas/pull-request/LabelsPayload/description`.
                 public var description: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/pull-request/labelsPayload/color`.
+                /// - Remark: Generated from `#/components/schemas/pull-request/LabelsPayload/color`.
                 public var color: Swift.String
-                /// - Remark: Generated from `#/components/schemas/pull-request/labelsPayload/default`.
+                /// - Remark: Generated from `#/components/schemas/pull-request/LabelsPayload/default`.
                 public var _default: Swift.Bool
-                /// Creates a new `labelsPayloadPayload`.
+                /// Creates a new `LabelsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - id:
-                ///   - node_id:
+                ///   - nodeId:
                 ///   - url:
                 ///   - name:
                 ///   - description:
@@ -4243,7 +4252,7 @@ public enum Components {
                 ///   - _default:
                 public init(
                     id: Swift.Int64,
-                    node_id: Swift.String,
+                    nodeId: Swift.String,
                     url: Swift.String,
                     name: Swift.String,
                     description: Swift.String? = nil,
@@ -4251,7 +4260,7 @@ public enum Components {
                     _default: Swift.Bool
                 ) {
                     self.id = id
-                    self.node_id = node_id
+                    self.nodeId = nodeId
                     self.url = url
                     self.name = name
                     self.description = description
@@ -4260,7 +4269,7 @@ public enum Components {
                 }
                 public enum CodingKeys: String, CodingKey {
                     case id
-                    case node_id
+                    case nodeId = "node_id"
                     case url
                     case name
                     case description
@@ -4269,44 +4278,44 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request/labels`.
-            public typealias labelsPayload = [Components.Schemas.pull_hyphen_request.labelsPayloadPayload]
+            public typealias LabelsPayload = [Components.Schemas.PullRequest.LabelsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/pull-request/labels`.
-            public var labels: Components.Schemas.pull_hyphen_request.labelsPayload
+            public var labels: Components.Schemas.PullRequest.LabelsPayload
             /// - Remark: Generated from `#/components/schemas/pull-request/milestone`.
-            public var milestone: Components.Schemas.nullable_hyphen_milestone?
+            public var milestone: Components.Schemas.NullableMilestone?
             /// - Remark: Generated from `#/components/schemas/pull-request/active_lock_reason`.
-            public var active_lock_reason: Swift.String?
+            public var activeLockReason: Swift.String?
             /// - Remark: Generated from `#/components/schemas/pull-request/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/pull-request/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/pull-request/closed_at`.
-            public var closed_at: Foundation.Date?
+            public var closedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/pull-request/merged_at`.
-            public var merged_at: Foundation.Date?
+            public var mergedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/pull-request/merge_commit_sha`.
-            public var merge_commit_sha: Swift.String?
+            public var mergeCommitSha: Swift.String?
             /// - Remark: Generated from `#/components/schemas/pull-request/assignee`.
-            public var assignee: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var assignee: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/pull-request/assignees`.
-            public var assignees: [Components.Schemas.simple_hyphen_user]?
+            public var assignees: [Components.Schemas.SimpleUser]?
             /// - Remark: Generated from `#/components/schemas/pull-request/requested_reviewers`.
-            public var requested_reviewers: [Components.Schemas.simple_hyphen_user]?
+            public var requestedReviewers: [Components.Schemas.SimpleUser]?
             /// - Remark: Generated from `#/components/schemas/pull-request/requested_teams`.
-            public var requested_teams: [Components.Schemas.team_hyphen_simple]?
+            public var requestedTeams: [Components.Schemas.TeamSimple]?
             /// - Remark: Generated from `#/components/schemas/pull-request/head`.
-            public struct headPayload: Codable, Hashable, Sendable {
+            public struct HeadPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request/head/label`.
                 public var label: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request/head/ref`.
                 public var ref: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request/head/repo`.
-                public var repo: Components.Schemas.repository
+                public var repo: Components.Schemas.Repository
                 /// - Remark: Generated from `#/components/schemas/pull-request/head/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request/head/user`.
-                public var user: Components.Schemas.simple_hyphen_user
-                /// Creates a new `headPayload`.
+                public var user: Components.Schemas.SimpleUser
+                /// Creates a new `HeadPayload`.
                 ///
                 /// - Parameters:
                 ///   - label:
@@ -4317,9 +4326,9 @@ public enum Components {
                 public init(
                     label: Swift.String,
                     ref: Swift.String,
-                    repo: Components.Schemas.repository,
+                    repo: Components.Schemas.Repository,
                     sha: Swift.String,
-                    user: Components.Schemas.simple_hyphen_user
+                    user: Components.Schemas.SimpleUser
                 ) {
                     self.label = label
                     self.ref = ref
@@ -4336,20 +4345,20 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request/head`.
-            public var head: Components.Schemas.pull_hyphen_request.headPayload
+            public var head: Components.Schemas.PullRequest.HeadPayload
             /// - Remark: Generated from `#/components/schemas/pull-request/base`.
-            public struct basePayload: Codable, Hashable, Sendable {
+            public struct BasePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request/base/label`.
                 public var label: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request/base/ref`.
                 public var ref: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request/base/repo`.
-                public var repo: Components.Schemas.repository
+                public var repo: Components.Schemas.Repository
                 /// - Remark: Generated from `#/components/schemas/pull-request/base/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/pull-request/base/user`.
-                public var user: Components.Schemas.simple_hyphen_user
-                /// Creates a new `basePayload`.
+                public var user: Components.Schemas.SimpleUser
+                /// Creates a new `BasePayload`.
                 ///
                 /// - Parameters:
                 ///   - label:
@@ -4360,9 +4369,9 @@ public enum Components {
                 public init(
                     label: Swift.String,
                     ref: Swift.String,
-                    repo: Components.Schemas.repository,
+                    repo: Components.Schemas.Repository,
                     sha: Swift.String,
-                    user: Components.Schemas.simple_hyphen_user
+                    user: Components.Schemas.SimpleUser
                 ) {
                     self.label = label
                     self.ref = ref
@@ -4379,26 +4388,26 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request/base`.
-            public var base: Components.Schemas.pull_hyphen_request.basePayload
+            public var base: Components.Schemas.PullRequest.BasePayload
             /// - Remark: Generated from `#/components/schemas/pull-request/_links`.
-            public struct _linksPayload: Codable, Hashable, Sendable {
+            public struct _LinksPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request/_links/comments`.
-                public var comments: Components.Schemas.link
+                public var comments: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request/_links/commits`.
-                public var commits: Components.Schemas.link
+                public var commits: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request/_links/statuses`.
-                public var statuses: Components.Schemas.link
+                public var statuses: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request/_links/html`.
-                public var html: Components.Schemas.link
+                public var html: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request/_links/issue`.
-                public var issue: Components.Schemas.link
+                public var issue: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request/_links/review_comments`.
-                public var review_comments: Components.Schemas.link
+                public var reviewComments: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request/_links/review_comment`.
-                public var review_comment: Components.Schemas.link
+                public var reviewComment: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/pull-request/_links/self`.
-                public var _self: Components.Schemas.link
-                /// Creates a new `_linksPayload`.
+                public var _self: Components.Schemas.Link
+                /// Creates a new `_LinksPayload`.
                 ///
                 /// - Parameters:
                 ///   - comments:
@@ -4406,26 +4415,26 @@ public enum Components {
                 ///   - statuses:
                 ///   - html:
                 ///   - issue:
-                ///   - review_comments:
-                ///   - review_comment:
+                ///   - reviewComments:
+                ///   - reviewComment:
                 ///   - _self:
                 public init(
-                    comments: Components.Schemas.link,
-                    commits: Components.Schemas.link,
-                    statuses: Components.Schemas.link,
-                    html: Components.Schemas.link,
-                    issue: Components.Schemas.link,
-                    review_comments: Components.Schemas.link,
-                    review_comment: Components.Schemas.link,
-                    _self: Components.Schemas.link
+                    comments: Components.Schemas.Link,
+                    commits: Components.Schemas.Link,
+                    statuses: Components.Schemas.Link,
+                    html: Components.Schemas.Link,
+                    issue: Components.Schemas.Link,
+                    reviewComments: Components.Schemas.Link,
+                    reviewComment: Components.Schemas.Link,
+                    _self: Components.Schemas.Link
                 ) {
                     self.comments = comments
                     self.commits = commits
                     self.statuses = statuses
                     self.html = html
                     self.issue = issue
-                    self.review_comments = review_comments
-                    self.review_comment = review_comment
+                    self.reviewComments = reviewComments
+                    self.reviewComment = reviewComment
                     self._self = _self
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -4434,17 +4443,17 @@ public enum Components {
                     case statuses
                     case html
                     case issue
-                    case review_comments
-                    case review_comment
+                    case reviewComments = "review_comments"
+                    case reviewComment = "review_comment"
                     case _self = "self"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request/_links`.
-            public var _links: Components.Schemas.pull_hyphen_request._linksPayload
+            public var _links: Components.Schemas.PullRequest._LinksPayload
             /// - Remark: Generated from `#/components/schemas/pull-request/author_association`.
-            public var author_association: Components.Schemas.author_hyphen_association
+            public var authorAssociation: Components.Schemas.AuthorAssociation
             /// - Remark: Generated from `#/components/schemas/pull-request/auto_merge`.
-            public var auto_merge: Components.Schemas.auto_hyphen_merge?
+            public var autoMerge: Components.Schemas.AutoMerge?
             /// Indicates whether or not the pull request is a draft.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request/draft`.
@@ -4456,17 +4465,17 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request/rebaseable`.
             public var rebaseable: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/pull-request/mergeable_state`.
-            public var mergeable_state: Swift.String
+            public var mergeableState: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request/merged_by`.
-            public var merged_by: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var mergedBy: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/pull-request/comments`.
             public var comments: Swift.Int
             /// - Remark: Generated from `#/components/schemas/pull-request/review_comments`.
-            public var review_comments: Swift.Int
+            public var reviewComments: Swift.Int
             /// Indicates whether maintainers can modify the pull request.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request/maintainer_can_modify`.
-            public var maintainer_can_modify: Swift.Bool
+            public var maintainerCanModify: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/pull-request/commits`.
             public var commits: Swift.Int
             /// - Remark: Generated from `#/components/schemas/pull-request/additions`.
@@ -4474,22 +4483,22 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request/deletions`.
             public var deletions: Swift.Int
             /// - Remark: Generated from `#/components/schemas/pull-request/changed_files`.
-            public var changed_files: Swift.Int
-            /// Creates a new `pull_hyphen_request`.
+            public var changedFiles: Swift.Int
+            /// Creates a new `PullRequest`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - id:
-            ///   - node_id:
-            ///   - html_url:
-            ///   - diff_url:
-            ///   - patch_url:
-            ///   - issue_url:
-            ///   - commits_url:
-            ///   - review_comments_url:
-            ///   - review_comment_url:
-            ///   - comments_url:
-            ///   - statuses_url:
+            ///   - nodeId:
+            ///   - htmlUrl:
+            ///   - diffUrl:
+            ///   - patchUrl:
+            ///   - issueUrl:
+            ///   - commitsUrl:
+            ///   - reviewCommentsUrl:
+            ///   - reviewCommentUrl:
+            ///   - commentsUrl:
+            ///   - statusesUrl:
             ///   - number: Number uniquely identifying the pull request within its repository.
             ///   - state: State of this Pull Request. Either `open` or `closed`.
             ///   - locked:
@@ -4498,96 +4507,96 @@ public enum Components {
             ///   - body:
             ///   - labels:
             ///   - milestone:
-            ///   - active_lock_reason:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - closed_at:
-            ///   - merged_at:
-            ///   - merge_commit_sha:
+            ///   - activeLockReason:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - closedAt:
+            ///   - mergedAt:
+            ///   - mergeCommitSha:
             ///   - assignee:
             ///   - assignees:
-            ///   - requested_reviewers:
-            ///   - requested_teams:
+            ///   - requestedReviewers:
+            ///   - requestedTeams:
             ///   - head:
             ///   - base:
             ///   - _links:
-            ///   - author_association:
-            ///   - auto_merge:
+            ///   - authorAssociation:
+            ///   - autoMerge:
             ///   - draft: Indicates whether or not the pull request is a draft.
             ///   - merged:
             ///   - mergeable:
             ///   - rebaseable:
-            ///   - mergeable_state:
-            ///   - merged_by:
+            ///   - mergeableState:
+            ///   - mergedBy:
             ///   - comments:
-            ///   - review_comments:
-            ///   - maintainer_can_modify: Indicates whether maintainers can modify the pull request.
+            ///   - reviewComments:
+            ///   - maintainerCanModify: Indicates whether maintainers can modify the pull request.
             ///   - commits:
             ///   - additions:
             ///   - deletions:
-            ///   - changed_files:
+            ///   - changedFiles:
             public init(
                 url: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                html_url: Swift.String,
-                diff_url: Swift.String,
-                patch_url: Swift.String,
-                issue_url: Swift.String,
-                commits_url: Swift.String,
-                review_comments_url: Swift.String,
-                review_comment_url: Swift.String,
-                comments_url: Swift.String,
-                statuses_url: Swift.String,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String,
+                diffUrl: Swift.String,
+                patchUrl: Swift.String,
+                issueUrl: Swift.String,
+                commitsUrl: Swift.String,
+                reviewCommentsUrl: Swift.String,
+                reviewCommentUrl: Swift.String,
+                commentsUrl: Swift.String,
+                statusesUrl: Swift.String,
                 number: Swift.Int,
-                state: Components.Schemas.pull_hyphen_request.statePayload,
+                state: Components.Schemas.PullRequest.StatePayload,
                 locked: Swift.Bool,
                 title: Swift.String,
-                user: Components.Schemas.simple_hyphen_user,
+                user: Components.Schemas.SimpleUser,
                 body: Swift.String? = nil,
-                labels: Components.Schemas.pull_hyphen_request.labelsPayload,
-                milestone: Components.Schemas.nullable_hyphen_milestone? = nil,
-                active_lock_reason: Swift.String? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                closed_at: Foundation.Date? = nil,
-                merged_at: Foundation.Date? = nil,
-                merge_commit_sha: Swift.String? = nil,
-                assignee: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                assignees: [Components.Schemas.simple_hyphen_user]? = nil,
-                requested_reviewers: [Components.Schemas.simple_hyphen_user]? = nil,
-                requested_teams: [Components.Schemas.team_hyphen_simple]? = nil,
-                head: Components.Schemas.pull_hyphen_request.headPayload,
-                base: Components.Schemas.pull_hyphen_request.basePayload,
-                _links: Components.Schemas.pull_hyphen_request._linksPayload,
-                author_association: Components.Schemas.author_hyphen_association,
-                auto_merge: Components.Schemas.auto_hyphen_merge? = nil,
+                labels: Components.Schemas.PullRequest.LabelsPayload,
+                milestone: Components.Schemas.NullableMilestone? = nil,
+                activeLockReason: Swift.String? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                closedAt: Foundation.Date? = nil,
+                mergedAt: Foundation.Date? = nil,
+                mergeCommitSha: Swift.String? = nil,
+                assignee: Components.Schemas.NullableSimpleUser? = nil,
+                assignees: [Components.Schemas.SimpleUser]? = nil,
+                requestedReviewers: [Components.Schemas.SimpleUser]? = nil,
+                requestedTeams: [Components.Schemas.TeamSimple]? = nil,
+                head: Components.Schemas.PullRequest.HeadPayload,
+                base: Components.Schemas.PullRequest.BasePayload,
+                _links: Components.Schemas.PullRequest._LinksPayload,
+                authorAssociation: Components.Schemas.AuthorAssociation,
+                autoMerge: Components.Schemas.AutoMerge? = nil,
                 draft: Swift.Bool? = nil,
                 merged: Swift.Bool,
                 mergeable: Swift.Bool? = nil,
                 rebaseable: Swift.Bool? = nil,
-                mergeable_state: Swift.String,
-                merged_by: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                mergeableState: Swift.String,
+                mergedBy: Components.Schemas.NullableSimpleUser? = nil,
                 comments: Swift.Int,
-                review_comments: Swift.Int,
-                maintainer_can_modify: Swift.Bool,
+                reviewComments: Swift.Int,
+                maintainerCanModify: Swift.Bool,
                 commits: Swift.Int,
                 additions: Swift.Int,
                 deletions: Swift.Int,
-                changed_files: Swift.Int
+                changedFiles: Swift.Int
             ) {
                 self.url = url
                 self.id = id
-                self.node_id = node_id
-                self.html_url = html_url
-                self.diff_url = diff_url
-                self.patch_url = patch_url
-                self.issue_url = issue_url
-                self.commits_url = commits_url
-                self.review_comments_url = review_comments_url
-                self.review_comment_url = review_comment_url
-                self.comments_url = comments_url
-                self.statuses_url = statuses_url
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
+                self.diffUrl = diffUrl
+                self.patchUrl = patchUrl
+                self.issueUrl = issueUrl
+                self.commitsUrl = commitsUrl
+                self.reviewCommentsUrl = reviewCommentsUrl
+                self.reviewCommentUrl = reviewCommentUrl
+                self.commentsUrl = commentsUrl
+                self.statusesUrl = statusesUrl
                 self.number = number
                 self.state = state
                 self.locked = locked
@@ -4596,48 +4605,48 @@ public enum Components {
                 self.body = body
                 self.labels = labels
                 self.milestone = milestone
-                self.active_lock_reason = active_lock_reason
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.closed_at = closed_at
-                self.merged_at = merged_at
-                self.merge_commit_sha = merge_commit_sha
+                self.activeLockReason = activeLockReason
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.closedAt = closedAt
+                self.mergedAt = mergedAt
+                self.mergeCommitSha = mergeCommitSha
                 self.assignee = assignee
                 self.assignees = assignees
-                self.requested_reviewers = requested_reviewers
-                self.requested_teams = requested_teams
+                self.requestedReviewers = requestedReviewers
+                self.requestedTeams = requestedTeams
                 self.head = head
                 self.base = base
                 self._links = _links
-                self.author_association = author_association
-                self.auto_merge = auto_merge
+                self.authorAssociation = authorAssociation
+                self.autoMerge = autoMerge
                 self.draft = draft
                 self.merged = merged
                 self.mergeable = mergeable
                 self.rebaseable = rebaseable
-                self.mergeable_state = mergeable_state
-                self.merged_by = merged_by
+                self.mergeableState = mergeableState
+                self.mergedBy = mergedBy
                 self.comments = comments
-                self.review_comments = review_comments
-                self.maintainer_can_modify = maintainer_can_modify
+                self.reviewComments = reviewComments
+                self.maintainerCanModify = maintainerCanModify
                 self.commits = commits
                 self.additions = additions
                 self.deletions = deletions
-                self.changed_files = changed_files
+                self.changedFiles = changedFiles
             }
             public enum CodingKeys: String, CodingKey {
                 case url
                 case id
-                case node_id
-                case html_url
-                case diff_url
-                case patch_url
-                case issue_url
-                case commits_url
-                case review_comments_url
-                case review_comment_url
-                case comments_url
-                case statuses_url
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
+                case diffUrl = "diff_url"
+                case patchUrl = "patch_url"
+                case issueUrl = "issue_url"
+                case commitsUrl = "commits_url"
+                case reviewCommentsUrl = "review_comments_url"
+                case reviewCommentUrl = "review_comment_url"
+                case commentsUrl = "comments_url"
+                case statusesUrl = "statuses_url"
                 case number
                 case state
                 case locked
@@ -4646,47 +4655,47 @@ public enum Components {
                 case body
                 case labels
                 case milestone
-                case active_lock_reason
-                case created_at
-                case updated_at
-                case closed_at
-                case merged_at
-                case merge_commit_sha
+                case activeLockReason = "active_lock_reason"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case closedAt = "closed_at"
+                case mergedAt = "merged_at"
+                case mergeCommitSha = "merge_commit_sha"
                 case assignee
                 case assignees
-                case requested_reviewers
-                case requested_teams
+                case requestedReviewers = "requested_reviewers"
+                case requestedTeams = "requested_teams"
                 case head
                 case base
                 case _links
-                case author_association
-                case auto_merge
+                case authorAssociation = "author_association"
+                case autoMerge = "auto_merge"
                 case draft
                 case merged
                 case mergeable
                 case rebaseable
-                case mergeable_state
-                case merged_by
+                case mergeableState = "mergeable_state"
+                case mergedBy = "merged_by"
                 case comments
-                case review_comments
-                case maintainer_can_modify
+                case reviewComments = "review_comments"
+                case maintainerCanModify = "maintainer_can_modify"
                 case commits
                 case additions
                 case deletions
-                case changed_files
+                case changedFiles = "changed_files"
             }
         }
         /// Pull Request Merge Result
         ///
         /// - Remark: Generated from `#/components/schemas/pull-request-merge-result`.
-        public struct pull_hyphen_request_hyphen_merge_hyphen_result: Codable, Hashable, Sendable {
+        public struct PullRequestMergeResult: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/pull-request-merge-result/sha`.
             public var sha: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-merge-result/merged`.
             public var merged: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/pull-request-merge-result/message`.
             public var message: Swift.String
-            /// Creates a new `pull_hyphen_request_hyphen_merge_hyphen_result`.
+            /// Creates a new `PullRequestMergeResult`.
             ///
             /// - Parameters:
             ///   - sha:
@@ -4710,19 +4719,19 @@ public enum Components {
         /// Pull Request Review Request
         ///
         /// - Remark: Generated from `#/components/schemas/pull-request-review-request`.
-        public struct pull_hyphen_request_hyphen_review_hyphen_request: Codable, Hashable, Sendable {
+        public struct PullRequestReviewRequest: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/pull-request-review-request/users`.
-            public var users: [Components.Schemas.simple_hyphen_user]
+            public var users: [Components.Schemas.SimpleUser]
             /// - Remark: Generated from `#/components/schemas/pull-request-review-request/teams`.
-            public var teams: [Components.Schemas.team]
-            /// Creates a new `pull_hyphen_request_hyphen_review_hyphen_request`.
+            public var teams: [Components.Schemas.Team]
+            /// Creates a new `PullRequestReviewRequest`.
             ///
             /// - Parameters:
             ///   - users:
             ///   - teams:
             public init(
-                users: [Components.Schemas.simple_hyphen_user],
-                teams: [Components.Schemas.team]
+                users: [Components.Schemas.SimpleUser],
+                teams: [Components.Schemas.Team]
             ) {
                 self.users = users
                 self.teams = teams
@@ -4735,15 +4744,15 @@ public enum Components {
         /// Pull Request Reviews are reviews on pull requests.
         ///
         /// - Remark: Generated from `#/components/schemas/pull-request-review`.
-        public struct pull_hyphen_request_hyphen_review: Codable, Hashable, Sendable {
+        public struct PullRequestReview: Codable, Hashable, Sendable {
             /// Unique identifier of the review
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/pull-request-review/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-review/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// The text of the review.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review/body`.
@@ -4751,16 +4760,16 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/pull-request-review/state`.
             public var state: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-review/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-review/pull_request_url`.
-            public var pull_request_url: Swift.String
+            public var pullRequestUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/pull-request-review/_links`.
-            public struct _linksPayload: Codable, Hashable, Sendable {
+            public struct _LinksPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/pull-request-review/_links/html`.
-                public struct htmlPayload: Codable, Hashable, Sendable {
+                public struct HtmlPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-review/_links/html/href`.
                     public var href: Swift.String
-                    /// Creates a new `htmlPayload`.
+                    /// Creates a new `HtmlPayload`.
                     ///
                     /// - Parameters:
                     ///   - href:
@@ -4772,12 +4781,12 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request-review/_links/html`.
-                public var html: Components.Schemas.pull_hyphen_request_hyphen_review._linksPayload.htmlPayload
+                public var html: Components.Schemas.PullRequestReview._LinksPayload.HtmlPayload
                 /// - Remark: Generated from `#/components/schemas/pull-request-review/_links/pull_request`.
-                public struct pull_requestPayload: Codable, Hashable, Sendable {
+                public struct PullRequestPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/pull-request-review/_links/pull_request/href`.
                     public var href: Swift.String
-                    /// Creates a new `pull_requestPayload`.
+                    /// Creates a new `PullRequestPayload`.
                     ///
                     /// - Parameters:
                     ///   - href:
@@ -4789,198 +4798,198 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pull-request-review/_links/pull_request`.
-                public var pull_request: Components.Schemas.pull_hyphen_request_hyphen_review._linksPayload.pull_requestPayload
-                /// Creates a new `_linksPayload`.
+                public var pullRequest: Components.Schemas.PullRequestReview._LinksPayload.PullRequestPayload
+                /// Creates a new `_LinksPayload`.
                 ///
                 /// - Parameters:
                 ///   - html:
-                ///   - pull_request:
+                ///   - pullRequest:
                 public init(
-                    html: Components.Schemas.pull_hyphen_request_hyphen_review._linksPayload.htmlPayload,
-                    pull_request: Components.Schemas.pull_hyphen_request_hyphen_review._linksPayload.pull_requestPayload
+                    html: Components.Schemas.PullRequestReview._LinksPayload.HtmlPayload,
+                    pullRequest: Components.Schemas.PullRequestReview._LinksPayload.PullRequestPayload
                 ) {
                     self.html = html
-                    self.pull_request = pull_request
+                    self.pullRequest = pullRequest
                 }
                 public enum CodingKeys: String, CodingKey {
                     case html
-                    case pull_request
+                    case pullRequest = "pull_request"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/pull-request-review/_links`.
-            public var _links: Components.Schemas.pull_hyphen_request_hyphen_review._linksPayload
+            public var _links: Components.Schemas.PullRequestReview._LinksPayload
             /// - Remark: Generated from `#/components/schemas/pull-request-review/submitted_at`.
-            public var submitted_at: Foundation.Date?
+            public var submittedAt: Foundation.Date?
             /// A commit SHA for the review. If the commit object was garbage collected or forcibly deleted, then it no longer exists in Git and this value will be `null`.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review/commit_id`.
-            public var commit_id: Swift.String?
+            public var commitId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/pull-request-review/body_html`.
-            public var body_html: Swift.String?
+            public var bodyHtml: Swift.String?
             /// - Remark: Generated from `#/components/schemas/pull-request-review/body_text`.
-            public var body_text: Swift.String?
+            public var bodyText: Swift.String?
             /// - Remark: Generated from `#/components/schemas/pull-request-review/author_association`.
-            public var author_association: Components.Schemas.author_hyphen_association
-            /// Creates a new `pull_hyphen_request_hyphen_review`.
+            public var authorAssociation: Components.Schemas.AuthorAssociation
+            /// Creates a new `PullRequestReview`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the review
-            ///   - node_id:
+            ///   - nodeId:
             ///   - user:
             ///   - body: The text of the review.
             ///   - state:
-            ///   - html_url:
-            ///   - pull_request_url:
+            ///   - htmlUrl:
+            ///   - pullRequestUrl:
             ///   - _links:
-            ///   - submitted_at:
-            ///   - commit_id: A commit SHA for the review. If the commit object was garbage collected or forcibly deleted, then it no longer exists in Git and this value will be `null`.
-            ///   - body_html:
-            ///   - body_text:
-            ///   - author_association:
+            ///   - submittedAt:
+            ///   - commitId: A commit SHA for the review. If the commit object was garbage collected or forcibly deleted, then it no longer exists in Git and this value will be `null`.
+            ///   - bodyHtml:
+            ///   - bodyText:
+            ///   - authorAssociation:
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                nodeId: Swift.String,
+                user: Components.Schemas.NullableSimpleUser? = nil,
                 body: Swift.String,
                 state: Swift.String,
-                html_url: Swift.String,
-                pull_request_url: Swift.String,
-                _links: Components.Schemas.pull_hyphen_request_hyphen_review._linksPayload,
-                submitted_at: Foundation.Date? = nil,
-                commit_id: Swift.String? = nil,
-                body_html: Swift.String? = nil,
-                body_text: Swift.String? = nil,
-                author_association: Components.Schemas.author_hyphen_association
+                htmlUrl: Swift.String,
+                pullRequestUrl: Swift.String,
+                _links: Components.Schemas.PullRequestReview._LinksPayload,
+                submittedAt: Foundation.Date? = nil,
+                commitId: Swift.String? = nil,
+                bodyHtml: Swift.String? = nil,
+                bodyText: Swift.String? = nil,
+                authorAssociation: Components.Schemas.AuthorAssociation
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.user = user
                 self.body = body
                 self.state = state
-                self.html_url = html_url
-                self.pull_request_url = pull_request_url
+                self.htmlUrl = htmlUrl
+                self.pullRequestUrl = pullRequestUrl
                 self._links = _links
-                self.submitted_at = submitted_at
-                self.commit_id = commit_id
-                self.body_html = body_html
-                self.body_text = body_text
-                self.author_association = author_association
+                self.submittedAt = submittedAt
+                self.commitId = commitId
+                self.bodyHtml = bodyHtml
+                self.bodyText = bodyText
+                self.authorAssociation = authorAssociation
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case user
                 case body
                 case state
-                case html_url
-                case pull_request_url
+                case htmlUrl = "html_url"
+                case pullRequestUrl = "pull_request_url"
                 case _links
-                case submitted_at
-                case commit_id
-                case body_html
-                case body_text
-                case author_association
+                case submittedAt = "submitted_at"
+                case commitId = "commit_id"
+                case bodyHtml = "body_html"
+                case bodyText = "body_text"
+                case authorAssociation = "author_association"
             }
         }
         /// Legacy Review Comment
         ///
         /// - Remark: Generated from `#/components/schemas/review-comment`.
-        public struct review_hyphen_comment: Codable, Hashable, Sendable {
+        public struct ReviewComment: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/review-comment/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/pull_request_review_id`.
-            public var pull_request_review_id: Swift.Int64?
+            public var pullRequestReviewId: Swift.Int64?
             /// - Remark: Generated from `#/components/schemas/review-comment/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/review-comment/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/diff_hunk`.
-            public var diff_hunk: Swift.String
+            public var diffHunk: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/path`.
             public var path: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/position`.
             public var position: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/review-comment/original_position`.
-            public var original_position: Swift.Int
+            public var originalPosition: Swift.Int
             /// - Remark: Generated from `#/components/schemas/review-comment/commit_id`.
-            public var commit_id: Swift.String
+            public var commitId: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/original_commit_id`.
-            public var original_commit_id: Swift.String
+            public var originalCommitId: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/in_reply_to_id`.
-            public var in_reply_to_id: Swift.Int?
+            public var inReplyToId: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/review-comment/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/review-comment/body`.
             public var body: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/review-comment/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/review-comment/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/pull_request_url`.
-            public var pull_request_url: Swift.String
+            public var pullRequestUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/review-comment/author_association`.
-            public var author_association: Components.Schemas.author_hyphen_association
+            public var authorAssociation: Components.Schemas.AuthorAssociation
             /// - Remark: Generated from `#/components/schemas/review-comment/_links`.
-            public struct _linksPayload: Codable, Hashable, Sendable {
+            public struct _LinksPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/review-comment/_links/self`.
-                public var _self: Components.Schemas.link
+                public var _self: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/review-comment/_links/html`.
-                public var html: Components.Schemas.link
+                public var html: Components.Schemas.Link
                 /// - Remark: Generated from `#/components/schemas/review-comment/_links/pull_request`.
-                public var pull_request: Components.Schemas.link
-                /// Creates a new `_linksPayload`.
+                public var pullRequest: Components.Schemas.Link
+                /// Creates a new `_LinksPayload`.
                 ///
                 /// - Parameters:
                 ///   - _self:
                 ///   - html:
-                ///   - pull_request:
+                ///   - pullRequest:
                 public init(
-                    _self: Components.Schemas.link,
-                    html: Components.Schemas.link,
-                    pull_request: Components.Schemas.link
+                    _self: Components.Schemas.Link,
+                    html: Components.Schemas.Link,
+                    pullRequest: Components.Schemas.Link
                 ) {
                     self._self = _self
                     self.html = html
-                    self.pull_request = pull_request
+                    self.pullRequest = pullRequest
                 }
                 public enum CodingKeys: String, CodingKey {
                     case _self = "self"
                     case html
-                    case pull_request
+                    case pullRequest = "pull_request"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/review-comment/_links`.
-            public var _links: Components.Schemas.review_hyphen_comment._linksPayload
+            public var _links: Components.Schemas.ReviewComment._LinksPayload
             /// - Remark: Generated from `#/components/schemas/review-comment/body_text`.
-            public var body_text: Swift.String?
+            public var bodyText: Swift.String?
             /// - Remark: Generated from `#/components/schemas/review-comment/body_html`.
-            public var body_html: Swift.String?
+            public var bodyHtml: Swift.String?
             /// - Remark: Generated from `#/components/schemas/review-comment/reactions`.
-            public var reactions: Components.Schemas.reaction_hyphen_rollup?
+            public var reactions: Components.Schemas.ReactionRollup?
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/side`.
-            @frozen public enum sidePayload: String, Codable, Hashable, Sendable {
-                case LEFT = "LEFT"
-                case RIGHT = "RIGHT"
+            @frozen public enum SidePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case left = "LEFT"
+                case right = "RIGHT"
             }
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/side`.
-            public var side: Components.Schemas.review_hyphen_comment.sidePayload?
+            public var side: Components.Schemas.ReviewComment.SidePayload?
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/start_side`.
-            @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable {
-                case LEFT = "LEFT"
-                case RIGHT = "RIGHT"
+            @frozen public enum StartSidePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case left = "LEFT"
+                case right = "RIGHT"
             }
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/start_side`.
-            public var start_side: Components.Schemas.review_hyphen_comment.start_sidePayload?
+            public var startSide: Components.Schemas.ReviewComment.StartSidePayload?
             /// The line of the blob to which the comment applies. The last line of the range for a multi-line comment
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/line`.
@@ -4988,134 +4997,134 @@ public enum Components {
             /// The original line of the blob to which the comment applies. The last line of the range for a multi-line comment
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/original_line`.
-            public var original_line: Swift.Int?
+            public var originalLine: Swift.Int?
             /// The first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/start_line`.
-            public var start_line: Swift.Int?
+            public var startLine: Swift.Int?
             /// The original first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/original_start_line`.
-            public var original_start_line: Swift.Int?
-            /// Creates a new `review_hyphen_comment`.
+            public var originalStartLine: Swift.Int?
+            /// Creates a new `ReviewComment`.
             ///
             /// - Parameters:
             ///   - url:
-            ///   - pull_request_review_id:
+            ///   - pullRequestReviewId:
             ///   - id:
-            ///   - node_id:
-            ///   - diff_hunk:
+            ///   - nodeId:
+            ///   - diffHunk:
             ///   - path:
             ///   - position:
-            ///   - original_position:
-            ///   - commit_id:
-            ///   - original_commit_id:
-            ///   - in_reply_to_id:
+            ///   - originalPosition:
+            ///   - commitId:
+            ///   - originalCommitId:
+            ///   - inReplyToId:
             ///   - user:
             ///   - body:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - html_url:
-            ///   - pull_request_url:
-            ///   - author_association:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - htmlUrl:
+            ///   - pullRequestUrl:
+            ///   - authorAssociation:
             ///   - _links:
-            ///   - body_text:
-            ///   - body_html:
+            ///   - bodyText:
+            ///   - bodyHtml:
             ///   - reactions:
             ///   - side: The side of the first line of the range for a multi-line comment.
-            ///   - start_side: The side of the first line of the range for a multi-line comment.
+            ///   - startSide: The side of the first line of the range for a multi-line comment.
             ///   - line: The line of the blob to which the comment applies. The last line of the range for a multi-line comment
-            ///   - original_line: The original line of the blob to which the comment applies. The last line of the range for a multi-line comment
-            ///   - start_line: The first line of the range for a multi-line comment.
-            ///   - original_start_line: The original first line of the range for a multi-line comment.
+            ///   - originalLine: The original line of the blob to which the comment applies. The last line of the range for a multi-line comment
+            ///   - startLine: The first line of the range for a multi-line comment.
+            ///   - originalStartLine: The original first line of the range for a multi-line comment.
             public init(
                 url: Swift.String,
-                pull_request_review_id: Swift.Int64? = nil,
+                pullRequestReviewId: Swift.Int64? = nil,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                diff_hunk: Swift.String,
+                nodeId: Swift.String,
+                diffHunk: Swift.String,
                 path: Swift.String,
                 position: Swift.Int? = nil,
-                original_position: Swift.Int,
-                commit_id: Swift.String,
-                original_commit_id: Swift.String,
-                in_reply_to_id: Swift.Int? = nil,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                originalPosition: Swift.Int,
+                commitId: Swift.String,
+                originalCommitId: Swift.String,
+                inReplyToId: Swift.Int? = nil,
+                user: Components.Schemas.NullableSimpleUser? = nil,
                 body: Swift.String,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                html_url: Swift.String,
-                pull_request_url: Swift.String,
-                author_association: Components.Schemas.author_hyphen_association,
-                _links: Components.Schemas.review_hyphen_comment._linksPayload,
-                body_text: Swift.String? = nil,
-                body_html: Swift.String? = nil,
-                reactions: Components.Schemas.reaction_hyphen_rollup? = nil,
-                side: Components.Schemas.review_hyphen_comment.sidePayload? = nil,
-                start_side: Components.Schemas.review_hyphen_comment.start_sidePayload? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                htmlUrl: Swift.String,
+                pullRequestUrl: Swift.String,
+                authorAssociation: Components.Schemas.AuthorAssociation,
+                _links: Components.Schemas.ReviewComment._LinksPayload,
+                bodyText: Swift.String? = nil,
+                bodyHtml: Swift.String? = nil,
+                reactions: Components.Schemas.ReactionRollup? = nil,
+                side: Components.Schemas.ReviewComment.SidePayload? = nil,
+                startSide: Components.Schemas.ReviewComment.StartSidePayload? = nil,
                 line: Swift.Int? = nil,
-                original_line: Swift.Int? = nil,
-                start_line: Swift.Int? = nil,
-                original_start_line: Swift.Int? = nil
+                originalLine: Swift.Int? = nil,
+                startLine: Swift.Int? = nil,
+                originalStartLine: Swift.Int? = nil
             ) {
                 self.url = url
-                self.pull_request_review_id = pull_request_review_id
+                self.pullRequestReviewId = pullRequestReviewId
                 self.id = id
-                self.node_id = node_id
-                self.diff_hunk = diff_hunk
+                self.nodeId = nodeId
+                self.diffHunk = diffHunk
                 self.path = path
                 self.position = position
-                self.original_position = original_position
-                self.commit_id = commit_id
-                self.original_commit_id = original_commit_id
-                self.in_reply_to_id = in_reply_to_id
+                self.originalPosition = originalPosition
+                self.commitId = commitId
+                self.originalCommitId = originalCommitId
+                self.inReplyToId = inReplyToId
                 self.user = user
                 self.body = body
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.html_url = html_url
-                self.pull_request_url = pull_request_url
-                self.author_association = author_association
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.htmlUrl = htmlUrl
+                self.pullRequestUrl = pullRequestUrl
+                self.authorAssociation = authorAssociation
                 self._links = _links
-                self.body_text = body_text
-                self.body_html = body_html
+                self.bodyText = bodyText
+                self.bodyHtml = bodyHtml
                 self.reactions = reactions
                 self.side = side
-                self.start_side = start_side
+                self.startSide = startSide
                 self.line = line
-                self.original_line = original_line
-                self.start_line = start_line
-                self.original_start_line = original_start_line
+                self.originalLine = originalLine
+                self.startLine = startLine
+                self.originalStartLine = originalStartLine
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case pull_request_review_id
+                case pullRequestReviewId = "pull_request_review_id"
                 case id
-                case node_id
-                case diff_hunk
+                case nodeId = "node_id"
+                case diffHunk = "diff_hunk"
                 case path
                 case position
-                case original_position
-                case commit_id
-                case original_commit_id
-                case in_reply_to_id
+                case originalPosition = "original_position"
+                case commitId = "commit_id"
+                case originalCommitId = "original_commit_id"
+                case inReplyToId = "in_reply_to_id"
                 case user
                 case body
-                case created_at
-                case updated_at
-                case html_url
-                case pull_request_url
-                case author_association
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case htmlUrl = "html_url"
+                case pullRequestUrl = "pull_request_url"
+                case authorAssociation = "author_association"
                 case _links
-                case body_text
-                case body_html
+                case bodyText = "body_text"
+                case bodyHtml = "body_html"
                 case reactions
                 case side
-                case start_side
+                case startSide = "start_side"
                 case line
-                case original_line
-                case start_line
-                case original_start_line
+                case originalLine = "original_line"
+                case startLine = "start_line"
+                case originalStartLine = "original_start_line"
             }
         }
     }
@@ -5124,57 +5133,57 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/parameters/since`.
-        public typealias since = Foundation.Date
+        public typealias Since = Foundation.Date
         /// The unique identifier of the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-id`.
-        public typealias comment_hyphen_id = Swift.Int64
+        public typealias CommentId = Swift.Int64
         /// The property to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/sort`.
-        @frozen public enum sort: String, Codable, Hashable, Sendable {
+        @frozen public enum Sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
         }
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The number that identifies the pull request.
         ///
         /// - Remark: Generated from `#/components/parameters/pull-number`.
-        public typealias pull_hyphen_number = Swift.Int
+        public typealias PullNumber = Swift.Int
         /// The unique identifier of the review.
         ///
         /// - Remark: Generated from `#/components/parameters/review-id`.
-        public typealias review_hyphen_id = Swift.Int
+        public typealias ReviewId = Swift.Int
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct validation_failed_simple: Sendable, Hashable {
+        public struct ValidationFailedSimple: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed_simple/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed_simple/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error_hyphen_simple)
+                case json(Components.Schemas.ValidationErrorSimple)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error_hyphen_simple {
+                public var json: Components.Schemas.ValidationErrorSimple {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5184,25 +5193,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed_simple.Body
-            /// Creates a new `validation_failed_simple`.
+            public var body: Components.Responses.ValidationFailedSimple.Body
+            /// Creates a new `ValidationFailedSimple`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed_simple.Body) {
+            public init(body: Components.Responses.ValidationFailedSimple.Body) {
                 self.body = body
             }
         }
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5212,25 +5221,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5240,29 +5249,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5272,54 +5281,82 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct service_unavailable: Sendable, Hashable {
+        public struct InternalError: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.BasicError)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.BasicError {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.InternalError.Body
+            /// Creates a new `InternalError`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.InternalError.Body) {
+                self.body = body
+            }
+        }
+        public struct ServiceUnavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/service_unavailable/content/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/code`.
                     public var code: Swift.String?
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/message`.
                     public var message: Swift.String?
                     /// - Remark: Generated from `#/components/responses/service_unavailable/content/json/documentation_url`.
-                    public var documentation_url: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var documentationUrl: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - code:
                     ///   - message:
-                    ///   - documentation_url:
+                    ///   - documentationUrl:
                     public init(
                         code: Swift.String? = nil,
                         message: Swift.String? = nil,
-                        documentation_url: Swift.String? = nil
+                        documentationUrl: Swift.String? = nil
                     ) {
                         self.code = code
                         self.message = message
-                        self.documentation_url = documentation_url
+                        self.documentationUrl = documentationUrl
                     }
                     public enum CodingKeys: String, CodingKey {
                         case code
                         case message
-                        case documentation_url
+                        case documentationUrl = "documentation_url"
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/service_unavailable/content/application\/json`.
-                case json(Components.Responses.service_unavailable.Body.jsonPayload)
+                case json(Components.Responses.ServiceUnavailable.Body.JsonPayload)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Responses.service_unavailable.Body.jsonPayload {
+                public var json: Components.Responses.ServiceUnavailable.Body.JsonPayload {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5329,53 +5366,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.service_unavailable.Body
-            /// Creates a new `service_unavailable`.
+            public var body: Components.Responses.ServiceUnavailable.Body
+            /// Creates a new `ServiceUnavailable`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.service_unavailable.Body) {
+            public init(body: Components.Responses.ServiceUnavailable.Body) {
                 self.body = body
             }
         }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
-                self.body = body
-            }
-        }
-        public struct unacceptable: Sendable, Hashable {
+        public struct Unacceptable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/unacceptable/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/unacceptable/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5385,12 +5394,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.unacceptable.Body
-            /// Creates a new `unacceptable`.
+            public var body: Components.Responses.Unacceptable.Body
+            /// Creates a new `Unacceptable`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.unacceptable.Body) {
+            public init(body: Components.Responses.Unacceptable.Body) {
                 self.body = body
             }
         }
@@ -5398,7 +5407,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -5423,7 +5432,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)`.
-    public enum pulls_sol_list {
+    public enum PullsList {
         public static let id: Swift.String = "pulls/list"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/path`.
@@ -5431,29 +5440,29 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.pulls_sol_list.Input.Path
+            public var path: Operations.PullsList.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -5461,7 +5470,7 @@ public enum Operations {
                 /// Either `open`, `closed`, or `all` to filter by state.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/state`.
-                public var state: Operations.pulls_sol_list.Input.Query.statePayload?
+                public var state: Operations.PullsList.Input.Query.StatePayload?
                 /// Filter pulls by head user or head organization and branch name in the format of `user:ref-name` or `organization:ref-name`. For example: `github:new-script-format` or `octocat:test-branch`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/head`.
@@ -5471,33 +5480,33 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/base`.
                 public var base: Swift.String?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case popularity = "popularity"
-                    case long_hyphen_running = "long-running"
+                    case longRunning = "long-running"
                 }
                 /// What to sort results by. `popularity` will sort by the number of comments. `long-running` will sort by date created and will limit the results to pull requests that have been open for more than a month and have had activity within the past month.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/sort`.
-                public var sort: Operations.pulls_sol_list.Input.Query.sortPayload?
+                public var sort: Operations.PullsList.Input.Query.SortPayload?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum DirectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction of the sort. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/direction`.
-                public var direction: Operations.pulls_sol_list.Input.Query.directionPayload?
+                public var direction: Operations.PullsList.Input.Query.DirectionPayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -5506,39 +5515,39 @@ public enum Operations {
                 ///   - base: Filter pulls by base branch name. Example: `gh-pages`.
                 ///   - sort: What to sort results by. `popularity` will sort by the number of comments. `long-running` will sort by date created and will limit the results to pull requests that have been open for more than a month and have had activity within the past month.
                 ///   - direction: The direction of the sort. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    state: Operations.pulls_sol_list.Input.Query.statePayload? = nil,
+                    state: Operations.PullsList.Input.Query.StatePayload? = nil,
                     head: Swift.String? = nil,
                     base: Swift.String? = nil,
-                    sort: Operations.pulls_sol_list.Input.Query.sortPayload? = nil,
-                    direction: Operations.pulls_sol_list.Input.Query.directionPayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    sort: Operations.PullsList.Input.Query.SortPayload? = nil,
+                    direction: Operations.PullsList.Input.Query.DirectionPayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.state = state
                     self.head = head
                     self.base = base
                     self.sort = sort
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.pulls_sol_list.Input.Query
+            public var query: Operations.PullsList.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsList.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsList.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_list.Input.Headers
+            public var headers: Operations.PullsList.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5546,9 +5555,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_list.Input.Path,
-                query: Operations.pulls_sol_list.Input.Query = .init(),
-                headers: Operations.pulls_sol_list.Input.Headers = .init()
+                path: Operations.PullsList.Input.Path,
+                query: Operations.PullsList.Input.Query = .init(),
+                headers: Operations.PullsList.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5560,26 +5569,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_list.Output.Ok.Headers
+                public var headers: Operations.PullsList.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.pull_hyphen_request_hyphen_simple])
+                    case json([Components.Schemas.PullRequestSimple])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.pull_hyphen_request_hyphen_simple] {
+                    public var json: [Components.Schemas.PullRequestSimple] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5589,15 +5598,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_list.Output.Ok.Body
+                public var body: Operations.PullsList.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_list.Output.Ok.Headers = .init(),
-                    body: Operations.pulls_sol_list.Output.Ok.Body
+                    headers: Operations.PullsList.Output.Ok.Headers = .init(),
+                    body: Operations.PullsList.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5608,12 +5617,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_list.Output.Ok)
+            case ok(Operations.PullsList.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_list.Output.Ok {
+            public var ok: Operations.PullsList.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5631,12 +5640,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5654,12 +5671,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5720,7 +5737,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)`.
-    public enum pulls_sol_create {
+    public enum PullsCreate {
         public static let id: Swift.String = "pulls/create"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/path`.
@@ -5728,41 +5745,41 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.pulls_sol_create.Input.Path
+            public var path: Operations.PullsCreate.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_create.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsCreate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_create.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsCreate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_create.Input.Headers
+            public var headers: Operations.PullsCreate.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The title of the new pull request. Required unless `issue` is specified.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody/json/title`.
@@ -5774,7 +5791,7 @@ public enum Operations {
                     /// The name of the repository where the changes in the pull request were made. This field is required for cross-repository pull requests if both repositories are owned by the same organization.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody/json/head_repo`.
-                    public var head_repo: Swift.String?
+                    public var headRepo: Swift.String?
                     /// The name of the branch you want the changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repository that requests a merge to a base of another repository.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody/json/base`.
@@ -5786,7 +5803,7 @@ public enum Operations {
                     /// Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody/json/maintainer_can_modify`.
-                    public var maintainer_can_modify: Swift.Bool?
+                    public var maintainerCanModify: Swift.Bool?
                     /// Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody/json/draft`.
@@ -5795,51 +5812,51 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody/json/issue`.
                     public var issue: Swift.Int64?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - title: The title of the new pull request. Required unless `issue` is specified.
                     ///   - head: The name of the branch where your changes are implemented. For cross-repository pull requests in the same network, namespace `head` with a user like this: `username:branch`.
-                    ///   - head_repo: The name of the repository where the changes in the pull request were made. This field is required for cross-repository pull requests if both repositories are owned by the same organization.
+                    ///   - headRepo: The name of the repository where the changes in the pull request were made. This field is required for cross-repository pull requests if both repositories are owned by the same organization.
                     ///   - base: The name of the branch you want the changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repository that requests a merge to a base of another repository.
                     ///   - body: The contents of the pull request.
-                    ///   - maintainer_can_modify: Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+                    ///   - maintainerCanModify: Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
                     ///   - draft: Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
                     ///   - issue: An issue in the repository to convert to a pull request. The issue title, body, and comments will become the title, body, and comments on the new pull request. Required unless `title` is specified.
                     public init(
                         title: Swift.String? = nil,
                         head: Swift.String,
-                        head_repo: Swift.String? = nil,
+                        headRepo: Swift.String? = nil,
                         base: Swift.String,
                         body: Swift.String? = nil,
-                        maintainer_can_modify: Swift.Bool? = nil,
+                        maintainerCanModify: Swift.Bool? = nil,
                         draft: Swift.Bool? = nil,
                         issue: Swift.Int64? = nil
                     ) {
                         self.title = title
                         self.head = head
-                        self.head_repo = head_repo
+                        self.headRepo = headRepo
                         self.base = base
                         self.body = body
-                        self.maintainer_can_modify = maintainer_can_modify
+                        self.maintainerCanModify = maintainerCanModify
                         self.draft = draft
                         self.issue = issue
                     }
                     public enum CodingKeys: String, CodingKey {
                         case title
                         case head
-                        case head_repo
+                        case headRepo = "head_repo"
                         case base
                         case body
-                        case maintainer_can_modify
+                        case maintainerCanModify = "maintainer_can_modify"
                         case draft
                         case issue
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_create.Input.Body.jsonPayload)
+                case json(Operations.PullsCreate.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_create.Input.Body
+            public var body: Operations.PullsCreate.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5847,9 +5864,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_create.Input.Path,
-                headers: Operations.pulls_sol_create.Input.Headers = .init(),
-                body: Operations.pulls_sol_create.Input.Body
+                path: Operations.PullsCreate.Input.Path,
+                headers: Operations.PullsCreate.Input.Headers = .init(),
+                body: Operations.PullsCreate.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -5861,26 +5878,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_create.Output.Created.Headers
+                public var headers: Operations.PullsCreate.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request)
+                    case json(Components.Schemas.PullRequest)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request {
+                    public var json: Components.Schemas.PullRequest {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5890,15 +5907,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_create.Output.Created.Body
+                public var body: Operations.PullsCreate.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_create.Output.Created.Headers = .init(),
-                    body: Operations.pulls_sol_create.Output.Created.Body
+                    headers: Operations.PullsCreate.Output.Created.Headers = .init(),
+                    body: Operations.PullsCreate.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5909,12 +5926,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.pulls_sol_create.Output.Created)
+            case created(Operations.PullsCreate.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.pulls_sol_create.Output.Created {
+            public var created: Operations.PullsCreate.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5932,12 +5949,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5955,12 +5972,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/post(pulls/create)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6018,7 +6035,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/get(pulls/list-review-comments-for-repo)`.
-    public enum pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo {
+    public enum PullsListReviewCommentsForRepo {
         public static let id: Swift.String = "pulls/list-review-comments-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/path`.
@@ -6026,91 +6043,91 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.PullsListReviewCommentsForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
-                    case created_at = "created_at"
+                    case createdAt = "created_at"
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/sort`.
-                public var sort: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Query.sortPayload?
+                public var sort: Operations.PullsListReviewCommentsForRepo.Input.Query.SortPayload?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum DirectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort results. Ignored without `sort` parameter.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/direction`.
-                public var direction: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Query.directionPayload?
+                public var direction: Operations.PullsListReviewCommentsForRepo.Input.Query.DirectionPayload?
                 /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/since`.
-                public var since: Components.Parameters.since?
+                public var since: Components.Parameters.Since?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - sort:
                 ///   - direction: The direction to sort results. Ignored without `sort` parameter.
                 ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    sort: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Query.sortPayload? = nil,
-                    direction: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Query.directionPayload? = nil,
-                    since: Components.Parameters.since? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    sort: Operations.PullsListReviewCommentsForRepo.Input.Query.SortPayload? = nil,
+                    direction: Operations.PullsListReviewCommentsForRepo.Input.Query.DirectionPayload? = nil,
+                    since: Components.Parameters.Since? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.sort = sort
                     self.direction = direction
                     self.since = since
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Query
+            public var query: Operations.PullsListReviewCommentsForRepo.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListReviewCommentsForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListReviewCommentsForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.PullsListReviewCommentsForRepo.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6118,9 +6135,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Path,
-                query: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Query = .init(),
-                headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Headers = .init()
+                path: Operations.PullsListReviewCommentsForRepo.Input.Path,
+                query: Operations.PullsListReviewCommentsForRepo.Input.Query = .init(),
+                headers: Operations.PullsListReviewCommentsForRepo.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6132,26 +6149,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output.Ok.Headers
+                public var headers: Operations.PullsListReviewCommentsForRepo.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment])
+                    case json([Components.Schemas.PullRequestReviewComment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment] {
+                    public var json: [Components.Schemas.PullRequestReviewComment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6161,15 +6178,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output.Ok.Body
+                public var body: Operations.PullsListReviewCommentsForRepo.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output.Ok.Headers = .init(),
-                    body: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output.Ok.Body
+                    headers: Operations.PullsListReviewCommentsForRepo.Output.Ok.Headers = .init(),
+                    body: Operations.PullsListReviewCommentsForRepo.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -6180,12 +6197,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/get(pulls/list-review-comments-for-repo)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output.Ok)
+            case ok(Operations.PullsListReviewCommentsForRepo.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Output.Ok {
+            public var ok: Operations.PullsListReviewCommentsForRepo.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6242,7 +6259,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/get(pulls/get-review-comment)`.
-    public enum pulls_sol_get_hyphen_review_hyphen_comment {
+    public enum PullsGetReviewComment {
         public static let id: Swift.String = "pulls/get-review-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/GET/path`.
@@ -6250,52 +6267,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/GET/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input.Path
+            public var path: Operations.PullsGetReviewComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_get_hyphen_review_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsGetReviewComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_get_hyphen_review_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsGetReviewComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input.Headers
+            public var headers: Operations.PullsGetReviewComment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input.Path,
-                headers: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Input.Headers = .init()
+                path: Operations.PullsGetReviewComment.Input.Path,
+                headers: Operations.PullsGetReviewComment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6306,12 +6323,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment)
+                    case json(Components.Schemas.PullRequestReviewComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment {
+                    public var json: Components.Schemas.PullRequestReviewComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6321,12 +6338,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Output.Ok.Body
+                public var body: Operations.PullsGetReviewComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Output.Ok.Body) {
+                public init(body: Operations.PullsGetReviewComment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6335,12 +6352,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/get(pulls/get-review-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_get_hyphen_review_hyphen_comment.Output.Ok)
+            case ok(Operations.PullsGetReviewComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_get_hyphen_review_hyphen_comment.Output.Ok {
+            public var ok: Operations.PullsGetReviewComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6358,12 +6375,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/get(pulls/get-review-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6420,7 +6437,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/patch(pulls/update-review-comment)`.
-    public enum pulls_sol_update_hyphen_review_hyphen_comment {
+    public enum PullsUpdateReviewComment {
         public static let id: Swift.String = "pulls/update-review-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/path`.
@@ -6428,53 +6445,53 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Path
+            public var path: Operations.PullsUpdateReviewComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_update_hyphen_review_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsUpdateReviewComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_update_hyphen_review_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsUpdateReviewComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Headers
+            public var headers: Operations.PullsUpdateReviewComment.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The text of the reply to the review comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The text of the reply to the review comment.
@@ -6486,9 +6503,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Body.jsonPayload)
+                case json(Operations.PullsUpdateReviewComment.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Body
+            public var body: Operations.PullsUpdateReviewComment.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6496,9 +6513,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Path,
-                headers: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Headers = .init(),
-                body: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input.Body
+                path: Operations.PullsUpdateReviewComment.Input.Path,
+                headers: Operations.PullsUpdateReviewComment.Input.Headers = .init(),
+                body: Operations.PullsUpdateReviewComment.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -6510,12 +6527,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment)
+                    case json(Components.Schemas.PullRequestReviewComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment {
+                    public var json: Components.Schemas.PullRequestReviewComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6525,12 +6542,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output.Ok.Body
+                public var body: Operations.PullsUpdateReviewComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output.Ok.Body) {
+                public init(body: Operations.PullsUpdateReviewComment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6539,12 +6556,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/patch(pulls/update-review-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output.Ok)
+            case ok(Operations.PullsUpdateReviewComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output.Ok {
+            public var ok: Operations.PullsUpdateReviewComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6594,7 +6611,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/delete(pulls/delete-review-comment)`.
-    public enum pulls_sol_delete_hyphen_review_hyphen_comment {
+    public enum PullsDeleteReviewComment {
         public static let id: Swift.String = "pulls/delete-review-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/DELETE/path`.
@@ -6602,52 +6619,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/DELETE/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.comment_id = comment_id
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input.Path
+            public var path: Operations.PullsDeleteReviewComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_delete_hyphen_review_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsDeleteReviewComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_delete_hyphen_review_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsDeleteReviewComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input.Headers
+            public var headers: Operations.PullsDeleteReviewComment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input.Path,
-                headers: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Input.Headers = .init()
+                path: Operations.PullsDeleteReviewComment.Input.Path,
+                headers: Operations.PullsDeleteReviewComment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6663,12 +6680,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/delete(pulls/delete-review-comment)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Output.NoContent)
+            case noContent(Operations.PullsDeleteReviewComment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/delete(pulls/delete-review-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Output.NoContent {
+            public var noContent: Operations.PullsDeleteReviewComment.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6686,12 +6711,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/delete(pulls/delete-review-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6763,7 +6788,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)`.
-    public enum pulls_sol_get {
+    public enum PullsGet {
         public static let id: Swift.String = "pulls/get"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/GET/path`.
@@ -6771,52 +6796,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_get.Input.Path
+            public var path: Operations.PullsGet.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_get.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsGet.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_get.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsGet.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_get.Input.Headers
+            public var headers: Operations.PullsGet.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_get.Input.Path,
-                headers: Operations.pulls_sol_get.Input.Headers = .init()
+                path: Operations.PullsGet.Input.Path,
+                headers: Operations.PullsGet.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6827,12 +6852,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request)
+                    case json(Components.Schemas.PullRequest)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request {
+                    public var json: Components.Schemas.PullRequest {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6842,12 +6867,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_get.Output.Ok.Body
+                public var body: Operations.PullsGet.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_get.Output.Ok.Body) {
+                public init(body: Operations.PullsGet.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6856,12 +6881,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_get.Output.Ok)
+            case ok(Operations.PullsGet.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_get.Output.Ok {
+            public var ok: Operations.PullsGet.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6879,12 +6904,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6902,12 +6935,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6925,12 +6958,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/406`.
             ///
             /// HTTP response code: `406 notAcceptable`.
-            case notAcceptable(Components.Responses.unacceptable)
+            case notAcceptable(Components.Responses.Unacceptable)
             /// The associated value of the enum case if `self` is `.notAcceptable`.
             ///
             /// - Throws: An error if `self` is not `.notAcceptable`.
             /// - SeeAlso: `.notAcceptable`.
-            public var notAcceptable: Components.Responses.unacceptable {
+            public var notAcceptable: Components.Responses.Unacceptable {
                 get throws {
                     switch self {
                     case let .notAcceptable(response):
@@ -6948,12 +6981,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/500`.
             ///
             /// HTTP response code: `500 internalServerError`.
-            case internalServerError(Components.Responses.internal_error)
+            case internalServerError(Components.Responses.InternalError)
             /// The associated value of the enum case if `self` is `.internalServerError`.
             ///
             /// - Throws: An error if `self` is not `.internalServerError`.
             /// - SeeAlso: `.internalServerError`.
-            public var internalServerError: Components.Responses.internal_error {
+            public var internalServerError: Components.Responses.InternalError {
                 get throws {
                     switch self {
                     case let .internalServerError(response):
@@ -6971,12 +7004,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -7035,7 +7068,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/pulls/{pull_number}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)`.
-    public enum pulls_sol_update {
+    public enum PullsUpdate {
         public static let id: Swift.String = "pulls/update"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/path`.
@@ -7043,48 +7076,48 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_update.Input.Path
+            public var path: Operations.PullsUpdate.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_update.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsUpdate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_update.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsUpdate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_update.Input.Headers
+            public var headers: Operations.PullsUpdate.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The title of the pull request.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody/json/title`.
@@ -7096,14 +7129,14 @@ public enum Operations {
                     /// State of this Pull Request. Either `open` or `closed`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case open = "open"
                         case closed = "closed"
                     }
                     /// State of this Pull Request. Either `open` or `closed`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody/json/state`.
-                    public var state: Operations.pulls_sol_update.Input.Body.jsonPayload.statePayload?
+                    public var state: Operations.PullsUpdate.Input.Body.JsonPayload.StatePayload?
                     /// The name of the branch you want your changes pulled into. This should be an existing branch on the current repository. You cannot update the base branch on a pull request to point to another repository.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody/json/base`.
@@ -7111,40 +7144,40 @@ public enum Operations {
                     /// Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody/json/maintainer_can_modify`.
-                    public var maintainer_can_modify: Swift.Bool?
-                    /// Creates a new `jsonPayload`.
+                    public var maintainerCanModify: Swift.Bool?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - title: The title of the pull request.
                     ///   - body: The contents of the pull request.
                     ///   - state: State of this Pull Request. Either `open` or `closed`.
                     ///   - base: The name of the branch you want your changes pulled into. This should be an existing branch on the current repository. You cannot update the base branch on a pull request to point to another repository.
-                    ///   - maintainer_can_modify: Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+                    ///   - maintainerCanModify: Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
                     public init(
                         title: Swift.String? = nil,
                         body: Swift.String? = nil,
-                        state: Operations.pulls_sol_update.Input.Body.jsonPayload.statePayload? = nil,
+                        state: Operations.PullsUpdate.Input.Body.JsonPayload.StatePayload? = nil,
                         base: Swift.String? = nil,
-                        maintainer_can_modify: Swift.Bool? = nil
+                        maintainerCanModify: Swift.Bool? = nil
                     ) {
                         self.title = title
                         self.body = body
                         self.state = state
                         self.base = base
-                        self.maintainer_can_modify = maintainer_can_modify
+                        self.maintainerCanModify = maintainerCanModify
                     }
                     public enum CodingKeys: String, CodingKey {
                         case title
                         case body
                         case state
                         case base
-                        case maintainer_can_modify
+                        case maintainerCanModify = "maintainer_can_modify"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_update.Input.Body.jsonPayload)
+                case json(Operations.PullsUpdate.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_update.Input.Body?
+            public var body: Operations.PullsUpdate.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7152,9 +7185,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_update.Input.Path,
-                headers: Operations.pulls_sol_update.Input.Headers = .init(),
-                body: Operations.pulls_sol_update.Input.Body? = nil
+                path: Operations.PullsUpdate.Input.Path,
+                headers: Operations.PullsUpdate.Input.Headers = .init(),
+                body: Operations.PullsUpdate.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -7166,12 +7199,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request)
+                    case json(Components.Schemas.PullRequest)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request {
+                    public var json: Components.Schemas.PullRequest {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7181,12 +7214,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_update.Output.Ok.Body
+                public var body: Operations.PullsUpdate.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_update.Output.Ok.Body) {
+                public init(body: Operations.PullsUpdate.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7195,12 +7228,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_update.Output.Ok)
+            case ok(Operations.PullsUpdate.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_update.Output.Ok {
+            public var ok: Operations.PullsUpdate.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7218,12 +7251,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7241,12 +7274,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/patch(pulls/update)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7304,7 +7337,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/get(pulls/list-review-comments)`.
-    public enum pulls_sol_list_hyphen_review_hyphen_comments {
+    public enum PullsListReviewComments {
         public static let id: Swift.String = "pulls/list-review-comments"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/path`.
@@ -7312,99 +7345,99 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Path
+            public var path: Operations.PullsListReviewComments.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort`.
-                @frozen public enum sort: String, Codable, Hashable, Sendable {
+                @frozen public enum Sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
                 /// The property to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query/sort`.
-                public var sort: Components.Parameters.sort?
+                public var sort: Components.Parameters.Sort?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum DirectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort results. Ignored without `sort` parameter.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query/direction`.
-                public var direction: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Query.directionPayload?
+                public var direction: Operations.PullsListReviewComments.Input.Query.DirectionPayload?
                 /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query/since`.
-                public var since: Components.Parameters.since?
+                public var since: Components.Parameters.Since?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - sort: The property to sort the results by.
                 ///   - direction: The direction to sort results. Ignored without `sort` parameter.
                 ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    sort: Components.Parameters.sort? = nil,
-                    direction: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Query.directionPayload? = nil,
-                    since: Components.Parameters.since? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    sort: Components.Parameters.Sort? = nil,
+                    direction: Operations.PullsListReviewComments.Input.Query.DirectionPayload? = nil,
+                    since: Components.Parameters.Since? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.sort = sort
                     self.direction = direction
                     self.since = since
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Query
+            public var query: Operations.PullsListReviewComments.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_review_hyphen_comments.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListReviewComments.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_review_hyphen_comments.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListReviewComments.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Headers
+            public var headers: Operations.PullsListReviewComments.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7412,9 +7445,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Path,
-                query: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Query = .init(),
-                headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Input.Headers = .init()
+                path: Operations.PullsListReviewComments.Input.Path,
+                query: Operations.PullsListReviewComments.Input.Query = .init(),
+                headers: Operations.PullsListReviewComments.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7426,26 +7459,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output.Ok.Headers
+                public var headers: Operations.PullsListReviewComments.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment])
+                    case json([Components.Schemas.PullRequestReviewComment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment] {
+                    public var json: [Components.Schemas.PullRequestReviewComment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7455,15 +7488,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output.Ok.Body
+                public var body: Operations.PullsListReviewComments.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output.Ok.Headers = .init(),
-                    body: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output.Ok.Body
+                    headers: Operations.PullsListReviewComments.Output.Ok.Headers = .init(),
+                    body: Operations.PullsListReviewComments.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -7474,12 +7507,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/get(pulls/list-review-comments)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output.Ok)
+            case ok(Operations.PullsListReviewComments.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_list_hyphen_review_hyphen_comments.Output.Ok {
+            public var ok: Operations.PullsListReviewComments.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7543,7 +7576,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/post(pulls/create-review-comment)`.
-    public enum pulls_sol_create_hyphen_review_hyphen_comment {
+    public enum PullsCreateReviewComment {
         public static let id: Swift.String = "pulls/create-review-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/path`.
@@ -7551,48 +7584,48 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Path
+            public var path: Operations.PullsCreateReviewComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_create_hyphen_review_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsCreateReviewComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_create_hyphen_review_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsCreateReviewComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Headers
+            public var headers: Operations.PullsCreateReviewComment.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The text of the review comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/body`.
@@ -7600,7 +7633,7 @@ public enum Operations {
                     /// The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the `position`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/commit_id`.
-                    public var commit_id: Swift.String
+                    public var commitId: Swift.String
                     /// The relative path to the file that necessitates a comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/path`.
@@ -7613,14 +7646,14 @@ public enum Operations {
                     /// In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/side`.
-                    @frozen public enum sidePayload: String, Codable, Hashable, Sendable {
-                        case LEFT = "LEFT"
-                        case RIGHT = "RIGHT"
+                    @frozen public enum SidePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case left = "LEFT"
+                        case right = "RIGHT"
                     }
                     /// In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/side`.
-                    public var side: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.sidePayload?
+                    public var side: Operations.PullsCreateReviewComment.Input.Body.JsonPayload.SidePayload?
                     /// **Required unless using `subject_type:file`**. The line of the blob in the pull request diff that the comment applies to. For a multi-line comment, the last line of the range that your comment applies to.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/line`.
@@ -7628,87 +7661,87 @@ public enum Operations {
                     /// **Required when using multi-line comments unless using `in_reply_to`**. The `start_line` is the first line in the pull request diff that your multi-line comment applies to. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/start_line`.
-                    public var start_line: Swift.Int?
+                    public var startLine: Swift.Int?
                     /// **Required when using multi-line comments unless using `in_reply_to`**. The `start_side` is the starting side of the diff that the comment applies to. Can be `LEFT` or `RIGHT`. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation. See `side` in this table for additional context.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/start_side`.
-                    @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable {
-                        case LEFT = "LEFT"
-                        case RIGHT = "RIGHT"
+                    @frozen public enum StartSidePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case left = "LEFT"
+                        case right = "RIGHT"
                         case side = "side"
                     }
                     /// **Required when using multi-line comments unless using `in_reply_to`**. The `start_side` is the starting side of the diff that the comment applies to. Can be `LEFT` or `RIGHT`. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation. See `side` in this table for additional context.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/start_side`.
-                    public var start_side: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.start_sidePayload?
+                    public var startSide: Operations.PullsCreateReviewComment.Input.Body.JsonPayload.StartSidePayload?
                     /// The ID of the review comment to reply to. To find the ID of a review comment with ["List review comments on a pull request"](#list-review-comments-on-a-pull-request). When specified, all parameters other than `body` in the request body are ignored.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/in_reply_to`.
-                    public var in_reply_to: Swift.Int?
+                    public var inReplyTo: Swift.Int?
                     /// The level at which the comment is targeted.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/subject_type`.
-                    @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum SubjectTypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case line = "line"
                         case file = "file"
                     }
                     /// The level at which the comment is targeted.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/subject_type`.
-                    public var subject_type: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.subject_typePayload?
-                    /// Creates a new `jsonPayload`.
+                    public var subjectType: Operations.PullsCreateReviewComment.Input.Body.JsonPayload.SubjectTypePayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The text of the review comment.
-                    ///   - commit_id: The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the `position`.
+                    ///   - commitId: The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the `position`.
                     ///   - path: The relative path to the file that necessitates a comment.
                     ///   - position: **This parameter is closing down. Use `line` instead**. The position in the diff where you want to add a review comment. Note this value is not the same as the line number in the file. The position value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
                     ///   - side: In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation.
                     ///   - line: **Required unless using `subject_type:file`**. The line of the blob in the pull request diff that the comment applies to. For a multi-line comment, the last line of the range that your comment applies to.
-                    ///   - start_line: **Required when using multi-line comments unless using `in_reply_to`**. The `start_line` is the first line in the pull request diff that your multi-line comment applies to. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation.
-                    ///   - start_side: **Required when using multi-line comments unless using `in_reply_to`**. The `start_side` is the starting side of the diff that the comment applies to. Can be `LEFT` or `RIGHT`. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation. See `side` in this table for additional context.
-                    ///   - in_reply_to: The ID of the review comment to reply to. To find the ID of a review comment with ["List review comments on a pull request"](#list-review-comments-on-a-pull-request). When specified, all parameters other than `body` in the request body are ignored.
-                    ///   - subject_type: The level at which the comment is targeted.
+                    ///   - startLine: **Required when using multi-line comments unless using `in_reply_to`**. The `start_line` is the first line in the pull request diff that your multi-line comment applies to. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation.
+                    ///   - startSide: **Required when using multi-line comments unless using `in_reply_to`**. The `start_side` is the starting side of the diff that the comment applies to. Can be `LEFT` or `RIGHT`. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation. See `side` in this table for additional context.
+                    ///   - inReplyTo: The ID of the review comment to reply to. To find the ID of a review comment with ["List review comments on a pull request"](#list-review-comments-on-a-pull-request). When specified, all parameters other than `body` in the request body are ignored.
+                    ///   - subjectType: The level at which the comment is targeted.
                     public init(
                         body: Swift.String,
-                        commit_id: Swift.String,
+                        commitId: Swift.String,
                         path: Swift.String,
                         position: Swift.Int? = nil,
-                        side: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.sidePayload? = nil,
+                        side: Operations.PullsCreateReviewComment.Input.Body.JsonPayload.SidePayload? = nil,
                         line: Swift.Int? = nil,
-                        start_line: Swift.Int? = nil,
-                        start_side: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.start_sidePayload? = nil,
-                        in_reply_to: Swift.Int? = nil,
-                        subject_type: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.subject_typePayload? = nil
+                        startLine: Swift.Int? = nil,
+                        startSide: Operations.PullsCreateReviewComment.Input.Body.JsonPayload.StartSidePayload? = nil,
+                        inReplyTo: Swift.Int? = nil,
+                        subjectType: Operations.PullsCreateReviewComment.Input.Body.JsonPayload.SubjectTypePayload? = nil
                     ) {
                         self.body = body
-                        self.commit_id = commit_id
+                        self.commitId = commitId
                         self.path = path
                         self.position = position
                         self.side = side
                         self.line = line
-                        self.start_line = start_line
-                        self.start_side = start_side
-                        self.in_reply_to = in_reply_to
-                        self.subject_type = subject_type
+                        self.startLine = startLine
+                        self.startSide = startSide
+                        self.inReplyTo = inReplyTo
+                        self.subjectType = subjectType
                     }
                     public enum CodingKeys: String, CodingKey {
                         case body
-                        case commit_id
+                        case commitId = "commit_id"
                         case path
                         case position
                         case side
                         case line
-                        case start_line
-                        case start_side
-                        case in_reply_to
-                        case subject_type
+                        case startLine = "start_line"
+                        case startSide = "start_side"
+                        case inReplyTo = "in_reply_to"
+                        case subjectType = "subject_type"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload)
+                case json(Operations.PullsCreateReviewComment.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body
+            public var body: Operations.PullsCreateReviewComment.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7716,9 +7749,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Path,
-                headers: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Headers = .init(),
-                body: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body
+                path: Operations.PullsCreateReviewComment.Input.Path,
+                headers: Operations.PullsCreateReviewComment.Input.Headers = .init(),
+                body: Operations.PullsCreateReviewComment.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7730,26 +7763,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output.Created.Headers
+                public var headers: Operations.PullsCreateReviewComment.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment)
+                    case json(Components.Schemas.PullRequestReviewComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment {
+                    public var json: Components.Schemas.PullRequestReviewComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7759,15 +7792,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output.Created.Body
+                public var body: Operations.PullsCreateReviewComment.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output.Created.Headers = .init(),
-                    body: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output.Created.Body
+                    headers: Operations.PullsCreateReviewComment.Output.Created.Headers = .init(),
+                    body: Operations.PullsCreateReviewComment.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -7778,12 +7811,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/post(pulls/create-review-comment)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output.Created)
+            case created(Operations.PullsCreateReviewComment.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.pulls_sol_create_hyphen_review_hyphen_comment.Output.Created {
+            public var created: Operations.PullsCreateReviewComment.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7801,12 +7834,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/post(pulls/create-review-comment)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7824,12 +7857,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/post(pulls/create-review-comment)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7889,7 +7922,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/post(pulls/create-reply-for-review-comment)`.
-    public enum pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment {
+    public enum PullsCreateReplyForReviewComment {
         public static let id: Swift.String = "pulls/create-reply-for-review-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/path`.
@@ -7897,60 +7930,60 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - pullNumber: The number that identifies the pull request.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber,
+                    commentId: Components.Parameters.CommentId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
-                    self.comment_id = comment_id
+                    self.pullNumber = pullNumber
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Path
+            public var path: Operations.PullsCreateReplyForReviewComment.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsCreateReplyForReviewComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsCreateReplyForReviewComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Headers
+            public var headers: Operations.PullsCreateReplyForReviewComment.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The text of the review comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The text of the review comment.
@@ -7962,9 +7995,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Body.jsonPayload)
+                case json(Operations.PullsCreateReplyForReviewComment.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Body
+            public var body: Operations.PullsCreateReplyForReviewComment.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7972,9 +8005,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Path,
-                headers: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Headers = .init(),
-                body: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Input.Body
+                path: Operations.PullsCreateReplyForReviewComment.Input.Path,
+                headers: Operations.PullsCreateReplyForReviewComment.Input.Headers = .init(),
+                body: Operations.PullsCreateReplyForReviewComment.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7986,26 +8019,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output.Created.Headers
+                public var headers: Operations.PullsCreateReplyForReviewComment.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment)
+                    case json(Components.Schemas.PullRequestReviewComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment {
+                    public var json: Components.Schemas.PullRequestReviewComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8015,15 +8048,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output.Created.Body
+                public var body: Operations.PullsCreateReplyForReviewComment.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output.Created.Headers = .init(),
-                    body: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output.Created.Body
+                    headers: Operations.PullsCreateReplyForReviewComment.Output.Created.Headers = .init(),
+                    body: Operations.PullsCreateReplyForReviewComment.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8034,12 +8067,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/post(pulls/create-reply-for-review-comment)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output.Created)
+            case created(Operations.PullsCreateReplyForReviewComment.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.pulls_sol_create_hyphen_reply_hyphen_for_hyphen_review_hyphen_comment.Output.Created {
+            public var created: Operations.PullsCreateReplyForReviewComment.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -8057,12 +8090,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/comments/{comment_id}/replies/post(pulls/create-reply-for-review-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8121,7 +8154,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/commits/get(pulls/list-commits)`.
-    public enum pulls_sol_list_hyphen_commits {
+    public enum PullsListCommits {
         public static let id: Swift.String = "pulls/list-commits"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/path`.
@@ -8129,68 +8162,68 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_list_hyphen_commits.Input.Path
+            public var path: Operations.PullsListCommits.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.pulls_sol_list_hyphen_commits.Input.Query
+            public var query: Operations.PullsListCommits.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_commits.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListCommits.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_commits.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListCommits.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_list_hyphen_commits.Input.Headers
+            public var headers: Operations.PullsListCommits.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8198,9 +8231,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_list_hyphen_commits.Input.Path,
-                query: Operations.pulls_sol_list_hyphen_commits.Input.Query = .init(),
-                headers: Operations.pulls_sol_list_hyphen_commits.Input.Headers = .init()
+                path: Operations.PullsListCommits.Input.Path,
+                query: Operations.PullsListCommits.Input.Query = .init(),
+                headers: Operations.PullsListCommits.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -8212,26 +8245,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_list_hyphen_commits.Output.Ok.Headers
+                public var headers: Operations.PullsListCommits.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/commits/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.commit])
+                    case json([Components.Schemas.Commit])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.commit] {
+                    public var json: [Components.Schemas.Commit] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8241,15 +8274,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_list_hyphen_commits.Output.Ok.Body
+                public var body: Operations.PullsListCommits.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_list_hyphen_commits.Output.Ok.Headers = .init(),
-                    body: Operations.pulls_sol_list_hyphen_commits.Output.Ok.Body
+                    headers: Operations.PullsListCommits.Output.Ok.Headers = .init(),
+                    body: Operations.PullsListCommits.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8260,12 +8293,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/commits/get(pulls/list-commits)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_list_hyphen_commits.Output.Ok)
+            case ok(Operations.PullsListCommits.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_list_hyphen_commits.Output.Ok {
+            public var ok: Operations.PullsListCommits.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8325,7 +8358,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)`.
-    public enum pulls_sol_list_hyphen_files {
+    public enum PullsListFiles {
         public static let id: Swift.String = "pulls/list-files"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/path`.
@@ -8333,68 +8366,68 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_list_hyphen_files.Input.Path
+            public var path: Operations.PullsListFiles.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.pulls_sol_list_hyphen_files.Input.Query
+            public var query: Operations.PullsListFiles.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_files.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListFiles.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_files.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListFiles.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_list_hyphen_files.Input.Headers
+            public var headers: Operations.PullsListFiles.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8402,9 +8435,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_list_hyphen_files.Input.Path,
-                query: Operations.pulls_sol_list_hyphen_files.Input.Query = .init(),
-                headers: Operations.pulls_sol_list_hyphen_files.Input.Headers = .init()
+                path: Operations.PullsListFiles.Input.Path,
+                query: Operations.PullsListFiles.Input.Query = .init(),
+                headers: Operations.PullsListFiles.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -8416,26 +8449,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_list_hyphen_files.Output.Ok.Headers
+                public var headers: Operations.PullsListFiles.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/files/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.diff_hyphen_entry])
+                    case json([Components.Schemas.DiffEntry])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.diff_hyphen_entry] {
+                    public var json: [Components.Schemas.DiffEntry] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8445,15 +8478,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_list_hyphen_files.Output.Ok.Body
+                public var body: Operations.PullsListFiles.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_list_hyphen_files.Output.Ok.Headers = .init(),
-                    body: Operations.pulls_sol_list_hyphen_files.Output.Ok.Body
+                    headers: Operations.PullsListFiles.Output.Ok.Headers = .init(),
+                    body: Operations.PullsListFiles.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8464,12 +8497,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_list_hyphen_files.Output.Ok)
+            case ok(Operations.PullsListFiles.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_list_hyphen_files.Output.Ok {
+            public var ok: Operations.PullsListFiles.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8487,12 +8520,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8510,12 +8543,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)/responses/500`.
             ///
             /// HTTP response code: `500 internalServerError`.
-            case internalServerError(Components.Responses.internal_error)
+            case internalServerError(Components.Responses.InternalError)
             /// The associated value of the enum case if `self` is `.internalServerError`.
             ///
             /// - Throws: An error if `self` is not `.internalServerError`.
             /// - SeeAlso: `.internalServerError`.
-            public var internalServerError: Components.Responses.internal_error {
+            public var internalServerError: Components.Responses.InternalError {
                 get throws {
                     switch self {
                     case let .internalServerError(response):
@@ -8533,12 +8566,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/files/get(pulls/list-files)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.service_unavailable)
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.service_unavailable {
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -8588,7 +8621,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/merge`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)`.
-    public enum pulls_sol_check_hyphen_if_hyphen_merged {
+    public enum PullsCheckIfMerged {
         public static let id: Swift.String = "pulls/check-if-merged"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/GET/path`.
@@ -8596,37 +8629,37 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_check_hyphen_if_hyphen_merged.Input.Path
+            public var path: Operations.PullsCheckIfMerged.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.pulls_sol_check_hyphen_if_hyphen_merged.Input.Path) {
+            public init(path: Operations.PullsCheckIfMerged.Input.Path) {
                 self.path = path
             }
         }
@@ -8640,12 +8673,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output.NoContent)
+            case noContent(Operations.PullsCheckIfMerged.Output.NoContent)
+            /// Response if pull request has been merged
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output.NoContent {
+            public var noContent: Operations.PullsCheckIfMerged.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -8667,12 +8708,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output.NotFound)
+            case notFound(Operations.PullsCheckIfMerged.Output.NotFound)
+            /// Not Found if pull request has not been merged
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output.NotFound {
+            public var notFound: Operations.PullsCheckIfMerged.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8698,7 +8747,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)`.
-    public enum pulls_sol_merge {
+    public enum PullsMerge {
         public static let id: Swift.String = "pulls/merge"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/path`.
@@ -8706,56 +8755,56 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_merge.Input.Path
+            public var path: Operations.PullsMerge.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_merge.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsMerge.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_merge.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsMerge.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_merge.Input.Headers
+            public var headers: Operations.PullsMerge.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Title for the automatic commit message.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody/json/commit_title`.
-                    public var commit_title: Swift.String?
+                    public var commitTitle: Swift.String?
                     /// Extra detail to append to automatic commit message.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody/json/commit_message`.
-                    public var commit_message: Swift.String?
+                    public var commitMessage: Swift.String?
                     /// SHA that pull request head must match to allow merge.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody/json/sha`.
@@ -8763,7 +8812,7 @@ public enum Operations {
                     /// The merge method to use.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody/json/merge_method`.
-                    @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum MergeMethodPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case merge = "merge"
                         case squash = "squash"
                         case rebase = "rebase"
@@ -8771,36 +8820,36 @@ public enum Operations {
                     /// The merge method to use.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody/json/merge_method`.
-                    public var merge_method: Operations.pulls_sol_merge.Input.Body.jsonPayload.merge_methodPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var mergeMethod: Operations.PullsMerge.Input.Body.JsonPayload.MergeMethodPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - commit_title: Title for the automatic commit message.
-                    ///   - commit_message: Extra detail to append to automatic commit message.
+                    ///   - commitTitle: Title for the automatic commit message.
+                    ///   - commitMessage: Extra detail to append to automatic commit message.
                     ///   - sha: SHA that pull request head must match to allow merge.
-                    ///   - merge_method: The merge method to use.
+                    ///   - mergeMethod: The merge method to use.
                     public init(
-                        commit_title: Swift.String? = nil,
-                        commit_message: Swift.String? = nil,
+                        commitTitle: Swift.String? = nil,
+                        commitMessage: Swift.String? = nil,
                         sha: Swift.String? = nil,
-                        merge_method: Operations.pulls_sol_merge.Input.Body.jsonPayload.merge_methodPayload? = nil
+                        mergeMethod: Operations.PullsMerge.Input.Body.JsonPayload.MergeMethodPayload? = nil
                     ) {
-                        self.commit_title = commit_title
-                        self.commit_message = commit_message
+                        self.commitTitle = commitTitle
+                        self.commitMessage = commitMessage
                         self.sha = sha
-                        self.merge_method = merge_method
+                        self.mergeMethod = mergeMethod
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case commit_title
-                        case commit_message
+                        case commitTitle = "commit_title"
+                        case commitMessage = "commit_message"
                         case sha
-                        case merge_method
+                        case mergeMethod = "merge_method"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_merge.Input.Body.jsonPayload)
+                case json(Operations.PullsMerge.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_merge.Input.Body?
+            public var body: Operations.PullsMerge.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8808,9 +8857,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_merge.Input.Path,
-                headers: Operations.pulls_sol_merge.Input.Headers = .init(),
-                body: Operations.pulls_sol_merge.Input.Body? = nil
+                path: Operations.PullsMerge.Input.Path,
+                headers: Operations.PullsMerge.Input.Headers = .init(),
+                body: Operations.PullsMerge.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -8822,12 +8871,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_merge_hyphen_result)
+                    case json(Components.Schemas.PullRequestMergeResult)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_merge_hyphen_result {
+                    public var json: Components.Schemas.PullRequestMergeResult {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8837,12 +8886,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_merge.Output.Ok.Body
+                public var body: Operations.PullsMerge.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_merge.Output.Ok.Body) {
+                public init(body: Operations.PullsMerge.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8851,12 +8900,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_merge.Output.Ok)
+            case ok(Operations.PullsMerge.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_merge.Output.Ok {
+            public var ok: Operations.PullsMerge.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8873,35 +8922,35 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/405/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/405/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/405/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/405/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
-                        /// Creates a new `jsonPayload`.
+                        public var documentationUrl: Swift.String?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         public init(
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil
+                            documentationUrl: Swift.String? = nil
                         ) {
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                         }
                         public enum CodingKeys: String, CodingKey {
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/405/content/application\/json`.
-                    case json(Operations.pulls_sol_merge.Output.MethodNotAllowed.Body.jsonPayload)
+                    case json(Operations.PullsMerge.Output.MethodNotAllowed.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.pulls_sol_merge.Output.MethodNotAllowed.Body.jsonPayload {
+                    public var json: Operations.PullsMerge.Output.MethodNotAllowed.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8911,12 +8960,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_merge.Output.MethodNotAllowed.Body
+                public var body: Operations.PullsMerge.Output.MethodNotAllowed.Body
                 /// Creates a new `MethodNotAllowed`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_merge.Output.MethodNotAllowed.Body) {
+                public init(body: Operations.PullsMerge.Output.MethodNotAllowed.Body) {
                     self.body = body
                 }
             }
@@ -8925,12 +8974,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)/responses/405`.
             ///
             /// HTTP response code: `405 methodNotAllowed`.
-            case methodNotAllowed(Operations.pulls_sol_merge.Output.MethodNotAllowed)
+            case methodNotAllowed(Operations.PullsMerge.Output.MethodNotAllowed)
             /// The associated value of the enum case if `self` is `.methodNotAllowed`.
             ///
             /// - Throws: An error if `self` is not `.methodNotAllowed`.
             /// - SeeAlso: `.methodNotAllowed`.
-            public var methodNotAllowed: Operations.pulls_sol_merge.Output.MethodNotAllowed {
+            public var methodNotAllowed: Operations.PullsMerge.Output.MethodNotAllowed {
                 get throws {
                     switch self {
                     case let .methodNotAllowed(response):
@@ -8947,35 +8996,35 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/409/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/409/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/409/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/409/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
-                        /// Creates a new `jsonPayload`.
+                        public var documentationUrl: Swift.String?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         public init(
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil
+                            documentationUrl: Swift.String? = nil
                         ) {
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                         }
                         public enum CodingKeys: String, CodingKey {
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/responses/409/content/application\/json`.
-                    case json(Operations.pulls_sol_merge.Output.Conflict.Body.jsonPayload)
+                    case json(Operations.PullsMerge.Output.Conflict.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.pulls_sol_merge.Output.Conflict.Body.jsonPayload {
+                    public var json: Operations.PullsMerge.Output.Conflict.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8985,12 +9034,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_merge.Output.Conflict.Body
+                public var body: Operations.PullsMerge.Output.Conflict.Body
                 /// Creates a new `Conflict`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_merge.Output.Conflict.Body) {
+                public init(body: Operations.PullsMerge.Output.Conflict.Body) {
                     self.body = body
                 }
             }
@@ -8999,12 +9048,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Operations.pulls_sol_merge.Output.Conflict)
+            case conflict(Operations.PullsMerge.Output.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Operations.pulls_sol_merge.Output.Conflict {
+            public var conflict: Operations.PullsMerge.Output.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -9022,12 +9071,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -9045,12 +9094,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9068,12 +9117,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/put(pulls/merge)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9123,7 +9172,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/get(pulls/list-requested-reviewers)`.
-    public enum pulls_sol_list_hyphen_requested_hyphen_reviewers {
+    public enum PullsListRequestedReviewers {
         public static let id: Swift.String = "pulls/list-requested-reviewers"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/path`.
@@ -9131,52 +9180,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input.Path
+            public var path: Operations.PullsListRequestedReviewers.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListRequestedReviewers.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListRequestedReviewers.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input.Headers
+            public var headers: Operations.PullsListRequestedReviewers.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input.Path,
-                headers: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Input.Headers = .init()
+                path: Operations.PullsListRequestedReviewers.Input.Path,
+                headers: Operations.PullsListRequestedReviewers.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -9187,26 +9236,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output.Ok.Headers
+                public var headers: Operations.PullsListRequestedReviewers.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_request)
+                    case json(Components.Schemas.PullRequestReviewRequest)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_request {
+                    public var json: Components.Schemas.PullRequestReviewRequest {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9216,15 +9265,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output.Ok.Body
+                public var body: Operations.PullsListRequestedReviewers.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output.Ok.Headers = .init(),
-                    body: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output.Ok.Body
+                    headers: Operations.PullsListRequestedReviewers.Output.Ok.Headers = .init(),
+                    body: Operations.PullsListRequestedReviewers.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -9235,12 +9284,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/get(pulls/list-requested-reviewers)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output.Ok)
+            case ok(Operations.PullsListRequestedReviewers.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_list_hyphen_requested_hyphen_reviewers.Output.Ok {
+            public var ok: Operations.PullsListRequestedReviewers.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9291,7 +9340,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)`.
-    public enum pulls_sol_request_hyphen_reviewers {
+    public enum PullsRequestReviewers {
         public static let id: Swift.String = "pulls/request-reviewers"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/path`.
@@ -9299,70 +9348,70 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_request_hyphen_reviewers.Input.Path
+            public var path: Operations.PullsRequestReviewers.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_request_hyphen_reviewers.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsRequestReviewers.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_request_hyphen_reviewers.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsRequestReviewers.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_request_hyphen_reviewers.Input.Headers
+            public var headers: Operations.PullsRequestReviewers.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/requestBody/json/value1`.
                     public struct Value1Payload: Codable, Hashable, Sendable {
                         /// Creates a new `Value1Payload`.
                         public init() {}
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/requestBody/json/value1`.
-                    public var value1: Operations.pulls_sol_request_hyphen_reviewers.Input.Body.jsonPayload.Value1Payload?
+                    public var value1: Operations.PullsRequestReviewers.Input.Body.JsonPayload.Value1Payload?
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/requestBody/json/value2`.
                     public struct Value2Payload: Codable, Hashable, Sendable {
                         /// Creates a new `Value2Payload`.
                         public init() {}
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/requestBody/json/value2`.
-                    public var value2: Operations.pulls_sol_request_hyphen_reviewers.Input.Body.jsonPayload.Value2Payload?
-                    /// Creates a new `jsonPayload`.
+                    public var value2: Operations.PullsRequestReviewers.Input.Body.JsonPayload.Value2Payload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - value1:
                     ///   - value2:
                     public init(
-                        value1: Operations.pulls_sol_request_hyphen_reviewers.Input.Body.jsonPayload.Value1Payload? = nil,
-                        value2: Operations.pulls_sol_request_hyphen_reviewers.Input.Body.jsonPayload.Value2Payload? = nil
+                        value1: Operations.PullsRequestReviewers.Input.Body.JsonPayload.Value1Payload? = nil,
+                        value2: Operations.PullsRequestReviewers.Input.Body.JsonPayload.Value2Payload? = nil
                     ) {
                         self.value1 = value1
                         self.value2 = value2
@@ -9370,19 +9419,19 @@ public enum Operations {
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
-                            value1 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value2 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                             [
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ],
                             type: Self.self,
                             codingPath: decoder.codingPath,
@@ -9390,14 +9439,14 @@ public enum Operations {
                         )
                     }
                     public func encode(to encoder: any Encoder) throws {
-                        try value1?.encode(to: encoder)
-                        try value2?.encode(to: encoder)
+                        try self.value1?.encode(to: encoder)
+                        try self.value2?.encode(to: encoder)
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_request_hyphen_reviewers.Input.Body.jsonPayload)
+                case json(Operations.PullsRequestReviewers.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_request_hyphen_reviewers.Input.Body?
+            public var body: Operations.PullsRequestReviewers.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -9405,9 +9454,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_request_hyphen_reviewers.Input.Path,
-                headers: Operations.pulls_sol_request_hyphen_reviewers.Input.Headers = .init(),
-                body: Operations.pulls_sol_request_hyphen_reviewers.Input.Body? = nil
+                path: Operations.PullsRequestReviewers.Input.Path,
+                headers: Operations.PullsRequestReviewers.Input.Headers = .init(),
+                body: Operations.PullsRequestReviewers.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -9419,12 +9468,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_simple)
+                    case json(Components.Schemas.PullRequestSimple)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_simple {
+                    public var json: Components.Schemas.PullRequestSimple {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9434,12 +9483,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_request_hyphen_reviewers.Output.Created.Body
+                public var body: Operations.PullsRequestReviewers.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_request_hyphen_reviewers.Output.Created.Body) {
+                public init(body: Operations.PullsRequestReviewers.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -9448,12 +9497,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.pulls_sol_request_hyphen_reviewers.Output.Created)
+            case created(Operations.PullsRequestReviewers.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.pulls_sol_request_hyphen_reviewers.Output.Created {
+            public var created: Operations.PullsRequestReviewers.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -9475,12 +9524,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.pulls_sol_request_hyphen_reviewers.Output.UnprocessableContent)
+            case unprocessableContent(Operations.PullsRequestReviewers.Output.UnprocessableContent)
+            /// Unprocessable Entity if user is not a collaborator
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.pulls_sol_request_hyphen_reviewers.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.PullsRequestReviewers.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -9498,12 +9555,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9553,7 +9610,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/delete(pulls/remove-requested-reviewers)`.
-    public enum pulls_sol_remove_hyphen_requested_hyphen_reviewers {
+    public enum PullsRemoveRequestedReviewers {
         public static let id: Swift.String = "pulls/remove-requested-reviewers"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/path`.
@@ -9561,48 +9618,48 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Path
+            public var path: Operations.PullsRemoveRequestedReviewers.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsRemoveRequestedReviewers.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsRemoveRequestedReviewers.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Headers
+            public var headers: Operations.PullsRemoveRequestedReviewers.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// An array of user `login`s that will be removed.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/requestBody/json/reviewers`.
@@ -9610,28 +9667,28 @@ public enum Operations {
                     /// An array of team `slug`s that will be removed.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/requestBody/json/team_reviewers`.
-                    public var team_reviewers: [Swift.String]?
-                    /// Creates a new `jsonPayload`.
+                    public var teamReviewers: [Swift.String]?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - reviewers: An array of user `login`s that will be removed.
-                    ///   - team_reviewers: An array of team `slug`s that will be removed.
+                    ///   - teamReviewers: An array of team `slug`s that will be removed.
                     public init(
                         reviewers: [Swift.String],
-                        team_reviewers: [Swift.String]? = nil
+                        teamReviewers: [Swift.String]? = nil
                     ) {
                         self.reviewers = reviewers
-                        self.team_reviewers = team_reviewers
+                        self.teamReviewers = teamReviewers
                     }
                     public enum CodingKeys: String, CodingKey {
                         case reviewers
-                        case team_reviewers
+                        case teamReviewers = "team_reviewers"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Body.jsonPayload)
+                case json(Operations.PullsRemoveRequestedReviewers.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Body
+            public var body: Operations.PullsRemoveRequestedReviewers.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -9639,9 +9696,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Path,
-                headers: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Headers = .init(),
-                body: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Input.Body
+                path: Operations.PullsRemoveRequestedReviewers.Input.Path,
+                headers: Operations.PullsRemoveRequestedReviewers.Input.Headers = .init(),
+                body: Operations.PullsRemoveRequestedReviewers.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -9653,12 +9710,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/DELETE/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_simple)
+                    case json(Components.Schemas.PullRequestSimple)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_simple {
+                    public var json: Components.Schemas.PullRequestSimple {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9668,12 +9725,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Output.Ok.Body
+                public var body: Operations.PullsRemoveRequestedReviewers.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Output.Ok.Body) {
+                public init(body: Operations.PullsRemoveRequestedReviewers.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -9682,12 +9739,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/delete(pulls/remove-requested-reviewers)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Output.Ok)
+            case ok(Operations.PullsRemoveRequestedReviewers.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_remove_hyphen_requested_hyphen_reviewers.Output.Ok {
+            public var ok: Operations.PullsRemoveRequestedReviewers.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9705,12 +9762,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/delete(pulls/remove-requested-reviewers)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -9767,7 +9824,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/get(pulls/list-reviews)`.
-    public enum pulls_sol_list_hyphen_reviews {
+    public enum PullsListReviews {
         public static let id: Swift.String = "pulls/list-reviews"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/path`.
@@ -9775,68 +9832,68 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_list_hyphen_reviews.Input.Path
+            public var path: Operations.PullsListReviews.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.pulls_sol_list_hyphen_reviews.Input.Query
+            public var query: Operations.PullsListReviews.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_reviews.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListReviews.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_reviews.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListReviews.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_list_hyphen_reviews.Input.Headers
+            public var headers: Operations.PullsListReviews.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -9844,9 +9901,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_list_hyphen_reviews.Input.Path,
-                query: Operations.pulls_sol_list_hyphen_reviews.Input.Query = .init(),
-                headers: Operations.pulls_sol_list_hyphen_reviews.Input.Headers = .init()
+                path: Operations.PullsListReviews.Input.Path,
+                query: Operations.PullsListReviews.Input.Query = .init(),
+                headers: Operations.PullsListReviews.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -9858,26 +9915,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_list_hyphen_reviews.Output.Ok.Headers
+                public var headers: Operations.PullsListReviews.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.pull_hyphen_request_hyphen_review])
+                    case json([Components.Schemas.PullRequestReview])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.pull_hyphen_request_hyphen_review] {
+                    public var json: [Components.Schemas.PullRequestReview] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9887,15 +9944,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_list_hyphen_reviews.Output.Ok.Body
+                public var body: Operations.PullsListReviews.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_list_hyphen_reviews.Output.Ok.Headers = .init(),
-                    body: Operations.pulls_sol_list_hyphen_reviews.Output.Ok.Body
+                    headers: Operations.PullsListReviews.Output.Ok.Headers = .init(),
+                    body: Operations.PullsListReviews.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -9906,12 +9963,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/get(pulls/list-reviews)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_list_hyphen_reviews.Output.Ok)
+            case ok(Operations.PullsListReviews.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_list_hyphen_reviews.Output.Ok {
+            public var ok: Operations.PullsListReviews.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9977,7 +10034,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/post(pulls/create-review)`.
-    public enum pulls_sol_create_hyphen_review {
+    public enum PullsCreateReview {
         public static let id: Swift.String = "pulls/create-review"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/path`.
@@ -9985,52 +10042,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_create_hyphen_review.Input.Path
+            public var path: Operations.PullsCreateReview.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_create_hyphen_review.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsCreateReview.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_create_hyphen_review.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsCreateReview.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_create_hyphen_review.Input.Headers
+            public var headers: Operations.PullsCreateReview.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The SHA of the commit that needs a review. Not using the latest commit SHA may render your review comment outdated if a subsequent commit modifies the line you specify as the `position`. Defaults to the most recent commit in the pull request when you do not specify a value.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commit_id`.
-                    public var commit_id: Swift.String?
+                    public var commitId: Swift.String?
                     /// **Required** when using `REQUEST_CHANGES` or `COMMENT` for the `event` parameter. The body text of the pull request review.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/body`.
@@ -10038,38 +10095,38 @@ public enum Operations {
                     /// The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/event`.
-                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable {
-                        case APPROVE = "APPROVE"
-                        case REQUEST_CHANGES = "REQUEST_CHANGES"
-                        case COMMENT = "COMMENT"
+                    @frozen public enum EventPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case approve = "APPROVE"
+                        case requestChanges = "REQUEST_CHANGES"
+                        case comment = "COMMENT"
                     }
                     /// The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/event`.
-                    public var event: Operations.pulls_sol_create_hyphen_review.Input.Body.jsonPayload.eventPayload?
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commentsPayload`.
-                    public struct commentsPayloadPayload: Codable, Hashable, Sendable {
+                    public var event: Operations.PullsCreateReview.Input.Body.JsonPayload.EventPayload?
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/CommentsPayload`.
+                    public struct CommentsPayloadPayload: Codable, Hashable, Sendable {
                         /// The relative path to the file that necessitates a review comment.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commentsPayload/path`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/CommentsPayload/path`.
                         public var path: Swift.String
                         /// The position in the diff where you want to add a review comment. Note this value is not the same as the line number in the file. The `position` value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commentsPayload/position`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/CommentsPayload/position`.
                         public var position: Swift.Int?
                         /// Text of the review comment.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commentsPayload/body`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/CommentsPayload/body`.
                         public var body: Swift.String
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commentsPayload/line`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/CommentsPayload/line`.
                         public var line: Swift.Int?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commentsPayload/side`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/CommentsPayload/side`.
                         public var side: Swift.String?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commentsPayload/start_line`.
-                        public var start_line: Swift.Int?
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/commentsPayload/start_side`.
-                        public var start_side: Swift.String?
-                        /// Creates a new `commentsPayloadPayload`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/CommentsPayload/start_line`.
+                        public var startLine: Swift.Int?
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/CommentsPayload/start_side`.
+                        public var startSide: Swift.String?
+                        /// Creates a new `CommentsPayloadPayload`.
                         ///
                         /// - Parameters:
                         ///   - path: The relative path to the file that necessitates a review comment.
@@ -10077,24 +10134,24 @@ public enum Operations {
                         ///   - body: Text of the review comment.
                         ///   - line:
                         ///   - side:
-                        ///   - start_line:
-                        ///   - start_side:
+                        ///   - startLine:
+                        ///   - startSide:
                         public init(
                             path: Swift.String,
                             position: Swift.Int? = nil,
                             body: Swift.String,
                             line: Swift.Int? = nil,
                             side: Swift.String? = nil,
-                            start_line: Swift.Int? = nil,
-                            start_side: Swift.String? = nil
+                            startLine: Swift.Int? = nil,
+                            startSide: Swift.String? = nil
                         ) {
                             self.path = path
                             self.position = position
                             self.body = body
                             self.line = line
                             self.side = side
-                            self.start_line = start_line
-                            self.start_side = start_side
+                            self.startLine = startLine
+                            self.startSide = startSide
                         }
                         public enum CodingKeys: String, CodingKey {
                             case path
@@ -10102,47 +10159,47 @@ public enum Operations {
                             case body
                             case line
                             case side
-                            case start_line
-                            case start_side
+                            case startLine = "start_line"
+                            case startSide = "start_side"
                         }
                     }
                     /// Use the following table to specify the location, destination, and contents of the draft review comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/comments`.
-                    public typealias commentsPayload = [Operations.pulls_sol_create_hyphen_review.Input.Body.jsonPayload.commentsPayloadPayload]
+                    public typealias CommentsPayload = [Operations.PullsCreateReview.Input.Body.JsonPayload.CommentsPayloadPayload]
                     /// Use the following table to specify the location, destination, and contents of the draft review comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/comments`.
-                    public var comments: Operations.pulls_sol_create_hyphen_review.Input.Body.jsonPayload.commentsPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var comments: Operations.PullsCreateReview.Input.Body.JsonPayload.CommentsPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - commit_id: The SHA of the commit that needs a review. Not using the latest commit SHA may render your review comment outdated if a subsequent commit modifies the line you specify as the `position`. Defaults to the most recent commit in the pull request when you do not specify a value.
+                    ///   - commitId: The SHA of the commit that needs a review. Not using the latest commit SHA may render your review comment outdated if a subsequent commit modifies the line you specify as the `position`. Defaults to the most recent commit in the pull request when you do not specify a value.
                     ///   - body: **Required** when using `REQUEST_CHANGES` or `COMMENT` for the `event` parameter. The body text of the pull request review.
                     ///   - event: The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready.
                     ///   - comments: Use the following table to specify the location, destination, and contents of the draft review comment.
                     public init(
-                        commit_id: Swift.String? = nil,
+                        commitId: Swift.String? = nil,
                         body: Swift.String? = nil,
-                        event: Operations.pulls_sol_create_hyphen_review.Input.Body.jsonPayload.eventPayload? = nil,
-                        comments: Operations.pulls_sol_create_hyphen_review.Input.Body.jsonPayload.commentsPayload? = nil
+                        event: Operations.PullsCreateReview.Input.Body.JsonPayload.EventPayload? = nil,
+                        comments: Operations.PullsCreateReview.Input.Body.JsonPayload.CommentsPayload? = nil
                     ) {
-                        self.commit_id = commit_id
+                        self.commitId = commitId
                         self.body = body
                         self.event = event
                         self.comments = comments
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case commit_id
+                        case commitId = "commit_id"
                         case body
                         case event
                         case comments
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_create_hyphen_review.Input.Body.jsonPayload)
+                case json(Operations.PullsCreateReview.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_create_hyphen_review.Input.Body?
+            public var body: Operations.PullsCreateReview.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -10150,9 +10207,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_create_hyphen_review.Input.Path,
-                headers: Operations.pulls_sol_create_hyphen_review.Input.Headers = .init(),
-                body: Operations.pulls_sol_create_hyphen_review.Input.Body? = nil
+                path: Operations.PullsCreateReview.Input.Path,
+                headers: Operations.PullsCreateReview.Input.Headers = .init(),
+                body: Operations.PullsCreateReview.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -10164,12 +10221,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review)
+                    case json(Components.Schemas.PullRequestReview)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review {
+                    public var json: Components.Schemas.PullRequestReview {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10179,12 +10236,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_create_hyphen_review.Output.Ok.Body
+                public var body: Operations.PullsCreateReview.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_create_hyphen_review.Output.Ok.Body) {
+                public init(body: Operations.PullsCreateReview.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10193,12 +10250,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/post(pulls/create-review)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_create_hyphen_review.Output.Ok)
+            case ok(Operations.PullsCreateReview.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_create_hyphen_review.Output.Ok {
+            public var ok: Operations.PullsCreateReview.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10216,12 +10273,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/post(pulls/create-review)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -10239,12 +10296,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/post(pulls/create-review)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -10301,7 +10358,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/get(pulls/get-review)`.
-    public enum pulls_sol_get_hyphen_review {
+    public enum PullsGetReview {
         public static let id: Swift.String = "pulls/get-review"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/GET/path`.
@@ -10309,59 +10366,59 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// The unique identifier of the review.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/GET/path/review_id`.
-                public var review_id: Components.Parameters.review_hyphen_id
+                public var reviewId: Components.Parameters.ReviewId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
-                ///   - review_id: The unique identifier of the review.
+                ///   - pullNumber: The number that identifies the pull request.
+                ///   - reviewId: The unique identifier of the review.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number,
-                    review_id: Components.Parameters.review_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber,
+                    reviewId: Components.Parameters.ReviewId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
-                    self.review_id = review_id
+                    self.pullNumber = pullNumber
+                    self.reviewId = reviewId
                 }
             }
-            public var path: Operations.pulls_sol_get_hyphen_review.Input.Path
+            public var path: Operations.PullsGetReview.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_get_hyphen_review.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsGetReview.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_get_hyphen_review.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsGetReview.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_get_hyphen_review.Input.Headers
+            public var headers: Operations.PullsGetReview.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_get_hyphen_review.Input.Path,
-                headers: Operations.pulls_sol_get_hyphen_review.Input.Headers = .init()
+                path: Operations.PullsGetReview.Input.Path,
+                headers: Operations.PullsGetReview.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10372,12 +10429,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review)
+                    case json(Components.Schemas.PullRequestReview)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review {
+                    public var json: Components.Schemas.PullRequestReview {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10387,12 +10444,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_get_hyphen_review.Output.Ok.Body
+                public var body: Operations.PullsGetReview.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_get_hyphen_review.Output.Ok.Body) {
+                public init(body: Operations.PullsGetReview.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10401,12 +10458,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/get(pulls/get-review)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_get_hyphen_review.Output.Ok)
+            case ok(Operations.PullsGetReview.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_get_hyphen_review.Output.Ok {
+            public var ok: Operations.PullsGetReview.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10424,12 +10481,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/get(pulls/get-review)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10486,7 +10543,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/put(pulls/update-review)`.
-    public enum pulls_sol_update_hyphen_review {
+    public enum PullsUpdateReview {
         public static let id: Swift.String = "pulls/update-review"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/path`.
@@ -10494,60 +10551,60 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// The unique identifier of the review.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/path/review_id`.
-                public var review_id: Components.Parameters.review_hyphen_id
+                public var reviewId: Components.Parameters.ReviewId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
-                ///   - review_id: The unique identifier of the review.
+                ///   - pullNumber: The number that identifies the pull request.
+                ///   - reviewId: The unique identifier of the review.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number,
-                    review_id: Components.Parameters.review_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber,
+                    reviewId: Components.Parameters.ReviewId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
-                    self.review_id = review_id
+                    self.pullNumber = pullNumber
+                    self.reviewId = reviewId
                 }
             }
-            public var path: Operations.pulls_sol_update_hyphen_review.Input.Path
+            public var path: Operations.PullsUpdateReview.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_update_hyphen_review.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsUpdateReview.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_update_hyphen_review.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsUpdateReview.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_update_hyphen_review.Input.Headers
+            public var headers: Operations.PullsUpdateReview.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The body text of the pull request review.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The body text of the pull request review.
@@ -10559,9 +10616,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_update_hyphen_review.Input.Body.jsonPayload)
+                case json(Operations.PullsUpdateReview.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_update_hyphen_review.Input.Body
+            public var body: Operations.PullsUpdateReview.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -10569,9 +10626,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_update_hyphen_review.Input.Path,
-                headers: Operations.pulls_sol_update_hyphen_review.Input.Headers = .init(),
-                body: Operations.pulls_sol_update_hyphen_review.Input.Body
+                path: Operations.PullsUpdateReview.Input.Path,
+                headers: Operations.PullsUpdateReview.Input.Headers = .init(),
+                body: Operations.PullsUpdateReview.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -10583,12 +10640,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review)
+                    case json(Components.Schemas.PullRequestReview)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review {
+                    public var json: Components.Schemas.PullRequestReview {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10598,12 +10655,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_update_hyphen_review.Output.Ok.Body
+                public var body: Operations.PullsUpdateReview.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_update_hyphen_review.Output.Ok.Body) {
+                public init(body: Operations.PullsUpdateReview.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10612,12 +10669,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/put(pulls/update-review)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_update_hyphen_review.Output.Ok)
+            case ok(Operations.PullsUpdateReview.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_update_hyphen_review.Output.Ok {
+            public var ok: Operations.PullsUpdateReview.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10635,12 +10692,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/put(pulls/update-review)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -10697,7 +10754,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/delete(pulls/delete-pending-review)`.
-    public enum pulls_sol_delete_hyphen_pending_hyphen_review {
+    public enum PullsDeletePendingReview {
         public static let id: Swift.String = "pulls/delete-pending-review"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/DELETE/path`.
@@ -10705,59 +10762,59 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/DELETE/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// The unique identifier of the review.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/DELETE/path/review_id`.
-                public var review_id: Components.Parameters.review_hyphen_id
+                public var reviewId: Components.Parameters.ReviewId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
-                ///   - review_id: The unique identifier of the review.
+                ///   - pullNumber: The number that identifies the pull request.
+                ///   - reviewId: The unique identifier of the review.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number,
-                    review_id: Components.Parameters.review_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber,
+                    reviewId: Components.Parameters.ReviewId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
-                    self.review_id = review_id
+                    self.pullNumber = pullNumber
+                    self.reviewId = reviewId
                 }
             }
-            public var path: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input.Path
+            public var path: Operations.PullsDeletePendingReview.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_delete_hyphen_pending_hyphen_review.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsDeletePendingReview.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_delete_hyphen_pending_hyphen_review.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsDeletePendingReview.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input.Headers
+            public var headers: Operations.PullsDeletePendingReview.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input.Path,
-                headers: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Input.Headers = .init()
+                path: Operations.PullsDeletePendingReview.Input.Path,
+                headers: Operations.PullsDeletePendingReview.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10768,12 +10825,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/DELETE/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/DELETE/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review)
+                    case json(Components.Schemas.PullRequestReview)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review {
+                    public var json: Components.Schemas.PullRequestReview {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10783,12 +10840,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Output.Ok.Body
+                public var body: Operations.PullsDeletePendingReview.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Output.Ok.Body) {
+                public init(body: Operations.PullsDeletePendingReview.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10797,12 +10854,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/delete(pulls/delete-pending-review)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Output.Ok)
+            case ok(Operations.PullsDeletePendingReview.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_delete_hyphen_pending_hyphen_review.Output.Ok {
+            public var ok: Operations.PullsDeletePendingReview.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10820,12 +10877,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/delete(pulls/delete-pending-review)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -10843,12 +10900,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/delete(pulls/delete-pending-review)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10905,7 +10962,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/get(pulls/list-comments-for-review)`.
-    public enum pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review {
+    public enum PullsListCommentsForReview {
         public static let id: Swift.String = "pulls/list-comments-for-review"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/path`.
@@ -10913,75 +10970,75 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// The unique identifier of the review.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/path/review_id`.
-                public var review_id: Components.Parameters.review_hyphen_id
+                public var reviewId: Components.Parameters.ReviewId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
-                ///   - review_id: The unique identifier of the review.
+                ///   - pullNumber: The number that identifies the pull request.
+                ///   - reviewId: The unique identifier of the review.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number,
-                    review_id: Components.Parameters.review_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber,
+                    reviewId: Components.Parameters.ReviewId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
-                    self.review_id = review_id
+                    self.pullNumber = pullNumber
+                    self.reviewId = reviewId
                 }
             }
-            public var path: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Path
+            public var path: Operations.PullsListCommentsForReview.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Query
+            public var query: Operations.PullsListCommentsForReview.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListCommentsForReview.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsListCommentsForReview.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Headers
+            public var headers: Operations.PullsListCommentsForReview.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -10989,9 +11046,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Path,
-                query: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Query = .init(),
-                headers: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Input.Headers = .init()
+                path: Operations.PullsListCommentsForReview.Input.Path,
+                query: Operations.PullsListCommentsForReview.Input.Query = .init(),
+                headers: Operations.PullsListCommentsForReview.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -11003,26 +11060,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output.Ok.Headers
+                public var headers: Operations.PullsListCommentsForReview.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.review_hyphen_comment])
+                    case json([Components.Schemas.ReviewComment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.review_hyphen_comment] {
+                    public var json: [Components.Schemas.ReviewComment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11032,15 +11089,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output.Ok.Body
+                public var body: Operations.PullsListCommentsForReview.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output.Ok.Headers = .init(),
-                    body: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output.Ok.Body
+                    headers: Operations.PullsListCommentsForReview.Output.Ok.Headers = .init(),
+                    body: Operations.PullsListCommentsForReview.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -11051,12 +11108,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/get(pulls/list-comments-for-review)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output.Ok)
+            case ok(Operations.PullsListCommentsForReview.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_list_hyphen_comments_hyphen_for_hyphen_review.Output.Ok {
+            public var ok: Operations.PullsListCommentsForReview.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11074,12 +11131,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments/get(pulls/list-comments-for-review)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11139,7 +11196,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/put(pulls/dismiss-review)`.
-    public enum pulls_sol_dismiss_hyphen_review {
+    public enum PullsDismissReview {
         public static let id: Swift.String = "pulls/dismiss-review"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/path`.
@@ -11147,73 +11204,73 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// The unique identifier of the review.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/path/review_id`.
-                public var review_id: Components.Parameters.review_hyphen_id
+                public var reviewId: Components.Parameters.ReviewId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
-                ///   - review_id: The unique identifier of the review.
+                ///   - pullNumber: The number that identifies the pull request.
+                ///   - reviewId: The unique identifier of the review.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number,
-                    review_id: Components.Parameters.review_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber,
+                    reviewId: Components.Parameters.ReviewId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
-                    self.review_id = review_id
+                    self.pullNumber = pullNumber
+                    self.reviewId = reviewId
                 }
             }
-            public var path: Operations.pulls_sol_dismiss_hyphen_review.Input.Path
+            public var path: Operations.PullsDismissReview.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_dismiss_hyphen_review.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsDismissReview.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_dismiss_hyphen_review.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsDismissReview.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_dismiss_hyphen_review.Input.Headers
+            public var headers: Operations.PullsDismissReview.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The message for the pull request review dismissal
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody/json/message`.
                     public var message: Swift.String
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody/json/event`.
-                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable {
-                        case DISMISS = "DISMISS"
+                    @frozen public enum EventPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case dismiss = "DISMISS"
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody/json/event`.
-                    public var event: Operations.pulls_sol_dismiss_hyphen_review.Input.Body.jsonPayload.eventPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var event: Operations.PullsDismissReview.Input.Body.JsonPayload.EventPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - message: The message for the pull request review dismissal
                     ///   - event:
                     public init(
                         message: Swift.String,
-                        event: Operations.pulls_sol_dismiss_hyphen_review.Input.Body.jsonPayload.eventPayload? = nil
+                        event: Operations.PullsDismissReview.Input.Body.JsonPayload.EventPayload? = nil
                     ) {
                         self.message = message
                         self.event = event
@@ -11224,9 +11281,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_dismiss_hyphen_review.Input.Body.jsonPayload)
+                case json(Operations.PullsDismissReview.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_dismiss_hyphen_review.Input.Body
+            public var body: Operations.PullsDismissReview.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11234,9 +11291,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_dismiss_hyphen_review.Input.Path,
-                headers: Operations.pulls_sol_dismiss_hyphen_review.Input.Headers = .init(),
-                body: Operations.pulls_sol_dismiss_hyphen_review.Input.Body
+                path: Operations.PullsDismissReview.Input.Path,
+                headers: Operations.PullsDismissReview.Input.Headers = .init(),
+                body: Operations.PullsDismissReview.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -11248,12 +11305,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review)
+                    case json(Components.Schemas.PullRequestReview)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review {
+                    public var json: Components.Schemas.PullRequestReview {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11263,12 +11320,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_dismiss_hyphen_review.Output.Ok.Body
+                public var body: Operations.PullsDismissReview.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_dismiss_hyphen_review.Output.Ok.Body) {
+                public init(body: Operations.PullsDismissReview.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -11277,12 +11334,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/put(pulls/dismiss-review)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_dismiss_hyphen_review.Output.Ok)
+            case ok(Operations.PullsDismissReview.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_dismiss_hyphen_review.Output.Ok {
+            public var ok: Operations.PullsDismissReview.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11300,12 +11357,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/put(pulls/dismiss-review)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11323,12 +11380,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/put(pulls/dismiss-review)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -11385,7 +11442,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/post(pulls/submit-review)`.
-    public enum pulls_sol_submit_hyphen_review {
+    public enum PullsSubmitReview {
         public static let id: Swift.String = "pulls/submit-review"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/path`.
@@ -11393,55 +11450,55 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// The unique identifier of the review.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/path/review_id`.
-                public var review_id: Components.Parameters.review_hyphen_id
+                public var reviewId: Components.Parameters.ReviewId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
-                ///   - review_id: The unique identifier of the review.
+                ///   - pullNumber: The number that identifies the pull request.
+                ///   - reviewId: The unique identifier of the review.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number,
-                    review_id: Components.Parameters.review_hyphen_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber,
+                    reviewId: Components.Parameters.ReviewId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
-                    self.review_id = review_id
+                    self.pullNumber = pullNumber
+                    self.reviewId = reviewId
                 }
             }
-            public var path: Operations.pulls_sol_submit_hyphen_review.Input.Path
+            public var path: Operations.PullsSubmitReview.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_submit_hyphen_review.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsSubmitReview.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_submit_hyphen_review.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsSubmitReview.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_submit_hyphen_review.Input.Headers
+            public var headers: Operations.PullsSubmitReview.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The body text of the pull request review
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/requestBody/json/body`.
@@ -11449,23 +11506,23 @@ public enum Operations {
                     /// The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. When you leave this blank, the API returns _HTTP 422 (Unrecognizable entity)_ and sets the review action state to `PENDING`, which means you will need to re-submit the pull request review using a review action.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/requestBody/json/event`.
-                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable {
-                        case APPROVE = "APPROVE"
-                        case REQUEST_CHANGES = "REQUEST_CHANGES"
-                        case COMMENT = "COMMENT"
+                    @frozen public enum EventPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case approve = "APPROVE"
+                        case requestChanges = "REQUEST_CHANGES"
+                        case comment = "COMMENT"
                     }
                     /// The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. When you leave this blank, the API returns _HTTP 422 (Unrecognizable entity)_ and sets the review action state to `PENDING`, which means you will need to re-submit the pull request review using a review action.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/requestBody/json/event`.
-                    public var event: Operations.pulls_sol_submit_hyphen_review.Input.Body.jsonPayload.eventPayload
-                    /// Creates a new `jsonPayload`.
+                    public var event: Operations.PullsSubmitReview.Input.Body.JsonPayload.EventPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The body text of the pull request review
                     ///   - event: The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. When you leave this blank, the API returns _HTTP 422 (Unrecognizable entity)_ and sets the review action state to `PENDING`, which means you will need to re-submit the pull request review using a review action.
                     public init(
                         body: Swift.String? = nil,
-                        event: Operations.pulls_sol_submit_hyphen_review.Input.Body.jsonPayload.eventPayload
+                        event: Operations.PullsSubmitReview.Input.Body.JsonPayload.EventPayload
                     ) {
                         self.body = body
                         self.event = event
@@ -11476,9 +11533,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_submit_hyphen_review.Input.Body.jsonPayload)
+                case json(Operations.PullsSubmitReview.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_submit_hyphen_review.Input.Body
+            public var body: Operations.PullsSubmitReview.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11486,9 +11543,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_submit_hyphen_review.Input.Path,
-                headers: Operations.pulls_sol_submit_hyphen_review.Input.Headers = .init(),
-                body: Operations.pulls_sol_submit_hyphen_review.Input.Body
+                path: Operations.PullsSubmitReview.Input.Path,
+                headers: Operations.PullsSubmitReview.Input.Headers = .init(),
+                body: Operations.PullsSubmitReview.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -11500,12 +11557,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/responses/200/content/application\/json`.
-                    case json(Components.Schemas.pull_hyphen_request_hyphen_review)
+                    case json(Components.Schemas.PullRequestReview)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.pull_hyphen_request_hyphen_review {
+                    public var json: Components.Schemas.PullRequestReview {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11515,12 +11572,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_submit_hyphen_review.Output.Ok.Body
+                public var body: Operations.PullsSubmitReview.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_submit_hyphen_review.Output.Ok.Body) {
+                public init(body: Operations.PullsSubmitReview.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -11529,12 +11586,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/post(pulls/submit-review)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.pulls_sol_submit_hyphen_review.Output.Ok)
+            case ok(Operations.PullsSubmitReview.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.pulls_sol_submit_hyphen_review.Output.Ok {
+            public var ok: Operations.PullsSubmitReview.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11552,12 +11609,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/post(pulls/submit-review)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11575,12 +11632,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/post(pulls/submit-review)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -11598,12 +11655,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/post(pulls/submit-review)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -11654,7 +11711,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/pulls/{pull_number}/update-branch`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)`.
-    public enum pulls_sol_update_hyphen_branch {
+    public enum PullsUpdateBranch {
         public static let id: Swift.String = "pulls/update-branch"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/path`.
@@ -11662,67 +11719,67 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The number that identifies the pull request.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/path/pull_number`.
-                public var pull_number: Components.Parameters.pull_hyphen_number
+                public var pullNumber: Components.Parameters.PullNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - pull_number: The number that identifies the pull request.
+                ///   - pullNumber: The number that identifies the pull request.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    pull_number: Components.Parameters.pull_hyphen_number
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    pullNumber: Components.Parameters.PullNumber
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.pull_number = pull_number
+                    self.pullNumber = pullNumber
                 }
             }
-            public var path: Operations.pulls_sol_update_hyphen_branch.Input.Path
+            public var path: Operations.PullsUpdateBranch.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_update_hyphen_branch.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsUpdateBranch.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.pulls_sol_update_hyphen_branch.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.PullsUpdateBranch.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.pulls_sol_update_hyphen_branch.Input.Headers
+            public var headers: Operations.PullsUpdateBranch.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/requestBody/json/expected_head_sha`.
-                    public var expected_head_sha: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var expectedHeadSha: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - expected_head_sha: The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
-                    public init(expected_head_sha: Swift.String? = nil) {
-                        self.expected_head_sha = expected_head_sha
+                    ///   - expectedHeadSha: The expected SHA of the pull request's HEAD ref. This is the most recent commit on the pull request's branch. If the expected SHA does not match the pull request's HEAD, you will receive a `422 Unprocessable Entity` status. You can use the "[List commits](https://docs.github.com/rest/commits/commits#list-commits)" endpoint to find the most recent commit SHA. Default: SHA of the pull request's current HEAD ref.
+                    public init(expectedHeadSha: Swift.String? = nil) {
+                        self.expectedHeadSha = expectedHeadSha
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case expected_head_sha
+                        case expectedHeadSha = "expected_head_sha"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/requestBody/content/application\/json`.
-                case json(Operations.pulls_sol_update_hyphen_branch.Input.Body.jsonPayload)
+                case json(Operations.PullsUpdateBranch.Input.Body.JsonPayload)
             }
-            public var body: Operations.pulls_sol_update_hyphen_branch.Input.Body?
+            public var body: Operations.PullsUpdateBranch.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11730,9 +11787,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.pulls_sol_update_hyphen_branch.Input.Path,
-                headers: Operations.pulls_sol_update_hyphen_branch.Input.Headers = .init(),
-                body: Operations.pulls_sol_update_hyphen_branch.Input.Body? = nil
+                path: Operations.PullsUpdateBranch.Input.Path,
+                headers: Operations.PullsUpdateBranch.Input.Headers = .init(),
+                body: Operations.PullsUpdateBranch.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -11744,12 +11801,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/responses/202/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/responses/202/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/responses/202/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/responses/202/content/json/url`.
                         public var url: Swift.String?
-                        /// Creates a new `jsonPayload`.
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
@@ -11767,12 +11824,12 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/update-branch/PUT/responses/202/content/application\/json`.
-                    case json(Operations.pulls_sol_update_hyphen_branch.Output.Accepted.Body.jsonPayload)
+                    case json(Operations.PullsUpdateBranch.Output.Accepted.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.pulls_sol_update_hyphen_branch.Output.Accepted.Body.jsonPayload {
+                    public var json: Operations.PullsUpdateBranch.Output.Accepted.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11782,12 +11839,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.pulls_sol_update_hyphen_branch.Output.Accepted.Body
+                public var body: Operations.PullsUpdateBranch.Output.Accepted.Body
                 /// Creates a new `Accepted`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.pulls_sol_update_hyphen_branch.Output.Accepted.Body) {
+                public init(body: Operations.PullsUpdateBranch.Output.Accepted.Body) {
                     self.body = body
                 }
             }
@@ -11796,12 +11853,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)/responses/202`.
             ///
             /// HTTP response code: `202 accepted`.
-            case accepted(Operations.pulls_sol_update_hyphen_branch.Output.Accepted)
+            case accepted(Operations.PullsUpdateBranch.Output.Accepted)
             /// The associated value of the enum case if `self` is `.accepted`.
             ///
             /// - Throws: An error if `self` is not `.accepted`.
             /// - SeeAlso: `.accepted`.
-            public var accepted: Operations.pulls_sol_update_hyphen_branch.Output.Accepted {
+            public var accepted: Operations.PullsUpdateBranch.Output.Accepted {
                 get throws {
                     switch self {
                     case let .accepted(response):
@@ -11819,12 +11876,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -11842,12 +11899,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/update-branch/put(pulls/update-branch)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):

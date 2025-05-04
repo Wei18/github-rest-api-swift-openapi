@@ -19,14 +19,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /advisories`.
     /// - Remark: Generated from `#/paths//advisories/get(security-advisories/list-global-advisories)`.
-    func security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories(_ input: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input) async throws -> Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output
+    func securityAdvisoriesListGlobalAdvisories(_ input: Operations.SecurityAdvisoriesListGlobalAdvisories.Input) async throws -> Operations.SecurityAdvisoriesListGlobalAdvisories.Output
     /// Get a global security advisory
     ///
     /// Gets a global security advisory using its GitHub Security Advisory (GHSA) identifier.
     ///
     /// - Remark: HTTP `GET /advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//advisories/{ghsa_id}/get(security-advisories/get-global-advisory)`.
-    func security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory(_ input: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Input) async throws -> Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Output
+    func securityAdvisoriesGetGlobalAdvisory(_ input: Operations.SecurityAdvisoriesGetGlobalAdvisory.Input) async throws -> Operations.SecurityAdvisoriesGetGlobalAdvisory.Output
     /// List repository security advisories for an organization
     ///
     /// Lists repository security advisories for an organization.
@@ -37,7 +37,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/security-advisories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-advisories/get(security-advisories/list-org-repository-advisories)`.
-    func security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories(_ input: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input) async throws -> Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Output
+    func securityAdvisoriesListOrgRepositoryAdvisories(_ input: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input) async throws -> Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Output
     /// List repository security advisories
     ///
     /// Lists security advisories in a repository.
@@ -48,7 +48,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/security-advisories`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/get(security-advisories/list-repository-advisories)`.
-    func security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories(_ input: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input) async throws -> Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Output
+    func securityAdvisoriesListRepositoryAdvisories(_ input: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input) async throws -> Operations.SecurityAdvisoriesListRepositoryAdvisories.Output
     /// Create a repository security advisory
     ///
     /// Creates a new repository security advisory.
@@ -59,7 +59,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/post(security-advisories/create-repository-advisory)`.
-    func security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory(_ input: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input) async throws -> Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Output
+    func securityAdvisoriesCreateRepositoryAdvisory(_ input: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input) async throws -> Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Output
     /// Privately report a security vulnerability
     ///
     /// Report a security vulnerability to the maintainers of the repository.
@@ -67,7 +67,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/reports`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/reports/post(security-advisories/create-private-vulnerability-report)`.
-    func security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report(_ input: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input) async throws -> Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Output
+    func securityAdvisoriesCreatePrivateVulnerabilityReport(_ input: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input) async throws -> Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Output
     /// Get a repository security advisory
     ///
     /// Get a repository security advisory using its GitHub Security Advisory (GHSA) identifier.
@@ -81,7 +81,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/security-advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/get(security-advisories/get-repository-advisory)`.
-    func security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory(_ input: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Input) async throws -> Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Output
+    func securityAdvisoriesGetRepositoryAdvisory(_ input: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Input) async throws -> Operations.SecurityAdvisoriesGetRepositoryAdvisory.Output
     /// Update a repository security advisory
     ///
     /// Update a repository security advisory using its GitHub Security Advisory (GHSA) identifier.
@@ -93,7 +93,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/security-advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/patch(security-advisories/update-repository-advisory)`.
-    func security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory(_ input: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input) async throws -> Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output
+    func securityAdvisoriesUpdateRepositoryAdvisory(_ input: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input) async throws -> Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output
     /// Request a CVE for a repository security advisory
     ///
     /// If you want a CVE identification number for the security vulnerability in your project, and don't already have one, you can request a CVE identification number from GitHub. For more information see "[Requesting a CVE identification number](https://docs.github.com/code-security/security-advisories/repository-security-advisories/publishing-a-repository-security-advisory#requesting-a-cve-identification-number-optional)."
@@ -106,7 +106,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)`.
-    func security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request(_ input: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Input) async throws -> Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Output
+    func securityAdvisoriesCreateRepositoryAdvisoryCveRequest(_ input: Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Input) async throws -> Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Output
     /// Create a temporary private fork
     ///
     /// Create a temporary private fork to collaborate on fixing a security vulnerability in your repository.
@@ -116,7 +116,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)`.
-    func security_hyphen_advisories_sol_create_hyphen_fork(_ input: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Input) async throws -> Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output
+    func securityAdvisoriesCreateFork(_ input: Operations.SecurityAdvisoriesCreateFork.Input) async throws -> Operations.SecurityAdvisoriesCreateFork.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -129,11 +129,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /advisories`.
     /// - Remark: Generated from `#/paths//advisories/get(security-advisories/list-global-advisories)`.
-    public func security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories(
-        query: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query = .init(),
-        headers: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Headers = .init()
-    ) async throws -> Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output {
-        try await security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories(Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input(
+    public func securityAdvisoriesListGlobalAdvisories(
+        query: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query = .init(),
+        headers: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Headers = .init()
+    ) async throws -> Operations.SecurityAdvisoriesListGlobalAdvisories.Output {
+        try await securityAdvisoriesListGlobalAdvisories(Operations.SecurityAdvisoriesListGlobalAdvisories.Input(
             query: query,
             headers: headers
         ))
@@ -144,11 +144,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//advisories/{ghsa_id}/get(security-advisories/get-global-advisory)`.
-    public func security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory(
-        path: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Input.Path,
-        headers: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Input.Headers = .init()
-    ) async throws -> Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Output {
-        try await security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory(Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Input(
+    public func securityAdvisoriesGetGlobalAdvisory(
+        path: Operations.SecurityAdvisoriesGetGlobalAdvisory.Input.Path,
+        headers: Operations.SecurityAdvisoriesGetGlobalAdvisory.Input.Headers = .init()
+    ) async throws -> Operations.SecurityAdvisoriesGetGlobalAdvisory.Output {
+        try await securityAdvisoriesGetGlobalAdvisory(Operations.SecurityAdvisoriesGetGlobalAdvisory.Input(
             path: path,
             headers: headers
         ))
@@ -163,12 +163,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/security-advisories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-advisories/get(security-advisories/list-org-repository-advisories)`.
-    public func security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories(
-        path: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Path,
-        query: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query = .init(),
-        headers: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Headers = .init()
-    ) async throws -> Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Output {
-        try await security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories(Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input(
+    public func securityAdvisoriesListOrgRepositoryAdvisories(
+        path: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Path,
+        query: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Query = .init(),
+        headers: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Headers = .init()
+    ) async throws -> Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Output {
+        try await securityAdvisoriesListOrgRepositoryAdvisories(Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input(
             path: path,
             query: query,
             headers: headers
@@ -184,12 +184,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/security-advisories`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/get(security-advisories/list-repository-advisories)`.
-    public func security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories(
-        path: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Path,
-        query: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Query = .init(),
-        headers: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Headers = .init()
-    ) async throws -> Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Output {
-        try await security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories(Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input(
+    public func securityAdvisoriesListRepositoryAdvisories(
+        path: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Path,
+        query: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Query = .init(),
+        headers: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Headers = .init()
+    ) async throws -> Operations.SecurityAdvisoriesListRepositoryAdvisories.Output {
+        try await securityAdvisoriesListRepositoryAdvisories(Operations.SecurityAdvisoriesListRepositoryAdvisories.Input(
             path: path,
             query: query,
             headers: headers
@@ -205,12 +205,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/post(security-advisories/create-repository-advisory)`.
-    public func security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory(
-        path: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Path,
-        headers: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Headers = .init(),
-        body: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Body
-    ) async throws -> Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Output {
-        try await security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory(Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input(
+    public func securityAdvisoriesCreateRepositoryAdvisory(
+        path: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Path,
+        headers: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Headers = .init(),
+        body: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Body
+    ) async throws -> Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Output {
+        try await securityAdvisoriesCreateRepositoryAdvisory(Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input(
             path: path,
             headers: headers,
             body: body
@@ -223,12 +223,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/reports`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/reports/post(security-advisories/create-private-vulnerability-report)`.
-    public func security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report(
-        path: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Path,
-        headers: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Headers = .init(),
-        body: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Body
-    ) async throws -> Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Output {
-        try await security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report(Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input(
+    public func securityAdvisoriesCreatePrivateVulnerabilityReport(
+        path: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Path,
+        headers: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Headers = .init(),
+        body: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Body
+    ) async throws -> Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Output {
+        try await securityAdvisoriesCreatePrivateVulnerabilityReport(Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input(
             path: path,
             headers: headers,
             body: body
@@ -247,11 +247,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/security-advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/get(security-advisories/get-repository-advisory)`.
-    public func security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory(
-        path: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Input.Path,
-        headers: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Input.Headers = .init()
-    ) async throws -> Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Output {
-        try await security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory(Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Input(
+    public func securityAdvisoriesGetRepositoryAdvisory(
+        path: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Input.Path,
+        headers: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Input.Headers = .init()
+    ) async throws -> Operations.SecurityAdvisoriesGetRepositoryAdvisory.Output {
+        try await securityAdvisoriesGetRepositoryAdvisory(Operations.SecurityAdvisoriesGetRepositoryAdvisory.Input(
             path: path,
             headers: headers
         ))
@@ -267,12 +267,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/security-advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/patch(security-advisories/update-repository-advisory)`.
-    public func security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory(
-        path: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Path,
-        headers: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Headers = .init(),
-        body: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Body
-    ) async throws -> Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output {
-        try await security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory(Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input(
+    public func securityAdvisoriesUpdateRepositoryAdvisory(
+        path: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Path,
+        headers: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Headers = .init(),
+        body: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Body
+    ) async throws -> Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output {
+        try await securityAdvisoriesUpdateRepositoryAdvisory(Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input(
             path: path,
             headers: headers,
             body: body
@@ -290,11 +290,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)`.
-    public func security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request(
-        path: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Input.Path,
-        headers: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Input.Headers = .init()
-    ) async throws -> Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Output {
-        try await security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request(Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Input(
+    public func securityAdvisoriesCreateRepositoryAdvisoryCveRequest(
+        path: Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Input.Path,
+        headers: Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Input.Headers = .init()
+    ) async throws -> Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Output {
+        try await securityAdvisoriesCreateRepositoryAdvisoryCveRequest(Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Input(
             path: path,
             headers: headers
         ))
@@ -308,11 +308,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)`.
-    public func security_hyphen_advisories_sol_create_hyphen_fork(
-        path: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Input.Path,
-        headers: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Input.Headers = .init()
-    ) async throws -> Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output {
-        try await security_hyphen_advisories_sol_create_hyphen_fork(Operations.security_hyphen_advisories_sol_create_hyphen_fork.Input(
+    public func securityAdvisoriesCreateFork(
+        path: Operations.SecurityAdvisoriesCreateFork.Input.Path,
+        headers: Operations.SecurityAdvisoriesCreateFork.Input.Headers = .init()
+    ) async throws -> Operations.SecurityAdvisoriesCreateFork.Output {
+        try await securityAdvisoriesCreateFork(Operations.SecurityAdvisoriesCreateFork.Input(
             path: path,
             headers: headers
         ))
@@ -321,6 +321,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -336,7 +345,7 @@ public enum Components {
         /// The package's language or package management ecosystem.
         ///
         /// - Remark: Generated from `#/components/schemas/security-advisory-ecosystems`.
-        @frozen public enum security_hyphen_advisory_hyphen_ecosystems: String, Codable, Hashable, Sendable {
+        @frozen public enum SecurityAdvisoryEcosystems: String, Codable, Hashable, Sendable, CaseIterable {
             case rubygems = "rubygems"
             case npm = "npm"
             case pip = "pip"
@@ -354,24 +363,24 @@ public enum Components {
         /// A vulnerability describing the product and its affected versions within a GitHub Security Advisory.
         ///
         /// - Remark: Generated from `#/components/schemas/vulnerability`.
-        public struct vulnerability: Codable, Hashable, Sendable {
+        public struct Vulnerability: Codable, Hashable, Sendable {
             /// The name of the package affected by the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/vulnerability/package`.
-            public struct packagePayload: Codable, Hashable, Sendable {
+            public struct PackagePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/vulnerability/package/ecosystem`.
-                public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems
+                public var ecosystem: Components.Schemas.SecurityAdvisoryEcosystems
                 /// The unique package name within its ecosystem.
                 ///
                 /// - Remark: Generated from `#/components/schemas/vulnerability/package/name`.
                 public var name: Swift.String?
-                /// Creates a new `packagePayload`.
+                /// Creates a new `PackagePayload`.
                 ///
                 /// - Parameters:
                 ///   - ecosystem:
                 ///   - name: The unique package name within its ecosystem.
                 public init(
-                    ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems,
+                    ecosystem: Components.Schemas.SecurityAdvisoryEcosystems,
                     name: Swift.String? = nil
                 ) {
                     self.ecosystem = ecosystem
@@ -385,130 +394,130 @@ public enum Components {
             /// The name of the package affected by the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/vulnerability/package`.
-            public var package: Components.Schemas.vulnerability.packagePayload?
+            public var package: Components.Schemas.Vulnerability.PackagePayload?
             /// The range of the package versions affected by the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/vulnerability/vulnerable_version_range`.
-            public var vulnerable_version_range: Swift.String?
+            public var vulnerableVersionRange: Swift.String?
             /// The package version that resolves the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/vulnerability/first_patched_version`.
-            public var first_patched_version: Swift.String?
+            public var firstPatchedVersion: Swift.String?
             /// The functions in the package that are affected by the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/vulnerability/vulnerable_functions`.
-            public var vulnerable_functions: [Swift.String]?
-            /// Creates a new `vulnerability`.
+            public var vulnerableFunctions: [Swift.String]?
+            /// Creates a new `Vulnerability`.
             ///
             /// - Parameters:
             ///   - package: The name of the package affected by the vulnerability.
-            ///   - vulnerable_version_range: The range of the package versions affected by the vulnerability.
-            ///   - first_patched_version: The package version that resolves the vulnerability.
-            ///   - vulnerable_functions: The functions in the package that are affected by the vulnerability.
+            ///   - vulnerableVersionRange: The range of the package versions affected by the vulnerability.
+            ///   - firstPatchedVersion: The package version that resolves the vulnerability.
+            ///   - vulnerableFunctions: The functions in the package that are affected by the vulnerability.
             public init(
-                package: Components.Schemas.vulnerability.packagePayload? = nil,
-                vulnerable_version_range: Swift.String? = nil,
-                first_patched_version: Swift.String? = nil,
-                vulnerable_functions: [Swift.String]? = nil
+                package: Components.Schemas.Vulnerability.PackagePayload? = nil,
+                vulnerableVersionRange: Swift.String? = nil,
+                firstPatchedVersion: Swift.String? = nil,
+                vulnerableFunctions: [Swift.String]? = nil
             ) {
                 self.package = package
-                self.vulnerable_version_range = vulnerable_version_range
-                self.first_patched_version = first_patched_version
-                self.vulnerable_functions = vulnerable_functions
+                self.vulnerableVersionRange = vulnerableVersionRange
+                self.firstPatchedVersion = firstPatchedVersion
+                self.vulnerableFunctions = vulnerableFunctions
             }
             public enum CodingKeys: String, CodingKey {
                 case package
-                case vulnerable_version_range
-                case first_patched_version
-                case vulnerable_functions
+                case vulnerableVersionRange = "vulnerable_version_range"
+                case firstPatchedVersion = "first_patched_version"
+                case vulnerableFunctions = "vulnerable_functions"
             }
         }
         /// - Remark: Generated from `#/components/schemas/cvss-severities`.
-        public struct cvss_hyphen_severities: Codable, Hashable, Sendable {
+        public struct CvssSeverities: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3`.
-            public struct cvss_v3Payload: Codable, Hashable, Sendable {
+            public struct CvssV3Payload: Codable, Hashable, Sendable {
                 /// The CVSS 3 vector string.
                 ///
                 /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3/vector_string`.
-                public var vector_string: Swift.String?
+                public var vectorString: Swift.String?
                 /// The CVSS 3 score.
                 ///
                 /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3/score`.
                 public var score: Swift.Double?
-                /// Creates a new `cvss_v3Payload`.
+                /// Creates a new `CvssV3Payload`.
                 ///
                 /// - Parameters:
-                ///   - vector_string: The CVSS 3 vector string.
+                ///   - vectorString: The CVSS 3 vector string.
                 ///   - score: The CVSS 3 score.
                 public init(
-                    vector_string: Swift.String? = nil,
+                    vectorString: Swift.String? = nil,
                     score: Swift.Double? = nil
                 ) {
-                    self.vector_string = vector_string
+                    self.vectorString = vectorString
                     self.score = score
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case vector_string
+                    case vectorString = "vector_string"
                     case score
                 }
             }
             /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v3`.
-            public var cvss_v3: Components.Schemas.cvss_hyphen_severities.cvss_v3Payload?
+            public var cvssV3: Components.Schemas.CvssSeverities.CvssV3Payload?
             /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4`.
-            public struct cvss_v4Payload: Codable, Hashable, Sendable {
+            public struct CvssV4Payload: Codable, Hashable, Sendable {
                 /// The CVSS 4 vector string.
                 ///
                 /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4/vector_string`.
-                public var vector_string: Swift.String?
+                public var vectorString: Swift.String?
                 /// The CVSS 4 score.
                 ///
                 /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4/score`.
                 public var score: Swift.Double?
-                /// Creates a new `cvss_v4Payload`.
+                /// Creates a new `CvssV4Payload`.
                 ///
                 /// - Parameters:
-                ///   - vector_string: The CVSS 4 vector string.
+                ///   - vectorString: The CVSS 4 vector string.
                 ///   - score: The CVSS 4 score.
                 public init(
-                    vector_string: Swift.String? = nil,
+                    vectorString: Swift.String? = nil,
                     score: Swift.Double? = nil
                 ) {
-                    self.vector_string = vector_string
+                    self.vectorString = vectorString
                     self.score = score
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case vector_string
+                    case vectorString = "vector_string"
                     case score
                 }
             }
             /// - Remark: Generated from `#/components/schemas/cvss-severities/cvss_v4`.
-            public var cvss_v4: Components.Schemas.cvss_hyphen_severities.cvss_v4Payload?
-            /// Creates a new `cvss_hyphen_severities`.
+            public var cvssV4: Components.Schemas.CvssSeverities.CvssV4Payload?
+            /// Creates a new `CvssSeverities`.
             ///
             /// - Parameters:
-            ///   - cvss_v3:
-            ///   - cvss_v4:
+            ///   - cvssV3:
+            ///   - cvssV4:
             public init(
-                cvss_v3: Components.Schemas.cvss_hyphen_severities.cvss_v3Payload? = nil,
-                cvss_v4: Components.Schemas.cvss_hyphen_severities.cvss_v4Payload? = nil
+                cvssV3: Components.Schemas.CvssSeverities.CvssV3Payload? = nil,
+                cvssV4: Components.Schemas.CvssSeverities.CvssV4Payload? = nil
             ) {
-                self.cvss_v3 = cvss_v3
-                self.cvss_v4 = cvss_v4
+                self.cvssV3 = cvssV3
+                self.cvssV4 = cvssV4
             }
             public enum CodingKeys: String, CodingKey {
-                case cvss_v3
-                case cvss_v4
+                case cvssV3 = "cvss_v3"
+                case cvssV4 = "cvss_v4"
             }
         }
         /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).
         ///
         /// - Remark: Generated from `#/components/schemas/security-advisory-epss`.
-        public struct security_hyphen_advisory_hyphen_epss: Codable, Hashable, Sendable {
+        public struct SecurityAdvisoryEpss: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/security-advisory-epss/percentage`.
             public var percentage: Swift.Double?
             /// - Remark: Generated from `#/components/schemas/security-advisory-epss/percentile`.
             public var percentile: Swift.Double?
-            /// Creates a new `security_hyphen_advisory_hyphen_epss`.
+            /// Creates a new `SecurityAdvisoryEpss`.
             ///
             /// - Parameters:
             ///   - percentage:
@@ -528,7 +537,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -538,149 +547,149 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// The type of credit the user is receiving.
         ///
         /// - Remark: Generated from `#/components/schemas/security-advisory-credit-types`.
-        @frozen public enum security_hyphen_advisory_hyphen_credit_hyphen_types: String, Codable, Hashable, Sendable {
+        @frozen public enum SecurityAdvisoryCreditTypes: String, Codable, Hashable, Sendable, CaseIterable {
             case analyst = "analyst"
             case finder = "finder"
             case reporter = "reporter"
             case coordinator = "coordinator"
-            case remediation_developer = "remediation_developer"
-            case remediation_reviewer = "remediation_reviewer"
-            case remediation_verifier = "remediation_verifier"
+            case remediationDeveloper = "remediation_developer"
+            case remediationReviewer = "remediation_reviewer"
+            case remediationVerifier = "remediation_verifier"
             case tool = "tool"
             case sponsor = "sponsor"
             case other = "other"
@@ -688,15 +697,15 @@ public enum Components {
         /// A GitHub Security Advisory.
         ///
         /// - Remark: Generated from `#/components/schemas/global-advisory`.
-        public struct global_hyphen_advisory: Codable, Hashable, Sendable {
+        public struct GlobalAdvisory: Codable, Hashable, Sendable {
             /// The GitHub Security Advisory ID.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/ghsa_id`.
-            public var ghsa_id: Swift.String
+            public var ghsaId: Swift.String
             /// The Common Vulnerabilities and Exposures (CVE) ID.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/cve_id`.
-            public var cve_id: Swift.String?
+            public var cveId: Swift.String?
             /// The API URL for the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/url`.
@@ -704,11 +713,11 @@ public enum Components {
             /// The URL for the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The API URL for the repository advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/repository_advisory_url`.
-            public var repository_advisory_url: Swift.String?
+            public var repositoryAdvisoryUrl: Swift.String?
             /// A short summary of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/summary`.
@@ -720,7 +729,7 @@ public enum Components {
             /// The type of advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case reviewed = "reviewed"
                 case unreviewed = "unreviewed"
                 case malware = "malware"
@@ -728,11 +737,11 @@ public enum Components {
             /// The type of advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/type`.
-            public var _type: Components.Schemas.global_hyphen_advisory._typePayload
+            public var _type: Components.Schemas.GlobalAdvisory._TypePayload
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -742,35 +751,35 @@ public enum Components {
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/severity`.
-            public var severity: Components.Schemas.global_hyphen_advisory.severityPayload
+            public var severity: Components.Schemas.GlobalAdvisory.SeverityPayload
             /// The URL of the advisory's source code.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/source_code_location`.
-            public var source_code_location: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/global-advisory/identifiersPayload`.
-            public struct identifiersPayloadPayload: Codable, Hashable, Sendable {
+            public var sourceCodeLocation: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/global-advisory/IdentifiersPayload`.
+            public struct IdentifiersPayloadPayload: Codable, Hashable, Sendable {
                 /// The type of identifier.
                 ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/identifiersPayload/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
-                    case CVE = "CVE"
-                    case GHSA = "GHSA"
+                /// - Remark: Generated from `#/components/schemas/global-advisory/IdentifiersPayload/type`.
+                @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                    case cve = "CVE"
+                    case ghsa = "GHSA"
                 }
                 /// The type of identifier.
                 ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/identifiersPayload/type`.
-                public var _type: Components.Schemas.global_hyphen_advisory.identifiersPayloadPayload._typePayload
+                /// - Remark: Generated from `#/components/schemas/global-advisory/IdentifiersPayload/type`.
+                public var _type: Components.Schemas.GlobalAdvisory.IdentifiersPayloadPayload._TypePayload
                 /// The identifier value.
                 ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/identifiersPayload/value`.
+                /// - Remark: Generated from `#/components/schemas/global-advisory/IdentifiersPayload/value`.
                 public var value: Swift.String
-                /// Creates a new `identifiersPayloadPayload`.
+                /// Creates a new `IdentifiersPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - _type: The type of identifier.
                 ///   - value: The identifier value.
                 public init(
-                    _type: Components.Schemas.global_hyphen_advisory.identifiersPayloadPayload._typePayload,
+                    _type: Components.Schemas.GlobalAdvisory.IdentifiersPayloadPayload._TypePayload,
                     value: Swift.String
                 ) {
                     self._type = _type
@@ -782,114 +791,114 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/global-advisory/identifiers`.
-            public typealias identifiersPayload = [Components.Schemas.global_hyphen_advisory.identifiersPayloadPayload]
+            public typealias IdentifiersPayload = [Components.Schemas.GlobalAdvisory.IdentifiersPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/global-advisory/identifiers`.
-            public var identifiers: Components.Schemas.global_hyphen_advisory.identifiersPayload?
+            public var identifiers: Components.Schemas.GlobalAdvisory.IdentifiersPayload?
             /// - Remark: Generated from `#/components/schemas/global-advisory/references`.
             public var references: [Swift.String]?
             /// The date and time of when the advisory was published, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/published_at`.
-            public var published_at: Foundation.Date
+            public var publishedAt: Foundation.Date
             /// The date and time of when the advisory was last updated, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// The date and time of when the advisory was reviewed by GitHub, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/github_reviewed_at`.
-            public var github_reviewed_at: Foundation.Date?
+            public var githubReviewedAt: Foundation.Date?
             /// The date and time when the advisory was published in the National Vulnerability Database, in ISO 8601 format.
             /// This field is only populated when the advisory is imported from the National Vulnerability Database.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/nvd_published_at`.
-            public var nvd_published_at: Foundation.Date?
+            public var nvdPublishedAt: Foundation.Date?
             /// The date and time of when the advisory was withdrawn, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/withdrawn_at`.
-            public var withdrawn_at: Foundation.Date?
+            public var withdrawnAt: Foundation.Date?
             /// The products and respective version ranges affected by the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/vulnerabilities`.
-            public var vulnerabilities: [Components.Schemas.vulnerability]?
+            public var vulnerabilities: [Components.Schemas.Vulnerability]?
             /// - Remark: Generated from `#/components/schemas/global-advisory/cvss`.
-            public struct cvssPayload: Codable, Hashable, Sendable {
+            public struct CvssPayload: Codable, Hashable, Sendable {
                 /// The CVSS vector.
                 ///
                 /// - Remark: Generated from `#/components/schemas/global-advisory/cvss/vector_string`.
-                public var vector_string: Swift.String?
+                public var vectorString: Swift.String?
                 /// The CVSS score.
                 ///
                 /// - Remark: Generated from `#/components/schemas/global-advisory/cvss/score`.
                 public var score: Swift.Double?
-                /// Creates a new `cvssPayload`.
+                /// Creates a new `CvssPayload`.
                 ///
                 /// - Parameters:
-                ///   - vector_string: The CVSS vector.
+                ///   - vectorString: The CVSS vector.
                 ///   - score: The CVSS score.
                 public init(
-                    vector_string: Swift.String? = nil,
+                    vectorString: Swift.String? = nil,
                     score: Swift.Double? = nil
                 ) {
-                    self.vector_string = vector_string
+                    self.vectorString = vectorString
                     self.score = score
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case vector_string
+                    case vectorString = "vector_string"
                     case score
                 }
             }
             /// - Remark: Generated from `#/components/schemas/global-advisory/cvss`.
-            public var cvss: Components.Schemas.global_hyphen_advisory.cvssPayload?
+            public var cvss: Components.Schemas.GlobalAdvisory.CvssPayload?
             /// - Remark: Generated from `#/components/schemas/global-advisory/cvss_severities`.
-            public var cvss_severities: Components.Schemas.cvss_hyphen_severities?
+            public var cvssSeverities: Components.Schemas.CvssSeverities?
             /// - Remark: Generated from `#/components/schemas/global-advisory/epss`.
-            public var epss: Components.Schemas.security_hyphen_advisory_hyphen_epss?
-            /// - Remark: Generated from `#/components/schemas/global-advisory/cwesPayload`.
-            public struct cwesPayloadPayload: Codable, Hashable, Sendable {
+            public var epss: Components.Schemas.SecurityAdvisoryEpss?
+            /// - Remark: Generated from `#/components/schemas/global-advisory/CwesPayload`.
+            public struct CwesPayloadPayload: Codable, Hashable, Sendable {
                 /// The Common Weakness Enumeration (CWE) identifier.
                 ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/cwesPayload/cwe_id`.
-                public var cwe_id: Swift.String
+                /// - Remark: Generated from `#/components/schemas/global-advisory/CwesPayload/cwe_id`.
+                public var cweId: Swift.String
                 /// The name of the CWE.
                 ///
-                /// - Remark: Generated from `#/components/schemas/global-advisory/cwesPayload/name`.
+                /// - Remark: Generated from `#/components/schemas/global-advisory/CwesPayload/name`.
                 public var name: Swift.String
-                /// Creates a new `cwesPayloadPayload`.
+                /// Creates a new `CwesPayloadPayload`.
                 ///
                 /// - Parameters:
-                ///   - cwe_id: The Common Weakness Enumeration (CWE) identifier.
+                ///   - cweId: The Common Weakness Enumeration (CWE) identifier.
                 ///   - name: The name of the CWE.
                 public init(
-                    cwe_id: Swift.String,
+                    cweId: Swift.String,
                     name: Swift.String
                 ) {
-                    self.cwe_id = cwe_id
+                    self.cweId = cweId
                     self.name = name
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case cwe_id
+                    case cweId = "cwe_id"
                     case name
                 }
             }
             /// - Remark: Generated from `#/components/schemas/global-advisory/cwes`.
-            public typealias cwesPayload = [Components.Schemas.global_hyphen_advisory.cwesPayloadPayload]
+            public typealias CwesPayload = [Components.Schemas.GlobalAdvisory.CwesPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/global-advisory/cwes`.
-            public var cwes: Components.Schemas.global_hyphen_advisory.cwesPayload?
-            /// - Remark: Generated from `#/components/schemas/global-advisory/creditsPayload`.
-            public struct creditsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/global-advisory/creditsPayload/user`.
-                public var user: Components.Schemas.simple_hyphen_user
-                /// - Remark: Generated from `#/components/schemas/global-advisory/creditsPayload/type`.
-                public var _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types
-                /// Creates a new `creditsPayloadPayload`.
+            public var cwes: Components.Schemas.GlobalAdvisory.CwesPayload?
+            /// - Remark: Generated from `#/components/schemas/global-advisory/CreditsPayload`.
+            public struct CreditsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/global-advisory/CreditsPayload/user`.
+                public var user: Components.Schemas.SimpleUser
+                /// - Remark: Generated from `#/components/schemas/global-advisory/CreditsPayload/type`.
+                public var _type: Components.Schemas.SecurityAdvisoryCreditTypes
+                /// Creates a new `CreditsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - user:
                 ///   - _type:
                 public init(
-                    user: Components.Schemas.simple_hyphen_user,
-                    _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types
+                    user: Components.Schemas.SimpleUser,
+                    _type: Components.Schemas.SecurityAdvisoryCreditTypes
                 ) {
                     self.user = user
                     self._type = _type
@@ -902,203 +911,203 @@ public enum Components {
             /// The users who contributed to the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/credits`.
-            public typealias creditsPayload = [Components.Schemas.global_hyphen_advisory.creditsPayloadPayload]
+            public typealias CreditsPayload = [Components.Schemas.GlobalAdvisory.CreditsPayloadPayload]
             /// The users who contributed to the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/credits`.
-            public var credits: Components.Schemas.global_hyphen_advisory.creditsPayload?
-            /// Creates a new `global_hyphen_advisory`.
+            public var credits: Components.Schemas.GlobalAdvisory.CreditsPayload?
+            /// Creates a new `GlobalAdvisory`.
             ///
             /// - Parameters:
-            ///   - ghsa_id: The GitHub Security Advisory ID.
-            ///   - cve_id: The Common Vulnerabilities and Exposures (CVE) ID.
+            ///   - ghsaId: The GitHub Security Advisory ID.
+            ///   - cveId: The Common Vulnerabilities and Exposures (CVE) ID.
             ///   - url: The API URL for the advisory.
-            ///   - html_url: The URL for the advisory.
-            ///   - repository_advisory_url: The API URL for the repository advisory.
+            ///   - htmlUrl: The URL for the advisory.
+            ///   - repositoryAdvisoryUrl: The API URL for the repository advisory.
             ///   - summary: A short summary of the advisory.
             ///   - description: A detailed description of what the advisory entails.
             ///   - _type: The type of advisory.
             ///   - severity: The severity of the advisory.
-            ///   - source_code_location: The URL of the advisory's source code.
+            ///   - sourceCodeLocation: The URL of the advisory's source code.
             ///   - identifiers:
             ///   - references:
-            ///   - published_at: The date and time of when the advisory was published, in ISO 8601 format.
-            ///   - updated_at: The date and time of when the advisory was last updated, in ISO 8601 format.
-            ///   - github_reviewed_at: The date and time of when the advisory was reviewed by GitHub, in ISO 8601 format.
-            ///   - nvd_published_at: The date and time when the advisory was published in the National Vulnerability Database, in ISO 8601 format.
-            ///   - withdrawn_at: The date and time of when the advisory was withdrawn, in ISO 8601 format.
+            ///   - publishedAt: The date and time of when the advisory was published, in ISO 8601 format.
+            ///   - updatedAt: The date and time of when the advisory was last updated, in ISO 8601 format.
+            ///   - githubReviewedAt: The date and time of when the advisory was reviewed by GitHub, in ISO 8601 format.
+            ///   - nvdPublishedAt: The date and time when the advisory was published in the National Vulnerability Database, in ISO 8601 format.
+            ///   - withdrawnAt: The date and time of when the advisory was withdrawn, in ISO 8601 format.
             ///   - vulnerabilities: The products and respective version ranges affected by the advisory.
             ///   - cvss:
-            ///   - cvss_severities:
+            ///   - cvssSeverities:
             ///   - epss:
             ///   - cwes:
             ///   - credits: The users who contributed to the advisory.
             public init(
-                ghsa_id: Swift.String,
-                cve_id: Swift.String? = nil,
+                ghsaId: Swift.String,
+                cveId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                repository_advisory_url: Swift.String? = nil,
+                htmlUrl: Swift.String,
+                repositoryAdvisoryUrl: Swift.String? = nil,
                 summary: Swift.String,
                 description: Swift.String? = nil,
-                _type: Components.Schemas.global_hyphen_advisory._typePayload,
-                severity: Components.Schemas.global_hyphen_advisory.severityPayload,
-                source_code_location: Swift.String? = nil,
-                identifiers: Components.Schemas.global_hyphen_advisory.identifiersPayload? = nil,
+                _type: Components.Schemas.GlobalAdvisory._TypePayload,
+                severity: Components.Schemas.GlobalAdvisory.SeverityPayload,
+                sourceCodeLocation: Swift.String? = nil,
+                identifiers: Components.Schemas.GlobalAdvisory.IdentifiersPayload? = nil,
                 references: [Swift.String]? = nil,
-                published_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                github_reviewed_at: Foundation.Date? = nil,
-                nvd_published_at: Foundation.Date? = nil,
-                withdrawn_at: Foundation.Date? = nil,
-                vulnerabilities: [Components.Schemas.vulnerability]? = nil,
-                cvss: Components.Schemas.global_hyphen_advisory.cvssPayload? = nil,
-                cvss_severities: Components.Schemas.cvss_hyphen_severities? = nil,
-                epss: Components.Schemas.security_hyphen_advisory_hyphen_epss? = nil,
-                cwes: Components.Schemas.global_hyphen_advisory.cwesPayload? = nil,
-                credits: Components.Schemas.global_hyphen_advisory.creditsPayload? = nil
+                publishedAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                githubReviewedAt: Foundation.Date? = nil,
+                nvdPublishedAt: Foundation.Date? = nil,
+                withdrawnAt: Foundation.Date? = nil,
+                vulnerabilities: [Components.Schemas.Vulnerability]? = nil,
+                cvss: Components.Schemas.GlobalAdvisory.CvssPayload? = nil,
+                cvssSeverities: Components.Schemas.CvssSeverities? = nil,
+                epss: Components.Schemas.SecurityAdvisoryEpss? = nil,
+                cwes: Components.Schemas.GlobalAdvisory.CwesPayload? = nil,
+                credits: Components.Schemas.GlobalAdvisory.CreditsPayload? = nil
             ) {
-                self.ghsa_id = ghsa_id
-                self.cve_id = cve_id
+                self.ghsaId = ghsaId
+                self.cveId = cveId
                 self.url = url
-                self.html_url = html_url
-                self.repository_advisory_url = repository_advisory_url
+                self.htmlUrl = htmlUrl
+                self.repositoryAdvisoryUrl = repositoryAdvisoryUrl
                 self.summary = summary
                 self.description = description
                 self._type = _type
                 self.severity = severity
-                self.source_code_location = source_code_location
+                self.sourceCodeLocation = sourceCodeLocation
                 self.identifiers = identifiers
                 self.references = references
-                self.published_at = published_at
-                self.updated_at = updated_at
-                self.github_reviewed_at = github_reviewed_at
-                self.nvd_published_at = nvd_published_at
-                self.withdrawn_at = withdrawn_at
+                self.publishedAt = publishedAt
+                self.updatedAt = updatedAt
+                self.githubReviewedAt = githubReviewedAt
+                self.nvdPublishedAt = nvdPublishedAt
+                self.withdrawnAt = withdrawnAt
                 self.vulnerabilities = vulnerabilities
                 self.cvss = cvss
-                self.cvss_severities = cvss_severities
+                self.cvssSeverities = cvssSeverities
                 self.epss = epss
                 self.cwes = cwes
                 self.credits = credits
             }
             public enum CodingKeys: String, CodingKey {
-                case ghsa_id
-                case cve_id
+                case ghsaId = "ghsa_id"
+                case cveId = "cve_id"
                 case url
-                case html_url
-                case repository_advisory_url
+                case htmlUrl = "html_url"
+                case repositoryAdvisoryUrl = "repository_advisory_url"
                 case summary
                 case description
                 case _type = "type"
                 case severity
-                case source_code_location
+                case sourceCodeLocation = "source_code_location"
                 case identifiers
                 case references
-                case published_at
-                case updated_at
-                case github_reviewed_at
-                case nvd_published_at
-                case withdrawn_at
+                case publishedAt = "published_at"
+                case updatedAt = "updated_at"
+                case githubReviewedAt = "github_reviewed_at"
+                case nvdPublishedAt = "nvd_published_at"
+                case withdrawnAt = "withdrawn_at"
                 case vulnerabilities
                 case cvss
-                case cvss_severities
+                case cvssSeverities = "cvss_severities"
                 case epss
                 case cwes
                 case credits
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                ghsa_id = try container.decode(
+                self.ghsaId = try container.decode(
                     Swift.String.self,
-                    forKey: .ghsa_id
+                    forKey: .ghsaId
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cveId = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .cve_id
+                    forKey: .cveId
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Swift.String.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.htmlUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .html_url
+                    forKey: .htmlUrl
                 )
-                repository_advisory_url = try container.decodeIfPresent(
+                self.repositoryAdvisoryUrl = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .repository_advisory_url
+                    forKey: .repositoryAdvisoryUrl
                 )
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decodeIfPresent(
+                self.description = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .description
                 )
-                _type = try container.decode(
-                    Components.Schemas.global_hyphen_advisory._typePayload.self,
+                self._type = try container.decode(
+                    Components.Schemas.GlobalAdvisory._TypePayload.self,
                     forKey: ._type
                 )
-                severity = try container.decode(
-                    Components.Schemas.global_hyphen_advisory.severityPayload.self,
+                self.severity = try container.decode(
+                    Components.Schemas.GlobalAdvisory.SeverityPayload.self,
                     forKey: .severity
                 )
-                source_code_location = try container.decodeIfPresent(
+                self.sourceCodeLocation = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .source_code_location
+                    forKey: .sourceCodeLocation
                 )
-                identifiers = try container.decodeIfPresent(
-                    Components.Schemas.global_hyphen_advisory.identifiersPayload.self,
+                self.identifiers = try container.decodeIfPresent(
+                    Components.Schemas.GlobalAdvisory.IdentifiersPayload.self,
                     forKey: .identifiers
                 )
-                references = try container.decodeIfPresent(
+                self.references = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .references
                 )
-                published_at = try container.decode(
+                self.publishedAt = try container.decode(
                     Foundation.Date.self,
-                    forKey: .published_at
+                    forKey: .publishedAt
                 )
-                updated_at = try container.decode(
+                self.updatedAt = try container.decode(
                     Foundation.Date.self,
-                    forKey: .updated_at
+                    forKey: .updatedAt
                 )
-                github_reviewed_at = try container.decodeIfPresent(
+                self.githubReviewedAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .github_reviewed_at
+                    forKey: .githubReviewedAt
                 )
-                nvd_published_at = try container.decodeIfPresent(
+                self.nvdPublishedAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .nvd_published_at
+                    forKey: .nvdPublishedAt
                 )
-                withdrawn_at = try container.decodeIfPresent(
+                self.withdrawnAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .withdrawn_at
+                    forKey: .withdrawnAt
                 )
-                vulnerabilities = try container.decodeIfPresent(
-                    [Components.Schemas.vulnerability].self,
+                self.vulnerabilities = try container.decodeIfPresent(
+                    [Components.Schemas.Vulnerability].self,
                     forKey: .vulnerabilities
                 )
-                cvss = try container.decodeIfPresent(
-                    Components.Schemas.global_hyphen_advisory.cvssPayload.self,
+                self.cvss = try container.decodeIfPresent(
+                    Components.Schemas.GlobalAdvisory.CvssPayload.self,
                     forKey: .cvss
                 )
-                cvss_severities = try container.decodeIfPresent(
-                    Components.Schemas.cvss_hyphen_severities.self,
-                    forKey: .cvss_severities
+                self.cvssSeverities = try container.decodeIfPresent(
+                    Components.Schemas.CvssSeverities.self,
+                    forKey: .cvssSeverities
                 )
-                epss = try container.decodeIfPresent(
-                    Components.Schemas.security_hyphen_advisory_hyphen_epss.self,
+                self.epss = try container.decodeIfPresent(
+                    Components.Schemas.SecurityAdvisoryEpss.self,
                     forKey: .epss
                 )
-                cwes = try container.decodeIfPresent(
-                    Components.Schemas.global_hyphen_advisory.cwesPayload.self,
+                self.cwes = try container.decodeIfPresent(
+                    Components.Schemas.GlobalAdvisory.CwesPayload.self,
                     forKey: .cwes
                 )
-                credits = try container.decodeIfPresent(
-                    Components.Schemas.global_hyphen_advisory.creditsPayload.self,
+                self.credits = try container.decodeIfPresent(
+                    Components.Schemas.GlobalAdvisory.CreditsPayload.self,
                     forKey: .credits
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
@@ -1131,36 +1140,36 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -1168,42 +1177,42 @@ public enum Components {
         /// Validation Error Simple
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error-simple`.
-        public struct validation_hyphen_error_hyphen_simple: Codable, Hashable, Sendable {
+        public struct ValidationErrorSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/documentation_url`.
-            public var documentation_url: Swift.String
+            public var documentationUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error-simple/errors`.
             public var errors: [Swift.String]?
-            /// Creates a new `validation_hyphen_error_hyphen_simple`.
+            /// Creates a new `ValidationErrorSimple`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
+                documentationUrl: Swift.String,
                 errors: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// Scim Error
         ///
         /// - Remark: Generated from `#/components/schemas/scim-error`.
-        public struct scim_hyphen_error: Codable, Hashable, Sendable {
+        public struct ScimError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/scim-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/detail`.
             public var detail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/status`.
@@ -1212,25 +1221,25 @@ public enum Components {
             public var scimType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/scim-error/schemas`.
             public var schemas: [Swift.String]?
-            /// Creates a new `scim_hyphen_error`.
+            /// Creates a new `ScimError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - detail:
             ///   - status:
             ///   - scimType:
             ///   - schemas:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 detail: Swift.String? = nil,
                 status: Swift.Int? = nil,
                 scimType: Swift.String? = nil,
                 schemas: [Swift.String]? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.detail = detail
                 self.status = status
                 self.scimType = scimType
@@ -1238,7 +1247,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case detail
                 case status
                 case scimType
@@ -1248,30 +1257,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -1310,9 +1319,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -1327,7 +1336,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -1346,34 +1355,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -1383,142 +1392,142 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// License Simple
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-license-simple`.
-        public struct nullable_hyphen_license_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableLicenseSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/name`.
@@ -1526,66 +1535,66 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/spdx_id`.
-            public var spdx_id: Swift.String?
+            public var spdxId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `nullable_hyphen_license_hyphen_simple`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `NullableLicenseSimple`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
-            ///   - spdx_id:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - spdxId:
+            ///   - nodeId:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String? = nil,
-                spdx_id: Swift.String? = nil,
-                node_id: Swift.String,
-                html_url: Swift.String? = nil
+                spdxId: Swift.String? = nil,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
-                self.spdx_id = spdx_id
-                self.node_id = node_id
-                self.html_url = html_url
+                self.spdxId = spdxId
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
-                case spdx_id
-                case node_id
-                case html_url
+                case spdxId = "spdx_id"
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
             }
         }
         /// A repository on GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/repository`.
-        public struct repository: Codable, Hashable, Sendable {
+        public struct Repository: Codable, Hashable, Sendable {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/license`.
-            public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
+            public var license: Components.Schemas.NullableLicenseSimple?
             /// - Remark: Generated from `#/components/schemas/repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/admin`.
                 public var admin: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/pull`.
@@ -1596,7 +1605,7 @@ public enum Components {
                 public var push: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/maintain`.
                 public var maintain: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -1626,15 +1635,15 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
-            public var permissions: Components.Schemas.repository.permissionsPayload?
+            public var permissions: Components.Schemas.Repository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private or public.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/fork`.
@@ -1642,97 +1651,97 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_url`.
-            public var git_url: Swift.String
+            public var gitUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/ssh_url`.
-            public var ssh_url: Swift.String
+            public var sshUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/clone_url`.
-            public var clone_url: Swift.String
+            public var cloneUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/svn_url`.
-            public var svn_url: Swift.String
+            public var svnUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/forks_count`.
-            public var forks_count: Swift.Int
+            public var forksCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/stargazers_count`.
-            public var stargazers_count: Swift.Int
+            public var stargazersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers_count`.
-            public var watchers_count: Swift.Int
+            public var watchersCount: Swift.Int
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/size`.
@@ -1740,38 +1749,38 @@ public enum Components {
             /// The default branch of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/default_branch`.
-            public var default_branch: Swift.String
+            public var defaultBranch: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/open_issues_count`.
-            public var open_issues_count: Swift.Int
+            public var openIssuesCount: Swift.Int
             /// Whether this repository acts as a template that can be used to generate new repositories.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/topics`.
             public var topics: [Swift.String]?
             /// Whether issues are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_issues`.
-            public var has_issues: Swift.Bool
+            public var hasIssues: Swift.Bool
             /// Whether projects are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_projects`.
-            public var has_projects: Swift.Bool
+            public var hasProjects: Swift.Bool
             /// Whether the wiki is enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_wiki`.
-            public var has_wiki: Swift.Bool
+            public var hasWiki: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/repository/has_pages`.
-            public var has_pages: Swift.Bool
+            public var hasPages: Swift.Bool
             /// Whether downloads are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_downloads`.
             @available(*, deprecated)
-            public var has_downloads: Swift.Bool
+            public var hasDownloads: Swift.Bool
             /// Whether discussions are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// Whether the repository is archived.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/archived`.
@@ -1785,47 +1794,47 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// Whether to allow rebase merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_rebase_merge`.
-            public var allow_rebase_merge: Swift.Bool?
+            public var allowRebaseMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// Whether to allow squash merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_squash_merge`.
-            public var allow_squash_merge: Swift.Bool?
+            public var allowSquashMerge: Swift.Bool?
             /// Whether to allow Auto-merge to be used on pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_auto_merge`.
-            public var allow_auto_merge: Swift.Bool?
+            public var allowAutoMerge: Swift.Bool?
             /// Whether to delete head branches when pull requests are merged
             ///
             /// - Remark: Generated from `#/components/schemas/repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
-            public var allow_update_branch: Swift.Bool?
+            public var allowUpdateBranch: Swift.Bool?
             /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
-            public var use_squash_pr_title_as_default: Swift.Bool?
+            public var useSquashPrTitleAsDefault: Swift.Bool?
             /// The default value for a squash merge commit title:
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
+            @frozen public enum SquashMergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case commitOrPrTitle = "COMMIT_OR_PR_TITLE"
             }
             /// The default value for a squash merge commit title:
             ///
@@ -1833,7 +1842,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            public var squash_merge_commit_title: Components.Schemas.repository.squash_merge_commit_titlePayload?
+            public var squashMergeCommitTitle: Components.Schemas.Repository.SquashMergeCommitTitlePayload?
             /// The default value for a squash merge commit message:
             ///
             /// - `PR_BODY` - default to the pull request's body.
@@ -1841,10 +1850,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                case BLANK = "BLANK"
+            @frozen public enum SquashMergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case commitMessages = "COMMIT_MESSAGES"
+                case blank = "BLANK"
             }
             /// The default value for a squash merge commit message:
             ///
@@ -1853,16 +1862,16 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            public var squash_merge_commit_message: Components.Schemas.repository.squash_merge_commit_messagePayload?
+            public var squashMergeCommitMessage: Components.Schemas.Repository.SquashMergeCommitMessagePayload?
             /// The default value for a merge commit title.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case MERGE_MESSAGE = "MERGE_MESSAGE"
+            @frozen public enum MergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case mergeMessage = "MERGE_MESSAGE"
             }
             /// The default value for a merge commit title.
             ///
@@ -1870,7 +1879,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            public var merge_commit_title: Components.Schemas.repository.merge_commit_titlePayload?
+            public var mergeCommitTitle: Components.Schemas.Repository.MergeCommitTitlePayload?
             /// The default value for a merge commit message.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
@@ -1878,10 +1887,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case PR_TITLE = "PR_TITLE"
-                case BLANK = "BLANK"
+            @frozen public enum MergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case prTitle = "PR_TITLE"
+                case blank = "BLANK"
             }
             /// The default value for a merge commit message.
             ///
@@ -1890,424 +1899,424 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            public var merge_commit_message: Components.Schemas.repository.merge_commit_messagePayload?
+            public var mergeCommitMessage: Components.Schemas.Repository.MergeCommitMessagePayload?
             /// Whether to allow merge commits for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_merge_commit`.
-            public var allow_merge_commit: Swift.Bool?
+            public var allowMergeCommit: Swift.Bool?
             /// Whether to allow forking this repo
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// Whether to require contributors to sign off on web-based commits
             ///
             /// - Remark: Generated from `#/components/schemas/repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/open_issues`.
-            public var open_issues: Swift.Int
+            public var openIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers`.
             public var watchers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/master_branch`.
-            public var master_branch: Swift.String?
+            public var masterBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// Whether anonymous git access is enabled for this repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/anonymous_access_enabled`.
-            public var anonymous_access_enabled: Swift.Bool?
-            /// Creates a new `repository`.
+            public var anonymousAccessEnabled: Swift.Bool?
+            /// Creates a new `Repository`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: The name of the repository.
-            ///   - full_name:
+            ///   - fullName:
             ///   - license:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
             ///   - _private: Whether the repository is private or public.
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch: The default branch of the repository.
-            ///   - open_issues_count:
-            ///   - is_template: Whether this repository acts as a template that can be used to generate new repositories.
+            ///   - defaultBranch: The default branch of the repository.
+            ///   - openIssuesCount:
+            ///   - isTemplate: Whether this repository acts as a template that can be used to generate new repositories.
             ///   - topics:
-            ///   - has_issues: Whether issues are enabled.
-            ///   - has_projects: Whether projects are enabled.
-            ///   - has_wiki: Whether the wiki is enabled.
-            ///   - has_pages:
-            ///   - has_downloads: Whether downloads are enabled.
-            ///   - has_discussions: Whether discussions are enabled.
+            ///   - hasIssues: Whether issues are enabled.
+            ///   - hasProjects: Whether projects are enabled.
+            ///   - hasWiki: Whether the wiki is enabled.
+            ///   - hasPages:
+            ///   - hasDownloads: Whether downloads are enabled.
+            ///   - hasDiscussions: Whether discussions are enabled.
             ///   - archived: Whether the repository is archived.
             ///   - disabled: Returns whether or not this repository disabled.
             ///   - visibility: The repository visibility: public, private, or internal.
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - temp_clone_token:
-            ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
-            ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
-            ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
-            ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
-            ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-            ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-            ///   - merge_commit_title: The default value for a merge commit title.
-            ///   - merge_commit_message: The default value for a merge commit message.
-            ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
-            ///   - allow_forking: Whether to allow forking this repo
-            ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - open_issues:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - allowRebaseMerge: Whether to allow rebase merges for pull requests.
+            ///   - tempCloneToken:
+            ///   - allowSquashMerge: Whether to allow squash merges for pull requests.
+            ///   - allowAutoMerge: Whether to allow Auto-merge to be used on pull requests.
+            ///   - deleteBranchOnMerge: Whether to delete head branches when pull requests are merged
+            ///   - allowUpdateBranch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
+            ///   - useSquashPrTitleAsDefault: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
+            ///   - squashMergeCommitTitle: The default value for a squash merge commit title:
+            ///   - squashMergeCommitMessage: The default value for a squash merge commit message:
+            ///   - mergeCommitTitle: The default value for a merge commit title.
+            ///   - mergeCommitMessage: The default value for a merge commit message.
+            ///   - allowMergeCommit: Whether to allow merge commits for pull requests.
+            ///   - allowForking: Whether to allow forking this repo
+            ///   - webCommitSignoffRequired: Whether to require contributors to sign off on web-based commits
+            ///   - openIssues:
             ///   - watchers:
-            ///   - master_branch:
-            ///   - starred_at:
-            ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
+            ///   - masterBranch:
+            ///   - starredAt:
+            ///   - anonymousAccessEnabled: Whether anonymous git access is enabled for this repository
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
+                fullName: Swift.String,
+                license: Components.Schemas.NullableLicenseSimple? = nil,
                 forks: Swift.Int,
-                permissions: Components.Schemas.repository.permissionsPayload? = nil,
-                owner: Components.Schemas.simple_hyphen_user,
+                permissions: Components.Schemas.Repository.PermissionsPayload? = nil,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int,
-                stargazers_count: Swift.Int,
-                watchers_count: Swift.Int,
+                forksCount: Swift.Int,
+                stargazersCount: Swift.Int,
+                watchersCount: Swift.Int,
                 size: Swift.Int,
-                default_branch: Swift.String,
-                open_issues_count: Swift.Int,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String,
+                openIssuesCount: Swift.Int,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool,
-                has_projects: Swift.Bool,
-                has_wiki: Swift.Bool,
-                has_pages: Swift.Bool,
-                has_downloads: Swift.Bool,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool,
+                hasProjects: Swift.Bool,
+                hasWiki: Swift.Bool,
+                hasPages: Swift.Bool,
+                hasDownloads: Swift.Bool,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool,
                 disabled: Swift.Bool,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                allow_rebase_merge: Swift.Bool? = nil,
-                temp_clone_token: Swift.String? = nil,
-                allow_squash_merge: Swift.Bool? = nil,
-                allow_auto_merge: Swift.Bool? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                allow_update_branch: Swift.Bool? = nil,
-                use_squash_pr_title_as_default: Swift.Bool? = nil,
-                squash_merge_commit_title: Components.Schemas.repository.squash_merge_commit_titlePayload? = nil,
-                squash_merge_commit_message: Components.Schemas.repository.squash_merge_commit_messagePayload? = nil,
-                merge_commit_title: Components.Schemas.repository.merge_commit_titlePayload? = nil,
-                merge_commit_message: Components.Schemas.repository.merge_commit_messagePayload? = nil,
-                allow_merge_commit: Swift.Bool? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                open_issues: Swift.Int,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                allowRebaseMerge: Swift.Bool? = nil,
+                tempCloneToken: Swift.String? = nil,
+                allowSquashMerge: Swift.Bool? = nil,
+                allowAutoMerge: Swift.Bool? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                allowUpdateBranch: Swift.Bool? = nil,
+                useSquashPrTitleAsDefault: Swift.Bool? = nil,
+                squashMergeCommitTitle: Components.Schemas.Repository.SquashMergeCommitTitlePayload? = nil,
+                squashMergeCommitMessage: Components.Schemas.Repository.SquashMergeCommitMessagePayload? = nil,
+                mergeCommitTitle: Components.Schemas.Repository.MergeCommitTitlePayload? = nil,
+                mergeCommitMessage: Components.Schemas.Repository.MergeCommitMessagePayload? = nil,
+                allowMergeCommit: Swift.Bool? = nil,
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                openIssues: Swift.Int,
                 watchers: Swift.Int,
-                master_branch: Swift.String? = nil,
-                starred_at: Swift.String? = nil,
-                anonymous_access_enabled: Swift.Bool? = nil
+                masterBranch: Swift.String? = nil,
+                starredAt: Swift.String? = nil,
+                anonymousAccessEnabled: Swift.Bool? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.license = license
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.allow_rebase_merge = allow_rebase_merge
-                self.temp_clone_token = temp_clone_token
-                self.allow_squash_merge = allow_squash_merge
-                self.allow_auto_merge = allow_auto_merge
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.allow_update_branch = allow_update_branch
-                self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                self.squash_merge_commit_title = squash_merge_commit_title
-                self.squash_merge_commit_message = squash_merge_commit_message
-                self.merge_commit_title = merge_commit_title
-                self.merge_commit_message = merge_commit_message
-                self.allow_merge_commit = allow_merge_commit
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.open_issues = open_issues
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.allowRebaseMerge = allowRebaseMerge
+                self.tempCloneToken = tempCloneToken
+                self.allowSquashMerge = allowSquashMerge
+                self.allowAutoMerge = allowAutoMerge
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.allowUpdateBranch = allowUpdateBranch
+                self.useSquashPrTitleAsDefault = useSquashPrTitleAsDefault
+                self.squashMergeCommitTitle = squashMergeCommitTitle
+                self.squashMergeCommitMessage = squashMergeCommitMessage
+                self.mergeCommitTitle = mergeCommitTitle
+                self.mergeCommitMessage = mergeCommitMessage
+                self.allowMergeCommit = allowMergeCommit
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.master_branch = master_branch
-                self.starred_at = starred_at
-                self.anonymous_access_enabled = anonymous_access_enabled
+                self.masterBranch = masterBranch
+                self.starredAt = starredAt
+                self.anonymousAccessEnabled = anonymousAccessEnabled
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case license
                 case forks
                 case permissions
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
-                case allow_rebase_merge
-                case temp_clone_token
-                case allow_squash_merge
-                case allow_auto_merge
-                case delete_branch_on_merge
-                case allow_update_branch
-                case use_squash_pr_title_as_default
-                case squash_merge_commit_title
-                case squash_merge_commit_message
-                case merge_commit_title
-                case merge_commit_message
-                case allow_merge_commit
-                case allow_forking
-                case web_commit_signoff_required
-                case open_issues
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case allowRebaseMerge = "allow_rebase_merge"
+                case tempCloneToken = "temp_clone_token"
+                case allowSquashMerge = "allow_squash_merge"
+                case allowAutoMerge = "allow_auto_merge"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case allowUpdateBranch = "allow_update_branch"
+                case useSquashPrTitleAsDefault = "use_squash_pr_title_as_default"
+                case squashMergeCommitTitle = "squash_merge_commit_title"
+                case squashMergeCommitMessage = "squash_merge_commit_message"
+                case mergeCommitTitle = "merge_commit_title"
+                case mergeCommitMessage = "merge_commit_message"
+                case allowMergeCommit = "allow_merge_commit"
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case openIssues = "open_issues"
                 case watchers
-                case master_branch
-                case starred_at
-                case anonymous_access_enabled
+                case masterBranch = "master_branch"
+                case starredAt = "starred_at"
+                case anonymousAccessEnabled = "anonymous_access_enabled"
             }
         }
         /// A GitHub repository.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-repository`.
-        public struct simple_hyphen_repository: Codable, Hashable, Sendable {
+        public struct SimpleRepository: Codable, Hashable, Sendable {
             /// A unique identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/id`.
@@ -2315,7 +2324,7 @@ public enum Components {
             /// The GraphQL identifier of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/name`.
@@ -2323,9 +2332,9 @@ public enum Components {
             /// The full, globally unique, name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/private`.
@@ -2333,7 +2342,7 @@ public enum Components {
             /// The URL to view the repository on GitHub.com.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// The repository description.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/description`.
@@ -2349,356 +2358,356 @@ public enum Components {
             /// A template for the API URL to download the repository as an archive.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// A template for the API URL to list the available assignees for issues in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// A template for the API URL to create or retrieve a raw Git blob in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// A template for the API URL to get information about branches in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// A template for the API URL to get information about collaborators of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// A template for the API URL to get information about comments on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// A template for the API URL to get information about commits on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// A template for the API URL to compare two commits or refs.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// A template for the API URL to get the contents of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// A template for the API URL to list the contributors to the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// The API URL to list the deployments of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// The API URL to list the downloads on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// The API URL to list the events of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// The API URL to list the forks of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// A template for the API URL to get information about Git commits of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// A template for the API URL to get information about Git refs of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// A template for the API URL to get information about Git tags of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// A template for the API URL to get information about issue comments on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// A template for the API URL to get information about issue events on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// A template for the API URL to get information about issues on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// A template for the API URL to get information about deploy keys on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// A template for the API URL to get information about labels of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// The API URL to get information about the languages of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// The API URL to merge branches in the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// A template for the API URL to get information about milestones of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// A template for the API URL to get information about notifications on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// A template for the API URL to get information about pull requests on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// A template for the API URL to get information about releases on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// The API URL to list the stargazers on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// A template for the API URL to get information about statuses of a commit.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// The API URL to list the subscribers on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// The API URL to subscribe to notifications for this repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// The API URL to get information about tags on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// The API URL to list the teams on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// A template for the API URL to create or retrieve a raw Git tree of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// The API URL to list the hooks on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-repository/hooks_url`.
-            public var hooks_url: Swift.String
-            /// Creates a new `simple_hyphen_repository`.
+            public var hooksUrl: Swift.String
+            /// Creates a new `SimpleRepository`.
             ///
             /// - Parameters:
             ///   - id: A unique identifier of the repository.
-            ///   - node_id: The GraphQL identifier of the repository.
+            ///   - nodeId: The GraphQL identifier of the repository.
             ///   - name: The name of the repository.
-            ///   - full_name: The full, globally unique, name of the repository.
+            ///   - fullName: The full, globally unique, name of the repository.
             ///   - owner:
             ///   - _private: Whether the repository is private.
-            ///   - html_url: The URL to view the repository on GitHub.com.
+            ///   - htmlUrl: The URL to view the repository on GitHub.com.
             ///   - description: The repository description.
             ///   - fork: Whether the repository is a fork.
             ///   - url: The URL to get more information about the repository from the GitHub API.
-            ///   - archive_url: A template for the API URL to download the repository as an archive.
-            ///   - assignees_url: A template for the API URL to list the available assignees for issues in the repository.
-            ///   - blobs_url: A template for the API URL to create or retrieve a raw Git blob in the repository.
-            ///   - branches_url: A template for the API URL to get information about branches in the repository.
-            ///   - collaborators_url: A template for the API URL to get information about collaborators of the repository.
-            ///   - comments_url: A template for the API URL to get information about comments on the repository.
-            ///   - commits_url: A template for the API URL to get information about commits on the repository.
-            ///   - compare_url: A template for the API URL to compare two commits or refs.
-            ///   - contents_url: A template for the API URL to get the contents of the repository.
-            ///   - contributors_url: A template for the API URL to list the contributors to the repository.
-            ///   - deployments_url: The API URL to list the deployments of the repository.
-            ///   - downloads_url: The API URL to list the downloads on the repository.
-            ///   - events_url: The API URL to list the events of the repository.
-            ///   - forks_url: The API URL to list the forks of the repository.
-            ///   - git_commits_url: A template for the API URL to get information about Git commits of the repository.
-            ///   - git_refs_url: A template for the API URL to get information about Git refs of the repository.
-            ///   - git_tags_url: A template for the API URL to get information about Git tags of the repository.
-            ///   - issue_comment_url: A template for the API URL to get information about issue comments on the repository.
-            ///   - issue_events_url: A template for the API URL to get information about issue events on the repository.
-            ///   - issues_url: A template for the API URL to get information about issues on the repository.
-            ///   - keys_url: A template for the API URL to get information about deploy keys on the repository.
-            ///   - labels_url: A template for the API URL to get information about labels of the repository.
-            ///   - languages_url: The API URL to get information about the languages of the repository.
-            ///   - merges_url: The API URL to merge branches in the repository.
-            ///   - milestones_url: A template for the API URL to get information about milestones of the repository.
-            ///   - notifications_url: A template for the API URL to get information about notifications on the repository.
-            ///   - pulls_url: A template for the API URL to get information about pull requests on the repository.
-            ///   - releases_url: A template for the API URL to get information about releases on the repository.
-            ///   - stargazers_url: The API URL to list the stargazers on the repository.
-            ///   - statuses_url: A template for the API URL to get information about statuses of a commit.
-            ///   - subscribers_url: The API URL to list the subscribers on the repository.
-            ///   - subscription_url: The API URL to subscribe to notifications for this repository.
-            ///   - tags_url: The API URL to get information about tags on the repository.
-            ///   - teams_url: The API URL to list the teams on the repository.
-            ///   - trees_url: A template for the API URL to create or retrieve a raw Git tree of the repository.
-            ///   - hooks_url: The API URL to list the hooks on the repository.
+            ///   - archiveUrl: A template for the API URL to download the repository as an archive.
+            ///   - assigneesUrl: A template for the API URL to list the available assignees for issues in the repository.
+            ///   - blobsUrl: A template for the API URL to create or retrieve a raw Git blob in the repository.
+            ///   - branchesUrl: A template for the API URL to get information about branches in the repository.
+            ///   - collaboratorsUrl: A template for the API URL to get information about collaborators of the repository.
+            ///   - commentsUrl: A template for the API URL to get information about comments on the repository.
+            ///   - commitsUrl: A template for the API URL to get information about commits on the repository.
+            ///   - compareUrl: A template for the API URL to compare two commits or refs.
+            ///   - contentsUrl: A template for the API URL to get the contents of the repository.
+            ///   - contributorsUrl: A template for the API URL to list the contributors to the repository.
+            ///   - deploymentsUrl: The API URL to list the deployments of the repository.
+            ///   - downloadsUrl: The API URL to list the downloads on the repository.
+            ///   - eventsUrl: The API URL to list the events of the repository.
+            ///   - forksUrl: The API URL to list the forks of the repository.
+            ///   - gitCommitsUrl: A template for the API URL to get information about Git commits of the repository.
+            ///   - gitRefsUrl: A template for the API URL to get information about Git refs of the repository.
+            ///   - gitTagsUrl: A template for the API URL to get information about Git tags of the repository.
+            ///   - issueCommentUrl: A template for the API URL to get information about issue comments on the repository.
+            ///   - issueEventsUrl: A template for the API URL to get information about issue events on the repository.
+            ///   - issuesUrl: A template for the API URL to get information about issues on the repository.
+            ///   - keysUrl: A template for the API URL to get information about deploy keys on the repository.
+            ///   - labelsUrl: A template for the API URL to get information about labels of the repository.
+            ///   - languagesUrl: The API URL to get information about the languages of the repository.
+            ///   - mergesUrl: The API URL to merge branches in the repository.
+            ///   - milestonesUrl: A template for the API URL to get information about milestones of the repository.
+            ///   - notificationsUrl: A template for the API URL to get information about notifications on the repository.
+            ///   - pullsUrl: A template for the API URL to get information about pull requests on the repository.
+            ///   - releasesUrl: A template for the API URL to get information about releases on the repository.
+            ///   - stargazersUrl: The API URL to list the stargazers on the repository.
+            ///   - statusesUrl: A template for the API URL to get information about statuses of a commit.
+            ///   - subscribersUrl: The API URL to list the subscribers on the repository.
+            ///   - subscriptionUrl: The API URL to subscribe to notifications for this repository.
+            ///   - tagsUrl: The API URL to get information about tags on the repository.
+            ///   - teamsUrl: The API URL to list the teams on the repository.
+            ///   - treesUrl: A template for the API URL to create or retrieve a raw Git tree of the repository.
+            ///   - hooksUrl: The API URL to list the hooks on the repository.
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                hooks_url: Swift.String
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                hooksUrl: Swift.String
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.hooks_url = hooks_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.hooksUrl = hooksUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case hooks_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case hooksUrl = "hooks_url"
             }
         }
         /// - Remark: Generated from `#/components/schemas/security-and-analysis`.
-        public struct security_hyphen_and_hyphen_analysis: Codable, Hashable, Sendable {
+        public struct SecurityAndAnalysis: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public struct advanced_securityPayload: Codable, Hashable, Sendable {
+            public struct AdvancedSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload?
-                /// Creates a new `advanced_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload?
+                /// Creates a new `AdvancedSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2706,21 +2715,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            public var advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public struct code_securityPayload: Codable, Hashable, Sendable {
+            public struct CodeSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
-                /// Creates a new `code_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload?
+                /// Creates a new `CodeSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2728,27 +2737,27 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
+            public var codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public struct dependabot_security_updatesPayload: Codable, Hashable, Sendable {
+            public struct DependabotSecurityUpdatesPayload: Codable, Hashable, Sendable {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload?
-                /// Creates a new `dependabot_security_updatesPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload?
+                /// Creates a new `DependabotSecurityUpdatesPayload`.
                 ///
                 /// - Parameters:
                 ///   - status: The enablement status of Dependabot security updates for the repository.
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2758,21 +2767,21 @@ public enum Components {
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public var dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload?
+            public var dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public struct secret_scanningPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload?
-                /// Creates a new `secret_scanningPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload?
+                /// Creates a new `SecretScanningPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2780,21 +2789,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public var secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload?
+            public var secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPushProtectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_push_protectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningPushProtectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2802,21 +2811,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public var secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload?
+            public var secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningNonProviderPatternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload?
-                /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload?
+                /// Creates a new `SecretScanningNonProviderPatternsPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2824,21 +2833,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            public var secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningAiDetectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningAiDetectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2846,60 +2855,60 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
-            /// Creates a new `security_hyphen_and_hyphen_analysis`.
+            public var secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload?
+            /// Creates a new `SecurityAndAnalysis`.
             ///
             /// - Parameters:
-            ///   - advanced_security:
-            ///   - code_security:
-            ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
-            ///   - secret_scanning:
-            ///   - secret_scanning_push_protection:
-            ///   - secret_scanning_non_provider_patterns:
-            ///   - secret_scanning_ai_detection:
+            ///   - advancedSecurity:
+            ///   - codeSecurity:
+            ///   - dependabotSecurityUpdates: Enable or disable Dependabot security updates for the repository.
+            ///   - secretScanning:
+            ///   - secretScanningPushProtection:
+            ///   - secretScanningNonProviderPatterns:
+            ///   - secretScanningAiDetection:
             public init(
-                advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
-                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
-                dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
-                secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
-                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
-                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
+                advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload? = nil,
+                codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload? = nil,
+                dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload? = nil,
+                secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload? = nil,
+                secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload? = nil,
+                secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload? = nil,
+                secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload? = nil
             ) {
-                self.advanced_security = advanced_security
-                self.code_security = code_security
-                self.dependabot_security_updates = dependabot_security_updates
-                self.secret_scanning = secret_scanning
-                self.secret_scanning_push_protection = secret_scanning_push_protection
-                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
-                self.secret_scanning_ai_detection = secret_scanning_ai_detection
+                self.advancedSecurity = advancedSecurity
+                self.codeSecurity = codeSecurity
+                self.dependabotSecurityUpdates = dependabotSecurityUpdates
+                self.secretScanning = secretScanning
+                self.secretScanningPushProtection = secretScanningPushProtection
+                self.secretScanningNonProviderPatterns = secretScanningNonProviderPatterns
+                self.secretScanningAiDetection = secretScanningAiDetection
             }
             public enum CodingKeys: String, CodingKey {
-                case advanced_security
-                case code_security
-                case dependabot_security_updates
-                case secret_scanning
-                case secret_scanning_push_protection
-                case secret_scanning_non_provider_patterns
-                case secret_scanning_ai_detection
+                case advancedSecurity = "advanced_security"
+                case codeSecurity = "code_security"
+                case dependabotSecurityUpdates = "dependabot_security_updates"
+                case secretScanning = "secret_scanning"
+                case secretScanningPushProtection = "secret_scanning_push_protection"
+                case secretScanningNonProviderPatterns = "secret_scanning_non_provider_patterns"
+                case secretScanningAiDetection = "secret_scanning_ai_detection"
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableTeamSimple: Codable, Hashable, Sendable {
             /// Unique identifier of the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// URL for the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// Name of the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
@@ -2919,86 +2928,86 @@ public enum Components {
             /// The notification setting the team has set
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
             public var slug: Swift.String
             /// Distinguished Name (DN) that team maps to within LDAP environment
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            public var ldapDn: Swift.String?
+            /// Creates a new `NullableTeamSimple`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the team
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url: URL for the team
-            ///   - members_url:
+            ///   - membersUrl:
             ///   - name: Name of the team
             ///   - description: Description of the team
             ///   - permission: Permission that the team will have for its repositories
             ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
+            ///   - notificationSetting: The notification setting the team has set
+            ///   - htmlUrl:
+            ///   - repositoriesUrl:
             ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            ///   - ldapDn: Distinguished Name (DN) that team maps to within LDAP environment
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                members_url: Swift.String,
+                membersUrl: Swift.String,
                 name: Swift.String,
                 description: Swift.String? = nil,
                 permission: Swift.String,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
+                notificationSetting: Swift.String? = nil,
+                htmlUrl: Swift.String,
+                repositoriesUrl: Swift.String,
                 slug: Swift.String,
-                ldap_dn: Swift.String? = nil
+                ldapDn: Swift.String? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
-                self.members_url = members_url
+                self.membersUrl = membersUrl
                 self.name = name
                 self.description = description
                 self.permission = permission
                 self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
+                self.notificationSetting = notificationSetting
+                self.htmlUrl = htmlUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.slug = slug
-                self.ldap_dn = ldap_dn
+                self.ldapDn = ldapDn
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case url
-                case members_url
+                case membersUrl = "members_url"
                 case name
                 case description
                 case permission
                 case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
+                case notificationSetting = "notification_setting"
+                case htmlUrl = "html_url"
+                case repositoriesUrl = "repositories_url"
                 case slug
-                case ldap_dn
+                case ldapDn = "ldap_dn"
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
+        public struct Team: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/slug`.
@@ -3008,11 +3017,11 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team/privacy`.
             public var privacy: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team/permission`.
             public var permission: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
                 public var pull: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
@@ -3023,7 +3032,7 @@ public enum Components {
                 public var maintain: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
                 public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - pull:
@@ -3053,104 +3062,104 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
+            public var permissions: Components.Schemas.Team.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/team/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
+            public var parent: Components.Schemas.NullableTeamSimple?
+            /// Creates a new `Team`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
             ///   - slug:
             ///   - description:
             ///   - privacy:
-            ///   - notification_setting:
+            ///   - notificationSetting:
             ///   - permission:
             ///   - permissions:
             ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
+            ///   - htmlUrl:
+            ///   - membersUrl:
+            ///   - repositoriesUrl:
             ///   - parent:
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
                 slug: Swift.String,
                 description: Swift.String? = nil,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
+                notificationSetting: Swift.String? = nil,
                 permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                permissions: Components.Schemas.Team.PermissionsPayload? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+                htmlUrl: Swift.String,
+                membersUrl: Swift.String,
+                repositoriesUrl: Swift.String,
+                parent: Components.Schemas.NullableTeamSimple? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
                 self.slug = slug
                 self.description = description
                 self.privacy = privacy
-                self.notification_setting = notification_setting
+                self.notificationSetting = notificationSetting
                 self.permission = permission
                 self.permissions = permissions
                 self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
+                self.htmlUrl = htmlUrl
+                self.membersUrl = membersUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.parent = parent
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
                 case slug
                 case description
                 case privacy
-                case notification_setting
+                case notificationSetting = "notification_setting"
                 case permission
                 case permissions
                 case url
-                case html_url
-                case members_url
-                case repositories_url
+                case htmlUrl = "html_url"
+                case membersUrl = "members_url"
+                case repositoriesUrl = "repositories_url"
                 case parent
             }
         }
         /// A repository on GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-repository`.
-        public struct nullable_hyphen_repository: Codable, Hashable, Sendable {
+        public struct NullableRepository: Codable, Hashable, Sendable {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/license`.
-            public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
+            public var license: Components.Schemas.NullableLicenseSimple?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/nullable-repository/permissions/admin`.
                 public var admin: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/nullable-repository/permissions/pull`.
@@ -3161,7 +3170,7 @@ public enum Components {
                 public var push: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/nullable-repository/permissions/maintain`.
                 public var maintain: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -3191,15 +3200,15 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/nullable-repository/permissions`.
-            public var permissions: Components.Schemas.nullable_hyphen_repository.permissionsPayload?
+            public var permissions: Components.Schemas.NullableRepository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private or public.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/fork`.
@@ -3207,97 +3216,97 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/git_url`.
-            public var git_url: Swift.String
+            public var gitUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/ssh_url`.
-            public var ssh_url: Swift.String
+            public var sshUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/clone_url`.
-            public var clone_url: Swift.String
+            public var cloneUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/svn_url`.
-            public var svn_url: Swift.String
+            public var svnUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/forks_count`.
-            public var forks_count: Swift.Int
+            public var forksCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int
+            public var stargazersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-repository/watchers_count`.
-            public var watchers_count: Swift.Int
+            public var watchersCount: Swift.Int
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/size`.
@@ -3305,38 +3314,38 @@ public enum Components {
             /// The default branch of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/default_branch`.
-            public var default_branch: Swift.String
+            public var defaultBranch: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-repository/open_issues_count`.
-            public var open_issues_count: Swift.Int
+            public var openIssuesCount: Swift.Int
             /// Whether this repository acts as a template that can be used to generate new repositories.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/topics`.
             public var topics: [Swift.String]?
             /// Whether issues are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/has_issues`.
-            public var has_issues: Swift.Bool
+            public var hasIssues: Swift.Bool
             /// Whether projects are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/has_projects`.
-            public var has_projects: Swift.Bool
+            public var hasProjects: Swift.Bool
             /// Whether the wiki is enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/has_wiki`.
-            public var has_wiki: Swift.Bool
+            public var hasWiki: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-repository/has_pages`.
-            public var has_pages: Swift.Bool
+            public var hasPages: Swift.Bool
             /// Whether downloads are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/has_downloads`.
             @available(*, deprecated)
-            public var has_downloads: Swift.Bool
+            public var hasDownloads: Swift.Bool
             /// Whether discussions are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// Whether the repository is archived.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/archived`.
@@ -3350,47 +3359,47 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// Whether to allow rebase merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_rebase_merge`.
-            public var allow_rebase_merge: Swift.Bool?
+            public var allowRebaseMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// Whether to allow squash merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_squash_merge`.
-            public var allow_squash_merge: Swift.Bool?
+            public var allowSquashMerge: Swift.Bool?
             /// Whether to allow Auto-merge to be used on pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_auto_merge`.
-            public var allow_auto_merge: Swift.Bool?
+            public var allowAutoMerge: Swift.Bool?
             /// Whether to delete head branches when pull requests are merged
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_update_branch`.
-            public var allow_update_branch: Swift.Bool?
+            public var allowUpdateBranch: Swift.Bool?
             /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
-            public var use_squash_pr_title_as_default: Swift.Bool?
+            public var useSquashPrTitleAsDefault: Swift.Bool?
             /// The default value for a squash merge commit title:
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
+            @frozen public enum SquashMergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case commitOrPrTitle = "COMMIT_OR_PR_TITLE"
             }
             /// The default value for a squash merge commit title:
             ///
@@ -3398,7 +3407,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/squash_merge_commit_title`.
-            public var squash_merge_commit_title: Components.Schemas.nullable_hyphen_repository.squash_merge_commit_titlePayload?
+            public var squashMergeCommitTitle: Components.Schemas.NullableRepository.SquashMergeCommitTitlePayload?
             /// The default value for a squash merge commit message:
             ///
             /// - `PR_BODY` - default to the pull request's body.
@@ -3406,10 +3415,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                case BLANK = "BLANK"
+            @frozen public enum SquashMergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case commitMessages = "COMMIT_MESSAGES"
+                case blank = "BLANK"
             }
             /// The default value for a squash merge commit message:
             ///
@@ -3418,16 +3427,16 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/squash_merge_commit_message`.
-            public var squash_merge_commit_message: Components.Schemas.nullable_hyphen_repository.squash_merge_commit_messagePayload?
+            public var squashMergeCommitMessage: Components.Schemas.NullableRepository.SquashMergeCommitMessagePayload?
             /// The default value for a merge commit title.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case MERGE_MESSAGE = "MERGE_MESSAGE"
+            @frozen public enum MergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case mergeMessage = "MERGE_MESSAGE"
             }
             /// The default value for a merge commit title.
             ///
@@ -3435,7 +3444,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merge_commit_title`.
-            public var merge_commit_title: Components.Schemas.nullable_hyphen_repository.merge_commit_titlePayload?
+            public var mergeCommitTitle: Components.Schemas.NullableRepository.MergeCommitTitlePayload?
             /// The default value for a merge commit message.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
@@ -3443,10 +3452,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case PR_TITLE = "PR_TITLE"
-                case BLANK = "BLANK"
+            @frozen public enum MergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case prTitle = "PR_TITLE"
+                case blank = "BLANK"
             }
             /// The default value for a merge commit message.
             ///
@@ -3455,424 +3464,424 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merge_commit_message`.
-            public var merge_commit_message: Components.Schemas.nullable_hyphen_repository.merge_commit_messagePayload?
+            public var mergeCommitMessage: Components.Schemas.NullableRepository.MergeCommitMessagePayload?
             /// Whether to allow merge commits for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_merge_commit`.
-            public var allow_merge_commit: Swift.Bool?
+            public var allowMergeCommit: Swift.Bool?
             /// Whether to allow forking this repo
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// Whether to require contributors to sign off on web-based commits
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/open_issues`.
-            public var open_issues: Swift.Int
+            public var openIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-repository/watchers`.
             public var watchers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-repository/master_branch`.
-            public var master_branch: Swift.String?
+            public var masterBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-repository/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// Whether anonymous git access is enabled for this repository
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/anonymous_access_enabled`.
-            public var anonymous_access_enabled: Swift.Bool?
-            /// Creates a new `nullable_hyphen_repository`.
+            public var anonymousAccessEnabled: Swift.Bool?
+            /// Creates a new `NullableRepository`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: The name of the repository.
-            ///   - full_name:
+            ///   - fullName:
             ///   - license:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
             ///   - _private: Whether the repository is private or public.
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch: The default branch of the repository.
-            ///   - open_issues_count:
-            ///   - is_template: Whether this repository acts as a template that can be used to generate new repositories.
+            ///   - defaultBranch: The default branch of the repository.
+            ///   - openIssuesCount:
+            ///   - isTemplate: Whether this repository acts as a template that can be used to generate new repositories.
             ///   - topics:
-            ///   - has_issues: Whether issues are enabled.
-            ///   - has_projects: Whether projects are enabled.
-            ///   - has_wiki: Whether the wiki is enabled.
-            ///   - has_pages:
-            ///   - has_downloads: Whether downloads are enabled.
-            ///   - has_discussions: Whether discussions are enabled.
+            ///   - hasIssues: Whether issues are enabled.
+            ///   - hasProjects: Whether projects are enabled.
+            ///   - hasWiki: Whether the wiki is enabled.
+            ///   - hasPages:
+            ///   - hasDownloads: Whether downloads are enabled.
+            ///   - hasDiscussions: Whether discussions are enabled.
             ///   - archived: Whether the repository is archived.
             ///   - disabled: Returns whether or not this repository disabled.
             ///   - visibility: The repository visibility: public, private, or internal.
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - temp_clone_token:
-            ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
-            ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
-            ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
-            ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
-            ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-            ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-            ///   - merge_commit_title: The default value for a merge commit title.
-            ///   - merge_commit_message: The default value for a merge commit message.
-            ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
-            ///   - allow_forking: Whether to allow forking this repo
-            ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - open_issues:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - allowRebaseMerge: Whether to allow rebase merges for pull requests.
+            ///   - tempCloneToken:
+            ///   - allowSquashMerge: Whether to allow squash merges for pull requests.
+            ///   - allowAutoMerge: Whether to allow Auto-merge to be used on pull requests.
+            ///   - deleteBranchOnMerge: Whether to delete head branches when pull requests are merged
+            ///   - allowUpdateBranch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
+            ///   - useSquashPrTitleAsDefault: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
+            ///   - squashMergeCommitTitle: The default value for a squash merge commit title:
+            ///   - squashMergeCommitMessage: The default value for a squash merge commit message:
+            ///   - mergeCommitTitle: The default value for a merge commit title.
+            ///   - mergeCommitMessage: The default value for a merge commit message.
+            ///   - allowMergeCommit: Whether to allow merge commits for pull requests.
+            ///   - allowForking: Whether to allow forking this repo
+            ///   - webCommitSignoffRequired: Whether to require contributors to sign off on web-based commits
+            ///   - openIssues:
             ///   - watchers:
-            ///   - master_branch:
-            ///   - starred_at:
-            ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
+            ///   - masterBranch:
+            ///   - starredAt:
+            ///   - anonymousAccessEnabled: Whether anonymous git access is enabled for this repository
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
+                fullName: Swift.String,
+                license: Components.Schemas.NullableLicenseSimple? = nil,
                 forks: Swift.Int,
-                permissions: Components.Schemas.nullable_hyphen_repository.permissionsPayload? = nil,
-                owner: Components.Schemas.simple_hyphen_user,
+                permissions: Components.Schemas.NullableRepository.PermissionsPayload? = nil,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int,
-                stargazers_count: Swift.Int,
-                watchers_count: Swift.Int,
+                forksCount: Swift.Int,
+                stargazersCount: Swift.Int,
+                watchersCount: Swift.Int,
                 size: Swift.Int,
-                default_branch: Swift.String,
-                open_issues_count: Swift.Int,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String,
+                openIssuesCount: Swift.Int,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool,
-                has_projects: Swift.Bool,
-                has_wiki: Swift.Bool,
-                has_pages: Swift.Bool,
-                has_downloads: Swift.Bool,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool,
+                hasProjects: Swift.Bool,
+                hasWiki: Swift.Bool,
+                hasPages: Swift.Bool,
+                hasDownloads: Swift.Bool,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool,
                 disabled: Swift.Bool,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                allow_rebase_merge: Swift.Bool? = nil,
-                temp_clone_token: Swift.String? = nil,
-                allow_squash_merge: Swift.Bool? = nil,
-                allow_auto_merge: Swift.Bool? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                allow_update_branch: Swift.Bool? = nil,
-                use_squash_pr_title_as_default: Swift.Bool? = nil,
-                squash_merge_commit_title: Components.Schemas.nullable_hyphen_repository.squash_merge_commit_titlePayload? = nil,
-                squash_merge_commit_message: Components.Schemas.nullable_hyphen_repository.squash_merge_commit_messagePayload? = nil,
-                merge_commit_title: Components.Schemas.nullable_hyphen_repository.merge_commit_titlePayload? = nil,
-                merge_commit_message: Components.Schemas.nullable_hyphen_repository.merge_commit_messagePayload? = nil,
-                allow_merge_commit: Swift.Bool? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                open_issues: Swift.Int,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                allowRebaseMerge: Swift.Bool? = nil,
+                tempCloneToken: Swift.String? = nil,
+                allowSquashMerge: Swift.Bool? = nil,
+                allowAutoMerge: Swift.Bool? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                allowUpdateBranch: Swift.Bool? = nil,
+                useSquashPrTitleAsDefault: Swift.Bool? = nil,
+                squashMergeCommitTitle: Components.Schemas.NullableRepository.SquashMergeCommitTitlePayload? = nil,
+                squashMergeCommitMessage: Components.Schemas.NullableRepository.SquashMergeCommitMessagePayload? = nil,
+                mergeCommitTitle: Components.Schemas.NullableRepository.MergeCommitTitlePayload? = nil,
+                mergeCommitMessage: Components.Schemas.NullableRepository.MergeCommitMessagePayload? = nil,
+                allowMergeCommit: Swift.Bool? = nil,
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                openIssues: Swift.Int,
                 watchers: Swift.Int,
-                master_branch: Swift.String? = nil,
-                starred_at: Swift.String? = nil,
-                anonymous_access_enabled: Swift.Bool? = nil
+                masterBranch: Swift.String? = nil,
+                starredAt: Swift.String? = nil,
+                anonymousAccessEnabled: Swift.Bool? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.license = license
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.allow_rebase_merge = allow_rebase_merge
-                self.temp_clone_token = temp_clone_token
-                self.allow_squash_merge = allow_squash_merge
-                self.allow_auto_merge = allow_auto_merge
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.allow_update_branch = allow_update_branch
-                self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                self.squash_merge_commit_title = squash_merge_commit_title
-                self.squash_merge_commit_message = squash_merge_commit_message
-                self.merge_commit_title = merge_commit_title
-                self.merge_commit_message = merge_commit_message
-                self.allow_merge_commit = allow_merge_commit
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.open_issues = open_issues
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.allowRebaseMerge = allowRebaseMerge
+                self.tempCloneToken = tempCloneToken
+                self.allowSquashMerge = allowSquashMerge
+                self.allowAutoMerge = allowAutoMerge
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.allowUpdateBranch = allowUpdateBranch
+                self.useSquashPrTitleAsDefault = useSquashPrTitleAsDefault
+                self.squashMergeCommitTitle = squashMergeCommitTitle
+                self.squashMergeCommitMessage = squashMergeCommitMessage
+                self.mergeCommitTitle = mergeCommitTitle
+                self.mergeCommitMessage = mergeCommitMessage
+                self.allowMergeCommit = allowMergeCommit
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.master_branch = master_branch
-                self.starred_at = starred_at
-                self.anonymous_access_enabled = anonymous_access_enabled
+                self.masterBranch = masterBranch
+                self.starredAt = starredAt
+                self.anonymousAccessEnabled = anonymousAccessEnabled
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case license
                 case forks
                 case permissions
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
-                case allow_rebase_merge
-                case temp_clone_token
-                case allow_squash_merge
-                case allow_auto_merge
-                case delete_branch_on_merge
-                case allow_update_branch
-                case use_squash_pr_title_as_default
-                case squash_merge_commit_title
-                case squash_merge_commit_message
-                case merge_commit_title
-                case merge_commit_message
-                case allow_merge_commit
-                case allow_forking
-                case web_commit_signoff_required
-                case open_issues
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case allowRebaseMerge = "allow_rebase_merge"
+                case tempCloneToken = "temp_clone_token"
+                case allowSquashMerge = "allow_squash_merge"
+                case allowAutoMerge = "allow_auto_merge"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case allowUpdateBranch = "allow_update_branch"
+                case useSquashPrTitleAsDefault = "use_squash_pr_title_as_default"
+                case squashMergeCommitTitle = "squash_merge_commit_title"
+                case squashMergeCommitMessage = "squash_merge_commit_message"
+                case mergeCommitTitle = "merge_commit_title"
+                case mergeCommitMessage = "merge_commit_message"
+                case allowMergeCommit = "allow_merge_commit"
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case openIssues = "open_issues"
                 case watchers
-                case master_branch
-                case starred_at
-                case anonymous_access_enabled
+                case masterBranch = "master_branch"
+                case starredAt = "starred_at"
+                case anonymousAccessEnabled = "anonymous_access_enabled"
             }
         }
         /// Code of Conduct Simple
         ///
         /// - Remark: Generated from `#/components/schemas/code-of-conduct-simple`.
-        public struct code_hyphen_of_hyphen_conduct_hyphen_simple: Codable, Hashable, Sendable {
+        public struct CodeOfConductSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-of-conduct-simple/key`.
@@ -3880,50 +3889,50 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct-simple/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-of-conduct-simple/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `code_hyphen_of_hyphen_conduct_hyphen_simple`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `CodeOfConductSimple`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - key:
             ///   - name:
-            ///   - html_url:
+            ///   - htmlUrl:
             public init(
                 url: Swift.String,
                 key: Swift.String,
                 name: Swift.String,
-                html_url: Swift.String? = nil
+                htmlUrl: Swift.String? = nil
             ) {
                 self.url = url
                 self.key = key
                 self.name = name
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case url
                 case key
                 case name
-                case html_url
+                case htmlUrl = "html_url"
             }
         }
         /// Full Repository
         ///
         /// - Remark: Generated from `#/components/schemas/full-repository`.
-        public struct full_hyphen_repository: Codable, Hashable, Sendable {
+        public struct FullRepository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/full-repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/full-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/full-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/full-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/full-repository/fork`.
@@ -3931,121 +3940,121 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/full-repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/git_url`.
-            public var git_url: Swift.String
+            public var gitUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/ssh_url`.
-            public var ssh_url: Swift.String
+            public var sshUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/clone_url`.
-            public var clone_url: Swift.String
+            public var cloneUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/full-repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/svn_url`.
-            public var svn_url: Swift.String
+            public var svnUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/full-repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/full-repository/forks_count`.
-            public var forks_count: Swift.Int
+            public var forksCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/full-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int
+            public var stargazersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/full-repository/watchers_count`.
-            public var watchers_count: Swift.Int
+            public var watchersCount: Swift.Int
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/size`.
             public var size: Swift.Int
             /// - Remark: Generated from `#/components/schemas/full-repository/default_branch`.
-            public var default_branch: Swift.String
+            public var defaultBranch: Swift.String
             /// - Remark: Generated from `#/components/schemas/full-repository/open_issues_count`.
-            public var open_issues_count: Swift.Int
+            public var openIssuesCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/full-repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/topics`.
             public var topics: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/full-repository/has_issues`.
-            public var has_issues: Swift.Bool
+            public var hasIssues: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/full-repository/has_projects`.
-            public var has_projects: Swift.Bool
+            public var hasProjects: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/full-repository/has_wiki`.
-            public var has_wiki: Swift.Bool
+            public var hasWiki: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/full-repository/has_pages`.
-            public var has_pages: Swift.Bool
+            public var hasPages: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/full-repository/has_downloads`.
-            public var has_downloads: Swift.Bool?
+            public var hasDownloads: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/has_discussions`.
-            public var has_discussions: Swift.Bool
+            public var hasDiscussions: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/full-repository/archived`.
             public var archived: Swift.Bool
             /// Returns whether or not this repository disabled.
@@ -4057,13 +4066,13 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/full-repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/full-repository/pushed_at`.
-            public var pushed_at: Foundation.Date
+            public var pushedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/full-repository/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/full-repository/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/full-repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/full-repository/permissions/admin`.
                 public var admin: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/full-repository/permissions/maintain`.
@@ -4074,7 +4083,7 @@ public enum Components {
                 public var triage: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/full-repository/permissions/pull`.
                 public var pull: Swift.Bool
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -4104,34 +4113,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/full-repository/permissions`.
-            public var permissions: Components.Schemas.full_hyphen_repository.permissionsPayload?
+            public var permissions: Components.Schemas.FullRepository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/full-repository/allow_rebase_merge`.
-            public var allow_rebase_merge: Swift.Bool?
+            public var allowRebaseMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/template_repository`.
-            public var template_repository: Components.Schemas.nullable_hyphen_repository?
+            public var templateRepository: Components.Schemas.NullableRepository?
             /// - Remark: Generated from `#/components/schemas/full-repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// - Remark: Generated from `#/components/schemas/full-repository/allow_squash_merge`.
-            public var allow_squash_merge: Swift.Bool?
+            public var allowSquashMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/allow_auto_merge`.
-            public var allow_auto_merge: Swift.Bool?
+            public var allowAutoMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/allow_merge_commit`.
-            public var allow_merge_commit: Swift.Bool?
+            public var allowMergeCommit: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/allow_update_branch`.
-            public var allow_update_branch: Swift.Bool?
+            public var allowUpdateBranch: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/use_squash_pr_title_as_default`.
-            public var use_squash_pr_title_as_default: Swift.Bool?
+            public var useSquashPrTitleAsDefault: Swift.Bool?
             /// The default value for a squash merge commit title:
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
+            @frozen public enum SquashMergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case commitOrPrTitle = "COMMIT_OR_PR_TITLE"
             }
             /// The default value for a squash merge commit title:
             ///
@@ -4139,7 +4148,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/squash_merge_commit_title`.
-            public var squash_merge_commit_title: Components.Schemas.full_hyphen_repository.squash_merge_commit_titlePayload?
+            public var squashMergeCommitTitle: Components.Schemas.FullRepository.SquashMergeCommitTitlePayload?
             /// The default value for a squash merge commit message:
             ///
             /// - `PR_BODY` - default to the pull request's body.
@@ -4147,10 +4156,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                case BLANK = "BLANK"
+            @frozen public enum SquashMergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case commitMessages = "COMMIT_MESSAGES"
+                case blank = "BLANK"
             }
             /// The default value for a squash merge commit message:
             ///
@@ -4159,16 +4168,16 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/squash_merge_commit_message`.
-            public var squash_merge_commit_message: Components.Schemas.full_hyphen_repository.squash_merge_commit_messagePayload?
+            public var squashMergeCommitMessage: Components.Schemas.FullRepository.SquashMergeCommitMessagePayload?
             /// The default value for a merge commit title.
             ///
             ///   - `PR_TITLE` - default to the pull request's title.
             ///   - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case MERGE_MESSAGE = "MERGE_MESSAGE"
+            @frozen public enum MergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case mergeMessage = "MERGE_MESSAGE"
             }
             /// The default value for a merge commit title.
             ///
@@ -4176,7 +4185,7 @@ public enum Components {
             ///   - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/merge_commit_title`.
-            public var merge_commit_title: Components.Schemas.full_hyphen_repository.merge_commit_titlePayload?
+            public var mergeCommitTitle: Components.Schemas.FullRepository.MergeCommitTitlePayload?
             /// The default value for a merge commit message.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
@@ -4184,10 +4193,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case PR_TITLE = "PR_TITLE"
-                case BLANK = "BLANK"
+            @frozen public enum MergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case prTitle = "PR_TITLE"
+                case blank = "BLANK"
             }
             /// The default value for a merge commit message.
             ///
@@ -4196,46 +4205,46 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/merge_commit_message`.
-            public var merge_commit_message: Components.Schemas.full_hyphen_repository.merge_commit_messagePayload?
+            public var mergeCommitMessage: Components.Schemas.FullRepository.MergeCommitMessagePayload?
             /// - Remark: Generated from `#/components/schemas/full-repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/subscribers_count`.
-            public var subscribers_count: Swift.Int
+            public var subscribersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/full-repository/network_count`.
-            public var network_count: Swift.Int
+            public var networkCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/full-repository/license`.
-            public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
+            public var license: Components.Schemas.NullableLicenseSimple?
             /// - Remark: Generated from `#/components/schemas/full-repository/organization`.
-            public var organization: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var organization: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/full-repository/parent`.
-            public var parent: Components.Schemas.repository?
+            public var parent: Components.Schemas.Repository?
             /// - Remark: Generated from `#/components/schemas/full-repository/source`.
-            public var source: Components.Schemas.repository?
+            public var source: Components.Schemas.Repository?
             /// - Remark: Generated from `#/components/schemas/full-repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/full-repository/master_branch`.
-            public var master_branch: Swift.String?
+            public var masterBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/full-repository/open_issues`.
-            public var open_issues: Swift.Int
+            public var openIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/full-repository/watchers`.
             public var watchers: Swift.Int
             /// Whether anonymous git access is allowed.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/anonymous_access_enabled`.
-            public var anonymous_access_enabled: Swift.Bool?
+            public var anonymousAccessEnabled: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/full-repository/code_of_conduct`.
-            public var code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct_hyphen_simple?
+            public var codeOfConduct: Components.Schemas.CodeOfConductSimple?
             /// - Remark: Generated from `#/components/schemas/full-repository/security_and_analysis`.
-            public var security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis?
+            public var securityAndAnalysis: Components.Schemas.SecurityAndAnalysis?
             /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/custom_properties`.
-            public struct custom_propertiesPayload: Codable, Hashable, Sendable {
+            public struct CustomPropertiesPayload: Codable, Hashable, Sendable {
                 /// A container of undocumented properties.
                 public var additionalProperties: OpenAPIRuntime.OpenAPIObjectContainer
-                /// Creates a new `custom_propertiesPayload`.
+                /// Creates a new `CustomPropertiesPayload`.
                 ///
                 /// - Parameters:
                 ///   - additionalProperties: A container of undocumented properties.
@@ -4252,449 +4261,449 @@ public enum Components {
             /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/custom_properties`.
-            public var custom_properties: Components.Schemas.full_hyphen_repository.custom_propertiesPayload?
-            /// Creates a new `full_hyphen_repository`.
+            public var customProperties: Components.Schemas.FullRepository.CustomPropertiesPayload?
+            /// Creates a new `FullRepository`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
-            ///   - full_name:
+            ///   - fullName:
             ///   - owner:
             ///   - _private:
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch:
-            ///   - open_issues_count:
-            ///   - is_template:
+            ///   - defaultBranch:
+            ///   - openIssuesCount:
+            ///   - isTemplate:
             ///   - topics:
-            ///   - has_issues:
-            ///   - has_projects:
-            ///   - has_wiki:
-            ///   - has_pages:
-            ///   - has_downloads:
-            ///   - has_discussions:
+            ///   - hasIssues:
+            ///   - hasProjects:
+            ///   - hasWiki:
+            ///   - hasPages:
+            ///   - hasDownloads:
+            ///   - hasDiscussions:
             ///   - archived:
             ///   - disabled: Returns whether or not this repository disabled.
             ///   - visibility: The repository visibility: public, private, or internal.
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - permissions:
-            ///   - allow_rebase_merge:
-            ///   - template_repository:
-            ///   - temp_clone_token:
-            ///   - allow_squash_merge:
-            ///   - allow_auto_merge:
-            ///   - delete_branch_on_merge:
-            ///   - allow_merge_commit:
-            ///   - allow_update_branch:
-            ///   - use_squash_pr_title_as_default:
-            ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-            ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-            ///   - merge_commit_title: The default value for a merge commit title.
-            ///   - merge_commit_message: The default value for a merge commit message.
-            ///   - allow_forking:
-            ///   - web_commit_signoff_required:
-            ///   - subscribers_count:
-            ///   - network_count:
+            ///   - allowRebaseMerge:
+            ///   - templateRepository:
+            ///   - tempCloneToken:
+            ///   - allowSquashMerge:
+            ///   - allowAutoMerge:
+            ///   - deleteBranchOnMerge:
+            ///   - allowMergeCommit:
+            ///   - allowUpdateBranch:
+            ///   - useSquashPrTitleAsDefault:
+            ///   - squashMergeCommitTitle: The default value for a squash merge commit title:
+            ///   - squashMergeCommitMessage: The default value for a squash merge commit message:
+            ///   - mergeCommitTitle: The default value for a merge commit title.
+            ///   - mergeCommitMessage: The default value for a merge commit message.
+            ///   - allowForking:
+            ///   - webCommitSignoffRequired:
+            ///   - subscribersCount:
+            ///   - networkCount:
             ///   - license:
             ///   - organization:
             ///   - parent:
             ///   - source:
             ///   - forks:
-            ///   - master_branch:
-            ///   - open_issues:
+            ///   - masterBranch:
+            ///   - openIssues:
             ///   - watchers:
-            ///   - anonymous_access_enabled: Whether anonymous git access is allowed.
-            ///   - code_of_conduct:
-            ///   - security_and_analysis:
-            ///   - custom_properties: The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
+            ///   - anonymousAccessEnabled: Whether anonymous git access is allowed.
+            ///   - codeOfConduct:
+            ///   - securityAndAnalysis:
+            ///   - customProperties: The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int,
-                stargazers_count: Swift.Int,
-                watchers_count: Swift.Int,
+                forksCount: Swift.Int,
+                stargazersCount: Swift.Int,
+                watchersCount: Swift.Int,
                 size: Swift.Int,
-                default_branch: Swift.String,
-                open_issues_count: Swift.Int,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String,
+                openIssuesCount: Swift.Int,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool,
-                has_projects: Swift.Bool,
-                has_wiki: Swift.Bool,
-                has_pages: Swift.Bool,
-                has_downloads: Swift.Bool? = nil,
-                has_discussions: Swift.Bool,
+                hasIssues: Swift.Bool,
+                hasProjects: Swift.Bool,
+                hasWiki: Swift.Bool,
+                hasPages: Swift.Bool,
+                hasDownloads: Swift.Bool? = nil,
+                hasDiscussions: Swift.Bool,
                 archived: Swift.Bool,
                 disabled: Swift.Bool,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                permissions: Components.Schemas.full_hyphen_repository.permissionsPayload? = nil,
-                allow_rebase_merge: Swift.Bool? = nil,
-                template_repository: Components.Schemas.nullable_hyphen_repository? = nil,
-                temp_clone_token: Swift.String? = nil,
-                allow_squash_merge: Swift.Bool? = nil,
-                allow_auto_merge: Swift.Bool? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                allow_merge_commit: Swift.Bool? = nil,
-                allow_update_branch: Swift.Bool? = nil,
-                use_squash_pr_title_as_default: Swift.Bool? = nil,
-                squash_merge_commit_title: Components.Schemas.full_hyphen_repository.squash_merge_commit_titlePayload? = nil,
-                squash_merge_commit_message: Components.Schemas.full_hyphen_repository.squash_merge_commit_messagePayload? = nil,
-                merge_commit_title: Components.Schemas.full_hyphen_repository.merge_commit_titlePayload? = nil,
-                merge_commit_message: Components.Schemas.full_hyphen_repository.merge_commit_messagePayload? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                subscribers_count: Swift.Int,
-                network_count: Swift.Int,
-                license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
-                organization: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                parent: Components.Schemas.repository? = nil,
-                source: Components.Schemas.repository? = nil,
+                pushedAt: Foundation.Date,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                permissions: Components.Schemas.FullRepository.PermissionsPayload? = nil,
+                allowRebaseMerge: Swift.Bool? = nil,
+                templateRepository: Components.Schemas.NullableRepository? = nil,
+                tempCloneToken: Swift.String? = nil,
+                allowSquashMerge: Swift.Bool? = nil,
+                allowAutoMerge: Swift.Bool? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                allowMergeCommit: Swift.Bool? = nil,
+                allowUpdateBranch: Swift.Bool? = nil,
+                useSquashPrTitleAsDefault: Swift.Bool? = nil,
+                squashMergeCommitTitle: Components.Schemas.FullRepository.SquashMergeCommitTitlePayload? = nil,
+                squashMergeCommitMessage: Components.Schemas.FullRepository.SquashMergeCommitMessagePayload? = nil,
+                mergeCommitTitle: Components.Schemas.FullRepository.MergeCommitTitlePayload? = nil,
+                mergeCommitMessage: Components.Schemas.FullRepository.MergeCommitMessagePayload? = nil,
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                subscribersCount: Swift.Int,
+                networkCount: Swift.Int,
+                license: Components.Schemas.NullableLicenseSimple? = nil,
+                organization: Components.Schemas.NullableSimpleUser? = nil,
+                parent: Components.Schemas.Repository? = nil,
+                source: Components.Schemas.Repository? = nil,
                 forks: Swift.Int,
-                master_branch: Swift.String? = nil,
-                open_issues: Swift.Int,
+                masterBranch: Swift.String? = nil,
+                openIssues: Swift.Int,
                 watchers: Swift.Int,
-                anonymous_access_enabled: Swift.Bool? = nil,
-                code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct_hyphen_simple? = nil,
-                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil,
-                custom_properties: Components.Schemas.full_hyphen_repository.custom_propertiesPayload? = nil
+                anonymousAccessEnabled: Swift.Bool? = nil,
+                codeOfConduct: Components.Schemas.CodeOfConductSimple? = nil,
+                securityAndAnalysis: Components.Schemas.SecurityAndAnalysis? = nil,
+                customProperties: Components.Schemas.FullRepository.CustomPropertiesPayload? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.permissions = permissions
-                self.allow_rebase_merge = allow_rebase_merge
-                self.template_repository = template_repository
-                self.temp_clone_token = temp_clone_token
-                self.allow_squash_merge = allow_squash_merge
-                self.allow_auto_merge = allow_auto_merge
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.allow_merge_commit = allow_merge_commit
-                self.allow_update_branch = allow_update_branch
-                self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                self.squash_merge_commit_title = squash_merge_commit_title
-                self.squash_merge_commit_message = squash_merge_commit_message
-                self.merge_commit_title = merge_commit_title
-                self.merge_commit_message = merge_commit_message
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
+                self.allowRebaseMerge = allowRebaseMerge
+                self.templateRepository = templateRepository
+                self.tempCloneToken = tempCloneToken
+                self.allowSquashMerge = allowSquashMerge
+                self.allowAutoMerge = allowAutoMerge
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.allowMergeCommit = allowMergeCommit
+                self.allowUpdateBranch = allowUpdateBranch
+                self.useSquashPrTitleAsDefault = useSquashPrTitleAsDefault
+                self.squashMergeCommitTitle = squashMergeCommitTitle
+                self.squashMergeCommitMessage = squashMergeCommitMessage
+                self.mergeCommitTitle = mergeCommitTitle
+                self.mergeCommitMessage = mergeCommitMessage
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.subscribersCount = subscribersCount
+                self.networkCount = networkCount
                 self.license = license
                 self.organization = organization
                 self.parent = parent
                 self.source = source
                 self.forks = forks
-                self.master_branch = master_branch
-                self.open_issues = open_issues
+                self.masterBranch = masterBranch
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.anonymous_access_enabled = anonymous_access_enabled
-                self.code_of_conduct = code_of_conduct
-                self.security_and_analysis = security_and_analysis
-                self.custom_properties = custom_properties
+                self.anonymousAccessEnabled = anonymousAccessEnabled
+                self.codeOfConduct = codeOfConduct
+                self.securityAndAnalysis = securityAndAnalysis
+                self.customProperties = customProperties
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case permissions
-                case allow_rebase_merge
-                case template_repository
-                case temp_clone_token
-                case allow_squash_merge
-                case allow_auto_merge
-                case delete_branch_on_merge
-                case allow_merge_commit
-                case allow_update_branch
-                case use_squash_pr_title_as_default
-                case squash_merge_commit_title
-                case squash_merge_commit_message
-                case merge_commit_title
-                case merge_commit_message
-                case allow_forking
-                case web_commit_signoff_required
-                case subscribers_count
-                case network_count
+                case allowRebaseMerge = "allow_rebase_merge"
+                case templateRepository = "template_repository"
+                case tempCloneToken = "temp_clone_token"
+                case allowSquashMerge = "allow_squash_merge"
+                case allowAutoMerge = "allow_auto_merge"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case allowMergeCommit = "allow_merge_commit"
+                case allowUpdateBranch = "allow_update_branch"
+                case useSquashPrTitleAsDefault = "use_squash_pr_title_as_default"
+                case squashMergeCommitTitle = "squash_merge_commit_title"
+                case squashMergeCommitMessage = "squash_merge_commit_message"
+                case mergeCommitTitle = "merge_commit_title"
+                case mergeCommitMessage = "merge_commit_message"
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case subscribersCount = "subscribers_count"
+                case networkCount = "network_count"
                 case license
                 case organization
                 case parent
                 case source
                 case forks
-                case master_branch
-                case open_issues
+                case masterBranch = "master_branch"
+                case openIssues = "open_issues"
                 case watchers
-                case anonymous_access_enabled
-                case code_of_conduct
-                case security_and_analysis
-                case custom_properties
+                case anonymousAccessEnabled = "anonymous_access_enabled"
+                case codeOfConduct = "code_of_conduct"
+                case securityAndAnalysis = "security_and_analysis"
+                case customProperties = "custom_properties"
             }
         }
         /// A product affected by the vulnerability detailed in a repository security advisory.
         ///
         /// - Remark: Generated from `#/components/schemas/repository-advisory-vulnerability`.
-        public struct repository_hyphen_advisory_hyphen_vulnerability: Codable, Hashable, Sendable {
+        public struct RepositoryAdvisoryVulnerability: Codable, Hashable, Sendable {
             /// The name of the package affected by the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-vulnerability/package`.
-            public struct packagePayload: Codable, Hashable, Sendable {
+            public struct PackagePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-advisory-vulnerability/package/ecosystem`.
-                public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems
+                public var ecosystem: Components.Schemas.SecurityAdvisoryEcosystems
                 /// The unique package name within its ecosystem.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-advisory-vulnerability/package/name`.
                 public var name: Swift.String?
-                /// Creates a new `packagePayload`.
+                /// Creates a new `PackagePayload`.
                 ///
                 /// - Parameters:
                 ///   - ecosystem:
                 ///   - name: The unique package name within its ecosystem.
                 public init(
-                    ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems,
+                    ecosystem: Components.Schemas.SecurityAdvisoryEcosystems,
                     name: Swift.String? = nil
                 ) {
                     self.ecosystem = ecosystem
@@ -4708,60 +4717,60 @@ public enum Components {
             /// The name of the package affected by the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-vulnerability/package`.
-            public var package: Components.Schemas.repository_hyphen_advisory_hyphen_vulnerability.packagePayload?
+            public var package: Components.Schemas.RepositoryAdvisoryVulnerability.PackagePayload?
             /// The range of the package versions affected by the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-vulnerability/vulnerable_version_range`.
-            public var vulnerable_version_range: Swift.String?
+            public var vulnerableVersionRange: Swift.String?
             /// The package version(s) that resolve the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-vulnerability/patched_versions`.
-            public var patched_versions: Swift.String?
+            public var patchedVersions: Swift.String?
             /// The functions in the package that are affected.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-vulnerability/vulnerable_functions`.
-            public var vulnerable_functions: [Swift.String]?
-            /// Creates a new `repository_hyphen_advisory_hyphen_vulnerability`.
+            public var vulnerableFunctions: [Swift.String]?
+            /// Creates a new `RepositoryAdvisoryVulnerability`.
             ///
             /// - Parameters:
             ///   - package: The name of the package affected by the vulnerability.
-            ///   - vulnerable_version_range: The range of the package versions affected by the vulnerability.
-            ///   - patched_versions: The package version(s) that resolve the vulnerability.
-            ///   - vulnerable_functions: The functions in the package that are affected.
+            ///   - vulnerableVersionRange: The range of the package versions affected by the vulnerability.
+            ///   - patchedVersions: The package version(s) that resolve the vulnerability.
+            ///   - vulnerableFunctions: The functions in the package that are affected.
             public init(
-                package: Components.Schemas.repository_hyphen_advisory_hyphen_vulnerability.packagePayload? = nil,
-                vulnerable_version_range: Swift.String? = nil,
-                patched_versions: Swift.String? = nil,
-                vulnerable_functions: [Swift.String]? = nil
+                package: Components.Schemas.RepositoryAdvisoryVulnerability.PackagePayload? = nil,
+                vulnerableVersionRange: Swift.String? = nil,
+                patchedVersions: Swift.String? = nil,
+                vulnerableFunctions: [Swift.String]? = nil
             ) {
                 self.package = package
-                self.vulnerable_version_range = vulnerable_version_range
-                self.patched_versions = patched_versions
-                self.vulnerable_functions = vulnerable_functions
+                self.vulnerableVersionRange = vulnerableVersionRange
+                self.patchedVersions = patchedVersions
+                self.vulnerableFunctions = vulnerableFunctions
             }
             public enum CodingKeys: String, CodingKey {
                 case package
-                case vulnerable_version_range
-                case patched_versions
-                case vulnerable_functions
+                case vulnerableVersionRange = "vulnerable_version_range"
+                case patchedVersions = "patched_versions"
+                case vulnerableFunctions = "vulnerable_functions"
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                package = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_vulnerability.packagePayload.self,
+                self.package = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisoryVulnerability.PackagePayload.self,
                     forKey: .package
                 )
-                vulnerable_version_range = try container.decodeIfPresent(
+                self.vulnerableVersionRange = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .vulnerable_version_range
+                    forKey: .vulnerableVersionRange
                 )
-                patched_versions = try container.decodeIfPresent(
+                self.patchedVersions = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .patched_versions
+                    forKey: .patchedVersions
                 )
-                vulnerable_functions = try container.decodeIfPresent(
+                self.vulnerableFunctions = try container.decodeIfPresent(
                     [Swift.String].self,
-                    forKey: .vulnerable_functions
+                    forKey: .vulnerableFunctions
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "package",
@@ -4774,15 +4783,15 @@ public enum Components {
         /// A credit given to a user for a repository security advisory.
         ///
         /// - Remark: Generated from `#/components/schemas/repository-advisory-credit`.
-        public struct repository_hyphen_advisory_hyphen_credit: Codable, Hashable, Sendable {
+        public struct RepositoryAdvisoryCredit: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-advisory-credit/user`.
-            public var user: Components.Schemas.simple_hyphen_user
+            public var user: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/repository-advisory-credit/type`.
-            public var _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types
+            public var _type: Components.Schemas.SecurityAdvisoryCreditTypes
             /// The state of the user's acceptance of the credit.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-credit/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case accepted = "accepted"
                 case declined = "declined"
                 case pending = "pending"
@@ -4790,17 +4799,17 @@ public enum Components {
             /// The state of the user's acceptance of the credit.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-credit/state`.
-            public var state: Components.Schemas.repository_hyphen_advisory_hyphen_credit.statePayload
-            /// Creates a new `repository_hyphen_advisory_hyphen_credit`.
+            public var state: Components.Schemas.RepositoryAdvisoryCredit.StatePayload
+            /// Creates a new `RepositoryAdvisoryCredit`.
             ///
             /// - Parameters:
             ///   - user:
             ///   - _type:
             ///   - state: The state of the user's acceptance of the credit.
             public init(
-                user: Components.Schemas.simple_hyphen_user,
-                _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types,
-                state: Components.Schemas.repository_hyphen_advisory_hyphen_credit.statePayload
+                user: Components.Schemas.SimpleUser,
+                _type: Components.Schemas.SecurityAdvisoryCreditTypes,
+                state: Components.Schemas.RepositoryAdvisoryCredit.StatePayload
             ) {
                 self.user = user
                 self._type = _type
@@ -4813,16 +4822,16 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                user = try container.decode(
-                    Components.Schemas.simple_hyphen_user.self,
+                self.user = try container.decode(
+                    Components.Schemas.SimpleUser.self,
                     forKey: .user
                 )
-                _type = try container.decode(
-                    Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types.self,
+                self._type = try container.decode(
+                    Components.Schemas.SecurityAdvisoryCreditTypes.self,
                     forKey: ._type
                 )
-                state = try container.decode(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_credit.statePayload.self,
+                self.state = try container.decode(
+                    Components.Schemas.RepositoryAdvisoryCredit.StatePayload.self,
                     forKey: .state
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
@@ -4835,15 +4844,15 @@ public enum Components {
         /// A repository security advisory.
         ///
         /// - Remark: Generated from `#/components/schemas/repository-advisory`.
-        public struct repository_hyphen_advisory: Codable, Hashable, Sendable {
+        public struct RepositoryAdvisory: Codable, Hashable, Sendable {
             /// The GitHub Security Advisory ID.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/ghsa_id`.
-            public var ghsa_id: Swift.String
+            public var ghsaId: Swift.String
             /// The Common Vulnerabilities and Exposures (CVE) ID.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/cve_id`.
-            public var cve_id: Swift.String?
+            public var cveId: Swift.String?
             /// The API URL for the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/url`.
@@ -4851,7 +4860,7 @@ public enum Components {
             /// The URL for the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// A short summary of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/summary`.
@@ -4863,7 +4872,7 @@ public enum Components {
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -4872,79 +4881,79 @@ public enum Components {
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/severity`.
-            public var severity: Components.Schemas.repository_hyphen_advisory.severityPayload?
+            public var severity: Components.Schemas.RepositoryAdvisory.SeverityPayload?
             /// The author of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/author`.
-            public struct authorPayload: Codable, Hashable, Sendable {
+            public struct AuthorPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-advisory/author/value1`.
-                public var value1: Components.Schemas.simple_hyphen_user
-                /// Creates a new `authorPayload`.
+                public var value1: Components.Schemas.SimpleUser
+                /// Creates a new `AuthorPayload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
-                public init(value1: Components.Schemas.simple_hyphen_user) {
+                public init(value1: Components.Schemas.SimpleUser) {
                     self.value1 = value1
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
                 }
             }
             /// The author of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/author`.
-            public var author: Components.Schemas.repository_hyphen_advisory.authorPayload?
+            public var author: Components.Schemas.RepositoryAdvisory.AuthorPayload?
             /// The publisher of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/publisher`.
-            public struct publisherPayload: Codable, Hashable, Sendable {
+            public struct PublisherPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-advisory/publisher/value1`.
-                public var value1: Components.Schemas.simple_hyphen_user
-                /// Creates a new `publisherPayload`.
+                public var value1: Components.Schemas.SimpleUser
+                /// Creates a new `PublisherPayload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
-                public init(value1: Components.Schemas.simple_hyphen_user) {
+                public init(value1: Components.Schemas.SimpleUser) {
                     self.value1 = value1
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
                 }
             }
             /// The publisher of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/publisher`.
-            public var publisher: Components.Schemas.repository_hyphen_advisory.publisherPayload?
-            /// - Remark: Generated from `#/components/schemas/repository-advisory/identifiersPayload`.
-            public struct identifiersPayloadPayload: Codable, Hashable, Sendable {
+            public var publisher: Components.Schemas.RepositoryAdvisory.PublisherPayload?
+            /// - Remark: Generated from `#/components/schemas/repository-advisory/IdentifiersPayload`.
+            public struct IdentifiersPayloadPayload: Codable, Hashable, Sendable {
                 /// The type of identifier.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory/identifiersPayload/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
-                    case CVE = "CVE"
-                    case GHSA = "GHSA"
+                /// - Remark: Generated from `#/components/schemas/repository-advisory/IdentifiersPayload/type`.
+                @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                    case cve = "CVE"
+                    case ghsa = "GHSA"
                 }
                 /// The type of identifier.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory/identifiersPayload/type`.
-                public var _type: Components.Schemas.repository_hyphen_advisory.identifiersPayloadPayload._typePayload
+                /// - Remark: Generated from `#/components/schemas/repository-advisory/IdentifiersPayload/type`.
+                public var _type: Components.Schemas.RepositoryAdvisory.IdentifiersPayloadPayload._TypePayload
                 /// The identifier value.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory/identifiersPayload/value`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory/IdentifiersPayload/value`.
                 public var value: Swift.String
-                /// Creates a new `identifiersPayloadPayload`.
+                /// Creates a new `IdentifiersPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - _type: The type of identifier.
                 ///   - value: The identifier value.
                 public init(
-                    _type: Components.Schemas.repository_hyphen_advisory.identifiersPayloadPayload._typePayload,
+                    _type: Components.Schemas.RepositoryAdvisory.IdentifiersPayloadPayload._TypePayload,
                     value: Swift.String
                 ) {
                     self._type = _type
@@ -4956,13 +4965,13 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-advisory/identifiers`.
-            public typealias identifiersPayload = [Components.Schemas.repository_hyphen_advisory.identifiersPayloadPayload]
+            public typealias IdentifiersPayload = [Components.Schemas.RepositoryAdvisory.IdentifiersPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/repository-advisory/identifiers`.
-            public var identifiers: Components.Schemas.repository_hyphen_advisory.identifiersPayload
+            public var identifiers: Components.Schemas.RepositoryAdvisory.IdentifiersPayload
             /// The state of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case published = "published"
                 case closed = "closed"
                 case withdrawn = "withdrawn"
@@ -4972,34 +4981,34 @@ public enum Components {
             /// The state of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/state`.
-            public var state: Components.Schemas.repository_hyphen_advisory.statePayload
+            public var state: Components.Schemas.RepositoryAdvisory.StatePayload
             /// The date and time of when the advisory was created, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// The date and time of when the advisory was last updated, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// The date and time of when the advisory was published, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/published_at`.
-            public var published_at: Foundation.Date?
+            public var publishedAt: Foundation.Date?
             /// The date and time of when the advisory was closed, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/closed_at`.
-            public var closed_at: Foundation.Date?
+            public var closedAt: Foundation.Date?
             /// The date and time of when the advisory was withdrawn, in ISO 8601 format.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/withdrawn_at`.
-            public var withdrawn_at: Foundation.Date?
+            public var withdrawnAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository-advisory/submission`.
-            public struct submissionPayload: Codable, Hashable, Sendable {
+            public struct SubmissionPayload: Codable, Hashable, Sendable {
                 /// Whether a private vulnerability report was accepted by the repository's administrators.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-advisory/submission/accepted`.
                 public var accepted: Swift.Bool
-                /// Creates a new `submissionPayload`.
+                /// Creates a new `SubmissionPayload`.
                 ///
                 /// - Parameters:
                 ///   - accepted: Whether a private vulnerability report was accepted by the repository's administrators.
@@ -5011,91 +5020,91 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-advisory/submission`.
-            public var submission: Components.Schemas.repository_hyphen_advisory.submissionPayload?
+            public var submission: Components.Schemas.RepositoryAdvisory.SubmissionPayload?
             /// - Remark: Generated from `#/components/schemas/repository-advisory/vulnerabilities`.
-            public var vulnerabilities: [Components.Schemas.repository_hyphen_advisory_hyphen_vulnerability]?
+            public var vulnerabilities: [Components.Schemas.RepositoryAdvisoryVulnerability]?
             /// - Remark: Generated from `#/components/schemas/repository-advisory/cvss`.
-            public struct cvssPayload: Codable, Hashable, Sendable {
+            public struct CvssPayload: Codable, Hashable, Sendable {
                 /// The CVSS vector.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-advisory/cvss/vector_string`.
-                public var vector_string: Swift.String?
+                public var vectorString: Swift.String?
                 /// The CVSS score.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-advisory/cvss/score`.
                 public var score: Swift.Double?
-                /// Creates a new `cvssPayload`.
+                /// Creates a new `CvssPayload`.
                 ///
                 /// - Parameters:
-                ///   - vector_string: The CVSS vector.
+                ///   - vectorString: The CVSS vector.
                 ///   - score: The CVSS score.
                 public init(
-                    vector_string: Swift.String? = nil,
+                    vectorString: Swift.String? = nil,
                     score: Swift.Double? = nil
                 ) {
-                    self.vector_string = vector_string
+                    self.vectorString = vectorString
                     self.score = score
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case vector_string
+                    case vectorString = "vector_string"
                     case score
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-advisory/cvss`.
-            public var cvss: Components.Schemas.repository_hyphen_advisory.cvssPayload?
+            public var cvss: Components.Schemas.RepositoryAdvisory.CvssPayload?
             /// - Remark: Generated from `#/components/schemas/repository-advisory/cvss_severities`.
-            public var cvss_severities: Components.Schemas.cvss_hyphen_severities?
-            /// - Remark: Generated from `#/components/schemas/repository-advisory/cwesPayload`.
-            public struct cwesPayloadPayload: Codable, Hashable, Sendable {
+            public var cvssSeverities: Components.Schemas.CvssSeverities?
+            /// - Remark: Generated from `#/components/schemas/repository-advisory/CwesPayload`.
+            public struct CwesPayloadPayload: Codable, Hashable, Sendable {
                 /// The Common Weakness Enumeration (CWE) identifier.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory/cwesPayload/cwe_id`.
-                public var cwe_id: Swift.String
+                /// - Remark: Generated from `#/components/schemas/repository-advisory/CwesPayload/cwe_id`.
+                public var cweId: Swift.String
                 /// The name of the CWE.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory/cwesPayload/name`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory/CwesPayload/name`.
                 public var name: Swift.String
-                /// Creates a new `cwesPayloadPayload`.
+                /// Creates a new `CwesPayloadPayload`.
                 ///
                 /// - Parameters:
-                ///   - cwe_id: The Common Weakness Enumeration (CWE) identifier.
+                ///   - cweId: The Common Weakness Enumeration (CWE) identifier.
                 ///   - name: The name of the CWE.
                 public init(
-                    cwe_id: Swift.String,
+                    cweId: Swift.String,
                     name: Swift.String
                 ) {
-                    self.cwe_id = cwe_id
+                    self.cweId = cweId
                     self.name = name
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case cwe_id
+                    case cweId = "cwe_id"
                     case name
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-advisory/cwes`.
-            public typealias cwesPayload = [Components.Schemas.repository_hyphen_advisory.cwesPayloadPayload]
+            public typealias CwesPayload = [Components.Schemas.RepositoryAdvisory.CwesPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/repository-advisory/cwes`.
-            public var cwes: Components.Schemas.repository_hyphen_advisory.cwesPayload?
+            public var cwes: Components.Schemas.RepositoryAdvisory.CwesPayload?
             /// A list of only the CWE IDs.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/cwe_ids`.
-            public var cwe_ids: [Swift.String]?
-            /// - Remark: Generated from `#/components/schemas/repository-advisory/creditsPayload`.
-            public struct creditsPayloadPayload: Codable, Hashable, Sendable {
+            public var cweIds: [Swift.String]?
+            /// - Remark: Generated from `#/components/schemas/repository-advisory/CreditsPayload`.
+            public struct CreditsPayloadPayload: Codable, Hashable, Sendable {
                 /// The username of the user credited.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory/creditsPayload/login`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory/CreditsPayload/login`.
                 public var login: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/repository-advisory/creditsPayload/type`.
-                public var _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types?
-                /// Creates a new `creditsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory/CreditsPayload/type`.
+                public var _type: Components.Schemas.SecurityAdvisoryCreditTypes?
+                /// Creates a new `CreditsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - login: The username of the user credited.
                 ///   - _type:
                 public init(
                     login: Swift.String? = nil,
-                    _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types? = nil
+                    _type: Components.Schemas.SecurityAdvisoryCreditTypes? = nil
                 ) {
                     self.login = login
                     self._type = _type
@@ -5106,50 +5115,50 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-advisory/credits`.
-            public typealias creditsPayload = [Components.Schemas.repository_hyphen_advisory.creditsPayloadPayload]
+            public typealias CreditsPayload = [Components.Schemas.RepositoryAdvisory.CreditsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/repository-advisory/credits`.
-            public var credits: Components.Schemas.repository_hyphen_advisory.creditsPayload?
+            public var credits: Components.Schemas.RepositoryAdvisory.CreditsPayload?
             /// - Remark: Generated from `#/components/schemas/repository-advisory/credits_detailed`.
-            public var credits_detailed: [Components.Schemas.repository_hyphen_advisory_hyphen_credit]?
+            public var creditsDetailed: [Components.Schemas.RepositoryAdvisoryCredit]?
             /// A list of users that collaborate on the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/collaborating_users`.
-            public var collaborating_users: [Components.Schemas.simple_hyphen_user]?
+            public var collaboratingUsers: [Components.Schemas.SimpleUser]?
             /// A list of teams that collaborate on the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/collaborating_teams`.
-            public var collaborating_teams: [Components.Schemas.team]?
+            public var collaboratingTeams: [Components.Schemas.Team]?
             /// A temporary private fork of the advisory's repository for collaborating on a fix.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/private_fork`.
-            public struct private_forkPayload: Codable, Hashable, Sendable {
+            public struct PrivateForkPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-advisory/private_fork/value1`.
-                public var value1: Components.Schemas.simple_hyphen_repository
-                /// Creates a new `private_forkPayload`.
+                public var value1: Components.Schemas.SimpleRepository
+                /// Creates a new `PrivateForkPayload`.
                 ///
                 /// - Parameters:
                 ///   - value1:
-                public init(value1: Components.Schemas.simple_hyphen_repository) {
+                public init(value1: Components.Schemas.SimpleRepository) {
                     self.value1 = value1
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
                 }
             }
             /// A temporary private fork of the advisory's repository for collaborating on a fix.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/private_fork`.
-            public var private_fork: Components.Schemas.repository_hyphen_advisory.private_forkPayload?
-            /// Creates a new `repository_hyphen_advisory`.
+            public var privateFork: Components.Schemas.RepositoryAdvisory.PrivateForkPayload?
+            /// Creates a new `RepositoryAdvisory`.
             ///
             /// - Parameters:
-            ///   - ghsa_id: The GitHub Security Advisory ID.
-            ///   - cve_id: The Common Vulnerabilities and Exposures (CVE) ID.
+            ///   - ghsaId: The GitHub Security Advisory ID.
+            ///   - cveId: The Common Vulnerabilities and Exposures (CVE) ID.
             ///   - url: The API URL for the advisory.
-            ///   - html_url: The URL for the advisory.
+            ///   - htmlUrl: The URL for the advisory.
             ///   - summary: A short summary of the advisory.
             ///   - description: A detailed description of what the advisory entails.
             ///   - severity: The severity of the advisory.
@@ -5157,55 +5166,55 @@ public enum Components {
             ///   - publisher: The publisher of the advisory.
             ///   - identifiers:
             ///   - state: The state of the advisory.
-            ///   - created_at: The date and time of when the advisory was created, in ISO 8601 format.
-            ///   - updated_at: The date and time of when the advisory was last updated, in ISO 8601 format.
-            ///   - published_at: The date and time of when the advisory was published, in ISO 8601 format.
-            ///   - closed_at: The date and time of when the advisory was closed, in ISO 8601 format.
-            ///   - withdrawn_at: The date and time of when the advisory was withdrawn, in ISO 8601 format.
+            ///   - createdAt: The date and time of when the advisory was created, in ISO 8601 format.
+            ///   - updatedAt: The date and time of when the advisory was last updated, in ISO 8601 format.
+            ///   - publishedAt: The date and time of when the advisory was published, in ISO 8601 format.
+            ///   - closedAt: The date and time of when the advisory was closed, in ISO 8601 format.
+            ///   - withdrawnAt: The date and time of when the advisory was withdrawn, in ISO 8601 format.
             ///   - submission:
             ///   - vulnerabilities:
             ///   - cvss:
-            ///   - cvss_severities:
+            ///   - cvssSeverities:
             ///   - cwes:
-            ///   - cwe_ids: A list of only the CWE IDs.
+            ///   - cweIds: A list of only the CWE IDs.
             ///   - credits:
-            ///   - credits_detailed:
-            ///   - collaborating_users: A list of users that collaborate on the advisory.
-            ///   - collaborating_teams: A list of teams that collaborate on the advisory.
-            ///   - private_fork: A temporary private fork of the advisory's repository for collaborating on a fix.
+            ///   - creditsDetailed:
+            ///   - collaboratingUsers: A list of users that collaborate on the advisory.
+            ///   - collaboratingTeams: A list of teams that collaborate on the advisory.
+            ///   - privateFork: A temporary private fork of the advisory's repository for collaborating on a fix.
             public init(
-                ghsa_id: Swift.String,
-                cve_id: Swift.String? = nil,
+                ghsaId: Swift.String,
+                cveId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 summary: Swift.String,
                 description: Swift.String? = nil,
-                severity: Components.Schemas.repository_hyphen_advisory.severityPayload? = nil,
-                author: Components.Schemas.repository_hyphen_advisory.authorPayload? = nil,
-                publisher: Components.Schemas.repository_hyphen_advisory.publisherPayload? = nil,
-                identifiers: Components.Schemas.repository_hyphen_advisory.identifiersPayload,
-                state: Components.Schemas.repository_hyphen_advisory.statePayload,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                published_at: Foundation.Date? = nil,
-                closed_at: Foundation.Date? = nil,
-                withdrawn_at: Foundation.Date? = nil,
-                submission: Components.Schemas.repository_hyphen_advisory.submissionPayload? = nil,
-                vulnerabilities: [Components.Schemas.repository_hyphen_advisory_hyphen_vulnerability]? = nil,
-                cvss: Components.Schemas.repository_hyphen_advisory.cvssPayload? = nil,
-                cvss_severities: Components.Schemas.cvss_hyphen_severities? = nil,
-                cwes: Components.Schemas.repository_hyphen_advisory.cwesPayload? = nil,
-                cwe_ids: [Swift.String]? = nil,
-                credits: Components.Schemas.repository_hyphen_advisory.creditsPayload? = nil,
-                credits_detailed: [Components.Schemas.repository_hyphen_advisory_hyphen_credit]? = nil,
-                collaborating_users: [Components.Schemas.simple_hyphen_user]? = nil,
-                collaborating_teams: [Components.Schemas.team]? = nil,
-                private_fork: Components.Schemas.repository_hyphen_advisory.private_forkPayload? = nil
+                severity: Components.Schemas.RepositoryAdvisory.SeverityPayload? = nil,
+                author: Components.Schemas.RepositoryAdvisory.AuthorPayload? = nil,
+                publisher: Components.Schemas.RepositoryAdvisory.PublisherPayload? = nil,
+                identifiers: Components.Schemas.RepositoryAdvisory.IdentifiersPayload,
+                state: Components.Schemas.RepositoryAdvisory.StatePayload,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                publishedAt: Foundation.Date? = nil,
+                closedAt: Foundation.Date? = nil,
+                withdrawnAt: Foundation.Date? = nil,
+                submission: Components.Schemas.RepositoryAdvisory.SubmissionPayload? = nil,
+                vulnerabilities: [Components.Schemas.RepositoryAdvisoryVulnerability]? = nil,
+                cvss: Components.Schemas.RepositoryAdvisory.CvssPayload? = nil,
+                cvssSeverities: Components.Schemas.CvssSeverities? = nil,
+                cwes: Components.Schemas.RepositoryAdvisory.CwesPayload? = nil,
+                cweIds: [Swift.String]? = nil,
+                credits: Components.Schemas.RepositoryAdvisory.CreditsPayload? = nil,
+                creditsDetailed: [Components.Schemas.RepositoryAdvisoryCredit]? = nil,
+                collaboratingUsers: [Components.Schemas.SimpleUser]? = nil,
+                collaboratingTeams: [Components.Schemas.Team]? = nil,
+                privateFork: Components.Schemas.RepositoryAdvisory.PrivateForkPayload? = nil
             ) {
-                self.ghsa_id = ghsa_id
-                self.cve_id = cve_id
+                self.ghsaId = ghsaId
+                self.cveId = cveId
                 self.url = url
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.summary = summary
                 self.description = description
                 self.severity = severity
@@ -5213,28 +5222,28 @@ public enum Components {
                 self.publisher = publisher
                 self.identifiers = identifiers
                 self.state = state
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.published_at = published_at
-                self.closed_at = closed_at
-                self.withdrawn_at = withdrawn_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.publishedAt = publishedAt
+                self.closedAt = closedAt
+                self.withdrawnAt = withdrawnAt
                 self.submission = submission
                 self.vulnerabilities = vulnerabilities
                 self.cvss = cvss
-                self.cvss_severities = cvss_severities
+                self.cvssSeverities = cvssSeverities
                 self.cwes = cwes
-                self.cwe_ids = cwe_ids
+                self.cweIds = cweIds
                 self.credits = credits
-                self.credits_detailed = credits_detailed
-                self.collaborating_users = collaborating_users
-                self.collaborating_teams = collaborating_teams
-                self.private_fork = private_fork
+                self.creditsDetailed = creditsDetailed
+                self.collaboratingUsers = collaboratingUsers
+                self.collaboratingTeams = collaboratingTeams
+                self.privateFork = privateFork
             }
             public enum CodingKeys: String, CodingKey {
-                case ghsa_id
-                case cve_id
+                case ghsaId = "ghsa_id"
+                case cveId = "cve_id"
                 case url
-                case html_url
+                case htmlUrl = "html_url"
                 case summary
                 case description
                 case severity
@@ -5242,132 +5251,132 @@ public enum Components {
                 case publisher
                 case identifiers
                 case state
-                case created_at
-                case updated_at
-                case published_at
-                case closed_at
-                case withdrawn_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case publishedAt = "published_at"
+                case closedAt = "closed_at"
+                case withdrawnAt = "withdrawn_at"
                 case submission
                 case vulnerabilities
                 case cvss
-                case cvss_severities
+                case cvssSeverities = "cvss_severities"
                 case cwes
-                case cwe_ids
+                case cweIds = "cwe_ids"
                 case credits
-                case credits_detailed
-                case collaborating_users
-                case collaborating_teams
-                case private_fork
+                case creditsDetailed = "credits_detailed"
+                case collaboratingUsers = "collaborating_users"
+                case collaboratingTeams = "collaborating_teams"
+                case privateFork = "private_fork"
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                ghsa_id = try container.decode(
+                self.ghsaId = try container.decode(
                     Swift.String.self,
-                    forKey: .ghsa_id
+                    forKey: .ghsaId
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cveId = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .cve_id
+                    forKey: .cveId
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Swift.String.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.htmlUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .html_url
+                    forKey: .htmlUrl
                 )
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decodeIfPresent(
+                self.description = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .description
                 )
-                severity = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory.severityPayload.self,
+                self.severity = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisory.SeverityPayload.self,
                     forKey: .severity
                 )
-                author = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory.authorPayload.self,
+                self.author = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisory.AuthorPayload.self,
                     forKey: .author
                 )
-                publisher = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory.publisherPayload.self,
+                self.publisher = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisory.PublisherPayload.self,
                     forKey: .publisher
                 )
-                identifiers = try container.decode(
-                    Components.Schemas.repository_hyphen_advisory.identifiersPayload.self,
+                self.identifiers = try container.decode(
+                    Components.Schemas.RepositoryAdvisory.IdentifiersPayload.self,
                     forKey: .identifiers
                 )
-                state = try container.decode(
-                    Components.Schemas.repository_hyphen_advisory.statePayload.self,
+                self.state = try container.decode(
+                    Components.Schemas.RepositoryAdvisory.StatePayload.self,
                     forKey: .state
                 )
-                created_at = try container.decodeIfPresent(
+                self.createdAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .created_at
+                    forKey: .createdAt
                 )
-                updated_at = try container.decodeIfPresent(
+                self.updatedAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .updated_at
+                    forKey: .updatedAt
                 )
-                published_at = try container.decodeIfPresent(
+                self.publishedAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .published_at
+                    forKey: .publishedAt
                 )
-                closed_at = try container.decodeIfPresent(
+                self.closedAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .closed_at
+                    forKey: .closedAt
                 )
-                withdrawn_at = try container.decodeIfPresent(
+                self.withdrawnAt = try container.decodeIfPresent(
                     Foundation.Date.self,
-                    forKey: .withdrawn_at
+                    forKey: .withdrawnAt
                 )
-                submission = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory.submissionPayload.self,
+                self.submission = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisory.SubmissionPayload.self,
                     forKey: .submission
                 )
-                vulnerabilities = try container.decodeIfPresent(
-                    [Components.Schemas.repository_hyphen_advisory_hyphen_vulnerability].self,
+                self.vulnerabilities = try container.decodeIfPresent(
+                    [Components.Schemas.RepositoryAdvisoryVulnerability].self,
                     forKey: .vulnerabilities
                 )
-                cvss = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory.cvssPayload.self,
+                self.cvss = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisory.CvssPayload.self,
                     forKey: .cvss
                 )
-                cvss_severities = try container.decodeIfPresent(
-                    Components.Schemas.cvss_hyphen_severities.self,
-                    forKey: .cvss_severities
+                self.cvssSeverities = try container.decodeIfPresent(
+                    Components.Schemas.CvssSeverities.self,
+                    forKey: .cvssSeverities
                 )
-                cwes = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory.cwesPayload.self,
+                self.cwes = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisory.CwesPayload.self,
                     forKey: .cwes
                 )
-                cwe_ids = try container.decodeIfPresent(
+                self.cweIds = try container.decodeIfPresent(
                     [Swift.String].self,
-                    forKey: .cwe_ids
+                    forKey: .cweIds
                 )
-                credits = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory.creditsPayload.self,
+                self.credits = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisory.CreditsPayload.self,
                     forKey: .credits
                 )
-                credits_detailed = try container.decodeIfPresent(
-                    [Components.Schemas.repository_hyphen_advisory_hyphen_credit].self,
-                    forKey: .credits_detailed
+                self.creditsDetailed = try container.decodeIfPresent(
+                    [Components.Schemas.RepositoryAdvisoryCredit].self,
+                    forKey: .creditsDetailed
                 )
-                collaborating_users = try container.decodeIfPresent(
-                    [Components.Schemas.simple_hyphen_user].self,
-                    forKey: .collaborating_users
+                self.collaboratingUsers = try container.decodeIfPresent(
+                    [Components.Schemas.SimpleUser].self,
+                    forKey: .collaboratingUsers
                 )
-                collaborating_teams = try container.decodeIfPresent(
-                    [Components.Schemas.team].self,
-                    forKey: .collaborating_teams
+                self.collaboratingTeams = try container.decodeIfPresent(
+                    [Components.Schemas.Team].self,
+                    forKey: .collaboratingTeams
                 )
-                private_fork = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory.private_forkPayload.self,
-                    forKey: .private_fork
+                self.privateFork = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisory.PrivateForkPayload.self,
+                    forKey: .privateFork
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "ghsa_id",
@@ -5401,7 +5410,7 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/repository-advisory-create`.
-        public struct repository_hyphen_advisory_hyphen_create: Codable, Hashable, Sendable {
+        public struct RepositoryAdvisoryCreate: Codable, Hashable, Sendable {
             /// A short summary of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/summary`.
@@ -5413,26 +5422,26 @@ public enum Components {
             /// The Common Vulnerabilities and Exposures (CVE) ID.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/cve_id`.
-            public var cve_id: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilitiesPayload`.
-            public struct vulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
+            public var cveId: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/repository-advisory-create/VulnerabilitiesPayload`.
+            public struct VulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
                 /// The name of the package affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilitiesPayload/package`.
-                public struct packagePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilitiesPayload/package/ecosystem`.
-                    public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/VulnerabilitiesPayload/package`.
+                public struct PackagePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/repository-advisory-create/VulnerabilitiesPayload/package/ecosystem`.
+                    public var ecosystem: Components.Schemas.SecurityAdvisoryEcosystems
                     /// The unique package name within its ecosystem.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilitiesPayload/package/name`.
+                    /// - Remark: Generated from `#/components/schemas/repository-advisory-create/VulnerabilitiesPayload/package/name`.
                     public var name: Swift.String?
-                    /// Creates a new `packagePayload`.
+                    /// Creates a new `PackagePayload`.
                     ///
                     /// - Parameters:
                     ///   - ecosystem:
                     ///   - name: The unique package name within its ecosystem.
                     public init(
-                        ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems,
+                        ecosystem: Components.Schemas.SecurityAdvisoryEcosystems,
                         name: Swift.String? = nil
                     ) {
                         self.ecosystem = ecosystem
@@ -5445,61 +5454,61 @@ public enum Components {
                 }
                 /// The name of the package affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilitiesPayload/package`.
-                public var package: Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayloadPayload.packagePayload
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/VulnerabilitiesPayload/package`.
+                public var package: Components.Schemas.RepositoryAdvisoryCreate.VulnerabilitiesPayloadPayload.PackagePayload
                 /// The range of the package versions affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilitiesPayload/vulnerable_version_range`.
-                public var vulnerable_version_range: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/VulnerabilitiesPayload/vulnerable_version_range`.
+                public var vulnerableVersionRange: Swift.String?
                 /// The package version(s) that resolve the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilitiesPayload/patched_versions`.
-                public var patched_versions: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/VulnerabilitiesPayload/patched_versions`.
+                public var patchedVersions: Swift.String?
                 /// The functions in the package that are affected.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilitiesPayload/vulnerable_functions`.
-                public var vulnerable_functions: [Swift.String]?
-                /// Creates a new `vulnerabilitiesPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/VulnerabilitiesPayload/vulnerable_functions`.
+                public var vulnerableFunctions: [Swift.String]?
+                /// Creates a new `VulnerabilitiesPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - package: The name of the package affected by the vulnerability.
-                ///   - vulnerable_version_range: The range of the package versions affected by the vulnerability.
-                ///   - patched_versions: The package version(s) that resolve the vulnerability.
-                ///   - vulnerable_functions: The functions in the package that are affected.
+                ///   - vulnerableVersionRange: The range of the package versions affected by the vulnerability.
+                ///   - patchedVersions: The package version(s) that resolve the vulnerability.
+                ///   - vulnerableFunctions: The functions in the package that are affected.
                 public init(
-                    package: Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayloadPayload.packagePayload,
-                    vulnerable_version_range: Swift.String? = nil,
-                    patched_versions: Swift.String? = nil,
-                    vulnerable_functions: [Swift.String]? = nil
+                    package: Components.Schemas.RepositoryAdvisoryCreate.VulnerabilitiesPayloadPayload.PackagePayload,
+                    vulnerableVersionRange: Swift.String? = nil,
+                    patchedVersions: Swift.String? = nil,
+                    vulnerableFunctions: [Swift.String]? = nil
                 ) {
                     self.package = package
-                    self.vulnerable_version_range = vulnerable_version_range
-                    self.patched_versions = patched_versions
-                    self.vulnerable_functions = vulnerable_functions
+                    self.vulnerableVersionRange = vulnerableVersionRange
+                    self.patchedVersions = patchedVersions
+                    self.vulnerableFunctions = vulnerableFunctions
                 }
                 public enum CodingKeys: String, CodingKey {
                     case package
-                    case vulnerable_version_range
-                    case patched_versions
-                    case vulnerable_functions
+                    case vulnerableVersionRange = "vulnerable_version_range"
+                    case patchedVersions = "patched_versions"
+                    case vulnerableFunctions = "vulnerable_functions"
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    package = try container.decode(
-                        Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayloadPayload.packagePayload.self,
+                    self.package = try container.decode(
+                        Components.Schemas.RepositoryAdvisoryCreate.VulnerabilitiesPayloadPayload.PackagePayload.self,
                         forKey: .package
                     )
-                    vulnerable_version_range = try container.decodeIfPresent(
+                    self.vulnerableVersionRange = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .vulnerable_version_range
+                        forKey: .vulnerableVersionRange
                     )
-                    patched_versions = try container.decodeIfPresent(
+                    self.patchedVersions = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .patched_versions
+                        forKey: .patchedVersions
                     )
-                    vulnerable_functions = try container.decodeIfPresent(
+                    self.vulnerableFunctions = try container.decodeIfPresent(
                         [Swift.String].self,
-                        forKey: .vulnerable_functions
+                        forKey: .vulnerableFunctions
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
                         "package",
@@ -5512,31 +5521,31 @@ public enum Components {
             /// A product affected by the vulnerability detailed in a repository security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilities`.
-            public typealias vulnerabilitiesPayload = [Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayloadPayload]
+            public typealias VulnerabilitiesPayload = [Components.Schemas.RepositoryAdvisoryCreate.VulnerabilitiesPayloadPayload]
             /// A product affected by the vulnerability detailed in a repository security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/vulnerabilities`.
-            public var vulnerabilities: Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayload
+            public var vulnerabilities: Components.Schemas.RepositoryAdvisoryCreate.VulnerabilitiesPayload
             /// A list of Common Weakness Enumeration (CWE) IDs.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/cwe_ids`.
-            public var cwe_ids: [Swift.String]?
-            /// - Remark: Generated from `#/components/schemas/repository-advisory-create/creditsPayload`.
-            public struct creditsPayloadPayload: Codable, Hashable, Sendable {
+            public var cweIds: [Swift.String]?
+            /// - Remark: Generated from `#/components/schemas/repository-advisory-create/CreditsPayload`.
+            public struct CreditsPayloadPayload: Codable, Hashable, Sendable {
                 /// The username of the user credited.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/creditsPayload/login`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/CreditsPayload/login`.
                 public var login: Swift.String
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/creditsPayload/type`.
-                public var _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types
-                /// Creates a new `creditsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-create/CreditsPayload/type`.
+                public var _type: Components.Schemas.SecurityAdvisoryCreditTypes
+                /// Creates a new `CreditsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - login: The username of the user credited.
                 ///   - _type:
                 public init(
                     login: Swift.String,
-                    _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types
+                    _type: Components.Schemas.SecurityAdvisoryCreditTypes
                 ) {
                     self.login = login
                     self._type = _type
@@ -5547,12 +5556,12 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    login = try container.decode(
+                    self.login = try container.decode(
                         Swift.String.self,
                         forKey: .login
                     )
-                    _type = try container.decode(
-                        Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types.self,
+                    self._type = try container.decode(
+                        Components.Schemas.SecurityAdvisoryCreditTypes.self,
                         forKey: ._type
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
@@ -5564,15 +5573,15 @@ public enum Components {
             /// A list of users receiving credit for their participation in the security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/credits`.
-            public typealias creditsPayload = [Components.Schemas.repository_hyphen_advisory_hyphen_create.creditsPayloadPayload]
+            public typealias CreditsPayload = [Components.Schemas.RepositoryAdvisoryCreate.CreditsPayloadPayload]
             /// A list of users receiving credit for their participation in the security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/credits`.
-            public var credits: Components.Schemas.repository_hyphen_advisory_hyphen_create.creditsPayload?
+            public var credits: Components.Schemas.RepositoryAdvisoryCreate.CreditsPayload?
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -5581,96 +5590,96 @@ public enum Components {
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/severity`.
-            public var severity: Components.Schemas.repository_hyphen_advisory_hyphen_create.severityPayload?
+            public var severity: Components.Schemas.RepositoryAdvisoryCreate.SeverityPayload?
             /// The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/cvss_vector_string`.
-            public var cvss_vector_string: Swift.String?
+            public var cvssVectorString: Swift.String?
             /// Whether to create a temporary private fork of the repository to collaborate on a fix.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/start_private_fork`.
-            public var start_private_fork: Swift.Bool?
-            /// Creates a new `repository_hyphen_advisory_hyphen_create`.
+            public var startPrivateFork: Swift.Bool?
+            /// Creates a new `RepositoryAdvisoryCreate`.
             ///
             /// - Parameters:
             ///   - summary: A short summary of the advisory.
             ///   - description: A detailed description of what the advisory impacts.
-            ///   - cve_id: The Common Vulnerabilities and Exposures (CVE) ID.
+            ///   - cveId: The Common Vulnerabilities and Exposures (CVE) ID.
             ///   - vulnerabilities: A product affected by the vulnerability detailed in a repository security advisory.
-            ///   - cwe_ids: A list of Common Weakness Enumeration (CWE) IDs.
+            ///   - cweIds: A list of Common Weakness Enumeration (CWE) IDs.
             ///   - credits: A list of users receiving credit for their participation in the security advisory.
             ///   - severity: The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
-            ///   - cvss_vector_string: The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
-            ///   - start_private_fork: Whether to create a temporary private fork of the repository to collaborate on a fix.
+            ///   - cvssVectorString: The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
+            ///   - startPrivateFork: Whether to create a temporary private fork of the repository to collaborate on a fix.
             public init(
                 summary: Swift.String,
                 description: Swift.String,
-                cve_id: Swift.String? = nil,
-                vulnerabilities: Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayload,
-                cwe_ids: [Swift.String]? = nil,
-                credits: Components.Schemas.repository_hyphen_advisory_hyphen_create.creditsPayload? = nil,
-                severity: Components.Schemas.repository_hyphen_advisory_hyphen_create.severityPayload? = nil,
-                cvss_vector_string: Swift.String? = nil,
-                start_private_fork: Swift.Bool? = nil
+                cveId: Swift.String? = nil,
+                vulnerabilities: Components.Schemas.RepositoryAdvisoryCreate.VulnerabilitiesPayload,
+                cweIds: [Swift.String]? = nil,
+                credits: Components.Schemas.RepositoryAdvisoryCreate.CreditsPayload? = nil,
+                severity: Components.Schemas.RepositoryAdvisoryCreate.SeverityPayload? = nil,
+                cvssVectorString: Swift.String? = nil,
+                startPrivateFork: Swift.Bool? = nil
             ) {
                 self.summary = summary
                 self.description = description
-                self.cve_id = cve_id
+                self.cveId = cveId
                 self.vulnerabilities = vulnerabilities
-                self.cwe_ids = cwe_ids
+                self.cweIds = cweIds
                 self.credits = credits
                 self.severity = severity
-                self.cvss_vector_string = cvss_vector_string
-                self.start_private_fork = start_private_fork
+                self.cvssVectorString = cvssVectorString
+                self.startPrivateFork = startPrivateFork
             }
             public enum CodingKeys: String, CodingKey {
                 case summary
                 case description
-                case cve_id
+                case cveId = "cve_id"
                 case vulnerabilities
-                case cwe_ids
+                case cweIds = "cwe_ids"
                 case credits
                 case severity
-                case cvss_vector_string
-                case start_private_fork
+                case cvssVectorString = "cvss_vector_string"
+                case startPrivateFork = "start_private_fork"
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decode(
+                self.description = try container.decode(
                     Swift.String.self,
                     forKey: .description
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cveId = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .cve_id
+                    forKey: .cveId
                 )
-                vulnerabilities = try container.decode(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayload.self,
+                self.vulnerabilities = try container.decode(
+                    Components.Schemas.RepositoryAdvisoryCreate.VulnerabilitiesPayload.self,
                     forKey: .vulnerabilities
                 )
-                cwe_ids = try container.decodeIfPresent(
+                self.cweIds = try container.decodeIfPresent(
                     [Swift.String].self,
-                    forKey: .cwe_ids
+                    forKey: .cweIds
                 )
-                credits = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_create.creditsPayload.self,
+                self.credits = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisoryCreate.CreditsPayload.self,
                     forKey: .credits
                 )
-                severity = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_create.severityPayload.self,
+                self.severity = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisoryCreate.SeverityPayload.self,
                     forKey: .severity
                 )
-                cvss_vector_string = try container.decodeIfPresent(
+                self.cvssVectorString = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .cvss_vector_string
+                    forKey: .cvssVectorString
                 )
-                start_private_fork = try container.decodeIfPresent(
+                self.startPrivateFork = try container.decodeIfPresent(
                     Swift.Bool.self,
-                    forKey: .start_private_fork
+                    forKey: .startPrivateFork
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "summary",
@@ -5686,7 +5695,7 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create`.
-        public struct private_hyphen_vulnerability_hyphen_report_hyphen_create: Codable, Hashable, Sendable {
+        public struct PrivateVulnerabilityReportCreate: Codable, Hashable, Sendable {
             /// A short summary of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/summary`.
@@ -5695,25 +5704,25 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/description`.
             public var description: Swift.String
-            /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilitiesPayload`.
-            public struct vulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/VulnerabilitiesPayload`.
+            public struct VulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
                 /// The name of the package affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilitiesPayload/package`.
-                public struct packagePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilitiesPayload/package/ecosystem`.
-                    public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems
+                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/VulnerabilitiesPayload/package`.
+                public struct PackagePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/VulnerabilitiesPayload/package/ecosystem`.
+                    public var ecosystem: Components.Schemas.SecurityAdvisoryEcosystems
                     /// The unique package name within its ecosystem.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilitiesPayload/package/name`.
+                    /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/VulnerabilitiesPayload/package/name`.
                     public var name: Swift.String?
-                    /// Creates a new `packagePayload`.
+                    /// Creates a new `PackagePayload`.
                     ///
                     /// - Parameters:
                     ///   - ecosystem:
                     ///   - name: The unique package name within its ecosystem.
                     public init(
-                        ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems,
+                        ecosystem: Components.Schemas.SecurityAdvisoryEcosystems,
                         name: Swift.String? = nil
                     ) {
                         self.ecosystem = ecosystem
@@ -5726,61 +5735,61 @@ public enum Components {
                 }
                 /// The name of the package affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilitiesPayload/package`.
-                public var package: Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayloadPayload.packagePayload
+                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/VulnerabilitiesPayload/package`.
+                public var package: Components.Schemas.PrivateVulnerabilityReportCreate.VulnerabilitiesPayloadPayload.PackagePayload
                 /// The range of the package versions affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilitiesPayload/vulnerable_version_range`.
-                public var vulnerable_version_range: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/VulnerabilitiesPayload/vulnerable_version_range`.
+                public var vulnerableVersionRange: Swift.String?
                 /// The package version(s) that resolve the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilitiesPayload/patched_versions`.
-                public var patched_versions: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/VulnerabilitiesPayload/patched_versions`.
+                public var patchedVersions: Swift.String?
                 /// The functions in the package that are affected.
                 ///
-                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilitiesPayload/vulnerable_functions`.
-                public var vulnerable_functions: [Swift.String]?
-                /// Creates a new `vulnerabilitiesPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/VulnerabilitiesPayload/vulnerable_functions`.
+                public var vulnerableFunctions: [Swift.String]?
+                /// Creates a new `VulnerabilitiesPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - package: The name of the package affected by the vulnerability.
-                ///   - vulnerable_version_range: The range of the package versions affected by the vulnerability.
-                ///   - patched_versions: The package version(s) that resolve the vulnerability.
-                ///   - vulnerable_functions: The functions in the package that are affected.
+                ///   - vulnerableVersionRange: The range of the package versions affected by the vulnerability.
+                ///   - patchedVersions: The package version(s) that resolve the vulnerability.
+                ///   - vulnerableFunctions: The functions in the package that are affected.
                 public init(
-                    package: Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayloadPayload.packagePayload,
-                    vulnerable_version_range: Swift.String? = nil,
-                    patched_versions: Swift.String? = nil,
-                    vulnerable_functions: [Swift.String]? = nil
+                    package: Components.Schemas.PrivateVulnerabilityReportCreate.VulnerabilitiesPayloadPayload.PackagePayload,
+                    vulnerableVersionRange: Swift.String? = nil,
+                    patchedVersions: Swift.String? = nil,
+                    vulnerableFunctions: [Swift.String]? = nil
                 ) {
                     self.package = package
-                    self.vulnerable_version_range = vulnerable_version_range
-                    self.patched_versions = patched_versions
-                    self.vulnerable_functions = vulnerable_functions
+                    self.vulnerableVersionRange = vulnerableVersionRange
+                    self.patchedVersions = patchedVersions
+                    self.vulnerableFunctions = vulnerableFunctions
                 }
                 public enum CodingKeys: String, CodingKey {
                     case package
-                    case vulnerable_version_range
-                    case patched_versions
-                    case vulnerable_functions
+                    case vulnerableVersionRange = "vulnerable_version_range"
+                    case patchedVersions = "patched_versions"
+                    case vulnerableFunctions = "vulnerable_functions"
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    package = try container.decode(
-                        Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayloadPayload.packagePayload.self,
+                    self.package = try container.decode(
+                        Components.Schemas.PrivateVulnerabilityReportCreate.VulnerabilitiesPayloadPayload.PackagePayload.self,
                         forKey: .package
                     )
-                    vulnerable_version_range = try container.decodeIfPresent(
+                    self.vulnerableVersionRange = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .vulnerable_version_range
+                        forKey: .vulnerableVersionRange
                     )
-                    patched_versions = try container.decodeIfPresent(
+                    self.patchedVersions = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .patched_versions
+                        forKey: .patchedVersions
                     )
-                    vulnerable_functions = try container.decodeIfPresent(
+                    self.vulnerableFunctions = try container.decodeIfPresent(
                         [Swift.String].self,
-                        forKey: .vulnerable_functions
+                        forKey: .vulnerableFunctions
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
                         "package",
@@ -5793,19 +5802,19 @@ public enum Components {
             /// An array of products affected by the vulnerability detailed in a repository security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilities`.
-            public typealias vulnerabilitiesPayload = [Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayloadPayload]
+            public typealias VulnerabilitiesPayload = [Components.Schemas.PrivateVulnerabilityReportCreate.VulnerabilitiesPayloadPayload]
             /// An array of products affected by the vulnerability detailed in a repository security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/vulnerabilities`.
-            public var vulnerabilities: Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayload?
+            public var vulnerabilities: Components.Schemas.PrivateVulnerabilityReportCreate.VulnerabilitiesPayload?
             /// A list of Common Weakness Enumeration (CWE) IDs.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/cwe_ids`.
-            public var cwe_ids: [Swift.String]?
+            public var cweIds: [Swift.String]?
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -5814,80 +5823,80 @@ public enum Components {
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/severity`.
-            public var severity: Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.severityPayload?
+            public var severity: Components.Schemas.PrivateVulnerabilityReportCreate.SeverityPayload?
             /// The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/cvss_vector_string`.
-            public var cvss_vector_string: Swift.String?
+            public var cvssVectorString: Swift.String?
             /// Whether to create a temporary private fork of the repository to collaborate on a fix.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/start_private_fork`.
-            public var start_private_fork: Swift.Bool?
-            /// Creates a new `private_hyphen_vulnerability_hyphen_report_hyphen_create`.
+            public var startPrivateFork: Swift.Bool?
+            /// Creates a new `PrivateVulnerabilityReportCreate`.
             ///
             /// - Parameters:
             ///   - summary: A short summary of the advisory.
             ///   - description: A detailed description of what the advisory impacts.
             ///   - vulnerabilities: An array of products affected by the vulnerability detailed in a repository security advisory.
-            ///   - cwe_ids: A list of Common Weakness Enumeration (CWE) IDs.
+            ///   - cweIds: A list of Common Weakness Enumeration (CWE) IDs.
             ///   - severity: The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
-            ///   - cvss_vector_string: The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
-            ///   - start_private_fork: Whether to create a temporary private fork of the repository to collaborate on a fix.
+            ///   - cvssVectorString: The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
+            ///   - startPrivateFork: Whether to create a temporary private fork of the repository to collaborate on a fix.
             public init(
                 summary: Swift.String,
                 description: Swift.String,
-                vulnerabilities: Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayload? = nil,
-                cwe_ids: [Swift.String]? = nil,
-                severity: Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.severityPayload? = nil,
-                cvss_vector_string: Swift.String? = nil,
-                start_private_fork: Swift.Bool? = nil
+                vulnerabilities: Components.Schemas.PrivateVulnerabilityReportCreate.VulnerabilitiesPayload? = nil,
+                cweIds: [Swift.String]? = nil,
+                severity: Components.Schemas.PrivateVulnerabilityReportCreate.SeverityPayload? = nil,
+                cvssVectorString: Swift.String? = nil,
+                startPrivateFork: Swift.Bool? = nil
             ) {
                 self.summary = summary
                 self.description = description
                 self.vulnerabilities = vulnerabilities
-                self.cwe_ids = cwe_ids
+                self.cweIds = cweIds
                 self.severity = severity
-                self.cvss_vector_string = cvss_vector_string
-                self.start_private_fork = start_private_fork
+                self.cvssVectorString = cvssVectorString
+                self.startPrivateFork = startPrivateFork
             }
             public enum CodingKeys: String, CodingKey {
                 case summary
                 case description
                 case vulnerabilities
-                case cwe_ids
+                case cweIds = "cwe_ids"
                 case severity
-                case cvss_vector_string
-                case start_private_fork
+                case cvssVectorString = "cvss_vector_string"
+                case startPrivateFork = "start_private_fork"
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decode(
+                self.description = try container.decode(
                     Swift.String.self,
                     forKey: .description
                 )
-                vulnerabilities = try container.decodeIfPresent(
-                    Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayload.self,
+                self.vulnerabilities = try container.decodeIfPresent(
+                    Components.Schemas.PrivateVulnerabilityReportCreate.VulnerabilitiesPayload.self,
                     forKey: .vulnerabilities
                 )
-                cwe_ids = try container.decodeIfPresent(
+                self.cweIds = try container.decodeIfPresent(
                     [Swift.String].self,
-                    forKey: .cwe_ids
+                    forKey: .cweIds
                 )
-                severity = try container.decodeIfPresent(
-                    Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.severityPayload.self,
+                self.severity = try container.decodeIfPresent(
+                    Components.Schemas.PrivateVulnerabilityReportCreate.SeverityPayload.self,
                     forKey: .severity
                 )
-                cvss_vector_string = try container.decodeIfPresent(
+                self.cvssVectorString = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .cvss_vector_string
+                    forKey: .cvssVectorString
                 )
-                start_private_fork = try container.decodeIfPresent(
+                self.startPrivateFork = try container.decodeIfPresent(
                     Swift.Bool.self,
-                    forKey: .start_private_fork
+                    forKey: .startPrivateFork
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "summary",
@@ -5901,7 +5910,7 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/repository-advisory-update`.
-        public struct repository_hyphen_advisory_hyphen_update: Codable, Hashable, Sendable {
+        public struct RepositoryAdvisoryUpdate: Codable, Hashable, Sendable {
             /// A short summary of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/summary`.
@@ -5913,26 +5922,26 @@ public enum Components {
             /// The Common Vulnerabilities and Exposures (CVE) ID.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/cve_id`.
-            public var cve_id: Swift.String?
-            /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilitiesPayload`.
-            public struct vulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
+            public var cveId: Swift.String?
+            /// - Remark: Generated from `#/components/schemas/repository-advisory-update/VulnerabilitiesPayload`.
+            public struct VulnerabilitiesPayloadPayload: Codable, Hashable, Sendable {
                 /// The name of the package affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilitiesPayload/package`.
-                public struct packagePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilitiesPayload/package/ecosystem`.
-                    public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/VulnerabilitiesPayload/package`.
+                public struct PackagePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/repository-advisory-update/VulnerabilitiesPayload/package/ecosystem`.
+                    public var ecosystem: Components.Schemas.SecurityAdvisoryEcosystems
                     /// The unique package name within its ecosystem.
                     ///
-                    /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilitiesPayload/package/name`.
+                    /// - Remark: Generated from `#/components/schemas/repository-advisory-update/VulnerabilitiesPayload/package/name`.
                     public var name: Swift.String?
-                    /// Creates a new `packagePayload`.
+                    /// Creates a new `PackagePayload`.
                     ///
                     /// - Parameters:
                     ///   - ecosystem:
                     ///   - name: The unique package name within its ecosystem.
                     public init(
-                        ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems,
+                        ecosystem: Components.Schemas.SecurityAdvisoryEcosystems,
                         name: Swift.String? = nil
                     ) {
                         self.ecosystem = ecosystem
@@ -5945,61 +5954,61 @@ public enum Components {
                 }
                 /// The name of the package affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilitiesPayload/package`.
-                public var package: Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayloadPayload.packagePayload
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/VulnerabilitiesPayload/package`.
+                public var package: Components.Schemas.RepositoryAdvisoryUpdate.VulnerabilitiesPayloadPayload.PackagePayload
                 /// The range of the package versions affected by the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilitiesPayload/vulnerable_version_range`.
-                public var vulnerable_version_range: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/VulnerabilitiesPayload/vulnerable_version_range`.
+                public var vulnerableVersionRange: Swift.String?
                 /// The package version(s) that resolve the vulnerability.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilitiesPayload/patched_versions`.
-                public var patched_versions: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/VulnerabilitiesPayload/patched_versions`.
+                public var patchedVersions: Swift.String?
                 /// The functions in the package that are affected.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilitiesPayload/vulnerable_functions`.
-                public var vulnerable_functions: [Swift.String]?
-                /// Creates a new `vulnerabilitiesPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/VulnerabilitiesPayload/vulnerable_functions`.
+                public var vulnerableFunctions: [Swift.String]?
+                /// Creates a new `VulnerabilitiesPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - package: The name of the package affected by the vulnerability.
-                ///   - vulnerable_version_range: The range of the package versions affected by the vulnerability.
-                ///   - patched_versions: The package version(s) that resolve the vulnerability.
-                ///   - vulnerable_functions: The functions in the package that are affected.
+                ///   - vulnerableVersionRange: The range of the package versions affected by the vulnerability.
+                ///   - patchedVersions: The package version(s) that resolve the vulnerability.
+                ///   - vulnerableFunctions: The functions in the package that are affected.
                 public init(
-                    package: Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayloadPayload.packagePayload,
-                    vulnerable_version_range: Swift.String? = nil,
-                    patched_versions: Swift.String? = nil,
-                    vulnerable_functions: [Swift.String]? = nil
+                    package: Components.Schemas.RepositoryAdvisoryUpdate.VulnerabilitiesPayloadPayload.PackagePayload,
+                    vulnerableVersionRange: Swift.String? = nil,
+                    patchedVersions: Swift.String? = nil,
+                    vulnerableFunctions: [Swift.String]? = nil
                 ) {
                     self.package = package
-                    self.vulnerable_version_range = vulnerable_version_range
-                    self.patched_versions = patched_versions
-                    self.vulnerable_functions = vulnerable_functions
+                    self.vulnerableVersionRange = vulnerableVersionRange
+                    self.patchedVersions = patchedVersions
+                    self.vulnerableFunctions = vulnerableFunctions
                 }
                 public enum CodingKeys: String, CodingKey {
                     case package
-                    case vulnerable_version_range
-                    case patched_versions
-                    case vulnerable_functions
+                    case vulnerableVersionRange = "vulnerable_version_range"
+                    case patchedVersions = "patched_versions"
+                    case vulnerableFunctions = "vulnerable_functions"
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    package = try container.decode(
-                        Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayloadPayload.packagePayload.self,
+                    self.package = try container.decode(
+                        Components.Schemas.RepositoryAdvisoryUpdate.VulnerabilitiesPayloadPayload.PackagePayload.self,
                         forKey: .package
                     )
-                    vulnerable_version_range = try container.decodeIfPresent(
+                    self.vulnerableVersionRange = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .vulnerable_version_range
+                        forKey: .vulnerableVersionRange
                     )
-                    patched_versions = try container.decodeIfPresent(
+                    self.patchedVersions = try container.decodeIfPresent(
                         Swift.String.self,
-                        forKey: .patched_versions
+                        forKey: .patchedVersions
                     )
-                    vulnerable_functions = try container.decodeIfPresent(
+                    self.vulnerableFunctions = try container.decodeIfPresent(
                         [Swift.String].self,
-                        forKey: .vulnerable_functions
+                        forKey: .vulnerableFunctions
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
                         "package",
@@ -6012,31 +6021,31 @@ public enum Components {
             /// A product affected by the vulnerability detailed in a repository security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilities`.
-            public typealias vulnerabilitiesPayload = [Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayloadPayload]
+            public typealias VulnerabilitiesPayload = [Components.Schemas.RepositoryAdvisoryUpdate.VulnerabilitiesPayloadPayload]
             /// A product affected by the vulnerability detailed in a repository security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/vulnerabilities`.
-            public var vulnerabilities: Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayload?
+            public var vulnerabilities: Components.Schemas.RepositoryAdvisoryUpdate.VulnerabilitiesPayload?
             /// A list of Common Weakness Enumeration (CWE) IDs.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/cwe_ids`.
-            public var cwe_ids: [Swift.String]?
-            /// - Remark: Generated from `#/components/schemas/repository-advisory-update/creditsPayload`.
-            public struct creditsPayloadPayload: Codable, Hashable, Sendable {
+            public var cweIds: [Swift.String]?
+            /// - Remark: Generated from `#/components/schemas/repository-advisory-update/CreditsPayload`.
+            public struct CreditsPayloadPayload: Codable, Hashable, Sendable {
                 /// The username of the user credited.
                 ///
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/creditsPayload/login`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/CreditsPayload/login`.
                 public var login: Swift.String
-                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/creditsPayload/type`.
-                public var _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types
-                /// Creates a new `creditsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/repository-advisory-update/CreditsPayload/type`.
+                public var _type: Components.Schemas.SecurityAdvisoryCreditTypes
+                /// Creates a new `CreditsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - login: The username of the user credited.
                 ///   - _type:
                 public init(
                     login: Swift.String,
-                    _type: Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types
+                    _type: Components.Schemas.SecurityAdvisoryCreditTypes
                 ) {
                     self.login = login
                     self._type = _type
@@ -6047,12 +6056,12 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    login = try container.decode(
+                    self.login = try container.decode(
                         Swift.String.self,
                         forKey: .login
                     )
-                    _type = try container.decode(
-                        Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types.self,
+                    self._type = try container.decode(
+                        Components.Schemas.SecurityAdvisoryCreditTypes.self,
                         forKey: ._type
                     )
                     try decoder.ensureNoAdditionalProperties(knownKeys: [
@@ -6064,15 +6073,15 @@ public enum Components {
             /// A list of users receiving credit for their participation in the security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/credits`.
-            public typealias creditsPayload = [Components.Schemas.repository_hyphen_advisory_hyphen_update.creditsPayloadPayload]
+            public typealias CreditsPayload = [Components.Schemas.RepositoryAdvisoryUpdate.CreditsPayloadPayload]
             /// A list of users receiving credit for their participation in the security advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/credits`.
-            public var credits: Components.Schemas.repository_hyphen_advisory_hyphen_update.creditsPayload?
+            public var credits: Components.Schemas.RepositoryAdvisoryUpdate.CreditsPayload?
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -6081,15 +6090,15 @@ public enum Components {
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/severity`.
-            public var severity: Components.Schemas.repository_hyphen_advisory_hyphen_update.severityPayload?
+            public var severity: Components.Schemas.RepositoryAdvisoryUpdate.SeverityPayload?
             /// The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/cvss_vector_string`.
-            public var cvss_vector_string: Swift.String?
+            public var cvssVectorString: Swift.String?
             /// The state of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case published = "published"
                 case closed = "closed"
                 case draft = "draft"
@@ -6097,112 +6106,112 @@ public enum Components {
             /// The state of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/state`.
-            public var state: Components.Schemas.repository_hyphen_advisory_hyphen_update.statePayload?
+            public var state: Components.Schemas.RepositoryAdvisoryUpdate.StatePayload?
             /// A list of usernames who have been granted write access to the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/collaborating_users`.
-            public var collaborating_users: [Swift.String]?
+            public var collaboratingUsers: [Swift.String]?
             /// A list of team slugs which have been granted write access to the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/collaborating_teams`.
-            public var collaborating_teams: [Swift.String]?
-            /// Creates a new `repository_hyphen_advisory_hyphen_update`.
+            public var collaboratingTeams: [Swift.String]?
+            /// Creates a new `RepositoryAdvisoryUpdate`.
             ///
             /// - Parameters:
             ///   - summary: A short summary of the advisory.
             ///   - description: A detailed description of what the advisory impacts.
-            ///   - cve_id: The Common Vulnerabilities and Exposures (CVE) ID.
+            ///   - cveId: The Common Vulnerabilities and Exposures (CVE) ID.
             ///   - vulnerabilities: A product affected by the vulnerability detailed in a repository security advisory.
-            ///   - cwe_ids: A list of Common Weakness Enumeration (CWE) IDs.
+            ///   - cweIds: A list of Common Weakness Enumeration (CWE) IDs.
             ///   - credits: A list of users receiving credit for their participation in the security advisory.
             ///   - severity: The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
-            ///   - cvss_vector_string: The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
+            ///   - cvssVectorString: The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
             ///   - state: The state of the advisory.
-            ///   - collaborating_users: A list of usernames who have been granted write access to the advisory.
-            ///   - collaborating_teams: A list of team slugs which have been granted write access to the advisory.
+            ///   - collaboratingUsers: A list of usernames who have been granted write access to the advisory.
+            ///   - collaboratingTeams: A list of team slugs which have been granted write access to the advisory.
             public init(
                 summary: Swift.String? = nil,
                 description: Swift.String? = nil,
-                cve_id: Swift.String? = nil,
-                vulnerabilities: Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayload? = nil,
-                cwe_ids: [Swift.String]? = nil,
-                credits: Components.Schemas.repository_hyphen_advisory_hyphen_update.creditsPayload? = nil,
-                severity: Components.Schemas.repository_hyphen_advisory_hyphen_update.severityPayload? = nil,
-                cvss_vector_string: Swift.String? = nil,
-                state: Components.Schemas.repository_hyphen_advisory_hyphen_update.statePayload? = nil,
-                collaborating_users: [Swift.String]? = nil,
-                collaborating_teams: [Swift.String]? = nil
+                cveId: Swift.String? = nil,
+                vulnerabilities: Components.Schemas.RepositoryAdvisoryUpdate.VulnerabilitiesPayload? = nil,
+                cweIds: [Swift.String]? = nil,
+                credits: Components.Schemas.RepositoryAdvisoryUpdate.CreditsPayload? = nil,
+                severity: Components.Schemas.RepositoryAdvisoryUpdate.SeverityPayload? = nil,
+                cvssVectorString: Swift.String? = nil,
+                state: Components.Schemas.RepositoryAdvisoryUpdate.StatePayload? = nil,
+                collaboratingUsers: [Swift.String]? = nil,
+                collaboratingTeams: [Swift.String]? = nil
             ) {
                 self.summary = summary
                 self.description = description
-                self.cve_id = cve_id
+                self.cveId = cveId
                 self.vulnerabilities = vulnerabilities
-                self.cwe_ids = cwe_ids
+                self.cweIds = cweIds
                 self.credits = credits
                 self.severity = severity
-                self.cvss_vector_string = cvss_vector_string
+                self.cvssVectorString = cvssVectorString
                 self.state = state
-                self.collaborating_users = collaborating_users
-                self.collaborating_teams = collaborating_teams
+                self.collaboratingUsers = collaboratingUsers
+                self.collaboratingTeams = collaboratingTeams
             }
             public enum CodingKeys: String, CodingKey {
                 case summary
                 case description
-                case cve_id
+                case cveId = "cve_id"
                 case vulnerabilities
-                case cwe_ids
+                case cweIds = "cwe_ids"
                 case credits
                 case severity
-                case cvss_vector_string
+                case cvssVectorString = "cvss_vector_string"
                 case state
-                case collaborating_users
-                case collaborating_teams
+                case collaboratingUsers = "collaborating_users"
+                case collaboratingTeams = "collaborating_teams"
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                summary = try container.decodeIfPresent(
+                self.summary = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decodeIfPresent(
+                self.description = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .description
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cveId = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .cve_id
+                    forKey: .cveId
                 )
-                vulnerabilities = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayload.self,
+                self.vulnerabilities = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisoryUpdate.VulnerabilitiesPayload.self,
                     forKey: .vulnerabilities
                 )
-                cwe_ids = try container.decodeIfPresent(
+                self.cweIds = try container.decodeIfPresent(
                     [Swift.String].self,
-                    forKey: .cwe_ids
+                    forKey: .cweIds
                 )
-                credits = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_update.creditsPayload.self,
+                self.credits = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisoryUpdate.CreditsPayload.self,
                     forKey: .credits
                 )
-                severity = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_update.severityPayload.self,
+                self.severity = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisoryUpdate.SeverityPayload.self,
                     forKey: .severity
                 )
-                cvss_vector_string = try container.decodeIfPresent(
+                self.cvssVectorString = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .cvss_vector_string
+                    forKey: .cvssVectorString
                 )
-                state = try container.decodeIfPresent(
-                    Components.Schemas.repository_hyphen_advisory_hyphen_update.statePayload.self,
+                self.state = try container.decodeIfPresent(
+                    Components.Schemas.RepositoryAdvisoryUpdate.StatePayload.self,
                     forKey: .state
                 )
-                collaborating_users = try container.decodeIfPresent(
+                self.collaboratingUsers = try container.decodeIfPresent(
                     [Swift.String].self,
-                    forKey: .collaborating_users
+                    forKey: .collaboratingUsers
                 )
-                collaborating_teams = try container.decodeIfPresent(
+                self.collaboratingTeams = try container.decodeIfPresent(
                     [Swift.String].self,
-                    forKey: .collaborating_teams
+                    forKey: .collaboratingTeams
                 )
                 try decoder.ensureNoAdditionalProperties(knownKeys: [
                     "summary",
@@ -6225,49 +6234,49 @@ public enum Components {
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-before`.
-        public typealias pagination_hyphen_before = Swift.String
+        public typealias PaginationBefore = Swift.String
         /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/pagination-after`.
-        public typealias pagination_hyphen_after = Swift.String
+        public typealias PaginationAfter = Swift.String
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
         /// The GHSA (GitHub Security Advisory) identifier of the advisory.
         ///
         /// - Remark: Generated from `#/components/parameters/ghsa_id`.
-        public typealias ghsa_id = Swift.String
+        public typealias GhsaId = Swift.String
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct validation_failed_simple: Sendable, Hashable {
+        public struct ValidationFailedSimple: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed_simple/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed_simple/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error_hyphen_simple)
+                case json(Components.Schemas.ValidationErrorSimple)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error_hyphen_simple {
+                public var json: Components.Schemas.ValidationErrorSimple {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -6277,25 +6286,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed_simple.Body
-            /// Creates a new `validation_failed_simple`.
+            public var body: Components.Responses.ValidationFailedSimple.Body
+            /// Creates a new `ValidationFailedSimple`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed_simple.Body) {
+            public init(body: Components.Responses.ValidationFailedSimple.Body) {
                 self.body = body
             }
         }
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -6305,25 +6314,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct bad_request: Sendable, Hashable {
+        public struct BadRequest: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/bad_request/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -6337,15 +6346,15 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/bad_request/content/application\/scim+json`.
-                case application_scim_plus_json(Components.Schemas.scim_hyphen_error)
-                /// The associated value of the enum case if `self` is `.application_scim_plus_json`.
+                case applicationScimJson(Components.Schemas.ScimError)
+                /// The associated value of the enum case if `self` is `.applicationScimJson`.
                 ///
-                /// - Throws: An error if `self` is not `.application_scim_plus_json`.
-                /// - SeeAlso: `.application_scim_plus_json`.
-                public var application_scim_plus_json: Components.Schemas.scim_hyphen_error {
+                /// - Throws: An error if `self` is not `.applicationScimJson`.
+                /// - SeeAlso: `.applicationScimJson`.
+                public var applicationScimJson: Components.Schemas.ScimError {
                     get throws {
                         switch self {
-                        case let .application_scim_plus_json(body):
+                        case let .applicationScimJson(body):
                             return body
                         default:
                             try throwUnexpectedResponseBody(
@@ -6357,25 +6366,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.bad_request.Body
-            /// Creates a new `bad_request`.
+            public var body: Components.Responses.BadRequest.Body
+            /// Creates a new `BadRequest`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.bad_request.Body) {
+            public init(body: Components.Responses.BadRequest.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -6385,16 +6394,16 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct accepted: Sendable, Hashable {
+        public struct Accepted: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/accepted/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/accepted/content/application\/json`.
@@ -6413,25 +6422,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.accepted.Body
-            /// Creates a new `accepted`.
+            public var body: Components.Responses.Accepted.Body
+            /// Creates a new `Accepted`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.accepted.Body) {
+            public init(body: Components.Responses.Accepted.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -6441,12 +6450,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
@@ -6465,7 +6474,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /advisories`.
     /// - Remark: Generated from `#/paths//advisories/get(security-advisories/list-global-advisories)`.
-    public enum security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories {
+    public enum SecurityAdvisoriesListGlobalAdvisories {
         public static let id: Swift.String = "security-advisories/list-global-advisories"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/advisories/GET/query`.
@@ -6473,9 +6482,9 @@ public enum Operations {
                 /// If specified, only advisories with this GHSA (GitHub Security Advisory) identifier will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/ghsa_id`.
-                public var ghsa_id: Swift.String?
+                public var ghsaId: Swift.String?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case reviewed = "reviewed"
                     case malware = "malware"
                     case unreviewed = "unreviewed"
@@ -6483,17 +6492,17 @@ public enum Operations {
                 /// If specified, only advisories of this type will be returned. By default, a request with no other parameters defined will only return reviewed advisories that are not malware.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/type`.
-                public var _type: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query._typePayload?
+                public var _type: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query._TypePayload?
                 /// If specified, only advisories with this CVE (Common Vulnerabilities and Exposures) identifier will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/cve_id`.
-                public var cve_id: Swift.String?
+                public var cveId: Swift.String?
                 /// If specified, only advisories for these ecosystems will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/ecosystem`.
-                public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems?
+                public var ecosystem: Components.Schemas.SecurityAdvisoryEcosystems?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/severity`.
-                @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SeverityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case unknown = "unknown"
                     case low = "low"
                     case medium = "medium"
@@ -6503,9 +6512,9 @@ public enum Operations {
                 /// If specified, only advisories with these severities will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/severity`.
-                public var severity: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.severityPayload?
+                public var severity: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query.SeverityPayload?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/cwes`.
-                @frozen public enum cwesPayload: Codable, Hashable, Sendable {
+                @frozen public enum CwesPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/advisories/GET/query/cwes/case1`.
                     case case1(Swift.String)
                     /// - Remark: Generated from `#/paths/advisories/GET/query/cwes/case2`.
@@ -6544,13 +6553,13 @@ public enum Operations {
                 /// Example: `cwes=79,284,22` or `cwes[]=79&cwes[]=284&cwes[]=22`
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/cwes`.
-                public var cwes: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.cwesPayload?
+                public var cwes: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query.CwesPayload?
                 /// Whether to only return advisories that have been withdrawn.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/is_withdrawn`.
-                public var is_withdrawn: Swift.Bool?
+                public var isWithdrawn: Swift.Bool?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/affects`.
-                @frozen public enum affectsPayload: Codable, Hashable, Sendable {
+                @frozen public enum AffectsPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/paths/advisories/GET/query/affects/case1`.
                     case case1(Swift.String)
                     /// - Remark: Generated from `#/paths/advisories/GET/query/affects/case2`.
@@ -6590,7 +6599,7 @@ public enum Operations {
                 /// Example: `affects=package1,package2@1.0.0,package3@^2.0.0` or `affects[]=package1&affects[]=package2@1.0.0`
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/affects`.
-                public var affects: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.affectsPayload?
+                public var affects: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query.AffectsPayload?
                 /// If specified, only return advisories that were published on a date or date range.
                 ///
                 /// For more information on the syntax of the date range, see "[Understanding the search syntax](https://docs.github.com/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
@@ -6613,126 +6622,126 @@ public enum Operations {
                 /// The EPSS percentage represents the likelihood of a CVE being exploited.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/epss_percentage`.
-                public var epss_percentage: Swift.String?
+                public var epssPercentage: Swift.String?
                 /// If specified, only return advisories that have an EPSS percentile score that matches the provided value.
                 /// The EPSS percentile represents the relative rank of the CVE's likelihood of being exploited compared to other CVEs.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/epss_percentile`.
-                public var epss_percentile: Swift.String?
+                public var epssPercentile: Swift.String?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/per_page`.
-                public var per_page: Swift.Int?
+                public var perPage: Swift.Int?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case updated = "updated"
                     case published = "published"
-                    case epss_percentage = "epss_percentage"
-                    case epss_percentile = "epss_percentile"
+                    case epssPercentage = "epss_percentage"
+                    case epssPercentile = "epss_percentile"
                 }
                 /// The property to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/GET/query/sort`.
-                public var sort: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.sortPayload?
+                public var sort: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query.SortPayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - ghsa_id: If specified, only advisories with this GHSA (GitHub Security Advisory) identifier will be returned.
+                ///   - ghsaId: If specified, only advisories with this GHSA (GitHub Security Advisory) identifier will be returned.
                 ///   - _type: If specified, only advisories of this type will be returned. By default, a request with no other parameters defined will only return reviewed advisories that are not malware.
-                ///   - cve_id: If specified, only advisories with this CVE (Common Vulnerabilities and Exposures) identifier will be returned.
+                ///   - cveId: If specified, only advisories with this CVE (Common Vulnerabilities and Exposures) identifier will be returned.
                 ///   - ecosystem: If specified, only advisories for these ecosystems will be returned.
                 ///   - severity: If specified, only advisories with these severities will be returned.
                 ///   - cwes: If specified, only advisories with these Common Weakness Enumerations (CWEs) will be returned.
-                ///   - is_withdrawn: Whether to only return advisories that have been withdrawn.
+                ///   - isWithdrawn: Whether to only return advisories that have been withdrawn.
                 ///   - affects: If specified, only return advisories that affect any of `package` or `package@version`. A maximum of 1000 packages can be specified.
                 ///   - published: If specified, only return advisories that were published on a date or date range.
                 ///   - updated: If specified, only return advisories that were updated on a date or date range.
                 ///   - modified: If specified, only show advisories that were updated or published on a date or date range.
-                ///   - epss_percentage: If specified, only return advisories that have an EPSS percentage score that matches the provided value.
-                ///   - epss_percentile: If specified, only return advisories that have an EPSS percentile score that matches the provided value.
+                ///   - epssPercentage: If specified, only return advisories that have an EPSS percentage score that matches the provided value.
+                ///   - epssPercentile: If specified, only return advisories that have an EPSS percentile score that matches the provided value.
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - direction: The direction to sort the results by.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - sort: The property to sort the results by.
                 public init(
-                    ghsa_id: Swift.String? = nil,
-                    _type: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query._typePayload? = nil,
-                    cve_id: Swift.String? = nil,
-                    ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems? = nil,
-                    severity: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.severityPayload? = nil,
-                    cwes: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.cwesPayload? = nil,
-                    is_withdrawn: Swift.Bool? = nil,
-                    affects: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.affectsPayload? = nil,
+                    ghsaId: Swift.String? = nil,
+                    _type: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query._TypePayload? = nil,
+                    cveId: Swift.String? = nil,
+                    ecosystem: Components.Schemas.SecurityAdvisoryEcosystems? = nil,
+                    severity: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query.SeverityPayload? = nil,
+                    cwes: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query.CwesPayload? = nil,
+                    isWithdrawn: Swift.Bool? = nil,
+                    affects: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query.AffectsPayload? = nil,
                     published: Swift.String? = nil,
                     updated: Swift.String? = nil,
                     modified: Swift.String? = nil,
-                    epss_percentage: Swift.String? = nil,
-                    epss_percentile: Swift.String? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    direction: Components.Parameters.direction? = nil,
-                    per_page: Swift.Int? = nil,
-                    sort: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query.sortPayload? = nil
+                    epssPercentage: Swift.String? = nil,
+                    epssPercentile: Swift.String? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    perPage: Swift.Int? = nil,
+                    sort: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query.SortPayload? = nil
                 ) {
-                    self.ghsa_id = ghsa_id
+                    self.ghsaId = ghsaId
                     self._type = _type
-                    self.cve_id = cve_id
+                    self.cveId = cveId
                     self.ecosystem = ecosystem
                     self.severity = severity
                     self.cwes = cwes
-                    self.is_withdrawn = is_withdrawn
+                    self.isWithdrawn = isWithdrawn
                     self.affects = affects
                     self.published = published
                     self.updated = updated
                     self.modified = modified
-                    self.epss_percentage = epss_percentage
-                    self.epss_percentile = epss_percentile
+                    self.epssPercentage = epssPercentage
+                    self.epssPercentile = epssPercentile
                     self.before = before
                     self.after = after
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.sort = sort
                 }
             }
-            public var query: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query
+            public var query: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query
             /// - Remark: Generated from `#/paths/advisories/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesListGlobalAdvisories.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesListGlobalAdvisories.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Query = .init(),
-                headers: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Input.Headers = .init()
+                query: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Query = .init(),
+                headers: Operations.SecurityAdvisoriesListGlobalAdvisories.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -6743,12 +6752,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/advisories/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/advisories/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.global_hyphen_advisory])
+                    case json([Components.Schemas.GlobalAdvisory])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.global_hyphen_advisory] {
+                    public var json: [Components.Schemas.GlobalAdvisory] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6758,12 +6767,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output.Ok.Body
+                public var body: Operations.SecurityAdvisoriesListGlobalAdvisories.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output.Ok.Body) {
+                public init(body: Operations.SecurityAdvisoriesListGlobalAdvisories.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6772,12 +6781,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//advisories/get(security-advisories/list-global-advisories)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output.Ok)
+            case ok(Operations.SecurityAdvisoriesListGlobalAdvisories.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output.Ok {
+            public var ok: Operations.SecurityAdvisoriesListGlobalAdvisories.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6794,12 +6803,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/advisories/GET/responses/429/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/advisories/GET/responses/429/content/application\/json`.
-                    case json(Components.Schemas.basic_hyphen_error)
+                    case json(Components.Schemas.BasicError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.basic_hyphen_error {
+                    public var json: Components.Schemas.BasicError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6809,12 +6818,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output.TooManyRequests.Body
+                public var body: Operations.SecurityAdvisoriesListGlobalAdvisories.Output.TooManyRequests.Body
                 /// Creates a new `TooManyRequests`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output.TooManyRequests.Body) {
+                public init(body: Operations.SecurityAdvisoriesListGlobalAdvisories.Output.TooManyRequests.Body) {
                     self.body = body
                 }
             }
@@ -6823,12 +6832,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//advisories/get(security-advisories/list-global-advisories)/responses/429`.
             ///
             /// HTTP response code: `429 tooManyRequests`.
-            case tooManyRequests(Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output.TooManyRequests)
+            case tooManyRequests(Operations.SecurityAdvisoriesListGlobalAdvisories.Output.TooManyRequests)
             /// The associated value of the enum case if `self` is `.tooManyRequests`.
             ///
             /// - Throws: An error if `self` is not `.tooManyRequests`.
             /// - SeeAlso: `.tooManyRequests`.
-            public var tooManyRequests: Operations.security_hyphen_advisories_sol_list_hyphen_global_hyphen_advisories.Output.TooManyRequests {
+            public var tooManyRequests: Operations.SecurityAdvisoriesListGlobalAdvisories.Output.TooManyRequests {
                 get throws {
                     switch self {
                     case let .tooManyRequests(response):
@@ -6846,12 +6855,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//advisories/get(security-advisories/list-global-advisories)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed_simple)
+            case unprocessableContent(Components.Responses.ValidationFailedSimple)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed_simple {
+            public var unprocessableContent: Components.Responses.ValidationFailedSimple {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6901,7 +6910,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//advisories/{ghsa_id}/get(security-advisories/get-global-advisory)`.
-    public enum security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory {
+    public enum SecurityAdvisoriesGetGlobalAdvisory {
         public static let id: Swift.String = "security-advisories/get-global-advisory"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/advisories/{ghsa_id}/GET/path`.
@@ -6909,36 +6918,36 @@ public enum Operations {
                 /// The GHSA (GitHub Security Advisory) identifier of the advisory.
                 ///
                 /// - Remark: Generated from `#/paths/advisories/{ghsa_id}/GET/path/ghsa_id`.
-                public var ghsa_id: Components.Parameters.ghsa_id
+                public var ghsaId: Components.Parameters.GhsaId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - ghsa_id: The GHSA (GitHub Security Advisory) identifier of the advisory.
-                public init(ghsa_id: Components.Parameters.ghsa_id) {
-                    self.ghsa_id = ghsa_id
+                ///   - ghsaId: The GHSA (GitHub Security Advisory) identifier of the advisory.
+                public init(ghsaId: Components.Parameters.GhsaId) {
+                    self.ghsaId = ghsaId
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Input.Path
+            public var path: Operations.SecurityAdvisoriesGetGlobalAdvisory.Input.Path
             /// - Remark: Generated from `#/paths/advisories/{ghsa_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesGetGlobalAdvisory.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesGetGlobalAdvisory.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesGetGlobalAdvisory.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Input.Path,
-                headers: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Input.Headers = .init()
+                path: Operations.SecurityAdvisoriesGetGlobalAdvisory.Input.Path,
+                headers: Operations.SecurityAdvisoriesGetGlobalAdvisory.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6949,12 +6958,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/advisories/{ghsa_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/advisories/{ghsa_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.global_hyphen_advisory)
+                    case json(Components.Schemas.GlobalAdvisory)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.global_hyphen_advisory {
+                    public var json: Components.Schemas.GlobalAdvisory {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6964,12 +6973,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Output.Ok.Body
+                public var body: Operations.SecurityAdvisoriesGetGlobalAdvisory.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Output.Ok.Body) {
+                public init(body: Operations.SecurityAdvisoriesGetGlobalAdvisory.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6978,12 +6987,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//advisories/{ghsa_id}/get(security-advisories/get-global-advisory)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Output.Ok)
+            case ok(Operations.SecurityAdvisoriesGetGlobalAdvisory.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.security_hyphen_advisories_sol_get_hyphen_global_hyphen_advisory.Output.Ok {
+            public var ok: Operations.SecurityAdvisoriesGetGlobalAdvisory.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7001,12 +7010,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//advisories/{ghsa_id}/get(security-advisories/get-global-advisory)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7060,7 +7069,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/security-advisories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/security-advisories/get(security-advisories/list-org-repository-advisories)`.
-    public enum security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories {
+    public enum SecurityAdvisoriesListOrgRepositoryAdvisories {
         public static let id: Swift.String = "security-advisories/list-org-repository-advisories"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/path`.
@@ -7068,29 +7077,29 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Path
+            public var path: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case published = "published"
@@ -7098,21 +7107,21 @@ public enum Operations {
                 /// The property to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/sort`.
-                public var sort: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.sortPayload?
+                public var sort: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Query.SortPayload?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// The number of advisories to return per page. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/per_page`.
-                public var per_page: Swift.Int?
+                public var perPage: Swift.Int?
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case triage = "triage"
                     case draft = "draft"
                     case published = "published"
@@ -7121,7 +7130,7 @@ public enum Operations {
                 /// Filter by the state of the repository advisories. Only advisories of this state will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/state`.
-                public var state: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.statePayload?
+                public var state: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Query.StatePayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -7129,37 +7138,37 @@ public enum Operations {
                 ///   - sort: The property to sort the results by.
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of advisories to return per page. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of advisories to return per page. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - state: Filter by the state of the repository advisories. Only advisories of this state will be returned.
                 public init(
-                    direction: Components.Parameters.direction? = nil,
-                    sort: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.sortPayload? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    per_page: Swift.Int? = nil,
-                    state: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query.statePayload? = nil
+                    direction: Components.Parameters.Direction? = nil,
+                    sort: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Query.SortPayload? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    perPage: Swift.Int? = nil,
+                    state: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Query.StatePayload? = nil
                 ) {
                     self.direction = direction
                     self.sort = sort
                     self.before = before
                     self.after = after
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.state = state
                 }
             }
-            public var query: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query
+            public var query: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7167,9 +7176,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Path,
-                query: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Query = .init(),
-                headers: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Input.Headers = .init()
+                path: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Path,
+                query: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Query = .init(),
+                headers: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7181,12 +7190,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.repository_hyphen_advisory])
+                    case json([Components.Schemas.RepositoryAdvisory])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.repository_hyphen_advisory] {
+                    public var json: [Components.Schemas.RepositoryAdvisory] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7196,12 +7205,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Output.Ok.Body
+                public var body: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Output.Ok.Body) {
+                public init(body: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7210,12 +7219,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/security-advisories/get(security-advisories/list-org-repository-advisories)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Output.Ok)
+            case ok(Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.security_hyphen_advisories_sol_list_hyphen_org_hyphen_repository_hyphen_advisories.Output.Ok {
+            public var ok: Operations.SecurityAdvisoriesListOrgRepositoryAdvisories.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7233,12 +7242,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/security-advisories/get(security-advisories/list-org-repository-advisories)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -7256,12 +7265,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/security-advisories/get(security-advisories/list-org-repository-advisories)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7281,14 +7290,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -7299,14 +7308,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -7321,7 +7330,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/security-advisories`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/get(security-advisories/list-repository-advisories)`.
-    public enum security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories {
+    public enum SecurityAdvisoriesListRepositoryAdvisories {
         public static let id: Swift.String = "security-advisories/list-repository-advisories"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/path`.
@@ -7329,38 +7338,38 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Path
+            public var path: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum SortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case published = "published"
@@ -7368,21 +7377,21 @@ public enum Operations {
                 /// The property to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/sort`.
-                public var sort: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Query.sortPayload?
+                public var sort: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Query.SortPayload?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/before`.
-                public var before: Components.Parameters.pagination_hyphen_before?
+                public var before: Components.Parameters.PaginationBefore?
                 /// A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/after`.
-                public var after: Components.Parameters.pagination_hyphen_after?
+                public var after: Components.Parameters.PaginationAfter?
                 /// The number of advisories to return per page. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/per_page`.
-                public var per_page: Swift.Int?
+                public var perPage: Swift.Int?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case triage = "triage"
                     case draft = "draft"
                     case published = "published"
@@ -7391,7 +7400,7 @@ public enum Operations {
                 /// Filter by state of the repository advisories. Only advisories of this state will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/state`.
-                public var state: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Query.statePayload?
+                public var state: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Query.StatePayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
@@ -7399,37 +7408,37 @@ public enum Operations {
                 ///   - sort: The property to sort the results by.
                 ///   - before: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results before this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - after: A cursor, as given in the [Link header](https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers). If specified, the query only searches for results after this cursor. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
-                ///   - per_page: The number of advisories to return per page. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of advisories to return per page. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - state: Filter by state of the repository advisories. Only advisories of this state will be returned.
                 public init(
-                    direction: Components.Parameters.direction? = nil,
-                    sort: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Query.sortPayload? = nil,
-                    before: Components.Parameters.pagination_hyphen_before? = nil,
-                    after: Components.Parameters.pagination_hyphen_after? = nil,
-                    per_page: Swift.Int? = nil,
-                    state: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Query.statePayload? = nil
+                    direction: Components.Parameters.Direction? = nil,
+                    sort: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Query.SortPayload? = nil,
+                    before: Components.Parameters.PaginationBefore? = nil,
+                    after: Components.Parameters.PaginationAfter? = nil,
+                    perPage: Swift.Int? = nil,
+                    state: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Query.StatePayload? = nil
                 ) {
                     self.direction = direction
                     self.sort = sort
                     self.before = before
                     self.after = after
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.state = state
                 }
             }
-            public var query: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Query
+            public var query: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesListRepositoryAdvisories.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesListRepositoryAdvisories.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7437,9 +7446,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Path,
-                query: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Query = .init(),
-                headers: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Input.Headers = .init()
+                path: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Path,
+                query: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Query = .init(),
+                headers: Operations.SecurityAdvisoriesListRepositoryAdvisories.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7451,12 +7460,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.repository_hyphen_advisory])
+                    case json([Components.Schemas.RepositoryAdvisory])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.repository_hyphen_advisory] {
+                    public var json: [Components.Schemas.RepositoryAdvisory] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7466,12 +7475,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Output.Ok.Body
+                public var body: Operations.SecurityAdvisoriesListRepositoryAdvisories.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Output.Ok.Body) {
+                public init(body: Operations.SecurityAdvisoriesListRepositoryAdvisories.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7480,12 +7489,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/get(security-advisories/list-repository-advisories)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Output.Ok)
+            case ok(Operations.SecurityAdvisoriesListRepositoryAdvisories.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.security_hyphen_advisories_sol_list_hyphen_repository_hyphen_advisories.Output.Ok {
+            public var ok: Operations.SecurityAdvisoriesListRepositoryAdvisories.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7503,12 +7512,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/get(security-advisories/list-repository-advisories)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -7526,12 +7535,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/get(security-advisories/list-repository-advisories)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7551,14 +7560,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -7569,14 +7578,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -7591,7 +7600,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/post(security-advisories/create-repository-advisory)`.
-    public enum security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory {
+    public enum SecurityAdvisoriesCreateRepositoryAdvisory {
         public static let id: Swift.String = "security-advisories/create-repository-advisory"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/POST/path`.
@@ -7599,43 +7608,43 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Path
+            public var path: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesCreateRepositoryAdvisory.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesCreateRepositoryAdvisory.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/POST/requestBody/content/application\/json`.
-                case json(Components.Schemas.repository_hyphen_advisory_hyphen_create)
+                case json(Components.Schemas.RepositoryAdvisoryCreate)
             }
-            public var body: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Body
+            public var body: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7643,9 +7652,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Path,
-                headers: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Headers = .init(),
-                body: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Input.Body
+                path: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Path,
+                headers: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Headers = .init(),
+                body: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7657,12 +7666,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.repository_hyphen_advisory)
+                    case json(Components.Schemas.RepositoryAdvisory)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.repository_hyphen_advisory {
+                    public var json: Components.Schemas.RepositoryAdvisory {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7672,12 +7681,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Output.Created.Body
+                public var body: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Output.Created.Body) {
+                public init(body: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -7686,12 +7695,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/post(security-advisories/create-repository-advisory)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Output.Created)
+            case created(Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory.Output.Created {
+            public var created: Operations.SecurityAdvisoriesCreateRepositoryAdvisory.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7709,12 +7718,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/post(security-advisories/create-repository-advisory)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7732,12 +7741,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/post(security-advisories/create-repository-advisory)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7755,12 +7764,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/post(security-advisories/create-repository-advisory)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7811,7 +7820,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/reports`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/reports/post(security-advisories/create-private-vulnerability-report)`.
-    public enum security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report {
+    public enum SecurityAdvisoriesCreatePrivateVulnerabilityReport {
         public static let id: Swift.String = "security-advisories/create-private-vulnerability-report"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/reports/POST/path`.
@@ -7819,43 +7828,43 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/reports/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/reports/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Path
+            public var path: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/reports/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/reports/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/reports/POST/requestBody/content/application\/json`.
-                case json(Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create)
+                case json(Components.Schemas.PrivateVulnerabilityReportCreate)
             }
-            public var body: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Body
+            public var body: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7863,9 +7872,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Path,
-                headers: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Headers = .init(),
-                body: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Input.Body
+                path: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Path,
+                headers: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Headers = .init(),
+                body: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7877,12 +7886,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/reports/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/reports/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.repository_hyphen_advisory)
+                    case json(Components.Schemas.RepositoryAdvisory)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.repository_hyphen_advisory {
+                    public var json: Components.Schemas.RepositoryAdvisory {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7892,12 +7901,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Output.Created.Body
+                public var body: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Output.Created.Body) {
+                public init(body: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -7906,12 +7915,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/reports/post(security-advisories/create-private-vulnerability-report)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Output.Created)
+            case created(Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.security_hyphen_advisories_sol_create_hyphen_private_hyphen_vulnerability_hyphen_report.Output.Created {
+            public var created: Operations.SecurityAdvisoriesCreatePrivateVulnerabilityReport.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7929,12 +7938,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/reports/post(security-advisories/create-private-vulnerability-report)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7952,12 +7961,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/reports/post(security-advisories/create-private-vulnerability-report)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7975,12 +7984,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/reports/post(security-advisories/create-private-vulnerability-report)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8037,7 +8046,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/security-advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/get(security-advisories/get-repository-advisory)`.
-    public enum security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory {
+    public enum SecurityAdvisoriesGetRepositoryAdvisory {
         public static let id: Swift.String = "security-advisories/get-repository-advisory"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/GET/path`.
@@ -8045,52 +8054,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The GHSA (GitHub Security Advisory) identifier of the advisory.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/GET/path/ghsa_id`.
-                public var ghsa_id: Components.Parameters.ghsa_id
+                public var ghsaId: Components.Parameters.GhsaId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - ghsa_id: The GHSA (GitHub Security Advisory) identifier of the advisory.
+                ///   - ghsaId: The GHSA (GitHub Security Advisory) identifier of the advisory.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ghsa_id: Components.Parameters.ghsa_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ghsaId: Components.Parameters.GhsaId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.ghsa_id = ghsa_id
+                    self.ghsaId = ghsaId
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Input.Path
+            public var path: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesGetRepositoryAdvisory.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesGetRepositoryAdvisory.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Input.Path,
-                headers: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Input.Headers = .init()
+                path: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Input.Path,
+                headers: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8101,12 +8110,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.repository_hyphen_advisory)
+                    case json(Components.Schemas.RepositoryAdvisory)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.repository_hyphen_advisory {
+                    public var json: Components.Schemas.RepositoryAdvisory {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8116,12 +8125,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Output.Ok.Body
+                public var body: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Output.Ok.Body) {
+                public init(body: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8130,12 +8139,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/get(security-advisories/get-repository-advisory)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Output.Ok)
+            case ok(Operations.SecurityAdvisoriesGetRepositoryAdvisory.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.security_hyphen_advisories_sol_get_hyphen_repository_hyphen_advisory.Output.Ok {
+            public var ok: Operations.SecurityAdvisoriesGetRepositoryAdvisory.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8153,12 +8162,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/get(security-advisories/get-repository-advisory)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8176,12 +8185,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/get(security-advisories/get-repository-advisory)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8236,7 +8245,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/security-advisories/{ghsa_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/patch(security-advisories/update-repository-advisory)`.
-    public enum security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory {
+    public enum SecurityAdvisoriesUpdateRepositoryAdvisory {
         public static let id: Swift.String = "security-advisories/update-repository-advisory"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/path`.
@@ -8244,50 +8253,50 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The GHSA (GitHub Security Advisory) identifier of the advisory.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/path/ghsa_id`.
-                public var ghsa_id: Components.Parameters.ghsa_id
+                public var ghsaId: Components.Parameters.GhsaId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - ghsa_id: The GHSA (GitHub Security Advisory) identifier of the advisory.
+                ///   - ghsaId: The GHSA (GitHub Security Advisory) identifier of the advisory.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ghsa_id: Components.Parameters.ghsa_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ghsaId: Components.Parameters.GhsaId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.ghsa_id = ghsa_id
+                    self.ghsaId = ghsaId
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Path
+            public var path: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/requestBody/content/application\/json`.
-                case json(Components.Schemas.repository_hyphen_advisory_hyphen_update)
+                case json(Components.Schemas.RepositoryAdvisoryUpdate)
             }
-            public var body: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Body
+            public var body: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8295,9 +8304,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Path,
-                headers: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Headers = .init(),
-                body: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Input.Body
+                path: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Path,
+                headers: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Headers = .init(),
+                body: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -8309,12 +8318,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.repository_hyphen_advisory)
+                    case json(Components.Schemas.RepositoryAdvisory)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.repository_hyphen_advisory {
+                    public var json: Components.Schemas.RepositoryAdvisory {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8324,12 +8333,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output.Ok.Body
+                public var body: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output.Ok.Body) {
+                public init(body: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8338,12 +8347,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/patch(security-advisories/update-repository-advisory)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output.Ok)
+            case ok(Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output.Ok {
+            public var ok: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8361,12 +8370,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/patch(security-advisories/update-repository-advisory)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8384,12 +8393,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/patch(security-advisories/update-repository-advisory)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8406,12 +8415,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/responses/422/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/PATCH/responses/422/content/application\/json`.
-                    case json(Components.Schemas.validation_hyphen_error)
+                    case json(Components.Schemas.ValidationError)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.validation_hyphen_error {
+                    public var json: Components.Schemas.ValidationError {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8421,12 +8430,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output.UnprocessableContent.Body
+                public var body: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output.UnprocessableContent.Body
                 /// Creates a new `UnprocessableContent`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output.UnprocessableContent.Body) {
+                public init(body: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output.UnprocessableContent.Body) {
                     self.body = body
                 }
             }
@@ -8435,12 +8444,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/patch(security-advisories/update-repository-advisory)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output.UnprocessableContent)
+            case unprocessableContent(Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.security_hyphen_advisories_sol_update_hyphen_repository_hyphen_advisory.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.SecurityAdvisoriesUpdateRepositoryAdvisory.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8496,7 +8505,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)`.
-    public enum security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request {
+    public enum SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest {
         public static let id: Swift.String = "security-advisories/create-repository-advisory-cve-request"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/POST/path`.
@@ -8504,52 +8513,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The GHSA (GitHub Security Advisory) identifier of the advisory.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/POST/path/ghsa_id`.
-                public var ghsa_id: Components.Parameters.ghsa_id
+                public var ghsaId: Components.Parameters.GhsaId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - ghsa_id: The GHSA (GitHub Security Advisory) identifier of the advisory.
+                ///   - ghsaId: The GHSA (GitHub Security Advisory) identifier of the advisory.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ghsa_id: Components.Parameters.ghsa_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ghsaId: Components.Parameters.GhsaId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.ghsa_id = ghsa_id
+                    self.ghsaId = ghsaId
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Input.Path
+            public var path: Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Input.Path,
-                headers: Operations.security_hyphen_advisories_sol_create_hyphen_repository_hyphen_advisory_hyphen_cve_hyphen_request.Input.Headers = .init()
+                path: Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Input.Path,
+                headers: Operations.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequest.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8561,12 +8570,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)/responses/202`.
             ///
             /// HTTP response code: `202 accepted`.
-            case accepted(Components.Responses.accepted)
+            case accepted(Components.Responses.Accepted)
             /// The associated value of the enum case if `self` is `.accepted`.
             ///
             /// - Throws: An error if `self` is not `.accepted`.
             /// - SeeAlso: `.accepted`.
-            public var accepted: Components.Responses.accepted {
+            public var accepted: Components.Responses.Accepted {
                 get throws {
                     switch self {
                     case let .accepted(response):
@@ -8584,12 +8593,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -8607,12 +8616,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8630,12 +8639,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8653,12 +8662,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/cve/post(security-advisories/create-repository-advisory-cve-request)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8678,14 +8687,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -8696,14 +8705,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }
@@ -8717,7 +8726,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)`.
-    public enum security_hyphen_advisories_sol_create_hyphen_fork {
+    public enum SecurityAdvisoriesCreateFork {
         public static let id: Swift.String = "security-advisories/create-fork"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/POST/path`.
@@ -8725,52 +8734,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The GHSA (GitHub Security Advisory) identifier of the advisory.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/POST/path/ghsa_id`.
-                public var ghsa_id: Components.Parameters.ghsa_id
+                public var ghsaId: Components.Parameters.GhsaId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - ghsa_id: The GHSA (GitHub Security Advisory) identifier of the advisory.
+                ///   - ghsaId: The GHSA (GitHub Security Advisory) identifier of the advisory.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ghsa_id: Components.Parameters.ghsa_id
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ghsaId: Components.Parameters.GhsaId
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.ghsa_id = ghsa_id
+                    self.ghsaId = ghsaId
                 }
             }
-            public var path: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Input.Path
+            public var path: Operations.SecurityAdvisoriesCreateFork.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_create_hyphen_fork.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesCreateFork.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.security_hyphen_advisories_sol_create_hyphen_fork.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.SecurityAdvisoriesCreateFork.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Input.Headers
+            public var headers: Operations.SecurityAdvisoriesCreateFork.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Input.Path,
-                headers: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Input.Headers = .init()
+                path: Operations.SecurityAdvisoriesCreateFork.Input.Path,
+                headers: Operations.SecurityAdvisoriesCreateFork.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8781,12 +8790,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/POST/responses/202/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/POST/responses/202/content/application\/json`.
-                    case json(Components.Schemas.full_hyphen_repository)
+                    case json(Components.Schemas.FullRepository)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.full_hyphen_repository {
+                    public var json: Components.Schemas.FullRepository {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8796,12 +8805,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output.Accepted.Body
+                public var body: Operations.SecurityAdvisoriesCreateFork.Output.Accepted.Body
                 /// Creates a new `Accepted`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output.Accepted.Body) {
+                public init(body: Operations.SecurityAdvisoriesCreateFork.Output.Accepted.Body) {
                     self.body = body
                 }
             }
@@ -8810,12 +8819,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)/responses/202`.
             ///
             /// HTTP response code: `202 accepted`.
-            case accepted(Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output.Accepted)
+            case accepted(Operations.SecurityAdvisoriesCreateFork.Output.Accepted)
             /// The associated value of the enum case if `self` is `.accepted`.
             ///
             /// - Throws: An error if `self` is not `.accepted`.
             /// - SeeAlso: `.accepted`.
-            public var accepted: Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output.Accepted {
+            public var accepted: Operations.SecurityAdvisoriesCreateFork.Output.Accepted {
                 get throws {
                     switch self {
                     case let .accepted(response):
@@ -8833,12 +8842,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)/responses/400`.
             ///
             /// HTTP response code: `400 badRequest`.
-            case badRequest(Components.Responses.bad_request)
+            case badRequest(Components.Responses.BadRequest)
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
             /// - SeeAlso: `.badRequest`.
-            public var badRequest: Components.Responses.bad_request {
+            public var badRequest: Components.Responses.BadRequest {
                 get throws {
                     switch self {
                     case let .badRequest(response):
@@ -8856,12 +8865,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -8879,12 +8888,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -8902,12 +8911,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/security-advisories/{ghsa_id}/forks/post(security-advisories/create-fork)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8927,14 +8936,14 @@ public enum Operations {
         }
         @frozen public enum AcceptableContentType: AcceptableProtocol {
             case json
-            case application_scim_plus_json
+            case applicationScimJson
             case other(Swift.String)
             public init?(rawValue: Swift.String) {
                 switch rawValue.lowercased() {
                 case "application/json":
                     self = .json
                 case "application/scim+json":
-                    self = .application_scim_plus_json
+                    self = .applicationScimJson
                 default:
                     self = .other(rawValue)
                 }
@@ -8945,14 +8954,14 @@ public enum Operations {
                     return string
                 case .json:
                     return "application/json"
-                case .application_scim_plus_json:
+                case .applicationScimJson:
                     return "application/scim+json"
                 }
             }
             public static var allCases: [Self] {
                 [
                     .json,
-                    .application_scim_plus_json
+                    .applicationScimJson
                 ]
             }
         }

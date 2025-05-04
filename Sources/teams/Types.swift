@@ -17,7 +17,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/get(teams/list)`.
-    func teams_sol_list(_ input: Operations.teams_sol_list.Input) async throws -> Operations.teams_sol_list.Output
+    func teamsList(_ input: Operations.TeamsList.Input) async throws -> Operations.TeamsList.Output
     /// Create a team
     ///
     /// To create a team, the authenticated user must be a member or owner of `{org}`. By default, organization members can create teams. Organization owners can limit team creation to organization owners. For more information, see "[Setting team creation permissions](https://docs.github.com/articles/setting-team-creation-permissions-in-your-organization)."
@@ -26,7 +26,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/post(teams/create)`.
-    func teams_sol_create(_ input: Operations.teams_sol_create.Input) async throws -> Operations.teams_sol_create.Output
+    func teamsCreate(_ input: Operations.TeamsCreate.Input) async throws -> Operations.TeamsCreate.Output
     /// Get a team by name
     ///
     /// Gets a team using the team's `slug`. To create the `slug`, GitHub replaces special characters in the `name` string, changes all words to lowercase, and replaces spaces with a `-` separator. For example, `"My TEam Näme"` would become `my-team-name`.
@@ -36,7 +36,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/get(teams/get-by-name)`.
-    func teams_sol_get_hyphen_by_hyphen_name(_ input: Operations.teams_sol_get_hyphen_by_hyphen_name.Input) async throws -> Operations.teams_sol_get_hyphen_by_hyphen_name.Output
+    func teamsGetByName(_ input: Operations.TeamsGetByName.Input) async throws -> Operations.TeamsGetByName.Output
     /// Update a team
     ///
     /// To edit a team, the authenticated user must either be an organization owner or a team maintainer.
@@ -46,7 +46,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)`.
-    func teams_sol_update_hyphen_in_hyphen_org(_ input: Operations.teams_sol_update_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_update_hyphen_in_hyphen_org.Output
+    func teamsUpdateInOrg(_ input: Operations.TeamsUpdateInOrg.Input) async throws -> Operations.TeamsUpdateInOrg.Output
     /// Delete a team
     ///
     /// To delete a team, the authenticated user must be an organization owner or team maintainer.
@@ -58,7 +58,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/delete(teams/delete-in-org)`.
-    func teams_sol_delete_hyphen_in_hyphen_org(_ input: Operations.teams_sol_delete_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_delete_hyphen_in_hyphen_org.Output
+    func teamsDeleteInOrg(_ input: Operations.TeamsDeleteInOrg.Input) async throws -> Operations.TeamsDeleteInOrg.Output
     /// List discussions
     ///
     /// List all discussions on a team's page.
@@ -70,7 +70,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/get(teams/list-discussions-in-org)`.
-    func teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output
+    func teamsListDiscussionsInOrg(_ input: Operations.TeamsListDiscussionsInOrg.Input) async throws -> Operations.TeamsListDiscussionsInOrg.Output
     /// Create a discussion
     ///
     /// Creates a new discussion post on a team's page.
@@ -84,7 +84,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/post(teams/create-discussion-in-org)`.
-    func teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Output
+    func teamsCreateDiscussionInOrg(_ input: Operations.TeamsCreateDiscussionInOrg.Input) async throws -> Operations.TeamsCreateDiscussionInOrg.Output
     /// Get a discussion
     ///
     /// Get a specific discussion on a team's page.
@@ -96,7 +96,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/get(teams/get-discussion-in-org)`.
-    func teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Output
+    func teamsGetDiscussionInOrg(_ input: Operations.TeamsGetDiscussionInOrg.Input) async throws -> Operations.TeamsGetDiscussionInOrg.Output
     /// Update a discussion
     ///
     /// Edits the title and body text of a discussion post. Only the parameters you provide are updated.
@@ -108,7 +108,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/patch(teams/update-discussion-in-org)`.
-    func teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Output
+    func teamsUpdateDiscussionInOrg(_ input: Operations.TeamsUpdateDiscussionInOrg.Input) async throws -> Operations.TeamsUpdateDiscussionInOrg.Output
     /// Delete a discussion
     ///
     /// Delete a discussion from a team's page.
@@ -120,7 +120,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/delete(teams/delete-discussion-in-org)`.
-    func teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org(_ input: Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Output
+    func teamsDeleteDiscussionInOrg(_ input: Operations.TeamsDeleteDiscussionInOrg.Input) async throws -> Operations.TeamsDeleteDiscussionInOrg.Output
     /// List discussion comments
     ///
     /// List all comments on a team discussion.
@@ -132,7 +132,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-in-org)`.
-    func teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output
+    func teamsListDiscussionCommentsInOrg(_ input: Operations.TeamsListDiscussionCommentsInOrg.Input) async throws -> Operations.TeamsListDiscussionCommentsInOrg.Output
     /// Create a discussion comment
     ///
     /// Creates a new comment on a team discussion.
@@ -146,7 +146,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-in-org)`.
-    func teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output
+    func teamsCreateDiscussionCommentInOrg(_ input: Operations.TeamsCreateDiscussionCommentInOrg.Input) async throws -> Operations.TeamsCreateDiscussionCommentInOrg.Output
     /// Get a discussion comment
     ///
     /// Get a specific comment on a team discussion.
@@ -158,7 +158,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-in-org)`.
-    func teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output
+    func teamsGetDiscussionCommentInOrg(_ input: Operations.TeamsGetDiscussionCommentInOrg.Input) async throws -> Operations.TeamsGetDiscussionCommentInOrg.Output
     /// Update a discussion comment
     ///
     /// Edits the body text of a discussion comment.
@@ -170,7 +170,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-in-org)`.
-    func teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output
+    func teamsUpdateDiscussionCommentInOrg(_ input: Operations.TeamsUpdateDiscussionCommentInOrg.Input) async throws -> Operations.TeamsUpdateDiscussionCommentInOrg.Output
     /// Delete a discussion comment
     ///
     /// Deletes a comment on a team discussion.
@@ -182,7 +182,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-in-org)`.
-    func teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(_ input: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output
+    func teamsDeleteDiscussionCommentInOrg(_ input: Operations.TeamsDeleteDiscussionCommentInOrg.Input) async throws -> Operations.TeamsDeleteDiscussionCommentInOrg.Output
     /// List pending team invitations
     ///
     /// The return hash contains a `role` field which refers to the Organization Invitation role and will be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or `reinstate`. If the invitee is not a GitHub member, the `login` field in the return hash will be `null`.
@@ -192,7 +192,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/invitations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/invitations/get(teams/list-pending-invitations-in-org)`.
-    func teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output
+    func teamsListPendingInvitationsInOrg(_ input: Operations.TeamsListPendingInvitationsInOrg.Input) async throws -> Operations.TeamsListPendingInvitationsInOrg.Output
     /// List team members
     ///
     /// Team members will include the members of child teams.
@@ -201,7 +201,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/members`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/members/get(teams/list-members-in-org)`.
-    func teams_sol_list_hyphen_members_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output
+    func teamsListMembersInOrg(_ input: Operations.TeamsListMembersInOrg.Input) async throws -> Operations.TeamsListMembersInOrg.Output
     /// Get team membership for a user
     ///
     /// Team members will include the members of child teams.
@@ -218,7 +218,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/get(teams/get-membership-for-user-in-org)`.
-    func teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_ input: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output
+    func teamsGetMembershipForUserInOrg(_ input: Operations.TeamsGetMembershipForUserInOrg.Input) async throws -> Operations.TeamsGetMembershipForUserInOrg.Output
     /// Add or update team membership for a user
     ///
     /// Adds an organization member to a team. An authenticated organization owner or team maintainer can add organization members to a team.
@@ -237,7 +237,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)`.
-    func teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output
+    func teamsAddOrUpdateMembershipForUserInOrg(_ input: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input) async throws -> Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output
     /// Remove team membership for a user
     ///
     /// To remove a membership between a user and a team, the authenticated user must have 'admin' permissions to the team or be an owner of the organization that the team is associated with. Removing team membership does not delete the user, it just removes their membership from the team.
@@ -252,7 +252,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)`.
-    func teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output
+    func teamsRemoveMembershipForUserInOrg(_ input: Operations.TeamsRemoveMembershipForUserInOrg.Input) async throws -> Operations.TeamsRemoveMembershipForUserInOrg.Output
     /// List team projects
     ///
     /// > [!WARNING]
@@ -262,7 +262,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)`.
     @available(*, deprecated)
-    func teams_sol_list_hyphen_projects_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output
+    func teamsListProjectsInOrg(_ input: Operations.TeamsListProjectsInOrg.Input) async throws -> Operations.TeamsListProjectsInOrg.Output
     /// Check team permissions for a project
     ///
     /// > [!WARNING]
@@ -272,7 +272,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)`.
     @available(*, deprecated)
-    func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output
+    func teamsCheckPermissionsForProjectInOrg(_ input: Operations.TeamsCheckPermissionsForProjectInOrg.Input) async throws -> Operations.TeamsCheckPermissionsForProjectInOrg.Output
     /// Add or update team project permissions
     ///
     /// > [!WARNING]
@@ -282,7 +282,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)`.
     @available(*, deprecated)
-    func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output
+    func teamsAddOrUpdateProjectPermissionsInOrg(_ input: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input) async throws -> Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output
     /// Remove a project from a team
     ///
     /// > [!WARNING]
@@ -292,7 +292,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)`.
     @available(*, deprecated)
-    func teams_sol_remove_hyphen_project_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output
+    func teamsRemoveProjectInOrg(_ input: Operations.TeamsRemoveProjectInOrg.Input) async throws -> Operations.TeamsRemoveProjectInOrg.Output
     /// List team repositories
     ///
     /// Lists a team's repositories visible to the authenticated user.
@@ -302,7 +302,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/get(teams/list-repos-in-org)`.
-    func teams_sol_list_hyphen_repos_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output
+    func teamsListReposInOrg(_ input: Operations.TeamsListReposInOrg.Input) async throws -> Operations.TeamsListReposInOrg.Output
     /// Check team permissions for a repository
     ///
     /// Checks whether a team has `admin`, `push`, `maintain`, `triage`, or `pull` permission for a repository. Repositories inherited through a parent team will also be checked.
@@ -318,7 +318,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)`.
-    func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output
+    func teamsCheckPermissionsForRepoInOrg(_ input: Operations.TeamsCheckPermissionsForRepoInOrg.Input) async throws -> Operations.TeamsCheckPermissionsForRepoInOrg.Output
     /// Add or update team repository permissions
     ///
     /// To add a repository to a team or update the team's permission on a repository, the authenticated user must have admin access to the repository, and must be able to see the team. The repository must be owned by the organization, or a direct fork of a repository owned by the organization. You will get a `422 Unprocessable Entity` status if you attempt to add a repository to a team that is not owned by the organization. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
@@ -330,7 +330,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-in-org)`.
-    func teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Output
+    func teamsAddOrUpdateRepoPermissionsInOrg(_ input: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input) async throws -> Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Output
     /// Remove a repository from a team
     ///
     /// If the authenticated user is an organization owner or a team maintainer, they can remove any repositories from the team. To remove a repository from a team as an organization member, the authenticated user must have admin access to the repository and must be able to see the team. This does not delete the repository, it just removes it from the team.
@@ -340,7 +340,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/delete(teams/remove-repo-in-org)`.
-    func teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(_ input: Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Output
+    func teamsRemoveRepoInOrg(_ input: Operations.TeamsRemoveRepoInOrg.Input) async throws -> Operations.TeamsRemoveRepoInOrg.Output
     /// List child teams
     ///
     /// Lists the child teams of the team specified by `{team_slug}`.
@@ -350,7 +350,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/teams/get(teams/list-child-in-org)`.
-    func teams_sol_list_hyphen_child_hyphen_in_hyphen_org(_ input: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input) async throws -> Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output
+    func teamsListChildInOrg(_ input: Operations.TeamsListChildInOrg.Input) async throws -> Operations.TeamsListChildInOrg.Output
     /// Get a team (Legacy)
     ///
     /// > [!WARNING]
@@ -359,7 +359,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/get(teams/get-legacy)`.
     @available(*, deprecated)
-    func teams_sol_get_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_legacy.Output
+    func teamsGetLegacy(_ input: Operations.TeamsGetLegacy.Input) async throws -> Operations.TeamsGetLegacy.Output
     /// Update a team (Legacy)
     ///
     /// > [!WARNING]
@@ -373,7 +373,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)`.
     @available(*, deprecated)
-    func teams_sol_update_hyphen_legacy(_ input: Operations.teams_sol_update_hyphen_legacy.Input) async throws -> Operations.teams_sol_update_hyphen_legacy.Output
+    func teamsUpdateLegacy(_ input: Operations.TeamsUpdateLegacy.Input) async throws -> Operations.TeamsUpdateLegacy.Output
     /// Delete a team (Legacy)
     ///
     /// > [!WARNING]
@@ -386,7 +386,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)`.
     @available(*, deprecated)
-    func teams_sol_delete_hyphen_legacy(_ input: Operations.teams_sol_delete_hyphen_legacy.Input) async throws -> Operations.teams_sol_delete_hyphen_legacy.Output
+    func teamsDeleteLegacy(_ input: Operations.TeamsDeleteLegacy.Input) async throws -> Operations.TeamsDeleteLegacy.Output
     /// List discussions (Legacy)
     ///
     /// > [!WARNING]
@@ -399,7 +399,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/get(teams/list-discussions-legacy)`.
     @available(*, deprecated)
-    func teams_sol_list_hyphen_discussions_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output
+    func teamsListDiscussionsLegacy(_ input: Operations.TeamsListDiscussionsLegacy.Input) async throws -> Operations.TeamsListDiscussionsLegacy.Output
     /// Create a discussion (Legacy)
     ///
     /// > [!WARNING]
@@ -414,7 +414,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/post(teams/create-discussion-legacy)`.
     @available(*, deprecated)
-    func teams_sol_create_hyphen_discussion_hyphen_legacy(_ input: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Output
+    func teamsCreateDiscussionLegacy(_ input: Operations.TeamsCreateDiscussionLegacy.Input) async throws -> Operations.TeamsCreateDiscussionLegacy.Output
     /// Get a discussion (Legacy)
     ///
     /// > [!WARNING]
@@ -427,7 +427,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/get(teams/get-discussion-legacy)`.
     @available(*, deprecated)
-    func teams_sol_get_hyphen_discussion_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Output
+    func teamsGetDiscussionLegacy(_ input: Operations.TeamsGetDiscussionLegacy.Input) async throws -> Operations.TeamsGetDiscussionLegacy.Output
     /// Update a discussion (Legacy)
     ///
     /// > [!WARNING]
@@ -440,7 +440,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/patch(teams/update-discussion-legacy)`.
     @available(*, deprecated)
-    func teams_sol_update_hyphen_discussion_hyphen_legacy(_ input: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Output
+    func teamsUpdateDiscussionLegacy(_ input: Operations.TeamsUpdateDiscussionLegacy.Input) async throws -> Operations.TeamsUpdateDiscussionLegacy.Output
     /// Delete a discussion (Legacy)
     ///
     /// > [!WARNING]
@@ -453,7 +453,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/delete(teams/delete-discussion-legacy)`.
     @available(*, deprecated)
-    func teams_sol_delete_hyphen_discussion_hyphen_legacy(_ input: Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Input) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Output
+    func teamsDeleteDiscussionLegacy(_ input: Operations.TeamsDeleteDiscussionLegacy.Input) async throws -> Operations.TeamsDeleteDiscussionLegacy.Output
     /// List discussion comments (Legacy)
     ///
     /// > [!WARNING]
@@ -466,7 +466,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-legacy)`.
     @available(*, deprecated)
-    func teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output
+    func teamsListDiscussionCommentsLegacy(_ input: Operations.TeamsListDiscussionCommentsLegacy.Input) async throws -> Operations.TeamsListDiscussionCommentsLegacy.Output
     /// Create a discussion comment (Legacy)
     ///
     /// > [!WARNING]
@@ -481,7 +481,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-legacy)`.
     @available(*, deprecated)
-    func teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Output
+    func teamsCreateDiscussionCommentLegacy(_ input: Operations.TeamsCreateDiscussionCommentLegacy.Input) async throws -> Operations.TeamsCreateDiscussionCommentLegacy.Output
     /// Get a discussion comment (Legacy)
     ///
     /// > [!WARNING]
@@ -494,7 +494,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-legacy)`.
     @available(*, deprecated)
-    func teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Output
+    func teamsGetDiscussionCommentLegacy(_ input: Operations.TeamsGetDiscussionCommentLegacy.Input) async throws -> Operations.TeamsGetDiscussionCommentLegacy.Output
     /// Update a discussion comment (Legacy)
     ///
     /// > [!WARNING]
@@ -507,7 +507,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-legacy)`.
     @available(*, deprecated)
-    func teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Output
+    func teamsUpdateDiscussionCommentLegacy(_ input: Operations.TeamsUpdateDiscussionCommentLegacy.Input) async throws -> Operations.TeamsUpdateDiscussionCommentLegacy.Output
     /// Delete a discussion comment (Legacy)
     ///
     /// > [!WARNING]
@@ -520,7 +520,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-legacy)`.
     @available(*, deprecated)
-    func teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy(_ input: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Input) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Output
+    func teamsDeleteDiscussionCommentLegacy(_ input: Operations.TeamsDeleteDiscussionCommentLegacy.Input) async throws -> Operations.TeamsDeleteDiscussionCommentLegacy.Output
     /// List pending team invitations (Legacy)
     ///
     /// > [!WARNING]
@@ -531,7 +531,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/invitations`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/invitations/get(teams/list-pending-invitations-legacy)`.
     @available(*, deprecated)
-    func teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output
+    func teamsListPendingInvitationsLegacy(_ input: Operations.TeamsListPendingInvitationsLegacy.Input) async throws -> Operations.TeamsListPendingInvitationsLegacy.Output
     /// List team members (Legacy)
     ///
     /// > [!WARNING]
@@ -542,7 +542,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/members`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/get(teams/list-members-legacy)`.
     @available(*, deprecated)
-    func teams_sol_list_hyphen_members_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output
+    func teamsListMembersLegacy(_ input: Operations.TeamsListMembersLegacy.Input) async throws -> Operations.TeamsListMembersLegacy.Output
     /// Get team member (Legacy)
     ///
     /// The "Get team member" endpoint (described below) is closing down.
@@ -554,7 +554,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)`.
     @available(*, deprecated)
-    func teams_sol_get_hyphen_member_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_member_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output
+    func teamsGetMemberLegacy(_ input: Operations.TeamsGetMemberLegacy.Input) async throws -> Operations.TeamsGetMemberLegacy.Output
     /// Add team member (Legacy)
     ///
     /// The "Add team member" endpoint (described below) is closing down.
@@ -573,7 +573,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PUT /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)`.
     @available(*, deprecated)
-    func teams_sol_add_hyphen_member_hyphen_legacy(_ input: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input) async throws -> Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output
+    func teamsAddMemberLegacy(_ input: Operations.TeamsAddMemberLegacy.Input) async throws -> Operations.TeamsAddMemberLegacy.Output
     /// Remove team member (Legacy)
     ///
     /// The "Remove team member" endpoint (described below) is closing down.
@@ -590,7 +590,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)`.
     @available(*, deprecated)
-    func teams_sol_remove_hyphen_member_hyphen_legacy(_ input: Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Input) async throws -> Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output
+    func teamsRemoveMemberLegacy(_ input: Operations.TeamsRemoveMemberLegacy.Input) async throws -> Operations.TeamsRemoveMemberLegacy.Output
     /// Get team membership for a user (Legacy)
     ///
     /// > [!WARNING]
@@ -608,7 +608,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/get(teams/get-membership-for-user-legacy)`.
     @available(*, deprecated)
-    func teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(_ input: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input) async throws -> Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output
+    func teamsGetMembershipForUserLegacy(_ input: Operations.TeamsGetMembershipForUserLegacy.Input) async throws -> Operations.TeamsGetMembershipForUserLegacy.Output
     /// Add or update team membership for a user (Legacy)
     ///
     /// > [!WARNING]
@@ -628,7 +628,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PUT /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)`.
     @available(*, deprecated)
-    func teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output
+    func teamsAddOrUpdateMembershipForUserLegacy(_ input: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input) async throws -> Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output
     /// Remove team membership for a user (Legacy)
     ///
     /// > [!WARNING]
@@ -644,7 +644,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)`.
     @available(*, deprecated)
-    func teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(_ input: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input) async throws -> Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output
+    func teamsRemoveMembershipForUserLegacy(_ input: Operations.TeamsRemoveMembershipForUserLegacy.Input) async throws -> Operations.TeamsRemoveMembershipForUserLegacy.Output
     /// List team projects (Legacy)
     ///
     /// > [!WARNING]
@@ -654,7 +654,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/projects`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)`.
     @available(*, deprecated)
-    func teams_sol_list_hyphen_projects_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output
+    func teamsListProjectsLegacy(_ input: Operations.TeamsListProjectsLegacy.Input) async throws -> Operations.TeamsListProjectsLegacy.Output
     /// Check team permissions for a project (Legacy)
     ///
     /// > [!WARNING]
@@ -664,7 +664,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)`.
     @available(*, deprecated)
-    func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output
+    func teamsCheckPermissionsForProjectLegacy(_ input: Operations.TeamsCheckPermissionsForProjectLegacy.Input) async throws -> Operations.TeamsCheckPermissionsForProjectLegacy.Output
     /// Add or update team project permissions (Legacy)
     ///
     /// > [!WARNING]
@@ -674,7 +674,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PUT /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)`.
     @available(*, deprecated)
-    func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output
+    func teamsAddOrUpdateProjectPermissionsLegacy(_ input: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input) async throws -> Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output
     /// Remove a project from a team (Legacy)
     ///
     /// > [!WARNING]
@@ -684,7 +684,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)`.
     @available(*, deprecated)
-    func teams_sol_remove_hyphen_project_hyphen_legacy(_ input: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Output
+    func teamsRemoveProjectLegacy(_ input: Operations.TeamsRemoveProjectLegacy.Input) async throws -> Operations.TeamsRemoveProjectLegacy.Output
     /// List team repositories (Legacy)
     ///
     /// > [!WARNING]
@@ -693,7 +693,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/repos`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/get(teams/list-repos-legacy)`.
     @available(*, deprecated)
-    func teams_sol_list_hyphen_repos_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output
+    func teamsListReposLegacy(_ input: Operations.TeamsListReposLegacy.Input) async throws -> Operations.TeamsListReposLegacy.Output
     /// Check team permissions for a repository (Legacy)
     ///
     /// > [!WARNING]
@@ -707,7 +707,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)`.
     @available(*, deprecated)
-    func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy(_ input: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output
+    func teamsCheckPermissionsForRepoLegacy(_ input: Operations.TeamsCheckPermissionsForRepoLegacy.Input) async throws -> Operations.TeamsCheckPermissionsForRepoLegacy.Output
     /// Add or update team repository permissions (Legacy)
     ///
     /// > [!WARNING]
@@ -720,7 +720,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PUT /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)`.
     @available(*, deprecated)
-    func teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy(_ input: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Output
+    func teamsAddOrUpdateRepoPermissionsLegacy(_ input: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input) async throws -> Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Output
     /// Remove a repository from a team (Legacy)
     ///
     /// > [!WARNING]
@@ -731,7 +731,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/delete(teams/remove-repo-legacy)`.
     @available(*, deprecated)
-    func teams_sol_remove_hyphen_repo_hyphen_legacy(_ input: Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Input) async throws -> Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Output
+    func teamsRemoveRepoLegacy(_ input: Operations.TeamsRemoveRepoLegacy.Input) async throws -> Operations.TeamsRemoveRepoLegacy.Output
     /// List child teams (Legacy)
     ///
     /// > [!WARNING]
@@ -740,7 +740,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /teams/{team_id}/teams`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)`.
     @available(*, deprecated)
-    func teams_sol_list_hyphen_child_hyphen_legacy(_ input: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input) async throws -> Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output
+    func teamsListChildLegacy(_ input: Operations.TeamsListChildLegacy.Input) async throws -> Operations.TeamsListChildLegacy.Output
     /// List teams for the authenticated user
     ///
     /// List all of the teams across all of the organizations to which the authenticated
@@ -752,7 +752,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/teams`.
     /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)`.
-    func teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func teamsListForAuthenticatedUser(_ input: Operations.TeamsListForAuthenticatedUser.Input) async throws -> Operations.TeamsListForAuthenticatedUser.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -763,12 +763,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/get(teams/list)`.
-    public func teams_sol_list(
-        path: Operations.teams_sol_list.Input.Path,
-        query: Operations.teams_sol_list.Input.Query = .init(),
-        headers: Operations.teams_sol_list.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list.Output {
-        try await teams_sol_list(Operations.teams_sol_list.Input(
+    public func teamsList(
+        path: Operations.TeamsList.Input.Path,
+        query: Operations.TeamsList.Input.Query = .init(),
+        headers: Operations.TeamsList.Input.Headers = .init()
+    ) async throws -> Operations.TeamsList.Output {
+        try await teamsList(Operations.TeamsList.Input(
             path: path,
             query: query,
             headers: headers
@@ -782,12 +782,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/post(teams/create)`.
-    public func teams_sol_create(
-        path: Operations.teams_sol_create.Input.Path,
-        headers: Operations.teams_sol_create.Input.Headers = .init(),
-        body: Operations.teams_sol_create.Input.Body
-    ) async throws -> Operations.teams_sol_create.Output {
-        try await teams_sol_create(Operations.teams_sol_create.Input(
+    public func teamsCreate(
+        path: Operations.TeamsCreate.Input.Path,
+        headers: Operations.TeamsCreate.Input.Headers = .init(),
+        body: Operations.TeamsCreate.Input.Body
+    ) async throws -> Operations.TeamsCreate.Output {
+        try await teamsCreate(Operations.TeamsCreate.Input(
             path: path,
             headers: headers,
             body: body
@@ -802,11 +802,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/get(teams/get-by-name)`.
-    public func teams_sol_get_hyphen_by_hyphen_name(
-        path: Operations.teams_sol_get_hyphen_by_hyphen_name.Input.Path,
-        headers: Operations.teams_sol_get_hyphen_by_hyphen_name.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_get_hyphen_by_hyphen_name.Output {
-        try await teams_sol_get_hyphen_by_hyphen_name(Operations.teams_sol_get_hyphen_by_hyphen_name.Input(
+    public func teamsGetByName(
+        path: Operations.TeamsGetByName.Input.Path,
+        headers: Operations.TeamsGetByName.Input.Headers = .init()
+    ) async throws -> Operations.TeamsGetByName.Output {
+        try await teamsGetByName(Operations.TeamsGetByName.Input(
             path: path,
             headers: headers
         ))
@@ -820,12 +820,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)`.
-    public func teams_sol_update_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_update_hyphen_in_hyphen_org.Output {
-        try await teams_sol_update_hyphen_in_hyphen_org(Operations.teams_sol_update_hyphen_in_hyphen_org.Input(
+    public func teamsUpdateInOrg(
+        path: Operations.TeamsUpdateInOrg.Input.Path,
+        headers: Operations.TeamsUpdateInOrg.Input.Headers = .init(),
+        body: Operations.TeamsUpdateInOrg.Input.Body? = nil
+    ) async throws -> Operations.TeamsUpdateInOrg.Output {
+        try await teamsUpdateInOrg(Operations.TeamsUpdateInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -842,8 +842,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/delete(teams/delete-in-org)`.
-    public func teams_sol_delete_hyphen_in_hyphen_org(path: Operations.teams_sol_delete_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.teams_sol_delete_hyphen_in_hyphen_org.Output {
-        try await teams_sol_delete_hyphen_in_hyphen_org(Operations.teams_sol_delete_hyphen_in_hyphen_org.Input(path: path))
+    public func teamsDeleteInOrg(path: Operations.TeamsDeleteInOrg.Input.Path) async throws -> Operations.TeamsDeleteInOrg.Output {
+        try await teamsDeleteInOrg(Operations.TeamsDeleteInOrg.Input(path: path))
     }
     /// List discussions
     ///
@@ -856,12 +856,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/get(teams/list-discussions-in-org)`.
-    public func teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output {
-        try await teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org(Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input(
+    public func teamsListDiscussionsInOrg(
+        path: Operations.TeamsListDiscussionsInOrg.Input.Path,
+        query: Operations.TeamsListDiscussionsInOrg.Input.Query = .init(),
+        headers: Operations.TeamsListDiscussionsInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListDiscussionsInOrg.Output {
+        try await teamsListDiscussionsInOrg(Operations.TeamsListDiscussionsInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -880,12 +880,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/post(teams/create-discussion-in-org)`.
-    public func teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Body
-    ) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Output {
-        try await teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org(Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input(
+    public func teamsCreateDiscussionInOrg(
+        path: Operations.TeamsCreateDiscussionInOrg.Input.Path,
+        headers: Operations.TeamsCreateDiscussionInOrg.Input.Headers = .init(),
+        body: Operations.TeamsCreateDiscussionInOrg.Input.Body
+    ) async throws -> Operations.TeamsCreateDiscussionInOrg.Output {
+        try await teamsCreateDiscussionInOrg(Operations.TeamsCreateDiscussionInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -902,11 +902,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/get(teams/get-discussion-in-org)`.
-    public func teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Output {
-        try await teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org(Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input(
+    public func teamsGetDiscussionInOrg(
+        path: Operations.TeamsGetDiscussionInOrg.Input.Path,
+        headers: Operations.TeamsGetDiscussionInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsGetDiscussionInOrg.Output {
+        try await teamsGetDiscussionInOrg(Operations.TeamsGetDiscussionInOrg.Input(
             path: path,
             headers: headers
         ))
@@ -922,12 +922,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/patch(teams/update-discussion-in-org)`.
-    public func teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Output {
-        try await teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org(Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input(
+    public func teamsUpdateDiscussionInOrg(
+        path: Operations.TeamsUpdateDiscussionInOrg.Input.Path,
+        headers: Operations.TeamsUpdateDiscussionInOrg.Input.Headers = .init(),
+        body: Operations.TeamsUpdateDiscussionInOrg.Input.Body? = nil
+    ) async throws -> Operations.TeamsUpdateDiscussionInOrg.Output {
+        try await teamsUpdateDiscussionInOrg(Operations.TeamsUpdateDiscussionInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -944,8 +944,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/delete(teams/delete-discussion-in-org)`.
-    public func teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org(path: Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Output {
-        try await teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org(Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Input(path: path))
+    public func teamsDeleteDiscussionInOrg(path: Operations.TeamsDeleteDiscussionInOrg.Input.Path) async throws -> Operations.TeamsDeleteDiscussionInOrg.Output {
+        try await teamsDeleteDiscussionInOrg(Operations.TeamsDeleteDiscussionInOrg.Input(path: path))
     }
     /// List discussion comments
     ///
@@ -958,12 +958,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-in-org)`.
-    public func teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output {
-        try await teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org(Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input(
+    public func teamsListDiscussionCommentsInOrg(
+        path: Operations.TeamsListDiscussionCommentsInOrg.Input.Path,
+        query: Operations.TeamsListDiscussionCommentsInOrg.Input.Query = .init(),
+        headers: Operations.TeamsListDiscussionCommentsInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListDiscussionCommentsInOrg.Output {
+        try await teamsListDiscussionCommentsInOrg(Operations.TeamsListDiscussionCommentsInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -982,12 +982,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-in-org)`.
-    public func teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
-    ) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
-        try await teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input(
+    public func teamsCreateDiscussionCommentInOrg(
+        path: Operations.TeamsCreateDiscussionCommentInOrg.Input.Path,
+        headers: Operations.TeamsCreateDiscussionCommentInOrg.Input.Headers = .init(),
+        body: Operations.TeamsCreateDiscussionCommentInOrg.Input.Body
+    ) async throws -> Operations.TeamsCreateDiscussionCommentInOrg.Output {
+        try await teamsCreateDiscussionCommentInOrg(Operations.TeamsCreateDiscussionCommentInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -1004,11 +1004,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-in-org)`.
-    public func teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
-        try await teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input(
+    public func teamsGetDiscussionCommentInOrg(
+        path: Operations.TeamsGetDiscussionCommentInOrg.Input.Path,
+        headers: Operations.TeamsGetDiscussionCommentInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsGetDiscussionCommentInOrg.Output {
+        try await teamsGetDiscussionCommentInOrg(Operations.TeamsGetDiscussionCommentInOrg.Input(
             path: path,
             headers: headers
         ))
@@ -1024,12 +1024,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-in-org)`.
-    public func teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
-    ) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
-        try await teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input(
+    public func teamsUpdateDiscussionCommentInOrg(
+        path: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Path,
+        headers: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Headers = .init(),
+        body: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Body
+    ) async throws -> Operations.TeamsUpdateDiscussionCommentInOrg.Output {
+        try await teamsUpdateDiscussionCommentInOrg(Operations.TeamsUpdateDiscussionCommentInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -1046,8 +1046,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-in-org)`.
-    public func teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(path: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output {
-        try await teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org(Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input(path: path))
+    public func teamsDeleteDiscussionCommentInOrg(path: Operations.TeamsDeleteDiscussionCommentInOrg.Input.Path) async throws -> Operations.TeamsDeleteDiscussionCommentInOrg.Output {
+        try await teamsDeleteDiscussionCommentInOrg(Operations.TeamsDeleteDiscussionCommentInOrg.Input(path: path))
     }
     /// List pending team invitations
     ///
@@ -1058,12 +1058,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/invitations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/invitations/get(teams/list-pending-invitations-in-org)`.
-    public func teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output {
-        try await teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org(Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input(
+    public func teamsListPendingInvitationsInOrg(
+        path: Operations.TeamsListPendingInvitationsInOrg.Input.Path,
+        query: Operations.TeamsListPendingInvitationsInOrg.Input.Query = .init(),
+        headers: Operations.TeamsListPendingInvitationsInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListPendingInvitationsInOrg.Output {
+        try await teamsListPendingInvitationsInOrg(Operations.TeamsListPendingInvitationsInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -1077,12 +1077,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/members`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/members/get(teams/list-members-in-org)`.
-    public func teams_sol_list_hyphen_members_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output {
-        try await teams_sol_list_hyphen_members_hyphen_in_hyphen_org(Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input(
+    public func teamsListMembersInOrg(
+        path: Operations.TeamsListMembersInOrg.Input.Path,
+        query: Operations.TeamsListMembersInOrg.Input.Query = .init(),
+        headers: Operations.TeamsListMembersInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListMembersInOrg.Output {
+        try await teamsListMembersInOrg(Operations.TeamsListMembersInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -1104,11 +1104,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/get(teams/get-membership-for-user-in-org)`.
-    public func teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output {
-        try await teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input(
+    public func teamsGetMembershipForUserInOrg(
+        path: Operations.TeamsGetMembershipForUserInOrg.Input.Path,
+        headers: Operations.TeamsGetMembershipForUserInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsGetMembershipForUserInOrg.Output {
+        try await teamsGetMembershipForUserInOrg(Operations.TeamsGetMembershipForUserInOrg.Input(
             path: path,
             headers: headers
         ))
@@ -1131,12 +1131,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)`.
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output {
-        try await teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input(
+    public func teamsAddOrUpdateMembershipForUserInOrg(
+        path: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Path,
+        headers: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Headers = .init(),
+        body: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Body? = nil
+    ) async throws -> Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output {
+        try await teamsAddOrUpdateMembershipForUserInOrg(Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -1156,8 +1156,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)`.
-    public func teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(path: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output {
-        try await teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input(path: path))
+    public func teamsRemoveMembershipForUserInOrg(path: Operations.TeamsRemoveMembershipForUserInOrg.Input.Path) async throws -> Operations.TeamsRemoveMembershipForUserInOrg.Output {
+        try await teamsRemoveMembershipForUserInOrg(Operations.TeamsRemoveMembershipForUserInOrg.Input(path: path))
     }
     /// List team projects
     ///
@@ -1168,12 +1168,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_projects_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output {
-        try await teams_sol_list_hyphen_projects_hyphen_in_hyphen_org(Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input(
+    public func teamsListProjectsInOrg(
+        path: Operations.TeamsListProjectsInOrg.Input.Path,
+        query: Operations.TeamsListProjectsInOrg.Input.Query = .init(),
+        headers: Operations.TeamsListProjectsInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListProjectsInOrg.Output {
+        try await teamsListProjectsInOrg(Operations.TeamsListProjectsInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -1188,11 +1188,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)`.
     @available(*, deprecated)
-    public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output {
-        try await teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input(
+    public func teamsCheckPermissionsForProjectInOrg(
+        path: Operations.TeamsCheckPermissionsForProjectInOrg.Input.Path,
+        headers: Operations.TeamsCheckPermissionsForProjectInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsCheckPermissionsForProjectInOrg.Output {
+        try await teamsCheckPermissionsForProjectInOrg(Operations.TeamsCheckPermissionsForProjectInOrg.Input(
             path: path,
             headers: headers
         ))
@@ -1206,12 +1206,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Headers = .init(),
-        body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output {
-        try await teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input(
+    public func teamsAddOrUpdateProjectPermissionsInOrg(
+        path: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Path,
+        headers: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Headers = .init(),
+        body: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Body? = nil
+    ) async throws -> Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output {
+        try await teamsAddOrUpdateProjectPermissionsInOrg(Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -1226,8 +1226,8 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_project_hyphen_in_hyphen_org(path: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output {
-        try await teams_sol_remove_hyphen_project_hyphen_in_hyphen_org(Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input(path: path))
+    public func teamsRemoveProjectInOrg(path: Operations.TeamsRemoveProjectInOrg.Input.Path) async throws -> Operations.TeamsRemoveProjectInOrg.Output {
+        try await teamsRemoveProjectInOrg(Operations.TeamsRemoveProjectInOrg.Input(path: path))
     }
     /// List team repositories
     ///
@@ -1238,12 +1238,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/get(teams/list-repos-in-org)`.
-    public func teams_sol_list_hyphen_repos_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output {
-        try await teams_sol_list_hyphen_repos_hyphen_in_hyphen_org(Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input(
+    public func teamsListReposInOrg(
+        path: Operations.TeamsListReposInOrg.Input.Path,
+        query: Operations.TeamsListReposInOrg.Input.Query = .init(),
+        headers: Operations.TeamsListReposInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListReposInOrg.Output {
+        try await teamsListReposInOrg(Operations.TeamsListReposInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -1264,11 +1264,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)`.
-    public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input.Path,
-        headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output {
-        try await teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input(
+    public func teamsCheckPermissionsForRepoInOrg(
+        path: Operations.TeamsCheckPermissionsForRepoInOrg.Input.Path,
+        headers: Operations.TeamsCheckPermissionsForRepoInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsCheckPermissionsForRepoInOrg.Output {
+        try await teamsCheckPermissionsForRepoInOrg(Operations.TeamsCheckPermissionsForRepoInOrg.Input(
             path: path,
             headers: headers
         ))
@@ -1284,11 +1284,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-in-org)`.
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input.Path,
-        body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Output {
-        try await teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input(
+    public func teamsAddOrUpdateRepoPermissionsInOrg(
+        path: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input.Path,
+        body: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input.Body? = nil
+    ) async throws -> Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Output {
+        try await teamsAddOrUpdateRepoPermissionsInOrg(Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input(
             path: path,
             body: body
         ))
@@ -1302,8 +1302,8 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/delete(teams/remove-repo-in-org)`.
-    public func teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(path: Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Input.Path) async throws -> Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Output {
-        try await teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Input(path: path))
+    public func teamsRemoveRepoInOrg(path: Operations.TeamsRemoveRepoInOrg.Input.Path) async throws -> Operations.TeamsRemoveRepoInOrg.Output {
+        try await teamsRemoveRepoInOrg(Operations.TeamsRemoveRepoInOrg.Input(path: path))
     }
     /// List child teams
     ///
@@ -1314,12 +1314,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/teams/get(teams/list-child-in-org)`.
-    public func teams_sol_list_hyphen_child_hyphen_in_hyphen_org(
-        path: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Path,
-        query: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output {
-        try await teams_sol_list_hyphen_child_hyphen_in_hyphen_org(Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input(
+    public func teamsListChildInOrg(
+        path: Operations.TeamsListChildInOrg.Input.Path,
+        query: Operations.TeamsListChildInOrg.Input.Query = .init(),
+        headers: Operations.TeamsListChildInOrg.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListChildInOrg.Output {
+        try await teamsListChildInOrg(Operations.TeamsListChildInOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -1333,11 +1333,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/get(teams/get-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_legacy(
-        path: Operations.teams_sol_get_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_get_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_get_hyphen_legacy.Output {
-        try await teams_sol_get_hyphen_legacy(Operations.teams_sol_get_hyphen_legacy.Input(
+    public func teamsGetLegacy(
+        path: Operations.TeamsGetLegacy.Input.Path,
+        headers: Operations.TeamsGetLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsGetLegacy.Output {
+        try await teamsGetLegacy(Operations.TeamsGetLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1355,12 +1355,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_update_hyphen_legacy(
-        path: Operations.teams_sol_update_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_update_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.teams_sol_update_hyphen_legacy.Input.Body
-    ) async throws -> Operations.teams_sol_update_hyphen_legacy.Output {
-        try await teams_sol_update_hyphen_legacy(Operations.teams_sol_update_hyphen_legacy.Input(
+    public func teamsUpdateLegacy(
+        path: Operations.TeamsUpdateLegacy.Input.Path,
+        headers: Operations.TeamsUpdateLegacy.Input.Headers = .init(),
+        body: Operations.TeamsUpdateLegacy.Input.Body
+    ) async throws -> Operations.TeamsUpdateLegacy.Output {
+        try await teamsUpdateLegacy(Operations.TeamsUpdateLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -1378,11 +1378,11 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_delete_hyphen_legacy(
-        path: Operations.teams_sol_delete_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_delete_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_delete_hyphen_legacy.Output {
-        try await teams_sol_delete_hyphen_legacy(Operations.teams_sol_delete_hyphen_legacy.Input(
+    public func teamsDeleteLegacy(
+        path: Operations.TeamsDeleteLegacy.Input.Path,
+        headers: Operations.TeamsDeleteLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsDeleteLegacy.Output {
+        try await teamsDeleteLegacy(Operations.TeamsDeleteLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1399,12 +1399,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/get(teams/list-discussions-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_discussions_hyphen_legacy(
-        path: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Path,
-        query: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output {
-        try await teams_sol_list_hyphen_discussions_hyphen_legacy(Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input(
+    public func teamsListDiscussionsLegacy(
+        path: Operations.TeamsListDiscussionsLegacy.Input.Path,
+        query: Operations.TeamsListDiscussionsLegacy.Input.Query = .init(),
+        headers: Operations.TeamsListDiscussionsLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListDiscussionsLegacy.Output {
+        try await teamsListDiscussionsLegacy(Operations.TeamsListDiscussionsLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -1424,12 +1424,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/post(teams/create-discussion-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_create_hyphen_discussion_hyphen_legacy(
-        path: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Body
-    ) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Output {
-        try await teams_sol_create_hyphen_discussion_hyphen_legacy(Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input(
+    public func teamsCreateDiscussionLegacy(
+        path: Operations.TeamsCreateDiscussionLegacy.Input.Path,
+        headers: Operations.TeamsCreateDiscussionLegacy.Input.Headers = .init(),
+        body: Operations.TeamsCreateDiscussionLegacy.Input.Body
+    ) async throws -> Operations.TeamsCreateDiscussionLegacy.Output {
+        try await teamsCreateDiscussionLegacy(Operations.TeamsCreateDiscussionLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -1447,11 +1447,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/get(teams/get-discussion-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_discussion_hyphen_legacy(
-        path: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Output {
-        try await teams_sol_get_hyphen_discussion_hyphen_legacy(Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input(
+    public func teamsGetDiscussionLegacy(
+        path: Operations.TeamsGetDiscussionLegacy.Input.Path,
+        headers: Operations.TeamsGetDiscussionLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsGetDiscussionLegacy.Output {
+        try await teamsGetDiscussionLegacy(Operations.TeamsGetDiscussionLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1468,12 +1468,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/patch(teams/update-discussion-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_update_hyphen_discussion_hyphen_legacy(
-        path: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Output {
-        try await teams_sol_update_hyphen_discussion_hyphen_legacy(Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input(
+    public func teamsUpdateDiscussionLegacy(
+        path: Operations.TeamsUpdateDiscussionLegacy.Input.Path,
+        headers: Operations.TeamsUpdateDiscussionLegacy.Input.Headers = .init(),
+        body: Operations.TeamsUpdateDiscussionLegacy.Input.Body? = nil
+    ) async throws -> Operations.TeamsUpdateDiscussionLegacy.Output {
+        try await teamsUpdateDiscussionLegacy(Operations.TeamsUpdateDiscussionLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -1491,8 +1491,8 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/delete(teams/delete-discussion-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_delete_hyphen_discussion_hyphen_legacy(path: Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Input.Path) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Output {
-        try await teams_sol_delete_hyphen_discussion_hyphen_legacy(Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Input(path: path))
+    public func teamsDeleteDiscussionLegacy(path: Operations.TeamsDeleteDiscussionLegacy.Input.Path) async throws -> Operations.TeamsDeleteDiscussionLegacy.Output {
+        try await teamsDeleteDiscussionLegacy(Operations.TeamsDeleteDiscussionLegacy.Input(path: path))
     }
     /// List discussion comments (Legacy)
     ///
@@ -1506,12 +1506,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy(
-        path: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Path,
-        query: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output {
-        try await teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy(Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input(
+    public func teamsListDiscussionCommentsLegacy(
+        path: Operations.TeamsListDiscussionCommentsLegacy.Input.Path,
+        query: Operations.TeamsListDiscussionCommentsLegacy.Input.Query = .init(),
+        headers: Operations.TeamsListDiscussionCommentsLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListDiscussionCommentsLegacy.Output {
+        try await teamsListDiscussionCommentsLegacy(Operations.TeamsListDiscussionCommentsLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -1531,12 +1531,12 @@ extension APIProtocol {
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy(
-        path: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
-    ) async throws -> Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
-        try await teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy(Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input(
+    public func teamsCreateDiscussionCommentLegacy(
+        path: Operations.TeamsCreateDiscussionCommentLegacy.Input.Path,
+        headers: Operations.TeamsCreateDiscussionCommentLegacy.Input.Headers = .init(),
+        body: Operations.TeamsCreateDiscussionCommentLegacy.Input.Body
+    ) async throws -> Operations.TeamsCreateDiscussionCommentLegacy.Output {
+        try await teamsCreateDiscussionCommentLegacy(Operations.TeamsCreateDiscussionCommentLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -1554,11 +1554,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy(
-        path: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
-        try await teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy(Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input(
+    public func teamsGetDiscussionCommentLegacy(
+        path: Operations.TeamsGetDiscussionCommentLegacy.Input.Path,
+        headers: Operations.TeamsGetDiscussionCommentLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsGetDiscussionCommentLegacy.Output {
+        try await teamsGetDiscussionCommentLegacy(Operations.TeamsGetDiscussionCommentLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1575,12 +1575,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy(
-        path: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
-    ) async throws -> Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
-        try await teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy(Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input(
+    public func teamsUpdateDiscussionCommentLegacy(
+        path: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Path,
+        headers: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Headers = .init(),
+        body: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Body
+    ) async throws -> Operations.TeamsUpdateDiscussionCommentLegacy.Output {
+        try await teamsUpdateDiscussionCommentLegacy(Operations.TeamsUpdateDiscussionCommentLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -1598,8 +1598,8 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy(path: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path) async throws -> Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Output {
-        try await teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy(Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Input(path: path))
+    public func teamsDeleteDiscussionCommentLegacy(path: Operations.TeamsDeleteDiscussionCommentLegacy.Input.Path) async throws -> Operations.TeamsDeleteDiscussionCommentLegacy.Output {
+        try await teamsDeleteDiscussionCommentLegacy(Operations.TeamsDeleteDiscussionCommentLegacy.Input(path: path))
     }
     /// List pending team invitations (Legacy)
     ///
@@ -1611,12 +1611,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/invitations`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/invitations/get(teams/list-pending-invitations-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy(
-        path: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Path,
-        query: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output {
-        try await teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy(Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input(
+    public func teamsListPendingInvitationsLegacy(
+        path: Operations.TeamsListPendingInvitationsLegacy.Input.Path,
+        query: Operations.TeamsListPendingInvitationsLegacy.Input.Query = .init(),
+        headers: Operations.TeamsListPendingInvitationsLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListPendingInvitationsLegacy.Output {
+        try await teamsListPendingInvitationsLegacy(Operations.TeamsListPendingInvitationsLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -1632,12 +1632,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/members`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/get(teams/list-members-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_members_hyphen_legacy(
-        path: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Path,
-        query: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output {
-        try await teams_sol_list_hyphen_members_hyphen_legacy(Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input(
+    public func teamsListMembersLegacy(
+        path: Operations.TeamsListMembersLegacy.Input.Path,
+        query: Operations.TeamsListMembersLegacy.Input.Query = .init(),
+        headers: Operations.TeamsListMembersLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListMembersLegacy.Output {
+        try await teamsListMembersLegacy(Operations.TeamsListMembersLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -1654,8 +1654,8 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_member_hyphen_legacy(path: Operations.teams_sol_get_hyphen_member_hyphen_legacy.Input.Path) async throws -> Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output {
-        try await teams_sol_get_hyphen_member_hyphen_legacy(Operations.teams_sol_get_hyphen_member_hyphen_legacy.Input(path: path))
+    public func teamsGetMemberLegacy(path: Operations.TeamsGetMemberLegacy.Input.Path) async throws -> Operations.TeamsGetMemberLegacy.Output {
+        try await teamsGetMemberLegacy(Operations.TeamsGetMemberLegacy.Input(path: path))
     }
     /// Add team member (Legacy)
     ///
@@ -1675,11 +1675,11 @@ extension APIProtocol {
     /// - Remark: HTTP `PUT /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_member_hyphen_legacy(
-        path: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output {
-        try await teams_sol_add_hyphen_member_hyphen_legacy(Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input(
+    public func teamsAddMemberLegacy(
+        path: Operations.TeamsAddMemberLegacy.Input.Path,
+        headers: Operations.TeamsAddMemberLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsAddMemberLegacy.Output {
+        try await teamsAddMemberLegacy(Operations.TeamsAddMemberLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1700,8 +1700,8 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_member_hyphen_legacy(path: Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Input.Path) async throws -> Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output {
-        try await teams_sol_remove_hyphen_member_hyphen_legacy(Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Input(path: path))
+    public func teamsRemoveMemberLegacy(path: Operations.TeamsRemoveMemberLegacy.Input.Path) async throws -> Operations.TeamsRemoveMemberLegacy.Output {
+        try await teamsRemoveMemberLegacy(Operations.TeamsRemoveMemberLegacy.Input(path: path))
     }
     /// Get team membership for a user (Legacy)
     ///
@@ -1720,11 +1720,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/get(teams/get-membership-for-user-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(
-        path: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output {
-        try await teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input(
+    public func teamsGetMembershipForUserLegacy(
+        path: Operations.TeamsGetMembershipForUserLegacy.Input.Path,
+        headers: Operations.TeamsGetMembershipForUserLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsGetMembershipForUserLegacy.Output {
+        try await teamsGetMembershipForUserLegacy(Operations.TeamsGetMembershipForUserLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1748,12 +1748,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PUT /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(
-        path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output {
-        try await teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input(
+    public func teamsAddOrUpdateMembershipForUserLegacy(
+        path: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Path,
+        headers: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Headers = .init(),
+        body: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Body? = nil
+    ) async throws -> Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output {
+        try await teamsAddOrUpdateMembershipForUserLegacy(Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -1774,8 +1774,8 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(path: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path) async throws -> Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output {
-        try await teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input(path: path))
+    public func teamsRemoveMembershipForUserLegacy(path: Operations.TeamsRemoveMembershipForUserLegacy.Input.Path) async throws -> Operations.TeamsRemoveMembershipForUserLegacy.Output {
+        try await teamsRemoveMembershipForUserLegacy(Operations.TeamsRemoveMembershipForUserLegacy.Input(path: path))
     }
     /// List team projects (Legacy)
     ///
@@ -1786,12 +1786,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/projects`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_projects_hyphen_legacy(
-        path: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Path,
-        query: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output {
-        try await teams_sol_list_hyphen_projects_hyphen_legacy(Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input(
+    public func teamsListProjectsLegacy(
+        path: Operations.TeamsListProjectsLegacy.Input.Path,
+        query: Operations.TeamsListProjectsLegacy.Input.Query = .init(),
+        headers: Operations.TeamsListProjectsLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListProjectsLegacy.Output {
+        try await teamsListProjectsLegacy(Operations.TeamsListProjectsLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -1806,11 +1806,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy(
-        path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output {
-        try await teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input(
+    public func teamsCheckPermissionsForProjectLegacy(
+        path: Operations.TeamsCheckPermissionsForProjectLegacy.Input.Path,
+        headers: Operations.TeamsCheckPermissionsForProjectLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsCheckPermissionsForProjectLegacy.Output {
+        try await teamsCheckPermissionsForProjectLegacy(Operations.TeamsCheckPermissionsForProjectLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1824,12 +1824,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PUT /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy(
-        path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output {
-        try await teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input(
+    public func teamsAddOrUpdateProjectPermissionsLegacy(
+        path: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Path,
+        headers: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Headers = .init(),
+        body: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Body? = nil
+    ) async throws -> Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output {
+        try await teamsAddOrUpdateProjectPermissionsLegacy(Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -1844,11 +1844,11 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_project_hyphen_legacy(
-        path: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Output {
-        try await teams_sol_remove_hyphen_project_hyphen_legacy(Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input(
+    public func teamsRemoveProjectLegacy(
+        path: Operations.TeamsRemoveProjectLegacy.Input.Path,
+        headers: Operations.TeamsRemoveProjectLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsRemoveProjectLegacy.Output {
+        try await teamsRemoveProjectLegacy(Operations.TeamsRemoveProjectLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1861,12 +1861,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/repos`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/get(teams/list-repos-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_repos_hyphen_legacy(
-        path: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Path,
-        query: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output {
-        try await teams_sol_list_hyphen_repos_hyphen_legacy(Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input(
+    public func teamsListReposLegacy(
+        path: Operations.TeamsListReposLegacy.Input.Path,
+        query: Operations.TeamsListReposLegacy.Input.Query = .init(),
+        headers: Operations.TeamsListReposLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListReposLegacy.Output {
+        try await teamsListReposLegacy(Operations.TeamsListReposLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -1885,11 +1885,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy(
-        path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output {
-        try await teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input(
+    public func teamsCheckPermissionsForRepoLegacy(
+        path: Operations.TeamsCheckPermissionsForRepoLegacy.Input.Path,
+        headers: Operations.TeamsCheckPermissionsForRepoLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsCheckPermissionsForRepoLegacy.Output {
+        try await teamsCheckPermissionsForRepoLegacy(Operations.TeamsCheckPermissionsForRepoLegacy.Input(
             path: path,
             headers: headers
         ))
@@ -1906,12 +1906,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PUT /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy(
-        path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Path,
-        headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Headers = .init(),
-        body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Body? = nil
-    ) async throws -> Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Output {
-        try await teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input(
+    public func teamsAddOrUpdateRepoPermissionsLegacy(
+        path: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Path,
+        headers: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Headers = .init(),
+        body: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Body? = nil
+    ) async throws -> Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Output {
+        try await teamsAddOrUpdateRepoPermissionsLegacy(Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input(
             path: path,
             headers: headers,
             body: body
@@ -1927,8 +1927,8 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/delete(teams/remove-repo-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_remove_hyphen_repo_hyphen_legacy(path: Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Input.Path) async throws -> Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Output {
-        try await teams_sol_remove_hyphen_repo_hyphen_legacy(Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Input(path: path))
+    public func teamsRemoveRepoLegacy(path: Operations.TeamsRemoveRepoLegacy.Input.Path) async throws -> Operations.TeamsRemoveRepoLegacy.Output {
+        try await teamsRemoveRepoLegacy(Operations.TeamsRemoveRepoLegacy.Input(path: path))
     }
     /// List child teams (Legacy)
     ///
@@ -1938,12 +1938,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /teams/{team_id}/teams`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)`.
     @available(*, deprecated)
-    public func teams_sol_list_hyphen_child_hyphen_legacy(
-        path: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Path,
-        query: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output {
-        try await teams_sol_list_hyphen_child_hyphen_legacy(Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input(
+    public func teamsListChildLegacy(
+        path: Operations.TeamsListChildLegacy.Input.Path,
+        query: Operations.TeamsListChildLegacy.Input.Query = .init(),
+        headers: Operations.TeamsListChildLegacy.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListChildLegacy.Output {
+        try await teamsListChildLegacy(Operations.TeamsListChildLegacy.Input(
             path: path,
             query: query,
             headers: headers
@@ -1960,11 +1960,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/teams`.
     /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)`.
-    public func teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func teamsListForAuthenticatedUser(
+        query: Operations.TeamsListForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.TeamsListForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.TeamsListForAuthenticatedUser.Output {
+        try await teamsListForAuthenticatedUser(Operations.TeamsListForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -1973,6 +1973,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1988,7 +1997,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -1998,171 +2007,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -2170,30 +2179,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -2232,9 +2241,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -2249,7 +2258,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -2268,34 +2277,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -2305,142 +2314,142 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// License Simple
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-license-simple`.
-        public struct nullable_hyphen_license_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableLicenseSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/name`.
@@ -2448,48 +2457,48 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/spdx_id`.
-            public var spdx_id: Swift.String?
+            public var spdxId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `nullable_hyphen_license_hyphen_simple`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `NullableLicenseSimple`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
-            ///   - spdx_id:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - spdxId:
+            ///   - nodeId:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String? = nil,
-                spdx_id: Swift.String? = nil,
-                node_id: Swift.String,
-                html_url: Swift.String? = nil
+                spdxId: Swift.String? = nil,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
-                self.spdx_id = spdx_id
-                self.node_id = node_id
-                self.html_url = html_url
+                self.spdxId = spdxId
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
-                case spdx_id
-                case node_id
-                case html_url
+                case spdxId = "spdx_id"
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
             }
         }
         /// Code Of Conduct
         ///
         /// - Remark: Generated from `#/components/schemas/code-of-conduct`.
-        public struct code_hyphen_of_hyphen_conduct: Codable, Hashable, Sendable {
+        public struct CodeOfConduct: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/name`.
@@ -2499,42 +2508,42 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/body`.
             public var body: Swift.String?
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `code_hyphen_of_hyphen_conduct`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `CodeOfConduct`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
             ///   - body:
-            ///   - html_url:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String,
                 body: Swift.String? = nil,
-                html_url: Swift.String? = nil
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
                 self.body = body
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
                 case body
-                case html_url
+                case htmlUrl = "html_url"
             }
         }
         /// - Remark: Generated from `#/components/schemas/reaction-rollup`.
-        public struct reaction_hyphen_rollup: Codable, Hashable, Sendable {
+        public struct ReactionRollup: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/total_count`.
-            public var total_count: Swift.Int
+            public var totalCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/+1`.
             public var _plus_1: Swift.Int
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/-1`.
@@ -2551,11 +2560,11 @@ public enum Components {
             public var eyes: Swift.Int
             /// - Remark: Generated from `#/components/schemas/reaction-rollup/rocket`.
             public var rocket: Swift.Int
-            /// Creates a new `reaction_hyphen_rollup`.
+            /// Creates a new `ReactionRollup`.
             ///
             /// - Parameters:
             ///   - url:
-            ///   - total_count:
+            ///   - totalCount:
             ///   - _plus_1:
             ///   - _hyphen_1:
             ///   - laugh:
@@ -2566,7 +2575,7 @@ public enum Components {
             ///   - rocket:
             public init(
                 url: Swift.String,
-                total_count: Swift.Int,
+                totalCount: Swift.Int,
                 _plus_1: Swift.Int,
                 _hyphen_1: Swift.Int,
                 laugh: Swift.Int,
@@ -2577,7 +2586,7 @@ public enum Components {
                 rocket: Swift.Int
             ) {
                 self.url = url
-                self.total_count = total_count
+                self.totalCount = totalCount
                 self._plus_1 = _plus_1
                 self._hyphen_1 = _hyphen_1
                 self.laugh = laugh
@@ -2589,7 +2598,7 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case total_count
+                case totalCount = "total_count"
                 case _plus_1 = "+1"
                 case _hyphen_1 = "-1"
                 case laugh
@@ -2601,21 +2610,21 @@ public enum Components {
             }
         }
         /// - Remark: Generated from `#/components/schemas/security-and-analysis`.
-        public struct security_hyphen_and_hyphen_analysis: Codable, Hashable, Sendable {
+        public struct SecurityAndAnalysis: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public struct advanced_securityPayload: Codable, Hashable, Sendable {
+            public struct AdvancedSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload?
-                /// Creates a new `advanced_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload?
+                /// Creates a new `AdvancedSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2623,21 +2632,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            public var advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public struct code_securityPayload: Codable, Hashable, Sendable {
+            public struct CodeSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
-                /// Creates a new `code_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload?
+                /// Creates a new `CodeSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2645,27 +2654,27 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
+            public var codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public struct dependabot_security_updatesPayload: Codable, Hashable, Sendable {
+            public struct DependabotSecurityUpdatesPayload: Codable, Hashable, Sendable {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload?
-                /// Creates a new `dependabot_security_updatesPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload?
+                /// Creates a new `DependabotSecurityUpdatesPayload`.
                 ///
                 /// - Parameters:
                 ///   - status: The enablement status of Dependabot security updates for the repository.
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2675,21 +2684,21 @@ public enum Components {
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public var dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload?
+            public var dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public struct secret_scanningPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload?
-                /// Creates a new `secret_scanningPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload?
+                /// Creates a new `SecretScanningPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2697,21 +2706,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public var secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload?
+            public var secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPushProtectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_push_protectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningPushProtectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2719,21 +2728,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public var secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload?
+            public var secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningNonProviderPatternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload?
-                /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload?
+                /// Creates a new `SecretScanningNonProviderPatternsPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2741,21 +2750,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            public var secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningAiDetectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningAiDetectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2763,62 +2772,62 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
-            /// Creates a new `security_hyphen_and_hyphen_analysis`.
+            public var secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload?
+            /// Creates a new `SecurityAndAnalysis`.
             ///
             /// - Parameters:
-            ///   - advanced_security:
-            ///   - code_security:
-            ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
-            ///   - secret_scanning:
-            ///   - secret_scanning_push_protection:
-            ///   - secret_scanning_non_provider_patterns:
-            ///   - secret_scanning_ai_detection:
+            ///   - advancedSecurity:
+            ///   - codeSecurity:
+            ///   - dependabotSecurityUpdates: Enable or disable Dependabot security updates for the repository.
+            ///   - secretScanning:
+            ///   - secretScanningPushProtection:
+            ///   - secretScanningNonProviderPatterns:
+            ///   - secretScanningAiDetection:
             public init(
-                advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
-                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
-                dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
-                secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
-                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
-                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
+                advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload? = nil,
+                codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload? = nil,
+                dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload? = nil,
+                secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload? = nil,
+                secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload? = nil,
+                secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload? = nil,
+                secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload? = nil
             ) {
-                self.advanced_security = advanced_security
-                self.code_security = code_security
-                self.dependabot_security_updates = dependabot_security_updates
-                self.secret_scanning = secret_scanning
-                self.secret_scanning_push_protection = secret_scanning_push_protection
-                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
-                self.secret_scanning_ai_detection = secret_scanning_ai_detection
+                self.advancedSecurity = advancedSecurity
+                self.codeSecurity = codeSecurity
+                self.dependabotSecurityUpdates = dependabotSecurityUpdates
+                self.secretScanning = secretScanning
+                self.secretScanningPushProtection = secretScanningPushProtection
+                self.secretScanningNonProviderPatterns = secretScanningNonProviderPatterns
+                self.secretScanningAiDetection = secretScanningAiDetection
             }
             public enum CodingKeys: String, CodingKey {
-                case advanced_security
-                case code_security
-                case dependabot_security_updates
-                case secret_scanning
-                case secret_scanning_push_protection
-                case secret_scanning_non_provider_patterns
-                case secret_scanning_ai_detection
+                case advancedSecurity = "advanced_security"
+                case codeSecurity = "code_security"
+                case dependabotSecurityUpdates = "dependabot_security_updates"
+                case secretScanning = "secret_scanning"
+                case secretScanningPushProtection = "secret_scanning_push_protection"
+                case secretScanningNonProviderPatterns = "secret_scanning_non_provider_patterns"
+                case secretScanningAiDetection = "secret_scanning_ai_detection"
             }
         }
         /// Minimal Repository
         ///
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
-        public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
+        public struct MinimalRepository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/minimal-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/minimal-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/fork`.
@@ -2826,121 +2835,121 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_url`.
-            public var git_url: Swift.String?
+            public var gitUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/ssh_url`.
-            public var ssh_url: Swift.String?
+            public var sshUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/clone_url`.
-            public var clone_url: Swift.String?
+            public var cloneUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/svn_url`.
-            public var svn_url: Swift.String?
+            public var svnUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks_count`.
-            public var forks_count: Swift.Int?
+            public var forksCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int?
+            public var stargazersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/watchers_count`.
-            public var watchers_count: Swift.Int?
+            public var watchersCount: Swift.Int?
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/minimal-repository/size`.
             public var size: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/default_branch`.
-            public var default_branch: Swift.String?
+            public var defaultBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/open_issues_count`.
-            public var open_issues_count: Swift.Int?
+            public var openIssuesCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/topics`.
             public var topics: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_issues`.
-            public var has_issues: Swift.Bool?
+            public var hasIssues: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_projects`.
-            public var has_projects: Swift.Bool?
+            public var hasProjects: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_wiki`.
-            public var has_wiki: Swift.Bool?
+            public var hasWiki: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_pages`.
-            public var has_pages: Swift.Bool?
+            public var hasPages: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_downloads`.
-            public var has_downloads: Swift.Bool?
+            public var hasDownloads: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/archived`.
             public var archived: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/disabled`.
@@ -2948,13 +2957,13 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/admin`.
                 public var admin: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/maintain`.
@@ -2965,7 +2974,7 @@ public enum Components {
                 public var triage: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/pull`.
                 public var pull: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -2995,447 +3004,447 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions`.
-            public var permissions: Components.Schemas.minimal_hyphen_repository.permissionsPayload?
+            public var permissions: Components.Schemas.MinimalRepository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/role_name`.
-            public var role_name: Swift.String?
+            public var roleName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
+            public var subscribersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/network_count`.
-            public var network_count: Swift.Int?
+            public var networkCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/code_of_conduct`.
-            public var code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct?
+            public var codeOfConduct: Components.Schemas.CodeOfConduct?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/license`.
-            public struct licensePayload: Codable, Hashable, Sendable {
+            public struct LicensePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/key`.
                 public var key: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/name`.
                 public var name: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/spdx_id`.
-                public var spdx_id: Swift.String?
+                public var spdxId: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/url`.
                 public var url: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/node_id`.
-                public var node_id: Swift.String?
-                /// Creates a new `licensePayload`.
+                public var nodeId: Swift.String?
+                /// Creates a new `LicensePayload`.
                 ///
                 /// - Parameters:
                 ///   - key:
                 ///   - name:
-                ///   - spdx_id:
+                ///   - spdxId:
                 ///   - url:
-                ///   - node_id:
+                ///   - nodeId:
                 public init(
                     key: Swift.String? = nil,
                     name: Swift.String? = nil,
-                    spdx_id: Swift.String? = nil,
+                    spdxId: Swift.String? = nil,
                     url: Swift.String? = nil,
-                    node_id: Swift.String? = nil
+                    nodeId: Swift.String? = nil
                 ) {
                     self.key = key
                     self.name = name
-                    self.spdx_id = spdx_id
+                    self.spdxId = spdxId
                     self.url = url
-                    self.node_id = node_id
+                    self.nodeId = nodeId
                 }
                 public enum CodingKeys: String, CodingKey {
                     case key
                     case name
-                    case spdx_id
+                    case spdxId = "spdx_id"
                     case url
-                    case node_id
+                    case nodeId = "node_id"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/minimal-repository/license`.
-            public var license: Components.Schemas.minimal_hyphen_repository.licensePayload?
+            public var license: Components.Schemas.MinimalRepository.LicensePayload?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks`.
             public var forks: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/open_issues`.
-            public var open_issues: Swift.Int?
+            public var openIssues: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/watchers`.
             public var watchers: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/security_and_analysis`.
-            public var security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis?
-            /// Creates a new `minimal_hyphen_repository`.
+            public var securityAndAnalysis: Components.Schemas.SecurityAndAnalysis?
+            /// Creates a new `MinimalRepository`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
-            ///   - full_name:
+            ///   - fullName:
             ///   - owner:
             ///   - _private:
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch:
-            ///   - open_issues_count:
-            ///   - is_template:
+            ///   - defaultBranch:
+            ///   - openIssuesCount:
+            ///   - isTemplate:
             ///   - topics:
-            ///   - has_issues:
-            ///   - has_projects:
-            ///   - has_wiki:
-            ///   - has_pages:
-            ///   - has_downloads:
-            ///   - has_discussions:
+            ///   - hasIssues:
+            ///   - hasProjects:
+            ///   - hasWiki:
+            ///   - hasPages:
+            ///   - hasDownloads:
+            ///   - hasDiscussions:
             ///   - archived:
             ///   - disabled:
             ///   - visibility:
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - permissions:
-            ///   - role_name:
-            ///   - temp_clone_token:
-            ///   - delete_branch_on_merge:
-            ///   - subscribers_count:
-            ///   - network_count:
-            ///   - code_of_conduct:
+            ///   - roleName:
+            ///   - tempCloneToken:
+            ///   - deleteBranchOnMerge:
+            ///   - subscribersCount:
+            ///   - networkCount:
+            ///   - codeOfConduct:
             ///   - license:
             ///   - forks:
-            ///   - open_issues:
+            ///   - openIssues:
             ///   - watchers:
-            ///   - allow_forking:
-            ///   - web_commit_signoff_required:
-            ///   - security_and_analysis:
+            ///   - allowForking:
+            ///   - webCommitSignoffRequired:
+            ///   - securityAndAnalysis:
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String? = nil,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String? = nil,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String? = nil,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String? = nil,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String? = nil,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String? = nil,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String? = nil,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String? = nil,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int? = nil,
-                stargazers_count: Swift.Int? = nil,
-                watchers_count: Swift.Int? = nil,
+                forksCount: Swift.Int? = nil,
+                stargazersCount: Swift.Int? = nil,
+                watchersCount: Swift.Int? = nil,
                 size: Swift.Int? = nil,
-                default_branch: Swift.String? = nil,
-                open_issues_count: Swift.Int? = nil,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String? = nil,
+                openIssuesCount: Swift.Int? = nil,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool? = nil,
-                has_projects: Swift.Bool? = nil,
-                has_wiki: Swift.Bool? = nil,
-                has_pages: Swift.Bool? = nil,
-                has_downloads: Swift.Bool? = nil,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool? = nil,
+                hasProjects: Swift.Bool? = nil,
+                hasWiki: Swift.Bool? = nil,
+                hasPages: Swift.Bool? = nil,
+                hasDownloads: Swift.Bool? = nil,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool? = nil,
                 disabled: Swift.Bool? = nil,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                permissions: Components.Schemas.minimal_hyphen_repository.permissionsPayload? = nil,
-                role_name: Swift.String? = nil,
-                temp_clone_token: Swift.String? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
-                code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct? = nil,
-                license: Components.Schemas.minimal_hyphen_repository.licensePayload? = nil,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                permissions: Components.Schemas.MinimalRepository.PermissionsPayload? = nil,
+                roleName: Swift.String? = nil,
+                tempCloneToken: Swift.String? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                subscribersCount: Swift.Int? = nil,
+                networkCount: Swift.Int? = nil,
+                codeOfConduct: Components.Schemas.CodeOfConduct? = nil,
+                license: Components.Schemas.MinimalRepository.LicensePayload? = nil,
                 forks: Swift.Int? = nil,
-                open_issues: Swift.Int? = nil,
+                openIssues: Swift.Int? = nil,
                 watchers: Swift.Int? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                securityAndAnalysis: Components.Schemas.SecurityAndAnalysis? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.permissions = permissions
-                self.role_name = role_name
-                self.temp_clone_token = temp_clone_token
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
-                self.code_of_conduct = code_of_conduct
+                self.roleName = roleName
+                self.tempCloneToken = tempCloneToken
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.subscribersCount = subscribersCount
+                self.networkCount = networkCount
+                self.codeOfConduct = codeOfConduct
                 self.license = license
                 self.forks = forks
-                self.open_issues = open_issues
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.security_and_analysis = security_and_analysis
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.securityAndAnalysis = securityAndAnalysis
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case permissions
-                case role_name
-                case temp_clone_token
-                case delete_branch_on_merge
-                case subscribers_count
-                case network_count
-                case code_of_conduct
+                case roleName = "role_name"
+                case tempCloneToken = "temp_clone_token"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case subscribersCount = "subscribers_count"
+                case networkCount = "network_count"
+                case codeOfConduct = "code_of_conduct"
                 case license
                 case forks
-                case open_issues
+                case openIssues = "open_issues"
                 case watchers
-                case allow_forking
-                case web_commit_signoff_required
-                case security_and_analysis
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case securityAndAnalysis = "security_and_analysis"
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-team-simple`.
-        public struct nullable_hyphen_team_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableTeamSimple: Codable, Hashable, Sendable {
             /// Unique identifier of the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// URL for the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// Name of the team
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/name`.
@@ -3455,86 +3464,86 @@ public enum Components {
             /// The notification setting the team has set
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/slug`.
             public var slug: Swift.String
             /// Distinguished Name (DN) that team maps to within LDAP environment
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-team-simple/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `nullable_hyphen_team_hyphen_simple`.
+            public var ldapDn: Swift.String?
+            /// Creates a new `NullableTeamSimple`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the team
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url: URL for the team
-            ///   - members_url:
+            ///   - membersUrl:
             ///   - name: Name of the team
             ///   - description: Description of the team
             ///   - permission: Permission that the team will have for its repositories
             ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
-            ///   - html_url:
-            ///   - repositories_url:
+            ///   - notificationSetting: The notification setting the team has set
+            ///   - htmlUrl:
+            ///   - repositoriesUrl:
             ///   - slug:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            ///   - ldapDn: Distinguished Name (DN) that team maps to within LDAP environment
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                members_url: Swift.String,
+                membersUrl: Swift.String,
                 name: Swift.String,
                 description: Swift.String? = nil,
                 permission: Swift.String,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
-                html_url: Swift.String,
-                repositories_url: Swift.String,
+                notificationSetting: Swift.String? = nil,
+                htmlUrl: Swift.String,
+                repositoriesUrl: Swift.String,
                 slug: Swift.String,
-                ldap_dn: Swift.String? = nil
+                ldapDn: Swift.String? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
-                self.members_url = members_url
+                self.membersUrl = membersUrl
                 self.name = name
                 self.description = description
                 self.permission = permission
                 self.privacy = privacy
-                self.notification_setting = notification_setting
-                self.html_url = html_url
-                self.repositories_url = repositories_url
+                self.notificationSetting = notificationSetting
+                self.htmlUrl = htmlUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.slug = slug
-                self.ldap_dn = ldap_dn
+                self.ldapDn = ldapDn
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case url
-                case members_url
+                case membersUrl = "members_url"
                 case name
                 case description
                 case permission
                 case privacy
-                case notification_setting
-                case html_url
-                case repositories_url
+                case notificationSetting = "notification_setting"
+                case htmlUrl = "html_url"
+                case repositoriesUrl = "repositories_url"
                 case slug
-                case ldap_dn
+                case ldapDn = "ldap_dn"
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/team`.
-        public struct team: Codable, Hashable, Sendable {
+        public struct Team: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/slug`.
@@ -3544,11 +3553,11 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team/privacy`.
             public var privacy: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team/notification_setting`.
-            public var notification_setting: Swift.String?
+            public var notificationSetting: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team/permission`.
             public var permission: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/team/permissions/pull`.
                 public var pull: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team/permissions/triage`.
@@ -3559,7 +3568,7 @@ public enum Components {
                 public var maintain: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team/permissions/admin`.
                 public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - pull:
@@ -3589,86 +3598,86 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/team/permissions`.
-            public var permissions: Components.Schemas.team.permissionsPayload?
+            public var permissions: Components.Schemas.Team.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/team/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
-            /// Creates a new `team`.
+            public var parent: Components.Schemas.NullableTeamSimple?
+            /// Creates a new `Team`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
             ///   - slug:
             ///   - description:
             ///   - privacy:
-            ///   - notification_setting:
+            ///   - notificationSetting:
             ///   - permission:
             ///   - permissions:
             ///   - url:
-            ///   - html_url:
-            ///   - members_url:
-            ///   - repositories_url:
+            ///   - htmlUrl:
+            ///   - membersUrl:
+            ///   - repositoriesUrl:
             ///   - parent:
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
                 slug: Swift.String,
                 description: Swift.String? = nil,
                 privacy: Swift.String? = nil,
-                notification_setting: Swift.String? = nil,
+                notificationSetting: Swift.String? = nil,
                 permission: Swift.String,
-                permissions: Components.Schemas.team.permissionsPayload? = nil,
+                permissions: Components.Schemas.Team.PermissionsPayload? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil
+                htmlUrl: Swift.String,
+                membersUrl: Swift.String,
+                repositoriesUrl: Swift.String,
+                parent: Components.Schemas.NullableTeamSimple? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
                 self.slug = slug
                 self.description = description
                 self.privacy = privacy
-                self.notification_setting = notification_setting
+                self.notificationSetting = notificationSetting
                 self.permission = permission
                 self.permissions = permissions
                 self.url = url
-                self.html_url = html_url
-                self.members_url = members_url
-                self.repositories_url = repositories_url
+                self.htmlUrl = htmlUrl
+                self.membersUrl = membersUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.parent = parent
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
                 case slug
                 case description
                 case privacy
-                case notification_setting
+                case notificationSetting = "notification_setting"
                 case permission
                 case permissions
                 case url
-                case html_url
-                case members_url
-                case repositories_url
+                case htmlUrl = "html_url"
+                case membersUrl = "members_url"
+                case repositoriesUrl = "repositories_url"
                 case parent
             }
         }
         /// Organization Invitation
         ///
         /// - Remark: Generated from `#/components/schemas/organization-invitation`.
-        public struct organization_hyphen_invitation: Codable, Hashable, Sendable {
+        public struct OrganizationInvitation: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/organization-invitation/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/organization-invitation/login`.
@@ -3678,104 +3687,104 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/organization-invitation/role`.
             public var role: Swift.String
             /// - Remark: Generated from `#/components/schemas/organization-invitation/created_at`.
-            public var created_at: Swift.String
+            public var createdAt: Swift.String
             /// - Remark: Generated from `#/components/schemas/organization-invitation/failed_at`.
-            public var failed_at: Swift.String?
+            public var failedAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/organization-invitation/failed_reason`.
-            public var failed_reason: Swift.String?
+            public var failedReason: Swift.String?
             /// - Remark: Generated from `#/components/schemas/organization-invitation/inviter`.
-            public var inviter: Components.Schemas.simple_hyphen_user
+            public var inviter: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/organization-invitation/team_count`.
-            public var team_count: Swift.Int
+            public var teamCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/organization-invitation/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/organization-invitation/invitation_teams_url`.
-            public var invitation_teams_url: Swift.String
+            public var invitationTeamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/organization-invitation/invitation_source`.
-            public var invitation_source: Swift.String?
-            /// Creates a new `organization_hyphen_invitation`.
+            public var invitationSource: Swift.String?
+            /// Creates a new `OrganizationInvitation`.
             ///
             /// - Parameters:
             ///   - id:
             ///   - login:
             ///   - email:
             ///   - role:
-            ///   - created_at:
-            ///   - failed_at:
-            ///   - failed_reason:
+            ///   - createdAt:
+            ///   - failedAt:
+            ///   - failedReason:
             ///   - inviter:
-            ///   - team_count:
-            ///   - node_id:
-            ///   - invitation_teams_url:
-            ///   - invitation_source:
+            ///   - teamCount:
+            ///   - nodeId:
+            ///   - invitationTeamsUrl:
+            ///   - invitationSource:
             public init(
                 id: Swift.Int64,
                 login: Swift.String? = nil,
                 email: Swift.String? = nil,
                 role: Swift.String,
-                created_at: Swift.String,
-                failed_at: Swift.String? = nil,
-                failed_reason: Swift.String? = nil,
-                inviter: Components.Schemas.simple_hyphen_user,
-                team_count: Swift.Int,
-                node_id: Swift.String,
-                invitation_teams_url: Swift.String,
-                invitation_source: Swift.String? = nil
+                createdAt: Swift.String,
+                failedAt: Swift.String? = nil,
+                failedReason: Swift.String? = nil,
+                inviter: Components.Schemas.SimpleUser,
+                teamCount: Swift.Int,
+                nodeId: Swift.String,
+                invitationTeamsUrl: Swift.String,
+                invitationSource: Swift.String? = nil
             ) {
                 self.id = id
                 self.login = login
                 self.email = email
                 self.role = role
-                self.created_at = created_at
-                self.failed_at = failed_at
-                self.failed_reason = failed_reason
+                self.createdAt = createdAt
+                self.failedAt = failedAt
+                self.failedReason = failedReason
                 self.inviter = inviter
-                self.team_count = team_count
-                self.node_id = node_id
-                self.invitation_teams_url = invitation_teams_url
-                self.invitation_source = invitation_source
+                self.teamCount = teamCount
+                self.nodeId = nodeId
+                self.invitationTeamsUrl = invitationTeamsUrl
+                self.invitationSource = invitationSource
             }
             public enum CodingKeys: String, CodingKey {
                 case id
                 case login
                 case email
                 case role
-                case created_at
-                case failed_at
-                case failed_reason
+                case createdAt = "created_at"
+                case failedAt = "failed_at"
+                case failedReason = "failed_reason"
                 case inviter
-                case team_count
-                case node_id
-                case invitation_teams_url
-                case invitation_source
+                case teamCount = "team_count"
+                case nodeId = "node_id"
+                case invitationTeamsUrl = "invitation_teams_url"
+                case invitationSource = "invitation_source"
             }
         }
         /// Team Organization
         ///
         /// - Remark: Generated from `#/components/schemas/team-organization`.
-        public struct team_hyphen_organization: Codable, Hashable, Sendable {
+        public struct TeamOrganization: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team-organization/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-organization/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/public_members_url`.
-            public var public_members_url: Swift.String
+            public var publicMembersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-organization/name`.
@@ -3789,331 +3798,331 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team-organization/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-organization/twitter_username`.
-            public var twitter_username: Swift.String?
+            public var twitterUsername: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-organization/is_verified`.
-            public var is_verified: Swift.Bool?
+            public var isVerified: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/has_organization_projects`.
-            public var has_organization_projects: Swift.Bool
+            public var hasOrganizationProjects: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/team-organization/has_repository_projects`.
-            public var has_repository_projects: Swift.Bool
+            public var hasRepositoryProjects: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/team-organization/public_repos`.
-            public var public_repos: Swift.Int
+            public var publicRepos: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-organization/public_gists`.
-            public var public_gists: Swift.Int
+            public var publicGists: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-organization/followers`.
             public var followers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-organization/following`.
             public var following: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-organization/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/team-organization/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-organization/total_private_repos`.
-            public var total_private_repos: Swift.Int?
+            public var totalPrivateRepos: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/team-organization/owned_private_repos`.
-            public var owned_private_repos: Swift.Int?
+            public var ownedPrivateRepos: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/team-organization/private_gists`.
-            public var private_gists: Swift.Int?
+            public var privateGists: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/team-organization/disk_usage`.
-            public var disk_usage: Swift.Int?
+            public var diskUsage: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/team-organization/collaborators`.
             public var collaborators: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/team-organization/billing_email`.
-            public var billing_email: Swift.String?
+            public var billingEmail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-organization/plan`.
-            public struct planPayload: Codable, Hashable, Sendable {
+            public struct PlanPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/team-organization/plan/name`.
                 public var name: Swift.String
                 /// - Remark: Generated from `#/components/schemas/team-organization/plan/space`.
                 public var space: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/team-organization/plan/private_repos`.
-                public var private_repos: Swift.Int
+                public var privateRepos: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/team-organization/plan/filled_seats`.
-                public var filled_seats: Swift.Int?
+                public var filledSeats: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/team-organization/plan/seats`.
                 public var seats: Swift.Int?
-                /// Creates a new `planPayload`.
+                /// Creates a new `PlanPayload`.
                 ///
                 /// - Parameters:
                 ///   - name:
                 ///   - space:
-                ///   - private_repos:
-                ///   - filled_seats:
+                ///   - privateRepos:
+                ///   - filledSeats:
                 ///   - seats:
                 public init(
                     name: Swift.String,
                     space: Swift.Int,
-                    private_repos: Swift.Int,
-                    filled_seats: Swift.Int? = nil,
+                    privateRepos: Swift.Int,
+                    filledSeats: Swift.Int? = nil,
                     seats: Swift.Int? = nil
                 ) {
                     self.name = name
                     self.space = space
-                    self.private_repos = private_repos
-                    self.filled_seats = filled_seats
+                    self.privateRepos = privateRepos
+                    self.filledSeats = filledSeats
                     self.seats = seats
                 }
                 public enum CodingKeys: String, CodingKey {
                     case name
                     case space
-                    case private_repos
-                    case filled_seats
+                    case privateRepos = "private_repos"
+                    case filledSeats = "filled_seats"
                     case seats
                 }
             }
             /// - Remark: Generated from `#/components/schemas/team-organization/plan`.
-            public var plan: Components.Schemas.team_hyphen_organization.planPayload?
+            public var plan: Components.Schemas.TeamOrganization.PlanPayload?
             /// - Remark: Generated from `#/components/schemas/team-organization/default_repository_permission`.
-            public var default_repository_permission: Swift.String?
+            public var defaultRepositoryPermission: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_can_create_repositories`.
-            public var members_can_create_repositories: Swift.Bool?
+            public var membersCanCreateRepositories: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/two_factor_requirement_enabled`.
-            public var two_factor_requirement_enabled: Swift.Bool?
+            public var twoFactorRequirementEnabled: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_allowed_repository_creation_type`.
-            public var members_allowed_repository_creation_type: Swift.String?
+            public var membersAllowedRepositoryCreationType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_can_create_public_repositories`.
-            public var members_can_create_public_repositories: Swift.Bool?
+            public var membersCanCreatePublicRepositories: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_can_create_private_repositories`.
-            public var members_can_create_private_repositories: Swift.Bool?
+            public var membersCanCreatePrivateRepositories: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_can_create_internal_repositories`.
-            public var members_can_create_internal_repositories: Swift.Bool?
+            public var membersCanCreateInternalRepositories: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_can_create_pages`.
-            public var members_can_create_pages: Swift.Bool?
+            public var membersCanCreatePages: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_can_create_public_pages`.
-            public var members_can_create_public_pages: Swift.Bool?
+            public var membersCanCreatePublicPages: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_can_create_private_pages`.
-            public var members_can_create_private_pages: Swift.Bool?
+            public var membersCanCreatePrivatePages: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/members_can_fork_private_repositories`.
-            public var members_can_fork_private_repositories: Swift.Bool?
+            public var membersCanForkPrivateRepositories: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-organization/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/team-organization/archived_at`.
-            public var archived_at: Foundation.Date?
-            /// Creates a new `team_hyphen_organization`.
+            public var archivedAt: Foundation.Date?
+            /// Creates a new `TeamOrganization`.
             ///
             /// - Parameters:
             ///   - login:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - hooks_url:
-            ///   - issues_url:
-            ///   - members_url:
-            ///   - public_members_url:
-            ///   - avatar_url:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - hooksUrl:
+            ///   - issuesUrl:
+            ///   - membersUrl:
+            ///   - publicMembersUrl:
+            ///   - avatarUrl:
             ///   - description:
             ///   - name:
             ///   - company:
             ///   - blog:
             ///   - location:
             ///   - email:
-            ///   - twitter_username:
-            ///   - is_verified:
-            ///   - has_organization_projects:
-            ///   - has_repository_projects:
-            ///   - public_repos:
-            ///   - public_gists:
+            ///   - twitterUsername:
+            ///   - isVerified:
+            ///   - hasOrganizationProjects:
+            ///   - hasRepositoryProjects:
+            ///   - publicRepos:
+            ///   - publicGists:
             ///   - followers:
             ///   - following:
-            ///   - html_url:
-            ///   - created_at:
+            ///   - htmlUrl:
+            ///   - createdAt:
             ///   - _type:
-            ///   - total_private_repos:
-            ///   - owned_private_repos:
-            ///   - private_gists:
-            ///   - disk_usage:
+            ///   - totalPrivateRepos:
+            ///   - ownedPrivateRepos:
+            ///   - privateGists:
+            ///   - diskUsage:
             ///   - collaborators:
-            ///   - billing_email:
+            ///   - billingEmail:
             ///   - plan:
-            ///   - default_repository_permission:
-            ///   - members_can_create_repositories:
-            ///   - two_factor_requirement_enabled:
-            ///   - members_allowed_repository_creation_type:
-            ///   - members_can_create_public_repositories:
-            ///   - members_can_create_private_repositories:
-            ///   - members_can_create_internal_repositories:
-            ///   - members_can_create_pages:
-            ///   - members_can_create_public_pages:
-            ///   - members_can_create_private_pages:
-            ///   - members_can_fork_private_repositories:
-            ///   - web_commit_signoff_required:
-            ///   - updated_at:
-            ///   - archived_at:
+            ///   - defaultRepositoryPermission:
+            ///   - membersCanCreateRepositories:
+            ///   - twoFactorRequirementEnabled:
+            ///   - membersAllowedRepositoryCreationType:
+            ///   - membersCanCreatePublicRepositories:
+            ///   - membersCanCreatePrivateRepositories:
+            ///   - membersCanCreateInternalRepositories:
+            ///   - membersCanCreatePages:
+            ///   - membersCanCreatePublicPages:
+            ///   - membersCanCreatePrivatePages:
+            ///   - membersCanForkPrivateRepositories:
+            ///   - webCommitSignoffRequired:
+            ///   - updatedAt:
+            ///   - archivedAt:
             public init(
                 login: Swift.String,
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                hooks_url: Swift.String,
-                issues_url: Swift.String,
-                members_url: Swift.String,
-                public_members_url: Swift.String,
-                avatar_url: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                hooksUrl: Swift.String,
+                issuesUrl: Swift.String,
+                membersUrl: Swift.String,
+                publicMembersUrl: Swift.String,
+                avatarUrl: Swift.String,
                 description: Swift.String? = nil,
                 name: Swift.String? = nil,
                 company: Swift.String? = nil,
                 blog: Swift.String? = nil,
                 location: Swift.String? = nil,
                 email: Swift.String? = nil,
-                twitter_username: Swift.String? = nil,
-                is_verified: Swift.Bool? = nil,
-                has_organization_projects: Swift.Bool,
-                has_repository_projects: Swift.Bool,
-                public_repos: Swift.Int,
-                public_gists: Swift.Int,
+                twitterUsername: Swift.String? = nil,
+                isVerified: Swift.Bool? = nil,
+                hasOrganizationProjects: Swift.Bool,
+                hasRepositoryProjects: Swift.Bool,
+                publicRepos: Swift.Int,
+                publicGists: Swift.Int,
                 followers: Swift.Int,
                 following: Swift.Int,
-                html_url: Swift.String,
-                created_at: Foundation.Date,
+                htmlUrl: Swift.String,
+                createdAt: Foundation.Date,
                 _type: Swift.String,
-                total_private_repos: Swift.Int? = nil,
-                owned_private_repos: Swift.Int? = nil,
-                private_gists: Swift.Int? = nil,
-                disk_usage: Swift.Int? = nil,
+                totalPrivateRepos: Swift.Int? = nil,
+                ownedPrivateRepos: Swift.Int? = nil,
+                privateGists: Swift.Int? = nil,
+                diskUsage: Swift.Int? = nil,
                 collaborators: Swift.Int? = nil,
-                billing_email: Swift.String? = nil,
-                plan: Components.Schemas.team_hyphen_organization.planPayload? = nil,
-                default_repository_permission: Swift.String? = nil,
-                members_can_create_repositories: Swift.Bool? = nil,
-                two_factor_requirement_enabled: Swift.Bool? = nil,
-                members_allowed_repository_creation_type: Swift.String? = nil,
-                members_can_create_public_repositories: Swift.Bool? = nil,
-                members_can_create_private_repositories: Swift.Bool? = nil,
-                members_can_create_internal_repositories: Swift.Bool? = nil,
-                members_can_create_pages: Swift.Bool? = nil,
-                members_can_create_public_pages: Swift.Bool? = nil,
-                members_can_create_private_pages: Swift.Bool? = nil,
-                members_can_fork_private_repositories: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                updated_at: Foundation.Date,
-                archived_at: Foundation.Date? = nil
+                billingEmail: Swift.String? = nil,
+                plan: Components.Schemas.TeamOrganization.PlanPayload? = nil,
+                defaultRepositoryPermission: Swift.String? = nil,
+                membersCanCreateRepositories: Swift.Bool? = nil,
+                twoFactorRequirementEnabled: Swift.Bool? = nil,
+                membersAllowedRepositoryCreationType: Swift.String? = nil,
+                membersCanCreatePublicRepositories: Swift.Bool? = nil,
+                membersCanCreatePrivateRepositories: Swift.Bool? = nil,
+                membersCanCreateInternalRepositories: Swift.Bool? = nil,
+                membersCanCreatePages: Swift.Bool? = nil,
+                membersCanCreatePublicPages: Swift.Bool? = nil,
+                membersCanCreatePrivatePages: Swift.Bool? = nil,
+                membersCanForkPrivateRepositories: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                updatedAt: Foundation.Date,
+                archivedAt: Foundation.Date? = nil
             ) {
                 self.login = login
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.hooks_url = hooks_url
-                self.issues_url = issues_url
-                self.members_url = members_url
-                self.public_members_url = public_members_url
-                self.avatar_url = avatar_url
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.hooksUrl = hooksUrl
+                self.issuesUrl = issuesUrl
+                self.membersUrl = membersUrl
+                self.publicMembersUrl = publicMembersUrl
+                self.avatarUrl = avatarUrl
                 self.description = description
                 self.name = name
                 self.company = company
                 self.blog = blog
                 self.location = location
                 self.email = email
-                self.twitter_username = twitter_username
-                self.is_verified = is_verified
-                self.has_organization_projects = has_organization_projects
-                self.has_repository_projects = has_repository_projects
-                self.public_repos = public_repos
-                self.public_gists = public_gists
+                self.twitterUsername = twitterUsername
+                self.isVerified = isVerified
+                self.hasOrganizationProjects = hasOrganizationProjects
+                self.hasRepositoryProjects = hasRepositoryProjects
+                self.publicRepos = publicRepos
+                self.publicGists = publicGists
                 self.followers = followers
                 self.following = following
-                self.html_url = html_url
-                self.created_at = created_at
+                self.htmlUrl = htmlUrl
+                self.createdAt = createdAt
                 self._type = _type
-                self.total_private_repos = total_private_repos
-                self.owned_private_repos = owned_private_repos
-                self.private_gists = private_gists
-                self.disk_usage = disk_usage
+                self.totalPrivateRepos = totalPrivateRepos
+                self.ownedPrivateRepos = ownedPrivateRepos
+                self.privateGists = privateGists
+                self.diskUsage = diskUsage
                 self.collaborators = collaborators
-                self.billing_email = billing_email
+                self.billingEmail = billingEmail
                 self.plan = plan
-                self.default_repository_permission = default_repository_permission
-                self.members_can_create_repositories = members_can_create_repositories
-                self.two_factor_requirement_enabled = two_factor_requirement_enabled
-                self.members_allowed_repository_creation_type = members_allowed_repository_creation_type
-                self.members_can_create_public_repositories = members_can_create_public_repositories
-                self.members_can_create_private_repositories = members_can_create_private_repositories
-                self.members_can_create_internal_repositories = members_can_create_internal_repositories
-                self.members_can_create_pages = members_can_create_pages
-                self.members_can_create_public_pages = members_can_create_public_pages
-                self.members_can_create_private_pages = members_can_create_private_pages
-                self.members_can_fork_private_repositories = members_can_fork_private_repositories
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.updated_at = updated_at
-                self.archived_at = archived_at
+                self.defaultRepositoryPermission = defaultRepositoryPermission
+                self.membersCanCreateRepositories = membersCanCreateRepositories
+                self.twoFactorRequirementEnabled = twoFactorRequirementEnabled
+                self.membersAllowedRepositoryCreationType = membersAllowedRepositoryCreationType
+                self.membersCanCreatePublicRepositories = membersCanCreatePublicRepositories
+                self.membersCanCreatePrivateRepositories = membersCanCreatePrivateRepositories
+                self.membersCanCreateInternalRepositories = membersCanCreateInternalRepositories
+                self.membersCanCreatePages = membersCanCreatePages
+                self.membersCanCreatePublicPages = membersCanCreatePublicPages
+                self.membersCanCreatePrivatePages = membersCanCreatePrivatePages
+                self.membersCanForkPrivateRepositories = membersCanForkPrivateRepositories
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.updatedAt = updatedAt
+                self.archivedAt = archivedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case login
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case url
-                case repos_url
-                case events_url
-                case hooks_url
-                case issues_url
-                case members_url
-                case public_members_url
-                case avatar_url
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case hooksUrl = "hooks_url"
+                case issuesUrl = "issues_url"
+                case membersUrl = "members_url"
+                case publicMembersUrl = "public_members_url"
+                case avatarUrl = "avatar_url"
                 case description
                 case name
                 case company
                 case blog
                 case location
                 case email
-                case twitter_username
-                case is_verified
-                case has_organization_projects
-                case has_repository_projects
-                case public_repos
-                case public_gists
+                case twitterUsername = "twitter_username"
+                case isVerified = "is_verified"
+                case hasOrganizationProjects = "has_organization_projects"
+                case hasRepositoryProjects = "has_repository_projects"
+                case publicRepos = "public_repos"
+                case publicGists = "public_gists"
                 case followers
                 case following
-                case html_url
-                case created_at
+                case htmlUrl = "html_url"
+                case createdAt = "created_at"
                 case _type = "type"
-                case total_private_repos
-                case owned_private_repos
-                case private_gists
-                case disk_usage
+                case totalPrivateRepos = "total_private_repos"
+                case ownedPrivateRepos = "owned_private_repos"
+                case privateGists = "private_gists"
+                case diskUsage = "disk_usage"
                 case collaborators
-                case billing_email
+                case billingEmail = "billing_email"
                 case plan
-                case default_repository_permission
-                case members_can_create_repositories
-                case two_factor_requirement_enabled
-                case members_allowed_repository_creation_type
-                case members_can_create_public_repositories
-                case members_can_create_private_repositories
-                case members_can_create_internal_repositories
-                case members_can_create_pages
-                case members_can_create_public_pages
-                case members_can_create_private_pages
-                case members_can_fork_private_repositories
-                case web_commit_signoff_required
-                case updated_at
-                case archived_at
+                case defaultRepositoryPermission = "default_repository_permission"
+                case membersCanCreateRepositories = "members_can_create_repositories"
+                case twoFactorRequirementEnabled = "two_factor_requirement_enabled"
+                case membersAllowedRepositoryCreationType = "members_allowed_repository_creation_type"
+                case membersCanCreatePublicRepositories = "members_can_create_public_repositories"
+                case membersCanCreatePrivateRepositories = "members_can_create_private_repositories"
+                case membersCanCreateInternalRepositories = "members_can_create_internal_repositories"
+                case membersCanCreatePages = "members_can_create_pages"
+                case membersCanCreatePublicPages = "members_can_create_public_pages"
+                case membersCanCreatePrivatePages = "members_can_create_private_pages"
+                case membersCanForkPrivateRepositories = "members_can_fork_private_repositories"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case updatedAt = "updated_at"
+                case archivedAt = "archived_at"
             }
         }
         /// Groups of organization members that gives permissions on specified repositories.
         ///
         /// - Remark: Generated from `#/components/schemas/team-full`.
-        public struct team_hyphen_full: Codable, Hashable, Sendable {
+        public struct TeamFull: Codable, Hashable, Sendable {
             /// Unique identifier of the team
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-full/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// URL for the team
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-full/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// Name of the team
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/name`.
@@ -4125,162 +4134,162 @@ public enum Components {
             /// The level of privacy this team should have
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/privacy`.
-            @frozen public enum privacyPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum PrivacyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case closed = "closed"
                 case secret = "secret"
             }
             /// The level of privacy this team should have
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/privacy`.
-            public var privacy: Components.Schemas.team_hyphen_full.privacyPayload?
+            public var privacy: Components.Schemas.TeamFull.PrivacyPayload?
             /// The notification setting the team has set
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/notification_setting`.
-            @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable {
-                case notifications_enabled = "notifications_enabled"
-                case notifications_disabled = "notifications_disabled"
+            @frozen public enum NotificationSettingPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case notificationsEnabled = "notifications_enabled"
+                case notificationsDisabled = "notifications_disabled"
             }
             /// The notification setting the team has set
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/notification_setting`.
-            public var notification_setting: Components.Schemas.team_hyphen_full.notification_settingPayload?
+            public var notificationSetting: Components.Schemas.TeamFull.NotificationSettingPayload?
             /// Permission that the team will have for its repositories
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/permission`.
             public var permission: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-full/members_url`.
-            public var members_url: Swift.String
+            public var membersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-full/repositories_url`.
-            public var repositories_url: Swift.String
+            public var repositoriesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-full/parent`.
-            public var parent: Components.Schemas.nullable_hyphen_team_hyphen_simple?
+            public var parent: Components.Schemas.NullableTeamSimple?
             /// - Remark: Generated from `#/components/schemas/team-full/members_count`.
-            public var members_count: Swift.Int
+            public var membersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-full/repos_count`.
-            public var repos_count: Swift.Int
+            public var reposCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-full/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/team-full/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/team-full/organization`.
-            public var organization: Components.Schemas.team_hyphen_organization
+            public var organization: Components.Schemas.TeamOrganization
             /// Distinguished Name (DN) that team maps to within LDAP environment
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/ldap_dn`.
-            public var ldap_dn: Swift.String?
-            /// Creates a new `team_hyphen_full`.
+            public var ldapDn: Swift.String?
+            /// Creates a new `TeamFull`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the team
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url: URL for the team
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - name: Name of the team
             ///   - slug:
             ///   - description:
             ///   - privacy: The level of privacy this team should have
-            ///   - notification_setting: The notification setting the team has set
+            ///   - notificationSetting: The notification setting the team has set
             ///   - permission: Permission that the team will have for its repositories
-            ///   - members_url:
-            ///   - repositories_url:
+            ///   - membersUrl:
+            ///   - repositoriesUrl:
             ///   - parent:
-            ///   - members_count:
-            ///   - repos_count:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - membersCount:
+            ///   - reposCount:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - organization:
-            ///   - ldap_dn: Distinguished Name (DN) that team maps to within LDAP environment
+            ///   - ldapDn: Distinguished Name (DN) that team maps to within LDAP environment
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 name: Swift.String,
                 slug: Swift.String,
                 description: Swift.String? = nil,
-                privacy: Components.Schemas.team_hyphen_full.privacyPayload? = nil,
-                notification_setting: Components.Schemas.team_hyphen_full.notification_settingPayload? = nil,
+                privacy: Components.Schemas.TeamFull.PrivacyPayload? = nil,
+                notificationSetting: Components.Schemas.TeamFull.NotificationSettingPayload? = nil,
                 permission: Swift.String,
-                members_url: Swift.String,
-                repositories_url: Swift.String,
-                parent: Components.Schemas.nullable_hyphen_team_hyphen_simple? = nil,
-                members_count: Swift.Int,
-                repos_count: Swift.Int,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                organization: Components.Schemas.team_hyphen_organization,
-                ldap_dn: Swift.String? = nil
+                membersUrl: Swift.String,
+                repositoriesUrl: Swift.String,
+                parent: Components.Schemas.NullableTeamSimple? = nil,
+                membersCount: Swift.Int,
+                reposCount: Swift.Int,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                organization: Components.Schemas.TeamOrganization,
+                ldapDn: Swift.String? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.name = name
                 self.slug = slug
                 self.description = description
                 self.privacy = privacy
-                self.notification_setting = notification_setting
+                self.notificationSetting = notificationSetting
                 self.permission = permission
-                self.members_url = members_url
-                self.repositories_url = repositories_url
+                self.membersUrl = membersUrl
+                self.repositoriesUrl = repositoriesUrl
                 self.parent = parent
-                self.members_count = members_count
-                self.repos_count = repos_count
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.membersCount = membersCount
+                self.reposCount = reposCount
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.organization = organization
-                self.ldap_dn = ldap_dn
+                self.ldapDn = ldapDn
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case url
-                case html_url
+                case htmlUrl = "html_url"
                 case name
                 case slug
                 case description
                 case privacy
-                case notification_setting
+                case notificationSetting = "notification_setting"
                 case permission
-                case members_url
-                case repositories_url
+                case membersUrl = "members_url"
+                case repositoriesUrl = "repositories_url"
                 case parent
-                case members_count
-                case repos_count
-                case created_at
-                case updated_at
+                case membersCount = "members_count"
+                case reposCount = "repos_count"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case organization
-                case ldap_dn
+                case ldapDn = "ldap_dn"
             }
         }
         /// A team discussion is a persistent record of a free-form conversation within a team.
         ///
         /// - Remark: Generated from `#/components/schemas/team-discussion`.
-        public struct team_hyphen_discussion: Codable, Hashable, Sendable {
+        public struct TeamDiscussion: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team-discussion/author`.
-            public var author: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var author: Components.Schemas.NullableSimpleUser?
             /// The main text of the discussion.
             ///
             /// - Remark: Generated from `#/components/schemas/team-discussion/body`.
             public var body: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion/body_html`.
-            public var body_html: Swift.String
+            public var bodyHtml: Swift.String
             /// The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
             ///
             /// - Remark: Generated from `#/components/schemas/team-discussion/body_version`.
-            public var body_version: Swift.String
+            public var bodyVersion: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion/comments_count`.
-            public var comments_count: Swift.Int
+            public var commentsCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-discussion/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/team-discussion/last_edited_at`.
-            public var last_edited_at: Foundation.Date?
+            public var lastEditedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/team-discussion/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The unique sequence number of a team discussion.
             ///
             /// - Remark: Generated from `#/components/schemas/team-discussion/number`.
@@ -4294,94 +4303,94 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team-discussion/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/team-discussion/team_url`.
-            public var team_url: Swift.String
+            public var teamUrl: Swift.String
             /// The title of the discussion.
             ///
             /// - Remark: Generated from `#/components/schemas/team-discussion/title`.
             public var title: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/team-discussion/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion/reactions`.
-            public var reactions: Components.Schemas.reaction_hyphen_rollup?
-            /// Creates a new `team_hyphen_discussion`.
+            public var reactions: Components.Schemas.ReactionRollup?
+            /// Creates a new `TeamDiscussion`.
             ///
             /// - Parameters:
             ///   - author:
             ///   - body: The main text of the discussion.
-            ///   - body_html:
-            ///   - body_version: The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-            ///   - comments_count:
-            ///   - comments_url:
-            ///   - created_at:
-            ///   - last_edited_at:
-            ///   - html_url:
-            ///   - node_id:
+            ///   - bodyHtml:
+            ///   - bodyVersion: The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
+            ///   - commentsCount:
+            ///   - commentsUrl:
+            ///   - createdAt:
+            ///   - lastEditedAt:
+            ///   - htmlUrl:
+            ///   - nodeId:
             ///   - number: The unique sequence number of a team discussion.
             ///   - pinned: Whether or not this discussion should be pinned for easy retrieval.
             ///   - _private: Whether or not this discussion should be restricted to team members and organization owners.
-            ///   - team_url:
+            ///   - teamUrl:
             ///   - title: The title of the discussion.
-            ///   - updated_at:
+            ///   - updatedAt:
             ///   - url:
             ///   - reactions:
             public init(
-                author: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                author: Components.Schemas.NullableSimpleUser? = nil,
                 body: Swift.String,
-                body_html: Swift.String,
-                body_version: Swift.String,
-                comments_count: Swift.Int,
-                comments_url: Swift.String,
-                created_at: Foundation.Date,
-                last_edited_at: Foundation.Date? = nil,
-                html_url: Swift.String,
-                node_id: Swift.String,
+                bodyHtml: Swift.String,
+                bodyVersion: Swift.String,
+                commentsCount: Swift.Int,
+                commentsUrl: Swift.String,
+                createdAt: Foundation.Date,
+                lastEditedAt: Foundation.Date? = nil,
+                htmlUrl: Swift.String,
+                nodeId: Swift.String,
                 number: Swift.Int,
                 pinned: Swift.Bool,
                 _private: Swift.Bool,
-                team_url: Swift.String,
+                teamUrl: Swift.String,
                 title: Swift.String,
-                updated_at: Foundation.Date,
+                updatedAt: Foundation.Date,
                 url: Swift.String,
-                reactions: Components.Schemas.reaction_hyphen_rollup? = nil
+                reactions: Components.Schemas.ReactionRollup? = nil
             ) {
                 self.author = author
                 self.body = body
-                self.body_html = body_html
-                self.body_version = body_version
-                self.comments_count = comments_count
-                self.comments_url = comments_url
-                self.created_at = created_at
-                self.last_edited_at = last_edited_at
-                self.html_url = html_url
-                self.node_id = node_id
+                self.bodyHtml = bodyHtml
+                self.bodyVersion = bodyVersion
+                self.commentsCount = commentsCount
+                self.commentsUrl = commentsUrl
+                self.createdAt = createdAt
+                self.lastEditedAt = lastEditedAt
+                self.htmlUrl = htmlUrl
+                self.nodeId = nodeId
                 self.number = number
                 self.pinned = pinned
                 self._private = _private
-                self.team_url = team_url
+                self.teamUrl = teamUrl
                 self.title = title
-                self.updated_at = updated_at
+                self.updatedAt = updatedAt
                 self.url = url
                 self.reactions = reactions
             }
             public enum CodingKeys: String, CodingKey {
                 case author
                 case body
-                case body_html
-                case body_version
-                case comments_count
-                case comments_url
-                case created_at
-                case last_edited_at
-                case html_url
-                case node_id
+                case bodyHtml = "body_html"
+                case bodyVersion = "body_version"
+                case commentsCount = "comments_count"
+                case commentsUrl = "comments_url"
+                case createdAt = "created_at"
+                case lastEditedAt = "last_edited_at"
+                case htmlUrl = "html_url"
+                case nodeId = "node_id"
                 case number
                 case pinned
                 case _private = "private"
-                case team_url
+                case teamUrl = "team_url"
                 case title
-                case updated_at
+                case updatedAt = "updated_at"
                 case url
                 case reactions
             }
@@ -4389,96 +4398,96 @@ public enum Components {
         /// A reply to a discussion within a team.
         ///
         /// - Remark: Generated from `#/components/schemas/team-discussion-comment`.
-        public struct team_hyphen_discussion_hyphen_comment: Codable, Hashable, Sendable {
+        public struct TeamDiscussionComment: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/author`.
-            public var author: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var author: Components.Schemas.NullableSimpleUser?
             /// The main text of the comment.
             ///
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/body`.
             public var body: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/body_html`.
-            public var body_html: Swift.String
+            public var bodyHtml: Swift.String
             /// The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
             ///
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/body_version`.
-            public var body_version: Swift.String
+            public var bodyVersion: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/last_edited_at`.
-            public var last_edited_at: Foundation.Date?
+            public var lastEditedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/discussion_url`.
-            public var discussion_url: Swift.String
+            public var discussionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The unique sequence number of a team discussion comment.
             ///
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/number`.
             public var number: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-discussion-comment/reactions`.
-            public var reactions: Components.Schemas.reaction_hyphen_rollup?
-            /// Creates a new `team_hyphen_discussion_hyphen_comment`.
+            public var reactions: Components.Schemas.ReactionRollup?
+            /// Creates a new `TeamDiscussionComment`.
             ///
             /// - Parameters:
             ///   - author:
             ///   - body: The main text of the comment.
-            ///   - body_html:
-            ///   - body_version: The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
-            ///   - created_at:
-            ///   - last_edited_at:
-            ///   - discussion_url:
-            ///   - html_url:
-            ///   - node_id:
+            ///   - bodyHtml:
+            ///   - bodyVersion: The current version of the body content. If provided, this update operation will be rejected if the given version does not match the latest version on the server.
+            ///   - createdAt:
+            ///   - lastEditedAt:
+            ///   - discussionUrl:
+            ///   - htmlUrl:
+            ///   - nodeId:
             ///   - number: The unique sequence number of a team discussion comment.
-            ///   - updated_at:
+            ///   - updatedAt:
             ///   - url:
             ///   - reactions:
             public init(
-                author: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                author: Components.Schemas.NullableSimpleUser? = nil,
                 body: Swift.String,
-                body_html: Swift.String,
-                body_version: Swift.String,
-                created_at: Foundation.Date,
-                last_edited_at: Foundation.Date? = nil,
-                discussion_url: Swift.String,
-                html_url: Swift.String,
-                node_id: Swift.String,
+                bodyHtml: Swift.String,
+                bodyVersion: Swift.String,
+                createdAt: Foundation.Date,
+                lastEditedAt: Foundation.Date? = nil,
+                discussionUrl: Swift.String,
+                htmlUrl: Swift.String,
+                nodeId: Swift.String,
                 number: Swift.Int,
-                updated_at: Foundation.Date,
+                updatedAt: Foundation.Date,
                 url: Swift.String,
-                reactions: Components.Schemas.reaction_hyphen_rollup? = nil
+                reactions: Components.Schemas.ReactionRollup? = nil
             ) {
                 self.author = author
                 self.body = body
-                self.body_html = body_html
-                self.body_version = body_version
-                self.created_at = created_at
-                self.last_edited_at = last_edited_at
-                self.discussion_url = discussion_url
-                self.html_url = html_url
-                self.node_id = node_id
+                self.bodyHtml = bodyHtml
+                self.bodyVersion = bodyVersion
+                self.createdAt = createdAt
+                self.lastEditedAt = lastEditedAt
+                self.discussionUrl = discussionUrl
+                self.htmlUrl = htmlUrl
+                self.nodeId = nodeId
                 self.number = number
-                self.updated_at = updated_at
+                self.updatedAt = updatedAt
                 self.url = url
                 self.reactions = reactions
             }
             public enum CodingKeys: String, CodingKey {
                 case author
                 case body
-                case body_html
-                case body_version
-                case created_at
-                case last_edited_at
-                case discussion_url
-                case html_url
-                case node_id
+                case bodyHtml = "body_html"
+                case bodyVersion = "body_version"
+                case createdAt = "created_at"
+                case lastEditedAt = "last_edited_at"
+                case discussionUrl = "discussion_url"
+                case htmlUrl = "html_url"
+                case nodeId = "node_id"
                 case number
-                case updated_at
+                case updatedAt = "updated_at"
                 case url
                 case reactions
             }
@@ -4486,32 +4495,32 @@ public enum Components {
         /// Team Membership
         ///
         /// - Remark: Generated from `#/components/schemas/team-membership`.
-        public struct team_hyphen_membership: Codable, Hashable, Sendable {
+        public struct TeamMembership: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team-membership/url`.
             public var url: Swift.String
             /// The role of the user in the team.
             ///
             /// - Remark: Generated from `#/components/schemas/team-membership/role`.
-            @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum RolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case member = "member"
                 case maintainer = "maintainer"
             }
             /// The role of the user in the team.
             ///
             /// - Remark: Generated from `#/components/schemas/team-membership/role`.
-            public var role: Components.Schemas.team_hyphen_membership.rolePayload
+            public var role: Components.Schemas.TeamMembership.RolePayload
             /// The state of the user's membership in the team.
             ///
             /// - Remark: Generated from `#/components/schemas/team-membership/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case active = "active"
                 case pending = "pending"
             }
             /// The state of the user's membership in the team.
             ///
             /// - Remark: Generated from `#/components/schemas/team-membership/state`.
-            public var state: Components.Schemas.team_hyphen_membership.statePayload
-            /// Creates a new `team_hyphen_membership`.
+            public var state: Components.Schemas.TeamMembership.StatePayload
+            /// Creates a new `TeamMembership`.
             ///
             /// - Parameters:
             ///   - url:
@@ -4519,8 +4528,8 @@ public enum Components {
             ///   - state: The state of the user's membership in the team.
             public init(
                 url: Swift.String,
-                role: Components.Schemas.team_hyphen_membership.rolePayload,
-                state: Components.Schemas.team_hyphen_membership.statePayload
+                role: Components.Schemas.TeamMembership.RolePayload,
+                state: Components.Schemas.TeamMembership.StatePayload
             ) {
                 self.url = url
                 self.role = role
@@ -4535,19 +4544,19 @@ public enum Components {
         /// A team's access to a project.
         ///
         /// - Remark: Generated from `#/components/schemas/team-project`.
-        public struct team_hyphen_project: Codable, Hashable, Sendable {
+        public struct TeamProject: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/team-project/owner_url`.
-            public var owner_url: Swift.String
+            public var ownerUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-project/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-project/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-project/columns_url`.
-            public var columns_url: Swift.String
+            public var columnsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-project/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-project/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-project/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-project/body`.
@@ -4557,28 +4566,28 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team-project/state`.
             public var state: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-project/creator`.
-            public var creator: Components.Schemas.simple_hyphen_user
+            public var creator: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/team-project/created_at`.
-            public var created_at: Swift.String
+            public var createdAt: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-project/updated_at`.
-            public var updated_at: Swift.String
+            public var updatedAt: Swift.String
             /// The organization permission for this project. Only present when owner is an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/team-project/organization_permission`.
-            public var organization_permission: Swift.String?
+            public var organizationPermission: Swift.String?
             /// Whether the project is private or not. Only present when owner is an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/team-project/private`.
             public var _private: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-project/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/team-project/permissions/read`.
                 public var read: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team-project/permissions/write`.
                 public var write: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team-project/permissions/admin`.
                 public var admin: Swift.Bool
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - read:
@@ -4600,76 +4609,76 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/team-project/permissions`.
-            public var permissions: Components.Schemas.team_hyphen_project.permissionsPayload
-            /// Creates a new `team_hyphen_project`.
+            public var permissions: Components.Schemas.TeamProject.PermissionsPayload
+            /// Creates a new `TeamProject`.
             ///
             /// - Parameters:
-            ///   - owner_url:
+            ///   - ownerUrl:
             ///   - url:
-            ///   - html_url:
-            ///   - columns_url:
+            ///   - htmlUrl:
+            ///   - columnsUrl:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
             ///   - body:
             ///   - number:
             ///   - state:
             ///   - creator:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - organization_permission: The organization permission for this project. Only present when owner is an organization.
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - organizationPermission: The organization permission for this project. Only present when owner is an organization.
             ///   - _private: Whether the project is private or not. Only present when owner is an organization.
             ///   - permissions:
             public init(
-                owner_url: Swift.String,
+                ownerUrl: Swift.String,
                 url: Swift.String,
-                html_url: Swift.String,
-                columns_url: Swift.String,
+                htmlUrl: Swift.String,
+                columnsUrl: Swift.String,
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
                 body: Swift.String? = nil,
                 number: Swift.Int,
                 state: Swift.String,
-                creator: Components.Schemas.simple_hyphen_user,
-                created_at: Swift.String,
-                updated_at: Swift.String,
-                organization_permission: Swift.String? = nil,
+                creator: Components.Schemas.SimpleUser,
+                createdAt: Swift.String,
+                updatedAt: Swift.String,
+                organizationPermission: Swift.String? = nil,
                 _private: Swift.Bool? = nil,
-                permissions: Components.Schemas.team_hyphen_project.permissionsPayload
+                permissions: Components.Schemas.TeamProject.PermissionsPayload
             ) {
-                self.owner_url = owner_url
+                self.ownerUrl = ownerUrl
                 self.url = url
-                self.html_url = html_url
-                self.columns_url = columns_url
+                self.htmlUrl = htmlUrl
+                self.columnsUrl = columnsUrl
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
                 self.body = body
                 self.number = number
                 self.state = state
                 self.creator = creator
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.organization_permission = organization_permission
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.organizationPermission = organizationPermission
                 self._private = _private
                 self.permissions = permissions
             }
             public enum CodingKeys: String, CodingKey {
-                case owner_url
+                case ownerUrl = "owner_url"
                 case url
-                case html_url
-                case columns_url
+                case htmlUrl = "html_url"
+                case columnsUrl = "columns_url"
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
                 case body
                 case number
                 case state
                 case creator
-                case created_at
-                case updated_at
-                case organization_permission
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case organizationPermission = "organization_permission"
                 case _private = "private"
                 case permissions
             }
@@ -4677,25 +4686,25 @@ public enum Components {
         /// A team's access to a repository.
         ///
         /// - Remark: Generated from `#/components/schemas/team-repository`.
-        public struct team_hyphen_repository: Codable, Hashable, Sendable {
+        public struct TeamRepository: Codable, Hashable, Sendable {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/license`.
-            public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
+            public var license: Components.Schemas.NullableLicenseSimple?
             /// - Remark: Generated from `#/components/schemas/team-repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/team-repository/permissions/admin`.
                 public var admin: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team-repository/permissions/pull`.
@@ -4706,7 +4715,7 @@ public enum Components {
                 public var push: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/team-repository/permissions/maintain`.
                 public var maintain: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -4736,17 +4745,17 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/team-repository/permissions`.
-            public var permissions: Components.Schemas.team_hyphen_repository.permissionsPayload?
+            public var permissions: Components.Schemas.TeamRepository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/team-repository/role_name`.
-            public var role_name: Swift.String?
+            public var roleName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-repository/owner`.
-            public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var owner: Components.Schemas.NullableSimpleUser?
             /// Whether the repository is private or public.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/team-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-repository/fork`.
@@ -4754,129 +4763,129 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team-repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/git_url`.
-            public var git_url: Swift.String
+            public var gitUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/ssh_url`.
-            public var ssh_url: Swift.String
+            public var sshUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/clone_url`.
-            public var clone_url: Swift.String
+            public var cloneUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/svn_url`.
-            public var svn_url: Swift.String
+            public var svnUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-repository/forks_count`.
-            public var forks_count: Swift.Int
+            public var forksCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int
+            public var stargazersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-repository/watchers_count`.
-            public var watchers_count: Swift.Int
+            public var watchersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-repository/size`.
             public var size: Swift.Int
             /// The default branch of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/default_branch`.
-            public var default_branch: Swift.String
+            public var defaultBranch: Swift.String
             /// - Remark: Generated from `#/components/schemas/team-repository/open_issues_count`.
-            public var open_issues_count: Swift.Int
+            public var openIssuesCount: Swift.Int
             /// Whether this repository acts as a template that can be used to generate new repositories.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-repository/topics`.
             public var topics: [Swift.String]?
             /// Whether issues are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/has_issues`.
-            public var has_issues: Swift.Bool
+            public var hasIssues: Swift.Bool
             /// Whether projects are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/has_projects`.
-            public var has_projects: Swift.Bool
+            public var hasProjects: Swift.Bool
             /// Whether the wiki is enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/has_wiki`.
-            public var has_wiki: Swift.Bool
+            public var hasWiki: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/team-repository/has_pages`.
-            public var has_pages: Swift.Bool
+            public var hasPages: Swift.Bool
             /// Whether downloads are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/has_downloads`.
-            public var has_downloads: Swift.Bool
+            public var hasDownloads: Swift.Bool
             /// Whether the repository is archived.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/archived`.
@@ -4890,414 +4899,414 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/team-repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/team-repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/team-repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/team-repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// Whether to allow rebase merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/allow_rebase_merge`.
-            public var allow_rebase_merge: Swift.Bool?
+            public var allowRebaseMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// Whether to allow squash merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/allow_squash_merge`.
-            public var allow_squash_merge: Swift.Bool?
+            public var allowSquashMerge: Swift.Bool?
             /// Whether to allow Auto-merge to be used on pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/allow_auto_merge`.
-            public var allow_auto_merge: Swift.Bool?
+            public var allowAutoMerge: Swift.Bool?
             /// Whether to delete head branches when pull requests are merged
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// Whether to allow merge commits for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/allow_merge_commit`.
-            public var allow_merge_commit: Swift.Bool?
+            public var allowMergeCommit: Swift.Bool?
             /// Whether to allow forking this repo
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// Whether to require contributors to sign off on web-based commits
             ///
             /// - Remark: Generated from `#/components/schemas/team-repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/team-repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
+            public var subscribersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/team-repository/network_count`.
-            public var network_count: Swift.Int?
+            public var networkCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/team-repository/open_issues`.
-            public var open_issues: Swift.Int
+            public var openIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-repository/watchers`.
             public var watchers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/team-repository/master_branch`.
-            public var master_branch: Swift.String?
-            /// Creates a new `team_hyphen_repository`.
+            public var masterBranch: Swift.String?
+            /// Creates a new `TeamRepository`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: The name of the repository.
-            ///   - full_name:
+            ///   - fullName:
             ///   - license:
             ///   - forks:
             ///   - permissions:
-            ///   - role_name:
+            ///   - roleName:
             ///   - owner:
             ///   - _private: Whether the repository is private or public.
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size:
-            ///   - default_branch: The default branch of the repository.
-            ///   - open_issues_count:
-            ///   - is_template: Whether this repository acts as a template that can be used to generate new repositories.
+            ///   - defaultBranch: The default branch of the repository.
+            ///   - openIssuesCount:
+            ///   - isTemplate: Whether this repository acts as a template that can be used to generate new repositories.
             ///   - topics:
-            ///   - has_issues: Whether issues are enabled.
-            ///   - has_projects: Whether projects are enabled.
-            ///   - has_wiki: Whether the wiki is enabled.
-            ///   - has_pages:
-            ///   - has_downloads: Whether downloads are enabled.
+            ///   - hasIssues: Whether issues are enabled.
+            ///   - hasProjects: Whether projects are enabled.
+            ///   - hasWiki: Whether the wiki is enabled.
+            ///   - hasPages:
+            ///   - hasDownloads: Whether downloads are enabled.
             ///   - archived: Whether the repository is archived.
             ///   - disabled: Returns whether or not this repository disabled.
             ///   - visibility: The repository visibility: public, private, or internal.
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - temp_clone_token:
-            ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
-            ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
-            ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
-            ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
-            ///   - allow_forking: Whether to allow forking this repo
-            ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - subscribers_count:
-            ///   - network_count:
-            ///   - open_issues:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - allowRebaseMerge: Whether to allow rebase merges for pull requests.
+            ///   - tempCloneToken:
+            ///   - allowSquashMerge: Whether to allow squash merges for pull requests.
+            ///   - allowAutoMerge: Whether to allow Auto-merge to be used on pull requests.
+            ///   - deleteBranchOnMerge: Whether to delete head branches when pull requests are merged
+            ///   - allowMergeCommit: Whether to allow merge commits for pull requests.
+            ///   - allowForking: Whether to allow forking this repo
+            ///   - webCommitSignoffRequired: Whether to require contributors to sign off on web-based commits
+            ///   - subscribersCount:
+            ///   - networkCount:
+            ///   - openIssues:
             ///   - watchers:
-            ///   - master_branch:
+            ///   - masterBranch:
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
+                fullName: Swift.String,
+                license: Components.Schemas.NullableLicenseSimple? = nil,
                 forks: Swift.Int,
-                permissions: Components.Schemas.team_hyphen_repository.permissionsPayload? = nil,
-                role_name: Swift.String? = nil,
-                owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                permissions: Components.Schemas.TeamRepository.PermissionsPayload? = nil,
+                roleName: Swift.String? = nil,
+                owner: Components.Schemas.NullableSimpleUser? = nil,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int,
-                stargazers_count: Swift.Int,
-                watchers_count: Swift.Int,
+                forksCount: Swift.Int,
+                stargazersCount: Swift.Int,
+                watchersCount: Swift.Int,
                 size: Swift.Int,
-                default_branch: Swift.String,
-                open_issues_count: Swift.Int,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String,
+                openIssuesCount: Swift.Int,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool,
-                has_projects: Swift.Bool,
-                has_wiki: Swift.Bool,
-                has_pages: Swift.Bool,
-                has_downloads: Swift.Bool,
+                hasIssues: Swift.Bool,
+                hasProjects: Swift.Bool,
+                hasWiki: Swift.Bool,
+                hasPages: Swift.Bool,
+                hasDownloads: Swift.Bool,
                 archived: Swift.Bool,
                 disabled: Swift.Bool,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                allow_rebase_merge: Swift.Bool? = nil,
-                temp_clone_token: Swift.String? = nil,
-                allow_squash_merge: Swift.Bool? = nil,
-                allow_auto_merge: Swift.Bool? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                allow_merge_commit: Swift.Bool? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
-                open_issues: Swift.Int,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                allowRebaseMerge: Swift.Bool? = nil,
+                tempCloneToken: Swift.String? = nil,
+                allowSquashMerge: Swift.Bool? = nil,
+                allowAutoMerge: Swift.Bool? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                allowMergeCommit: Swift.Bool? = nil,
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                subscribersCount: Swift.Int? = nil,
+                networkCount: Swift.Int? = nil,
+                openIssues: Swift.Int,
                 watchers: Swift.Int,
-                master_branch: Swift.String? = nil
+                masterBranch: Swift.String? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.license = license
                 self.forks = forks
                 self.permissions = permissions
-                self.role_name = role_name
+                self.roleName = roleName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.allow_rebase_merge = allow_rebase_merge
-                self.temp_clone_token = temp_clone_token
-                self.allow_squash_merge = allow_squash_merge
-                self.allow_auto_merge = allow_auto_merge
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.allow_merge_commit = allow_merge_commit
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
-                self.open_issues = open_issues
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.allowRebaseMerge = allowRebaseMerge
+                self.tempCloneToken = tempCloneToken
+                self.allowSquashMerge = allowSquashMerge
+                self.allowAutoMerge = allowAutoMerge
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.allowMergeCommit = allowMergeCommit
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.subscribersCount = subscribersCount
+                self.networkCount = networkCount
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.master_branch = master_branch
+                self.masterBranch = masterBranch
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case license
                 case forks
                 case permissions
-                case role_name
+                case roleName = "role_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
-                case allow_rebase_merge
-                case temp_clone_token
-                case allow_squash_merge
-                case allow_auto_merge
-                case delete_branch_on_merge
-                case allow_merge_commit
-                case allow_forking
-                case web_commit_signoff_required
-                case subscribers_count
-                case network_count
-                case open_issues
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case allowRebaseMerge = "allow_rebase_merge"
+                case tempCloneToken = "temp_clone_token"
+                case allowSquashMerge = "allow_squash_merge"
+                case allowAutoMerge = "allow_auto_merge"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case allowMergeCommit = "allow_merge_commit"
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case subscribersCount = "subscribers_count"
+                case networkCount = "network_count"
+                case openIssues = "open_issues"
                 case watchers
-                case master_branch
+                case masterBranch = "master_branch"
             }
         }
     }
@@ -5306,69 +5315,69 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The handle for the GitHub user account.
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
-        public typealias username = Swift.String
+        public typealias Username = Swift.String
         /// The slug of the team name.
         ///
         /// - Remark: Generated from `#/components/parameters/team-slug`.
-        public typealias team_hyphen_slug = Swift.String
+        public typealias TeamSlug = Swift.String
         /// The number that identifies the discussion.
         ///
         /// - Remark: Generated from `#/components/parameters/discussion-number`.
-        public typealias discussion_hyphen_number = Swift.Int
+        public typealias DiscussionNumber = Swift.Int
         /// The number that identifies the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-number`.
-        public typealias comment_hyphen_number = Swift.Int
+        public typealias CommentNumber = Swift.Int
         /// The unique identifier of the project.
         ///
         /// - Remark: Generated from `#/components/parameters/project-id`.
-        public typealias project_hyphen_id = Swift.Int
+        public typealias ProjectId = Swift.Int
         /// The unique identifier of the team.
         ///
         /// - Remark: Generated from `#/components/parameters/team-id`.
-        public typealias team_hyphen_id = Swift.Int
+        public typealias TeamId = Swift.Int
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5378,25 +5387,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5406,29 +5415,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -5438,12 +5447,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
@@ -5451,7 +5460,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -5463,7 +5472,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/get(teams/list)`.
-    public enum teams_sol_list {
+    public enum TeamsList {
         public static let id: Swift.String = "teams/list"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/path`.
@@ -5471,52 +5480,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.teams_sol_list.Input.Path
+            public var path: Operations.TeamsList.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list.Input.Query
+            public var query: Operations.TeamsList.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsList.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsList.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list.Input.Headers
+            public var headers: Operations.TeamsList.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5524,9 +5533,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list.Input.Path,
-                query: Operations.teams_sol_list.Input.Query = .init(),
-                headers: Operations.teams_sol_list.Input.Headers = .init()
+                path: Operations.TeamsList.Input.Path,
+                query: Operations.TeamsList.Input.Query = .init(),
+                headers: Operations.TeamsList.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5538,26 +5547,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list.Output.Ok.Headers
+                public var headers: Operations.TeamsList.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team])
+                    case json([Components.Schemas.Team])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team] {
+                    public var json: [Components.Schemas.Team] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5567,15 +5576,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list.Output.Ok.Body
+                public var body: Operations.TeamsList.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list.Output.Ok.Body
+                    headers: Operations.TeamsList.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsList.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5586,12 +5595,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/get(teams/list)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list.Output.Ok)
+            case ok(Operations.TeamsList.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list.Output.Ok {
+            public var ok: Operations.TeamsList.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5609,12 +5618,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/get(teams/list)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5666,7 +5675,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/post(teams/create)`.
-    public enum teams_sol_create {
+    public enum TeamsCreate {
         public static let id: Swift.String = "teams/create"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/path`.
@@ -5674,32 +5683,32 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.teams_sol_create.Input.Path
+            public var path: Operations.TeamsCreate.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_create.Input.Headers
+            public var headers: Operations.TeamsCreate.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The name of the team.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/name`.
@@ -5715,7 +5724,7 @@ public enum Operations {
                     /// The full name (e.g., "organization-name/repository-name") of repositories to add the team to.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/repo_names`.
-                    public var repo_names: [Swift.String]?
+                    public var repoNames: [Swift.String]?
                     /// The level of privacy this team should have. The options are:  
                     /// **For a non-nested team:**  
                     ///  * `secret` - only visible to organization owners and members of this team.  
@@ -5726,7 +5735,7 @@ public enum Operations {
                     /// Default for child team: `closed`
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/privacy`.
-                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PrivacyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case secret = "secret"
                         case closed = "closed"
                     }
@@ -5740,16 +5749,16 @@ public enum Operations {
                     /// Default for child team: `closed`
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/privacy`.
-                    public var privacy: Operations.teams_sol_create.Input.Body.jsonPayload.privacyPayload?
+                    public var privacy: Operations.TeamsCreate.Input.Body.JsonPayload.PrivacyPayload?
                     /// The notification setting the team has chosen. The options are:  
                     ///  * `notifications_enabled` - team members receive notifications when the team is @mentioned.  
                     ///  * `notifications_disabled` - no one receives notifications.  
                     /// Default: `notifications_enabled`
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/notification_setting`.
-                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable {
-                        case notifications_enabled = "notifications_enabled"
-                        case notifications_disabled = "notifications_disabled"
+                    @frozen public enum NotificationSettingPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case notificationsEnabled = "notifications_enabled"
+                        case notificationsDisabled = "notifications_disabled"
                     }
                     /// The notification setting the team has chosen. The options are:  
                     ///  * `notifications_enabled` - team members receive notifications when the team is @mentioned.  
@@ -5757,67 +5766,67 @@ public enum Operations {
                     /// Default: `notifications_enabled`
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/notification_setting`.
-                    public var notification_setting: Operations.teams_sol_create.Input.Body.jsonPayload.notification_settingPayload?
+                    public var notificationSetting: Operations.TeamsCreate.Input.Body.JsonPayload.NotificationSettingPayload?
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case pull = "pull"
                         case push = "push"
                     }
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/permission`.
-                    public var permission: Operations.teams_sol_create.Input.Body.jsonPayload.permissionPayload?
+                    public var permission: Operations.TeamsCreate.Input.Body.JsonPayload.PermissionPayload?
                     /// The ID of a team to set as the parent team.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/parent_team_id`.
-                    public var parent_team_id: Swift.Int?
-                    /// Creates a new `jsonPayload`.
+                    public var parentTeamId: Swift.Int?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: The name of the team.
                     ///   - description: The description of the team.
                     ///   - maintainers: List GitHub IDs for organization members who will become team maintainers.
-                    ///   - repo_names: The full name (e.g., "organization-name/repository-name") of repositories to add the team to.
+                    ///   - repoNames: The full name (e.g., "organization-name/repository-name") of repositories to add the team to.
                     ///   - privacy: The level of privacy this team should have. The options are:  
-                    ///   - notification_setting: The notification setting the team has chosen. The options are:  
+                    ///   - notificationSetting: The notification setting the team has chosen. The options are:  
                     ///   - permission: **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
-                    ///   - parent_team_id: The ID of a team to set as the parent team.
+                    ///   - parentTeamId: The ID of a team to set as the parent team.
                     public init(
                         name: Swift.String,
                         description: Swift.String? = nil,
                         maintainers: [Swift.String]? = nil,
-                        repo_names: [Swift.String]? = nil,
-                        privacy: Operations.teams_sol_create.Input.Body.jsonPayload.privacyPayload? = nil,
-                        notification_setting: Operations.teams_sol_create.Input.Body.jsonPayload.notification_settingPayload? = nil,
-                        permission: Operations.teams_sol_create.Input.Body.jsonPayload.permissionPayload? = nil,
-                        parent_team_id: Swift.Int? = nil
+                        repoNames: [Swift.String]? = nil,
+                        privacy: Operations.TeamsCreate.Input.Body.JsonPayload.PrivacyPayload? = nil,
+                        notificationSetting: Operations.TeamsCreate.Input.Body.JsonPayload.NotificationSettingPayload? = nil,
+                        permission: Operations.TeamsCreate.Input.Body.JsonPayload.PermissionPayload? = nil,
+                        parentTeamId: Swift.Int? = nil
                     ) {
                         self.name = name
                         self.description = description
                         self.maintainers = maintainers
-                        self.repo_names = repo_names
+                        self.repoNames = repoNames
                         self.privacy = privacy
-                        self.notification_setting = notification_setting
+                        self.notificationSetting = notificationSetting
                         self.permission = permission
-                        self.parent_team_id = parent_team_id
+                        self.parentTeamId = parentTeamId
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
                         case description
                         case maintainers
-                        case repo_names
+                        case repoNames = "repo_names"
                         case privacy
-                        case notification_setting
+                        case notificationSetting = "notification_setting"
                         case permission
-                        case parent_team_id
+                        case parentTeamId = "parent_team_id"
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_create.Input.Body.jsonPayload)
+                case json(Operations.TeamsCreate.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_create.Input.Body
+            public var body: Operations.TeamsCreate.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5825,9 +5834,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_create.Input.Path,
-                headers: Operations.teams_sol_create.Input.Headers = .init(),
-                body: Operations.teams_sol_create.Input.Body
+                path: Operations.TeamsCreate.Input.Path,
+                headers: Operations.TeamsCreate.Input.Headers = .init(),
+                body: Operations.TeamsCreate.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -5839,12 +5848,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_full)
+                    case json(Components.Schemas.TeamFull)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_full {
+                    public var json: Components.Schemas.TeamFull {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5854,12 +5863,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_create.Output.Created.Body
+                public var body: Operations.TeamsCreate.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_create.Output.Created.Body) {
+                public init(body: Operations.TeamsCreate.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -5868,12 +5877,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/post(teams/create)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.teams_sol_create.Output.Created)
+            case created(Operations.TeamsCreate.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.teams_sol_create.Output.Created {
+            public var created: Operations.TeamsCreate.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5891,12 +5900,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/post(teams/create)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5914,12 +5923,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/post(teams/create)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5972,7 +5981,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/get(teams/get-by-name)`.
-    public enum teams_sol_get_hyphen_by_hyphen_name {
+    public enum TeamsGetByName {
         public static let id: Swift.String = "teams/get-by-name"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/GET/path`.
@@ -5980,45 +5989,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_by_hyphen_name.Input.Path
+            public var path: Operations.TeamsGetByName.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_by_hyphen_name.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetByName.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_by_hyphen_name.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetByName.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_get_hyphen_by_hyphen_name.Input.Headers
+            public var headers: Operations.TeamsGetByName.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_get_hyphen_by_hyphen_name.Input.Path,
-                headers: Operations.teams_sol_get_hyphen_by_hyphen_name.Input.Headers = .init()
+                path: Operations.TeamsGetByName.Input.Path,
+                headers: Operations.TeamsGetByName.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6029,12 +6038,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_full)
+                    case json(Components.Schemas.TeamFull)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_full {
+                    public var json: Components.Schemas.TeamFull {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6044,12 +6053,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_get_hyphen_by_hyphen_name.Output.Ok.Body
+                public var body: Operations.TeamsGetByName.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_get_hyphen_by_hyphen_name.Output.Ok.Body) {
+                public init(body: Operations.TeamsGetByName.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6058,12 +6067,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/get(teams/get-by-name)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_get_hyphen_by_hyphen_name.Output.Ok)
+            case ok(Operations.TeamsGetByName.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_get_hyphen_by_hyphen_name.Output.Ok {
+            public var ok: Operations.TeamsGetByName.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6081,12 +6090,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/get(teams/get-by-name)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6139,7 +6148,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)`.
-    public enum teams_sol_update_hyphen_in_hyphen_org {
+    public enum TeamsUpdateInOrg {
         public static let id: Swift.String = "teams/update-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/path`.
@@ -6147,41 +6156,41 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsUpdateInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsUpdateInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The name of the team.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/name`.
@@ -6198,7 +6207,7 @@ public enum Operations {
                     ///  * `closed` - visible to all members of this organization.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/privacy`.
-                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PrivacyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case secret = "secret"
                         case closed = "closed"
                     }
@@ -6210,26 +6219,26 @@ public enum Operations {
                     ///  * `closed` - visible to all members of this organization.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/privacy`.
-                    public var privacy: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body.jsonPayload.privacyPayload?
+                    public var privacy: Operations.TeamsUpdateInOrg.Input.Body.JsonPayload.PrivacyPayload?
                     /// The notification setting the team has chosen. Editing teams without specifying this parameter leaves `notification_setting` intact. The options are: 
                     ///  * `notifications_enabled` - team members receive notifications when the team is @mentioned.  
                     ///  * `notifications_disabled` - no one receives notifications.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/notification_setting`.
-                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable {
-                        case notifications_enabled = "notifications_enabled"
-                        case notifications_disabled = "notifications_disabled"
+                    @frozen public enum NotificationSettingPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case notificationsEnabled = "notifications_enabled"
+                        case notificationsDisabled = "notifications_disabled"
                     }
                     /// The notification setting the team has chosen. Editing teams without specifying this parameter leaves `notification_setting` intact. The options are: 
                     ///  * `notifications_enabled` - team members receive notifications when the team is @mentioned.  
                     ///  * `notifications_disabled` - no one receives notifications.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/notification_setting`.
-                    public var notification_setting: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body.jsonPayload.notification_settingPayload?
+                    public var notificationSetting: Operations.TeamsUpdateInOrg.Input.Body.JsonPayload.NotificationSettingPayload?
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case pull = "pull"
                         case push = "push"
                         case admin = "admin"
@@ -6237,48 +6246,48 @@ public enum Operations {
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/permission`.
-                    public var permission: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body.jsonPayload.permissionPayload?
+                    public var permission: Operations.TeamsUpdateInOrg.Input.Body.JsonPayload.PermissionPayload?
                     /// The ID of a team to set as the parent team.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/parent_team_id`.
-                    public var parent_team_id: Swift.Int?
-                    /// Creates a new `jsonPayload`.
+                    public var parentTeamId: Swift.Int?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: The name of the team.
                     ///   - description: The description of the team.
                     ///   - privacy: The level of privacy this team should have. Editing teams without specifying this parameter leaves `privacy` intact. When a team is nested, the `privacy` for parent teams cannot be `secret`. The options are:  
-                    ///   - notification_setting: The notification setting the team has chosen. Editing teams without specifying this parameter leaves `notification_setting` intact. The options are: 
+                    ///   - notificationSetting: The notification setting the team has chosen. Editing teams without specifying this parameter leaves `notification_setting` intact. The options are: 
                     ///   - permission: **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
-                    ///   - parent_team_id: The ID of a team to set as the parent team.
+                    ///   - parentTeamId: The ID of a team to set as the parent team.
                     public init(
                         name: Swift.String? = nil,
                         description: Swift.String? = nil,
-                        privacy: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body.jsonPayload.privacyPayload? = nil,
-                        notification_setting: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body.jsonPayload.notification_settingPayload? = nil,
-                        permission: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body.jsonPayload.permissionPayload? = nil,
-                        parent_team_id: Swift.Int? = nil
+                        privacy: Operations.TeamsUpdateInOrg.Input.Body.JsonPayload.PrivacyPayload? = nil,
+                        notificationSetting: Operations.TeamsUpdateInOrg.Input.Body.JsonPayload.NotificationSettingPayload? = nil,
+                        permission: Operations.TeamsUpdateInOrg.Input.Body.JsonPayload.PermissionPayload? = nil,
+                        parentTeamId: Swift.Int? = nil
                     ) {
                         self.name = name
                         self.description = description
                         self.privacy = privacy
-                        self.notification_setting = notification_setting
+                        self.notificationSetting = notificationSetting
                         self.permission = permission
-                        self.parent_team_id = parent_team_id
+                        self.parentTeamId = parentTeamId
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
                         case description
                         case privacy
-                        case notification_setting
+                        case notificationSetting = "notification_setting"
                         case permission
-                        case parent_team_id
+                        case parentTeamId = "parent_team_id"
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.TeamsUpdateInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body?
+            public var body: Operations.TeamsUpdateInOrg.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6286,9 +6295,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.teams_sol_update_hyphen_in_hyphen_org.Input.Body? = nil
+                path: Operations.TeamsUpdateInOrg.Input.Path,
+                headers: Operations.TeamsUpdateInOrg.Input.Headers = .init(),
+                body: Operations.TeamsUpdateInOrg.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -6300,12 +6309,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_full)
+                    case json(Components.Schemas.TeamFull)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_full {
+                    public var json: Components.Schemas.TeamFull {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6315,12 +6324,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsUpdateInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsUpdateInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6329,12 +6338,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsUpdateInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsUpdateInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6351,12 +6360,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/responses/201/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_full)
+                    case json(Components.Schemas.TeamFull)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_full {
+                    public var json: Components.Schemas.TeamFull {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6366,12 +6375,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Created.Body
+                public var body: Operations.TeamsUpdateInOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.TeamsUpdateInOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -6380,12 +6389,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Created)
+            case created(Operations.TeamsUpdateInOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.teams_sol_update_hyphen_in_hyphen_org.Output.Created {
+            public var created: Operations.TeamsUpdateInOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -6403,12 +6412,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6426,12 +6435,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6449,12 +6458,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/patch(teams/update-in-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6509,7 +6518,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/delete(teams/delete-in-org)`.
-    public enum teams_sol_delete_hyphen_in_hyphen_org {
+    public enum TeamsDeleteInOrg {
         public static let id: Swift.String = "teams/delete-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/DELETE/path`.
@@ -6517,30 +6526,30 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/DELETE/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_delete_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsDeleteInOrg.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_delete_hyphen_in_hyphen_org.Input.Path) {
+            public init(path: Operations.TeamsDeleteInOrg.Input.Path) {
                 self.path = path
             }
         }
@@ -6554,12 +6563,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/delete(teams/delete-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_delete_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsDeleteInOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/delete(teams/delete-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_delete_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsDeleteInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6589,7 +6606,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/get(teams/list-discussions-in-org)`.
-    public enum teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org {
+    public enum TeamsListDiscussionsInOrg {
         public static let id: Swift.String = "teams/list-discussions-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/path`.
@@ -6597,44 +6614,44 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsListDiscussionsInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Pinned discussions only filter
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/query/pinned`.
@@ -6643,34 +6660,34 @@ public enum Operations {
                 ///
                 /// - Parameters:
                 ///   - direction: The direction to sort the results by.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - pinned: Pinned discussions only filter
                 public init(
-                    direction: Components.Parameters.direction? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil,
+                    direction: Components.Parameters.Direction? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil,
                     pinned: Swift.String? = nil
                 ) {
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                     self.pinned = pinned
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.TeamsListDiscussionsInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListDiscussionsInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListDiscussionsInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsListDiscussionsInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6678,9 +6695,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsListDiscussionsInOrg.Input.Path,
+                query: Operations.TeamsListDiscussionsInOrg.Input.Query = .init(),
+                headers: Operations.TeamsListDiscussionsInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -6692,26 +6709,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.TeamsListDiscussionsInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team_hyphen_discussion])
+                    case json([Components.Schemas.TeamDiscussion])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team_hyphen_discussion] {
+                    public var json: [Components.Schemas.TeamDiscussion] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6721,15 +6738,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsListDiscussionsInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.TeamsListDiscussionsInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListDiscussionsInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -6740,12 +6757,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/get(teams/list-discussions-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsListDiscussionsInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_discussions_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsListDiscussionsInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6802,7 +6819,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/post(teams/create-discussion-in-org)`.
-    public enum teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org {
+    public enum TeamsCreateDiscussionInOrg {
         public static let id: Swift.String = "teams/create-discussion-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/path`.
@@ -6810,41 +6827,41 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsCreateDiscussionInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreateDiscussionInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreateDiscussionInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsCreateDiscussionInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The discussion post's title.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/requestBody/json/title`.
@@ -6857,7 +6874,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/requestBody/json/private`.
                     public var _private: Swift.Bool?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - title: The discussion post's title.
@@ -6879,9 +6896,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.TeamsCreateDiscussionInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Body
+            public var body: Operations.TeamsCreateDiscussionInOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6889,9 +6906,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Input.Body
+                path: Operations.TeamsCreateDiscussionInOrg.Input.Path,
+                headers: Operations.TeamsCreateDiscussionInOrg.Input.Headers = .init(),
+                body: Operations.TeamsCreateDiscussionInOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -6903,12 +6920,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion)
+                    case json(Components.Schemas.TeamDiscussion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion {
+                    public var json: Components.Schemas.TeamDiscussion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6918,12 +6935,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Output.Created.Body
+                public var body: Operations.TeamsCreateDiscussionInOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.TeamsCreateDiscussionInOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -6932,12 +6949,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/post(teams/create-discussion-in-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Output.Created)
+            case created(Operations.TeamsCreateDiscussionInOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.teams_sol_create_hyphen_discussion_hyphen_in_hyphen_org.Output.Created {
+            public var created: Operations.TeamsCreateDiscussionInOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -6992,7 +7009,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/get(teams/get-discussion-in-org)`.
-    public enum teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org {
+    public enum TeamsGetDiscussionInOrg {
         public static let id: Swift.String = "teams/get-discussion-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/GET/path`.
@@ -7000,52 +7017,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsGetDiscussionInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetDiscussionInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetDiscussionInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsGetDiscussionInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsGetDiscussionInOrg.Input.Path,
+                headers: Operations.TeamsGetDiscussionInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7056,12 +7073,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion)
+                    case json(Components.Schemas.TeamDiscussion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion {
+                    public var json: Components.Schemas.TeamDiscussion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7071,12 +7088,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsGetDiscussionInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsGetDiscussionInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7085,12 +7102,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/get(teams/get-discussion-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsGetDiscussionInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_get_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsGetDiscussionInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7145,7 +7162,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/patch(teams/update-discussion-in-org)`.
-    public enum teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org {
+    public enum TeamsUpdateDiscussionInOrg {
         public static let id: Swift.String = "teams/update-discussion-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/path`.
@@ -7153,48 +7170,48 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsUpdateDiscussionInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateDiscussionInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateDiscussionInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsUpdateDiscussionInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The discussion post's title.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/requestBody/json/title`.
@@ -7203,7 +7220,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/requestBody/json/body`.
                     public var body: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - title: The discussion post's title.
@@ -7221,9 +7238,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.TeamsUpdateDiscussionInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Body?
+            public var body: Operations.TeamsUpdateDiscussionInOrg.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7231,9 +7248,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Input.Body? = nil
+                path: Operations.TeamsUpdateDiscussionInOrg.Input.Path,
+                headers: Operations.TeamsUpdateDiscussionInOrg.Input.Headers = .init(),
+                body: Operations.TeamsUpdateDiscussionInOrg.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -7245,12 +7262,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion)
+                    case json(Components.Schemas.TeamDiscussion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion {
+                    public var json: Components.Schemas.TeamDiscussion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7260,12 +7277,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsUpdateDiscussionInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsUpdateDiscussionInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7274,12 +7291,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/patch(teams/update-discussion-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsUpdateDiscussionInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_update_hyphen_discussion_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsUpdateDiscussionInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7334,7 +7351,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/delete(teams/delete-discussion-in-org)`.
-    public enum teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org {
+    public enum TeamsDeleteDiscussionInOrg {
         public static let id: Swift.String = "teams/delete-discussion-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/DELETE/path`.
@@ -7342,37 +7359,37 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/DELETE/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/DELETE/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsDeleteDiscussionInOrg.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Input.Path) {
+            public init(path: Operations.TeamsDeleteDiscussionInOrg.Input.Path) {
                 self.path = path
             }
         }
@@ -7386,12 +7403,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/delete(teams/delete-discussion-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsDeleteDiscussionInOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/delete(teams/delete-discussion-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsDeleteDiscussionInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7421,7 +7446,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-in-org)`.
-    public enum teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org {
+    public enum TeamsListDiscussionCommentsInOrg {
         public static let id: Swift.String = "teams/list-discussion-comments-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/path`.
@@ -7429,80 +7454,80 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsListDiscussionCommentsInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - direction: The direction to sort the results by.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    direction: Components.Parameters.direction? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    direction: Components.Parameters.Direction? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.TeamsListDiscussionCommentsInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListDiscussionCommentsInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListDiscussionCommentsInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsListDiscussionCommentsInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7510,9 +7535,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsListDiscussionCommentsInOrg.Input.Path,
+                query: Operations.TeamsListDiscussionCommentsInOrg.Input.Query = .init(),
+                headers: Operations.TeamsListDiscussionCommentsInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7524,26 +7549,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.TeamsListDiscussionCommentsInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team_hyphen_discussion_hyphen_comment])
+                    case json([Components.Schemas.TeamDiscussionComment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team_hyphen_discussion_hyphen_comment] {
+                    public var json: [Components.Schemas.TeamDiscussionComment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7553,15 +7578,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsListDiscussionCommentsInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.TeamsListDiscussionCommentsInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListDiscussionCommentsInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -7572,12 +7597,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsListDiscussionCommentsInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsListDiscussionCommentsInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7634,7 +7659,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-in-org)`.
-    public enum teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org {
+    public enum TeamsCreateDiscussionCommentInOrg {
         public static let id: Swift.String = "teams/create-discussion-comment-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/path`.
@@ -7642,53 +7667,53 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsCreateDiscussionCommentInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreateDiscussionCommentInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreateDiscussionCommentInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsCreateDiscussionCommentInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The discussion comment's body text.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The discussion comment's body text.
@@ -7700,9 +7725,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.TeamsCreateDiscussionCommentInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
+            public var body: Operations.TeamsCreateDiscussionCommentInOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7710,9 +7735,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
+                path: Operations.TeamsCreateDiscussionCommentInOrg.Input.Path,
+                headers: Operations.TeamsCreateDiscussionCommentInOrg.Input.Headers = .init(),
+                body: Operations.TeamsCreateDiscussionCommentInOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -7724,12 +7749,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion_hyphen_comment)
+                    case json(Components.Schemas.TeamDiscussionComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion_hyphen_comment {
+                    public var json: Components.Schemas.TeamDiscussionComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7739,12 +7764,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created.Body
+                public var body: Operations.TeamsCreateDiscussionCommentInOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.TeamsCreateDiscussionCommentInOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -7753,12 +7778,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-in-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created)
+            case created(Operations.TeamsCreateDiscussionCommentInOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Created {
+            public var created: Operations.TeamsCreateDiscussionCommentInOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -7813,7 +7838,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-in-org)`.
-    public enum teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org {
+    public enum TeamsGetDiscussionCommentInOrg {
         public static let id: Swift.String = "teams/get-discussion-comment-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/GET/path`.
@@ -7821,59 +7846,59 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/GET/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsGetDiscussionCommentInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetDiscussionCommentInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetDiscussionCommentInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsGetDiscussionCommentInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsGetDiscussionCommentInOrg.Input.Path,
+                headers: Operations.TeamsGetDiscussionCommentInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7884,12 +7909,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion_hyphen_comment)
+                    case json(Components.Schemas.TeamDiscussionComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion_hyphen_comment {
+                    public var json: Components.Schemas.TeamDiscussionComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7899,12 +7924,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsGetDiscussionCommentInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsGetDiscussionCommentInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7913,12 +7938,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsGetDiscussionCommentInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsGetDiscussionCommentInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7973,7 +7998,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-in-org)`.
-    public enum teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org {
+    public enum TeamsUpdateDiscussionCommentInOrg {
         public static let id: Swift.String = "teams/update-discussion-comment-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path`.
@@ -7981,60 +8006,60 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateDiscussionCommentInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateDiscussionCommentInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The discussion comment's body text.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The discussion comment's body text.
@@ -8046,9 +8071,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.TeamsUpdateDiscussionCommentInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
+            public var body: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8056,9 +8081,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Body
+                path: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Path,
+                headers: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Headers = .init(),
+                body: Operations.TeamsUpdateDiscussionCommentInOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -8070,12 +8095,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion_hyphen_comment)
+                    case json(Components.Schemas.TeamDiscussionComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion_hyphen_comment {
+                    public var json: Components.Schemas.TeamDiscussionComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8085,12 +8110,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsUpdateDiscussionCommentInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsUpdateDiscussionCommentInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8099,12 +8124,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsUpdateDiscussionCommentInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsUpdateDiscussionCommentInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8159,7 +8184,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-in-org)`.
-    public enum teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org {
+    public enum TeamsDeleteDiscussionCommentInOrg {
         public static let id: Swift.String = "teams/delete-discussion-comment-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path`.
@@ -8167,44 +8192,44 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamSlug: The slug of the team name.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamSlug = teamSlug
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsDeleteDiscussionCommentInOrg.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Input.Path) {
+            public init(path: Operations.TeamsDeleteDiscussionCommentInOrg.Input.Path) {
                 self.path = path
             }
         }
@@ -8218,12 +8243,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsDeleteDiscussionCommentInOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsDeleteDiscussionCommentInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -8251,7 +8284,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/invitations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/invitations/get(teams/list-pending-invitations-in-org)`.
-    public enum teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org {
+    public enum TeamsListPendingInvitationsInOrg {
         public static let id: Swift.String = "teams/list-pending-invitations-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/path`.
@@ -8259,61 +8292,61 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsListPendingInvitationsInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.TeamsListPendingInvitationsInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListPendingInvitationsInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListPendingInvitationsInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsListPendingInvitationsInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8321,9 +8354,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsListPendingInvitationsInOrg.Input.Path,
+                query: Operations.TeamsListPendingInvitationsInOrg.Input.Query = .init(),
+                headers: Operations.TeamsListPendingInvitationsInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -8335,26 +8368,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.TeamsListPendingInvitationsInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/invitations/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.organization_hyphen_invitation])
+                    case json([Components.Schemas.OrganizationInvitation])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.organization_hyphen_invitation] {
+                    public var json: [Components.Schemas.OrganizationInvitation] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8364,15 +8397,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsListPendingInvitationsInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.TeamsListPendingInvitationsInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListPendingInvitationsInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8383,12 +8416,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/invitations/get(teams/list-pending-invitations-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsListPendingInvitationsInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsListPendingInvitationsInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8440,7 +8473,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/members`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/members/get(teams/list-members-in-org)`.
-    public enum teams_sol_list_hyphen_members_hyphen_in_hyphen_org {
+    public enum TeamsListMembersInOrg {
         public static let id: Swift.String = "teams/list-members-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/path`.
@@ -8448,29 +8481,29 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsListMembersInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/query/role`.
-                @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum RolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case member = "member"
                     case maintainer = "maintainer"
                     case all = "all"
@@ -8478,44 +8511,44 @@ public enum Operations {
                 /// Filters members returned by their role in the team.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/query/role`.
-                public var role: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Query.rolePayload?
+                public var role: Operations.TeamsListMembersInOrg.Input.Query.RolePayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - role: Filters members returned by their role in the team.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    role: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Query.rolePayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    role: Operations.TeamsListMembersInOrg.Input.Query.RolePayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.role = role
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.TeamsListMembersInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListMembersInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListMembersInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsListMembersInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8523,9 +8556,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsListMembersInOrg.Input.Path,
+                query: Operations.TeamsListMembersInOrg.Input.Query = .init(),
+                headers: Operations.TeamsListMembersInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -8537,26 +8570,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.TeamsListMembersInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8566,15 +8599,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsListMembersInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.TeamsListMembersInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListMembersInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8585,12 +8618,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/members/get(teams/list-members-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsListMembersInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_members_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsListMembersInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8650,7 +8683,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/get(teams/get-membership-for-user-in-org)`.
-    public enum teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org {
+    public enum TeamsGetMembershipForUserInOrg {
         public static let id: Swift.String = "teams/get-membership-for-user-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/GET/path`.
@@ -8658,52 +8691,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    username: Components.Parameters.username
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    username: Components.Parameters.Username
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsGetMembershipForUserInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetMembershipForUserInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetMembershipForUserInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsGetMembershipForUserInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsGetMembershipForUserInOrg.Input.Path,
+                headers: Operations.TeamsGetMembershipForUserInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -8714,12 +8747,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_membership)
+                    case json(Components.Schemas.TeamMembership)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_membership {
+                    public var json: Components.Schemas.TeamMembership {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8729,12 +8762,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsGetMembershipForUserInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsGetMembershipForUserInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8743,12 +8776,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/get(teams/get-membership-for-user-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsGetMembershipForUserInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsGetMembershipForUserInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8770,12 +8803,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/get(teams/get-membership-for-user-in-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.NotFound)
+            case notFound(Operations.TeamsGetMembershipForUserInOrg.Output.NotFound)
+            /// if user has no team membership
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/get(teams/get-membership-for-user-in-org)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.NotFound {
+            public var notFound: Operations.TeamsGetMembershipForUserInOrg.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -8837,7 +8878,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)`.
-    public enum teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org {
+    public enum TeamsAddOrUpdateMembershipForUserInOrg {
         public static let id: Swift.String = "teams/add-or-update-membership-for-user-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/path`.
@@ -8845,64 +8886,64 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    username: Components.Parameters.username
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    username: Components.Parameters.Username
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateMembershipForUserInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateMembershipForUserInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The role that this user should have in the team.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/requestBody/json/role`.
-                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum RolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case member = "member"
                         case maintainer = "maintainer"
                     }
                     /// The role that this user should have in the team.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/requestBody/json/role`.
-                    public var role: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Body.jsonPayload.rolePayload?
-                    /// Creates a new `jsonPayload`.
+                    public var role: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Body.JsonPayload.RolePayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - role: The role that this user should have in the team.
-                    public init(role: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Body.jsonPayload.rolePayload? = nil) {
+                    public init(role: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Body.JsonPayload.RolePayload? = nil) {
                         self.role = role
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -8910,9 +8951,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Body?
+            public var body: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8920,9 +8961,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Body? = nil
+                path: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Path,
+                headers: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Headers = .init(),
+                body: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -8934,12 +8975,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_membership)
+                    case json(Components.Schemas.TeamMembership)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_membership {
+                    public var json: Components.Schemas.TeamMembership {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8949,12 +8990,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -8963,12 +9004,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8990,12 +9031,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Forbidden)
+            case forbidden(Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.Forbidden)
+            /// Forbidden if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Forbidden {
+            public var forbidden: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9017,12 +9066,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.UnprocessableContent)
+            case unprocessableContent(Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.UnprocessableContent)
+            /// Unprocessable Entity if you attempt to add an organization to a team
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.TeamsAddOrUpdateMembershipForUserInOrg.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -9080,7 +9137,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)`.
-    public enum teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org {
+    public enum TeamsRemoveMembershipForUserInOrg {
         public static let id: Swift.String = "teams/remove-membership-for-user-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/DELETE/path`.
@@ -9088,37 +9145,37 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/DELETE/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/DELETE/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    username: Components.Parameters.username
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    username: Components.Parameters.Username
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsRemoveMembershipForUserInOrg.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Input.Path) {
+            public init(path: Operations.TeamsRemoveMembershipForUserInOrg.Input.Path) {
                 self.path = path
             }
         }
@@ -9132,12 +9189,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsRemoveMembershipForUserInOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsRemoveMembershipForUserInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -9159,12 +9224,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Forbidden)
+            case forbidden(Operations.TeamsRemoveMembershipForUserInOrg.Output.Forbidden)
+            /// Forbidden if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Forbidden {
+            public var forbidden: Operations.TeamsRemoveMembershipForUserInOrg.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9191,7 +9264,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)`.
-    public enum teams_sol_list_hyphen_projects_hyphen_in_hyphen_org {
+    public enum TeamsListProjectsInOrg {
         public static let id: Swift.String = "teams/list-projects-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/path`.
@@ -9199,61 +9272,61 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsListProjectsInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.TeamsListProjectsInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListProjectsInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListProjectsInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsListProjectsInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -9261,9 +9334,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsListProjectsInOrg.Input.Path,
+                query: Operations.TeamsListProjectsInOrg.Input.Query = .init(),
+                headers: Operations.TeamsListProjectsInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -9275,26 +9348,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.TeamsListProjectsInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team_hyphen_project])
+                    case json([Components.Schemas.TeamProject])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team_hyphen_project] {
+                    public var json: [Components.Schemas.TeamProject] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9304,15 +9377,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsListProjectsInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.TeamsListProjectsInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListProjectsInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -9323,12 +9396,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/get(teams/list-projects-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsListProjectsInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_projects_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsListProjectsInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9380,7 +9453,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)`.
-    public enum teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org {
+    public enum TeamsCheckPermissionsForProjectInOrg {
         public static let id: Swift.String = "teams/check-permissions-for-project-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/GET/path`.
@@ -9388,52 +9461,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/GET/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - project_id: The unique identifier of the project.
+                ///   - teamSlug: The slug of the team name.
+                ///   - projectId: The unique identifier of the project.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    project_id: Components.Parameters.project_hyphen_id
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    projectId: Components.Parameters.ProjectId
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.project_id = project_id
+                    self.teamSlug = teamSlug
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsCheckPermissionsForProjectInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCheckPermissionsForProjectInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCheckPermissionsForProjectInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsCheckPermissionsForProjectInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsCheckPermissionsForProjectInOrg.Input.Path,
+                headers: Operations.TeamsCheckPermissionsForProjectInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -9444,12 +9517,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_project)
+                    case json(Components.Schemas.TeamProject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_project {
+                    public var json: Components.Schemas.TeamProject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9459,12 +9532,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsCheckPermissionsForProjectInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsCheckPermissionsForProjectInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -9473,12 +9546,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsCheckPermissionsForProjectInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsCheckPermissionsForProjectInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -9500,12 +9573,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output.NotFound)
+            case notFound(Operations.TeamsCheckPermissionsForProjectInOrg.Output.NotFound)
+            /// Not Found if project is not managed by this team
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output.NotFound {
+            public var notFound: Operations.TeamsCheckPermissionsForProjectInOrg.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -9557,7 +9638,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)`.
-    public enum teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org {
+    public enum TeamsAddOrUpdateProjectPermissionsInOrg {
         public static let id: Swift.String = "teams/add-or-update-project-permissions-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/path`.
@@ -9565,52 +9646,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - project_id: The unique identifier of the project.
+                ///   - teamSlug: The slug of the team name.
+                ///   - projectId: The unique identifier of the project.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    project_id: Components.Parameters.project_hyphen_id
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    projectId: Components.Parameters.ProjectId
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.project_id = project_id
+                    self.teamSlug = teamSlug
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateProjectPermissionsInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateProjectPermissionsInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case read = "read"
                         case write = "write"
                         case admin = "admin"
@@ -9618,12 +9699,12 @@ public enum Operations {
                     /// The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/requestBody/json/permission`.
-                    public var permission: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Body.jsonPayload.permissionPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var permission: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Body.JsonPayload.PermissionPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - permission: The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
-                    public init(permission: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Body.jsonPayload.permissionPayload? = nil) {
+                    public init(permission: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Body.JsonPayload.PermissionPayload? = nil) {
                         self.permission = permission
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -9631,9 +9712,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Body?
+            public var body: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -9641,9 +9722,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Headers = .init(),
-                body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Input.Body? = nil
+                path: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Path,
+                headers: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Headers = .init(),
+                body: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -9660,12 +9741,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -9682,35 +9771,35 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/responses/403/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/responses/403/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/responses/403/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/responses/403/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
-                        /// Creates a new `jsonPayload`.
+                        public var documentationUrl: Swift.String?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         public init(
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil
+                            documentationUrl: Swift.String? = nil
                         ) {
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                         }
                         public enum CodingKeys: String, CodingKey {
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/responses/403/content/application\/json`.
-                    case json(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.Forbidden.Body.jsonPayload)
+                    case json(Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.Forbidden.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.Forbidden.Body.jsonPayload {
+                    public var json: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.Forbidden.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9720,12 +9809,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.Forbidden.Body
+                public var body: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.Forbidden.Body
                 /// Creates a new `Forbidden`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.Forbidden.Body) {
+                public init(body: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.Forbidden.Body) {
                     self.body = body
                 }
             }
@@ -9734,12 +9823,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.Forbidden)
+            case forbidden(Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.Forbidden {
+            public var forbidden: Operations.TeamsAddOrUpdateProjectPermissionsInOrg.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -9791,7 +9880,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)`.
-    public enum teams_sol_remove_hyphen_project_hyphen_in_hyphen_org {
+    public enum TeamsRemoveProjectInOrg {
         public static let id: Swift.String = "teams/remove-project-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/DELETE/path`.
@@ -9799,37 +9888,37 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/DELETE/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/DELETE/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
-                ///   - project_id: The unique identifier of the project.
+                ///   - teamSlug: The slug of the team name.
+                ///   - projectId: The unique identifier of the project.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    project_id: Components.Parameters.project_hyphen_id
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    projectId: Components.Parameters.ProjectId
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
-                    self.project_id = project_id
+                    self.teamSlug = teamSlug
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsRemoveProjectInOrg.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Input.Path) {
+            public init(path: Operations.TeamsRemoveProjectInOrg.Input.Path) {
                 self.path = path
             }
         }
@@ -9843,12 +9932,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsRemoveProjectInOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsRemoveProjectInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -9876,7 +9973,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/repos`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/get(teams/list-repos-in-org)`.
-    public enum teams_sol_list_hyphen_repos_hyphen_in_hyphen_org {
+    public enum TeamsListReposInOrg {
         public static let id: Swift.String = "teams/list-repos-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/path`.
@@ -9884,61 +9981,61 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsListReposInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.TeamsListReposInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListReposInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListReposInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsListReposInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -9946,9 +10043,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsListReposInOrg.Input.Path,
+                query: Operations.TeamsListReposInOrg.Input.Query = .init(),
+                headers: Operations.TeamsListReposInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -9960,26 +10057,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.TeamsListReposInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.minimal_hyphen_repository])
+                    case json([Components.Schemas.MinimalRepository])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.minimal_hyphen_repository] {
+                    public var json: [Components.Schemas.MinimalRepository] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -9989,15 +10086,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsListReposInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.TeamsListReposInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListReposInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -10008,12 +10105,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/get(teams/list-repos-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsListReposInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_repos_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsListReposInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10072,7 +10169,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)`.
-    public enum teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org {
+    public enum TeamsCheckPermissionsForRepoInOrg {
         public static let id: Swift.String = "teams/check-permissions-for-repo-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/GET/path`.
@@ -10080,59 +10177,59 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsCheckPermissionsForRepoInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCheckPermissionsForRepoInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCheckPermissionsForRepoInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsCheckPermissionsForRepoInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input.Path,
-                headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsCheckPermissionsForRepoInOrg.Input.Path,
+                headers: Operations.TeamsCheckPermissionsForRepoInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10143,12 +10240,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_repository)
+                    case json(Components.Schemas.TeamRepository)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_repository {
+                    public var json: Components.Schemas.TeamRepository {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10158,12 +10255,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsCheckPermissionsForRepoInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.TeamsCheckPermissionsForRepoInOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10172,12 +10269,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsCheckPermissionsForRepoInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsCheckPermissionsForRepoInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10199,12 +10296,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsCheckPermissionsForRepoInOrg.Output.NoContent)
+            /// Response if team has permission for the repository. This is the response when the repository media type hasn't been provded in the Accept header.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsCheckPermissionsForRepoInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -10226,12 +10331,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.NotFound)
+            case notFound(Operations.TeamsCheckPermissionsForRepoInOrg.Output.NotFound)
+            /// Not Found if team does not have permission for the repository
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.NotFound {
+            public var notFound: Operations.TeamsCheckPermissionsForRepoInOrg.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10286,7 +10399,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-in-org)`.
-    public enum teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org {
+    public enum TeamsAddOrUpdateRepoPermissionsInOrg {
         public static let id: Swift.String = "teams/add-or-update-repo-permissions-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/path`.
@@ -10294,48 +10407,48 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The permission to grant the team on this repository. We accept the following permissions to be set: `pull`, `triage`, `push`, `maintain`, `admin` and you can also specify a custom repository role name, if the owning organization has defined any. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/requestBody/json/permission`.
                     public var permission: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - permission: The permission to grant the team on this repository. We accept the following permissions to be set: `pull`, `triage`, `push`, `maintain`, `admin` and you can also specify a custom repository role name, if the owning organization has defined any. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
@@ -10347,17 +10460,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/PUT/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input.Body?
+            public var body: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - body:
             public init(
-                path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input.Path,
-                body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Input.Body? = nil
+                path: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input.Path,
+                body: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Input.Body? = nil
             ) {
                 self.path = path
                 self.body = body
@@ -10373,12 +10486,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsAddOrUpdateRepoPermissionsInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -10406,7 +10527,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/delete(teams/remove-repo-in-org)`.
-    public enum teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org {
+    public enum TeamsRemoveRepoInOrg {
         public static let id: Swift.String = "teams/remove-repo-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/DELETE/path`.
@@ -10414,44 +10535,44 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/DELETE/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug,
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsRemoveRepoInOrg.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Input.Path) {
+            public init(path: Operations.TeamsRemoveRepoInOrg.Input.Path) {
                 self.path = path
             }
         }
@@ -10465,12 +10586,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/delete(teams/remove-repo-in-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Output.NoContent)
+            case noContent(Operations.TeamsRemoveRepoInOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/delete(teams/remove-repo-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Output.NoContent {
+            public var noContent: Operations.TeamsRemoveRepoInOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -10498,7 +10627,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/teams/{team_slug}/teams`.
     /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/teams/get(teams/list-child-in-org)`.
-    public enum teams_sol_list_hyphen_child_hyphen_in_hyphen_org {
+    public enum TeamsListChildInOrg {
         public static let id: Swift.String = "teams/list-child-in-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/path`.
@@ -10506,61 +10635,61 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The slug of the team name.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/path/team_slug`.
-                public var team_slug: Components.Parameters.team_hyphen_slug
+                public var teamSlug: Components.Parameters.TeamSlug
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - team_slug: The slug of the team name.
+                ///   - teamSlug: The slug of the team name.
                 public init(
-                    org: Components.Parameters.org,
-                    team_slug: Components.Parameters.team_hyphen_slug
+                    org: Components.Parameters.Org,
+                    teamSlug: Components.Parameters.TeamSlug
                 ) {
                     self.org = org
-                    self.team_slug = team_slug
+                    self.teamSlug = teamSlug
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Path
+            public var path: Operations.TeamsListChildInOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Query
+            public var query: Operations.TeamsListChildInOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListChildInOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListChildInOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Headers
+            public var headers: Operations.TeamsListChildInOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -10568,9 +10697,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Path,
-                query: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Input.Headers = .init()
+                path: Operations.TeamsListChildInOrg.Input.Path,
+                query: Operations.TeamsListChildInOrg.Input.Query = .init(),
+                headers: Operations.TeamsListChildInOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -10582,26 +10711,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.TeamsListChildInOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/teams/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team])
+                    case json([Components.Schemas.Team])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team] {
+                    public var json: [Components.Schemas.Team] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10611,15 +10740,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output.Ok.Body
+                public var body: Operations.TeamsListChildInOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output.Ok.Body
+                    headers: Operations.TeamsListChildInOrg.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListChildInOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -10630,12 +10759,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/teams/get(teams/list-child-in-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output.Ok)
+            case ok(Operations.TeamsListChildInOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_child_hyphen_in_hyphen_org.Output.Ok {
+            public var ok: Operations.TeamsListChildInOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10686,7 +10815,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/get(teams/get-legacy)`.
-    public enum teams_sol_get_hyphen_legacy {
+    public enum TeamsGetLegacy {
         public static let id: Swift.String = "teams/get-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/GET/path`.
@@ -10694,36 +10823,36 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsGetLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_get_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsGetLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_get_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_get_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsGetLegacy.Input.Path,
+                headers: Operations.TeamsGetLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -10734,12 +10863,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_full)
+                    case json(Components.Schemas.TeamFull)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_full {
+                    public var json: Components.Schemas.TeamFull {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -10749,12 +10878,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_get_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsGetLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_get_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsGetLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -10763,12 +10892,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/get(teams/get-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_get_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsGetLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_get_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsGetLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -10786,12 +10915,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/get(teams/get-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -10847,7 +10976,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)`.
-    public enum teams_sol_update_hyphen_legacy {
+    public enum TeamsUpdateLegacy {
         public static let id: Swift.String = "teams/update-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/path`.
@@ -10855,32 +10984,32 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_update_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsUpdateLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_update_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsUpdateLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The name of the team.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/name`.
@@ -10897,7 +11026,7 @@ public enum Operations {
                     ///  * `closed` - visible to all members of this organization.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/privacy`.
-                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PrivacyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case secret = "secret"
                         case closed = "closed"
                     }
@@ -10909,26 +11038,26 @@ public enum Operations {
                     ///  * `closed` - visible to all members of this organization.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/privacy`.
-                    public var privacy: Operations.teams_sol_update_hyphen_legacy.Input.Body.jsonPayload.privacyPayload?
+                    public var privacy: Operations.TeamsUpdateLegacy.Input.Body.JsonPayload.PrivacyPayload?
                     /// The notification setting the team has chosen. Editing teams without specifying this parameter leaves `notification_setting` intact. The options are: 
                     ///  * `notifications_enabled` - team members receive notifications when the team is @mentioned.  
                     ///  * `notifications_disabled` - no one receives notifications.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/notification_setting`.
-                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable {
-                        case notifications_enabled = "notifications_enabled"
-                        case notifications_disabled = "notifications_disabled"
+                    @frozen public enum NotificationSettingPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case notificationsEnabled = "notifications_enabled"
+                        case notificationsDisabled = "notifications_disabled"
                     }
                     /// The notification setting the team has chosen. Editing teams without specifying this parameter leaves `notification_setting` intact. The options are: 
                     ///  * `notifications_enabled` - team members receive notifications when the team is @mentioned.  
                     ///  * `notifications_disabled` - no one receives notifications.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/notification_setting`.
-                    public var notification_setting: Operations.teams_sol_update_hyphen_legacy.Input.Body.jsonPayload.notification_settingPayload?
+                    public var notificationSetting: Operations.TeamsUpdateLegacy.Input.Body.JsonPayload.NotificationSettingPayload?
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case pull = "pull"
                         case push = "push"
                         case admin = "admin"
@@ -10936,48 +11065,48 @@ public enum Operations {
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/permission`.
-                    public var permission: Operations.teams_sol_update_hyphen_legacy.Input.Body.jsonPayload.permissionPayload?
+                    public var permission: Operations.TeamsUpdateLegacy.Input.Body.JsonPayload.PermissionPayload?
                     /// The ID of a team to set as the parent team.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/parent_team_id`.
-                    public var parent_team_id: Swift.Int?
-                    /// Creates a new `jsonPayload`.
+                    public var parentTeamId: Swift.Int?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - name: The name of the team.
                     ///   - description: The description of the team.
                     ///   - privacy: The level of privacy this team should have. Editing teams without specifying this parameter leaves `privacy` intact. The options are:  
-                    ///   - notification_setting: The notification setting the team has chosen. Editing teams without specifying this parameter leaves `notification_setting` intact. The options are: 
+                    ///   - notificationSetting: The notification setting the team has chosen. Editing teams without specifying this parameter leaves `notification_setting` intact. The options are: 
                     ///   - permission: **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
-                    ///   - parent_team_id: The ID of a team to set as the parent team.
+                    ///   - parentTeamId: The ID of a team to set as the parent team.
                     public init(
                         name: Swift.String,
                         description: Swift.String? = nil,
-                        privacy: Operations.teams_sol_update_hyphen_legacy.Input.Body.jsonPayload.privacyPayload? = nil,
-                        notification_setting: Operations.teams_sol_update_hyphen_legacy.Input.Body.jsonPayload.notification_settingPayload? = nil,
-                        permission: Operations.teams_sol_update_hyphen_legacy.Input.Body.jsonPayload.permissionPayload? = nil,
-                        parent_team_id: Swift.Int? = nil
+                        privacy: Operations.TeamsUpdateLegacy.Input.Body.JsonPayload.PrivacyPayload? = nil,
+                        notificationSetting: Operations.TeamsUpdateLegacy.Input.Body.JsonPayload.NotificationSettingPayload? = nil,
+                        permission: Operations.TeamsUpdateLegacy.Input.Body.JsonPayload.PermissionPayload? = nil,
+                        parentTeamId: Swift.Int? = nil
                     ) {
                         self.name = name
                         self.description = description
                         self.privacy = privacy
-                        self.notification_setting = notification_setting
+                        self.notificationSetting = notificationSetting
                         self.permission = permission
-                        self.parent_team_id = parent_team_id
+                        self.parentTeamId = parentTeamId
                     }
                     public enum CodingKeys: String, CodingKey {
                         case name
                         case description
                         case privacy
-                        case notification_setting
+                        case notificationSetting = "notification_setting"
                         case permission
-                        case parent_team_id
+                        case parentTeamId = "parent_team_id"
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_update_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.TeamsUpdateLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_update_hyphen_legacy.Input.Body
+            public var body: Operations.TeamsUpdateLegacy.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -10985,9 +11114,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_update_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_update_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.teams_sol_update_hyphen_legacy.Input.Body
+                path: Operations.TeamsUpdateLegacy.Input.Path,
+                headers: Operations.TeamsUpdateLegacy.Input.Headers = .init(),
+                body: Operations.TeamsUpdateLegacy.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -10999,12 +11128,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_full)
+                    case json(Components.Schemas.TeamFull)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_full {
+                    public var json: Components.Schemas.TeamFull {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11014,12 +11143,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_update_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsUpdateLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_update_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsUpdateLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -11028,12 +11157,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_update_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsUpdateLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_update_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsUpdateLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11050,12 +11179,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/responses/201/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_full)
+                    case json(Components.Schemas.TeamFull)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_full {
+                    public var json: Components.Schemas.TeamFull {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11065,12 +11194,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_update_hyphen_legacy.Output.Created.Body
+                public var body: Operations.TeamsUpdateLegacy.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_update_hyphen_legacy.Output.Created.Body) {
+                public init(body: Operations.TeamsUpdateLegacy.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -11079,12 +11208,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.teams_sol_update_hyphen_legacy.Output.Created)
+            case created(Operations.TeamsUpdateLegacy.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.teams_sol_update_hyphen_legacy.Output.Created {
+            public var created: Operations.TeamsUpdateLegacy.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -11102,12 +11231,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11125,12 +11254,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -11148,12 +11277,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/patch(teams/update-legacy)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -11208,7 +11337,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)`.
-    public enum teams_sol_delete_hyphen_legacy {
+    public enum TeamsDeleteLegacy {
         public static let id: Swift.String = "teams/delete-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/DELETE/path`.
@@ -11216,36 +11345,36 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/DELETE/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_delete_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsDeleteLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_delete_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsDeleteLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_delete_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsDeleteLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_delete_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsDeleteLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_delete_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_delete_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsDeleteLegacy.Input.Path,
+                headers: Operations.TeamsDeleteLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -11261,12 +11390,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_delete_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsDeleteLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_delete_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsDeleteLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -11284,12 +11421,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -11307,12 +11444,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -11367,7 +11504,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/get(teams/list-discussions-legacy)`.
-    public enum teams_sol_list_hyphen_discussions_hyphen_legacy {
+    public enum TeamsListDiscussionsLegacy {
         public static let id: Swift.String = "teams/list-discussions-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/path`.
@@ -11375,64 +11512,64 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsListDiscussionsLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - direction: The direction to sort the results by.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    direction: Components.Parameters.direction? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    direction: Components.Parameters.Direction? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Query
+            public var query: Operations.TeamsListDiscussionsLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListDiscussionsLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListDiscussionsLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsListDiscussionsLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11440,9 +11577,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Path,
-                query: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsListDiscussionsLegacy.Input.Path,
+                query: Operations.TeamsListDiscussionsLegacy.Input.Query = .init(),
+                headers: Operations.TeamsListDiscussionsLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -11454,26 +11591,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.TeamsListDiscussionsLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team_hyphen_discussion])
+                    case json([Components.Schemas.TeamDiscussion])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team_hyphen_discussion] {
+                    public var json: [Components.Schemas.TeamDiscussion] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11483,15 +11620,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsListDiscussionsLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.TeamsListDiscussionsLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListDiscussionsLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -11502,12 +11639,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/get(teams/list-discussions-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsListDiscussionsLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_discussions_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsListDiscussionsLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11564,7 +11701,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /teams/{team_id}/discussions`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/post(teams/create-discussion-legacy)`.
-    public enum teams_sol_create_hyphen_discussion_hyphen_legacy {
+    public enum TeamsCreateDiscussionLegacy {
         public static let id: Swift.String = "teams/create-discussion-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/path`.
@@ -11572,32 +11709,32 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsCreateDiscussionLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreateDiscussionLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreateDiscussionLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsCreateDiscussionLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The discussion post's title.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/requestBody/json/title`.
@@ -11610,7 +11747,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/requestBody/json/private`.
                     public var _private: Swift.Bool?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - title: The discussion post's title.
@@ -11632,9 +11769,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.TeamsCreateDiscussionLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Body
+            public var body: Operations.TeamsCreateDiscussionLegacy.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11642,9 +11779,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Input.Body
+                path: Operations.TeamsCreateDiscussionLegacy.Input.Path,
+                headers: Operations.TeamsCreateDiscussionLegacy.Input.Headers = .init(),
+                body: Operations.TeamsCreateDiscussionLegacy.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -11656,12 +11793,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion)
+                    case json(Components.Schemas.TeamDiscussion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion {
+                    public var json: Components.Schemas.TeamDiscussion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11671,12 +11808,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Output.Created.Body
+                public var body: Operations.TeamsCreateDiscussionLegacy.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Output.Created.Body) {
+                public init(body: Operations.TeamsCreateDiscussionLegacy.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -11685,12 +11822,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/post(teams/create-discussion-legacy)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Output.Created)
+            case created(Operations.TeamsCreateDiscussionLegacy.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.teams_sol_create_hyphen_discussion_hyphen_legacy.Output.Created {
+            public var created: Operations.TeamsCreateDiscussionLegacy.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -11745,7 +11882,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/get(teams/get-discussion-legacy)`.
-    public enum teams_sol_get_hyphen_discussion_hyphen_legacy {
+    public enum TeamsGetDiscussionLegacy {
         public static let id: Swift.String = "teams/get-discussion-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/GET/path`.
@@ -11753,45 +11890,45 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsGetDiscussionLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetDiscussionLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetDiscussionLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsGetDiscussionLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsGetDiscussionLegacy.Input.Path,
+                headers: Operations.TeamsGetDiscussionLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -11802,12 +11939,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion)
+                    case json(Components.Schemas.TeamDiscussion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion {
+                    public var json: Components.Schemas.TeamDiscussion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11817,12 +11954,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsGetDiscussionLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsGetDiscussionLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -11831,12 +11968,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/get(teams/get-discussion-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsGetDiscussionLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_get_hyphen_discussion_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsGetDiscussionLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -11891,7 +12028,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/patch(teams/update-discussion-legacy)`.
-    public enum teams_sol_update_hyphen_discussion_hyphen_legacy {
+    public enum TeamsUpdateDiscussionLegacy {
         public static let id: Swift.String = "teams/update-discussion-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/path`.
@@ -11899,41 +12036,41 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsUpdateDiscussionLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateDiscussionLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateDiscussionLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsUpdateDiscussionLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The discussion post's title.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/requestBody/json/title`.
@@ -11942,7 +12079,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/requestBody/json/body`.
                     public var body: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - title: The discussion post's title.
@@ -11960,9 +12097,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.TeamsUpdateDiscussionLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Body?
+            public var body: Operations.TeamsUpdateDiscussionLegacy.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -11970,9 +12107,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Input.Body? = nil
+                path: Operations.TeamsUpdateDiscussionLegacy.Input.Path,
+                headers: Operations.TeamsUpdateDiscussionLegacy.Input.Headers = .init(),
+                body: Operations.TeamsUpdateDiscussionLegacy.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -11984,12 +12121,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion)
+                    case json(Components.Schemas.TeamDiscussion)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion {
+                    public var json: Components.Schemas.TeamDiscussion {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -11999,12 +12136,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsUpdateDiscussionLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsUpdateDiscussionLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -12013,12 +12150,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/patch(teams/update-discussion-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsUpdateDiscussionLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_update_hyphen_discussion_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsUpdateDiscussionLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -12073,7 +12210,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/delete(teams/delete-discussion-legacy)`.
-    public enum teams_sol_delete_hyphen_discussion_hyphen_legacy {
+    public enum TeamsDeleteDiscussionLegacy {
         public static let id: Swift.String = "teams/delete-discussion-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/DELETE/path`.
@@ -12081,30 +12218,30 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/DELETE/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/DELETE/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsDeleteDiscussionLegacy.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Input.Path) {
+            public init(path: Operations.TeamsDeleteDiscussionLegacy.Input.Path) {
                 self.path = path
             }
         }
@@ -12118,12 +12255,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/delete(teams/delete-discussion-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsDeleteDiscussionLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/delete(teams/delete-discussion-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsDeleteDiscussionLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -12153,7 +12298,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-legacy)`.
-    public enum teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy {
+    public enum TeamsListDiscussionCommentsLegacy {
         public static let id: Swift.String = "teams/list-discussion-comments-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/path`.
@@ -12161,73 +12306,73 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsListDiscussionCommentsLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum Direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
                 /// The direction to sort the results by.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/query/direction`.
-                public var direction: Components.Parameters.direction?
+                public var direction: Components.Parameters.Direction?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - direction: The direction to sort the results by.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    direction: Components.Parameters.direction? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    direction: Components.Parameters.Direction? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.direction = direction
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Query
+            public var query: Operations.TeamsListDiscussionCommentsLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListDiscussionCommentsLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListDiscussionCommentsLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsListDiscussionCommentsLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -12235,9 +12380,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Path,
-                query: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsListDiscussionCommentsLegacy.Input.Path,
+                query: Operations.TeamsListDiscussionCommentsLegacy.Input.Query = .init(),
+                headers: Operations.TeamsListDiscussionCommentsLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -12249,26 +12394,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.TeamsListDiscussionCommentsLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team_hyphen_discussion_hyphen_comment])
+                    case json([Components.Schemas.TeamDiscussionComment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team_hyphen_discussion_hyphen_comment] {
+                    public var json: [Components.Schemas.TeamDiscussionComment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -12278,15 +12423,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsListDiscussionCommentsLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.TeamsListDiscussionCommentsLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListDiscussionCommentsLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -12297,12 +12442,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/get(teams/list-discussion-comments-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsListDiscussionCommentsLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_discussion_hyphen_comments_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsListDiscussionCommentsLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -12359,7 +12504,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /teams/{team_id}/discussions/{discussion_number}/comments`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-legacy)`.
-    public enum teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy {
+    public enum TeamsCreateDiscussionCommentLegacy {
         public static let id: Swift.String = "teams/create-discussion-comment-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/path`.
@@ -12367,46 +12512,46 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
                 }
             }
-            public var path: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsCreateDiscussionCommentLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreateDiscussionCommentLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCreateDiscussionCommentLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsCreateDiscussionCommentLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The discussion comment's body text.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The discussion comment's body text.
@@ -12418,9 +12563,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.TeamsCreateDiscussionCommentLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
+            public var body: Operations.TeamsCreateDiscussionCommentLegacy.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -12428,9 +12573,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
+                path: Operations.TeamsCreateDiscussionCommentLegacy.Input.Path,
+                headers: Operations.TeamsCreateDiscussionCommentLegacy.Input.Headers = .init(),
+                body: Operations.TeamsCreateDiscussionCommentLegacy.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -12442,12 +12587,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion_hyphen_comment)
+                    case json(Components.Schemas.TeamDiscussionComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion_hyphen_comment {
+                    public var json: Components.Schemas.TeamDiscussionComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -12457,12 +12602,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created.Body
+                public var body: Operations.TeamsCreateDiscussionCommentLegacy.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created.Body) {
+                public init(body: Operations.TeamsCreateDiscussionCommentLegacy.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -12471,12 +12616,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/post(teams/create-discussion-comment-legacy)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created)
+            case created(Operations.TeamsCreateDiscussionCommentLegacy.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.teams_sol_create_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Created {
+            public var created: Operations.TeamsCreateDiscussionCommentLegacy.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -12531,7 +12676,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-legacy)`.
-    public enum teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy {
+    public enum TeamsGetDiscussionCommentLegacy {
         public static let id: Swift.String = "teams/get-discussion-comment-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/GET/path`.
@@ -12539,52 +12684,52 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/GET/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/GET/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsGetDiscussionCommentLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetDiscussionCommentLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetDiscussionCommentLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsGetDiscussionCommentLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsGetDiscussionCommentLegacy.Input.Path,
+                headers: Operations.TeamsGetDiscussionCommentLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -12595,12 +12740,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion_hyphen_comment)
+                    case json(Components.Schemas.TeamDiscussionComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion_hyphen_comment {
+                    public var json: Components.Schemas.TeamDiscussionComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -12610,12 +12755,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsGetDiscussionCommentLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsGetDiscussionCommentLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -12624,12 +12769,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/get(teams/get-discussion-comment-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsGetDiscussionCommentLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_get_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsGetDiscussionCommentLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -12684,7 +12829,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-legacy)`.
-    public enum teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy {
+    public enum TeamsUpdateDiscussionCommentLegacy {
         public static let id: Swift.String = "teams/update-discussion-comment-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path`.
@@ -12692,53 +12837,53 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateDiscussionCommentLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsUpdateDiscussionCommentLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The discussion comment's body text.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The discussion comment's body text.
@@ -12750,9 +12895,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.TeamsUpdateDiscussionCommentLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
+            public var body: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -12760,9 +12905,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Body
+                path: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Path,
+                headers: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Headers = .init(),
+                body: Operations.TeamsUpdateDiscussionCommentLegacy.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -12774,12 +12919,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_discussion_hyphen_comment)
+                    case json(Components.Schemas.TeamDiscussionComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_discussion_hyphen_comment {
+                    public var json: Components.Schemas.TeamDiscussionComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -12789,12 +12934,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsUpdateDiscussionCommentLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsUpdateDiscussionCommentLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -12803,12 +12948,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/patch(teams/update-discussion-comment-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsUpdateDiscussionCommentLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_update_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsUpdateDiscussionCommentLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -12863,7 +13008,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-legacy)`.
-    public enum teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy {
+    public enum TeamsDeleteDiscussionCommentLegacy {
         public static let id: Swift.String = "teams/delete-discussion-comment-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path`.
@@ -12871,37 +13016,37 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The number that identifies the discussion.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path/discussion_number`.
-                public var discussion_number: Components.Parameters.discussion_hyphen_number
+                public var discussionNumber: Components.Parameters.DiscussionNumber
                 /// The number that identifies the comment.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/DELETE/path/comment_number`.
-                public var comment_number: Components.Parameters.comment_hyphen_number
+                public var commentNumber: Components.Parameters.CommentNumber
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - discussion_number: The number that identifies the discussion.
-                ///   - comment_number: The number that identifies the comment.
+                ///   - teamId: The unique identifier of the team.
+                ///   - discussionNumber: The number that identifies the discussion.
+                ///   - commentNumber: The number that identifies the comment.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    discussion_number: Components.Parameters.discussion_hyphen_number,
-                    comment_number: Components.Parameters.comment_hyphen_number
+                    teamId: Components.Parameters.TeamId,
+                    discussionNumber: Components.Parameters.DiscussionNumber,
+                    commentNumber: Components.Parameters.CommentNumber
                 ) {
-                    self.team_id = team_id
-                    self.discussion_number = discussion_number
-                    self.comment_number = comment_number
+                    self.teamId = teamId
+                    self.discussionNumber = discussionNumber
+                    self.commentNumber = commentNumber
                 }
             }
-            public var path: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsDeleteDiscussionCommentLegacy.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Input.Path) {
+            public init(path: Operations.TeamsDeleteDiscussionCommentLegacy.Input.Path) {
                 self.path = path
             }
         }
@@ -12915,12 +13060,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsDeleteDiscussionCommentLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsDeleteDiscussionCommentLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -12948,7 +13101,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/invitations`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/invitations/get(teams/list-pending-invitations-legacy)`.
-    public enum teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy {
+    public enum TeamsListPendingInvitationsLegacy {
         public static let id: Swift.String = "teams/list-pending-invitations-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/path`.
@@ -12956,52 +13109,52 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsListPendingInvitationsLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Query
+            public var query: Operations.TeamsListPendingInvitationsLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListPendingInvitationsLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListPendingInvitationsLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsListPendingInvitationsLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -13009,9 +13162,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Path,
-                query: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsListPendingInvitationsLegacy.Input.Path,
+                query: Operations.TeamsListPendingInvitationsLegacy.Input.Query = .init(),
+                headers: Operations.TeamsListPendingInvitationsLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -13023,26 +13176,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.TeamsListPendingInvitationsLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/invitations/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.organization_hyphen_invitation])
+                    case json([Components.Schemas.OrganizationInvitation])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.organization_hyphen_invitation] {
+                    public var json: [Components.Schemas.OrganizationInvitation] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -13052,15 +13205,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsListPendingInvitationsLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.TeamsListPendingInvitationsLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListPendingInvitationsLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -13071,12 +13224,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/invitations/get(teams/list-pending-invitations-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsListPendingInvitationsLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_pending_hyphen_invitations_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsListPendingInvitationsLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -13129,7 +13282,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/members`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/get(teams/list-members-legacy)`.
-    public enum teams_sol_list_hyphen_members_hyphen_legacy {
+    public enum TeamsListMembersLegacy {
         public static let id: Swift.String = "teams/list-members-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/path`.
@@ -13137,20 +13290,20 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsListMembersLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/query/role`.
-                @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum RolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case member = "member"
                     case maintainer = "maintainer"
                     case all = "all"
@@ -13158,44 +13311,44 @@ public enum Operations {
                 /// Filters members returned by their role in the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/query/role`.
-                public var role: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Query.rolePayload?
+                public var role: Operations.TeamsListMembersLegacy.Input.Query.RolePayload?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - role: Filters members returned by their role in the team.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    role: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Query.rolePayload? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    role: Operations.TeamsListMembersLegacy.Input.Query.RolePayload? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.role = role
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Query
+            public var query: Operations.TeamsListMembersLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_members_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListMembersLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_members_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListMembersLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsListMembersLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -13203,9 +13356,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Path,
-                query: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsListMembersLegacy.Input.Path,
+                query: Operations.TeamsListMembersLegacy.Input.Query = .init(),
+                headers: Operations.TeamsListMembersLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -13217,26 +13370,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.TeamsListMembersLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.simple_hyphen_user])
+                    case json([Components.Schemas.SimpleUser])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.simple_hyphen_user] {
+                    public var json: [Components.Schemas.SimpleUser] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -13246,15 +13399,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsListMembersLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.TeamsListMembersLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListMembersLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -13265,12 +13418,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/get(teams/list-members-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsListMembersLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_members_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsListMembersLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -13288,12 +13441,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/get(teams/list-members-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -13347,7 +13500,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)`.
-    public enum teams_sol_get_hyphen_member_hyphen_legacy {
+    public enum TeamsGetMemberLegacy {
         public static let id: Swift.String = "teams/get-member-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/GET/path`.
@@ -13355,30 +13508,30 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    username: Components.Parameters.username
+                    teamId: Components.Parameters.TeamId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_member_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsGetMemberLegacy.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_get_hyphen_member_hyphen_legacy.Input.Path) {
+            public init(path: Operations.TeamsGetMemberLegacy.Input.Path) {
                 self.path = path
             }
         }
@@ -13392,12 +13545,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsGetMemberLegacy.Output.NoContent)
+            /// if user is a member
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsGetMemberLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -13419,12 +13580,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output.NotFound)
+            case notFound(Operations.TeamsGetMemberLegacy.Output.NotFound)
+            /// if user is not a member
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output.NotFound {
+            public var notFound: Operations.TeamsGetMemberLegacy.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -13460,7 +13629,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)`.
-    public enum teams_sol_add_hyphen_member_hyphen_legacy {
+    public enum TeamsAddMemberLegacy {
         public static let id: Swift.String = "teams/add-member-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/PUT/path`.
@@ -13468,45 +13637,45 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/PUT/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/PUT/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    username: Components.Parameters.username
+                    teamId: Components.Parameters.TeamId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsAddMemberLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_member_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddMemberLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_member_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddMemberLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsAddMemberLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsAddMemberLegacy.Input.Path,
+                headers: Operations.TeamsAddMemberLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -13522,12 +13691,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsAddMemberLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsAddMemberLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -13549,12 +13726,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.NotFound)
+            case notFound(Operations.TeamsAddMemberLegacy.Output.NotFound)
+            /// Not Found if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.NotFound {
+            public var notFound: Operations.TeamsAddMemberLegacy.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -13576,12 +13761,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.UnprocessableContent)
+            case unprocessableContent(Operations.TeamsAddMemberLegacy.Output.UnprocessableContent)
+            /// Unprocessable Entity if you attempt to add an organization to a team or you attempt to add a user to a team when they are not a member of at least one other team in the same organization
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.TeamsAddMemberLegacy.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -13599,12 +13792,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -13663,7 +13856,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/members/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)`.
-    public enum teams_sol_remove_hyphen_member_hyphen_legacy {
+    public enum TeamsRemoveMemberLegacy {
         public static let id: Swift.String = "teams/remove-member-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/DELETE/path`.
@@ -13671,30 +13864,30 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/DELETE/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/{username}/DELETE/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    username: Components.Parameters.username
+                    teamId: Components.Parameters.TeamId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsRemoveMemberLegacy.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Input.Path) {
+            public init(path: Operations.TeamsRemoveMemberLegacy.Input.Path) {
                 self.path = path
             }
         }
@@ -13708,12 +13901,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsRemoveMemberLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsRemoveMemberLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -13735,12 +13936,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output.NotFound)
+            case notFound(Operations.TeamsRemoveMemberLegacy.Output.NotFound)
+            /// Not Found if team synchronization is setup
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output.NotFound {
+            public var notFound: Operations.TeamsRemoveMemberLegacy.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -13775,7 +13984,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/get(teams/get-membership-for-user-legacy)`.
-    public enum teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy {
+    public enum TeamsGetMembershipForUserLegacy {
         public static let id: Swift.String = "teams/get-membership-for-user-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/GET/path`.
@@ -13783,45 +13992,45 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    username: Components.Parameters.username
+                    teamId: Components.Parameters.TeamId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsGetMembershipForUserLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetMembershipForUserLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsGetMembershipForUserLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsGetMembershipForUserLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsGetMembershipForUserLegacy.Input.Path,
+                headers: Operations.TeamsGetMembershipForUserLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -13832,12 +14041,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_membership)
+                    case json(Components.Schemas.TeamMembership)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_membership {
+                    public var json: Components.Schemas.TeamMembership {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -13847,12 +14056,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsGetMembershipForUserLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsGetMembershipForUserLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -13861,12 +14070,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/get(teams/get-membership-for-user-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsGetMembershipForUserLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsGetMembershipForUserLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -13884,12 +14093,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/get(teams/get-membership-for-user-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -13951,7 +14160,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)`.
-    public enum teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy {
+    public enum TeamsAddOrUpdateMembershipForUserLegacy {
         public static let id: Swift.String = "teams/add-or-update-membership-for-user-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/path`.
@@ -13959,57 +14168,57 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    username: Components.Parameters.username
+                    teamId: Components.Parameters.TeamId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateMembershipForUserLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateMembershipForUserLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The role that this user should have in the team.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/requestBody/json/role`.
-                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum RolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case member = "member"
                         case maintainer = "maintainer"
                     }
                     /// The role that this user should have in the team.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/requestBody/json/role`.
-                    public var role: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Body.jsonPayload.rolePayload?
-                    /// Creates a new `jsonPayload`.
+                    public var role: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Body.JsonPayload.RolePayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - role: The role that this user should have in the team.
-                    public init(role: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Body.jsonPayload.rolePayload? = nil) {
+                    public init(role: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Body.JsonPayload.RolePayload? = nil) {
                         self.role = role
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -14017,9 +14226,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Body?
+            public var body: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -14027,9 +14236,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Body? = nil
+                path: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Path,
+                headers: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Headers = .init(),
+                body: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -14041,12 +14250,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_membership)
+                    case json(Components.Schemas.TeamMembership)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_membership {
+                    public var json: Components.Schemas.TeamMembership {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -14056,12 +14265,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -14070,12 +14279,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -14097,12 +14306,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Forbidden)
+            case forbidden(Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.Forbidden)
+            /// Forbidden if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Forbidden {
+            public var forbidden: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -14124,12 +14341,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.UnprocessableContent)
+            case unprocessableContent(Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.UnprocessableContent)
+            /// Unprocessable Entity if you attempt to add an organization to a team
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.TeamsAddOrUpdateMembershipForUserLegacy.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -14147,12 +14372,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -14210,7 +14435,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/memberships/{username}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)`.
-    public enum teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy {
+    public enum TeamsRemoveMembershipForUserLegacy {
         public static let id: Swift.String = "teams/remove-membership-for-user-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/DELETE/path`.
@@ -14218,30 +14443,30 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/DELETE/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/DELETE/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - username: The handle for the GitHub user account.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    username: Components.Parameters.username
+                    teamId: Components.Parameters.TeamId,
+                    username: Components.Parameters.Username
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.username = username
                 }
             }
-            public var path: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsRemoveMembershipForUserLegacy.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Input.Path) {
+            public init(path: Operations.TeamsRemoveMembershipForUserLegacy.Input.Path) {
                 self.path = path
             }
         }
@@ -14255,12 +14480,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsRemoveMembershipForUserLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsRemoveMembershipForUserLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -14282,12 +14515,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Forbidden)
+            case forbidden(Operations.TeamsRemoveMembershipForUserLegacy.Output.Forbidden)
+            /// if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Forbidden {
+            public var forbidden: Operations.TeamsRemoveMembershipForUserLegacy.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -14314,7 +14555,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)`.
-    public enum teams_sol_list_hyphen_projects_hyphen_legacy {
+    public enum TeamsListProjectsLegacy {
         public static let id: Swift.String = "teams/list-projects-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/path`.
@@ -14322,52 +14563,52 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsListProjectsLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Query
+            public var query: Operations.TeamsListProjectsLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_projects_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListProjectsLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_projects_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListProjectsLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsListProjectsLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -14375,9 +14616,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Path,
-                query: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsListProjectsLegacy.Input.Path,
+                query: Operations.TeamsListProjectsLegacy.Input.Query = .init(),
+                headers: Operations.TeamsListProjectsLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -14389,26 +14630,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.TeamsListProjectsLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/projects/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team_hyphen_project])
+                    case json([Components.Schemas.TeamProject])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team_hyphen_project] {
+                    public var json: [Components.Schemas.TeamProject] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -14418,15 +14659,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsListProjectsLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.TeamsListProjectsLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListProjectsLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -14437,12 +14678,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsListProjectsLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_projects_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsListProjectsLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -14460,12 +14701,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/get(teams/list-projects-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -14517,7 +14758,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)`.
-    public enum teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy {
+    public enum TeamsCheckPermissionsForProjectLegacy {
         public static let id: Swift.String = "teams/check-permissions-for-project-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/GET/path`.
@@ -14525,45 +14766,45 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/GET/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - project_id: The unique identifier of the project.
+                ///   - teamId: The unique identifier of the team.
+                ///   - projectId: The unique identifier of the project.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    project_id: Components.Parameters.project_hyphen_id
+                    teamId: Components.Parameters.TeamId,
+                    projectId: Components.Parameters.ProjectId
                 ) {
-                    self.team_id = team_id
-                    self.project_id = project_id
+                    self.teamId = teamId
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsCheckPermissionsForProjectLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCheckPermissionsForProjectLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCheckPermissionsForProjectLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsCheckPermissionsForProjectLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsCheckPermissionsForProjectLegacy.Input.Path,
+                headers: Operations.TeamsCheckPermissionsForProjectLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -14574,12 +14815,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_project)
+                    case json(Components.Schemas.TeamProject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_project {
+                    public var json: Components.Schemas.TeamProject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -14589,12 +14830,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsCheckPermissionsForProjectLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsCheckPermissionsForProjectLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -14603,12 +14844,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsCheckPermissionsForProjectLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsCheckPermissionsForProjectLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -14630,12 +14871,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output.NotFound)
+            case notFound(Operations.TeamsCheckPermissionsForProjectLegacy.Output.NotFound)
+            /// Not Found if project is not managed by this team
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output.NotFound {
+            public var notFound: Operations.TeamsCheckPermissionsForProjectLegacy.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -14687,7 +14936,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)`.
-    public enum teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy {
+    public enum TeamsAddOrUpdateProjectPermissionsLegacy {
         public static let id: Swift.String = "teams/add-or-update-project-permissions-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/path`.
@@ -14695,45 +14944,45 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - project_id: The unique identifier of the project.
+                ///   - teamId: The unique identifier of the team.
+                ///   - projectId: The unique identifier of the project.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    project_id: Components.Parameters.project_hyphen_id
+                    teamId: Components.Parameters.TeamId,
+                    projectId: Components.Parameters.ProjectId
                 ) {
-                    self.team_id = team_id
-                    self.project_id = project_id
+                    self.teamId = teamId
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateProjectPermissionsLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateProjectPermissionsLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case read = "read"
                         case write = "write"
                         case admin = "admin"
@@ -14741,12 +14990,12 @@ public enum Operations {
                     /// The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/requestBody/json/permission`.
-                    public var permission: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Body.jsonPayload.permissionPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var permission: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Body.JsonPayload.PermissionPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - permission: The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
-                    public init(permission: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Body.jsonPayload.permissionPayload? = nil) {
+                    public init(permission: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Body.JsonPayload.PermissionPayload? = nil) {
                         self.permission = permission
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -14754,9 +15003,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Body?
+            public var body: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -14764,9 +15013,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Input.Body? = nil
+                path: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Path,
+                headers: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Headers = .init(),
+                body: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -14783,12 +15032,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -14805,35 +15062,35 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/responses/403/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/responses/403/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
+                    public struct JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/responses/403/content/json/message`.
                         public var message: Swift.String?
                         /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/responses/403/content/json/documentation_url`.
-                        public var documentation_url: Swift.String?
-                        /// Creates a new `jsonPayload`.
+                        public var documentationUrl: Swift.String?
+                        /// Creates a new `JsonPayload`.
                         ///
                         /// - Parameters:
                         ///   - message:
-                        ///   - documentation_url:
+                        ///   - documentationUrl:
                         public init(
                             message: Swift.String? = nil,
-                            documentation_url: Swift.String? = nil
+                            documentationUrl: Swift.String? = nil
                         ) {
                             self.message = message
-                            self.documentation_url = documentation_url
+                            self.documentationUrl = documentationUrl
                         }
                         public enum CodingKeys: String, CodingKey {
                             case message
-                            case documentation_url
+                            case documentationUrl = "documentation_url"
                         }
                     }
                     /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/responses/403/content/application\/json`.
-                    case json(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.Forbidden.Body.jsonPayload)
+                    case json(Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.Forbidden.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.Forbidden.Body.jsonPayload {
+                    public var json: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.Forbidden.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -14843,12 +15100,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.Forbidden.Body
+                public var body: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.Forbidden.Body
                 /// Creates a new `Forbidden`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.Forbidden.Body) {
+                public init(body: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.Forbidden.Body) {
                     self.body = body
                 }
             }
@@ -14857,12 +15114,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.Forbidden)
+            case forbidden(Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.Forbidden {
+            public var forbidden: Operations.TeamsAddOrUpdateProjectPermissionsLegacy.Output.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -14880,12 +15137,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -14903,12 +15160,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -14960,7 +15217,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/projects/{project_id}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)`.
-    public enum teams_sol_remove_hyphen_project_hyphen_legacy {
+    public enum TeamsRemoveProjectLegacy {
         public static let id: Swift.String = "teams/remove-project-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/DELETE/path`.
@@ -14968,45 +15225,45 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/DELETE/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The unique identifier of the project.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/DELETE/path/project_id`.
-                public var project_id: Components.Parameters.project_hyphen_id
+                public var projectId: Components.Parameters.ProjectId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                ///   - project_id: The unique identifier of the project.
+                ///   - teamId: The unique identifier of the team.
+                ///   - projectId: The unique identifier of the project.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    project_id: Components.Parameters.project_hyphen_id
+                    teamId: Components.Parameters.TeamId,
+                    projectId: Components.Parameters.ProjectId
                 ) {
-                    self.team_id = team_id
-                    self.project_id = project_id
+                    self.teamId = teamId
+                    self.projectId = projectId
                 }
             }
-            public var path: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsRemoveProjectLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_remove_hyphen_project_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsRemoveProjectLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_remove_hyphen_project_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsRemoveProjectLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsRemoveProjectLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsRemoveProjectLegacy.Input.Path,
+                headers: Operations.TeamsRemoveProjectLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -15022,12 +15279,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsRemoveProjectLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsRemoveProjectLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -15045,12 +15310,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -15068,12 +15333,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -15124,7 +15389,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/repos`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/get(teams/list-repos-legacy)`.
-    public enum teams_sol_list_hyphen_repos_hyphen_legacy {
+    public enum TeamsListReposLegacy {
         public static let id: Swift.String = "teams/list-repos-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/path`.
@@ -15132,52 +15397,52 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsListReposLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Query
+            public var query: Operations.TeamsListReposLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_repos_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListReposLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_repos_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListReposLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsListReposLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -15185,9 +15450,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Path,
-                query: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsListReposLegacy.Input.Path,
+                query: Operations.TeamsListReposLegacy.Input.Query = .init(),
+                headers: Operations.TeamsListReposLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -15199,26 +15464,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.TeamsListReposLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/repos/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.minimal_hyphen_repository])
+                    case json([Components.Schemas.MinimalRepository])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.minimal_hyphen_repository] {
+                    public var json: [Components.Schemas.MinimalRepository] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -15228,15 +15493,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsListReposLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.TeamsListReposLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListReposLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -15247,12 +15512,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/get(teams/list-repos-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsListReposLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_repos_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsListReposLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -15270,12 +15535,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/get(teams/list-repos-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -15331,7 +15596,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)`.
-    public enum teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy {
+    public enum TeamsCheckPermissionsForRepoLegacy {
         public static let id: Swift.String = "teams/check-permissions-for-repo-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/GET/path`.
@@ -15339,52 +15604,52 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    teamId: Components.Parameters.TeamId,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsCheckPermissionsForRepoLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCheckPermissionsForRepoLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsCheckPermissionsForRepoLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsCheckPermissionsForRepoLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsCheckPermissionsForRepoLegacy.Input.Path,
+                headers: Operations.TeamsCheckPermissionsForRepoLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -15395,12 +15660,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.team_hyphen_repository)
+                    case json(Components.Schemas.TeamRepository)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.team_hyphen_repository {
+                    public var json: Components.Schemas.TeamRepository {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -15410,12 +15675,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsCheckPermissionsForRepoLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.Ok.Body) {
+                public init(body: Operations.TeamsCheckPermissionsForRepoLegacy.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -15424,12 +15689,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsCheckPermissionsForRepoLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsCheckPermissionsForRepoLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -15451,12 +15716,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsCheckPermissionsForRepoLegacy.Output.NoContent)
+            /// Response if repository is managed by this team
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsCheckPermissionsForRepoLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -15478,12 +15751,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.NotFound)
+            case notFound(Operations.TeamsCheckPermissionsForRepoLegacy.Output.NotFound)
+            /// Not Found if repository is not managed by this team
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.NotFound {
+            public var notFound: Operations.TeamsCheckPermissionsForRepoLegacy.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -15538,7 +15819,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)`.
-    public enum teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy {
+    public enum TeamsAddOrUpdateRepoPermissionsLegacy {
         public static let id: Swift.String = "teams/add-or-update-repo-permissions-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/path`.
@@ -15546,52 +15827,52 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    teamId: Components.Parameters.TeamId,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateRepoPermissionsLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsAddOrUpdateRepoPermissionsLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Headers
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum PermissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case pull = "pull"
                         case push = "push"
                         case admin = "admin"
@@ -15599,12 +15880,12 @@ public enum Operations {
                     /// The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/requestBody/json/permission`.
-                    public var permission: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Body.jsonPayload.permissionPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var permission: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Body.JsonPayload.PermissionPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - permission: The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
-                    public init(permission: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Body.jsonPayload.permissionPayload? = nil) {
+                    public init(permission: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Body.JsonPayload.PermissionPayload? = nil) {
                         self.permission = permission
                     }
                     public enum CodingKeys: String, CodingKey {
@@ -15612,9 +15893,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/requestBody/content/application\/json`.
-                case json(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Body.jsonPayload)
+                case json(Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Body.JsonPayload)
             }
-            public var body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Body?
+            public var body: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -15622,9 +15903,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Path,
-                headers: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Headers = .init(),
-                body: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Input.Body? = nil
+                path: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Path,
+                headers: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Headers = .init(),
+                body: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -15641,12 +15922,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsAddOrUpdateRepoPermissionsLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -15664,12 +15953,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -15687,12 +15976,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -15745,7 +16034,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /teams/{team_id}/repos/{owner}/{repo}`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/delete(teams/remove-repo-legacy)`.
-    public enum teams_sol_remove_hyphen_repo_hyphen_legacy {
+    public enum TeamsRemoveRepoLegacy {
         public static let id: Swift.String = "teams/remove-repo-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/DELETE/path`.
@@ -15753,37 +16042,37 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/DELETE/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
+                ///   - teamId: The unique identifier of the team.
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    team_id: Components.Parameters.team_hyphen_id,
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    teamId: Components.Parameters.TeamId,
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
-                    self.team_id = team_id
+                    self.teamId = teamId
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsRemoveRepoLegacy.Input.Path
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
-            public init(path: Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Input.Path) {
+            public init(path: Operations.TeamsRemoveRepoLegacy.Input.Path) {
                 self.path = path
             }
         }
@@ -15797,12 +16086,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/delete(teams/remove-repo-legacy)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Output.NoContent)
+            case noContent(Operations.TeamsRemoveRepoLegacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/delete(teams/remove-repo-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Output.NoContent {
+            public var noContent: Operations.TeamsRemoveRepoLegacy.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -15828,7 +16125,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /teams/{team_id}/teams`.
     /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)`.
-    public enum teams_sol_list_hyphen_child_hyphen_legacy {
+    public enum TeamsListChildLegacy {
         public static let id: Swift.String = "teams/list-child-legacy"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/path`.
@@ -15836,52 +16133,52 @@ public enum Operations {
                 /// The unique identifier of the team.
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/path/team_id`.
-                public var team_id: Components.Parameters.team_hyphen_id
+                public var teamId: Components.Parameters.TeamId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - team_id: The unique identifier of the team.
-                public init(team_id: Components.Parameters.team_hyphen_id) {
-                    self.team_id = team_id
+                ///   - teamId: The unique identifier of the team.
+                public init(teamId: Components.Parameters.TeamId) {
+                    self.teamId = teamId
                 }
             }
-            public var path: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Path
+            public var path: Operations.TeamsListChildLegacy.Input.Path
             /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Query
+            public var query: Operations.TeamsListChildLegacy.Input.Query
             /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_child_hyphen_legacy.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListChildLegacy.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_child_hyphen_legacy.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListChildLegacy.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Headers
+            public var headers: Operations.TeamsListChildLegacy.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -15889,9 +16186,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Path,
-                query: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Input.Headers = .init()
+                path: Operations.TeamsListChildLegacy.Input.Path,
+                query: Operations.TeamsListChildLegacy.Input.Query = .init(),
+                headers: Operations.TeamsListChildLegacy.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -15903,26 +16200,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output.Ok.Headers
+                public var headers: Operations.TeamsListChildLegacy.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/teams/{team_id}/teams/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team])
+                    case json([Components.Schemas.Team])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team] {
+                    public var json: [Components.Schemas.Team] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -15932,15 +16229,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output.Ok.Body
+                public var body: Operations.TeamsListChildLegacy.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output.Ok.Body
+                    headers: Operations.TeamsListChildLegacy.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListChildLegacy.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -15951,12 +16248,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output.Ok)
+            case ok(Operations.TeamsListChildLegacy.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_child_hyphen_legacy.Output.Ok {
+            public var ok: Operations.TeamsListChildLegacy.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -15974,12 +16271,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -15997,12 +16294,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -16020,12 +16317,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//teams/{team_id}/teams/get(teams/list-child-legacy)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -16080,7 +16377,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/teams`.
     /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)`.
-    public enum teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum TeamsListForAuthenticatedUser {
         public static let id: Swift.String = "teams/list-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/teams/GET/query`.
@@ -16088,45 +16385,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/teams/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/teams/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.TeamsListForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/teams/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.TeamsListForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.TeamsListForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.TeamsListForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.TeamsListForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -16137,26 +16434,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/teams/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/teams/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.TeamsListForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/teams/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/teams/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.team_hyphen_full])
+                    case json([Components.Schemas.TeamFull])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.team_hyphen_full] {
+                    public var json: [Components.Schemas.TeamFull] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -16166,15 +16463,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.TeamsListForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.TeamsListForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.TeamsListForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -16185,12 +16482,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.TeamsListForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.teams_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.TeamsListForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -16208,12 +16505,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -16231,12 +16536,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -16254,12 +16559,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):

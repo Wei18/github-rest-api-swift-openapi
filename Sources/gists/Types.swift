@@ -17,7 +17,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /gists`.
     /// - Remark: Generated from `#/paths//gists/get(gists/list)`.
-    func gists_sol_list(_ input: Operations.gists_sol_list.Input) async throws -> Operations.gists_sol_list.Output
+    func gistsList(_ input: Operations.GistsList.Input) async throws -> Operations.GistsList.Output
     /// Create a gist
     ///
     /// Allows you to add a new gist with one or more files.
@@ -27,7 +27,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /gists`.
     /// - Remark: Generated from `#/paths//gists/post(gists/create)`.
-    func gists_sol_create(_ input: Operations.gists_sol_create.Input) async throws -> Operations.gists_sol_create.Output
+    func gistsCreate(_ input: Operations.GistsCreate.Input) async throws -> Operations.GistsCreate.Output
     /// List public gists
     ///
     /// List public gists sorted by most recently updated to least recently updated.
@@ -36,14 +36,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /gists/public`.
     /// - Remark: Generated from `#/paths//gists/public/get(gists/list-public)`.
-    func gists_sol_list_hyphen_public(_ input: Operations.gists_sol_list_hyphen_public.Input) async throws -> Operations.gists_sol_list_hyphen_public.Output
+    func gistsListPublic(_ input: Operations.GistsListPublic.Input) async throws -> Operations.GistsListPublic.Output
     /// List starred gists
     ///
     /// List the authenticated user's starred gists:
     ///
     /// - Remark: HTTP `GET /gists/starred`.
     /// - Remark: Generated from `#/paths//gists/starred/get(gists/list-starred)`.
-    func gists_sol_list_hyphen_starred(_ input: Operations.gists_sol_list_hyphen_starred.Input) async throws -> Operations.gists_sol_list_hyphen_starred.Output
+    func gistsListStarred(_ input: Operations.GistsListStarred.Input) async throws -> Operations.GistsListStarred.Output
     /// Get a gist
     ///
     /// Gets a specified gist.
@@ -55,7 +55,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)`.
-    func gists_sol_get(_ input: Operations.gists_sol_get.Input) async throws -> Operations.gists_sol_get.Output
+    func gistsGet(_ input: Operations.GistsGet.Input) async throws -> Operations.GistsGet.Output
     /// Update a gist
     ///
     /// Allows you to update a gist's description and to update, delete, or rename gist files. Files
@@ -71,14 +71,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/patch(gists/update)`.
-    func gists_sol_update(_ input: Operations.gists_sol_update.Input) async throws -> Operations.gists_sol_update.Output
+    func gistsUpdate(_ input: Operations.GistsUpdate.Input) async throws -> Operations.GistsUpdate.Output
     /// Delete a gist
     ///
     ///
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)`.
-    func gists_sol_delete(_ input: Operations.gists_sol_delete.Input) async throws -> Operations.gists_sol_delete.Output
+    func gistsDelete(_ input: Operations.GistsDelete.Input) async throws -> Operations.GistsDelete.Output
     /// List gist comments
     ///
     /// Lists the comments on a gist.
@@ -90,7 +90,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/comments`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)`.
-    func gists_sol_list_hyphen_comments(_ input: Operations.gists_sol_list_hyphen_comments.Input) async throws -> Operations.gists_sol_list_hyphen_comments.Output
+    func gistsListComments(_ input: Operations.GistsListComments.Input) async throws -> Operations.GistsListComments.Output
     /// Create a gist comment
     ///
     /// Creates a comment on a gist.
@@ -102,7 +102,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /gists/{gist_id}/comments`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)`.
-    func gists_sol_create_hyphen_comment(_ input: Operations.gists_sol_create_hyphen_comment.Input) async throws -> Operations.gists_sol_create_hyphen_comment.Output
+    func gistsCreateComment(_ input: Operations.GistsCreateComment.Input) async throws -> Operations.GistsCreateComment.Output
     /// Get a gist comment
     ///
     /// Gets a comment on a gist.
@@ -114,7 +114,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)`.
-    func gists_sol_get_hyphen_comment(_ input: Operations.gists_sol_get_hyphen_comment.Input) async throws -> Operations.gists_sol_get_hyphen_comment.Output
+    func gistsGetComment(_ input: Operations.GistsGetComment.Input) async throws -> Operations.GistsGetComment.Output
     /// Update a gist comment
     ///
     /// Updates a comment on a gist.
@@ -126,56 +126,56 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PATCH /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/patch(gists/update-comment)`.
-    func gists_sol_update_hyphen_comment(_ input: Operations.gists_sol_update_hyphen_comment.Input) async throws -> Operations.gists_sol_update_hyphen_comment.Output
+    func gistsUpdateComment(_ input: Operations.GistsUpdateComment.Input) async throws -> Operations.GistsUpdateComment.Output
     /// Delete a gist comment
     ///
     ///
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)`.
-    func gists_sol_delete_hyphen_comment(_ input: Operations.gists_sol_delete_hyphen_comment.Input) async throws -> Operations.gists_sol_delete_hyphen_comment.Output
+    func gistsDeleteComment(_ input: Operations.GistsDeleteComment.Input) async throws -> Operations.GistsDeleteComment.Output
     /// List gist commits
     ///
     ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/commits`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)`.
-    func gists_sol_list_hyphen_commits(_ input: Operations.gists_sol_list_hyphen_commits.Input) async throws -> Operations.gists_sol_list_hyphen_commits.Output
+    func gistsListCommits(_ input: Operations.GistsListCommits.Input) async throws -> Operations.GistsListCommits.Output
     /// List gist forks
     ///
     ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)`.
-    func gists_sol_list_hyphen_forks(_ input: Operations.gists_sol_list_hyphen_forks.Input) async throws -> Operations.gists_sol_list_hyphen_forks.Output
+    func gistsListForks(_ input: Operations.GistsListForks.Input) async throws -> Operations.GistsListForks.Output
     /// Fork a gist
     ///
     ///
     ///
     /// - Remark: HTTP `POST /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)`.
-    func gists_sol_fork(_ input: Operations.gists_sol_fork.Input) async throws -> Operations.gists_sol_fork.Output
+    func gistsFork(_ input: Operations.GistsFork.Input) async throws -> Operations.GistsFork.Output
     /// Check if a gist is starred
     ///
     ///
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)`.
-    func gists_sol_check_hyphen_is_hyphen_starred(_ input: Operations.gists_sol_check_hyphen_is_hyphen_starred.Input) async throws -> Operations.gists_sol_check_hyphen_is_hyphen_starred.Output
+    func gistsCheckIsStarred(_ input: Operations.GistsCheckIsStarred.Input) async throws -> Operations.GistsCheckIsStarred.Output
     /// Star a gist
     ///
     /// Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
     ///
     /// - Remark: HTTP `PUT /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)`.
-    func gists_sol_star(_ input: Operations.gists_sol_star.Input) async throws -> Operations.gists_sol_star.Output
+    func gistsStar(_ input: Operations.GistsStar.Input) async throws -> Operations.GistsStar.Output
     /// Unstar a gist
     ///
     ///
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)`.
-    func gists_sol_unstar(_ input: Operations.gists_sol_unstar.Input) async throws -> Operations.gists_sol_unstar.Output
+    func gistsUnstar(_ input: Operations.GistsUnstar.Input) async throws -> Operations.GistsUnstar.Output
     /// Get a gist revision
     ///
     /// Gets a specified gist revision.
@@ -187,14 +187,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/{sha}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/{sha}/get(gists/get-revision)`.
-    func gists_sol_get_hyphen_revision(_ input: Operations.gists_sol_get_hyphen_revision.Input) async throws -> Operations.gists_sol_get_hyphen_revision.Output
+    func gistsGetRevision(_ input: Operations.GistsGetRevision.Input) async throws -> Operations.GistsGetRevision.Output
     /// List gists for a user
     ///
     /// Lists public gists for the specified user:
     ///
     /// - Remark: HTTP `GET /users/{username}/gists`.
     /// - Remark: Generated from `#/paths//users/{username}/gists/get(gists/list-for-user)`.
-    func gists_sol_list_hyphen_for_hyphen_user(_ input: Operations.gists_sol_list_hyphen_for_hyphen_user.Input) async throws -> Operations.gists_sol_list_hyphen_for_hyphen_user.Output
+    func gistsListForUser(_ input: Operations.GistsListForUser.Input) async throws -> Operations.GistsListForUser.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -205,11 +205,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists`.
     /// - Remark: Generated from `#/paths//gists/get(gists/list)`.
-    public func gists_sol_list(
-        query: Operations.gists_sol_list.Input.Query = .init(),
-        headers: Operations.gists_sol_list.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_list.Output {
-        try await gists_sol_list(Operations.gists_sol_list.Input(
+    public func gistsList(
+        query: Operations.GistsList.Input.Query = .init(),
+        headers: Operations.GistsList.Input.Headers = .init()
+    ) async throws -> Operations.GistsList.Output {
+        try await gistsList(Operations.GistsList.Input(
             query: query,
             headers: headers
         ))
@@ -223,11 +223,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /gists`.
     /// - Remark: Generated from `#/paths//gists/post(gists/create)`.
-    public func gists_sol_create(
-        headers: Operations.gists_sol_create.Input.Headers = .init(),
-        body: Operations.gists_sol_create.Input.Body
-    ) async throws -> Operations.gists_sol_create.Output {
-        try await gists_sol_create(Operations.gists_sol_create.Input(
+    public func gistsCreate(
+        headers: Operations.GistsCreate.Input.Headers = .init(),
+        body: Operations.GistsCreate.Input.Body
+    ) async throws -> Operations.GistsCreate.Output {
+        try await gistsCreate(Operations.GistsCreate.Input(
             headers: headers,
             body: body
         ))
@@ -240,11 +240,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/public`.
     /// - Remark: Generated from `#/paths//gists/public/get(gists/list-public)`.
-    public func gists_sol_list_hyphen_public(
-        query: Operations.gists_sol_list_hyphen_public.Input.Query = .init(),
-        headers: Operations.gists_sol_list_hyphen_public.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_list_hyphen_public.Output {
-        try await gists_sol_list_hyphen_public(Operations.gists_sol_list_hyphen_public.Input(
+    public func gistsListPublic(
+        query: Operations.GistsListPublic.Input.Query = .init(),
+        headers: Operations.GistsListPublic.Input.Headers = .init()
+    ) async throws -> Operations.GistsListPublic.Output {
+        try await gistsListPublic(Operations.GistsListPublic.Input(
             query: query,
             headers: headers
         ))
@@ -255,11 +255,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/starred`.
     /// - Remark: Generated from `#/paths//gists/starred/get(gists/list-starred)`.
-    public func gists_sol_list_hyphen_starred(
-        query: Operations.gists_sol_list_hyphen_starred.Input.Query = .init(),
-        headers: Operations.gists_sol_list_hyphen_starred.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_list_hyphen_starred.Output {
-        try await gists_sol_list_hyphen_starred(Operations.gists_sol_list_hyphen_starred.Input(
+    public func gistsListStarred(
+        query: Operations.GistsListStarred.Input.Query = .init(),
+        headers: Operations.GistsListStarred.Input.Headers = .init()
+    ) async throws -> Operations.GistsListStarred.Output {
+        try await gistsListStarred(Operations.GistsListStarred.Input(
             query: query,
             headers: headers
         ))
@@ -275,11 +275,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)`.
-    public func gists_sol_get(
-        path: Operations.gists_sol_get.Input.Path,
-        headers: Operations.gists_sol_get.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_get.Output {
-        try await gists_sol_get(Operations.gists_sol_get.Input(
+    public func gistsGet(
+        path: Operations.GistsGet.Input.Path,
+        headers: Operations.GistsGet.Input.Headers = .init()
+    ) async throws -> Operations.GistsGet.Output {
+        try await gistsGet(Operations.GistsGet.Input(
             path: path,
             headers: headers
         ))
@@ -299,12 +299,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/patch(gists/update)`.
-    public func gists_sol_update(
-        path: Operations.gists_sol_update.Input.Path,
-        headers: Operations.gists_sol_update.Input.Headers = .init(),
-        body: Operations.gists_sol_update.Input.Body
-    ) async throws -> Operations.gists_sol_update.Output {
-        try await gists_sol_update(Operations.gists_sol_update.Input(
+    public func gistsUpdate(
+        path: Operations.GistsUpdate.Input.Path,
+        headers: Operations.GistsUpdate.Input.Headers = .init(),
+        body: Operations.GistsUpdate.Input.Body
+    ) async throws -> Operations.GistsUpdate.Output {
+        try await gistsUpdate(Operations.GistsUpdate.Input(
             path: path,
             headers: headers,
             body: body
@@ -316,11 +316,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)`.
-    public func gists_sol_delete(
-        path: Operations.gists_sol_delete.Input.Path,
-        headers: Operations.gists_sol_delete.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_delete.Output {
-        try await gists_sol_delete(Operations.gists_sol_delete.Input(
+    public func gistsDelete(
+        path: Operations.GistsDelete.Input.Path,
+        headers: Operations.GistsDelete.Input.Headers = .init()
+    ) async throws -> Operations.GistsDelete.Output {
+        try await gistsDelete(Operations.GistsDelete.Input(
             path: path,
             headers: headers
         ))
@@ -336,12 +336,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/comments`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)`.
-    public func gists_sol_list_hyphen_comments(
-        path: Operations.gists_sol_list_hyphen_comments.Input.Path,
-        query: Operations.gists_sol_list_hyphen_comments.Input.Query = .init(),
-        headers: Operations.gists_sol_list_hyphen_comments.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_list_hyphen_comments.Output {
-        try await gists_sol_list_hyphen_comments(Operations.gists_sol_list_hyphen_comments.Input(
+    public func gistsListComments(
+        path: Operations.GistsListComments.Input.Path,
+        query: Operations.GistsListComments.Input.Query = .init(),
+        headers: Operations.GistsListComments.Input.Headers = .init()
+    ) async throws -> Operations.GistsListComments.Output {
+        try await gistsListComments(Operations.GistsListComments.Input(
             path: path,
             query: query,
             headers: headers
@@ -358,12 +358,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /gists/{gist_id}/comments`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)`.
-    public func gists_sol_create_hyphen_comment(
-        path: Operations.gists_sol_create_hyphen_comment.Input.Path,
-        headers: Operations.gists_sol_create_hyphen_comment.Input.Headers = .init(),
-        body: Operations.gists_sol_create_hyphen_comment.Input.Body
-    ) async throws -> Operations.gists_sol_create_hyphen_comment.Output {
-        try await gists_sol_create_hyphen_comment(Operations.gists_sol_create_hyphen_comment.Input(
+    public func gistsCreateComment(
+        path: Operations.GistsCreateComment.Input.Path,
+        headers: Operations.GistsCreateComment.Input.Headers = .init(),
+        body: Operations.GistsCreateComment.Input.Body
+    ) async throws -> Operations.GistsCreateComment.Output {
+        try await gistsCreateComment(Operations.GistsCreateComment.Input(
             path: path,
             headers: headers,
             body: body
@@ -380,11 +380,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)`.
-    public func gists_sol_get_hyphen_comment(
-        path: Operations.gists_sol_get_hyphen_comment.Input.Path,
-        headers: Operations.gists_sol_get_hyphen_comment.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_get_hyphen_comment.Output {
-        try await gists_sol_get_hyphen_comment(Operations.gists_sol_get_hyphen_comment.Input(
+    public func gistsGetComment(
+        path: Operations.GistsGetComment.Input.Path,
+        headers: Operations.GistsGetComment.Input.Headers = .init()
+    ) async throws -> Operations.GistsGetComment.Output {
+        try await gistsGetComment(Operations.GistsGetComment.Input(
             path: path,
             headers: headers
         ))
@@ -400,12 +400,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/patch(gists/update-comment)`.
-    public func gists_sol_update_hyphen_comment(
-        path: Operations.gists_sol_update_hyphen_comment.Input.Path,
-        headers: Operations.gists_sol_update_hyphen_comment.Input.Headers = .init(),
-        body: Operations.gists_sol_update_hyphen_comment.Input.Body
-    ) async throws -> Operations.gists_sol_update_hyphen_comment.Output {
-        try await gists_sol_update_hyphen_comment(Operations.gists_sol_update_hyphen_comment.Input(
+    public func gistsUpdateComment(
+        path: Operations.GistsUpdateComment.Input.Path,
+        headers: Operations.GistsUpdateComment.Input.Headers = .init(),
+        body: Operations.GistsUpdateComment.Input.Body
+    ) async throws -> Operations.GistsUpdateComment.Output {
+        try await gistsUpdateComment(Operations.GistsUpdateComment.Input(
             path: path,
             headers: headers,
             body: body
@@ -417,11 +417,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)`.
-    public func gists_sol_delete_hyphen_comment(
-        path: Operations.gists_sol_delete_hyphen_comment.Input.Path,
-        headers: Operations.gists_sol_delete_hyphen_comment.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_delete_hyphen_comment.Output {
-        try await gists_sol_delete_hyphen_comment(Operations.gists_sol_delete_hyphen_comment.Input(
+    public func gistsDeleteComment(
+        path: Operations.GistsDeleteComment.Input.Path,
+        headers: Operations.GistsDeleteComment.Input.Headers = .init()
+    ) async throws -> Operations.GistsDeleteComment.Output {
+        try await gistsDeleteComment(Operations.GistsDeleteComment.Input(
             path: path,
             headers: headers
         ))
@@ -432,12 +432,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/commits`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)`.
-    public func gists_sol_list_hyphen_commits(
-        path: Operations.gists_sol_list_hyphen_commits.Input.Path,
-        query: Operations.gists_sol_list_hyphen_commits.Input.Query = .init(),
-        headers: Operations.gists_sol_list_hyphen_commits.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_list_hyphen_commits.Output {
-        try await gists_sol_list_hyphen_commits(Operations.gists_sol_list_hyphen_commits.Input(
+    public func gistsListCommits(
+        path: Operations.GistsListCommits.Input.Path,
+        query: Operations.GistsListCommits.Input.Query = .init(),
+        headers: Operations.GistsListCommits.Input.Headers = .init()
+    ) async throws -> Operations.GistsListCommits.Output {
+        try await gistsListCommits(Operations.GistsListCommits.Input(
             path: path,
             query: query,
             headers: headers
@@ -449,12 +449,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)`.
-    public func gists_sol_list_hyphen_forks(
-        path: Operations.gists_sol_list_hyphen_forks.Input.Path,
-        query: Operations.gists_sol_list_hyphen_forks.Input.Query = .init(),
-        headers: Operations.gists_sol_list_hyphen_forks.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_list_hyphen_forks.Output {
-        try await gists_sol_list_hyphen_forks(Operations.gists_sol_list_hyphen_forks.Input(
+    public func gistsListForks(
+        path: Operations.GistsListForks.Input.Path,
+        query: Operations.GistsListForks.Input.Query = .init(),
+        headers: Operations.GistsListForks.Input.Headers = .init()
+    ) async throws -> Operations.GistsListForks.Output {
+        try await gistsListForks(Operations.GistsListForks.Input(
             path: path,
             query: query,
             headers: headers
@@ -466,11 +466,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)`.
-    public func gists_sol_fork(
-        path: Operations.gists_sol_fork.Input.Path,
-        headers: Operations.gists_sol_fork.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_fork.Output {
-        try await gists_sol_fork(Operations.gists_sol_fork.Input(
+    public func gistsFork(
+        path: Operations.GistsFork.Input.Path,
+        headers: Operations.GistsFork.Input.Headers = .init()
+    ) async throws -> Operations.GistsFork.Output {
+        try await gistsFork(Operations.GistsFork.Input(
             path: path,
             headers: headers
         ))
@@ -481,11 +481,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)`.
-    public func gists_sol_check_hyphen_is_hyphen_starred(
-        path: Operations.gists_sol_check_hyphen_is_hyphen_starred.Input.Path,
-        headers: Operations.gists_sol_check_hyphen_is_hyphen_starred.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_check_hyphen_is_hyphen_starred.Output {
-        try await gists_sol_check_hyphen_is_hyphen_starred(Operations.gists_sol_check_hyphen_is_hyphen_starred.Input(
+    public func gistsCheckIsStarred(
+        path: Operations.GistsCheckIsStarred.Input.Path,
+        headers: Operations.GistsCheckIsStarred.Input.Headers = .init()
+    ) async throws -> Operations.GistsCheckIsStarred.Output {
+        try await gistsCheckIsStarred(Operations.GistsCheckIsStarred.Input(
             path: path,
             headers: headers
         ))
@@ -496,11 +496,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)`.
-    public func gists_sol_star(
-        path: Operations.gists_sol_star.Input.Path,
-        headers: Operations.gists_sol_star.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_star.Output {
-        try await gists_sol_star(Operations.gists_sol_star.Input(
+    public func gistsStar(
+        path: Operations.GistsStar.Input.Path,
+        headers: Operations.GistsStar.Input.Headers = .init()
+    ) async throws -> Operations.GistsStar.Output {
+        try await gistsStar(Operations.GistsStar.Input(
             path: path,
             headers: headers
         ))
@@ -511,11 +511,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)`.
-    public func gists_sol_unstar(
-        path: Operations.gists_sol_unstar.Input.Path,
-        headers: Operations.gists_sol_unstar.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_unstar.Output {
-        try await gists_sol_unstar(Operations.gists_sol_unstar.Input(
+    public func gistsUnstar(
+        path: Operations.GistsUnstar.Input.Path,
+        headers: Operations.GistsUnstar.Input.Headers = .init()
+    ) async throws -> Operations.GistsUnstar.Output {
+        try await gistsUnstar(Operations.GistsUnstar.Input(
             path: path,
             headers: headers
         ))
@@ -531,11 +531,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/{sha}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/{sha}/get(gists/get-revision)`.
-    public func gists_sol_get_hyphen_revision(
-        path: Operations.gists_sol_get_hyphen_revision.Input.Path,
-        headers: Operations.gists_sol_get_hyphen_revision.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_get_hyphen_revision.Output {
-        try await gists_sol_get_hyphen_revision(Operations.gists_sol_get_hyphen_revision.Input(
+    public func gistsGetRevision(
+        path: Operations.GistsGetRevision.Input.Path,
+        headers: Operations.GistsGetRevision.Input.Headers = .init()
+    ) async throws -> Operations.GistsGetRevision.Output {
+        try await gistsGetRevision(Operations.GistsGetRevision.Input(
             path: path,
             headers: headers
         ))
@@ -546,12 +546,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /users/{username}/gists`.
     /// - Remark: Generated from `#/paths//users/{username}/gists/get(gists/list-for-user)`.
-    public func gists_sol_list_hyphen_for_hyphen_user(
-        path: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Path,
-        query: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Query = .init(),
-        headers: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.gists_sol_list_hyphen_for_hyphen_user.Output {
-        try await gists_sol_list_hyphen_for_hyphen_user(Operations.gists_sol_list_hyphen_for_hyphen_user.Input(
+    public func gistsListForUser(
+        path: Operations.GistsListForUser.Input.Path,
+        query: Operations.GistsListForUser.Input.Query = .init(),
+        headers: Operations.GistsListForUser.Input.Headers = .init()
+    ) async throws -> Operations.GistsListForUser.Output {
+        try await gistsListForUser(Operations.GistsListForUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -561,6 +561,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -576,7 +585,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -586,171 +595,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -758,30 +767,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -820,9 +829,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -837,7 +846,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -856,34 +865,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -893,175 +902,175 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// How the author is associated with the repository.
         ///
         /// - Remark: Generated from `#/components/schemas/author-association`.
-        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable {
-            case COLLABORATOR = "COLLABORATOR"
-            case CONTRIBUTOR = "CONTRIBUTOR"
-            case FIRST_TIMER = "FIRST_TIMER"
-            case FIRST_TIME_CONTRIBUTOR = "FIRST_TIME_CONTRIBUTOR"
-            case MANNEQUIN = "MANNEQUIN"
-            case MEMBER = "MEMBER"
-            case NONE = "NONE"
-            case OWNER = "OWNER"
+        @frozen public enum AuthorAssociation: String, Codable, Hashable, Sendable, CaseIterable {
+            case collaborator = "COLLABORATOR"
+            case contributor = "CONTRIBUTOR"
+            case firstTimer = "FIRST_TIMER"
+            case firstTimeContributor = "FIRST_TIME_CONTRIBUTOR"
+            case mannequin = "MANNEQUIN"
+            case member = "MEMBER"
+            case none = "NONE"
+            case owner = "OWNER"
         }
         /// Base Gist
         ///
         /// - Remark: Generated from `#/components/schemas/base-gist`.
-        public struct base_hyphen_gist: Codable, Hashable, Sendable {
+        public struct BaseGist: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/base-gist/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/id`.
             public var id: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/git_pull_url`.
-            public var git_pull_url: Swift.String
+            public var gitPullUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/git_push_url`.
-            public var git_push_url: Swift.String
+            public var gitPushUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/files`.
-            public struct filesPayload: Codable, Hashable, Sendable {
+            public struct FilesPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties`.
-                public struct additionalPropertiesPayload: Codable, Hashable, Sendable {
+                public struct AdditionalPropertiesPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties/filename`.
                     public var filename: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties/type`.
@@ -1069,34 +1078,34 @@ public enum Components {
                     /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties/language`.
                     public var language: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties/raw_url`.
-                    public var raw_url: Swift.String?
+                    public var rawUrl: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties/size`.
                     public var size: Swift.Int?
                     /// The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
                     ///
                     /// - Remark: Generated from `#/components/schemas/base-gist/files/additionalProperties/encoding`.
                     public var encoding: Swift.String?
-                    /// Creates a new `additionalPropertiesPayload`.
+                    /// Creates a new `AdditionalPropertiesPayload`.
                     ///
                     /// - Parameters:
                     ///   - filename:
                     ///   - _type:
                     ///   - language:
-                    ///   - raw_url:
+                    ///   - rawUrl:
                     ///   - size:
                     ///   - encoding: The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
                     public init(
                         filename: Swift.String? = nil,
                         _type: Swift.String? = nil,
                         language: Swift.String? = nil,
-                        raw_url: Swift.String? = nil,
+                        rawUrl: Swift.String? = nil,
                         size: Swift.Int? = nil,
                         encoding: Swift.String? = nil
                     ) {
                         self.filename = filename
                         self._type = _type
                         self.language = language
-                        self.raw_url = raw_url
+                        self.rawUrl = rawUrl
                         self.size = size
                         self.encoding = encoding
                     }
@@ -1104,18 +1113,18 @@ public enum Components {
                         case filename
                         case _type = "type"
                         case language
-                        case raw_url
+                        case rawUrl = "raw_url"
                         case size
                         case encoding
                     }
                 }
                 /// A container of undocumented properties.
-                public var additionalProperties: [String: Components.Schemas.base_hyphen_gist.filesPayload.additionalPropertiesPayload]
-                /// Creates a new `filesPayload`.
+                public var additionalProperties: [String: Components.Schemas.BaseGist.FilesPayload.AdditionalPropertiesPayload]
+                /// Creates a new `FilesPayload`.
                 ///
                 /// - Parameters:
                 ///   - additionalProperties: A container of undocumented properties.
-                public init(additionalProperties: [String: Components.Schemas.base_hyphen_gist.filesPayload.additionalPropertiesPayload] = .init()) {
+                public init(additionalProperties: [String: Components.Schemas.BaseGist.FilesPayload.AdditionalPropertiesPayload] = .init()) {
                     self.additionalProperties = additionalProperties
                 }
                 public init(from decoder: any Decoder) throws {
@@ -1126,95 +1135,95 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/base-gist/files`.
-            public var files: Components.Schemas.base_hyphen_gist.filesPayload
+            public var files: Components.Schemas.BaseGist.FilesPayload
             /// - Remark: Generated from `#/components/schemas/base-gist/public`.
             public var _public: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/base-gist/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/base-gist/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/base-gist/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/base-gist/comments`.
             public var comments: Swift.Int
             /// - Remark: Generated from `#/components/schemas/base-gist/comments_enabled`.
-            public var comments_enabled: Swift.Bool?
+            public var commentsEnabled: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/base-gist/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/base-gist/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/base-gist/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user?
+            public var owner: Components.Schemas.SimpleUser?
             /// - Remark: Generated from `#/components/schemas/base-gist/truncated`.
             public var truncated: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/base-gist/forks`.
             public var forks: [OpenAPIRuntime.OpenAPIValueContainer]?
             /// - Remark: Generated from `#/components/schemas/base-gist/history`.
             public var history: [OpenAPIRuntime.OpenAPIValueContainer]?
-            /// Creates a new `base_hyphen_gist`.
+            /// Creates a new `BaseGist`.
             ///
             /// - Parameters:
             ///   - url:
-            ///   - forks_url:
-            ///   - commits_url:
+            ///   - forksUrl:
+            ///   - commitsUrl:
             ///   - id:
-            ///   - node_id:
-            ///   - git_pull_url:
-            ///   - git_push_url:
-            ///   - html_url:
+            ///   - nodeId:
+            ///   - gitPullUrl:
+            ///   - gitPushUrl:
+            ///   - htmlUrl:
             ///   - files:
             ///   - _public:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - description:
             ///   - comments:
-            ///   - comments_enabled:
+            ///   - commentsEnabled:
             ///   - user:
-            ///   - comments_url:
+            ///   - commentsUrl:
             ///   - owner:
             ///   - truncated:
             ///   - forks:
             ///   - history:
             public init(
                 url: Swift.String,
-                forks_url: Swift.String,
-                commits_url: Swift.String,
+                forksUrl: Swift.String,
+                commitsUrl: Swift.String,
                 id: Swift.String,
-                node_id: Swift.String,
-                git_pull_url: Swift.String,
-                git_push_url: Swift.String,
-                html_url: Swift.String,
-                files: Components.Schemas.base_hyphen_gist.filesPayload,
+                nodeId: Swift.String,
+                gitPullUrl: Swift.String,
+                gitPushUrl: Swift.String,
+                htmlUrl: Swift.String,
+                files: Components.Schemas.BaseGist.FilesPayload,
                 _public: Swift.Bool,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
                 description: Swift.String? = nil,
                 comments: Swift.Int,
-                comments_enabled: Swift.Bool? = nil,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                comments_url: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user? = nil,
+                commentsEnabled: Swift.Bool? = nil,
+                user: Components.Schemas.NullableSimpleUser? = nil,
+                commentsUrl: Swift.String,
+                owner: Components.Schemas.SimpleUser? = nil,
                 truncated: Swift.Bool? = nil,
                 forks: [OpenAPIRuntime.OpenAPIValueContainer]? = nil,
                 history: [OpenAPIRuntime.OpenAPIValueContainer]? = nil
             ) {
                 self.url = url
-                self.forks_url = forks_url
-                self.commits_url = commits_url
+                self.forksUrl = forksUrl
+                self.commitsUrl = commitsUrl
                 self.id = id
-                self.node_id = node_id
-                self.git_pull_url = git_pull_url
-                self.git_push_url = git_push_url
-                self.html_url = html_url
+                self.nodeId = nodeId
+                self.gitPullUrl = gitPullUrl
+                self.gitPushUrl = gitPushUrl
+                self.htmlUrl = htmlUrl
                 self.files = files
                 self._public = _public
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.description = description
                 self.comments = comments
-                self.comments_enabled = comments_enabled
+                self.commentsEnabled = commentsEnabled
                 self.user = user
-                self.comments_url = comments_url
+                self.commentsUrl = commentsUrl
                 self.owner = owner
                 self.truncated = truncated
                 self.forks = forks
@@ -1222,22 +1231,22 @@ public enum Components {
             }
             public enum CodingKeys: String, CodingKey {
                 case url
-                case forks_url
-                case commits_url
+                case forksUrl = "forks_url"
+                case commitsUrl = "commits_url"
                 case id
-                case node_id
-                case git_pull_url
-                case git_push_url
-                case html_url
+                case nodeId = "node_id"
+                case gitPullUrl = "git_pull_url"
+                case gitPushUrl = "git_push_url"
+                case htmlUrl = "html_url"
                 case files
                 case _public = "public"
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case description
                 case comments
-                case comments_enabled
+                case commentsEnabled = "comments_enabled"
                 case user
-                case comments_url
+                case commentsUrl = "comments_url"
                 case owner
                 case truncated
                 case forks
@@ -1247,45 +1256,45 @@ public enum Components {
         /// Public User
         ///
         /// - Remark: Generated from `#/components/schemas/public-user`.
-        public struct public_hyphen_user: Codable, Hashable, Sendable {
+        public struct PublicUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/public-user/login`.
             public var login: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/public-user/user_view_type`.
-            public var user_view_type: Swift.String?
+            public var userViewType: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/public-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/public-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/company`.
@@ -1297,27 +1306,27 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/public-user/email`.
             public var email: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/notification_email`.
-            public var notification_email: Swift.String?
+            public var notificationEmail: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/hireable`.
             public var hireable: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/public-user/bio`.
             public var bio: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/twitter_username`.
-            public var twitter_username: Swift.String?
+            public var twitterUsername: Swift.String?
             /// - Remark: Generated from `#/components/schemas/public-user/public_repos`.
-            public var public_repos: Swift.Int
+            public var publicRepos: Swift.Int
             /// - Remark: Generated from `#/components/schemas/public-user/public_gists`.
-            public var public_gists: Swift.Int
+            public var publicGists: Swift.Int
             /// - Remark: Generated from `#/components/schemas/public-user/followers`.
             public var followers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/public-user/following`.
             public var following: Swift.Int
             /// - Remark: Generated from `#/components/schemas/public-user/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/public-user/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/public-user/plan`.
-            public struct planPayload: Codable, Hashable, Sendable {
+            public struct PlanPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/public-user/plan/collaborators`.
                 public var collaborators: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/public-user/plan/name`.
@@ -1325,371 +1334,371 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/public-user/plan/space`.
                 public var space: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/public-user/plan/private_repos`.
-                public var private_repos: Swift.Int
-                /// Creates a new `planPayload`.
+                public var privateRepos: Swift.Int
+                /// Creates a new `PlanPayload`.
                 ///
                 /// - Parameters:
                 ///   - collaborators:
                 ///   - name:
                 ///   - space:
-                ///   - private_repos:
+                ///   - privateRepos:
                 public init(
                     collaborators: Swift.Int,
                     name: Swift.String,
                     space: Swift.Int,
-                    private_repos: Swift.Int
+                    privateRepos: Swift.Int
                 ) {
                     self.collaborators = collaborators
                     self.name = name
                     self.space = space
-                    self.private_repos = private_repos
+                    self.privateRepos = privateRepos
                 }
                 public enum CodingKeys: String, CodingKey {
                     case collaborators
                     case name
                     case space
-                    case private_repos
+                    case privateRepos = "private_repos"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/public-user/plan`.
-            public var plan: Components.Schemas.public_hyphen_user.planPayload?
+            public var plan: Components.Schemas.PublicUser.PlanPayload?
             /// - Remark: Generated from `#/components/schemas/public-user/private_gists`.
-            public var private_gists: Swift.Int?
+            public var privateGists: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/total_private_repos`.
-            public var total_private_repos: Swift.Int?
+            public var totalPrivateRepos: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/owned_private_repos`.
-            public var owned_private_repos: Swift.Int?
+            public var ownedPrivateRepos: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/disk_usage`.
-            public var disk_usage: Swift.Int?
+            public var diskUsage: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/public-user/collaborators`.
             public var collaborators: Swift.Int?
-            /// Creates a new `public_hyphen_user`.
+            /// Creates a new `PublicUser`.
             ///
             /// - Parameters:
             ///   - login:
             ///   - id:
-            ///   - user_view_type:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - userViewType:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
+            ///   - siteAdmin:
             ///   - name:
             ///   - company:
             ///   - blog:
             ///   - location:
             ///   - email:
-            ///   - notification_email:
+            ///   - notificationEmail:
             ///   - hireable:
             ///   - bio:
-            ///   - twitter_username:
-            ///   - public_repos:
-            ///   - public_gists:
+            ///   - twitterUsername:
+            ///   - publicRepos:
+            ///   - publicGists:
             ///   - followers:
             ///   - following:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - plan:
-            ///   - private_gists:
-            ///   - total_private_repos:
-            ///   - owned_private_repos:
-            ///   - disk_usage:
+            ///   - privateGists:
+            ///   - totalPrivateRepos:
+            ///   - ownedPrivateRepos:
+            ///   - diskUsage:
             ///   - collaborators:
             public init(
                 login: Swift.String,
                 id: Swift.Int64,
-                user_view_type: Swift.String? = nil,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                userViewType: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
+                siteAdmin: Swift.Bool,
                 name: Swift.String? = nil,
                 company: Swift.String? = nil,
                 blog: Swift.String? = nil,
                 location: Swift.String? = nil,
                 email: Swift.String? = nil,
-                notification_email: Swift.String? = nil,
+                notificationEmail: Swift.String? = nil,
                 hireable: Swift.Bool? = nil,
                 bio: Swift.String? = nil,
-                twitter_username: Swift.String? = nil,
-                public_repos: Swift.Int,
-                public_gists: Swift.Int,
+                twitterUsername: Swift.String? = nil,
+                publicRepos: Swift.Int,
+                publicGists: Swift.Int,
                 followers: Swift.Int,
                 following: Swift.Int,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                plan: Components.Schemas.public_hyphen_user.planPayload? = nil,
-                private_gists: Swift.Int? = nil,
-                total_private_repos: Swift.Int? = nil,
-                owned_private_repos: Swift.Int? = nil,
-                disk_usage: Swift.Int? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                plan: Components.Schemas.PublicUser.PlanPayload? = nil,
+                privateGists: Swift.Int? = nil,
+                totalPrivateRepos: Swift.Int? = nil,
+                ownedPrivateRepos: Swift.Int? = nil,
+                diskUsage: Swift.Int? = nil,
                 collaborators: Swift.Int? = nil
             ) {
                 self.login = login
                 self.id = id
-                self.user_view_type = user_view_type
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.userViewType = userViewType
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
+                self.siteAdmin = siteAdmin
                 self.name = name
                 self.company = company
                 self.blog = blog
                 self.location = location
                 self.email = email
-                self.notification_email = notification_email
+                self.notificationEmail = notificationEmail
                 self.hireable = hireable
                 self.bio = bio
-                self.twitter_username = twitter_username
-                self.public_repos = public_repos
-                self.public_gists = public_gists
+                self.twitterUsername = twitterUsername
+                self.publicRepos = publicRepos
+                self.publicGists = publicGists
                 self.followers = followers
                 self.following = following
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.plan = plan
-                self.private_gists = private_gists
-                self.total_private_repos = total_private_repos
-                self.owned_private_repos = owned_private_repos
-                self.disk_usage = disk_usage
+                self.privateGists = privateGists
+                self.totalPrivateRepos = totalPrivateRepos
+                self.ownedPrivateRepos = ownedPrivateRepos
+                self.diskUsage = diskUsage
                 self.collaborators = collaborators
             }
             public enum CodingKeys: String, CodingKey {
                 case login
                 case id
-                case user_view_type
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case userViewType = "user_view_type"
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
+                case siteAdmin = "site_admin"
                 case name
                 case company
                 case blog
                 case location
                 case email
-                case notification_email
+                case notificationEmail = "notification_email"
                 case hireable
                 case bio
-                case twitter_username
-                case public_repos
-                case public_gists
+                case twitterUsername = "twitter_username"
+                case publicRepos = "public_repos"
+                case publicGists = "public_gists"
                 case followers
                 case following
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case plan
-                case private_gists
-                case total_private_repos
-                case owned_private_repos
-                case disk_usage
+                case privateGists = "private_gists"
+                case totalPrivateRepos = "total_private_repos"
+                case ownedPrivateRepos = "owned_private_repos"
+                case diskUsage = "disk_usage"
                 case collaborators
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                login = try container.decode(
+                self.login = try container.decode(
                     Swift.String.self,
                     forKey: .login
                 )
-                id = try container.decode(
+                self.id = try container.decode(
                     Swift.Int64.self,
                     forKey: .id
                 )
-                user_view_type = try container.decodeIfPresent(
+                self.userViewType = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .user_view_type
+                    forKey: .userViewType
                 )
-                node_id = try container.decode(
+                self.nodeId = try container.decode(
                     Swift.String.self,
-                    forKey: .node_id
+                    forKey: .nodeId
                 )
-                avatar_url = try container.decode(
+                self.avatarUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .avatar_url
+                    forKey: .avatarUrl
                 )
-                gravatar_id = try container.decodeIfPresent(
+                self.gravatarId = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .gravatar_id
+                    forKey: .gravatarId
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Swift.String.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.htmlUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .html_url
+                    forKey: .htmlUrl
                 )
-                followers_url = try container.decode(
+                self.followersUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .followers_url
+                    forKey: .followersUrl
                 )
-                following_url = try container.decode(
+                self.followingUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .following_url
+                    forKey: .followingUrl
                 )
-                gists_url = try container.decode(
+                self.gistsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .gists_url
+                    forKey: .gistsUrl
                 )
-                starred_url = try container.decode(
+                self.starredUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .starred_url
+                    forKey: .starredUrl
                 )
-                subscriptions_url = try container.decode(
+                self.subscriptionsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .subscriptions_url
+                    forKey: .subscriptionsUrl
                 )
-                organizations_url = try container.decode(
+                self.organizationsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .organizations_url
+                    forKey: .organizationsUrl
                 )
-                repos_url = try container.decode(
+                self.reposUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .repos_url
+                    forKey: .reposUrl
                 )
-                events_url = try container.decode(
+                self.eventsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .events_url
+                    forKey: .eventsUrl
                 )
-                received_events_url = try container.decode(
+                self.receivedEventsUrl = try container.decode(
                     Swift.String.self,
-                    forKey: .received_events_url
+                    forKey: .receivedEventsUrl
                 )
-                _type = try container.decode(
+                self._type = try container.decode(
                     Swift.String.self,
                     forKey: ._type
                 )
-                site_admin = try container.decode(
+                self.siteAdmin = try container.decode(
                     Swift.Bool.self,
-                    forKey: .site_admin
+                    forKey: .siteAdmin
                 )
-                name = try container.decodeIfPresent(
+                self.name = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .name
                 )
-                company = try container.decodeIfPresent(
+                self.company = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .company
                 )
-                blog = try container.decodeIfPresent(
+                self.blog = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .blog
                 )
-                location = try container.decodeIfPresent(
+                self.location = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .location
                 )
-                email = try container.decodeIfPresent(
+                self.email = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .email
                 )
-                notification_email = try container.decodeIfPresent(
+                self.notificationEmail = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .notification_email
+                    forKey: .notificationEmail
                 )
-                hireable = try container.decodeIfPresent(
+                self.hireable = try container.decodeIfPresent(
                     Swift.Bool.self,
                     forKey: .hireable
                 )
-                bio = try container.decodeIfPresent(
+                self.bio = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .bio
                 )
-                twitter_username = try container.decodeIfPresent(
+                self.twitterUsername = try container.decodeIfPresent(
                     Swift.String.self,
-                    forKey: .twitter_username
+                    forKey: .twitterUsername
                 )
-                public_repos = try container.decode(
+                self.publicRepos = try container.decode(
                     Swift.Int.self,
-                    forKey: .public_repos
+                    forKey: .publicRepos
                 )
-                public_gists = try container.decode(
+                self.publicGists = try container.decode(
                     Swift.Int.self,
-                    forKey: .public_gists
+                    forKey: .publicGists
                 )
-                followers = try container.decode(
+                self.followers = try container.decode(
                     Swift.Int.self,
                     forKey: .followers
                 )
-                following = try container.decode(
+                self.following = try container.decode(
                     Swift.Int.self,
                     forKey: .following
                 )
-                created_at = try container.decode(
+                self.createdAt = try container.decode(
                     Foundation.Date.self,
-                    forKey: .created_at
+                    forKey: .createdAt
                 )
-                updated_at = try container.decode(
+                self.updatedAt = try container.decode(
                     Foundation.Date.self,
-                    forKey: .updated_at
+                    forKey: .updatedAt
                 )
-                plan = try container.decodeIfPresent(
-                    Components.Schemas.public_hyphen_user.planPayload.self,
+                self.plan = try container.decodeIfPresent(
+                    Components.Schemas.PublicUser.PlanPayload.self,
                     forKey: .plan
                 )
-                private_gists = try container.decodeIfPresent(
+                self.privateGists = try container.decodeIfPresent(
                     Swift.Int.self,
-                    forKey: .private_gists
+                    forKey: .privateGists
                 )
-                total_private_repos = try container.decodeIfPresent(
+                self.totalPrivateRepos = try container.decodeIfPresent(
                     Swift.Int.self,
-                    forKey: .total_private_repos
+                    forKey: .totalPrivateRepos
                 )
-                owned_private_repos = try container.decodeIfPresent(
+                self.ownedPrivateRepos = try container.decodeIfPresent(
                     Swift.Int.self,
-                    forKey: .owned_private_repos
+                    forKey: .ownedPrivateRepos
                 )
-                disk_usage = try container.decodeIfPresent(
+                self.diskUsage = try container.decodeIfPresent(
                     Swift.Int.self,
-                    forKey: .disk_usage
+                    forKey: .diskUsage
                 )
-                collaborators = try container.decodeIfPresent(
+                self.collaborators = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .collaborators
                 )
@@ -1740,22 +1749,22 @@ public enum Components {
         /// Gist History
         ///
         /// - Remark: Generated from `#/components/schemas/gist-history`.
-        public struct gist_hyphen_history: Codable, Hashable, Sendable {
+        public struct GistHistory: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/gist-history/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/gist-history/version`.
             public var version: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-history/committed_at`.
-            public var committed_at: Foundation.Date?
+            public var committedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/gist-history/change_status`.
-            public struct change_statusPayload: Codable, Hashable, Sendable {
+            public struct ChangeStatusPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/gist-history/change_status/total`.
                 public var total: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/gist-history/change_status/additions`.
                 public var additions: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/gist-history/change_status/deletions`.
                 public var deletions: Swift.Int?
-                /// Creates a new `change_statusPayload`.
+                /// Creates a new `ChangeStatusPayload`.
                 ///
                 /// - Parameters:
                 ///   - total:
@@ -1777,115 +1786,115 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/gist-history/change_status`.
-            public var change_status: Components.Schemas.gist_hyphen_history.change_statusPayload?
+            public var changeStatus: Components.Schemas.GistHistory.ChangeStatusPayload?
             /// - Remark: Generated from `#/components/schemas/gist-history/url`.
             public var url: Swift.String?
-            /// Creates a new `gist_hyphen_history`.
+            /// Creates a new `GistHistory`.
             ///
             /// - Parameters:
             ///   - user:
             ///   - version:
-            ///   - committed_at:
-            ///   - change_status:
+            ///   - committedAt:
+            ///   - changeStatus:
             ///   - url:
             public init(
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                user: Components.Schemas.NullableSimpleUser? = nil,
                 version: Swift.String? = nil,
-                committed_at: Foundation.Date? = nil,
-                change_status: Components.Schemas.gist_hyphen_history.change_statusPayload? = nil,
+                committedAt: Foundation.Date? = nil,
+                changeStatus: Components.Schemas.GistHistory.ChangeStatusPayload? = nil,
                 url: Swift.String? = nil
             ) {
                 self.user = user
                 self.version = version
-                self.committed_at = committed_at
-                self.change_status = change_status
+                self.committedAt = committedAt
+                self.changeStatus = changeStatus
                 self.url = url
             }
             public enum CodingKeys: String, CodingKey {
                 case user
                 case version
-                case committed_at
-                case change_status
+                case committedAt = "committed_at"
+                case changeStatus = "change_status"
                 case url
             }
         }
         /// Gist Simple
         ///
         /// - Remark: Generated from `#/components/schemas/gist-simple`.
-        public struct gist_hyphen_simple: Codable, Hashable, Sendable {
-            /// - Remark: Generated from `#/components/schemas/gist-simple/forksPayload`.
-            public struct forksPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/gist-simple/forksPayload/id`.
+        public struct GistSimple: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/gist-simple/ForksPayload`.
+            public struct ForksPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/gist-simple/ForksPayload/id`.
                 public var id: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/gist-simple/forksPayload/url`.
+                /// - Remark: Generated from `#/components/schemas/gist-simple/ForksPayload/url`.
                 public var url: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/gist-simple/forksPayload/user`.
-                public var user: Components.Schemas.public_hyphen_user?
-                /// - Remark: Generated from `#/components/schemas/gist-simple/forksPayload/created_at`.
-                public var created_at: Foundation.Date?
-                /// - Remark: Generated from `#/components/schemas/gist-simple/forksPayload/updated_at`.
-                public var updated_at: Foundation.Date?
-                /// Creates a new `forksPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/gist-simple/ForksPayload/user`.
+                public var user: Components.Schemas.PublicUser?
+                /// - Remark: Generated from `#/components/schemas/gist-simple/ForksPayload/created_at`.
+                public var createdAt: Foundation.Date?
+                /// - Remark: Generated from `#/components/schemas/gist-simple/ForksPayload/updated_at`.
+                public var updatedAt: Foundation.Date?
+                /// Creates a new `ForksPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - id:
                 ///   - url:
                 ///   - user:
-                ///   - created_at:
-                ///   - updated_at:
+                ///   - createdAt:
+                ///   - updatedAt:
                 public init(
                     id: Swift.String? = nil,
                     url: Swift.String? = nil,
-                    user: Components.Schemas.public_hyphen_user? = nil,
-                    created_at: Foundation.Date? = nil,
-                    updated_at: Foundation.Date? = nil
+                    user: Components.Schemas.PublicUser? = nil,
+                    createdAt: Foundation.Date? = nil,
+                    updatedAt: Foundation.Date? = nil
                 ) {
                     self.id = id
                     self.url = url
                     self.user = user
-                    self.created_at = created_at
-                    self.updated_at = updated_at
+                    self.createdAt = createdAt
+                    self.updatedAt = updatedAt
                 }
                 public enum CodingKeys: String, CodingKey {
                     case id
                     case url
                     case user
-                    case created_at
-                    case updated_at
+                    case createdAt = "created_at"
+                    case updatedAt = "updated_at"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/gist-simple/forks`.
-            public typealias forksPayload = [Components.Schemas.gist_hyphen_simple.forksPayloadPayload]
+            public typealias ForksPayload = [Components.Schemas.GistSimple.ForksPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/gist-simple/forks`.
             @available(*, deprecated)
-            public var forks: Components.Schemas.gist_hyphen_simple.forksPayload?
+            public var forks: Components.Schemas.GistSimple.ForksPayload?
             /// - Remark: Generated from `#/components/schemas/gist-simple/history`.
             @available(*, deprecated)
-            public var history: [Components.Schemas.gist_hyphen_history]?
+            public var history: [Components.Schemas.GistHistory]?
             /// Gist
             ///
             /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of`.
-            public struct fork_ofPayload: Codable, Hashable, Sendable {
+            public struct ForkOfPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/url`.
                 public var url: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/forks_url`.
-                public var forks_url: Swift.String
+                public var forksUrl: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/commits_url`.
-                public var commits_url: Swift.String
+                public var commitsUrl: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/id`.
                 public var id: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/node_id`.
-                public var node_id: Swift.String
+                public var nodeId: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/git_pull_url`.
-                public var git_pull_url: Swift.String
+                public var gitPullUrl: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/git_push_url`.
-                public var git_push_url: Swift.String
+                public var gitPushUrl: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/html_url`.
-                public var html_url: Swift.String
+                public var htmlUrl: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/files`.
-                public struct filesPayload: Codable, Hashable, Sendable {
+                public struct FilesPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/files/additionalProperties`.
-                    public struct additionalPropertiesPayload: Codable, Hashable, Sendable {
+                    public struct AdditionalPropertiesPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/files/additionalProperties/filename`.
                         public var filename: Swift.String?
                         /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/files/additionalProperties/type`.
@@ -1893,45 +1902,45 @@ public enum Components {
                         /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/files/additionalProperties/language`.
                         public var language: Swift.String?
                         /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/files/additionalProperties/raw_url`.
-                        public var raw_url: Swift.String?
+                        public var rawUrl: Swift.String?
                         /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/files/additionalProperties/size`.
                         public var size: Swift.Int?
-                        /// Creates a new `additionalPropertiesPayload`.
+                        /// Creates a new `AdditionalPropertiesPayload`.
                         ///
                         /// - Parameters:
                         ///   - filename:
                         ///   - _type:
                         ///   - language:
-                        ///   - raw_url:
+                        ///   - rawUrl:
                         ///   - size:
                         public init(
                             filename: Swift.String? = nil,
                             _type: Swift.String? = nil,
                             language: Swift.String? = nil,
-                            raw_url: Swift.String? = nil,
+                            rawUrl: Swift.String? = nil,
                             size: Swift.Int? = nil
                         ) {
                             self.filename = filename
                             self._type = _type
                             self.language = language
-                            self.raw_url = raw_url
+                            self.rawUrl = rawUrl
                             self.size = size
                         }
                         public enum CodingKeys: String, CodingKey {
                             case filename
                             case _type = "type"
                             case language
-                            case raw_url
+                            case rawUrl = "raw_url"
                             case size
                         }
                     }
                     /// A container of undocumented properties.
-                    public var additionalProperties: [String: Components.Schemas.gist_hyphen_simple.fork_ofPayload.filesPayload.additionalPropertiesPayload]
-                    /// Creates a new `filesPayload`.
+                    public var additionalProperties: [String: Components.Schemas.GistSimple.ForkOfPayload.FilesPayload.AdditionalPropertiesPayload]
+                    /// Creates a new `FilesPayload`.
                     ///
                     /// - Parameters:
                     ///   - additionalProperties: A container of undocumented properties.
-                    public init(additionalProperties: [String: Components.Schemas.gist_hyphen_simple.fork_ofPayload.filesPayload.additionalPropertiesPayload] = .init()) {
+                    public init(additionalProperties: [String: Components.Schemas.GistSimple.ForkOfPayload.FilesPayload.AdditionalPropertiesPayload] = .init()) {
                         self.additionalProperties = additionalProperties
                     }
                     public init(from decoder: any Decoder) throws {
@@ -1942,95 +1951,95 @@ public enum Components {
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/files`.
-                public var files: Components.Schemas.gist_hyphen_simple.fork_ofPayload.filesPayload
+                public var files: Components.Schemas.GistSimple.ForkOfPayload.FilesPayload
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/public`.
                 public var _public: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/created_at`.
-                public var created_at: Foundation.Date
+                public var createdAt: Foundation.Date
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/updated_at`.
-                public var updated_at: Foundation.Date
+                public var updatedAt: Foundation.Date
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/description`.
                 public var description: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/comments`.
                 public var comments: Swift.Int
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/comments_enabled`.
-                public var comments_enabled: Swift.Bool?
+                public var commentsEnabled: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/user`.
-                public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+                public var user: Components.Schemas.NullableSimpleUser?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/comments_url`.
-                public var comments_url: Swift.String
+                public var commentsUrl: Swift.String
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/owner`.
-                public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+                public var owner: Components.Schemas.NullableSimpleUser?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/truncated`.
                 public var truncated: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/forks`.
                 public var forks: [OpenAPIRuntime.OpenAPIValueContainer]?
                 /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of/history`.
                 public var history: [OpenAPIRuntime.OpenAPIValueContainer]?
-                /// Creates a new `fork_ofPayload`.
+                /// Creates a new `ForkOfPayload`.
                 ///
                 /// - Parameters:
                 ///   - url:
-                ///   - forks_url:
-                ///   - commits_url:
+                ///   - forksUrl:
+                ///   - commitsUrl:
                 ///   - id:
-                ///   - node_id:
-                ///   - git_pull_url:
-                ///   - git_push_url:
-                ///   - html_url:
+                ///   - nodeId:
+                ///   - gitPullUrl:
+                ///   - gitPushUrl:
+                ///   - htmlUrl:
                 ///   - files:
                 ///   - _public:
-                ///   - created_at:
-                ///   - updated_at:
+                ///   - createdAt:
+                ///   - updatedAt:
                 ///   - description:
                 ///   - comments:
-                ///   - comments_enabled:
+                ///   - commentsEnabled:
                 ///   - user:
-                ///   - comments_url:
+                ///   - commentsUrl:
                 ///   - owner:
                 ///   - truncated:
                 ///   - forks:
                 ///   - history:
                 public init(
                     url: Swift.String,
-                    forks_url: Swift.String,
-                    commits_url: Swift.String,
+                    forksUrl: Swift.String,
+                    commitsUrl: Swift.String,
                     id: Swift.String,
-                    node_id: Swift.String,
-                    git_pull_url: Swift.String,
-                    git_push_url: Swift.String,
-                    html_url: Swift.String,
-                    files: Components.Schemas.gist_hyphen_simple.fork_ofPayload.filesPayload,
+                    nodeId: Swift.String,
+                    gitPullUrl: Swift.String,
+                    gitPushUrl: Swift.String,
+                    htmlUrl: Swift.String,
+                    files: Components.Schemas.GistSimple.ForkOfPayload.FilesPayload,
                     _public: Swift.Bool,
-                    created_at: Foundation.Date,
-                    updated_at: Foundation.Date,
+                    createdAt: Foundation.Date,
+                    updatedAt: Foundation.Date,
                     description: Swift.String? = nil,
                     comments: Swift.Int,
-                    comments_enabled: Swift.Bool? = nil,
-                    user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                    comments_url: Swift.String,
-                    owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                    commentsEnabled: Swift.Bool? = nil,
+                    user: Components.Schemas.NullableSimpleUser? = nil,
+                    commentsUrl: Swift.String,
+                    owner: Components.Schemas.NullableSimpleUser? = nil,
                     truncated: Swift.Bool? = nil,
                     forks: [OpenAPIRuntime.OpenAPIValueContainer]? = nil,
                     history: [OpenAPIRuntime.OpenAPIValueContainer]? = nil
                 ) {
                     self.url = url
-                    self.forks_url = forks_url
-                    self.commits_url = commits_url
+                    self.forksUrl = forksUrl
+                    self.commitsUrl = commitsUrl
                     self.id = id
-                    self.node_id = node_id
-                    self.git_pull_url = git_pull_url
-                    self.git_push_url = git_push_url
-                    self.html_url = html_url
+                    self.nodeId = nodeId
+                    self.gitPullUrl = gitPullUrl
+                    self.gitPushUrl = gitPushUrl
+                    self.htmlUrl = htmlUrl
                     self.files = files
                     self._public = _public
-                    self.created_at = created_at
-                    self.updated_at = updated_at
+                    self.createdAt = createdAt
+                    self.updatedAt = updatedAt
                     self.description = description
                     self.comments = comments
-                    self.comments_enabled = comments_enabled
+                    self.commentsEnabled = commentsEnabled
                     self.user = user
-                    self.comments_url = comments_url
+                    self.commentsUrl = commentsUrl
                     self.owner = owner
                     self.truncated = truncated
                     self.forks = forks
@@ -2038,22 +2047,22 @@ public enum Components {
                 }
                 public enum CodingKeys: String, CodingKey {
                     case url
-                    case forks_url
-                    case commits_url
+                    case forksUrl = "forks_url"
+                    case commitsUrl = "commits_url"
                     case id
-                    case node_id
-                    case git_pull_url
-                    case git_push_url
-                    case html_url
+                    case nodeId = "node_id"
+                    case gitPullUrl = "git_pull_url"
+                    case gitPushUrl = "git_push_url"
+                    case htmlUrl = "html_url"
                     case files
                     case _public = "public"
-                    case created_at
-                    case updated_at
+                    case createdAt = "created_at"
+                    case updatedAt = "updated_at"
                     case description
                     case comments
-                    case comments_enabled
+                    case commentsEnabled = "comments_enabled"
                     case user
-                    case comments_url
+                    case commentsUrl = "comments_url"
                     case owner
                     case truncated
                     case forks
@@ -2063,27 +2072,27 @@ public enum Components {
             /// Gist
             ///
             /// - Remark: Generated from `#/components/schemas/gist-simple/fork_of`.
-            public var fork_of: Components.Schemas.gist_hyphen_simple.fork_ofPayload?
+            public var forkOf: Components.Schemas.GistSimple.ForkOfPayload?
             /// - Remark: Generated from `#/components/schemas/gist-simple/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/forks_url`.
-            public var forks_url: Swift.String?
+            public var forksUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/commits_url`.
-            public var commits_url: Swift.String?
+            public var commitsUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/id`.
             public var id: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/node_id`.
-            public var node_id: Swift.String?
+            public var nodeId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/git_pull_url`.
-            public var git_pull_url: Swift.String?
+            public var gitPullUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/git_push_url`.
-            public var git_push_url: Swift.String?
+            public var gitPushUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/html_url`.
-            public var html_url: Swift.String?
+            public var htmlUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/files`.
-            public struct filesPayload: Codable, Hashable, Sendable {
+            public struct FilesPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties`.
-                public struct additionalPropertiesPayload: Codable, Hashable, Sendable {
+                public struct AdditionalPropertiesPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/filename`.
                     public var filename: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/type`.
@@ -2091,7 +2100,7 @@ public enum Components {
                     /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/language`.
                     public var language: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/raw_url`.
-                    public var raw_url: Swift.String?
+                    public var rawUrl: Swift.String?
                     /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/size`.
                     public var size: Swift.Int?
                     /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/truncated`.
@@ -2102,13 +2111,13 @@ public enum Components {
                     ///
                     /// - Remark: Generated from `#/components/schemas/gist-simple/files/additionalProperties/encoding`.
                     public var encoding: Swift.String?
-                    /// Creates a new `additionalPropertiesPayload`.
+                    /// Creates a new `AdditionalPropertiesPayload`.
                     ///
                     /// - Parameters:
                     ///   - filename:
                     ///   - _type:
                     ///   - language:
-                    ///   - raw_url:
+                    ///   - rawUrl:
                     ///   - size:
                     ///   - truncated:
                     ///   - content:
@@ -2117,7 +2126,7 @@ public enum Components {
                         filename: Swift.String? = nil,
                         _type: Swift.String? = nil,
                         language: Swift.String? = nil,
-                        raw_url: Swift.String? = nil,
+                        rawUrl: Swift.String? = nil,
                         size: Swift.Int? = nil,
                         truncated: Swift.Bool? = nil,
                         content: Swift.String? = nil,
@@ -2126,7 +2135,7 @@ public enum Components {
                         self.filename = filename
                         self._type = _type
                         self.language = language
-                        self.raw_url = raw_url
+                        self.rawUrl = rawUrl
                         self.size = size
                         self.truncated = truncated
                         self.content = content
@@ -2136,7 +2145,7 @@ public enum Components {
                         case filename
                         case _type = "type"
                         case language
-                        case raw_url
+                        case rawUrl = "raw_url"
                         case size
                         case truncated
                         case content
@@ -2144,12 +2153,12 @@ public enum Components {
                     }
                 }
                 /// A container of undocumented properties.
-                public var additionalProperties: [String: Components.Schemas.gist_hyphen_simple.filesPayload.additionalPropertiesPayload?]
-                /// Creates a new `filesPayload`.
+                public var additionalProperties: [String: Components.Schemas.GistSimple.FilesPayload.AdditionalPropertiesPayload?]
+                /// Creates a new `FilesPayload`.
                 ///
                 /// - Parameters:
                 ///   - additionalProperties: A container of undocumented properties.
-                public init(additionalProperties: [String: Components.Schemas.gist_hyphen_simple.filesPayload.additionalPropertiesPayload?] = .init()) {
+                public init(additionalProperties: [String: Components.Schemas.GistSimple.FilesPayload.AdditionalPropertiesPayload?] = .init()) {
                     self.additionalProperties = additionalProperties
                 }
                 public init(from decoder: any Decoder) throws {
@@ -2160,120 +2169,120 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/gist-simple/files`.
-            public var files: Components.Schemas.gist_hyphen_simple.filesPayload?
+            public var files: Components.Schemas.GistSimple.FilesPayload?
             /// - Remark: Generated from `#/components/schemas/gist-simple/public`.
             public var _public: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/gist-simple/created_at`.
-            public var created_at: Swift.String?
+            public var createdAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/updated_at`.
-            public var updated_at: Swift.String?
+            public var updatedAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/comments`.
             public var comments: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/gist-simple/comments_enabled`.
-            public var comments_enabled: Swift.Bool?
+            public var commentsEnabled: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/gist-simple/user`.
             public var user: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/comments_url`.
-            public var comments_url: Swift.String?
+            public var commentsUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/gist-simple/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user?
+            public var owner: Components.Schemas.SimpleUser?
             /// - Remark: Generated from `#/components/schemas/gist-simple/truncated`.
             public var truncated: Swift.Bool?
-            /// Creates a new `gist_hyphen_simple`.
+            /// Creates a new `GistSimple`.
             ///
             /// - Parameters:
             ///   - forks:
             ///   - history:
-            ///   - fork_of: Gist
+            ///   - forkOf: Gist
             ///   - url:
-            ///   - forks_url:
-            ///   - commits_url:
+            ///   - forksUrl:
+            ///   - commitsUrl:
             ///   - id:
-            ///   - node_id:
-            ///   - git_pull_url:
-            ///   - git_push_url:
-            ///   - html_url:
+            ///   - nodeId:
+            ///   - gitPullUrl:
+            ///   - gitPushUrl:
+            ///   - htmlUrl:
             ///   - files:
             ///   - _public:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - description:
             ///   - comments:
-            ///   - comments_enabled:
+            ///   - commentsEnabled:
             ///   - user:
-            ///   - comments_url:
+            ///   - commentsUrl:
             ///   - owner:
             ///   - truncated:
             public init(
-                forks: Components.Schemas.gist_hyphen_simple.forksPayload? = nil,
-                history: [Components.Schemas.gist_hyphen_history]? = nil,
-                fork_of: Components.Schemas.gist_hyphen_simple.fork_ofPayload? = nil,
+                forks: Components.Schemas.GistSimple.ForksPayload? = nil,
+                history: [Components.Schemas.GistHistory]? = nil,
+                forkOf: Components.Schemas.GistSimple.ForkOfPayload? = nil,
                 url: Swift.String? = nil,
-                forks_url: Swift.String? = nil,
-                commits_url: Swift.String? = nil,
+                forksUrl: Swift.String? = nil,
+                commitsUrl: Swift.String? = nil,
                 id: Swift.String? = nil,
-                node_id: Swift.String? = nil,
-                git_pull_url: Swift.String? = nil,
-                git_push_url: Swift.String? = nil,
-                html_url: Swift.String? = nil,
-                files: Components.Schemas.gist_hyphen_simple.filesPayload? = nil,
+                nodeId: Swift.String? = nil,
+                gitPullUrl: Swift.String? = nil,
+                gitPushUrl: Swift.String? = nil,
+                htmlUrl: Swift.String? = nil,
+                files: Components.Schemas.GistSimple.FilesPayload? = nil,
                 _public: Swift.Bool? = nil,
-                created_at: Swift.String? = nil,
-                updated_at: Swift.String? = nil,
+                createdAt: Swift.String? = nil,
+                updatedAt: Swift.String? = nil,
                 description: Swift.String? = nil,
                 comments: Swift.Int? = nil,
-                comments_enabled: Swift.Bool? = nil,
+                commentsEnabled: Swift.Bool? = nil,
                 user: Swift.String? = nil,
-                comments_url: Swift.String? = nil,
-                owner: Components.Schemas.simple_hyphen_user? = nil,
+                commentsUrl: Swift.String? = nil,
+                owner: Components.Schemas.SimpleUser? = nil,
                 truncated: Swift.Bool? = nil
             ) {
                 self.forks = forks
                 self.history = history
-                self.fork_of = fork_of
+                self.forkOf = forkOf
                 self.url = url
-                self.forks_url = forks_url
-                self.commits_url = commits_url
+                self.forksUrl = forksUrl
+                self.commitsUrl = commitsUrl
                 self.id = id
-                self.node_id = node_id
-                self.git_pull_url = git_pull_url
-                self.git_push_url = git_push_url
-                self.html_url = html_url
+                self.nodeId = nodeId
+                self.gitPullUrl = gitPullUrl
+                self.gitPushUrl = gitPushUrl
+                self.htmlUrl = htmlUrl
                 self.files = files
                 self._public = _public
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.description = description
                 self.comments = comments
-                self.comments_enabled = comments_enabled
+                self.commentsEnabled = commentsEnabled
                 self.user = user
-                self.comments_url = comments_url
+                self.commentsUrl = commentsUrl
                 self.owner = owner
                 self.truncated = truncated
             }
             public enum CodingKeys: String, CodingKey {
                 case forks
                 case history
-                case fork_of
+                case forkOf = "fork_of"
                 case url
-                case forks_url
-                case commits_url
+                case forksUrl = "forks_url"
+                case commitsUrl = "commits_url"
                 case id
-                case node_id
-                case git_pull_url
-                case git_push_url
-                case html_url
+                case nodeId = "node_id"
+                case gitPullUrl = "git_pull_url"
+                case gitPushUrl = "git_push_url"
+                case htmlUrl = "html_url"
                 case files
                 case _public = "public"
-                case created_at
-                case updated_at
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case description
                 case comments
-                case comments_enabled
+                case commentsEnabled = "comments_enabled"
                 case user
-                case comments_url
+                case commentsUrl = "comments_url"
                 case owner
                 case truncated
             }
@@ -2281,11 +2290,11 @@ public enum Components {
         /// A comment made to a gist.
         ///
         /// - Remark: Generated from `#/components/schemas/gist-comment`.
-        public struct gist_hyphen_comment: Codable, Hashable, Sendable {
+        public struct GistComment: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/gist-comment/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/gist-comment/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/gist-comment/url`.
             public var url: Swift.String
             /// The comment text.
@@ -2293,73 +2302,73 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/gist-comment/body`.
             public var body: Swift.String
             /// - Remark: Generated from `#/components/schemas/gist-comment/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/gist-comment/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/gist-comment/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/gist-comment/author_association`.
-            public var author_association: Components.Schemas.author_hyphen_association
-            /// Creates a new `gist_hyphen_comment`.
+            public var authorAssociation: Components.Schemas.AuthorAssociation
+            /// Creates a new `GistComment`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url:
             ///   - body: The comment text.
             ///   - user:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - author_association:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - authorAssociation:
             public init(
                 id: Swift.Int,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
                 body: Swift.String,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                author_association: Components.Schemas.author_hyphen_association
+                user: Components.Schemas.NullableSimpleUser? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                authorAssociation: Components.Schemas.AuthorAssociation
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
                 self.body = body
                 self.user = user
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.author_association = author_association
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.authorAssociation = authorAssociation
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case url
                 case body
                 case user
-                case created_at
-                case updated_at
-                case author_association
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case authorAssociation = "author_association"
             }
         }
         /// Gist Commit
         ///
         /// - Remark: Generated from `#/components/schemas/gist-commit`.
-        public struct gist_hyphen_commit: Codable, Hashable, Sendable {
+        public struct GistCommit: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/gist-commit/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/gist-commit/version`.
             public var version: Swift.String
             /// - Remark: Generated from `#/components/schemas/gist-commit/user`.
-            public var user: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var user: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/gist-commit/change_status`.
-            public struct change_statusPayload: Codable, Hashable, Sendable {
+            public struct ChangeStatusPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/gist-commit/change_status/total`.
                 public var total: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/gist-commit/change_status/additions`.
                 public var additions: Swift.Int?
                 /// - Remark: Generated from `#/components/schemas/gist-commit/change_status/deletions`.
                 public var deletions: Swift.Int?
-                /// Creates a new `change_statusPayload`.
+                /// Creates a new `ChangeStatusPayload`.
                 ///
                 /// - Parameters:
                 ///   - total:
@@ -2381,36 +2390,36 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/gist-commit/change_status`.
-            public var change_status: Components.Schemas.gist_hyphen_commit.change_statusPayload
+            public var changeStatus: Components.Schemas.GistCommit.ChangeStatusPayload
             /// - Remark: Generated from `#/components/schemas/gist-commit/committed_at`.
-            public var committed_at: Foundation.Date
-            /// Creates a new `gist_hyphen_commit`.
+            public var committedAt: Foundation.Date
+            /// Creates a new `GistCommit`.
             ///
             /// - Parameters:
             ///   - url:
             ///   - version:
             ///   - user:
-            ///   - change_status:
-            ///   - committed_at:
+            ///   - changeStatus:
+            ///   - committedAt:
             public init(
                 url: Swift.String,
                 version: Swift.String,
-                user: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
-                change_status: Components.Schemas.gist_hyphen_commit.change_statusPayload,
-                committed_at: Foundation.Date
+                user: Components.Schemas.NullableSimpleUser? = nil,
+                changeStatus: Components.Schemas.GistCommit.ChangeStatusPayload,
+                committedAt: Foundation.Date
             ) {
                 self.url = url
                 self.version = version
                 self.user = user
-                self.change_status = change_status
-                self.committed_at = committed_at
+                self.changeStatus = changeStatus
+                self.committedAt = committedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case url
                 case version
                 case user
-                case change_status
-                case committed_at
+                case changeStatus = "change_status"
+                case committedAt = "committed_at"
             }
         }
     }
@@ -2419,42 +2428,42 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
         ///
         /// - Remark: Generated from `#/components/parameters/since`.
-        public typealias since = Foundation.Date
+        public typealias Since = Foundation.Date
         /// The unique identifier of the gist.
         ///
         /// - Remark: Generated from `#/components/parameters/gist-id`.
-        public typealias gist_hyphen_id = Swift.String
+        public typealias GistId = Swift.String
         /// The unique identifier of the comment.
         ///
         /// - Remark: Generated from `#/components/parameters/comment-id`.
-        public typealias comment_hyphen_id = Swift.Int64
+        public typealias CommentId = Swift.Int64
         /// The handle for the GitHub user account.
         ///
         /// - Remark: Generated from `#/components/parameters/username`.
-        public typealias username = Swift.String
+        public typealias Username = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2464,25 +2473,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2492,29 +2501,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct requires_authentication: Sendable, Hashable {
+        public struct RequiresAuthentication: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/requires_authentication/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/requires_authentication/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2524,25 +2533,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.requires_authentication.Body
-            /// Creates a new `requires_authentication`.
+            public var body: Components.Responses.RequiresAuthentication.Body
+            /// Creates a new `RequiresAuthentication`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.requires_authentication.Body) {
+            public init(body: Components.Responses.RequiresAuthentication.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2552,83 +2561,83 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct forbidden_gist: Sendable, Hashable {
+        public struct ForbiddenGist: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden_gist/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden_gist/content/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// - Remark: Generated from `#/components/responses/forbidden_gist/content/json/block`.
-                    public struct blockPayload: Codable, Hashable, Sendable {
+                    public struct BlockPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/components/responses/forbidden_gist/content/json/block/reason`.
                         public var reason: Swift.String?
                         /// - Remark: Generated from `#/components/responses/forbidden_gist/content/json/block/created_at`.
-                        public var created_at: Swift.String?
+                        public var createdAt: Swift.String?
                         /// - Remark: Generated from `#/components/responses/forbidden_gist/content/json/block/html_url`.
-                        public var html_url: Swift.String?
-                        /// Creates a new `blockPayload`.
+                        public var htmlUrl: Swift.String?
+                        /// Creates a new `BlockPayload`.
                         ///
                         /// - Parameters:
                         ///   - reason:
-                        ///   - created_at:
-                        ///   - html_url:
+                        ///   - createdAt:
+                        ///   - htmlUrl:
                         public init(
                             reason: Swift.String? = nil,
-                            created_at: Swift.String? = nil,
-                            html_url: Swift.String? = nil
+                            createdAt: Swift.String? = nil,
+                            htmlUrl: Swift.String? = nil
                         ) {
                             self.reason = reason
-                            self.created_at = created_at
-                            self.html_url = html_url
+                            self.createdAt = createdAt
+                            self.htmlUrl = htmlUrl
                         }
                         public enum CodingKeys: String, CodingKey {
                             case reason
-                            case created_at
-                            case html_url
+                            case createdAt = "created_at"
+                            case htmlUrl = "html_url"
                         }
                     }
                     /// - Remark: Generated from `#/components/responses/forbidden_gist/content/json/block`.
-                    public var block: Components.Responses.forbidden_gist.Body.jsonPayload.blockPayload?
+                    public var block: Components.Responses.ForbiddenGist.Body.JsonPayload.BlockPayload?
                     /// - Remark: Generated from `#/components/responses/forbidden_gist/content/json/message`.
                     public var message: Swift.String?
                     /// - Remark: Generated from `#/components/responses/forbidden_gist/content/json/documentation_url`.
-                    public var documentation_url: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var documentationUrl: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - block:
                     ///   - message:
-                    ///   - documentation_url:
+                    ///   - documentationUrl:
                     public init(
-                        block: Components.Responses.forbidden_gist.Body.jsonPayload.blockPayload? = nil,
+                        block: Components.Responses.ForbiddenGist.Body.JsonPayload.BlockPayload? = nil,
                         message: Swift.String? = nil,
-                        documentation_url: Swift.String? = nil
+                        documentationUrl: Swift.String? = nil
                     ) {
                         self.block = block
                         self.message = message
-                        self.documentation_url = documentation_url
+                        self.documentationUrl = documentationUrl
                     }
                     public enum CodingKeys: String, CodingKey {
                         case block
                         case message
-                        case documentation_url
+                        case documentationUrl = "documentation_url"
                     }
                 }
                 /// - Remark: Generated from `#/components/responses/forbidden_gist/content/application\/json`.
-                case json(Components.Responses.forbidden_gist.Body.jsonPayload)
+                case json(Components.Responses.ForbiddenGist.Body.JsonPayload)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Responses.forbidden_gist.Body.jsonPayload {
+                public var json: Components.Responses.ForbiddenGist.Body.JsonPayload {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -2638,12 +2647,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden_gist.Body
-            /// Creates a new `forbidden_gist`.
+            public var body: Components.Responses.ForbiddenGist.Body
+            /// Creates a new `ForbiddenGist`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden_gist.Body) {
+            public init(body: Components.Responses.ForbiddenGist.Body) {
                 self.body = body
             }
         }
@@ -2651,7 +2660,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -2663,7 +2672,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists`.
     /// - Remark: Generated from `#/paths//gists/get(gists/list)`.
-    public enum gists_sol_list {
+    public enum GistsList {
         public static let id: Swift.String = "gists/list"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/GET/query`.
@@ -2671,52 +2680,52 @@ public enum Operations {
                 /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/gists/GET/query/since`.
-                public var since: Components.Parameters.since?
+                public var since: Components.Parameters.Since?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    since: Components.Parameters.since? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    since: Components.Parameters.Since? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.since = since
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.gists_sol_list.Input.Query
+            public var query: Operations.GistsList.Input.Query
             /// - Remark: Generated from `#/paths/gists/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsList.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsList.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_list.Input.Headers
+            public var headers: Operations.GistsList.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.gists_sol_list.Input.Query = .init(),
-                headers: Operations.gists_sol_list.Input.Headers = .init()
+                query: Operations.GistsList.Input.Query = .init(),
+                headers: Operations.GistsList.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -2727,26 +2736,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_list.Output.Ok.Headers
+                public var headers: Operations.GistsList.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/gists/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.base_hyphen_gist])
+                    case json([Components.Schemas.BaseGist])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.base_hyphen_gist] {
+                    public var json: [Components.Schemas.BaseGist] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2756,15 +2765,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_list.Output.Ok.Body
+                public var body: Operations.GistsList.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_list.Output.Ok.Headers = .init(),
-                    body: Operations.gists_sol_list.Output.Ok.Body
+                    headers: Operations.GistsList.Output.Ok.Headers = .init(),
+                    body: Operations.GistsList.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -2775,12 +2784,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/get(gists/list)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_list.Output.Ok)
+            case ok(Operations.GistsList.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_list.Output.Ok {
+            public var ok: Operations.GistsList.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2798,12 +2807,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/get(gists/list)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/get(gists/list)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -2821,12 +2838,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/get(gists/list)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -2879,25 +2896,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /gists`.
     /// - Remark: Generated from `#/paths//gists/post(gists/create)`.
-    public enum gists_sol_create {
+    public enum GistsCreate {
         public static let id: Swift.String = "gists/create"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_create.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsCreate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_create.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsCreate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_create.Input.Headers
+            public var headers: Operations.GistsCreate.Input.Headers
             /// - Remark: Generated from `#/paths/gists/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/gists/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Description of the gist
                     ///
                     /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/description`.
@@ -2905,14 +2922,14 @@ public enum Operations {
                     /// Names and content for the files that make up the gist
                     ///
                     /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/files`.
-                    public struct filesPayload: Codable, Hashable, Sendable {
+                    public struct FilesPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/files/additionalProperties`.
-                        public struct additionalPropertiesPayload: Codable, Hashable, Sendable {
+                        public struct AdditionalPropertiesPayload: Codable, Hashable, Sendable {
                             /// Content of the file
                             ///
                             /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/files/additionalProperties/content`.
                             public var content: Swift.String
-                            /// Creates a new `additionalPropertiesPayload`.
+                            /// Creates a new `AdditionalPropertiesPayload`.
                             ///
                             /// - Parameters:
                             ///   - content: Content of the file
@@ -2924,12 +2941,12 @@ public enum Operations {
                             }
                         }
                         /// A container of undocumented properties.
-                        public var additionalProperties: [String: Operations.gists_sol_create.Input.Body.jsonPayload.filesPayload.additionalPropertiesPayload]
-                        /// Creates a new `filesPayload`.
+                        public var additionalProperties: [String: Operations.GistsCreate.Input.Body.JsonPayload.FilesPayload.AdditionalPropertiesPayload]
+                        /// Creates a new `FilesPayload`.
                         ///
                         /// - Parameters:
                         ///   - additionalProperties: A container of undocumented properties.
-                        public init(additionalProperties: [String: Operations.gists_sol_create.Input.Body.jsonPayload.filesPayload.additionalPropertiesPayload] = .init()) {
+                        public init(additionalProperties: [String: Operations.GistsCreate.Input.Body.JsonPayload.FilesPayload.AdditionalPropertiesPayload] = .init()) {
                             self.additionalProperties = additionalProperties
                         }
                         public init(from decoder: any Decoder) throws {
@@ -2942,20 +2959,20 @@ public enum Operations {
                     /// Names and content for the files that make up the gist
                     ///
                     /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/files`.
-                    public var files: Operations.gists_sol_create.Input.Body.jsonPayload.filesPayload
+                    public var files: Operations.GistsCreate.Input.Body.JsonPayload.FilesPayload
                     /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/public`.
-                    @frozen public enum _publicPayload: Codable, Hashable, Sendable {
+                    @frozen public enum PublicPayload: Codable, Hashable, Sendable {
                         /// Flag indicating whether the gist is public
                         ///
                         /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/public/case1`.
                         case case1(Swift.Bool)
                         /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/public/case2`.
-                        @frozen public enum Case2Payload: String, Codable, Hashable, Sendable {
+                        @frozen public enum Case2Payload: String, Codable, Hashable, Sendable, CaseIterable {
                             case _true = "true"
                             case _false = "false"
                         }
                         /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/public/case2`.
-                        case case2(Operations.gists_sol_create.Input.Body.jsonPayload._publicPayload.Case2Payload)
+                        case case2(Operations.GistsCreate.Input.Body.JsonPayload.PublicPayload.Case2Payload)
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
@@ -2986,8 +3003,8 @@ public enum Operations {
                         }
                     }
                     /// - Remark: Generated from `#/paths/gists/POST/requestBody/json/public`.
-                    public var _public: Operations.gists_sol_create.Input.Body.jsonPayload._publicPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var _public: Operations.GistsCreate.Input.Body.JsonPayload.PublicPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - description: Description of the gist
@@ -2995,8 +3012,8 @@ public enum Operations {
                     ///   - _public:
                     public init(
                         description: Swift.String? = nil,
-                        files: Operations.gists_sol_create.Input.Body.jsonPayload.filesPayload,
-                        _public: Operations.gists_sol_create.Input.Body.jsonPayload._publicPayload? = nil
+                        files: Operations.GistsCreate.Input.Body.JsonPayload.FilesPayload,
+                        _public: Operations.GistsCreate.Input.Body.JsonPayload.PublicPayload? = nil
                     ) {
                         self.description = description
                         self.files = files
@@ -3009,17 +3026,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/gists/POST/requestBody/content/application\/json`.
-                case json(Operations.gists_sol_create.Input.Body.jsonPayload)
+                case json(Operations.GistsCreate.Input.Body.JsonPayload)
             }
-            public var body: Operations.gists_sol_create.Input.Body
+            public var body: Operations.GistsCreate.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.gists_sol_create.Input.Headers = .init(),
-                body: Operations.gists_sol_create.Input.Body
+                headers: Operations.GistsCreate.Input.Headers = .init(),
+                body: Operations.GistsCreate.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -3030,26 +3047,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_create.Output.Created.Headers
+                public var headers: Operations.GistsCreate.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/gists/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.gist_hyphen_simple)
+                    case json(Components.Schemas.GistSimple)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gist_hyphen_simple {
+                    public var json: Components.Schemas.GistSimple {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3059,15 +3076,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_create.Output.Created.Body
+                public var body: Operations.GistsCreate.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_create.Output.Created.Headers = .init(),
-                    body: Operations.gists_sol_create.Output.Created.Body
+                    headers: Operations.GistsCreate.Output.Created.Headers = .init(),
+                    body: Operations.GistsCreate.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3078,12 +3095,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/post(gists/create)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.gists_sol_create.Output.Created)
+            case created(Operations.GistsCreate.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.gists_sol_create.Output.Created {
+            public var created: Operations.GistsCreate.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -3101,12 +3118,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/post(gists/create)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3124,12 +3141,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/post(gists/create)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/post(gists/create)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3147,12 +3172,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/post(gists/create)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3170,12 +3195,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/post(gists/create)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3227,7 +3252,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/public`.
     /// - Remark: Generated from `#/paths//gists/public/get(gists/list-public)`.
-    public enum gists_sol_list_hyphen_public {
+    public enum GistsListPublic {
         public static let id: Swift.String = "gists/list-public"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/public/GET/query`.
@@ -3235,52 +3260,52 @@ public enum Operations {
                 /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/gists/public/GET/query/since`.
-                public var since: Components.Parameters.since?
+                public var since: Components.Parameters.Since?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/public/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/public/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    since: Components.Parameters.since? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    since: Components.Parameters.Since? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.since = since
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.gists_sol_list_hyphen_public.Input.Query
+            public var query: Operations.GistsListPublic.Input.Query
             /// - Remark: Generated from `#/paths/gists/public/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_public.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListPublic.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_public.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListPublic.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_list_hyphen_public.Input.Headers
+            public var headers: Operations.GistsListPublic.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.gists_sol_list_hyphen_public.Input.Query = .init(),
-                headers: Operations.gists_sol_list_hyphen_public.Input.Headers = .init()
+                query: Operations.GistsListPublic.Input.Query = .init(),
+                headers: Operations.GistsListPublic.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -3291,26 +3316,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/public/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/public/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_list_hyphen_public.Output.Ok.Headers
+                public var headers: Operations.GistsListPublic.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/gists/public/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/public/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.base_hyphen_gist])
+                    case json([Components.Schemas.BaseGist])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.base_hyphen_gist] {
+                    public var json: [Components.Schemas.BaseGist] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3320,15 +3345,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_list_hyphen_public.Output.Ok.Body
+                public var body: Operations.GistsListPublic.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_list_hyphen_public.Output.Ok.Headers = .init(),
-                    body: Operations.gists_sol_list_hyphen_public.Output.Ok.Body
+                    headers: Operations.GistsListPublic.Output.Ok.Headers = .init(),
+                    body: Operations.GistsListPublic.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3339,12 +3364,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/public/get(gists/list-public)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_list_hyphen_public.Output.Ok)
+            case ok(Operations.GistsListPublic.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_list_hyphen_public.Output.Ok {
+            public var ok: Operations.GistsListPublic.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3362,12 +3387,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/public/get(gists/list-public)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3385,12 +3410,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/public/get(gists/list-public)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/public/get(gists/list-public)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3408,12 +3441,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/public/get(gists/list-public)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3463,7 +3496,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/starred`.
     /// - Remark: Generated from `#/paths//gists/starred/get(gists/list-starred)`.
-    public enum gists_sol_list_hyphen_starred {
+    public enum GistsListStarred {
         public static let id: Swift.String = "gists/list-starred"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/starred/GET/query`.
@@ -3471,52 +3504,52 @@ public enum Operations {
                 /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/gists/starred/GET/query/since`.
-                public var since: Components.Parameters.since?
+                public var since: Components.Parameters.Since?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/starred/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/starred/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    since: Components.Parameters.since? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    since: Components.Parameters.Since? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.since = since
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.gists_sol_list_hyphen_starred.Input.Query
+            public var query: Operations.GistsListStarred.Input.Query
             /// - Remark: Generated from `#/paths/gists/starred/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_starred.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListStarred.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_starred.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListStarred.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_list_hyphen_starred.Input.Headers
+            public var headers: Operations.GistsListStarred.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.gists_sol_list_hyphen_starred.Input.Query = .init(),
-                headers: Operations.gists_sol_list_hyphen_starred.Input.Headers = .init()
+                query: Operations.GistsListStarred.Input.Query = .init(),
+                headers: Operations.GistsListStarred.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -3527,26 +3560,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/starred/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/starred/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_list_hyphen_starred.Output.Ok.Headers
+                public var headers: Operations.GistsListStarred.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/gists/starred/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/starred/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.base_hyphen_gist])
+                    case json([Components.Schemas.BaseGist])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.base_hyphen_gist] {
+                    public var json: [Components.Schemas.BaseGist] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3556,15 +3589,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_list_hyphen_starred.Output.Ok.Body
+                public var body: Operations.GistsListStarred.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_list_hyphen_starred.Output.Ok.Headers = .init(),
-                    body: Operations.gists_sol_list_hyphen_starred.Output.Ok.Body
+                    headers: Operations.GistsListStarred.Output.Ok.Headers = .init(),
+                    body: Operations.GistsListStarred.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3575,12 +3608,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/starred/get(gists/list-starred)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_list_hyphen_starred.Output.Ok)
+            case ok(Operations.GistsListStarred.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_list_hyphen_starred.Output.Ok {
+            public var ok: Operations.GistsListStarred.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3598,12 +3631,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/starred/get(gists/list-starred)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -3621,12 +3654,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/starred/get(gists/list-starred)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/starred/get(gists/list-starred)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3644,12 +3685,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/starred/get(gists/list-starred)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3704,7 +3745,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)`.
-    public enum gists_sol_get {
+    public enum GistsGet {
         public static let id: Swift.String = "gists/get"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/GET/path`.
@@ -3712,36 +3753,36 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/GET/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_get.Input.Path
+            public var path: Operations.GistsGet.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_get.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsGet.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_get.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsGet.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_get.Input.Headers
+            public var headers: Operations.GistsGet.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_get.Input.Path,
-                headers: Operations.gists_sol_get.Input.Headers = .init()
+                path: Operations.GistsGet.Input.Path,
+                headers: Operations.GistsGet.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3752,12 +3793,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.gist_hyphen_simple)
+                    case json(Components.Schemas.GistSimple)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gist_hyphen_simple {
+                    public var json: Components.Schemas.GistSimple {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3767,12 +3808,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_get.Output.Ok.Body
+                public var body: Operations.GistsGet.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.gists_sol_get.Output.Ok.Body) {
+                public init(body: Operations.GistsGet.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3781,12 +3822,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_get.Output.Ok)
+            case ok(Operations.GistsGet.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_get.Output.Ok {
+            public var ok: Operations.GistsGet.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3804,12 +3845,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden_gist)
+            case forbidden(Components.Responses.ForbiddenGist)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden_gist {
+            public var forbidden: Components.Responses.ForbiddenGist {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -3827,12 +3868,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3850,12 +3891,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/get(gists/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -3914,7 +3963,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/patch(gists/update)`.
-    public enum gists_sol_update {
+    public enum GistsUpdate {
         public static let id: Swift.String = "gists/update"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/path`.
@@ -3922,32 +3971,32 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_update.Input.Path
+            public var path: Operations.GistsUpdate.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_update.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsUpdate.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_update.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsUpdate.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_update.Input.Headers
+            public var headers: Operations.GistsUpdate.Input.Headers
             /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The description of the gist.
                     ///
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody/json/description`.
@@ -3959,9 +4008,9 @@ public enum Operations {
                     /// deleted if the specified object does not contain at least one of `content` or `filename`.
                     ///
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody/json/files`.
-                    public struct filesPayload: Codable, Hashable, Sendable {
+                    public struct FilesPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody/json/files/additionalProperties`.
-                        public struct additionalPropertiesPayload: Codable, Hashable, Sendable {
+                        public struct AdditionalPropertiesPayload: Codable, Hashable, Sendable {
                             /// The new content of the file.
                             ///
                             /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody/json/files/additionalProperties/content`.
@@ -3970,7 +4019,7 @@ public enum Operations {
                             ///
                             /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody/json/files/additionalProperties/filename`.
                             public var filename: Swift.String?
-                            /// Creates a new `additionalPropertiesPayload`.
+                            /// Creates a new `AdditionalPropertiesPayload`.
                             ///
                             /// - Parameters:
                             ///   - content: The new content of the file.
@@ -3988,12 +4037,12 @@ public enum Operations {
                             }
                         }
                         /// A container of undocumented properties.
-                        public var additionalProperties: [String: Operations.gists_sol_update.Input.Body.jsonPayload.filesPayload.additionalPropertiesPayload?]
-                        /// Creates a new `filesPayload`.
+                        public var additionalProperties: [String: Operations.GistsUpdate.Input.Body.JsonPayload.FilesPayload.AdditionalPropertiesPayload?]
+                        /// Creates a new `FilesPayload`.
                         ///
                         /// - Parameters:
                         ///   - additionalProperties: A container of undocumented properties.
-                        public init(additionalProperties: [String: Operations.gists_sol_update.Input.Body.jsonPayload.filesPayload.additionalPropertiesPayload?] = .init()) {
+                        public init(additionalProperties: [String: Operations.GistsUpdate.Input.Body.JsonPayload.FilesPayload.AdditionalPropertiesPayload?] = .init()) {
                             self.additionalProperties = additionalProperties
                         }
                         public init(from decoder: any Decoder) throws {
@@ -4010,15 +4059,15 @@ public enum Operations {
                     /// deleted if the specified object does not contain at least one of `content` or `filename`.
                     ///
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody/json/files`.
-                    public var files: Operations.gists_sol_update.Input.Body.jsonPayload.filesPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var files: Operations.GistsUpdate.Input.Body.JsonPayload.FilesPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - description: The description of the gist.
                     ///   - files: The gist files to be updated, renamed, or deleted. Each `key` must match the current filename
                     public init(
                         description: Swift.String? = nil,
-                        files: Operations.gists_sol_update.Input.Body.jsonPayload.filesPayload? = nil
+                        files: Operations.GistsUpdate.Input.Body.JsonPayload.FilesPayload? = nil
                     ) {
                         self.description = description
                         self.files = files
@@ -4029,9 +4078,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.gists_sol_update.Input.Body.jsonPayload)
+                case json(Operations.GistsUpdate.Input.Body.JsonPayload)
             }
-            public var body: Operations.gists_sol_update.Input.Body
+            public var body: Operations.GistsUpdate.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4039,9 +4088,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.gists_sol_update.Input.Path,
-                headers: Operations.gists_sol_update.Input.Headers = .init(),
-                body: Operations.gists_sol_update.Input.Body
+                path: Operations.GistsUpdate.Input.Path,
+                headers: Operations.GistsUpdate.Input.Headers = .init(),
+                body: Operations.GistsUpdate.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4053,12 +4102,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.gist_hyphen_simple)
+                    case json(Components.Schemas.GistSimple)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gist_hyphen_simple {
+                    public var json: Components.Schemas.GistSimple {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4068,12 +4117,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_update.Output.Ok.Body
+                public var body: Operations.GistsUpdate.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.gists_sol_update.Output.Ok.Body) {
+                public init(body: Operations.GistsUpdate.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4082,12 +4131,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/patch(gists/update)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_update.Output.Ok)
+            case ok(Operations.GistsUpdate.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_update.Output.Ok {
+            public var ok: Operations.GistsUpdate.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4105,12 +4154,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/patch(gists/update)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4128,12 +4177,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/patch(gists/update)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4183,7 +4232,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)`.
-    public enum gists_sol_delete {
+    public enum GistsDelete {
         public static let id: Swift.String = "gists/delete"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/DELETE/path`.
@@ -4191,36 +4240,36 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/DELETE/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_delete.Input.Path
+            public var path: Operations.GistsDelete.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_delete.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsDelete.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_delete.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsDelete.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_delete.Input.Headers
+            public var headers: Operations.GistsDelete.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_delete.Input.Path,
-                headers: Operations.gists_sol_delete.Input.Headers = .init()
+                path: Operations.GistsDelete.Input.Path,
+                headers: Operations.GistsDelete.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4236,12 +4285,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.gists_sol_delete.Output.NoContent)
+            case noContent(Operations.GistsDelete.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.gists_sol_delete.Output.NoContent {
+            public var noContent: Operations.GistsDelete.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4259,12 +4316,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4282,12 +4339,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4305,12 +4370,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/delete(gists/delete)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4365,7 +4430,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/comments`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)`.
-    public enum gists_sol_list_hyphen_comments {
+    public enum GistsListComments {
         public static let id: Swift.String = "gists/list-comments"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/path`.
@@ -4373,52 +4438,52 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_list_hyphen_comments.Input.Path
+            public var path: Operations.GistsListComments.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.gists_sol_list_hyphen_comments.Input.Query
+            public var query: Operations.GistsListComments.Input.Query
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_comments.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListComments.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_comments.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListComments.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_list_hyphen_comments.Input.Headers
+            public var headers: Operations.GistsListComments.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4426,9 +4491,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_list_hyphen_comments.Input.Path,
-                query: Operations.gists_sol_list_hyphen_comments.Input.Query = .init(),
-                headers: Operations.gists_sol_list_hyphen_comments.Input.Headers = .init()
+                path: Operations.GistsListComments.Input.Path,
+                query: Operations.GistsListComments.Input.Query = .init(),
+                headers: Operations.GistsListComments.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4440,26 +4505,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_list_hyphen_comments.Output.Ok.Headers
+                public var headers: Operations.GistsListComments.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.gist_hyphen_comment])
+                    case json([Components.Schemas.GistComment])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.gist_hyphen_comment] {
+                    public var json: [Components.Schemas.GistComment] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4469,15 +4534,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_list_hyphen_comments.Output.Ok.Body
+                public var body: Operations.GistsListComments.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_list_hyphen_comments.Output.Ok.Headers = .init(),
-                    body: Operations.gists_sol_list_hyphen_comments.Output.Ok.Body
+                    headers: Operations.GistsListComments.Output.Ok.Headers = .init(),
+                    body: Operations.GistsListComments.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4488,12 +4553,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_list_hyphen_comments.Output.Ok)
+            case ok(Operations.GistsListComments.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_list_hyphen_comments.Output.Ok {
+            public var ok: Operations.GistsListComments.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4511,12 +4576,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4534,12 +4607,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4557,12 +4630,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/get(gists/list-comments)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4617,7 +4690,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /gists/{gist_id}/comments`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)`.
-    public enum gists_sol_create_hyphen_comment {
+    public enum GistsCreateComment {
         public static let id: Swift.String = "gists/create-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/path`.
@@ -4625,37 +4698,37 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_create_hyphen_comment.Input.Path
+            public var path: Operations.GistsCreateComment.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_create_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsCreateComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_create_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsCreateComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_create_hyphen_comment.Input.Headers
+            public var headers: Operations.GistsCreateComment.Input.Headers
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The comment text.
                     ///
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The comment text.
@@ -4667,9 +4740,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/requestBody/content/application\/json`.
-                case json(Operations.gists_sol_create_hyphen_comment.Input.Body.jsonPayload)
+                case json(Operations.GistsCreateComment.Input.Body.JsonPayload)
             }
-            public var body: Operations.gists_sol_create_hyphen_comment.Input.Body
+            public var body: Operations.GistsCreateComment.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4677,9 +4750,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.gists_sol_create_hyphen_comment.Input.Path,
-                headers: Operations.gists_sol_create_hyphen_comment.Input.Headers = .init(),
-                body: Operations.gists_sol_create_hyphen_comment.Input.Body
+                path: Operations.GistsCreateComment.Input.Path,
+                headers: Operations.GistsCreateComment.Input.Headers = .init(),
+                body: Operations.GistsCreateComment.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4691,26 +4764,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_create_hyphen_comment.Output.Created.Headers
+                public var headers: Operations.GistsCreateComment.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.gist_hyphen_comment)
+                    case json(Components.Schemas.GistComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gist_hyphen_comment {
+                    public var json: Components.Schemas.GistComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4720,15 +4793,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_create_hyphen_comment.Output.Created.Body
+                public var body: Operations.GistsCreateComment.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_create_hyphen_comment.Output.Created.Headers = .init(),
-                    body: Operations.gists_sol_create_hyphen_comment.Output.Created.Body
+                    headers: Operations.GistsCreateComment.Output.Created.Headers = .init(),
+                    body: Operations.GistsCreateComment.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4739,12 +4812,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.gists_sol_create_hyphen_comment.Output.Created)
+            case created(Operations.GistsCreateComment.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.gists_sol_create_hyphen_comment.Output.Created {
+            public var created: Operations.GistsCreateComment.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4762,12 +4835,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -4785,12 +4866,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4808,12 +4889,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/post(gists/create-comment)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4868,7 +4949,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)`.
-    public enum gists_sol_get_hyphen_comment {
+    public enum GistsGetComment {
         public static let id: Swift.String = "gists/get-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/GET/path`.
@@ -4876,45 +4957,45 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/GET/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/GET/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - gistId: The unique identifier of the gist.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    gist_id: Components.Parameters.gist_hyphen_id,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    gistId: Components.Parameters.GistId,
+                    commentId: Components.Parameters.CommentId
                 ) {
-                    self.gist_id = gist_id
-                    self.comment_id = comment_id
+                    self.gistId = gistId
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.gists_sol_get_hyphen_comment.Input.Path
+            public var path: Operations.GistsGetComment.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_get_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsGetComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_get_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsGetComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_get_hyphen_comment.Input.Headers
+            public var headers: Operations.GistsGetComment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_get_hyphen_comment.Input.Path,
-                headers: Operations.gists_sol_get_hyphen_comment.Input.Headers = .init()
+                path: Operations.GistsGetComment.Input.Path,
+                headers: Operations.GistsGetComment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4925,12 +5006,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.gist_hyphen_comment)
+                    case json(Components.Schemas.GistComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gist_hyphen_comment {
+                    public var json: Components.Schemas.GistComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4940,12 +5021,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_get_hyphen_comment.Output.Ok.Body
+                public var body: Operations.GistsGetComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.gists_sol_get_hyphen_comment.Output.Ok.Body) {
+                public init(body: Operations.GistsGetComment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4954,12 +5035,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_get_hyphen_comment.Output.Ok)
+            case ok(Operations.GistsGetComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_get_hyphen_comment.Output.Ok {
+            public var ok: Operations.GistsGetComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4977,12 +5058,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5000,12 +5089,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5023,12 +5112,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/get(gists/get-comment)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden_gist)
+            case forbidden(Components.Responses.ForbiddenGist)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden_gist {
+            public var forbidden: Components.Responses.ForbiddenGist {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5083,7 +5172,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/patch(gists/update-comment)`.
-    public enum gists_sol_update_hyphen_comment {
+    public enum GistsUpdateComment {
         public static let id: Swift.String = "gists/update-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/path`.
@@ -5091,46 +5180,46 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - gistId: The unique identifier of the gist.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    gist_id: Components.Parameters.gist_hyphen_id,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    gistId: Components.Parameters.GistId,
+                    commentId: Components.Parameters.CommentId
                 ) {
-                    self.gist_id = gist_id
-                    self.comment_id = comment_id
+                    self.gistId = gistId
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.gists_sol_update_hyphen_comment.Input.Path
+            public var path: Operations.GistsUpdateComment.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_update_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsUpdateComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_update_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsUpdateComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_update_hyphen_comment.Input.Headers
+            public var headers: Operations.GistsUpdateComment.Input.Headers
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The comment text.
                     ///
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/requestBody/json/body`.
                     public var body: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - body: The comment text.
@@ -5142,9 +5231,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.gists_sol_update_hyphen_comment.Input.Body.jsonPayload)
+                case json(Operations.GistsUpdateComment.Input.Body.JsonPayload)
             }
-            public var body: Operations.gists_sol_update_hyphen_comment.Input.Body
+            public var body: Operations.GistsUpdateComment.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5152,9 +5241,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.gists_sol_update_hyphen_comment.Input.Path,
-                headers: Operations.gists_sol_update_hyphen_comment.Input.Headers = .init(),
-                body: Operations.gists_sol_update_hyphen_comment.Input.Body
+                path: Operations.GistsUpdateComment.Input.Path,
+                headers: Operations.GistsUpdateComment.Input.Headers = .init(),
+                body: Operations.GistsUpdateComment.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -5166,12 +5255,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.gist_hyphen_comment)
+                    case json(Components.Schemas.GistComment)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gist_hyphen_comment {
+                    public var json: Components.Schemas.GistComment {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5181,12 +5270,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_update_hyphen_comment.Output.Ok.Body
+                public var body: Operations.GistsUpdateComment.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.gists_sol_update_hyphen_comment.Output.Ok.Body) {
+                public init(body: Operations.GistsUpdateComment.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5195,12 +5284,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/patch(gists/update-comment)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_update_hyphen_comment.Output.Ok)
+            case ok(Operations.GistsUpdateComment.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_update_hyphen_comment.Output.Ok {
+            public var ok: Operations.GistsUpdateComment.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5218,12 +5307,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/patch(gists/update-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5273,7 +5362,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/comments/{comment_id}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)`.
-    public enum gists_sol_delete_hyphen_comment {
+    public enum GistsDeleteComment {
         public static let id: Swift.String = "gists/delete-comment"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/DELETE/path`.
@@ -5281,45 +5370,45 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/DELETE/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// The unique identifier of the comment.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/DELETE/path/comment_id`.
-                public var comment_id: Components.Parameters.comment_hyphen_id
+                public var commentId: Components.Parameters.CommentId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                ///   - comment_id: The unique identifier of the comment.
+                ///   - gistId: The unique identifier of the gist.
+                ///   - commentId: The unique identifier of the comment.
                 public init(
-                    gist_id: Components.Parameters.gist_hyphen_id,
-                    comment_id: Components.Parameters.comment_hyphen_id
+                    gistId: Components.Parameters.GistId,
+                    commentId: Components.Parameters.CommentId
                 ) {
-                    self.gist_id = gist_id
-                    self.comment_id = comment_id
+                    self.gistId = gistId
+                    self.commentId = commentId
                 }
             }
-            public var path: Operations.gists_sol_delete_hyphen_comment.Input.Path
+            public var path: Operations.GistsDeleteComment.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/comments/{comment_id}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_delete_hyphen_comment.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsDeleteComment.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_delete_hyphen_comment.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsDeleteComment.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_delete_hyphen_comment.Input.Headers
+            public var headers: Operations.GistsDeleteComment.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_delete_hyphen_comment.Input.Path,
-                headers: Operations.gists_sol_delete_hyphen_comment.Input.Headers = .init()
+                path: Operations.GistsDeleteComment.Input.Path,
+                headers: Operations.GistsDeleteComment.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5335,12 +5424,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.gists_sol_delete_hyphen_comment.Output.NoContent)
+            case noContent(Operations.GistsDeleteComment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.gists_sol_delete_hyphen_comment.Output.NoContent {
+            public var noContent: Operations.GistsDeleteComment.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5358,12 +5455,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5381,12 +5486,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5404,12 +5509,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/comments/{comment_id}/delete(gists/delete-comment)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5459,7 +5564,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/commits`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)`.
-    public enum gists_sol_list_hyphen_commits {
+    public enum GistsListCommits {
         public static let id: Swift.String = "gists/list-commits"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/path`.
@@ -5467,52 +5572,52 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_list_hyphen_commits.Input.Path
+            public var path: Operations.GistsListCommits.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.gists_sol_list_hyphen_commits.Input.Query
+            public var query: Operations.GistsListCommits.Input.Query
             /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_commits.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListCommits.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_commits.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListCommits.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_list_hyphen_commits.Input.Headers
+            public var headers: Operations.GistsListCommits.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5520,9 +5625,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_list_hyphen_commits.Input.Path,
-                query: Operations.gists_sol_list_hyphen_commits.Input.Query = .init(),
-                headers: Operations.gists_sol_list_hyphen_commits.Input.Headers = .init()
+                path: Operations.GistsListCommits.Input.Path,
+                query: Operations.GistsListCommits.Input.Query = .init(),
+                headers: Operations.GistsListCommits.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5534,26 +5639,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/responses/200/headers/Link`.
-                    public var Link: Swift.String?
+                    public var link: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Swift.String? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Swift.String? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_list_hyphen_commits.Output.Ok.Headers
+                public var headers: Operations.GistsListCommits.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/commits/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.gist_hyphen_commit])
+                    case json([Components.Schemas.GistCommit])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.gist_hyphen_commit] {
+                    public var json: [Components.Schemas.GistCommit] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5563,15 +5668,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_list_hyphen_commits.Output.Ok.Body
+                public var body: Operations.GistsListCommits.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_list_hyphen_commits.Output.Ok.Headers = .init(),
-                    body: Operations.gists_sol_list_hyphen_commits.Output.Ok.Body
+                    headers: Operations.GistsListCommits.Output.Ok.Headers = .init(),
+                    body: Operations.GistsListCommits.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5582,12 +5687,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_list_hyphen_commits.Output.Ok)
+            case ok(Operations.GistsListCommits.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_list_hyphen_commits.Output.Ok {
+            public var ok: Operations.GistsListCommits.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5605,12 +5710,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5628,12 +5733,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5651,12 +5764,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/commits/get(gists/list-commits)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5706,7 +5819,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)`.
-    public enum gists_sol_list_hyphen_forks {
+    public enum GistsListForks {
         public static let id: Swift.String = "gists/list-forks"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/path`.
@@ -5714,52 +5827,52 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_list_hyphen_forks.Input.Path
+            public var path: Operations.GistsListForks.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.gists_sol_list_hyphen_forks.Input.Query
+            public var query: Operations.GistsListForks.Input.Query
             /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_forks.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListForks.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_forks.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListForks.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_list_hyphen_forks.Input.Headers
+            public var headers: Operations.GistsListForks.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5767,9 +5880,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_list_hyphen_forks.Input.Path,
-                query: Operations.gists_sol_list_hyphen_forks.Input.Query = .init(),
-                headers: Operations.gists_sol_list_hyphen_forks.Input.Headers = .init()
+                path: Operations.GistsListForks.Input.Path,
+                query: Operations.GistsListForks.Input.Query = .init(),
+                headers: Operations.GistsListForks.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5781,26 +5894,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_list_hyphen_forks.Output.Ok.Headers
+                public var headers: Operations.GistsListForks.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.gist_hyphen_simple])
+                    case json([Components.Schemas.GistSimple])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.gist_hyphen_simple] {
+                    public var json: [Components.Schemas.GistSimple] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5810,15 +5923,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_list_hyphen_forks.Output.Ok.Body
+                public var body: Operations.GistsListForks.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_list_hyphen_forks.Output.Ok.Headers = .init(),
-                    body: Operations.gists_sol_list_hyphen_forks.Output.Ok.Body
+                    headers: Operations.GistsListForks.Output.Ok.Headers = .init(),
+                    body: Operations.GistsListForks.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5829,12 +5942,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_list_hyphen_forks.Output.Ok)
+            case ok(Operations.GistsListForks.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_list_hyphen_forks.Output.Ok {
+            public var ok: Operations.GistsListForks.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5852,12 +5965,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5875,12 +5988,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -5898,12 +6019,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/get(gists/list-forks)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -5953,7 +6074,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /gists/{gist_id}/forks`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)`.
-    public enum gists_sol_fork {
+    public enum GistsFork {
         public static let id: Swift.String = "gists/fork"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/POST/path`.
@@ -5961,36 +6082,36 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/POST/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_fork.Input.Path
+            public var path: Operations.GistsFork.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_fork.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsFork.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_fork.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsFork.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_fork.Input.Headers
+            public var headers: Operations.GistsFork.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_fork.Input.Path,
-                headers: Operations.gists_sol_fork.Input.Headers = .init()
+                path: Operations.GistsFork.Input.Path,
+                headers: Operations.GistsFork.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6001,26 +6122,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_fork.Output.Created.Headers
+                public var headers: Operations.GistsFork.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/forks/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.base_hyphen_gist)
+                    case json(Components.Schemas.BaseGist)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.base_hyphen_gist {
+                    public var json: Components.Schemas.BaseGist {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6030,15 +6151,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_fork.Output.Created.Body
+                public var body: Operations.GistsFork.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_fork.Output.Created.Headers = .init(),
-                    body: Operations.gists_sol_fork.Output.Created.Body
+                    headers: Operations.GistsFork.Output.Created.Headers = .init(),
+                    body: Operations.GistsFork.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -6049,12 +6170,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.gists_sol_fork.Output.Created)
+            case created(Operations.GistsFork.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.gists_sol_fork.Output.Created {
+            public var created: Operations.GistsFork.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -6072,12 +6193,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6095,12 +6216,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6118,12 +6239,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6141,12 +6270,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/forks/post(gists/fork)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6196,7 +6325,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)`.
-    public enum gists_sol_check_hyphen_is_hyphen_starred {
+    public enum GistsCheckIsStarred {
         public static let id: Swift.String = "gists/check-is-starred"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/star/GET/path`.
@@ -6204,36 +6333,36 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/star/GET/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_check_hyphen_is_hyphen_starred.Input.Path
+            public var path: Operations.GistsCheckIsStarred.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/star/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_check_hyphen_is_hyphen_starred.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsCheckIsStarred.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_check_hyphen_is_hyphen_starred.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsCheckIsStarred.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_check_hyphen_is_hyphen_starred.Input.Headers
+            public var headers: Operations.GistsCheckIsStarred.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_check_hyphen_is_hyphen_starred.Input.Path,
-                headers: Operations.gists_sol_check_hyphen_is_hyphen_starred.Input.Headers = .init()
+                path: Operations.GistsCheckIsStarred.Input.Path,
+                headers: Operations.GistsCheckIsStarred.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6249,12 +6378,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.gists_sol_check_hyphen_is_hyphen_starred.Output.NoContent)
+            case noContent(Operations.GistsCheckIsStarred.Output.NoContent)
+            /// Response if gist is starred
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.gists_sol_check_hyphen_is_hyphen_starred.Output.NoContent {
+            public var noContent: Operations.GistsCheckIsStarred.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6271,20 +6408,20 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/star/GET/responses/404/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/star/GET/responses/404/content/json`.
-                    public struct jsonPayload: Codable, Hashable, Sendable {
-                        /// Creates a new `jsonPayload`.
+                    public struct JsonPayload: Codable, Hashable, Sendable {
+                        /// Creates a new `JsonPayload`.
                         public init() {}
                         public init(from decoder: any Decoder) throws {
                             try decoder.ensureNoAdditionalProperties(knownKeys: [])
                         }
                     }
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/star/GET/responses/404/content/application\/json`.
-                    case json(Operations.gists_sol_check_hyphen_is_hyphen_starred.Output.NotFound.Body.jsonPayload)
+                    case json(Operations.GistsCheckIsStarred.Output.NotFound.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.gists_sol_check_hyphen_is_hyphen_starred.Output.NotFound.Body.jsonPayload {
+                    public var json: Operations.GistsCheckIsStarred.Output.NotFound.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6294,12 +6431,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_check_hyphen_is_hyphen_starred.Output.NotFound.Body
+                public var body: Operations.GistsCheckIsStarred.Output.NotFound.Body
                 /// Creates a new `NotFound`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.gists_sol_check_hyphen_is_hyphen_starred.Output.NotFound.Body) {
+                public init(body: Operations.GistsCheckIsStarred.Output.NotFound.Body) {
                     self.body = body
                 }
             }
@@ -6308,12 +6445,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Operations.gists_sol_check_hyphen_is_hyphen_starred.Output.NotFound)
+            case notFound(Operations.GistsCheckIsStarred.Output.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Operations.gists_sol_check_hyphen_is_hyphen_starred.Output.NotFound {
+            public var notFound: Operations.GistsCheckIsStarred.Output.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6331,12 +6468,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6354,12 +6499,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/get(gists/check-is-starred)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6409,7 +6554,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)`.
-    public enum gists_sol_star {
+    public enum GistsStar {
         public static let id: Swift.String = "gists/star"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/star/PUT/path`.
@@ -6417,36 +6562,36 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/star/PUT/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_star.Input.Path
+            public var path: Operations.GistsStar.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/star/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_star.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsStar.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_star.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsStar.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_star.Input.Headers
+            public var headers: Operations.GistsStar.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_star.Input.Path,
-                headers: Operations.gists_sol_star.Input.Headers = .init()
+                path: Operations.GistsStar.Input.Path,
+                headers: Operations.GistsStar.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6462,12 +6607,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.gists_sol_star.Output.NoContent)
+            case noContent(Operations.GistsStar.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.gists_sol_star.Output.NoContent {
+            public var noContent: Operations.GistsStar.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6485,12 +6638,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6508,12 +6661,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6531,12 +6692,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/put(gists/star)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6586,7 +6747,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /gists/{gist_id}/star`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)`.
-    public enum gists_sol_unstar {
+    public enum GistsUnstar {
         public static let id: Swift.String = "gists/unstar"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/star/DELETE/path`.
@@ -6594,36 +6755,36 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/star/DELETE/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
-                public init(gist_id: Components.Parameters.gist_hyphen_id) {
-                    self.gist_id = gist_id
+                ///   - gistId: The unique identifier of the gist.
+                public init(gistId: Components.Parameters.GistId) {
+                    self.gistId = gistId
                 }
             }
-            public var path: Operations.gists_sol_unstar.Input.Path
+            public var path: Operations.GistsUnstar.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/star/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_unstar.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsUnstar.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_unstar.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsUnstar.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_unstar.Input.Headers
+            public var headers: Operations.GistsUnstar.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_unstar.Input.Path,
-                headers: Operations.gists_sol_unstar.Input.Headers = .init()
+                path: Operations.GistsUnstar.Input.Path,
+                headers: Operations.GistsUnstar.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6639,12 +6800,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.gists_sol_unstar.Output.NoContent)
+            case noContent(Operations.GistsUnstar.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.gists_sol_unstar.Output.NoContent {
+            public var noContent: Operations.GistsUnstar.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -6662,12 +6831,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6685,12 +6862,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6708,12 +6885,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/star/delete(gists/unstar)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6768,7 +6945,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /gists/{gist_id}/{sha}`.
     /// - Remark: Generated from `#/paths//gists/{gist_id}/{sha}/get(gists/get-revision)`.
-    public enum gists_sol_get_hyphen_revision {
+    public enum GistsGetRevision {
         public static let id: Swift.String = "gists/get-revision"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/gists/{gist_id}/{sha}/GET/path`.
@@ -6776,43 +6953,43 @@ public enum Operations {
                 /// The unique identifier of the gist.
                 ///
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/{sha}/GET/path/gist_id`.
-                public var gist_id: Components.Parameters.gist_hyphen_id
+                public var gistId: Components.Parameters.GistId
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/{sha}/GET/path/sha`.
                 public var sha: Swift.String
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - gist_id: The unique identifier of the gist.
+                ///   - gistId: The unique identifier of the gist.
                 ///   - sha:
                 public init(
-                    gist_id: Components.Parameters.gist_hyphen_id,
+                    gistId: Components.Parameters.GistId,
                     sha: Swift.String
                 ) {
-                    self.gist_id = gist_id
+                    self.gistId = gistId
                     self.sha = sha
                 }
             }
-            public var path: Operations.gists_sol_get_hyphen_revision.Input.Path
+            public var path: Operations.GistsGetRevision.Input.Path
             /// - Remark: Generated from `#/paths/gists/{gist_id}/{sha}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_get_hyphen_revision.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsGetRevision.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_get_hyphen_revision.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsGetRevision.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_get_hyphen_revision.Input.Headers
+            public var headers: Operations.GistsGetRevision.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_get_hyphen_revision.Input.Path,
-                headers: Operations.gists_sol_get_hyphen_revision.Input.Headers = .init()
+                path: Operations.GistsGetRevision.Input.Path,
+                headers: Operations.GistsGetRevision.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6823,12 +7000,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/gists/{gist_id}/{sha}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/gists/{gist_id}/{sha}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.gist_hyphen_simple)
+                    case json(Components.Schemas.GistSimple)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.gist_hyphen_simple {
+                    public var json: Components.Schemas.GistSimple {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6838,12 +7015,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_get_hyphen_revision.Output.Ok.Body
+                public var body: Operations.GistsGetRevision.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.gists_sol_get_hyphen_revision.Output.Ok.Body) {
+                public init(body: Operations.GistsGetRevision.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6852,12 +7029,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/{sha}/get(gists/get-revision)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_get_hyphen_revision.Output.Ok)
+            case ok(Operations.GistsGetRevision.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_get_hyphen_revision.Output.Ok {
+            public var ok: Operations.GistsGetRevision.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6875,12 +7052,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/{sha}/get(gists/get-revision)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6898,12 +7075,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/{sha}/get(gists/get-revision)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6921,12 +7098,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//gists/{gist_id}/{sha}/get(gists/get-revision)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6976,7 +7153,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /users/{username}/gists`.
     /// - Remark: Generated from `#/paths//users/{username}/gists/get(gists/list-for-user)`.
-    public enum gists_sol_list_hyphen_for_hyphen_user {
+    public enum GistsListForUser {
         public static let id: Swift.String = "gists/list-for-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/users/{username}/gists/GET/path`.
@@ -6984,59 +7161,59 @@ public enum Operations {
                 /// The handle for the GitHub user account.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/gists/GET/path/username`.
-                public var username: Components.Parameters.username
+                public var username: Components.Parameters.Username
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - username: The handle for the GitHub user account.
-                public init(username: Components.Parameters.username) {
+                public init(username: Components.Parameters.Username) {
                     self.username = username
                 }
             }
-            public var path: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Path
+            public var path: Operations.GistsListForUser.Input.Path
             /// - Remark: Generated from `#/paths/users/{username}/gists/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/gists/GET/query/since`.
-                public var since: Components.Parameters.since?
+                public var since: Components.Parameters.Since?
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/gists/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/users/{username}/gists/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - since: Only show results that were last updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    since: Components.Parameters.since? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    since: Components.Parameters.Since? = nil,
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.since = since
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Query
+            public var query: Operations.GistsListForUser.Input.Query
             /// - Remark: Generated from `#/paths/users/{username}/gists/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_for_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListForUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.gists_sol_list_hyphen_for_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GistsListForUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Headers
+            public var headers: Operations.GistsListForUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7044,9 +7221,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Path,
-                query: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Query = .init(),
-                headers: Operations.gists_sol_list_hyphen_for_hyphen_user.Input.Headers = .init()
+                path: Operations.GistsListForUser.Input.Path,
+                query: Operations.GistsListForUser.Input.Query = .init(),
+                headers: Operations.GistsListForUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7058,26 +7235,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/gists/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/gists/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.gists_sol_list_hyphen_for_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.GistsListForUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/users/{username}/gists/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/users/{username}/gists/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.base_hyphen_gist])
+                    case json([Components.Schemas.BaseGist])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.base_hyphen_gist] {
+                    public var json: [Components.Schemas.BaseGist] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7087,15 +7264,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.gists_sol_list_hyphen_for_hyphen_user.Output.Ok.Body
+                public var body: Operations.GistsListForUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.gists_sol_list_hyphen_for_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.gists_sol_list_hyphen_for_hyphen_user.Output.Ok.Body
+                    headers: Operations.GistsListForUser.Output.Ok.Headers = .init(),
+                    body: Operations.GistsListForUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -7106,12 +7283,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/gists/get(gists/list-for-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.gists_sol_list_hyphen_for_hyphen_user.Output.Ok)
+            case ok(Operations.GistsListForUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.gists_sol_list_hyphen_for_hyphen_user.Output.Ok {
+            public var ok: Operations.GistsListForUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7129,12 +7306,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//users/{username}/gists/get(gists/list-for-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):

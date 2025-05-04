@@ -44,10 +44,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/get(interactions/get-restrictions-for-org)`.
-    public func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(_ input: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Input) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output {
+    public func interactionsGetRestrictionsForOrg(_ input: Operations.InteractionsGetRestrictionsForOrg.Input) async throws -> Operations.InteractionsGetRestrictionsForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.id,
+            forOperation: Operations.InteractionsGetRestrictionsForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/interaction-limits",
@@ -70,7 +70,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body
+                    let body: Operations.InteractionsGetRestrictionsForOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -80,7 +80,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            Operations.InteractionsGetRestrictionsForOrg.Output.Ok.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -108,10 +108,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/put(interactions/set-restrictions-for-org)`.
-    public func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(_ input: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Input) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Output {
+    public func interactionsSetRestrictionsForOrg(_ input: Operations.InteractionsSetRestrictionsForOrg.Input) async throws -> Operations.InteractionsSetRestrictionsForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.id,
+            forOperation: Operations.InteractionsSetRestrictionsForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/interaction-limits",
@@ -143,7 +143,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body
+                    let body: Operations.InteractionsSetRestrictionsForOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -153,7 +153,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.interaction_hyphen_limit_hyphen_response.self,
+                            Components.Schemas.InteractionLimitResponse.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -165,7 +165,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -175,7 +175,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -203,10 +203,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/interaction-limits`.
     /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/delete(interactions/remove-restrictions-for-org)`.
-    public func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(_ input: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Input) async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Output {
+    public func interactionsRemoveRestrictionsForOrg(_ input: Operations.InteractionsRemoveRestrictionsForOrg.Input) async throws -> Operations.InteractionsRemoveRestrictionsForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.id,
+            forOperation: Operations.InteractionsRemoveRestrictionsForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/interaction-limits",
@@ -243,10 +243,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/get(interactions/get-restrictions-for-repo)`.
-    public func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(_ input: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Input) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output {
+    public func interactionsGetRestrictionsForRepo(_ input: Operations.InteractionsGetRestrictionsForRepo.Input) async throws -> Operations.InteractionsGetRestrictionsForRepo.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.id,
+            forOperation: Operations.InteractionsGetRestrictionsForRepo.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/interaction-limits",
@@ -270,7 +270,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body
+                    let body: Operations.InteractionsGetRestrictionsForRepo.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -280,7 +280,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body.jsonPayload.self,
+                            Operations.InteractionsGetRestrictionsForRepo.Output.Ok.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -308,10 +308,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/put(interactions/set-restrictions-for-repo)`.
-    public func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(_ input: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Input) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output {
+    public func interactionsSetRestrictionsForRepo(_ input: Operations.InteractionsSetRestrictionsForRepo.Input) async throws -> Operations.InteractionsSetRestrictionsForRepo.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.id,
+            forOperation: Operations.InteractionsSetRestrictionsForRepo.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/interaction-limits",
@@ -344,7 +344,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body
+                    let body: Operations.InteractionsSetRestrictionsForRepo.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -354,7 +354,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.interaction_hyphen_limit_hyphen_response.self,
+                            Components.Schemas.InteractionLimitResponse.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -384,10 +384,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/interaction-limits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)`.
-    public func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(_ input: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Input) async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output {
+    public func interactionsRemoveRestrictionsForRepo(_ input: Operations.InteractionsRemoveRestrictionsForRepo.Input) async throws -> Operations.InteractionsRemoveRestrictionsForRepo.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.id,
+            forOperation: Operations.InteractionsRemoveRestrictionsForRepo.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/repos/{}/{}/interaction-limits",
@@ -427,10 +427,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/get(interactions/get-restrictions-for-authenticated-user)`.
-    public func interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output {
+    public func interactionsGetRestrictionsForAuthenticatedUser(_ input: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Input) async throws -> Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.id,
+            forOperation: Operations.InteractionsGetRestrictionsForAuthenticatedUser.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/user/interaction-limits",
@@ -451,7 +451,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    let body: Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -461,7 +461,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload.self,
+                            Operations.InteractionsGetRestrictionsForAuthenticatedUser.Output.Ok.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -491,10 +491,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/put(interactions/set-restrictions-for-authenticated-user)`.
-    public func interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output {
+    public func interactionsSetRestrictionsForAuthenticatedUser(_ input: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Input) async throws -> Operations.InteractionsSetRestrictionsForAuthenticatedUser.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.id,
+            forOperation: Operations.InteractionsSetRestrictionsForAuthenticatedUser.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/user/interaction-limits",
@@ -524,7 +524,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    let body: Operations.InteractionsSetRestrictionsForAuthenticatedUser.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -534,7 +534,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.interaction_hyphen_limit_hyphen_response.self,
+                            Components.Schemas.InteractionLimitResponse.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -546,7 +546,7 @@ public struct Client: APIProtocol {
                     return .ok(.init(body: body))
                 case 422:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.validation_failed.Body
+                    let body: Components.Responses.ValidationFailed.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -556,7 +556,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.validation_hyphen_error.self,
+                            Components.Schemas.ValidationError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -584,10 +584,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/interaction-limits`.
     /// - Remark: Generated from `#/paths//user/interaction-limits/delete(interactions/remove-restrictions-for-authenticated-user)`.
-    public func interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output {
+    public func interactionsRemoveRestrictionsForAuthenticatedUser(_ input: Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.Input) async throws -> Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.id,
+            forOperation: Operations.InteractionsRemoveRestrictionsForAuthenticatedUser.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/user/interaction-limits",

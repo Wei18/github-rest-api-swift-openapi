@@ -17,14 +17,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /markdown`.
     /// - Remark: Generated from `#/paths//markdown/post(markdown/render)`.
-    func markdown_sol_render(_ input: Operations.markdown_sol_render.Input) async throws -> Operations.markdown_sol_render.Output
+    func markdownRender(_ input: Operations.MarkdownRender.Input) async throws -> Operations.MarkdownRender.Output
     /// Render a Markdown document in raw mode
     ///
     /// You must send Markdown as plain text (using a `Content-Type` header of `text/plain` or `text/x-markdown`) to this endpoint, rather than using JSON format. In raw mode, [GitHub Flavored Markdown](https://github.github.com/gfm/) is not supported and Markdown will be rendered in plain format like a README.md file. Markdown content must be 400 KB or less.
     ///
     /// - Remark: HTTP `POST /markdown/raw`.
     /// - Remark: Generated from `#/paths//markdown/raw/post(markdown/render-raw)`.
-    func markdown_sol_render_hyphen_raw(_ input: Operations.markdown_sol_render_hyphen_raw.Input) async throws -> Operations.markdown_sol_render_hyphen_raw.Output
+    func markdownRenderRaw(_ input: Operations.MarkdownRenderRaw.Input) async throws -> Operations.MarkdownRenderRaw.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -35,11 +35,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /markdown`.
     /// - Remark: Generated from `#/paths//markdown/post(markdown/render)`.
-    public func markdown_sol_render(
-        headers: Operations.markdown_sol_render.Input.Headers = .init(),
-        body: Operations.markdown_sol_render.Input.Body
-    ) async throws -> Operations.markdown_sol_render.Output {
-        try await markdown_sol_render(Operations.markdown_sol_render.Input(
+    public func markdownRender(
+        headers: Operations.MarkdownRender.Input.Headers = .init(),
+        body: Operations.MarkdownRender.Input.Body
+    ) async throws -> Operations.MarkdownRender.Output {
+        try await markdownRender(Operations.MarkdownRender.Input(
             headers: headers,
             body: body
         ))
@@ -50,11 +50,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /markdown/raw`.
     /// - Remark: Generated from `#/paths//markdown/raw/post(markdown/render-raw)`.
-    public func markdown_sol_render_hyphen_raw(
-        headers: Operations.markdown_sol_render_hyphen_raw.Input.Headers = .init(),
-        body: Operations.markdown_sol_render_hyphen_raw.Input.Body? = nil
-    ) async throws -> Operations.markdown_sol_render_hyphen_raw.Output {
-        try await markdown_sol_render_hyphen_raw(Operations.markdown_sol_render_hyphen_raw.Input(
+    public func markdownRenderRaw(
+        headers: Operations.MarkdownRenderRaw.Input.Headers = .init(),
+        body: Operations.MarkdownRenderRaw.Input.Body? = nil
+    ) async throws -> Operations.MarkdownRenderRaw.Output {
+        try await markdownRenderRaw(Operations.MarkdownRenderRaw.Input(
             headers: headers,
             body: body
         ))
@@ -63,6 +63,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -81,17 +90,17 @@ public enum Components {
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
     }
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/content-type`.
-        public typealias content_hyphen_type = Swift.String
+        public typealias ContentType = Swift.String
         /// - Remark: Generated from `#/components/headers/x-common-marker-version`.
-        public typealias x_hyphen_common_hyphen_marker_hyphen_version = Swift.String
+        public typealias XCommonMarkerVersion = Swift.String
     }
 }
 
@@ -103,25 +112,25 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /markdown`.
     /// - Remark: Generated from `#/paths//markdown/post(markdown/render)`.
-    public enum markdown_sol_render {
+    public enum MarkdownRender {
         public static let id: Swift.String = "markdown/render"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/markdown/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.markdown_sol_render.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MarkdownRender.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.markdown_sol_render.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MarkdownRender.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.markdown_sol_render.Input.Headers
+            public var headers: Operations.MarkdownRender.Input.Headers
             /// - Remark: Generated from `#/paths/markdown/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/markdown/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The Markdown text to render in HTML.
                     ///
                     /// - Remark: Generated from `#/paths/markdown/POST/requestBody/json/text`.
@@ -129,19 +138,19 @@ public enum Operations {
                     /// The rendering mode.
                     ///
                     /// - Remark: Generated from `#/paths/markdown/POST/requestBody/json/mode`.
-                    @frozen public enum modePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum ModePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case markdown = "markdown"
                         case gfm = "gfm"
                     }
                     /// The rendering mode.
                     ///
                     /// - Remark: Generated from `#/paths/markdown/POST/requestBody/json/mode`.
-                    public var mode: Operations.markdown_sol_render.Input.Body.jsonPayload.modePayload?
+                    public var mode: Operations.MarkdownRender.Input.Body.JsonPayload.ModePayload?
                     /// The repository context to use when creating references in `gfm` mode.  For example, setting `context` to `octo-org/octo-repo` will change the text `#42` into an HTML link to issue 42 in the `octo-org/octo-repo` repository.
                     ///
                     /// - Remark: Generated from `#/paths/markdown/POST/requestBody/json/context`.
                     public var context: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - text: The Markdown text to render in HTML.
@@ -149,7 +158,7 @@ public enum Operations {
                     ///   - context: The repository context to use when creating references in `gfm` mode.  For example, setting `context` to `octo-org/octo-repo` will change the text `#42` into an HTML link to issue 42 in the `octo-org/octo-repo` repository.
                     public init(
                         text: Swift.String,
-                        mode: Operations.markdown_sol_render.Input.Body.jsonPayload.modePayload? = nil,
+                        mode: Operations.MarkdownRender.Input.Body.JsonPayload.ModePayload? = nil,
                         context: Swift.String? = nil
                     ) {
                         self.text = text
@@ -163,17 +172,17 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/markdown/POST/requestBody/content/application\/json`.
-                case json(Operations.markdown_sol_render.Input.Body.jsonPayload)
+                case json(Operations.MarkdownRender.Input.Body.JsonPayload)
             }
-            public var body: Operations.markdown_sol_render.Input.Body
+            public var body: Operations.MarkdownRender.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.markdown_sol_render.Input.Headers = .init(),
-                body: Operations.markdown_sol_render.Input.Body
+                headers: Operations.MarkdownRender.Input.Headers = .init(),
+                body: Operations.MarkdownRender.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -184,29 +193,29 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/markdown/POST/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/markdown/POST/responses/200/headers/Content-Type`.
-                    public var Content_hyphen_Type: Components.Headers.content_hyphen_type?
+                    public var contentType: Components.Headers.ContentType?
                     /// - Remark: Generated from `#/paths/markdown/POST/responses/200/headers/Content-Length`.
-                    public var Content_hyphen_Length: Swift.String?
+                    public var contentLength: Swift.String?
                     /// - Remark: Generated from `#/paths/markdown/POST/responses/200/headers/X-CommonMarker-Version`.
-                    public var X_hyphen_CommonMarker_hyphen_Version: Components.Headers.x_hyphen_common_hyphen_marker_hyphen_version?
+                    public var xCommonMarkerVersion: Components.Headers.XCommonMarkerVersion?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Content_hyphen_Type:
-                    ///   - Content_hyphen_Length:
-                    ///   - X_hyphen_CommonMarker_hyphen_Version:
+                    ///   - contentType:
+                    ///   - contentLength:
+                    ///   - xCommonMarkerVersion:
                     public init(
-                        Content_hyphen_Type: Components.Headers.content_hyphen_type? = nil,
-                        Content_hyphen_Length: Swift.String? = nil,
-                        X_hyphen_CommonMarker_hyphen_Version: Components.Headers.x_hyphen_common_hyphen_marker_hyphen_version? = nil
+                        contentType: Components.Headers.ContentType? = nil,
+                        contentLength: Swift.String? = nil,
+                        xCommonMarkerVersion: Components.Headers.XCommonMarkerVersion? = nil
                     ) {
-                        self.Content_hyphen_Type = Content_hyphen_Type
-                        self.Content_hyphen_Length = Content_hyphen_Length
-                        self.X_hyphen_CommonMarker_hyphen_Version = X_hyphen_CommonMarker_hyphen_Version
+                        self.contentType = contentType
+                        self.contentLength = contentLength
+                        self.xCommonMarkerVersion = xCommonMarkerVersion
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.markdown_sol_render.Output.Ok.Headers
+                public var headers: Operations.MarkdownRender.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/markdown/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/markdown/POST/responses/200/content/text\/html`.
@@ -225,15 +234,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.markdown_sol_render.Output.Ok.Body
+                public var body: Operations.MarkdownRender.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.markdown_sol_render.Output.Ok.Headers = .init(),
-                    body: Operations.markdown_sol_render.Output.Ok.Body
+                    headers: Operations.MarkdownRender.Output.Ok.Headers = .init(),
+                    body: Operations.MarkdownRender.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -244,12 +253,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//markdown/post(markdown/render)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.markdown_sol_render.Output.Ok)
+            case ok(Operations.MarkdownRender.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.markdown_sol_render.Output.Ok {
+            public var ok: Operations.MarkdownRender.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -267,12 +276,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//markdown/post(markdown/render)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//markdown/post(markdown/render)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -322,37 +339,37 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /markdown/raw`.
     /// - Remark: Generated from `#/paths//markdown/raw/post(markdown/render-raw)`.
-    public enum markdown_sol_render_hyphen_raw {
+    public enum MarkdownRenderRaw {
         public static let id: Swift.String = "markdown/render-raw"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/markdown/raw/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.markdown_sol_render_hyphen_raw.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MarkdownRenderRaw.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.markdown_sol_render_hyphen_raw.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MarkdownRenderRaw.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.markdown_sol_render_hyphen_raw.Input.Headers
+            public var headers: Operations.MarkdownRenderRaw.Input.Headers
             /// - Remark: Generated from `#/paths/markdown/raw/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/markdown/raw/POST/requestBody/content/text\/plain`.
                 case plainText(OpenAPIRuntime.HTTPBody)
                 /// - Remark: Generated from `#/paths/markdown/raw/POST/requestBody/content/text\/x-markdown`.
-                case text_x_hyphen_markdown(OpenAPIRuntime.HTTPBody)
+                case textXMarkdown(OpenAPIRuntime.HTTPBody)
             }
-            public var body: Operations.markdown_sol_render_hyphen_raw.Input.Body?
+            public var body: Operations.MarkdownRenderRaw.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.markdown_sol_render_hyphen_raw.Input.Headers = .init(),
-                body: Operations.markdown_sol_render_hyphen_raw.Input.Body? = nil
+                headers: Operations.MarkdownRenderRaw.Input.Headers = .init(),
+                body: Operations.MarkdownRenderRaw.Input.Body? = nil
             ) {
                 self.headers = headers
                 self.body = body
@@ -363,17 +380,17 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/markdown/raw/POST/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/markdown/raw/POST/responses/200/headers/X-CommonMarker-Version`.
-                    public var X_hyphen_CommonMarker_hyphen_Version: Components.Headers.x_hyphen_common_hyphen_marker_hyphen_version?
+                    public var xCommonMarkerVersion: Components.Headers.XCommonMarkerVersion?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - X_hyphen_CommonMarker_hyphen_Version:
-                    public init(X_hyphen_CommonMarker_hyphen_Version: Components.Headers.x_hyphen_common_hyphen_marker_hyphen_version? = nil) {
-                        self.X_hyphen_CommonMarker_hyphen_Version = X_hyphen_CommonMarker_hyphen_Version
+                    ///   - xCommonMarkerVersion:
+                    public init(xCommonMarkerVersion: Components.Headers.XCommonMarkerVersion? = nil) {
+                        self.xCommonMarkerVersion = xCommonMarkerVersion
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.markdown_sol_render_hyphen_raw.Output.Ok.Headers
+                public var headers: Operations.MarkdownRenderRaw.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/markdown/raw/POST/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/markdown/raw/POST/responses/200/content/text\/html`.
@@ -392,15 +409,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.markdown_sol_render_hyphen_raw.Output.Ok.Body
+                public var body: Operations.MarkdownRenderRaw.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.markdown_sol_render_hyphen_raw.Output.Ok.Headers = .init(),
-                    body: Operations.markdown_sol_render_hyphen_raw.Output.Ok.Body
+                    headers: Operations.MarkdownRenderRaw.Output.Ok.Headers = .init(),
+                    body: Operations.MarkdownRenderRaw.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -411,12 +428,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//markdown/raw/post(markdown/render-raw)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.markdown_sol_render_hyphen_raw.Output.Ok)
+            case ok(Operations.MarkdownRenderRaw.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.markdown_sol_render_hyphen_raw.Output.Ok {
+            public var ok: Operations.MarkdownRenderRaw.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -434,12 +451,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//markdown/raw/post(markdown/render-raw)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//markdown/raw/post(markdown/render-raw)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):

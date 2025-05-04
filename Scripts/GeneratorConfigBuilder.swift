@@ -30,6 +30,12 @@ struct GeneratorConfigBuilder {
             - \#(tagString)
 
         accessModifier: public
+
+        namingStrategy: idiomatic
+
+        nameOverrides:
+          'reactions-+1': reactionsThumbsUp
+          'reactions--1': reactionsThumbsDown
         """#
     }
 
@@ -59,4 +65,3 @@ if let argTag = CommandLine.arguments[1]
 } else {
     throw ErrorMessage(message: "No tag not found.")
 }
-

@@ -17,7 +17,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/blobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)`.
-    func git_sol_create_hyphen_blob(_ input: Operations.git_sol_create_hyphen_blob.Input) async throws -> Operations.git_sol_create_hyphen_blob.Output
+    func gitCreateBlob(_ input: Operations.GitCreateBlob.Input) async throws -> Operations.GitCreateBlob.Output
     /// Get a blob
     ///
     /// The `content` in the response will always be Base64 encoded.
@@ -31,7 +31,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/blobs/{file_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)`.
-    func git_sol_get_hyphen_blob(_ input: Operations.git_sol_get_hyphen_blob.Input) async throws -> Operations.git_sol_get_hyphen_blob.Output
+    func gitGetBlob(_ input: Operations.GitGetBlob.Input) async throws -> Operations.GitGetBlob.Output
     /// Create a commit
     ///
     /// Creates a new Git [commit object](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
@@ -68,7 +68,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/post(git/create-commit)`.
-    func git_sol_create_hyphen_commit(_ input: Operations.git_sol_create_hyphen_commit.Input) async throws -> Operations.git_sol_create_hyphen_commit.Output
+    func gitCreateCommit(_ input: Operations.GitCreateCommit.Input) async throws -> Operations.GitCreateCommit.Output
     /// Get a commit object
     ///
     /// Gets a Git [commit object](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects).
@@ -107,7 +107,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/commits/{commit_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/{commit_sha}/get(git/get-commit)`.
-    func git_sol_get_hyphen_commit(_ input: Operations.git_sol_get_hyphen_commit.Input) async throws -> Operations.git_sol_get_hyphen_commit.Output
+    func gitGetCommit(_ input: Operations.GitGetCommit.Input) async throws -> Operations.GitGetCommit.Output
     /// List matching references
     ///
     /// Returns an array of references from your Git database that match the supplied name. The `:ref` in the URL must be formatted as `heads/<branch name>` for branches and `tags/<tag name>` for tags. If the `:ref` doesn't exist in the repository, but existing refs start with `:ref`, they will be returned as an array.
@@ -121,7 +121,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/matching-refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/matching-refs/{ref}/get(git/list-matching-refs)`.
-    func git_sol_list_hyphen_matching_hyphen_refs(_ input: Operations.git_sol_list_hyphen_matching_hyphen_refs.Input) async throws -> Operations.git_sol_list_hyphen_matching_hyphen_refs.Output
+    func gitListMatchingRefs(_ input: Operations.GitListMatchingRefs.Input) async throws -> Operations.GitListMatchingRefs.Output
     /// Get a reference
     ///
     /// Returns a single reference from your Git database. The `:ref` in the URL must be formatted as `heads/<branch name>` for branches and `tags/<tag name>` for tags. If the `:ref` doesn't match an existing ref, a `404` is returned.
@@ -131,28 +131,28 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/ref/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/ref/{ref}/get(git/get-ref)`.
-    func git_sol_get_hyphen_ref(_ input: Operations.git_sol_get_hyphen_ref.Input) async throws -> Operations.git_sol_get_hyphen_ref.Output
+    func gitGetRef(_ input: Operations.GitGetRef.Input) async throws -> Operations.GitGetRef.Output
     /// Create a reference
     ///
     /// Creates a reference for your repository. You are unable to create new references for empty repositories, even if the commit SHA-1 hash used exists. Empty repositories are repositories without branches.
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/refs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/post(git/create-ref)`.
-    func git_sol_create_hyphen_ref(_ input: Operations.git_sol_create_hyphen_ref.Input) async throws -> Operations.git_sol_create_hyphen_ref.Output
+    func gitCreateRef(_ input: Operations.GitCreateRef.Input) async throws -> Operations.GitCreateRef.Output
     /// Update a reference
     ///
     /// Updates the provided reference to point to a new SHA. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)`.
-    func git_sol_update_hyphen_ref(_ input: Operations.git_sol_update_hyphen_ref.Input) async throws -> Operations.git_sol_update_hyphen_ref.Output
+    func gitUpdateRef(_ input: Operations.GitUpdateRef.Input) async throws -> Operations.GitUpdateRef.Output
     /// Delete a reference
     ///
     /// Deletes the provided reference.
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)`.
-    func git_sol_delete_hyphen_ref(_ input: Operations.git_sol_delete_hyphen_ref.Input) async throws -> Operations.git_sol_delete_hyphen_ref.Output
+    func gitDeleteRef(_ input: Operations.GitDeleteRef.Input) async throws -> Operations.GitDeleteRef.Output
     /// Create a tag object
     ///
     /// Note that creating a tag object does not create the reference that makes a tag in Git. If you want to create an annotated tag in Git, you have to do this call to create the tag object, and then [create](https://docs.github.com/rest/git/refs#create-a-reference) the `refs/tags/[tag]` reference. If you want to create a lightweight tag, you only have to [create](https://docs.github.com/rest/git/refs#create-a-reference) the tag reference - this call would be unnecessary.
@@ -189,7 +189,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/tags`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/post(git/create-tag)`.
-    func git_sol_create_hyphen_tag(_ input: Operations.git_sol_create_hyphen_tag.Input) async throws -> Operations.git_sol_create_hyphen_tag.Output
+    func gitCreateTag(_ input: Operations.GitCreateTag.Input) async throws -> Operations.GitCreateTag.Output
     /// Get a tag
     ///
     /// **Signature verification object**
@@ -224,7 +224,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/tags/{tag_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/{tag_sha}/get(git/get-tag)`.
-    func git_sol_get_hyphen_tag(_ input: Operations.git_sol_get_hyphen_tag.Input) async throws -> Operations.git_sol_get_hyphen_tag.Output
+    func gitGetTag(_ input: Operations.GitGetTag.Input) async throws -> Operations.GitGetTag.Output
     /// Create a tree
     ///
     /// The tree creation API accepts nested entries. If you specify both a tree and a nested path modifying that tree, this endpoint will overwrite the contents of the tree with the new path contents, and create a new tree structure.
@@ -235,7 +235,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/trees`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)`.
-    func git_sol_create_hyphen_tree(_ input: Operations.git_sol_create_hyphen_tree.Input) async throws -> Operations.git_sol_create_hyphen_tree.Output
+    func gitCreateTree(_ input: Operations.GitCreateTree.Input) async throws -> Operations.GitCreateTree.Output
     /// Get a tree
     ///
     /// Returns a single tree using the SHA1 value or ref name for that tree.
@@ -247,7 +247,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/trees/{tree_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/{tree_sha}/get(git/get-tree)`.
-    func git_sol_get_hyphen_tree(_ input: Operations.git_sol_get_hyphen_tree.Input) async throws -> Operations.git_sol_get_hyphen_tree.Output
+    func gitGetTree(_ input: Operations.GitGetTree.Input) async throws -> Operations.GitGetTree.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -258,12 +258,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/blobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)`.
-    public func git_sol_create_hyphen_blob(
-        path: Operations.git_sol_create_hyphen_blob.Input.Path,
-        headers: Operations.git_sol_create_hyphen_blob.Input.Headers = .init(),
-        body: Operations.git_sol_create_hyphen_blob.Input.Body
-    ) async throws -> Operations.git_sol_create_hyphen_blob.Output {
-        try await git_sol_create_hyphen_blob(Operations.git_sol_create_hyphen_blob.Input(
+    public func gitCreateBlob(
+        path: Operations.GitCreateBlob.Input.Path,
+        headers: Operations.GitCreateBlob.Input.Headers = .init(),
+        body: Operations.GitCreateBlob.Input.Body
+    ) async throws -> Operations.GitCreateBlob.Output {
+        try await gitCreateBlob(Operations.GitCreateBlob.Input(
             path: path,
             headers: headers,
             body: body
@@ -282,11 +282,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/blobs/{file_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)`.
-    public func git_sol_get_hyphen_blob(
-        path: Operations.git_sol_get_hyphen_blob.Input.Path,
-        headers: Operations.git_sol_get_hyphen_blob.Input.Headers = .init()
-    ) async throws -> Operations.git_sol_get_hyphen_blob.Output {
-        try await git_sol_get_hyphen_blob(Operations.git_sol_get_hyphen_blob.Input(
+    public func gitGetBlob(
+        path: Operations.GitGetBlob.Input.Path,
+        headers: Operations.GitGetBlob.Input.Headers = .init()
+    ) async throws -> Operations.GitGetBlob.Output {
+        try await gitGetBlob(Operations.GitGetBlob.Input(
             path: path,
             headers: headers
         ))
@@ -327,12 +327,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/post(git/create-commit)`.
-    public func git_sol_create_hyphen_commit(
-        path: Operations.git_sol_create_hyphen_commit.Input.Path,
-        headers: Operations.git_sol_create_hyphen_commit.Input.Headers = .init(),
-        body: Operations.git_sol_create_hyphen_commit.Input.Body
-    ) async throws -> Operations.git_sol_create_hyphen_commit.Output {
-        try await git_sol_create_hyphen_commit(Operations.git_sol_create_hyphen_commit.Input(
+    public func gitCreateCommit(
+        path: Operations.GitCreateCommit.Input.Path,
+        headers: Operations.GitCreateCommit.Input.Headers = .init(),
+        body: Operations.GitCreateCommit.Input.Body
+    ) async throws -> Operations.GitCreateCommit.Output {
+        try await gitCreateCommit(Operations.GitCreateCommit.Input(
             path: path,
             headers: headers,
             body: body
@@ -376,11 +376,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/commits/{commit_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/{commit_sha}/get(git/get-commit)`.
-    public func git_sol_get_hyphen_commit(
-        path: Operations.git_sol_get_hyphen_commit.Input.Path,
-        headers: Operations.git_sol_get_hyphen_commit.Input.Headers = .init()
-    ) async throws -> Operations.git_sol_get_hyphen_commit.Output {
-        try await git_sol_get_hyphen_commit(Operations.git_sol_get_hyphen_commit.Input(
+    public func gitGetCommit(
+        path: Operations.GitGetCommit.Input.Path,
+        headers: Operations.GitGetCommit.Input.Headers = .init()
+    ) async throws -> Operations.GitGetCommit.Output {
+        try await gitGetCommit(Operations.GitGetCommit.Input(
             path: path,
             headers: headers
         ))
@@ -398,11 +398,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/matching-refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/matching-refs/{ref}/get(git/list-matching-refs)`.
-    public func git_sol_list_hyphen_matching_hyphen_refs(
-        path: Operations.git_sol_list_hyphen_matching_hyphen_refs.Input.Path,
-        headers: Operations.git_sol_list_hyphen_matching_hyphen_refs.Input.Headers = .init()
-    ) async throws -> Operations.git_sol_list_hyphen_matching_hyphen_refs.Output {
-        try await git_sol_list_hyphen_matching_hyphen_refs(Operations.git_sol_list_hyphen_matching_hyphen_refs.Input(
+    public func gitListMatchingRefs(
+        path: Operations.GitListMatchingRefs.Input.Path,
+        headers: Operations.GitListMatchingRefs.Input.Headers = .init()
+    ) async throws -> Operations.GitListMatchingRefs.Output {
+        try await gitListMatchingRefs(Operations.GitListMatchingRefs.Input(
             path: path,
             headers: headers
         ))
@@ -416,11 +416,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/ref/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/ref/{ref}/get(git/get-ref)`.
-    public func git_sol_get_hyphen_ref(
-        path: Operations.git_sol_get_hyphen_ref.Input.Path,
-        headers: Operations.git_sol_get_hyphen_ref.Input.Headers = .init()
-    ) async throws -> Operations.git_sol_get_hyphen_ref.Output {
-        try await git_sol_get_hyphen_ref(Operations.git_sol_get_hyphen_ref.Input(
+    public func gitGetRef(
+        path: Operations.GitGetRef.Input.Path,
+        headers: Operations.GitGetRef.Input.Headers = .init()
+    ) async throws -> Operations.GitGetRef.Output {
+        try await gitGetRef(Operations.GitGetRef.Input(
             path: path,
             headers: headers
         ))
@@ -431,12 +431,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/refs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/post(git/create-ref)`.
-    public func git_sol_create_hyphen_ref(
-        path: Operations.git_sol_create_hyphen_ref.Input.Path,
-        headers: Operations.git_sol_create_hyphen_ref.Input.Headers = .init(),
-        body: Operations.git_sol_create_hyphen_ref.Input.Body
-    ) async throws -> Operations.git_sol_create_hyphen_ref.Output {
-        try await git_sol_create_hyphen_ref(Operations.git_sol_create_hyphen_ref.Input(
+    public func gitCreateRef(
+        path: Operations.GitCreateRef.Input.Path,
+        headers: Operations.GitCreateRef.Input.Headers = .init(),
+        body: Operations.GitCreateRef.Input.Body
+    ) async throws -> Operations.GitCreateRef.Output {
+        try await gitCreateRef(Operations.GitCreateRef.Input(
             path: path,
             headers: headers,
             body: body
@@ -448,12 +448,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)`.
-    public func git_sol_update_hyphen_ref(
-        path: Operations.git_sol_update_hyphen_ref.Input.Path,
-        headers: Operations.git_sol_update_hyphen_ref.Input.Headers = .init(),
-        body: Operations.git_sol_update_hyphen_ref.Input.Body
-    ) async throws -> Operations.git_sol_update_hyphen_ref.Output {
-        try await git_sol_update_hyphen_ref(Operations.git_sol_update_hyphen_ref.Input(
+    public func gitUpdateRef(
+        path: Operations.GitUpdateRef.Input.Path,
+        headers: Operations.GitUpdateRef.Input.Headers = .init(),
+        body: Operations.GitUpdateRef.Input.Body
+    ) async throws -> Operations.GitUpdateRef.Output {
+        try await gitUpdateRef(Operations.GitUpdateRef.Input(
             path: path,
             headers: headers,
             body: body
@@ -465,11 +465,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)`.
-    public func git_sol_delete_hyphen_ref(
-        path: Operations.git_sol_delete_hyphen_ref.Input.Path,
-        headers: Operations.git_sol_delete_hyphen_ref.Input.Headers = .init()
-    ) async throws -> Operations.git_sol_delete_hyphen_ref.Output {
-        try await git_sol_delete_hyphen_ref(Operations.git_sol_delete_hyphen_ref.Input(
+    public func gitDeleteRef(
+        path: Operations.GitDeleteRef.Input.Path,
+        headers: Operations.GitDeleteRef.Input.Headers = .init()
+    ) async throws -> Operations.GitDeleteRef.Output {
+        try await gitDeleteRef(Operations.GitDeleteRef.Input(
             path: path,
             headers: headers
         ))
@@ -510,12 +510,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/tags`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/post(git/create-tag)`.
-    public func git_sol_create_hyphen_tag(
-        path: Operations.git_sol_create_hyphen_tag.Input.Path,
-        headers: Operations.git_sol_create_hyphen_tag.Input.Headers = .init(),
-        body: Operations.git_sol_create_hyphen_tag.Input.Body
-    ) async throws -> Operations.git_sol_create_hyphen_tag.Output {
-        try await git_sol_create_hyphen_tag(Operations.git_sol_create_hyphen_tag.Input(
+    public func gitCreateTag(
+        path: Operations.GitCreateTag.Input.Path,
+        headers: Operations.GitCreateTag.Input.Headers = .init(),
+        body: Operations.GitCreateTag.Input.Body
+    ) async throws -> Operations.GitCreateTag.Output {
+        try await gitCreateTag(Operations.GitCreateTag.Input(
             path: path,
             headers: headers,
             body: body
@@ -555,11 +555,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/tags/{tag_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/{tag_sha}/get(git/get-tag)`.
-    public func git_sol_get_hyphen_tag(
-        path: Operations.git_sol_get_hyphen_tag.Input.Path,
-        headers: Operations.git_sol_get_hyphen_tag.Input.Headers = .init()
-    ) async throws -> Operations.git_sol_get_hyphen_tag.Output {
-        try await git_sol_get_hyphen_tag(Operations.git_sol_get_hyphen_tag.Input(
+    public func gitGetTag(
+        path: Operations.GitGetTag.Input.Path,
+        headers: Operations.GitGetTag.Input.Headers = .init()
+    ) async throws -> Operations.GitGetTag.Output {
+        try await gitGetTag(Operations.GitGetTag.Input(
             path: path,
             headers: headers
         ))
@@ -574,12 +574,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/trees`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)`.
-    public func git_sol_create_hyphen_tree(
-        path: Operations.git_sol_create_hyphen_tree.Input.Path,
-        headers: Operations.git_sol_create_hyphen_tree.Input.Headers = .init(),
-        body: Operations.git_sol_create_hyphen_tree.Input.Body
-    ) async throws -> Operations.git_sol_create_hyphen_tree.Output {
-        try await git_sol_create_hyphen_tree(Operations.git_sol_create_hyphen_tree.Input(
+    public func gitCreateTree(
+        path: Operations.GitCreateTree.Input.Path,
+        headers: Operations.GitCreateTree.Input.Headers = .init(),
+        body: Operations.GitCreateTree.Input.Body
+    ) async throws -> Operations.GitCreateTree.Output {
+        try await gitCreateTree(Operations.GitCreateTree.Input(
             path: path,
             headers: headers,
             body: body
@@ -596,12 +596,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/trees/{tree_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/{tree_sha}/get(git/get-tree)`.
-    public func git_sol_get_hyphen_tree(
-        path: Operations.git_sol_get_hyphen_tree.Input.Path,
-        query: Operations.git_sol_get_hyphen_tree.Input.Query = .init(),
-        headers: Operations.git_sol_get_hyphen_tree.Input.Headers = .init()
-    ) async throws -> Operations.git_sol_get_hyphen_tree.Output {
-        try await git_sol_get_hyphen_tree(Operations.git_sol_get_hyphen_tree.Input(
+    public func gitGetTree(
+        path: Operations.GitGetTree.Input.Path,
+        query: Operations.GitGetTree.Input.Query = .init(),
+        headers: Operations.GitGetTree.Input.Headers = .init()
+    ) async throws -> Operations.GitGetTree.Output {
+        try await gitGetTree(Operations.GitGetTree.Input(
             path: path,
             query: query,
             headers: headers
@@ -611,6 +611,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -626,36 +635,36 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -663,30 +672,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -725,9 +734,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -742,7 +751,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -761,32 +770,32 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// - Remark: Generated from `#/components/schemas/verification`.
-        public struct verification: Codable, Hashable, Sendable {
+        public struct Verification: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/verification/verified`.
             public var verified: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/verification/reason`.
@@ -796,128 +805,128 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/verification/signature`.
             public var signature: Swift.String?
             /// - Remark: Generated from `#/components/schemas/verification/verified_at`.
-            public var verified_at: Swift.String?
-            /// Creates a new `verification`.
+            public var verifiedAt: Swift.String?
+            /// Creates a new `Verification`.
             ///
             /// - Parameters:
             ///   - verified:
             ///   - reason:
             ///   - payload:
             ///   - signature:
-            ///   - verified_at:
+            ///   - verifiedAt:
             public init(
                 verified: Swift.Bool,
                 reason: Swift.String,
                 payload: Swift.String? = nil,
                 signature: Swift.String? = nil,
-                verified_at: Swift.String? = nil
+                verifiedAt: Swift.String? = nil
             ) {
                 self.verified = verified
                 self.reason = reason
                 self.payload = payload
                 self.signature = signature
-                self.verified_at = verified_at
+                self.verifiedAt = verifiedAt
             }
             public enum CodingKeys: String, CodingKey {
                 case verified
                 case reason
                 case payload
                 case signature
-                case verified_at
+                case verifiedAt = "verified_at"
             }
         }
         /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-placeholder-id`.
-        public typealias secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id = Swift.String
+        public typealias SecretScanningPushProtectionBypassPlaceholderId = Swift.String
         /// Repository rule violation was detected
         ///
         /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error`.
-        public struct repository_hyphen_rule_hyphen_violation_hyphen_error: Codable, Hashable, Sendable {
+        public struct RepositoryRuleViolationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/status`.
             public var status: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata`.
-            public struct metadataPayload: Codable, Hashable, Sendable {
+            public struct MetadataPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning`.
-                public struct secret_scanningPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholdersPayload`.
-                    public struct bypass_placeholdersPayloadPayload: Codable, Hashable, Sendable {
-                        /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholdersPayload/placeholder_id`.
-                        public var placeholder_id: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id?
-                        /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholdersPayload/token_type`.
-                        public var token_type: Swift.String?
-                        /// Creates a new `bypass_placeholdersPayloadPayload`.
+                public struct SecretScanningPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/BypassPlaceholdersPayload`.
+                    public struct BypassPlaceholdersPayloadPayload: Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/BypassPlaceholdersPayload/placeholder_id`.
+                        public var placeholderId: Components.Schemas.SecretScanningPushProtectionBypassPlaceholderId?
+                        /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/BypassPlaceholdersPayload/token_type`.
+                        public var tokenType: Swift.String?
+                        /// Creates a new `BypassPlaceholdersPayloadPayload`.
                         ///
                         /// - Parameters:
-                        ///   - placeholder_id:
-                        ///   - token_type:
+                        ///   - placeholderId:
+                        ///   - tokenType:
                         public init(
-                            placeholder_id: Components.Schemas.secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_placeholder_hyphen_id? = nil,
-                            token_type: Swift.String? = nil
+                            placeholderId: Components.Schemas.SecretScanningPushProtectionBypassPlaceholderId? = nil,
+                            tokenType: Swift.String? = nil
                         ) {
-                            self.placeholder_id = placeholder_id
-                            self.token_type = token_type
+                            self.placeholderId = placeholderId
+                            self.tokenType = tokenType
                         }
                         public enum CodingKeys: String, CodingKey {
-                            case placeholder_id
-                            case token_type
+                            case placeholderId = "placeholder_id"
+                            case tokenType = "token_type"
                         }
                     }
                     /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholders`.
-                    public typealias bypass_placeholdersPayload = [Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload.bypass_placeholdersPayloadPayload]
+                    public typealias BypassPlaceholdersPayload = [Components.Schemas.RepositoryRuleViolationError.MetadataPayload.SecretScanningPayload.BypassPlaceholdersPayloadPayload]
                     /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning/bypass_placeholders`.
-                    public var bypass_placeholders: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload.bypass_placeholdersPayload?
-                    /// Creates a new `secret_scanningPayload`.
+                    public var bypassPlaceholders: Components.Schemas.RepositoryRuleViolationError.MetadataPayload.SecretScanningPayload.BypassPlaceholdersPayload?
+                    /// Creates a new `SecretScanningPayload`.
                     ///
                     /// - Parameters:
-                    ///   - bypass_placeholders:
-                    public init(bypass_placeholders: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload.bypass_placeholdersPayload? = nil) {
-                        self.bypass_placeholders = bypass_placeholders
+                    ///   - bypassPlaceholders:
+                    public init(bypassPlaceholders: Components.Schemas.RepositoryRuleViolationError.MetadataPayload.SecretScanningPayload.BypassPlaceholdersPayload? = nil) {
+                        self.bypassPlaceholders = bypassPlaceholders
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case bypass_placeholders
+                        case bypassPlaceholders = "bypass_placeholders"
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata/secret_scanning`.
-                public var secret_scanning: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload?
-                /// Creates a new `metadataPayload`.
+                public var secretScanning: Components.Schemas.RepositoryRuleViolationError.MetadataPayload.SecretScanningPayload?
+                /// Creates a new `MetadataPayload`.
                 ///
                 /// - Parameters:
-                ///   - secret_scanning:
-                public init(secret_scanning: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload.secret_scanningPayload? = nil) {
-                    self.secret_scanning = secret_scanning
+                ///   - secretScanning:
+                public init(secretScanning: Components.Schemas.RepositoryRuleViolationError.MetadataPayload.SecretScanningPayload? = nil) {
+                    self.secretScanning = secretScanning
                 }
                 public enum CodingKeys: String, CodingKey {
-                    case secret_scanning
+                    case secretScanning = "secret_scanning"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-violation-error/metadata`.
-            public var metadata: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload?
-            /// Creates a new `repository_hyphen_rule_hyphen_violation_hyphen_error`.
+            public var metadata: Components.Schemas.RepositoryRuleViolationError.MetadataPayload?
+            /// Creates a new `RepositoryRuleViolationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - status:
             ///   - metadata:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 status: Swift.String? = nil,
-                metadata: Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error.metadataPayload? = nil
+                metadata: Components.Schemas.RepositoryRuleViolationError.MetadataPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.status = status
                 self.metadata = metadata
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case status
                 case metadata
             }
@@ -925,12 +934,12 @@ public enum Components {
         /// Short Blob
         ///
         /// - Remark: Generated from `#/components/schemas/short-blob`.
-        public struct short_hyphen_blob: Codable, Hashable, Sendable {
+        public struct ShortBlob: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/short-blob/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/short-blob/sha`.
             public var sha: Swift.String
-            /// Creates a new `short_hyphen_blob`.
+            /// Creates a new `ShortBlob`.
             ///
             /// - Parameters:
             ///   - url:
@@ -950,7 +959,7 @@ public enum Components {
         /// Blob
         ///
         /// - Remark: Generated from `#/components/schemas/blob`.
-        public struct blob: Codable, Hashable, Sendable {
+        public struct Blob: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/blob/content`.
             public var content: Swift.String
             /// - Remark: Generated from `#/components/schemas/blob/encoding`.
@@ -962,10 +971,10 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/blob/size`.
             public var size: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/blob/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/blob/highlighted_content`.
-            public var highlighted_content: Swift.String?
-            /// Creates a new `blob`.
+            public var highlightedContent: Swift.String?
+            /// Creates a new `Blob`.
             ///
             /// - Parameters:
             ///   - content:
@@ -973,24 +982,24 @@ public enum Components {
             ///   - url:
             ///   - sha:
             ///   - size:
-            ///   - node_id:
-            ///   - highlighted_content:
+            ///   - nodeId:
+            ///   - highlightedContent:
             public init(
                 content: Swift.String,
                 encoding: Swift.String,
                 url: Swift.String,
                 sha: Swift.String,
                 size: Swift.Int? = nil,
-                node_id: Swift.String,
-                highlighted_content: Swift.String? = nil
+                nodeId: Swift.String,
+                highlightedContent: Swift.String? = nil
             ) {
                 self.content = content
                 self.encoding = encoding
                 self.url = url
                 self.sha = sha
                 self.size = size
-                self.node_id = node_id
-                self.highlighted_content = highlighted_content
+                self.nodeId = nodeId
+                self.highlightedContent = highlightedContent
             }
             public enum CodingKeys: String, CodingKey {
                 case content
@@ -998,26 +1007,26 @@ public enum Components {
                 case url
                 case sha
                 case size
-                case node_id
-                case highlighted_content
+                case nodeId = "node_id"
+                case highlightedContent = "highlighted_content"
             }
         }
         /// Low-level Git commit operations within a repository
         ///
         /// - Remark: Generated from `#/components/schemas/git-commit`.
-        public struct git_hyphen_commit: Codable, Hashable, Sendable {
+        public struct GitCommit: Codable, Hashable, Sendable {
             /// SHA for the commit
             ///
             /// - Remark: Generated from `#/components/schemas/git-commit/sha`.
             public var sha: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-commit/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-commit/url`.
             public var url: Swift.String
             /// Identifying information for the git-user
             ///
             /// - Remark: Generated from `#/components/schemas/git-commit/author`.
-            public struct authorPayload: Codable, Hashable, Sendable {
+            public struct AuthorPayload: Codable, Hashable, Sendable {
                 /// Timestamp of the commit
                 ///
                 /// - Remark: Generated from `#/components/schemas/git-commit/author/date`.
@@ -1030,7 +1039,7 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/git-commit/author/name`.
                 public var name: Swift.String
-                /// Creates a new `authorPayload`.
+                /// Creates a new `AuthorPayload`.
                 ///
                 /// - Parameters:
                 ///   - date: Timestamp of the commit
@@ -1054,11 +1063,11 @@ public enum Components {
             /// Identifying information for the git-user
             ///
             /// - Remark: Generated from `#/components/schemas/git-commit/author`.
-            public var author: Components.Schemas.git_hyphen_commit.authorPayload
+            public var author: Components.Schemas.GitCommit.AuthorPayload
             /// Identifying information for the git-user
             ///
             /// - Remark: Generated from `#/components/schemas/git-commit/committer`.
-            public struct committerPayload: Codable, Hashable, Sendable {
+            public struct CommitterPayload: Codable, Hashable, Sendable {
                 /// Timestamp of the commit
                 ///
                 /// - Remark: Generated from `#/components/schemas/git-commit/committer/date`.
@@ -1071,7 +1080,7 @@ public enum Components {
                 ///
                 /// - Remark: Generated from `#/components/schemas/git-commit/committer/name`.
                 public var name: Swift.String
-                /// Creates a new `committerPayload`.
+                /// Creates a new `CommitterPayload`.
                 ///
                 /// - Parameters:
                 ///   - date: Timestamp of the commit
@@ -1095,20 +1104,20 @@ public enum Components {
             /// Identifying information for the git-user
             ///
             /// - Remark: Generated from `#/components/schemas/git-commit/committer`.
-            public var committer: Components.Schemas.git_hyphen_commit.committerPayload
+            public var committer: Components.Schemas.GitCommit.CommitterPayload
             /// Message describing the purpose of the commit
             ///
             /// - Remark: Generated from `#/components/schemas/git-commit/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-commit/tree`.
-            public struct treePayload: Codable, Hashable, Sendable {
+            public struct TreePayload: Codable, Hashable, Sendable {
                 /// SHA for the commit
                 ///
                 /// - Remark: Generated from `#/components/schemas/git-commit/tree/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-commit/tree/url`.
                 public var url: Swift.String
-                /// Creates a new `treePayload`.
+                /// Creates a new `TreePayload`.
                 ///
                 /// - Parameters:
                 ///   - sha: SHA for the commit
@@ -1126,44 +1135,44 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/git-commit/tree`.
-            public var tree: Components.Schemas.git_hyphen_commit.treePayload
-            /// - Remark: Generated from `#/components/schemas/git-commit/parentsPayload`.
-            public struct parentsPayloadPayload: Codable, Hashable, Sendable {
+            public var tree: Components.Schemas.GitCommit.TreePayload
+            /// - Remark: Generated from `#/components/schemas/git-commit/ParentsPayload`.
+            public struct ParentsPayloadPayload: Codable, Hashable, Sendable {
                 /// SHA for the commit
                 ///
-                /// - Remark: Generated from `#/components/schemas/git-commit/parentsPayload/sha`.
+                /// - Remark: Generated from `#/components/schemas/git-commit/ParentsPayload/sha`.
                 public var sha: Swift.String
-                /// - Remark: Generated from `#/components/schemas/git-commit/parentsPayload/url`.
+                /// - Remark: Generated from `#/components/schemas/git-commit/ParentsPayload/url`.
                 public var url: Swift.String
-                /// - Remark: Generated from `#/components/schemas/git-commit/parentsPayload/html_url`.
-                public var html_url: Swift.String
-                /// Creates a new `parentsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/git-commit/ParentsPayload/html_url`.
+                public var htmlUrl: Swift.String
+                /// Creates a new `ParentsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - sha: SHA for the commit
                 ///   - url:
-                ///   - html_url:
+                ///   - htmlUrl:
                 public init(
                     sha: Swift.String,
                     url: Swift.String,
-                    html_url: Swift.String
+                    htmlUrl: Swift.String
                 ) {
                     self.sha = sha
                     self.url = url
-                    self.html_url = html_url
+                    self.htmlUrl = htmlUrl
                 }
                 public enum CodingKeys: String, CodingKey {
                     case sha
                     case url
-                    case html_url
+                    case htmlUrl = "html_url"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/git-commit/parents`.
-            public typealias parentsPayload = [Components.Schemas.git_hyphen_commit.parentsPayloadPayload]
+            public typealias ParentsPayload = [Components.Schemas.GitCommit.ParentsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/git-commit/parents`.
-            public var parents: Components.Schemas.git_hyphen_commit.parentsPayload
+            public var parents: Components.Schemas.GitCommit.ParentsPayload
             /// - Remark: Generated from `#/components/schemas/git-commit/verification`.
-            public struct verificationPayload: Codable, Hashable, Sendable {
+            public struct VerificationPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/git-commit/verification/verified`.
                 public var verified: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/git-commit/verification/reason`.
@@ -1173,45 +1182,45 @@ public enum Components {
                 /// - Remark: Generated from `#/components/schemas/git-commit/verification/payload`.
                 public var payload: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/git-commit/verification/verified_at`.
-                public var verified_at: Swift.String?
-                /// Creates a new `verificationPayload`.
+                public var verifiedAt: Swift.String?
+                /// Creates a new `VerificationPayload`.
                 ///
                 /// - Parameters:
                 ///   - verified:
                 ///   - reason:
                 ///   - signature:
                 ///   - payload:
-                ///   - verified_at:
+                ///   - verifiedAt:
                 public init(
                     verified: Swift.Bool,
                     reason: Swift.String,
                     signature: Swift.String? = nil,
                     payload: Swift.String? = nil,
-                    verified_at: Swift.String? = nil
+                    verifiedAt: Swift.String? = nil
                 ) {
                     self.verified = verified
                     self.reason = reason
                     self.signature = signature
                     self.payload = payload
-                    self.verified_at = verified_at
+                    self.verifiedAt = verifiedAt
                 }
                 public enum CodingKeys: String, CodingKey {
                     case verified
                     case reason
                     case signature
                     case payload
-                    case verified_at
+                    case verifiedAt = "verified_at"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/git-commit/verification`.
-            public var verification: Components.Schemas.git_hyphen_commit.verificationPayload
+            public var verification: Components.Schemas.GitCommit.VerificationPayload
             /// - Remark: Generated from `#/components/schemas/git-commit/html_url`.
-            public var html_url: Swift.String
-            /// Creates a new `git_hyphen_commit`.
+            public var htmlUrl: Swift.String
+            /// Creates a new `GitCommit`.
             ///
             /// - Parameters:
             ///   - sha: SHA for the commit
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url:
             ///   - author: Identifying information for the git-user
             ///   - committer: Identifying information for the git-user
@@ -1219,21 +1228,21 @@ public enum Components {
             ///   - tree:
             ///   - parents:
             ///   - verification:
-            ///   - html_url:
+            ///   - htmlUrl:
             public init(
                 sha: Swift.String,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                author: Components.Schemas.git_hyphen_commit.authorPayload,
-                committer: Components.Schemas.git_hyphen_commit.committerPayload,
+                author: Components.Schemas.GitCommit.AuthorPayload,
+                committer: Components.Schemas.GitCommit.CommitterPayload,
                 message: Swift.String,
-                tree: Components.Schemas.git_hyphen_commit.treePayload,
-                parents: Components.Schemas.git_hyphen_commit.parentsPayload,
-                verification: Components.Schemas.git_hyphen_commit.verificationPayload,
-                html_url: Swift.String
+                tree: Components.Schemas.GitCommit.TreePayload,
+                parents: Components.Schemas.GitCommit.ParentsPayload,
+                verification: Components.Schemas.GitCommit.VerificationPayload,
+                htmlUrl: Swift.String
             ) {
                 self.sha = sha
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
                 self.author = author
                 self.committer = committer
@@ -1241,11 +1250,11 @@ public enum Components {
                 self.tree = tree
                 self.parents = parents
                 self.verification = verification
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case sha
-                case node_id
+                case nodeId = "node_id"
                 case url
                 case author
                 case committer
@@ -1253,21 +1262,21 @@ public enum Components {
                 case tree
                 case parents
                 case verification
-                case html_url
+                case htmlUrl = "html_url"
             }
         }
         /// Git references within a repository
         ///
         /// - Remark: Generated from `#/components/schemas/git-ref`.
-        public struct git_hyphen_ref: Codable, Hashable, Sendable {
+        public struct GitRef: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/git-ref/ref`.
             public var ref: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-ref/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-ref/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-ref/object`.
-            public struct objectPayload: Codable, Hashable, Sendable {
+            public struct ObjectPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/git-ref/object/type`.
                 public var _type: Swift.String
                 /// SHA for the reference
@@ -1276,7 +1285,7 @@ public enum Components {
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-ref/object/url`.
                 public var url: Swift.String
-                /// Creates a new `objectPayload`.
+                /// Creates a new `ObjectPayload`.
                 ///
                 /// - Parameters:
                 ///   - _type:
@@ -1298,28 +1307,28 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/git-ref/object`.
-            public var object: Components.Schemas.git_hyphen_ref.objectPayload
-            /// Creates a new `git_hyphen_ref`.
+            public var object: Components.Schemas.GitRef.ObjectPayload
+            /// Creates a new `GitRef`.
             ///
             /// - Parameters:
             ///   - ref:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - url:
             ///   - object:
             public init(
                 ref: Swift.String,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 url: Swift.String,
-                object: Components.Schemas.git_hyphen_ref.objectPayload
+                object: Components.Schemas.GitRef.ObjectPayload
             ) {
                 self.ref = ref
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.url = url
                 self.object = object
             }
             public enum CodingKeys: String, CodingKey {
                 case ref
-                case node_id
+                case nodeId = "node_id"
                 case url
                 case object
             }
@@ -1327,9 +1336,9 @@ public enum Components {
         /// Metadata for a Git tag
         ///
         /// - Remark: Generated from `#/components/schemas/git-tag`.
-        public struct git_hyphen_tag: Codable, Hashable, Sendable {
+        public struct GitTag: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/git-tag/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// Name of the tag
             ///
             /// - Remark: Generated from `#/components/schemas/git-tag/tag`.
@@ -1345,14 +1354,14 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/git-tag/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-tag/tagger`.
-            public struct taggerPayload: Codable, Hashable, Sendable {
+            public struct TaggerPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/git-tag/tagger/date`.
                 public var date: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-tag/tagger/email`.
                 public var email: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-tag/tagger/name`.
                 public var name: Swift.String
-                /// Creates a new `taggerPayload`.
+                /// Creates a new `TaggerPayload`.
                 ///
                 /// - Parameters:
                 ///   - date:
@@ -1374,16 +1383,16 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/git-tag/tagger`.
-            public var tagger: Components.Schemas.git_hyphen_tag.taggerPayload
+            public var tagger: Components.Schemas.GitTag.TaggerPayload
             /// - Remark: Generated from `#/components/schemas/git-tag/object`.
-            public struct objectPayload: Codable, Hashable, Sendable {
+            public struct ObjectPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/git-tag/object/sha`.
                 public var sha: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-tag/object/type`.
                 public var _type: Swift.String
                 /// - Remark: Generated from `#/components/schemas/git-tag/object/url`.
                 public var url: Swift.String
-                /// Creates a new `objectPayload`.
+                /// Creates a new `ObjectPayload`.
                 ///
                 /// - Parameters:
                 ///   - sha:
@@ -1405,13 +1414,13 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/git-tag/object`.
-            public var object: Components.Schemas.git_hyphen_tag.objectPayload
+            public var object: Components.Schemas.GitTag.ObjectPayload
             /// - Remark: Generated from `#/components/schemas/git-tag/verification`.
-            public var verification: Components.Schemas.verification?
-            /// Creates a new `git_hyphen_tag`.
+            public var verification: Components.Schemas.Verification?
+            /// Creates a new `GitTag`.
             ///
             /// - Parameters:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - tag: Name of the tag
             ///   - sha:
             ///   - url: URL for the tag
@@ -1420,16 +1429,16 @@ public enum Components {
             ///   - object:
             ///   - verification:
             public init(
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 tag: Swift.String,
                 sha: Swift.String,
                 url: Swift.String,
                 message: Swift.String,
-                tagger: Components.Schemas.git_hyphen_tag.taggerPayload,
-                object: Components.Schemas.git_hyphen_tag.objectPayload,
-                verification: Components.Schemas.verification? = nil
+                tagger: Components.Schemas.GitTag.TaggerPayload,
+                object: Components.Schemas.GitTag.ObjectPayload,
+                verification: Components.Schemas.Verification? = nil
             ) {
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.tag = tag
                 self.sha = sha
                 self.url = url
@@ -1439,7 +1448,7 @@ public enum Components {
                 self.verification = verification
             }
             public enum CodingKeys: String, CodingKey {
-                case node_id
+                case nodeId = "node_id"
                 case tag
                 case sha
                 case url
@@ -1452,28 +1461,28 @@ public enum Components {
         /// The hierarchy between files in a Git repository.
         ///
         /// - Remark: Generated from `#/components/schemas/git-tree`.
-        public struct git_hyphen_tree: Codable, Hashable, Sendable {
+        public struct GitTree: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/git-tree/sha`.
             public var sha: Swift.String
             /// - Remark: Generated from `#/components/schemas/git-tree/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/git-tree/truncated`.
             public var truncated: Swift.Bool
-            /// - Remark: Generated from `#/components/schemas/git-tree/treePayload`.
-            public struct treePayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/path`.
+            /// - Remark: Generated from `#/components/schemas/git-tree/TreePayload`.
+            public struct TreePayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/git-tree/TreePayload/path`.
                 public var path: Swift.String
-                /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/mode`.
+                /// - Remark: Generated from `#/components/schemas/git-tree/TreePayload/mode`.
                 public var mode: Swift.String
-                /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/type`.
+                /// - Remark: Generated from `#/components/schemas/git-tree/TreePayload/type`.
                 public var _type: Swift.String
-                /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/sha`.
+                /// - Remark: Generated from `#/components/schemas/git-tree/TreePayload/sha`.
                 public var sha: Swift.String
-                /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/size`.
+                /// - Remark: Generated from `#/components/schemas/git-tree/TreePayload/size`.
                 public var size: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/git-tree/treePayload/url`.
+                /// - Remark: Generated from `#/components/schemas/git-tree/TreePayload/url`.
                 public var url: Swift.String?
-                /// Creates a new `treePayloadPayload`.
+                /// Creates a new `TreePayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - path:
@@ -1509,12 +1518,12 @@ public enum Components {
             /// Objects specifying a tree structure
             ///
             /// - Remark: Generated from `#/components/schemas/git-tree/tree`.
-            public typealias treePayload = [Components.Schemas.git_hyphen_tree.treePayloadPayload]
+            public typealias TreePayload = [Components.Schemas.GitTree.TreePayloadPayload]
             /// Objects specifying a tree structure
             ///
             /// - Remark: Generated from `#/components/schemas/git-tree/tree`.
-            public var tree: Components.Schemas.git_hyphen_tree.treePayload
-            /// Creates a new `git_hyphen_tree`.
+            public var tree: Components.Schemas.GitTree.TreePayload
+            /// Creates a new `GitTree`.
             ///
             /// - Parameters:
             ///   - sha:
@@ -1525,7 +1534,7 @@ public enum Components {
                 sha: Swift.String,
                 url: Swift.String? = nil,
                 truncated: Swift.Bool,
-                tree: Components.Schemas.git_hyphen_tree.treePayload
+                tree: Components.Schemas.GitTree.TreePayload
             ) {
                 self.sha = sha
                 self.url = url
@@ -1545,34 +1554,34 @@ public enum Components {
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The SHA of the commit.
         ///
         /// - Remark: Generated from `#/components/parameters/commit-sha`.
-        public typealias commit_hyphen_sha = Swift.String
+        public typealias CommitSha = Swift.String
         /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
         ///
         /// - Remark: Generated from `#/components/parameters/git-ref-only`.
-        public typealias git_hyphen_ref_hyphen_only = Swift.String
+        public typealias GitRefOnly = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1582,25 +1591,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1610,25 +1619,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1638,25 +1647,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct conflict: Sendable, Hashable {
+        public struct Conflict: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/conflict/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/conflict/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -1666,12 +1675,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.conflict.Body
-            /// Creates a new `conflict`.
+            public var body: Components.Responses.Conflict.Body
+            /// Creates a new `Conflict`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.conflict.Body) {
+            public init(body: Components.Responses.Conflict.Body) {
                 self.body = body
             }
         }
@@ -1679,7 +1688,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -1691,7 +1700,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/blobs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)`.
-    public enum git_sol_create_hyphen_blob {
+    public enum GitCreateBlob {
         public static let id: Swift.String = "git/create-blob"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/path`.
@@ -1699,41 +1708,41 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.git_sol_create_hyphen_blob.Input.Path
+            public var path: Operations.GitCreateBlob.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_blob.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateBlob.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_blob.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateBlob.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_create_hyphen_blob.Input.Headers
+            public var headers: Operations.GitCreateBlob.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The new blob's content.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/requestBody/json/content`.
@@ -1742,7 +1751,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/requestBody/json/encoding`.
                     public var encoding: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - content: The new blob's content.
@@ -1760,9 +1769,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/requestBody/content/application\/json`.
-                case json(Operations.git_sol_create_hyphen_blob.Input.Body.jsonPayload)
+                case json(Operations.GitCreateBlob.Input.Body.JsonPayload)
             }
-            public var body: Operations.git_sol_create_hyphen_blob.Input.Body
+            public var body: Operations.GitCreateBlob.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -1770,9 +1779,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.git_sol_create_hyphen_blob.Input.Path,
-                headers: Operations.git_sol_create_hyphen_blob.Input.Headers = .init(),
-                body: Operations.git_sol_create_hyphen_blob.Input.Body
+                path: Operations.GitCreateBlob.Input.Path,
+                headers: Operations.GitCreateBlob.Input.Headers = .init(),
+                body: Operations.GitCreateBlob.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -1784,26 +1793,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.git_sol_create_hyphen_blob.Output.Created.Headers
+                public var headers: Operations.GitCreateBlob.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.short_hyphen_blob)
+                    case json(Components.Schemas.ShortBlob)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.short_hyphen_blob {
+                    public var json: Components.Schemas.ShortBlob {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1813,15 +1822,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_create_hyphen_blob.Output.Created.Body
+                public var body: Operations.GitCreateBlob.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.git_sol_create_hyphen_blob.Output.Created.Headers = .init(),
-                    body: Operations.git_sol_create_hyphen_blob.Output.Created.Body
+                    headers: Operations.GitCreateBlob.Output.Created.Headers = .init(),
+                    body: Operations.GitCreateBlob.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -1832,12 +1841,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.git_sol_create_hyphen_blob.Output.Created)
+            case created(Operations.GitCreateBlob.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.git_sol_create_hyphen_blob.Output.Created {
+            public var created: Operations.GitCreateBlob.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -1855,12 +1864,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -1878,12 +1887,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -1901,12 +1910,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -1923,21 +1932,21 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/422/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/422/content/json`.
-                    @frozen public enum jsonPayload: Codable, Hashable, Sendable {
+                    @frozen public enum JsonPayload: Codable, Hashable, Sendable {
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/422/content/json/case1`.
-                        case validation_hyphen_error(Components.Schemas.validation_hyphen_error)
+                        case ValidationError(Components.Schemas.ValidationError)
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/422/content/json/case2`.
-                        case repository_hyphen_rule_hyphen_violation_hyphen_error(Components.Schemas.repository_hyphen_rule_hyphen_violation_hyphen_error)
+                        case RepositoryRuleViolationError(Components.Schemas.RepositoryRuleViolationError)
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                self = .validation_hyphen_error(try .init(from: decoder))
+                                self = .ValidationError(try .init(from: decoder))
                                 return
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                self = .repository_hyphen_rule_hyphen_violation_hyphen_error(try .init(from: decoder))
+                                self = .RepositoryRuleViolationError(try .init(from: decoder))
                                 return
                             } catch {
                                 errors.append(error)
@@ -1950,20 +1959,20 @@ public enum Operations {
                         }
                         public func encode(to encoder: any Encoder) throws {
                             switch self {
-                            case let .validation_hyphen_error(value):
+                            case let .ValidationError(value):
                                 try value.encode(to: encoder)
-                            case let .repository_hyphen_rule_hyphen_violation_hyphen_error(value):
+                            case let .RepositoryRuleViolationError(value):
                                 try value.encode(to: encoder)
                             }
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/POST/responses/422/content/application\/json`.
-                    case json(Operations.git_sol_create_hyphen_blob.Output.UnprocessableContent.Body.jsonPayload)
+                    case json(Operations.GitCreateBlob.Output.UnprocessableContent.Body.JsonPayload)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Operations.git_sol_create_hyphen_blob.Output.UnprocessableContent.Body.jsonPayload {
+                    public var json: Operations.GitCreateBlob.Output.UnprocessableContent.Body.JsonPayload {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1973,12 +1982,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_create_hyphen_blob.Output.UnprocessableContent.Body
+                public var body: Operations.GitCreateBlob.Output.UnprocessableContent.Body
                 /// Creates a new `UnprocessableContent`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.git_sol_create_hyphen_blob.Output.UnprocessableContent.Body) {
+                public init(body: Operations.GitCreateBlob.Output.UnprocessableContent.Body) {
                     self.body = body
                 }
             }
@@ -1987,12 +1996,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/post(git/create-blob)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.git_sol_create_hyphen_blob.Output.UnprocessableContent)
+            case unprocessableContent(Operations.GitCreateBlob.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.git_sol_create_hyphen_blob.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.GitCreateBlob.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2049,7 +2058,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/blobs/{file_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)`.
-    public enum git_sol_get_hyphen_blob {
+    public enum GitGetBlob {
         public static let id: Swift.String = "git/get-blob"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/{file_sha}/GET/path`.
@@ -2057,50 +2066,50 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/{file_sha}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/{file_sha}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/{file_sha}/GET/path/file_sha`.
-                public var file_sha: Swift.String
+                public var fileSha: Swift.String
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - file_sha:
+                ///   - fileSha:
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    file_sha: Swift.String
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    fileSha: Swift.String
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.file_sha = file_sha
+                    self.fileSha = fileSha
                 }
             }
-            public var path: Operations.git_sol_get_hyphen_blob.Input.Path
+            public var path: Operations.GitGetBlob.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/{file_sha}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_blob.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetBlob.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_blob.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetBlob.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_get_hyphen_blob.Input.Headers
+            public var headers: Operations.GitGetBlob.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.git_sol_get_hyphen_blob.Input.Path,
-                headers: Operations.git_sol_get_hyphen_blob.Input.Headers = .init()
+                path: Operations.GitGetBlob.Input.Path,
+                headers: Operations.GitGetBlob.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -2111,12 +2120,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/{file_sha}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/blobs/{file_sha}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.blob)
+                    case json(Components.Schemas.Blob)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.blob {
+                    public var json: Components.Schemas.Blob {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2126,12 +2135,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_get_hyphen_blob.Output.Ok.Body
+                public var body: Operations.GitGetBlob.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.git_sol_get_hyphen_blob.Output.Ok.Body) {
+                public init(body: Operations.GitGetBlob.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2140,12 +2149,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.git_sol_get_hyphen_blob.Output.Ok)
+            case ok(Operations.GitGetBlob.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.git_sol_get_hyphen_blob.Output.Ok {
+            public var ok: Operations.GitGetBlob.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2163,12 +2172,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2186,12 +2195,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2209,12 +2218,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -2232,12 +2241,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/blobs/{file_sha}/get(git/get-blob)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -2317,7 +2326,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/commits`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/post(git/create-commit)`.
-    public enum git_sol_create_hyphen_commit {
+    public enum GitCreateCommit {
         public static let id: Swift.String = "git/create-commit"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/path`.
@@ -2325,41 +2334,41 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.git_sol_create_hyphen_commit.Input.Path
+            public var path: Operations.GitCreateCommit.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_commit.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateCommit.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_commit.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateCommit.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_create_hyphen_commit.Input.Headers
+            public var headers: Operations.GitCreateCommit.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The commit message
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/message`.
@@ -2375,7 +2384,7 @@ public enum Operations {
                     /// Information about the author of the commit. By default, the `author` will be the authenticated user and the current date. See the `author` and `committer` object below for details.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/author`.
-                    public struct authorPayload: Codable, Hashable, Sendable {
+                    public struct AuthorPayload: Codable, Hashable, Sendable {
                         /// The name of the author (or committer) of the commit
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/author/name`.
@@ -2388,7 +2397,7 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/author/date`.
                         public var date: Foundation.Date?
-                        /// Creates a new `authorPayload`.
+                        /// Creates a new `AuthorPayload`.
                         ///
                         /// - Parameters:
                         ///   - name: The name of the author (or committer) of the commit
@@ -2412,11 +2421,11 @@ public enum Operations {
                     /// Information about the author of the commit. By default, the `author` will be the authenticated user and the current date. See the `author` and `committer` object below for details.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/author`.
-                    public var author: Operations.git_sol_create_hyphen_commit.Input.Body.jsonPayload.authorPayload?
+                    public var author: Operations.GitCreateCommit.Input.Body.JsonPayload.AuthorPayload?
                     /// Information about the person who is making the commit. By default, `committer` will use the information set in `author`. See the `author` and `committer` object below for details.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/committer`.
-                    public struct committerPayload: Codable, Hashable, Sendable {
+                    public struct CommitterPayload: Codable, Hashable, Sendable {
                         /// The name of the author (or committer) of the commit
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/committer/name`.
@@ -2429,7 +2438,7 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/committer/date`.
                         public var date: Foundation.Date?
-                        /// Creates a new `committerPayload`.
+                        /// Creates a new `CommitterPayload`.
                         ///
                         /// - Parameters:
                         ///   - name: The name of the author (or committer) of the commit
@@ -2453,12 +2462,12 @@ public enum Operations {
                     /// Information about the person who is making the commit. By default, `committer` will use the information set in `author`. See the `author` and `committer` object below for details.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/committer`.
-                    public var committer: Operations.git_sol_create_hyphen_commit.Input.Body.jsonPayload.committerPayload?
+                    public var committer: Operations.GitCreateCommit.Input.Body.JsonPayload.CommitterPayload?
                     /// The [PGP signature](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) of the commit. GitHub adds the signature to the `gpgsig` header of the created commit. For a commit signature to be verifiable by Git or GitHub, it must be an ASCII-armored detached PGP signature over the string commit as it would be written to the object database. To pass a `signature` parameter, you need to first manually create a valid PGP signature, which can be complicated. You may find it easier to [use the command line](https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work) to create signed commits.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/json/signature`.
                     public var signature: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - message: The commit message
@@ -2471,8 +2480,8 @@ public enum Operations {
                         message: Swift.String,
                         tree: Swift.String,
                         parents: [Swift.String]? = nil,
-                        author: Operations.git_sol_create_hyphen_commit.Input.Body.jsonPayload.authorPayload? = nil,
-                        committer: Operations.git_sol_create_hyphen_commit.Input.Body.jsonPayload.committerPayload? = nil,
+                        author: Operations.GitCreateCommit.Input.Body.JsonPayload.AuthorPayload? = nil,
+                        committer: Operations.GitCreateCommit.Input.Body.JsonPayload.CommitterPayload? = nil,
                         signature: Swift.String? = nil
                     ) {
                         self.message = message
@@ -2492,9 +2501,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/requestBody/content/application\/json`.
-                case json(Operations.git_sol_create_hyphen_commit.Input.Body.jsonPayload)
+                case json(Operations.GitCreateCommit.Input.Body.JsonPayload)
             }
-            public var body: Operations.git_sol_create_hyphen_commit.Input.Body
+            public var body: Operations.GitCreateCommit.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -2502,9 +2511,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.git_sol_create_hyphen_commit.Input.Path,
-                headers: Operations.git_sol_create_hyphen_commit.Input.Headers = .init(),
-                body: Operations.git_sol_create_hyphen_commit.Input.Body
+                path: Operations.GitCreateCommit.Input.Path,
+                headers: Operations.GitCreateCommit.Input.Headers = .init(),
+                body: Operations.GitCreateCommit.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -2516,26 +2525,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.git_sol_create_hyphen_commit.Output.Created.Headers
+                public var headers: Operations.GitCreateCommit.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_commit)
+                    case json(Components.Schemas.GitCommit)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_commit {
+                    public var json: Components.Schemas.GitCommit {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2545,15 +2554,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_create_hyphen_commit.Output.Created.Body
+                public var body: Operations.GitCreateCommit.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.git_sol_create_hyphen_commit.Output.Created.Headers = .init(),
-                    body: Operations.git_sol_create_hyphen_commit.Output.Created.Body
+                    headers: Operations.GitCreateCommit.Output.Created.Headers = .init(),
+                    body: Operations.GitCreateCommit.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -2564,12 +2573,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/post(git/create-commit)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.git_sol_create_hyphen_commit.Output.Created)
+            case created(Operations.GitCreateCommit.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.git_sol_create_hyphen_commit.Output.Created {
+            public var created: Operations.GitCreateCommit.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -2587,12 +2596,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/post(git/create-commit)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -2610,12 +2619,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/post(git/create-commit)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2633,12 +2642,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/post(git/create-commit)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -2720,7 +2729,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/commits/{commit_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/{commit_sha}/get(git/get-commit)`.
-    public enum git_sol_get_hyphen_commit {
+    public enum GitGetCommit {
         public static let id: Swift.String = "git/get-commit"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/{commit_sha}/GET/path`.
@@ -2728,52 +2737,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/{commit_sha}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/{commit_sha}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The SHA of the commit.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/{commit_sha}/GET/path/commit_sha`.
-                public var commit_sha: Components.Parameters.commit_hyphen_sha
+                public var commitSha: Components.Parameters.CommitSha
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - commit_sha: The SHA of the commit.
+                ///   - commitSha: The SHA of the commit.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    commit_sha: Components.Parameters.commit_hyphen_sha
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    commitSha: Components.Parameters.CommitSha
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.commit_sha = commit_sha
+                    self.commitSha = commitSha
                 }
             }
-            public var path: Operations.git_sol_get_hyphen_commit.Input.Path
+            public var path: Operations.GitGetCommit.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/{commit_sha}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_commit.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetCommit.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_commit.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetCommit.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_get_hyphen_commit.Input.Headers
+            public var headers: Operations.GitGetCommit.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.git_sol_get_hyphen_commit.Input.Path,
-                headers: Operations.git_sol_get_hyphen_commit.Input.Headers = .init()
+                path: Operations.GitGetCommit.Input.Path,
+                headers: Operations.GitGetCommit.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -2784,12 +2793,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/{commit_sha}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/commits/{commit_sha}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_commit)
+                    case json(Components.Schemas.GitCommit)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_commit {
+                    public var json: Components.Schemas.GitCommit {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -2799,12 +2808,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_get_hyphen_commit.Output.Ok.Body
+                public var body: Operations.GitGetCommit.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.git_sol_get_hyphen_commit.Output.Ok.Body) {
+                public init(body: Operations.GitGetCommit.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -2813,12 +2822,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/{commit_sha}/get(git/get-commit)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.git_sol_get_hyphen_commit.Output.Ok)
+            case ok(Operations.GitGetCommit.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.git_sol_get_hyphen_commit.Output.Ok {
+            public var ok: Operations.GitGetCommit.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -2836,12 +2845,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/{commit_sha}/get(git/get-commit)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -2859,12 +2868,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/commits/{commit_sha}/get(git/get-commit)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -2921,7 +2930,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/matching-refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/matching-refs/{ref}/get(git/list-matching-refs)`.
-    public enum git_sol_list_hyphen_matching_hyphen_refs {
+    public enum GitListMatchingRefs {
         public static let id: Swift.String = "git/list-matching-refs"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/path`.
@@ -2929,15 +2938,15 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/path/ref`.
-                public var ref: Components.Parameters.git_hyphen_ref_hyphen_only
+                public var ref: Components.Parameters.GitRefOnly
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
@@ -2945,36 +2954,36 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - ref: The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ref: Components.Parameters.git_hyphen_ref_hyphen_only
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ref: Components.Parameters.GitRefOnly
                 ) {
                     self.owner = owner
                     self.repo = repo
                     self.ref = ref
                 }
             }
-            public var path: Operations.git_sol_list_hyphen_matching_hyphen_refs.Input.Path
+            public var path: Operations.GitListMatchingRefs.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_list_hyphen_matching_hyphen_refs.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitListMatchingRefs.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_list_hyphen_matching_hyphen_refs.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitListMatchingRefs.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_list_hyphen_matching_hyphen_refs.Input.Headers
+            public var headers: Operations.GitListMatchingRefs.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.git_sol_list_hyphen_matching_hyphen_refs.Input.Path,
-                headers: Operations.git_sol_list_hyphen_matching_hyphen_refs.Input.Headers = .init()
+                path: Operations.GitListMatchingRefs.Input.Path,
+                headers: Operations.GitListMatchingRefs.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -2985,26 +2994,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.git_sol_list_hyphen_matching_hyphen_refs.Output.Ok.Headers
+                public var headers: Operations.GitListMatchingRefs.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/matching-refs/{ref}/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.git_hyphen_ref])
+                    case json([Components.Schemas.GitRef])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.git_hyphen_ref] {
+                    public var json: [Components.Schemas.GitRef] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3014,15 +3023,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_list_hyphen_matching_hyphen_refs.Output.Ok.Body
+                public var body: Operations.GitListMatchingRefs.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.git_sol_list_hyphen_matching_hyphen_refs.Output.Ok.Headers = .init(),
-                    body: Operations.git_sol_list_hyphen_matching_hyphen_refs.Output.Ok.Body
+                    headers: Operations.GitListMatchingRefs.Output.Ok.Headers = .init(),
+                    body: Operations.GitListMatchingRefs.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3033,12 +3042,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/matching-refs/{ref}/get(git/list-matching-refs)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.git_sol_list_hyphen_matching_hyphen_refs.Output.Ok)
+            case ok(Operations.GitListMatchingRefs.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.git_sol_list_hyphen_matching_hyphen_refs.Output.Ok {
+            public var ok: Operations.GitListMatchingRefs.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3056,12 +3065,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/matching-refs/{ref}/get(git/list-matching-refs)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -3114,7 +3123,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/ref/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/ref/{ref}/get(git/get-ref)`.
-    public enum git_sol_get_hyphen_ref {
+    public enum GitGetRef {
         public static let id: Swift.String = "git/get-ref"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/path`.
@@ -3122,15 +3131,15 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/path/ref`.
-                public var ref: Components.Parameters.git_hyphen_ref_hyphen_only
+                public var ref: Components.Parameters.GitRefOnly
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
@@ -3138,36 +3147,36 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - ref: The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ref: Components.Parameters.git_hyphen_ref_hyphen_only
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ref: Components.Parameters.GitRefOnly
                 ) {
                     self.owner = owner
                     self.repo = repo
                     self.ref = ref
                 }
             }
-            public var path: Operations.git_sol_get_hyphen_ref.Input.Path
+            public var path: Operations.GitGetRef.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_ref.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetRef.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_ref.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetRef.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_get_hyphen_ref.Input.Headers
+            public var headers: Operations.GitGetRef.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.git_sol_get_hyphen_ref.Input.Path,
-                headers: Operations.git_sol_get_hyphen_ref.Input.Headers = .init()
+                path: Operations.GitGetRef.Input.Path,
+                headers: Operations.GitGetRef.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3178,12 +3187,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/ref/{ref}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_ref)
+                    case json(Components.Schemas.GitRef)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_ref {
+                    public var json: Components.Schemas.GitRef {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3193,12 +3202,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_get_hyphen_ref.Output.Ok.Body
+                public var body: Operations.GitGetRef.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.git_sol_get_hyphen_ref.Output.Ok.Body) {
+                public init(body: Operations.GitGetRef.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3207,12 +3216,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/ref/{ref}/get(git/get-ref)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.git_sol_get_hyphen_ref.Output.Ok)
+            case ok(Operations.GitGetRef.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.git_sol_get_hyphen_ref.Output.Ok {
+            public var ok: Operations.GitGetRef.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3230,12 +3239,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/ref/{ref}/get(git/get-ref)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3253,12 +3262,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/ref/{ref}/get(git/get-ref)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -3308,7 +3317,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/refs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/post(git/create-ref)`.
-    public enum git_sol_create_hyphen_ref {
+    public enum GitCreateRef {
         public static let id: Swift.String = "git/create-ref"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/path`.
@@ -3316,41 +3325,41 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.git_sol_create_hyphen_ref.Input.Path
+            public var path: Operations.GitCreateRef.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_ref.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateRef.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_ref.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateRef.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_create_hyphen_ref.Input.Headers
+            public var headers: Operations.GitCreateRef.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/requestBody/json/ref`.
@@ -3359,7 +3368,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/requestBody/json/sha`.
                     public var sha: Swift.String
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - ref: The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
@@ -3377,9 +3386,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/requestBody/content/application\/json`.
-                case json(Operations.git_sol_create_hyphen_ref.Input.Body.jsonPayload)
+                case json(Operations.GitCreateRef.Input.Body.JsonPayload)
             }
-            public var body: Operations.git_sol_create_hyphen_ref.Input.Body
+            public var body: Operations.GitCreateRef.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3387,9 +3396,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.git_sol_create_hyphen_ref.Input.Path,
-                headers: Operations.git_sol_create_hyphen_ref.Input.Headers = .init(),
-                body: Operations.git_sol_create_hyphen_ref.Input.Body
+                path: Operations.GitCreateRef.Input.Path,
+                headers: Operations.GitCreateRef.Input.Headers = .init(),
+                body: Operations.GitCreateRef.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3401,26 +3410,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.git_sol_create_hyphen_ref.Output.Created.Headers
+                public var headers: Operations.GitCreateRef.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_ref)
+                    case json(Components.Schemas.GitRef)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_ref {
+                    public var json: Components.Schemas.GitRef {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3430,15 +3439,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_create_hyphen_ref.Output.Created.Body
+                public var body: Operations.GitCreateRef.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.git_sol_create_hyphen_ref.Output.Created.Headers = .init(),
-                    body: Operations.git_sol_create_hyphen_ref.Output.Created.Body
+                    headers: Operations.GitCreateRef.Output.Created.Headers = .init(),
+                    body: Operations.GitCreateRef.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3449,12 +3458,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/post(git/create-ref)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.git_sol_create_hyphen_ref.Output.Created)
+            case created(Operations.GitCreateRef.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.git_sol_create_hyphen_ref.Output.Created {
+            public var created: Operations.GitCreateRef.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -3472,12 +3481,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/post(git/create-ref)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3495,12 +3504,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/post(git/create-ref)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -3550,7 +3559,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)`.
-    public enum git_sol_update_hyphen_ref {
+    public enum GitUpdateRef {
         public static let id: Swift.String = "git/update-ref"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/path`.
@@ -3558,15 +3567,15 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/path/ref`.
-                public var ref: Components.Parameters.git_hyphen_ref_hyphen_only
+                public var ref: Components.Parameters.GitRefOnly
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
@@ -3574,32 +3583,32 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - ref: The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ref: Components.Parameters.git_hyphen_ref_hyphen_only
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ref: Components.Parameters.GitRefOnly
                 ) {
                     self.owner = owner
                     self.repo = repo
                     self.ref = ref
                 }
             }
-            public var path: Operations.git_sol_update_hyphen_ref.Input.Path
+            public var path: Operations.GitUpdateRef.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_update_hyphen_ref.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitUpdateRef.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_update_hyphen_ref.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitUpdateRef.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_update_hyphen_ref.Input.Headers
+            public var headers: Operations.GitUpdateRef.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The SHA1 value to set this reference to
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/requestBody/json/sha`.
@@ -3608,7 +3617,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/requestBody/json/force`.
                     public var force: Swift.Bool?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - sha: The SHA1 value to set this reference to
@@ -3626,9 +3635,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.git_sol_update_hyphen_ref.Input.Body.jsonPayload)
+                case json(Operations.GitUpdateRef.Input.Body.JsonPayload)
             }
-            public var body: Operations.git_sol_update_hyphen_ref.Input.Body
+            public var body: Operations.GitUpdateRef.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3636,9 +3645,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.git_sol_update_hyphen_ref.Input.Path,
-                headers: Operations.git_sol_update_hyphen_ref.Input.Headers = .init(),
-                body: Operations.git_sol_update_hyphen_ref.Input.Body
+                path: Operations.GitUpdateRef.Input.Path,
+                headers: Operations.GitUpdateRef.Input.Headers = .init(),
+                body: Operations.GitUpdateRef.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3650,12 +3659,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_ref)
+                    case json(Components.Schemas.GitRef)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_ref {
+                    public var json: Components.Schemas.GitRef {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3665,12 +3674,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_update_hyphen_ref.Output.Ok.Body
+                public var body: Operations.GitUpdateRef.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.git_sol_update_hyphen_ref.Output.Ok.Body) {
+                public init(body: Operations.GitUpdateRef.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -3679,12 +3688,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.git_sol_update_hyphen_ref.Output.Ok)
+            case ok(Operations.GitUpdateRef.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.git_sol_update_hyphen_ref.Output.Ok {
+            public var ok: Operations.GitUpdateRef.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3702,12 +3711,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3725,12 +3734,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/patch(git/update-ref)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -3780,7 +3789,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/git/refs/{ref}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)`.
-    public enum git_sol_delete_hyphen_ref {
+    public enum GitDeleteRef {
         public static let id: Swift.String = "git/delete-ref"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/DELETE/path`.
@@ -3788,15 +3797,15 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/DELETE/path/ref`.
-                public var ref: Components.Parameters.git_hyphen_ref_hyphen_only
+                public var ref: Components.Parameters.GitRefOnly
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
@@ -3804,36 +3813,36 @@ public enum Operations {
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///   - ref: The Git reference. For more information, see "[Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)" in the Git documentation.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    ref: Components.Parameters.git_hyphen_ref_hyphen_only
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    ref: Components.Parameters.GitRefOnly
                 ) {
                     self.owner = owner
                     self.repo = repo
                     self.ref = ref
                 }
             }
-            public var path: Operations.git_sol_delete_hyphen_ref.Input.Path
+            public var path: Operations.GitDeleteRef.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/refs/{ref}/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_delete_hyphen_ref.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitDeleteRef.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_delete_hyphen_ref.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitDeleteRef.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_delete_hyphen_ref.Input.Headers
+            public var headers: Operations.GitDeleteRef.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.git_sol_delete_hyphen_ref.Input.Path,
-                headers: Operations.git_sol_delete_hyphen_ref.Input.Headers = .init()
+                path: Operations.GitDeleteRef.Input.Path,
+                headers: Operations.GitDeleteRef.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -3849,12 +3858,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.git_sol_delete_hyphen_ref.Output.NoContent)
+            case noContent(Operations.GitDeleteRef.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.git_sol_delete_hyphen_ref.Output.NoContent {
+            public var noContent: Operations.GitDeleteRef.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -3876,12 +3893,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Operations.git_sol_delete_hyphen_ref.Output.UnprocessableContent)
+            case unprocessableContent(Operations.GitDeleteRef.Output.UnprocessableContent)
+            /// Validation failed, an attempt was made to delete the default branch, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Operations.git_sol_delete_hyphen_ref.Output.UnprocessableContent {
+            public var unprocessableContent: Operations.GitDeleteRef.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3899,12 +3924,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -3984,7 +4009,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/tags`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/post(git/create-tag)`.
-    public enum git_sol_create_hyphen_tag {
+    public enum GitCreateTag {
         public static let id: Swift.String = "git/create-tag"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/path`.
@@ -3992,41 +4017,41 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.git_sol_create_hyphen_tag.Input.Path
+            public var path: Operations.GitCreateTag.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_tag.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateTag.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_tag.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateTag.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_create_hyphen_tag.Input.Headers
+            public var headers: Operations.GitCreateTag.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The tag's name. This is typically a version (e.g., "v0.0.1").
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json/tag`.
@@ -4042,7 +4067,7 @@ public enum Operations {
                     /// The type of the object we're tagging. Normally this is a `commit` but it can also be a `tree` or a `blob`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json/type`.
-                    @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case commit = "commit"
                         case tree = "tree"
                         case blob = "blob"
@@ -4050,11 +4075,11 @@ public enum Operations {
                     /// The type of the object we're tagging. Normally this is a `commit` but it can also be a `tree` or a `blob`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json/type`.
-                    public var _type: Operations.git_sol_create_hyphen_tag.Input.Body.jsonPayload._typePayload
+                    public var _type: Operations.GitCreateTag.Input.Body.JsonPayload._TypePayload
                     /// An object with information about the individual creating the tag.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json/tagger`.
-                    public struct taggerPayload: Codable, Hashable, Sendable {
+                    public struct TaggerPayload: Codable, Hashable, Sendable {
                         /// The name of the author of the tag
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json/tagger/name`.
@@ -4067,7 +4092,7 @@ public enum Operations {
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json/tagger/date`.
                         public var date: Foundation.Date?
-                        /// Creates a new `taggerPayload`.
+                        /// Creates a new `TaggerPayload`.
                         ///
                         /// - Parameters:
                         ///   - name: The name of the author of the tag
@@ -4091,8 +4116,8 @@ public enum Operations {
                     /// An object with information about the individual creating the tag.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json/tagger`.
-                    public var tagger: Operations.git_sol_create_hyphen_tag.Input.Body.jsonPayload.taggerPayload?
-                    /// Creates a new `jsonPayload`.
+                    public var tagger: Operations.GitCreateTag.Input.Body.JsonPayload.TaggerPayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - tag: The tag's name. This is typically a version (e.g., "v0.0.1").
@@ -4104,8 +4129,8 @@ public enum Operations {
                         tag: Swift.String,
                         message: Swift.String,
                         object: Swift.String,
-                        _type: Operations.git_sol_create_hyphen_tag.Input.Body.jsonPayload._typePayload,
-                        tagger: Operations.git_sol_create_hyphen_tag.Input.Body.jsonPayload.taggerPayload? = nil
+                        _type: Operations.GitCreateTag.Input.Body.JsonPayload._TypePayload,
+                        tagger: Operations.GitCreateTag.Input.Body.JsonPayload.TaggerPayload? = nil
                     ) {
                         self.tag = tag
                         self.message = message
@@ -4122,9 +4147,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/content/application\/json`.
-                case json(Operations.git_sol_create_hyphen_tag.Input.Body.jsonPayload)
+                case json(Operations.GitCreateTag.Input.Body.JsonPayload)
             }
-            public var body: Operations.git_sol_create_hyphen_tag.Input.Body
+            public var body: Operations.GitCreateTag.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4132,9 +4157,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.git_sol_create_hyphen_tag.Input.Path,
-                headers: Operations.git_sol_create_hyphen_tag.Input.Headers = .init(),
-                body: Operations.git_sol_create_hyphen_tag.Input.Body
+                path: Operations.GitCreateTag.Input.Path,
+                headers: Operations.GitCreateTag.Input.Headers = .init(),
+                body: Operations.GitCreateTag.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4146,26 +4171,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.git_sol_create_hyphen_tag.Output.Created.Headers
+                public var headers: Operations.GitCreateTag.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_tag)
+                    case json(Components.Schemas.GitTag)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_tag {
+                    public var json: Components.Schemas.GitTag {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4175,15 +4200,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_create_hyphen_tag.Output.Created.Body
+                public var body: Operations.GitCreateTag.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.git_sol_create_hyphen_tag.Output.Created.Headers = .init(),
-                    body: Operations.git_sol_create_hyphen_tag.Output.Created.Body
+                    headers: Operations.GitCreateTag.Output.Created.Headers = .init(),
+                    body: Operations.GitCreateTag.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4194,12 +4219,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/post(git/create-tag)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.git_sol_create_hyphen_tag.Output.Created)
+            case created(Operations.GitCreateTag.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.git_sol_create_hyphen_tag.Output.Created {
+            public var created: Operations.GitCreateTag.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4217,12 +4242,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/post(git/create-tag)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4240,12 +4265,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/post(git/create-tag)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -4323,7 +4348,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/tags/{tag_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/{tag_sha}/get(git/get-tag)`.
-    public enum git_sol_get_hyphen_tag {
+    public enum GitGetTag {
         public static let id: Swift.String = "git/get-tag"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/{tag_sha}/GET/path`.
@@ -4331,50 +4356,50 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/{tag_sha}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/{tag_sha}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/{tag_sha}/GET/path/tag_sha`.
-                public var tag_sha: Swift.String
+                public var tagSha: Swift.String
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - tag_sha:
+                ///   - tagSha:
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    tag_sha: Swift.String
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    tagSha: Swift.String
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.tag_sha = tag_sha
+                    self.tagSha = tagSha
                 }
             }
-            public var path: Operations.git_sol_get_hyphen_tag.Input.Path
+            public var path: Operations.GitGetTag.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/{tag_sha}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_tag.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetTag.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_tag.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetTag.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_get_hyphen_tag.Input.Headers
+            public var headers: Operations.GitGetTag.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.git_sol_get_hyphen_tag.Input.Path,
-                headers: Operations.git_sol_get_hyphen_tag.Input.Headers = .init()
+                path: Operations.GitGetTag.Input.Path,
+                headers: Operations.GitGetTag.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4385,12 +4410,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/{tag_sha}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/{tag_sha}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_tag)
+                    case json(Components.Schemas.GitTag)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_tag {
+                    public var json: Components.Schemas.GitTag {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4400,12 +4425,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_get_hyphen_tag.Output.Ok.Body
+                public var body: Operations.GitGetTag.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.git_sol_get_hyphen_tag.Output.Ok.Body) {
+                public init(body: Operations.GitGetTag.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4414,12 +4439,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/{tag_sha}/get(git/get-tag)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.git_sol_get_hyphen_tag.Output.Ok)
+            case ok(Operations.GitGetTag.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.git_sol_get_hyphen_tag.Output.Ok {
+            public var ok: Operations.GitGetTag.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4437,12 +4462,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/{tag_sha}/get(git/get-tag)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4460,12 +4485,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/tags/{tag_sha}/get(git/get-tag)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -4519,7 +4544,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /repos/{owner}/{repo}/git/trees`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)`.
-    public enum git_sol_create_hyphen_tree {
+    public enum GitCreateTree {
         public static let id: Swift.String = "git/create-tree"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/path`.
@@ -4527,51 +4552,51 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.git_sol_create_hyphen_tree.Input.Path
+            public var path: Operations.GitCreateTree.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_tree.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateTree.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_create_hyphen_tree.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitCreateTree.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_create_hyphen_tree.Input.Headers
+            public var headers: Operations.GitCreateTree.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload`.
-                    public struct treePayloadPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/TreePayload`.
+                    public struct TreePayloadPayload: Codable, Hashable, Sendable {
                         /// The file referenced in the tree.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/path`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/TreePayload/path`.
                         public var path: Swift.String?
                         /// The file mode; one of `100644` for file (blob), `100755` for executable (blob), `040000` for subdirectory (tree), `160000` for submodule (commit), or `120000` for a blob that specifies the path of a symlink.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/mode`.
-                        @frozen public enum modePayload: String, Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/TreePayload/mode`.
+                        @frozen public enum ModePayload: String, Codable, Hashable, Sendable, CaseIterable {
                             case _100644 = "100644"
                             case _100755 = "100755"
                             case _040000 = "040000"
@@ -4580,33 +4605,33 @@ public enum Operations {
                         }
                         /// The file mode; one of `100644` for file (blob), `100755` for executable (blob), `040000` for subdirectory (tree), `160000` for submodule (commit), or `120000` for a blob that specifies the path of a symlink.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/mode`.
-                        public var mode: Operations.git_sol_create_hyphen_tree.Input.Body.jsonPayload.treePayloadPayload.modePayload?
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/TreePayload/mode`.
+                        public var mode: Operations.GitCreateTree.Input.Body.JsonPayload.TreePayloadPayload.ModePayload?
                         /// Either `blob`, `tree`, or `commit`.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/type`.
-                        @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/TreePayload/type`.
+                        @frozen public enum _TypePayload: String, Codable, Hashable, Sendable, CaseIterable {
                             case blob = "blob"
                             case tree = "tree"
                             case commit = "commit"
                         }
                         /// Either `blob`, `tree`, or `commit`.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/type`.
-                        public var _type: Operations.git_sol_create_hyphen_tree.Input.Body.jsonPayload.treePayloadPayload._typePayload?
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/TreePayload/type`.
+                        public var _type: Operations.GitCreateTree.Input.Body.JsonPayload.TreePayloadPayload._TypePayload?
                         /// The SHA1 checksum ID of the object in the tree. Also called `tree.sha`. If the value is `null` then the file will be deleted.  
                         ///   
                         /// **Note:** Use either `tree.sha` or `content` to specify the contents of the entry. Using both `tree.sha` and `content` will return an error.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/sha`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/TreePayload/sha`.
                         public var sha: Swift.String?
                         /// The content you want this file to have. GitHub will write this blob out and use that SHA for this entry. Use either this, or `tree.sha`.  
                         ///   
                         /// **Note:** Use either `tree.sha` or `content` to specify the contents of the entry. Using both `tree.sha` and `content` will return an error.
                         ///
-                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/content`.
+                        /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/TreePayload/content`.
                         public var content: Swift.String?
-                        /// Creates a new `treePayloadPayload`.
+                        /// Creates a new `TreePayloadPayload`.
                         ///
                         /// - Parameters:
                         ///   - path: The file referenced in the tree.
@@ -4616,8 +4641,8 @@ public enum Operations {
                         ///   - content: The content you want this file to have. GitHub will write this blob out and use that SHA for this entry. Use either this, or `tree.sha`.  
                         public init(
                             path: Swift.String? = nil,
-                            mode: Operations.git_sol_create_hyphen_tree.Input.Body.jsonPayload.treePayloadPayload.modePayload? = nil,
-                            _type: Operations.git_sol_create_hyphen_tree.Input.Body.jsonPayload.treePayloadPayload._typePayload? = nil,
+                            mode: Operations.GitCreateTree.Input.Body.JsonPayload.TreePayloadPayload.ModePayload? = nil,
+                            _type: Operations.GitCreateTree.Input.Body.JsonPayload.TreePayloadPayload._TypePayload? = nil,
                             sha: Swift.String? = nil,
                             content: Swift.String? = nil
                         ) {
@@ -4638,37 +4663,37 @@ public enum Operations {
                     /// Objects (of `path`, `mode`, `type`, and `sha`) specifying a tree structure.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/tree`.
-                    public typealias treePayload = [Operations.git_sol_create_hyphen_tree.Input.Body.jsonPayload.treePayloadPayload]
+                    public typealias TreePayload = [Operations.GitCreateTree.Input.Body.JsonPayload.TreePayloadPayload]
                     /// Objects (of `path`, `mode`, `type`, and `sha`) specifying a tree structure.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/tree`.
-                    public var tree: Operations.git_sol_create_hyphen_tree.Input.Body.jsonPayload.treePayload
+                    public var tree: Operations.GitCreateTree.Input.Body.JsonPayload.TreePayload
                     /// The SHA1 of an existing Git tree object which will be used as the base for the new tree. If provided, a new Git tree object will be created from entries in the Git tree object pointed to by `base_tree` and entries defined in the `tree` parameter. Entries defined in the `tree` parameter will overwrite items from `base_tree` with the same `path`. If you're creating new changes on a branch, then normally you'd set `base_tree` to the SHA1 of the Git tree object of the current latest commit on the branch you're working on.
                     /// If not provided, GitHub will create a new Git tree object from only the entries defined in the `tree` parameter. If you create a new commit pointing to such a tree, then all files which were a part of the parent commit's tree and were not defined in the `tree` parameter will be listed as deleted by the new commit.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/base_tree`.
-                    public var base_tree: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var baseTree: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - tree: Objects (of `path`, `mode`, `type`, and `sha`) specifying a tree structure.
-                    ///   - base_tree: The SHA1 of an existing Git tree object which will be used as the base for the new tree. If provided, a new Git tree object will be created from entries in the Git tree object pointed to by `base_tree` and entries defined in the `tree` parameter. Entries defined in the `tree` parameter will overwrite items from `base_tree` with the same `path`. If you're creating new changes on a branch, then normally you'd set `base_tree` to the SHA1 of the Git tree object of the current latest commit on the branch you're working on.
+                    ///   - baseTree: The SHA1 of an existing Git tree object which will be used as the base for the new tree. If provided, a new Git tree object will be created from entries in the Git tree object pointed to by `base_tree` and entries defined in the `tree` parameter. Entries defined in the `tree` parameter will overwrite items from `base_tree` with the same `path`. If you're creating new changes on a branch, then normally you'd set `base_tree` to the SHA1 of the Git tree object of the current latest commit on the branch you're working on.
                     public init(
-                        tree: Operations.git_sol_create_hyphen_tree.Input.Body.jsonPayload.treePayload,
-                        base_tree: Swift.String? = nil
+                        tree: Operations.GitCreateTree.Input.Body.JsonPayload.TreePayload,
+                        baseTree: Swift.String? = nil
                     ) {
                         self.tree = tree
-                        self.base_tree = base_tree
+                        self.baseTree = baseTree
                     }
                     public enum CodingKeys: String, CodingKey {
                         case tree
-                        case base_tree
+                        case baseTree = "base_tree"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/content/application\/json`.
-                case json(Operations.git_sol_create_hyphen_tree.Input.Body.jsonPayload)
+                case json(Operations.GitCreateTree.Input.Body.JsonPayload)
             }
-            public var body: Operations.git_sol_create_hyphen_tree.Input.Body
+            public var body: Operations.GitCreateTree.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4676,9 +4701,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.git_sol_create_hyphen_tree.Input.Path,
-                headers: Operations.git_sol_create_hyphen_tree.Input.Headers = .init(),
-                body: Operations.git_sol_create_hyphen_tree.Input.Body
+                path: Operations.GitCreateTree.Input.Path,
+                headers: Operations.GitCreateTree.Input.Headers = .init(),
+                body: Operations.GitCreateTree.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -4690,26 +4715,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.git_sol_create_hyphen_tree.Output.Created.Headers
+                public var headers: Operations.GitCreateTree.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_tree)
+                    case json(Components.Schemas.GitTree)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_tree {
+                    public var json: Components.Schemas.GitTree {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4719,15 +4744,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_create_hyphen_tree.Output.Created.Body
+                public var body: Operations.GitCreateTree.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.git_sol_create_hyphen_tree.Output.Created.Headers = .init(),
-                    body: Operations.git_sol_create_hyphen_tree.Output.Created.Body
+                    headers: Operations.GitCreateTree.Output.Created.Headers = .init(),
+                    body: Operations.GitCreateTree.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4738,12 +4763,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.git_sol_create_hyphen_tree.Output.Created)
+            case created(Operations.GitCreateTree.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.git_sol_create_hyphen_tree.Output.Created {
+            public var created: Operations.GitCreateTree.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -4761,12 +4786,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -4784,12 +4809,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4807,12 +4832,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -4830,12 +4855,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/post(git/create-tree)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):
@@ -4890,7 +4915,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/git/trees/{tree_sha}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/{tree_sha}/get(git/get-tree)`.
-    public enum git_sol_get_hyphen_tree {
+    public enum GitGetTree {
         public static let id: Swift.String = "git/get-tree"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/{tree_sha}/GET/path`.
@@ -4898,32 +4923,32 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/{tree_sha}/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/{tree_sha}/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// The SHA1 value or ref (branch or tag) name of the tree.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/{tree_sha}/GET/path/tree_sha`.
-                public var tree_sha: Swift.String
+                public var treeSha: Swift.String
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - tree_sha: The SHA1 value or ref (branch or tag) name of the tree.
+                ///   - treeSha: The SHA1 value or ref (branch or tag) name of the tree.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    tree_sha: Swift.String
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    treeSha: Swift.String
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.tree_sha = tree_sha
+                    self.treeSha = treeSha
                 }
             }
-            public var path: Operations.git_sol_get_hyphen_tree.Input.Path
+            public var path: Operations.GitGetTree.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/{tree_sha}/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// Setting this parameter to any value returns the objects or subtrees referenced by the tree specified in `:tree_sha`. For example, setting `recursive` to any of the following will enable returning objects or subtrees: `0`, `1`, `"true"`, and `"false"`. Omit this parameter to prevent recursively returning objects or subtrees.
@@ -4938,19 +4963,19 @@ public enum Operations {
                     self.recursive = recursive
                 }
             }
-            public var query: Operations.git_sol_get_hyphen_tree.Input.Query
+            public var query: Operations.GitGetTree.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/{tree_sha}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_tree.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetTree.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.git_sol_get_hyphen_tree.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.GitGetTree.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.git_sol_get_hyphen_tree.Input.Headers
+            public var headers: Operations.GitGetTree.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4958,9 +4983,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.git_sol_get_hyphen_tree.Input.Path,
-                query: Operations.git_sol_get_hyphen_tree.Input.Query = .init(),
-                headers: Operations.git_sol_get_hyphen_tree.Input.Headers = .init()
+                path: Operations.GitGetTree.Input.Path,
+                query: Operations.GitGetTree.Input.Query = .init(),
+                headers: Operations.GitGetTree.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4972,12 +4997,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/{tree_sha}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/{tree_sha}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.git_hyphen_tree)
+                    case json(Components.Schemas.GitTree)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.git_hyphen_tree {
+                    public var json: Components.Schemas.GitTree {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4987,12 +5012,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.git_sol_get_hyphen_tree.Output.Ok.Body
+                public var body: Operations.GitGetTree.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.git_sol_get_hyphen_tree.Output.Ok.Body) {
+                public init(body: Operations.GitGetTree.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5001,12 +5026,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/{tree_sha}/get(git/get-tree)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.git_sol_get_hyphen_tree.Output.Ok)
+            case ok(Operations.GitGetTree.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.git_sol_get_hyphen_tree.Output.Ok {
+            public var ok: Operations.GitGetTree.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5024,12 +5049,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/{tree_sha}/get(git/get-tree)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5047,12 +5072,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/{tree_sha}/get(git/get-tree)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5070,12 +5095,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/trees/{tree_sha}/get(git/get-tree)/responses/409`.
             ///
             /// HTTP response code: `409 conflict`.
-            case conflict(Components.Responses.conflict)
+            case conflict(Components.Responses.Conflict)
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
             /// - SeeAlso: `.conflict`.
-            public var conflict: Components.Responses.conflict {
+            public var conflict: Components.Responses.Conflict {
                 get throws {
                     switch self {
                     case let .conflict(response):

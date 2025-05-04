@@ -46,10 +46,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-configurations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/get(hosted-compute/list-network-configurations-for-org)`.
-    public func hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output {
+    public func hostedComputeListNetworkConfigurationsForOrg(_ input: Operations.HostedComputeListNetworkConfigurationsForOrg.Input) async throws -> Operations.HostedComputeListNetworkConfigurationsForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.id,
+            forOperation: Operations.HostedComputeListNetworkConfigurationsForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/network-configurations",
@@ -67,7 +67,7 @@ public struct Client: APIProtocol {
                     style: .form,
                     explode: true,
                     name: "per_page",
-                    value: input.query.per_page
+                    value: input.query.perPage
                 )
                 try converter.setQueryItemAsURI(
                     in: &request,
@@ -85,13 +85,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Body
+                    let body: Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -101,7 +101,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Operations.hosted_hyphen_compute_sol_list_hyphen_network_hyphen_configurations_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.self,
+                            Operations.HostedComputeListNetworkConfigurationsForOrg.Output.Ok.Body.JsonPayload.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -134,10 +134,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/settings/network-configurations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/post(hosted-compute/create-network-configuration-for-org)`.
-    public func hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output {
+    public func hostedComputeCreateNetworkConfigurationForOrg(_ input: Operations.HostedComputeCreateNetworkConfigurationForOrg.Input) async throws -> Operations.HostedComputeCreateNetworkConfigurationForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.id,
+            forOperation: Operations.HostedComputeCreateNetworkConfigurationForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/network-configurations",
@@ -169,7 +169,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Created.Body
+                    let body: Operations.HostedComputeCreateNetworkConfigurationForOrg.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -179,7 +179,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.network_hyphen_configuration.self,
+                            Components.Schemas.NetworkConfiguration.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -209,16 +209,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/get(hosted-compute/get-network-configuration-for-org)`.
-    public func hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output {
+    public func hostedComputeGetNetworkConfigurationForOrg(_ input: Operations.HostedComputeGetNetworkConfigurationForOrg.Input) async throws -> Operations.HostedComputeGetNetworkConfigurationForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.id,
+            forOperation: Operations.HostedComputeGetNetworkConfigurationForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/network-configurations/{}",
                     parameters: [
                         input.path.org,
-                        input.path.network_configuration_id
+                        input.path.networkConfigurationId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -235,13 +235,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.HostedComputeGetNetworkConfigurationForOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Body
+                    let body: Operations.HostedComputeGetNetworkConfigurationForOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -251,7 +251,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.network_hyphen_configuration.self,
+                            Components.Schemas.NetworkConfiguration.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -284,16 +284,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PATCH /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/patch(hosted-compute/update-network-configuration-for-org)`.
-    public func hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output {
+    public func hostedComputeUpdateNetworkConfigurationForOrg(_ input: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Input) async throws -> Operations.HostedComputeUpdateNetworkConfigurationForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.id,
+            forOperation: Operations.HostedComputeUpdateNetworkConfigurationForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/network-configurations/{}",
                     parameters: [
                         input.path.org,
-                        input.path.network_configuration_id
+                        input.path.networkConfigurationId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -320,7 +320,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Output.Ok.Body
+                    let body: Operations.HostedComputeUpdateNetworkConfigurationForOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -330,7 +330,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.network_hyphen_configuration.self,
+                            Components.Schemas.NetworkConfiguration.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -360,16 +360,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/settings/network-configurations/{network_configuration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/delete(hosted-compute/delete-network-configuration-from-org)`.
-    public func hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Output {
+    public func hostedComputeDeleteNetworkConfigurationFromOrg(_ input: Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Input) async throws -> Operations.HostedComputeDeleteNetworkConfigurationFromOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.id,
+            forOperation: Operations.HostedComputeDeleteNetworkConfigurationFromOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/network-configurations/{}",
                     parameters: [
                         input.path.org,
-                        input.path.network_configuration_id
+                        input.path.networkConfigurationId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -403,16 +403,16 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/settings/network-settings/{network_settings_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-settings/{network_settings_id}/get(hosted-compute/get-network-settings-for-org)`.
-    public func hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org(_ input: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Input) async throws -> Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output {
+    public func hostedComputeGetNetworkSettingsForOrg(_ input: Operations.HostedComputeGetNetworkSettingsForOrg.Input) async throws -> Operations.HostedComputeGetNetworkSettingsForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.id,
+            forOperation: Operations.HostedComputeGetNetworkSettingsForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/settings/network-settings/{}",
                     parameters: [
                         input.path.org,
-                        input.path.network_settings_id
+                        input.path.networkSettingsId
                     ]
                 )
                 var request: HTTPTypes.HTTPRequest = .init(
@@ -429,13 +429,13 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output.Ok.Headers = .init(Link: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.HostedComputeGetNetworkSettingsForOrg.Output.Ok.Headers = .init(link: try converter.getOptionalHeaderFieldAsURI(
                         in: response.headerFields,
                         name: "Link",
-                        as: Components.Headers.link.self
+                        as: Components.Headers.Link.self
                     ))
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.hosted_hyphen_compute_sol_get_hyphen_network_hyphen_settings_hyphen_for_hyphen_org.Output.Ok.Body
+                    let body: Operations.HostedComputeGetNetworkSettingsForOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -445,7 +445,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.network_hyphen_settings.self,
+                            Components.Schemas.NetworkSettings.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)

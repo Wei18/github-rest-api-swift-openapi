@@ -59,10 +59,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /rate_limit`.
     /// - Remark: Generated from `#/paths//rate_limit/get(rate-limit/get)`.
-    public func rate_hyphen_limit_sol_get(_ input: Operations.rate_hyphen_limit_sol_get.Input) async throws -> Operations.rate_hyphen_limit_sol_get.Output {
+    public func rateLimitGet(_ input: Operations.RateLimitGet.Input) async throws -> Operations.RateLimitGet.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.rate_hyphen_limit_sol_get.id,
+            forOperation: Operations.RateLimitGet.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/rate_limit",
@@ -82,25 +82,25 @@ public struct Client: APIProtocol {
             deserializer: { response, responseBody in
                 switch response.status.code {
                 case 200:
-                    let headers: Operations.rate_hyphen_limit_sol_get.Output.Ok.Headers = .init(
-                        X_hyphen_RateLimit_hyphen_Limit: try converter.getOptionalHeaderFieldAsURI(
+                    let headers: Operations.RateLimitGet.Output.Ok.Headers = .init(
+                        xRateLimitLimit: try converter.getOptionalHeaderFieldAsURI(
                             in: response.headerFields,
                             name: "X-RateLimit-Limit",
-                            as: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_limit.self
+                            as: Components.Headers.XRateLimitLimit.self
                         ),
-                        X_hyphen_RateLimit_hyphen_Remaining: try converter.getOptionalHeaderFieldAsURI(
+                        xRateLimitRemaining: try converter.getOptionalHeaderFieldAsURI(
                             in: response.headerFields,
                             name: "X-RateLimit-Remaining",
-                            as: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_remaining.self
+                            as: Components.Headers.XRateLimitRemaining.self
                         ),
-                        X_hyphen_RateLimit_hyphen_Reset: try converter.getOptionalHeaderFieldAsURI(
+                        xRateLimitReset: try converter.getOptionalHeaderFieldAsURI(
                             in: response.headerFields,
                             name: "X-RateLimit-Reset",
-                            as: Components.Headers.x_hyphen_rate_hyphen_limit_hyphen_reset.self
+                            as: Components.Headers.XRateLimitReset.self
                         )
                     )
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.rate_hyphen_limit_sol_get.Output.Ok.Body
+                    let body: Operations.RateLimitGet.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -110,7 +110,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.rate_hyphen_limit_hyphen_overview.self,
+                            Components.Schemas.RateLimitOverview.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -127,7 +127,7 @@ public struct Client: APIProtocol {
                     return .notModified(.init())
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -137,7 +137,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)

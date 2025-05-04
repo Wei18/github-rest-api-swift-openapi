@@ -19,7 +19,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/get(oidc/get-oidc-custom-sub-template-for-org)`.
-    func oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org(_ input: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input) async throws -> Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output
+    func oidcGetOidcCustomSubTemplateForOrg(_ input: Operations.OidcGetOidcCustomSubTemplateForOrg.Input) async throws -> Operations.OidcGetOidcCustomSubTemplateForOrg.Output
     /// Set the customization template for an OIDC subject claim for an organization
     ///
     /// Creates or updates the customization template for an OpenID Connect (OIDC) subject claim.
@@ -28,7 +28,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)`.
-    func oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org(_ input: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input) async throws -> Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output
+    func oidcUpdateOidcCustomSubTemplateForOrg(_ input: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input) async throws -> Operations.OidcUpdateOidcCustomSubTemplateForOrg.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -41,11 +41,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/get(oidc/get-oidc-custom-sub-template-for-org)`.
-    public func oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org(
-        path: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output {
-        try await oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org(Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input(
+    public func oidcGetOidcCustomSubTemplateForOrg(
+        path: Operations.OidcGetOidcCustomSubTemplateForOrg.Input.Path,
+        headers: Operations.OidcGetOidcCustomSubTemplateForOrg.Input.Headers = .init()
+    ) async throws -> Operations.OidcGetOidcCustomSubTemplateForOrg.Output {
+        try await oidcGetOidcCustomSubTemplateForOrg(Operations.OidcGetOidcCustomSubTemplateForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -58,12 +58,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)`.
-    public func oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org(
-        path: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Headers = .init(),
-        body: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Body
-    ) async throws -> Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output {
-        try await oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org(Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input(
+    public func oidcUpdateOidcCustomSubTemplateForOrg(
+        path: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Path,
+        headers: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Headers = .init(),
+        body: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Body
+    ) async throws -> Operations.OidcUpdateOidcCustomSubTemplateForOrg.Output {
+        try await oidcUpdateOidcCustomSubTemplateForOrg(Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -73,6 +73,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -88,36 +97,36 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -125,27 +134,27 @@ public enum Components {
         /// Actions OIDC Subject customization
         ///
         /// - Remark: Generated from `#/components/schemas/oidc-custom-sub`.
-        public struct oidc_hyphen_custom_hyphen_sub: Codable, Hashable, Sendable {
+        public struct OidcCustomSub: Codable, Hashable, Sendable {
             /// Array of unique strings. Each claim key can only contain alphanumeric characters and underscores.
             ///
             /// - Remark: Generated from `#/components/schemas/oidc-custom-sub/include_claim_keys`.
-            public var include_claim_keys: [Swift.String]
-            /// Creates a new `oidc_hyphen_custom_hyphen_sub`.
+            public var includeClaimKeys: [Swift.String]
+            /// Creates a new `OidcCustomSub`.
             ///
             /// - Parameters:
-            ///   - include_claim_keys: Array of unique strings. Each claim key can only contain alphanumeric characters and underscores.
-            public init(include_claim_keys: [Swift.String]) {
-                self.include_claim_keys = include_claim_keys
+            ///   - includeClaimKeys: Array of unique strings. Each claim key can only contain alphanumeric characters and underscores.
+            public init(includeClaimKeys: [Swift.String]) {
+                self.includeClaimKeys = includeClaimKeys
             }
             public enum CodingKeys: String, CodingKey {
-                case include_claim_keys
+                case includeClaimKeys = "include_claim_keys"
             }
         }
         /// An object without any properties.
         ///
         /// - Remark: Generated from `#/components/schemas/empty-object`.
-        public struct empty_hyphen_object: Codable, Hashable, Sendable {
-            /// Creates a new `empty_hyphen_object`.
+        public struct EmptyObject: Codable, Hashable, Sendable {
+            /// Creates a new `EmptyObject`.
             public init() {}
             public init(from decoder: any Decoder) throws {
                 try decoder.ensureNoAdditionalProperties(knownKeys: [])
@@ -157,22 +166,22 @@ public enum Components {
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -182,25 +191,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -210,12 +219,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
@@ -234,7 +243,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/get(oidc/get-oidc-custom-sub-template-for-org)`.
-    public enum oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org {
+    public enum OidcGetOidcCustomSubTemplateForOrg {
         public static let id: Swift.String = "oidc/get-oidc-custom-sub-template-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/GET/path`.
@@ -242,36 +251,36 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.OidcGetOidcCustomSubTemplateForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.OidcGetOidcCustomSubTemplateForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.OidcGetOidcCustomSubTemplateForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.OidcGetOidcCustomSubTemplateForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.OidcGetOidcCustomSubTemplateForOrg.Input.Path,
+                headers: Operations.OidcGetOidcCustomSubTemplateForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -282,12 +291,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.oidc_hyphen_custom_hyphen_sub)
+                    case json(Components.Schemas.OidcCustomSub)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.oidc_hyphen_custom_hyphen_sub {
+                    public var json: Components.Schemas.OidcCustomSub {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -297,12 +306,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.OidcGetOidcCustomSubTemplateForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.OidcGetOidcCustomSubTemplateForOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -311,12 +320,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/get(oidc/get-oidc-custom-sub-template-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.OidcGetOidcCustomSubTemplateForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.OidcGetOidcCustomSubTemplateForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -368,7 +377,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)`.
-    public enum oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org {
+    public enum OidcUpdateOidcCustomSubTemplateForOrg {
         public static let id: Swift.String = "oidc/update-oidc-custom-sub-template-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/PUT/path`.
@@ -376,34 +385,34 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/PUT/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.OidcUpdateOidcCustomSubTemplateForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.OidcUpdateOidcCustomSubTemplateForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/PUT/requestBody/content/application\/json`.
-                case json(Components.Schemas.oidc_hyphen_custom_hyphen_sub)
+                case json(Components.Schemas.OidcCustomSub)
             }
-            public var body: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Body
+            public var body: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -411,9 +420,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Headers = .init(),
-                body: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Body
+                path: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Path,
+                headers: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Headers = .init(),
+                body: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -425,12 +434,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/PUT/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/oidc/customization/sub/PUT/responses/201/content/application\/json`.
-                    case json(Components.Schemas.empty_hyphen_object)
+                    case json(Components.Schemas.EmptyObject)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.empty_hyphen_object {
+                    public var json: Components.Schemas.EmptyObject {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -440,12 +449,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Created.Body
+                public var body: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -454,12 +463,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Created)
+            case created(Operations.OidcUpdateOidcCustomSubTemplateForOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Created {
+            public var created: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -477,12 +486,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -500,12 +509,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):

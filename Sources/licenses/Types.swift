@@ -17,14 +17,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /licenses`.
     /// - Remark: Generated from `#/paths//licenses/get(licenses/get-all-commonly-used)`.
-    func licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(_ input: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input) async throws -> Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Output
+    func licensesGetAllCommonlyUsed(_ input: Operations.LicensesGetAllCommonlyUsed.Input) async throws -> Operations.LicensesGetAllCommonlyUsed.Output
     /// Get a license
     ///
     /// Gets information about a specific license. For more information, see "[Licensing a repository ](https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)."
     ///
     /// - Remark: HTTP `GET /licenses/{license}`.
     /// - Remark: Generated from `#/paths//licenses/{license}/get(licenses/get)`.
-    func licenses_sol_get(_ input: Operations.licenses_sol_get.Input) async throws -> Operations.licenses_sol_get.Output
+    func licensesGet(_ input: Operations.LicensesGet.Input) async throws -> Operations.LicensesGet.Output
     /// Get the license for a repository
     ///
     /// This method returns the contents of the repository's license file, if one is detected.
@@ -36,7 +36,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/license`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/license/get(licenses/get-for-repo)`.
-    func licenses_sol_get_hyphen_for_hyphen_repo(_ input: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input) async throws -> Operations.licenses_sol_get_hyphen_for_hyphen_repo.Output
+    func licensesGetForRepo(_ input: Operations.LicensesGetForRepo.Input) async throws -> Operations.LicensesGetForRepo.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -47,11 +47,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /licenses`.
     /// - Remark: Generated from `#/paths//licenses/get(licenses/get-all-commonly-used)`.
-    public func licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(
-        query: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input.Query = .init(),
-        headers: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input.Headers = .init()
-    ) async throws -> Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Output {
-        try await licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input(
+    public func licensesGetAllCommonlyUsed(
+        query: Operations.LicensesGetAllCommonlyUsed.Input.Query = .init(),
+        headers: Operations.LicensesGetAllCommonlyUsed.Input.Headers = .init()
+    ) async throws -> Operations.LicensesGetAllCommonlyUsed.Output {
+        try await licensesGetAllCommonlyUsed(Operations.LicensesGetAllCommonlyUsed.Input(
             query: query,
             headers: headers
         ))
@@ -62,11 +62,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /licenses/{license}`.
     /// - Remark: Generated from `#/paths//licenses/{license}/get(licenses/get)`.
-    public func licenses_sol_get(
-        path: Operations.licenses_sol_get.Input.Path,
-        headers: Operations.licenses_sol_get.Input.Headers = .init()
-    ) async throws -> Operations.licenses_sol_get.Output {
-        try await licenses_sol_get(Operations.licenses_sol_get.Input(
+    public func licensesGet(
+        path: Operations.LicensesGet.Input.Path,
+        headers: Operations.LicensesGet.Input.Headers = .init()
+    ) async throws -> Operations.LicensesGet.Output {
+        try await licensesGet(Operations.LicensesGet.Input(
             path: path,
             headers: headers
         ))
@@ -82,12 +82,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/license`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/license/get(licenses/get-for-repo)`.
-    public func licenses_sol_get_hyphen_for_hyphen_repo(
-        path: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Path,
-        query: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Query = .init(),
-        headers: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Headers = .init()
-    ) async throws -> Operations.licenses_sol_get_hyphen_for_hyphen_repo.Output {
-        try await licenses_sol_get_hyphen_for_hyphen_repo(Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input(
+    public func licensesGetForRepo(
+        path: Operations.LicensesGetForRepo.Input.Path,
+        query: Operations.LicensesGetForRepo.Input.Query = .init(),
+        headers: Operations.LicensesGetForRepo.Input.Headers = .init()
+    ) async throws -> Operations.LicensesGetForRepo.Output {
+        try await licensesGetForRepo(Operations.LicensesGetForRepo.Input(
             path: path,
             query: query,
             headers: headers
@@ -97,6 +97,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -112,36 +121,36 @@ public enum Components {
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -149,7 +158,7 @@ public enum Components {
         /// License Simple
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-license-simple`.
-        public struct nullable_hyphen_license_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableLicenseSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/name`.
@@ -157,48 +166,48 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/spdx_id`.
-            public var spdx_id: Swift.String?
+            public var spdxId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `nullable_hyphen_license_hyphen_simple`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `NullableLicenseSimple`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
-            ///   - spdx_id:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - spdxId:
+            ///   - nodeId:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String? = nil,
-                spdx_id: Swift.String? = nil,
-                node_id: Swift.String,
-                html_url: Swift.String? = nil
+                spdxId: Swift.String? = nil,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
-                self.spdx_id = spdx_id
-                self.node_id = node_id
-                self.html_url = html_url
+                self.spdxId = spdxId
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
-                case spdx_id
-                case node_id
-                case html_url
+                case spdxId = "spdx_id"
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
             }
         }
         /// License Simple
         ///
         /// - Remark: Generated from `#/components/schemas/license-simple`.
-        public struct license_hyphen_simple: Codable, Hashable, Sendable {
+        public struct LicenseSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/license-simple/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/license-simple/name`.
@@ -206,60 +215,60 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/license-simple/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/license-simple/spdx_id`.
-            public var spdx_id: Swift.String?
+            public var spdxId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/license-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/license-simple/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `license_hyphen_simple`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `LicenseSimple`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
-            ///   - spdx_id:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - spdxId:
+            ///   - nodeId:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String? = nil,
-                spdx_id: Swift.String? = nil,
-                node_id: Swift.String,
-                html_url: Swift.String? = nil
+                spdxId: Swift.String? = nil,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
-                self.spdx_id = spdx_id
-                self.node_id = node_id
-                self.html_url = html_url
+                self.spdxId = spdxId
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
-                case spdx_id
-                case node_id
-                case html_url
+                case spdxId = "spdx_id"
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
             }
         }
         /// License
         ///
         /// - Remark: Generated from `#/components/schemas/license`.
-        public struct license: Codable, Hashable, Sendable {
+        public struct License: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/license/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/license/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/license/spdx_id`.
-            public var spdx_id: Swift.String?
+            public var spdxId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/license/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/license/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/license/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/license/description`.
             public var description: Swift.String
             /// - Remark: Generated from `#/components/schemas/license/implementation`.
@@ -274,15 +283,15 @@ public enum Components {
             public var body: Swift.String
             /// - Remark: Generated from `#/components/schemas/license/featured`.
             public var featured: Swift.Bool
-            /// Creates a new `license`.
+            /// Creates a new `License`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
-            ///   - spdx_id:
+            ///   - spdxId:
             ///   - url:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - nodeId:
+            ///   - htmlUrl:
             ///   - description:
             ///   - implementation:
             ///   - permissions:
@@ -293,10 +302,10 @@ public enum Components {
             public init(
                 key: Swift.String,
                 name: Swift.String,
-                spdx_id: Swift.String? = nil,
+                spdxId: Swift.String? = nil,
                 url: Swift.String? = nil,
-                node_id: Swift.String,
-                html_url: Swift.String,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String,
                 implementation: Swift.String,
                 permissions: [Swift.String],
@@ -307,10 +316,10 @@ public enum Components {
             ) {
                 self.key = key
                 self.name = name
-                self.spdx_id = spdx_id
+                self.spdxId = spdxId
                 self.url = url
-                self.node_id = node_id
-                self.html_url = html_url
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.implementation = implementation
                 self.permissions = permissions
@@ -322,10 +331,10 @@ public enum Components {
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
-                case spdx_id
+                case spdxId = "spdx_id"
                 case url
-                case node_id
-                case html_url
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
                 case description
                 case implementation
                 case permissions
@@ -339,11 +348,11 @@ public enum Components {
         /// `refs/heads/<branch name>` or simply `<branch name>`.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-ref`.
-        public typealias code_hyphen_scanning_hyphen_ref = Swift.String
+        public typealias CodeScanningRef = Swift.String
         /// License Content
         ///
         /// - Remark: Generated from `#/components/schemas/license-content`.
-        public struct license_hyphen_content: Codable, Hashable, Sendable {
+        public struct LicenseContent: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/license-content/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/license-content/path`.
@@ -355,11 +364,11 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/license-content/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/license-content/html_url`.
-            public var html_url: Swift.String?
+            public var htmlUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/license-content/git_url`.
-            public var git_url: Swift.String?
+            public var gitUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/license-content/download_url`.
-            public var download_url: Swift.String?
+            public var downloadUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/license-content/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/license-content/content`.
@@ -367,14 +376,14 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/license-content/encoding`.
             public var encoding: Swift.String
             /// - Remark: Generated from `#/components/schemas/license-content/_links`.
-            public struct _linksPayload: Codable, Hashable, Sendable {
+            public struct _LinksPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/license-content/_links/git`.
                 public var git: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/license-content/_links/html`.
                 public var html: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/license-content/_links/self`.
                 public var _self: Swift.String
-                /// Creates a new `_linksPayload`.
+                /// Creates a new `_LinksPayload`.
                 ///
                 /// - Parameters:
                 ///   - git:
@@ -396,10 +405,10 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/license-content/_links`.
-            public var _links: Components.Schemas.license_hyphen_content._linksPayload
+            public var _links: Components.Schemas.LicenseContent._LinksPayload
             /// - Remark: Generated from `#/components/schemas/license-content/license`.
-            public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
-            /// Creates a new `license_hyphen_content`.
+            public var license: Components.Schemas.NullableLicenseSimple?
+            /// Creates a new `LicenseContent`.
             ///
             /// - Parameters:
             ///   - name:
@@ -407,9 +416,9 @@ public enum Components {
             ///   - sha:
             ///   - size:
             ///   - url:
-            ///   - html_url:
-            ///   - git_url:
-            ///   - download_url:
+            ///   - htmlUrl:
+            ///   - gitUrl:
+            ///   - downloadUrl:
             ///   - _type:
             ///   - content:
             ///   - encoding:
@@ -421,23 +430,23 @@ public enum Components {
                 sha: Swift.String,
                 size: Swift.Int,
                 url: Swift.String,
-                html_url: Swift.String? = nil,
-                git_url: Swift.String? = nil,
-                download_url: Swift.String? = nil,
+                htmlUrl: Swift.String? = nil,
+                gitUrl: Swift.String? = nil,
+                downloadUrl: Swift.String? = nil,
                 _type: Swift.String,
                 content: Swift.String,
                 encoding: Swift.String,
-                _links: Components.Schemas.license_hyphen_content._linksPayload,
-                license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil
+                _links: Components.Schemas.LicenseContent._LinksPayload,
+                license: Components.Schemas.NullableLicenseSimple? = nil
             ) {
                 self.name = name
                 self.path = path
                 self.sha = sha
                 self.size = size
                 self.url = url
-                self.html_url = html_url
-                self.git_url = git_url
-                self.download_url = download_url
+                self.htmlUrl = htmlUrl
+                self.gitUrl = gitUrl
+                self.downloadUrl = downloadUrl
                 self._type = _type
                 self.content = content
                 self.encoding = encoding
@@ -450,9 +459,9 @@ public enum Components {
                 case sha
                 case size
                 case url
-                case html_url
-                case git_url
-                case download_url
+                case htmlUrl = "html_url"
+                case gitUrl = "git_url"
+                case downloadUrl = "download_url"
                 case _type = "type"
                 case content
                 case encoding
@@ -466,38 +475,38 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
         ///
         /// - Remark: Generated from `#/components/parameters/git-ref`.
-        public typealias git_hyphen_ref = Components.Schemas.code_hyphen_scanning_hyphen_ref
+        public typealias GitRef = Components.Schemas.CodeScanningRef
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -507,29 +516,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -539,12 +548,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
@@ -561,7 +570,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /licenses`.
     /// - Remark: Generated from `#/paths//licenses/get(licenses/get-all-commonly-used)`.
-    public enum licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used {
+    public enum LicensesGetAllCommonlyUsed {
         public static let id: Swift.String = "licenses/get-all-commonly-used"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/licenses/GET/query`.
@@ -571,48 +580,48 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/licenses/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/licenses/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - featured:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
                     featured: Swift.Bool? = nil,
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
                     self.featured = featured
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input.Query
+            public var query: Operations.LicensesGetAllCommonlyUsed.Input.Query
             /// - Remark: Generated from `#/paths/licenses/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.LicensesGetAllCommonlyUsed.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.LicensesGetAllCommonlyUsed.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input.Headers
+            public var headers: Operations.LicensesGetAllCommonlyUsed.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input.Query = .init(),
-                headers: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input.Headers = .init()
+                query: Operations.LicensesGetAllCommonlyUsed.Input.Query = .init(),
+                headers: Operations.LicensesGetAllCommonlyUsed.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -623,12 +632,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/licenses/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/licenses/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.license_hyphen_simple])
+                    case json([Components.Schemas.LicenseSimple])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.license_hyphen_simple] {
+                    public var json: [Components.Schemas.LicenseSimple] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -638,12 +647,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Output.Ok.Body
+                public var body: Operations.LicensesGetAllCommonlyUsed.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Output.Ok.Body) {
+                public init(body: Operations.LicensesGetAllCommonlyUsed.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -652,12 +661,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//licenses/get(licenses/get-all-commonly-used)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Output.Ok)
+            case ok(Operations.LicensesGetAllCommonlyUsed.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Output.Ok {
+            public var ok: Operations.LicensesGetAllCommonlyUsed.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -675,12 +684,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//licenses/get(licenses/get-all-commonly-used)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//licenses/get(licenses/get-all-commonly-used)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -730,7 +747,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /licenses/{license}`.
     /// - Remark: Generated from `#/paths//licenses/{license}/get(licenses/get)`.
-    public enum licenses_sol_get {
+    public enum LicensesGet {
         public static let id: Swift.String = "licenses/get"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/licenses/{license}/GET/path`.
@@ -745,27 +762,27 @@ public enum Operations {
                     self.license = license
                 }
             }
-            public var path: Operations.licenses_sol_get.Input.Path
+            public var path: Operations.LicensesGet.Input.Path
             /// - Remark: Generated from `#/paths/licenses/{license}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.licenses_sol_get.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.LicensesGet.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.licenses_sol_get.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.LicensesGet.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.licenses_sol_get.Input.Headers
+            public var headers: Operations.LicensesGet.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.licenses_sol_get.Input.Path,
-                headers: Operations.licenses_sol_get.Input.Headers = .init()
+                path: Operations.LicensesGet.Input.Path,
+                headers: Operations.LicensesGet.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -776,12 +793,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/licenses/{license}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/licenses/{license}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.license)
+                    case json(Components.Schemas.License)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.license {
+                    public var json: Components.Schemas.License {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -791,12 +808,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.licenses_sol_get.Output.Ok.Body
+                public var body: Operations.LicensesGet.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.licenses_sol_get.Output.Ok.Body) {
+                public init(body: Operations.LicensesGet.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -805,12 +822,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//licenses/{license}/get(licenses/get)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.licenses_sol_get.Output.Ok)
+            case ok(Operations.LicensesGet.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.licenses_sol_get.Output.Ok {
+            public var ok: Operations.LicensesGet.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -828,12 +845,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//licenses/{license}/get(licenses/get)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -851,12 +868,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//licenses/{license}/get(licenses/get)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -874,12 +891,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//licenses/{license}/get(licenses/get)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//licenses/{license}/get(licenses/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -934,7 +959,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/license`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/license/get(licenses/get-for-repo)`.
-    public enum licenses_sol_get_hyphen_for_hyphen_repo {
+    public enum LicensesGetForRepo {
         public static let id: Swift.String = "licenses/get-for-repo"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/path`.
@@ -942,52 +967,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Path
+            public var path: Operations.LicensesGetForRepo.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/query/ref`.
-                public var ref: Components.Parameters.git_hyphen_ref?
+                public var ref: Components.Parameters.GitRef?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - ref: The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/<branch name>` or simply `<branch name>`. To reference a pull request use `refs/pull/<number>/merge`.
-                public init(ref: Components.Parameters.git_hyphen_ref? = nil) {
+                public init(ref: Components.Parameters.GitRef? = nil) {
                     self.ref = ref
                 }
             }
-            public var query: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Query
+            public var query: Operations.LicensesGetForRepo.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.licenses_sol_get_hyphen_for_hyphen_repo.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.LicensesGetForRepo.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.licenses_sol_get_hyphen_for_hyphen_repo.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.LicensesGetForRepo.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Headers
+            public var headers: Operations.LicensesGetForRepo.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -995,9 +1020,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Path,
-                query: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Query = .init(),
-                headers: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Input.Headers = .init()
+                path: Operations.LicensesGetForRepo.Input.Path,
+                query: Operations.LicensesGetForRepo.Input.Query = .init(),
+                headers: Operations.LicensesGetForRepo.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -1009,12 +1034,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/license/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.license_hyphen_content)
+                    case json(Components.Schemas.LicenseContent)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.license_hyphen_content {
+                    public var json: Components.Schemas.LicenseContent {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -1024,12 +1049,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Output.Ok.Body
+                public var body: Operations.LicensesGetForRepo.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Output.Ok.Body) {
+                public init(body: Operations.LicensesGetForRepo.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -1038,12 +1063,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/license/get(licenses/get-for-repo)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.licenses_sol_get_hyphen_for_hyphen_repo.Output.Ok)
+            case ok(Operations.LicensesGetForRepo.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.licenses_sol_get_hyphen_for_hyphen_repo.Output.Ok {
+            public var ok: Operations.LicensesGetForRepo.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -1061,12 +1086,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/license/get(licenses/get-for-repo)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):

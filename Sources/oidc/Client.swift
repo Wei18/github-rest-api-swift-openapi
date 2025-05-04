@@ -46,10 +46,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/get(oidc/get-oidc-custom-sub-template-for-org)`.
-    public func oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org(_ input: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input) async throws -> Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output {
+    public func oidcGetOidcCustomSubTemplateForOrg(_ input: Operations.OidcGetOidcCustomSubTemplateForOrg.Input) async throws -> Operations.OidcGetOidcCustomSubTemplateForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.id,
+            forOperation: Operations.OidcGetOidcCustomSubTemplateForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/actions/oidc/customization/sub",
@@ -72,7 +72,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 200:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.oidc_sol_get_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Ok.Body
+                    let body: Operations.OidcGetOidcCustomSubTemplateForOrg.Output.Ok.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -82,7 +82,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.oidc_hyphen_custom_hyphen_sub.self,
+                            Components.Schemas.OidcCustomSub.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -112,10 +112,10 @@ public struct Client: APIProtocol {
     ///
     /// - Remark: HTTP `PUT /orgs/{org}/actions/oidc/customization/sub`.
     /// - Remark: Generated from `#/paths//orgs/{org}/actions/oidc/customization/sub/put(oidc/update-oidc-custom-sub-template-for-org)`.
-    public func oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org(_ input: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input) async throws -> Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output {
+    public func oidcUpdateOidcCustomSubTemplateForOrg(_ input: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Input) async throws -> Operations.OidcUpdateOidcCustomSubTemplateForOrg.Output {
         try await client.send(
             input: input,
-            forOperation: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.id,
+            forOperation: Operations.OidcUpdateOidcCustomSubTemplateForOrg.id,
             serializer: { input in
                 let path = try converter.renderedPath(
                     template: "/orgs/{}/actions/oidc/customization/sub",
@@ -147,7 +147,7 @@ public struct Client: APIProtocol {
                 switch response.status.code {
                 case 201:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Output.Created.Body
+                    let body: Operations.OidcUpdateOidcCustomSubTemplateForOrg.Output.Created.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -157,7 +157,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.empty_hyphen_object.self,
+                            Components.Schemas.EmptyObject.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -169,7 +169,7 @@ public struct Client: APIProtocol {
                     return .created(.init(body: body))
                 case 404:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.not_found.Body
+                    let body: Components.Responses.NotFound.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -179,7 +179,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)
@@ -191,7 +191,7 @@ public struct Client: APIProtocol {
                     return .notFound(.init(body: body))
                 case 403:
                     let contentType = converter.extractContentTypeIfPresent(in: response.headerFields)
-                    let body: Components.Responses.forbidden.Body
+                    let body: Components.Responses.Forbidden.Body
                     let chosenContentType = try converter.bestContentType(
                         received: contentType,
                         options: [
@@ -201,7 +201,7 @@ public struct Client: APIProtocol {
                     switch chosenContentType {
                     case "application/json":
                         body = try await converter.getResponseBodyAsJSON(
-                            Components.Schemas.basic_hyphen_error.self,
+                            Components.Schemas.BasicError.self,
                             from: responseBody,
                             transforming: { value in
                                 .json(value)

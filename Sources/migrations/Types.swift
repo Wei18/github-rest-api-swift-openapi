@@ -19,14 +19,14 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/get(migrations/list-for-org)`.
-    func migrations_sol_list_hyphen_for_hyphen_org(_ input: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input) async throws -> Operations.migrations_sol_list_hyphen_for_hyphen_org.Output
+    func migrationsListForOrg(_ input: Operations.MigrationsListForOrg.Input) async throws -> Operations.MigrationsListForOrg.Output
     /// Start an organization migration
     ///
     /// Initiates the generation of a migration archive.
     ///
     /// - Remark: HTTP `POST /orgs/{org}/migrations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/post(migrations/start-for-org)`.
-    func migrations_sol_start_hyphen_for_hyphen_org(_ input: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input) async throws -> Operations.migrations_sol_start_hyphen_for_hyphen_org.Output
+    func migrationsStartForOrg(_ input: Operations.MigrationsStartForOrg.Input) async throws -> Operations.MigrationsStartForOrg.Output
     /// Get an organization migration status
     ///
     /// Fetches the status of a migration.
@@ -40,35 +40,35 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/get(migrations/get-status-for-org)`.
-    func migrations_sol_get_hyphen_status_hyphen_for_hyphen_org(_ input: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input) async throws -> Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Output
+    func migrationsGetStatusForOrg(_ input: Operations.MigrationsGetStatusForOrg.Input) async throws -> Operations.MigrationsGetStatusForOrg.Output
     /// Download an organization migration archive
     ///
     /// Fetches the URL to a migration archive.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/get(migrations/download-archive-for-org)`.
-    func migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org(_ input: Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Input) async throws -> Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Output
+    func migrationsDownloadArchiveForOrg(_ input: Operations.MigrationsDownloadArchiveForOrg.Input) async throws -> Operations.MigrationsDownloadArchiveForOrg.Output
     /// Delete an organization migration archive
     ///
     /// Deletes a previous migration archive. Migration archives are automatically deleted after seven days.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-org)`.
-    func migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org(_ input: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Input) async throws -> Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Output
+    func migrationsDeleteArchiveForOrg(_ input: Operations.MigrationsDeleteArchiveForOrg.Input) async throws -> Operations.MigrationsDeleteArchiveForOrg.Output
     /// Unlock an organization repository
     ///
     /// Unlocks a repository that was locked for migration. You should unlock each migrated repository and [delete them](https://docs.github.com/rest/repos/repos#delete-a-repository) when the migration is complete and you no longer need the source data.
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-org)`.
-    func migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org(_ input: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Input) async throws -> Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Output
+    func migrationsUnlockRepoForOrg(_ input: Operations.MigrationsUnlockRepoForOrg.Input) async throws -> Operations.MigrationsUnlockRepoForOrg.Output
     /// List repositories in an organization migration
     ///
     /// List all the repositories for this organization migration.
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repositories/get(migrations/list-repos-for-org)`.
-    func migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org(_ input: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input) async throws -> Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Output
+    func migrationsListReposForOrg(_ input: Operations.MigrationsListReposForOrg.Input) async throws -> Operations.MigrationsListReposForOrg.Output
     /// Get an import status
     ///
     /// View the progress of an import.
@@ -112,7 +112,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/get(migrations/get-import-status)`.
     @available(*, deprecated)
-    func migrations_sol_get_hyphen_import_hyphen_status(_ input: Operations.migrations_sol_get_hyphen_import_hyphen_status.Input) async throws -> Operations.migrations_sol_get_hyphen_import_hyphen_status.Output
+    func migrationsGetImportStatus(_ input: Operations.MigrationsGetImportStatus.Input) async throws -> Operations.MigrationsGetImportStatus.Output
     /// Update an import
     ///
     /// An import can be updated with credentials or a project choice by passing in the appropriate parameters in this API
@@ -128,7 +128,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
     @available(*, deprecated)
-    func migrations_sol_update_hyphen_import(_ input: Operations.migrations_sol_update_hyphen_import.Input) async throws -> Operations.migrations_sol_update_hyphen_import.Output
+    func migrationsUpdateImport(_ input: Operations.MigrationsUpdateImport.Input) async throws -> Operations.MigrationsUpdateImport.Output
     /// Start an import
     ///
     /// Start a source import to a GitHub repository using GitHub Importer.
@@ -141,7 +141,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
     @available(*, deprecated)
-    func migrations_sol_start_hyphen_import(_ input: Operations.migrations_sol_start_hyphen_import.Input) async throws -> Operations.migrations_sol_start_hyphen_import.Output
+    func migrationsStartImport(_ input: Operations.MigrationsStartImport.Input) async throws -> Operations.MigrationsStartImport.Output
     /// Cancel an import
     ///
     /// Stop an import for a repository.
@@ -152,7 +152,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
     @available(*, deprecated)
-    func migrations_sol_cancel_hyphen_import(_ input: Operations.migrations_sol_cancel_hyphen_import.Input) async throws -> Operations.migrations_sol_cancel_hyphen_import.Output
+    func migrationsCancelImport(_ input: Operations.MigrationsCancelImport.Input) async throws -> Operations.MigrationsCancelImport.Output
     /// Get commit authors
     ///
     /// Each type of source control system represents authors in a different way. For example, a Git commit author has a display name and an email address, but a Subversion commit author just has a username. The GitHub Importer will make the author information valid, but the author might not be correct. For example, it will change the bare Subversion username `hubot` into something like `hubot <hubot@12341234-abab-fefe-8787-fedcba987654>`.
@@ -165,7 +165,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
     @available(*, deprecated)
-    func migrations_sol_get_hyphen_commit_hyphen_authors(_ input: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input) async throws -> Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Output
+    func migrationsGetCommitAuthors(_ input: Operations.MigrationsGetCommitAuthors.Input) async throws -> Operations.MigrationsGetCommitAuthors.Output
     /// Map a commit author
     ///
     /// Update an author's identity for the import. Your application can continue updating authors any time before you push
@@ -177,7 +177,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
     @available(*, deprecated)
-    func migrations_sol_map_hyphen_commit_hyphen_author(_ input: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input) async throws -> Operations.migrations_sol_map_hyphen_commit_hyphen_author.Output
+    func migrationsMapCommitAuthor(_ input: Operations.MigrationsMapCommitAuthor.Input) async throws -> Operations.MigrationsMapCommitAuthor.Output
     /// Get large files
     ///
     /// List files larger than 100MB found during the import
@@ -188,7 +188,7 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
     @available(*, deprecated)
-    func migrations_sol_get_hyphen_large_hyphen_files(_ input: Operations.migrations_sol_get_hyphen_large_hyphen_files.Input) async throws -> Operations.migrations_sol_get_hyphen_large_hyphen_files.Output
+    func migrationsGetLargeFiles(_ input: Operations.MigrationsGetLargeFiles.Input) async throws -> Operations.MigrationsGetLargeFiles.Output
     /// Update Git LFS preference
     ///
     /// You can import repositories from Subversion, Mercurial, and TFS that include files larger than 100MB. This ability
@@ -203,21 +203,21 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
     @available(*, deprecated)
-    func migrations_sol_set_hyphen_lfs_hyphen_preference(_ input: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input) async throws -> Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Output
+    func migrationsSetLfsPreference(_ input: Operations.MigrationsSetLfsPreference.Input) async throws -> Operations.MigrationsSetLfsPreference.Output
     /// List user migrations
     ///
     /// Lists all migrations a user has started.
     ///
     /// - Remark: HTTP `GET /user/migrations`.
     /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)`.
-    func migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func migrationsListForAuthenticatedUser(_ input: Operations.MigrationsListForAuthenticatedUser.Input) async throws -> Operations.MigrationsListForAuthenticatedUser.Output
     /// Start a user migration
     ///
     /// Initiates the generation of a user migration archive.
     ///
     /// - Remark: HTTP `POST /user/migrations`.
     /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)`.
-    func migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func migrationsStartForAuthenticatedUser(_ input: Operations.MigrationsStartForAuthenticatedUser.Input) async throws -> Operations.MigrationsStartForAuthenticatedUser.Output
     /// Get a user migration status
     ///
     /// Fetches a single user migration. The response includes the `state` of the migration, which can be one of the following values:
@@ -231,7 +231,7 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)`.
-    func migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func migrationsGetStatusForAuthenticatedUser(_ input: Operations.MigrationsGetStatusForAuthenticatedUser.Input) async throws -> Operations.MigrationsGetStatusForAuthenticatedUser.Output
     /// Download a user migration archive
     ///
     /// Fetches the URL to download the migration archive as a `tar.gz` file. Depending on the resources your repository uses, the migration archive can contain JSON files with data for these objects:
@@ -258,28 +258,28 @@ public protocol APIProtocol: Sendable {
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)`.
-    func migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func migrationsGetArchiveForAuthenticatedUser(_ input: Operations.MigrationsGetArchiveForAuthenticatedUser.Input) async throws -> Operations.MigrationsGetArchiveForAuthenticatedUser.Output
     /// Delete a user migration archive
     ///
     /// Deletes a previous migration archive. Downloadable migration archives are automatically deleted after seven days. Migration metadata, which is returned in the [List user migrations](https://docs.github.com/rest/migrations/users#list-user-migrations) and [Get a user migration status](https://docs.github.com/rest/migrations/users#get-a-user-migration-status) endpoints, will continue to be available even after an archive is deleted.
     ///
     /// - Remark: HTTP `DELETE /user/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)`.
-    func migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func migrationsDeleteArchiveForAuthenticatedUser(_ input: Operations.MigrationsDeleteArchiveForAuthenticatedUser.Input) async throws -> Operations.MigrationsDeleteArchiveForAuthenticatedUser.Output
     /// Unlock a user repository
     ///
     /// Unlocks a repository. You can lock repositories when you [start a user migration](https://docs.github.com/rest/migrations/users#start-a-user-migration). Once the migration is complete you can unlock each repository to begin using it again or [delete the repository](https://docs.github.com/rest/repos/repos#delete-a-repository) if you no longer need the source data. Returns a status of `404 Not Found` if the repository is not locked.
     ///
     /// - Remark: HTTP `DELETE /user/migrations/{migration_id}/repos/{repo_name}/lock`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)`.
-    func migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func migrationsUnlockRepoForAuthenticatedUser(_ input: Operations.MigrationsUnlockRepoForAuthenticatedUser.Input) async throws -> Operations.MigrationsUnlockRepoForAuthenticatedUser.Output
     /// List repositories for a user migration
     ///
     /// Lists all the repositories for this user migration.
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}/repositories`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repositories/get(migrations/list-repos-for-authenticated-user)`.
-    func migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(_ input: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input) async throws -> Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output
+    func migrationsListReposForAuthenticatedUser(_ input: Operations.MigrationsListReposForAuthenticatedUser.Input) async throws -> Operations.MigrationsListReposForAuthenticatedUser.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -292,12 +292,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/get(migrations/list-for-org)`.
-    public func migrations_sol_list_hyphen_for_hyphen_org(
-        path: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_list_hyphen_for_hyphen_org.Output {
-        try await migrations_sol_list_hyphen_for_hyphen_org(Operations.migrations_sol_list_hyphen_for_hyphen_org.Input(
+    public func migrationsListForOrg(
+        path: Operations.MigrationsListForOrg.Input.Path,
+        query: Operations.MigrationsListForOrg.Input.Query = .init(),
+        headers: Operations.MigrationsListForOrg.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsListForOrg.Output {
+        try await migrationsListForOrg(Operations.MigrationsListForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -309,12 +309,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/migrations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/post(migrations/start-for-org)`.
-    public func migrations_sol_start_hyphen_for_hyphen_org(
-        path: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Headers = .init(),
-        body: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Body
-    ) async throws -> Operations.migrations_sol_start_hyphen_for_hyphen_org.Output {
-        try await migrations_sol_start_hyphen_for_hyphen_org(Operations.migrations_sol_start_hyphen_for_hyphen_org.Input(
+    public func migrationsStartForOrg(
+        path: Operations.MigrationsStartForOrg.Input.Path,
+        headers: Operations.MigrationsStartForOrg.Input.Headers = .init(),
+        body: Operations.MigrationsStartForOrg.Input.Body
+    ) async throws -> Operations.MigrationsStartForOrg.Output {
+        try await migrationsStartForOrg(Operations.MigrationsStartForOrg.Input(
             path: path,
             headers: headers,
             body: body
@@ -333,12 +333,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/get(migrations/get-status-for-org)`.
-    public func migrations_sol_get_hyphen_status_hyphen_for_hyphen_org(
-        path: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Output {
-        try await migrations_sol_get_hyphen_status_hyphen_for_hyphen_org(Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input(
+    public func migrationsGetStatusForOrg(
+        path: Operations.MigrationsGetStatusForOrg.Input.Path,
+        query: Operations.MigrationsGetStatusForOrg.Input.Query = .init(),
+        headers: Operations.MigrationsGetStatusForOrg.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsGetStatusForOrg.Output {
+        try await migrationsGetStatusForOrg(Operations.MigrationsGetStatusForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -350,11 +350,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/get(migrations/download-archive-for-org)`.
-    public func migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org(
-        path: Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Output {
-        try await migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org(Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Input(
+    public func migrationsDownloadArchiveForOrg(
+        path: Operations.MigrationsDownloadArchiveForOrg.Input.Path,
+        headers: Operations.MigrationsDownloadArchiveForOrg.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsDownloadArchiveForOrg.Output {
+        try await migrationsDownloadArchiveForOrg(Operations.MigrationsDownloadArchiveForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -365,11 +365,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-org)`.
-    public func migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org(
-        path: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Output {
-        try await migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org(Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Input(
+    public func migrationsDeleteArchiveForOrg(
+        path: Operations.MigrationsDeleteArchiveForOrg.Input.Path,
+        headers: Operations.MigrationsDeleteArchiveForOrg.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsDeleteArchiveForOrg.Output {
+        try await migrationsDeleteArchiveForOrg(Operations.MigrationsDeleteArchiveForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -380,11 +380,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-org)`.
-    public func migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org(
-        path: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Input.Path,
-        headers: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Output {
-        try await migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org(Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Input(
+    public func migrationsUnlockRepoForOrg(
+        path: Operations.MigrationsUnlockRepoForOrg.Input.Path,
+        headers: Operations.MigrationsUnlockRepoForOrg.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsUnlockRepoForOrg.Output {
+        try await migrationsUnlockRepoForOrg(Operations.MigrationsUnlockRepoForOrg.Input(
             path: path,
             headers: headers
         ))
@@ -395,12 +395,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repositories/get(migrations/list-repos-for-org)`.
-    public func migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org(
-        path: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Path,
-        query: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Query = .init(),
-        headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Output {
-        try await migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org(Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input(
+    public func migrationsListReposForOrg(
+        path: Operations.MigrationsListReposForOrg.Input.Path,
+        query: Operations.MigrationsListReposForOrg.Input.Query = .init(),
+        headers: Operations.MigrationsListReposForOrg.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsListReposForOrg.Output {
+        try await migrationsListReposForOrg(Operations.MigrationsListReposForOrg.Input(
             path: path,
             query: query,
             headers: headers
@@ -449,11 +449,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/get(migrations/get-import-status)`.
     @available(*, deprecated)
-    public func migrations_sol_get_hyphen_import_hyphen_status(
-        path: Operations.migrations_sol_get_hyphen_import_hyphen_status.Input.Path,
-        headers: Operations.migrations_sol_get_hyphen_import_hyphen_status.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_get_hyphen_import_hyphen_status.Output {
-        try await migrations_sol_get_hyphen_import_hyphen_status(Operations.migrations_sol_get_hyphen_import_hyphen_status.Input(
+    public func migrationsGetImportStatus(
+        path: Operations.MigrationsGetImportStatus.Input.Path,
+        headers: Operations.MigrationsGetImportStatus.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsGetImportStatus.Output {
+        try await migrationsGetImportStatus(Operations.MigrationsGetImportStatus.Input(
             path: path,
             headers: headers
         ))
@@ -473,12 +473,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
     @available(*, deprecated)
-    public func migrations_sol_update_hyphen_import(
-        path: Operations.migrations_sol_update_hyphen_import.Input.Path,
-        headers: Operations.migrations_sol_update_hyphen_import.Input.Headers = .init(),
-        body: Operations.migrations_sol_update_hyphen_import.Input.Body? = nil
-    ) async throws -> Operations.migrations_sol_update_hyphen_import.Output {
-        try await migrations_sol_update_hyphen_import(Operations.migrations_sol_update_hyphen_import.Input(
+    public func migrationsUpdateImport(
+        path: Operations.MigrationsUpdateImport.Input.Path,
+        headers: Operations.MigrationsUpdateImport.Input.Headers = .init(),
+        body: Operations.MigrationsUpdateImport.Input.Body? = nil
+    ) async throws -> Operations.MigrationsUpdateImport.Output {
+        try await migrationsUpdateImport(Operations.MigrationsUpdateImport.Input(
             path: path,
             headers: headers,
             body: body
@@ -496,12 +496,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
     @available(*, deprecated)
-    public func migrations_sol_start_hyphen_import(
-        path: Operations.migrations_sol_start_hyphen_import.Input.Path,
-        headers: Operations.migrations_sol_start_hyphen_import.Input.Headers = .init(),
-        body: Operations.migrations_sol_start_hyphen_import.Input.Body
-    ) async throws -> Operations.migrations_sol_start_hyphen_import.Output {
-        try await migrations_sol_start_hyphen_import(Operations.migrations_sol_start_hyphen_import.Input(
+    public func migrationsStartImport(
+        path: Operations.MigrationsStartImport.Input.Path,
+        headers: Operations.MigrationsStartImport.Input.Headers = .init(),
+        body: Operations.MigrationsStartImport.Input.Body
+    ) async throws -> Operations.MigrationsStartImport.Output {
+        try await migrationsStartImport(Operations.MigrationsStartImport.Input(
             path: path,
             headers: headers,
             body: body
@@ -517,11 +517,11 @@ extension APIProtocol {
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
     @available(*, deprecated)
-    public func migrations_sol_cancel_hyphen_import(
-        path: Operations.migrations_sol_cancel_hyphen_import.Input.Path,
-        headers: Operations.migrations_sol_cancel_hyphen_import.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_cancel_hyphen_import.Output {
-        try await migrations_sol_cancel_hyphen_import(Operations.migrations_sol_cancel_hyphen_import.Input(
+    public func migrationsCancelImport(
+        path: Operations.MigrationsCancelImport.Input.Path,
+        headers: Operations.MigrationsCancelImport.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsCancelImport.Output {
+        try await migrationsCancelImport(Operations.MigrationsCancelImport.Input(
             path: path,
             headers: headers
         ))
@@ -538,12 +538,12 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
     @available(*, deprecated)
-    public func migrations_sol_get_hyphen_commit_hyphen_authors(
-        path: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Path,
-        query: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Query = .init(),
-        headers: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Output {
-        try await migrations_sol_get_hyphen_commit_hyphen_authors(Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input(
+    public func migrationsGetCommitAuthors(
+        path: Operations.MigrationsGetCommitAuthors.Input.Path,
+        query: Operations.MigrationsGetCommitAuthors.Input.Query = .init(),
+        headers: Operations.MigrationsGetCommitAuthors.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsGetCommitAuthors.Output {
+        try await migrationsGetCommitAuthors(Operations.MigrationsGetCommitAuthors.Input(
             path: path,
             query: query,
             headers: headers
@@ -560,12 +560,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
     @available(*, deprecated)
-    public func migrations_sol_map_hyphen_commit_hyphen_author(
-        path: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Path,
-        headers: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Headers = .init(),
-        body: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Body? = nil
-    ) async throws -> Operations.migrations_sol_map_hyphen_commit_hyphen_author.Output {
-        try await migrations_sol_map_hyphen_commit_hyphen_author(Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input(
+    public func migrationsMapCommitAuthor(
+        path: Operations.MigrationsMapCommitAuthor.Input.Path,
+        headers: Operations.MigrationsMapCommitAuthor.Input.Headers = .init(),
+        body: Operations.MigrationsMapCommitAuthor.Input.Body? = nil
+    ) async throws -> Operations.MigrationsMapCommitAuthor.Output {
+        try await migrationsMapCommitAuthor(Operations.MigrationsMapCommitAuthor.Input(
             path: path,
             headers: headers,
             body: body
@@ -581,11 +581,11 @@ extension APIProtocol {
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
     @available(*, deprecated)
-    public func migrations_sol_get_hyphen_large_hyphen_files(
-        path: Operations.migrations_sol_get_hyphen_large_hyphen_files.Input.Path,
-        headers: Operations.migrations_sol_get_hyphen_large_hyphen_files.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_get_hyphen_large_hyphen_files.Output {
-        try await migrations_sol_get_hyphen_large_hyphen_files(Operations.migrations_sol_get_hyphen_large_hyphen_files.Input(
+    public func migrationsGetLargeFiles(
+        path: Operations.MigrationsGetLargeFiles.Input.Path,
+        headers: Operations.MigrationsGetLargeFiles.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsGetLargeFiles.Output {
+        try await migrationsGetLargeFiles(Operations.MigrationsGetLargeFiles.Input(
             path: path,
             headers: headers
         ))
@@ -604,12 +604,12 @@ extension APIProtocol {
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
     @available(*, deprecated)
-    public func migrations_sol_set_hyphen_lfs_hyphen_preference(
-        path: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Path,
-        headers: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Headers = .init(),
-        body: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Body
-    ) async throws -> Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Output {
-        try await migrations_sol_set_hyphen_lfs_hyphen_preference(Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input(
+    public func migrationsSetLfsPreference(
+        path: Operations.MigrationsSetLfsPreference.Input.Path,
+        headers: Operations.MigrationsSetLfsPreference.Input.Headers = .init(),
+        body: Operations.MigrationsSetLfsPreference.Input.Body
+    ) async throws -> Operations.MigrationsSetLfsPreference.Output {
+        try await migrationsSetLfsPreference(Operations.MigrationsSetLfsPreference.Input(
             path: path,
             headers: headers,
             body: body
@@ -621,11 +621,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/migrations`.
     /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)`.
-    public func migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(
-        query: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user(Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func migrationsListForAuthenticatedUser(
+        query: Operations.MigrationsListForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.MigrationsListForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsListForAuthenticatedUser.Output {
+        try await migrationsListForAuthenticatedUser(Operations.MigrationsListForAuthenticatedUser.Input(
             query: query,
             headers: headers
         ))
@@ -636,11 +636,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `POST /user/migrations`.
     /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)`.
-    public func migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user(
-        headers: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-        body: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
-    ) async throws -> Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user(Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func migrationsStartForAuthenticatedUser(
+        headers: Operations.MigrationsStartForAuthenticatedUser.Input.Headers = .init(),
+        body: Operations.MigrationsStartForAuthenticatedUser.Input.Body
+    ) async throws -> Operations.MigrationsStartForAuthenticatedUser.Output {
+        try await migrationsStartForAuthenticatedUser(Operations.MigrationsStartForAuthenticatedUser.Input(
             headers: headers,
             body: body
         ))
@@ -658,12 +658,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)`.
-    public func migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        query: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user(Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func migrationsGetStatusForAuthenticatedUser(
+        path: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Path,
+        query: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsGetStatusForAuthenticatedUser.Output {
+        try await migrationsGetStatusForAuthenticatedUser(Operations.MigrationsGetStatusForAuthenticatedUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -695,11 +695,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)`.
-    public func migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func migrationsGetArchiveForAuthenticatedUser(
+        path: Operations.MigrationsGetArchiveForAuthenticatedUser.Input.Path,
+        headers: Operations.MigrationsGetArchiveForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsGetArchiveForAuthenticatedUser.Output {
+        try await migrationsGetArchiveForAuthenticatedUser(Operations.MigrationsGetArchiveForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -710,11 +710,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)`.
-    public func migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func migrationsDeleteArchiveForAuthenticatedUser(
+        path: Operations.MigrationsDeleteArchiveForAuthenticatedUser.Input.Path,
+        headers: Operations.MigrationsDeleteArchiveForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsDeleteArchiveForAuthenticatedUser.Output {
+        try await migrationsDeleteArchiveForAuthenticatedUser(Operations.MigrationsDeleteArchiveForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -725,11 +725,11 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `DELETE /user/migrations/{migration_id}/repos/{repo_name}/lock`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)`.
-    public func migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        headers: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user(Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func migrationsUnlockRepoForAuthenticatedUser(
+        path: Operations.MigrationsUnlockRepoForAuthenticatedUser.Input.Path,
+        headers: Operations.MigrationsUnlockRepoForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsUnlockRepoForAuthenticatedUser.Output {
+        try await migrationsUnlockRepoForAuthenticatedUser(Operations.MigrationsUnlockRepoForAuthenticatedUser.Input(
             path: path,
             headers: headers
         ))
@@ -740,12 +740,12 @@ extension APIProtocol {
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}/repositories`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repositories/get(migrations/list-repos-for-authenticated-user)`.
-    public func migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(
-        path: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-        query: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-        headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
-    ) async throws -> Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output {
-        try await migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input(
+    public func migrationsListReposForAuthenticatedUser(
+        path: Operations.MigrationsListReposForAuthenticatedUser.Input.Path,
+        query: Operations.MigrationsListReposForAuthenticatedUser.Input.Query = .init(),
+        headers: Operations.MigrationsListReposForAuthenticatedUser.Input.Headers = .init()
+    ) async throws -> Operations.MigrationsListReposForAuthenticatedUser.Output {
+        try await migrationsListReposForAuthenticatedUser(Operations.MigrationsListReposForAuthenticatedUser.Input(
             path: path,
             query: query,
             headers: headers
@@ -755,6 +755,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -770,7 +779,7 @@ public enum Components {
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/simple-user`.
-        public struct simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct SimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/email`.
@@ -780,171 +789,171 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `SimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// Basic Error
         ///
         /// - Remark: Generated from `#/components/schemas/basic-error`.
-        public struct basic_hyphen_error: Codable, Hashable, Sendable {
+        public struct BasicError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/basic-error/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/documentation_url`.
-            public var documentation_url: Swift.String?
+            public var documentationUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/basic-error/status`.
             public var status: Swift.String?
-            /// Creates a new `basic_hyphen_error`.
+            /// Creates a new `BasicError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - url:
             ///   - status:
             public init(
                 message: Swift.String? = nil,
-                documentation_url: Swift.String? = nil,
+                documentationUrl: Swift.String? = nil,
                 url: Swift.String? = nil,
                 status: Swift.String? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.url = url
                 self.status = status
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case url
                 case status
             }
@@ -952,30 +961,30 @@ public enum Components {
         /// Validation Error
         ///
         /// - Remark: Generated from `#/components/schemas/validation-error`.
-        public struct validation_hyphen_error: Codable, Hashable, Sendable {
+        public struct ValidationError: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/validation-error/message`.
             public var message: Swift.String
             /// - Remark: Generated from `#/components/schemas/validation-error/documentation_url`.
-            public var documentation_url: Swift.String
-            /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload`.
-            public struct errorsPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/resource`.
+            public var documentationUrl: Swift.String
+            /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload`.
+            public struct ErrorsPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/resource`.
                 public var resource: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/field`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/field`.
                 public var field: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/message`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/message`.
                 public var message: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/code`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/code`.
                 public var code: Swift.String
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/index`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/index`.
                 public var index: Swift.Int?
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                @frozen public enum valuePayload: Codable, Hashable, Sendable {
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case1`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                @frozen public enum ValuePayload: Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case1`.
                     case case1(Swift.String?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case2`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case2`.
                     case case2(Swift.Int?)
-                    /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value/case3`.
+                    /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value/case3`.
                     case case3([Swift.String]?)
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
@@ -1014,9 +1023,9 @@ public enum Components {
                         }
                     }
                 }
-                /// - Remark: Generated from `#/components/schemas/validation-error/errorsPayload/value`.
-                public var value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload?
-                /// Creates a new `errorsPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/validation-error/ErrorsPayload/value`.
+                public var value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload?
+                /// Creates a new `ErrorsPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - resource:
@@ -1031,7 +1040,7 @@ public enum Components {
                     message: Swift.String? = nil,
                     code: Swift.String,
                     index: Swift.Int? = nil,
-                    value: Components.Schemas.validation_hyphen_error.errorsPayloadPayload.valuePayload? = nil
+                    value: Components.Schemas.ValidationError.ErrorsPayloadPayload.ValuePayload? = nil
                 ) {
                     self.resource = resource
                     self.field = field
@@ -1050,34 +1059,34 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public typealias errorsPayload = [Components.Schemas.validation_hyphen_error.errorsPayloadPayload]
+            public typealias ErrorsPayload = [Components.Schemas.ValidationError.ErrorsPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/validation-error/errors`.
-            public var errors: Components.Schemas.validation_hyphen_error.errorsPayload?
-            /// Creates a new `validation_hyphen_error`.
+            public var errors: Components.Schemas.ValidationError.ErrorsPayload?
+            /// Creates a new `ValidationError`.
             ///
             /// - Parameters:
             ///   - message:
-            ///   - documentation_url:
+            ///   - documentationUrl:
             ///   - errors:
             public init(
                 message: Swift.String,
-                documentation_url: Swift.String,
-                errors: Components.Schemas.validation_hyphen_error.errorsPayload? = nil
+                documentationUrl: Swift.String,
+                errors: Components.Schemas.ValidationError.ErrorsPayload? = nil
             ) {
                 self.message = message
-                self.documentation_url = documentation_url
+                self.documentationUrl = documentationUrl
                 self.errors = errors
             }
             public enum CodingKeys: String, CodingKey {
                 case message
-                case documentation_url
+                case documentationUrl = "documentation_url"
                 case errors
             }
         }
         /// A GitHub user.
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-simple-user`.
-        public struct nullable_hyphen_simple_hyphen_user: Codable, Hashable, Sendable {
+        public struct NullableSimpleUser: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/name`.
             public var name: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/email`.
@@ -1087,142 +1096,142 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/avatar_url`.
-            public var avatar_url: Swift.String
+            public var avatarUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gravatar_id`.
-            public var gravatar_id: Swift.String?
+            public var gravatarId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/followers_url`.
-            public var followers_url: Swift.String
+            public var followersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/following_url`.
-            public var following_url: Swift.String
+            public var followingUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/gists_url`.
-            public var gists_url: Swift.String
+            public var gistsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_url`.
-            public var starred_url: Swift.String
+            public var starredUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/subscriptions_url`.
-            public var subscriptions_url: Swift.String
+            public var subscriptionsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/organizations_url`.
-            public var organizations_url: Swift.String
+            public var organizationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/repos_url`.
-            public var repos_url: Swift.String
+            public var reposUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/received_events_url`.
-            public var received_events_url: Swift.String
+            public var receivedEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/type`.
             public var _type: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/site_admin`.
-            public var site_admin: Swift.Bool
+            public var siteAdmin: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-simple-user/user_view_type`.
-            public var user_view_type: Swift.String?
-            /// Creates a new `nullable_hyphen_simple_hyphen_user`.
+            public var userViewType: Swift.String?
+            /// Creates a new `NullableSimpleUser`.
             ///
             /// - Parameters:
             ///   - name:
             ///   - email:
             ///   - login:
             ///   - id:
-            ///   - node_id:
-            ///   - avatar_url:
-            ///   - gravatar_id:
+            ///   - nodeId:
+            ///   - avatarUrl:
+            ///   - gravatarId:
             ///   - url:
-            ///   - html_url:
-            ///   - followers_url:
-            ///   - following_url:
-            ///   - gists_url:
-            ///   - starred_url:
-            ///   - subscriptions_url:
-            ///   - organizations_url:
-            ///   - repos_url:
-            ///   - events_url:
-            ///   - received_events_url:
+            ///   - htmlUrl:
+            ///   - followersUrl:
+            ///   - followingUrl:
+            ///   - gistsUrl:
+            ///   - starredUrl:
+            ///   - subscriptionsUrl:
+            ///   - organizationsUrl:
+            ///   - reposUrl:
+            ///   - eventsUrl:
+            ///   - receivedEventsUrl:
             ///   - _type:
-            ///   - site_admin:
-            ///   - starred_at:
-            ///   - user_view_type:
+            ///   - siteAdmin:
+            ///   - starredAt:
+            ///   - userViewType:
             public init(
                 name: Swift.String? = nil,
                 email: Swift.String? = nil,
                 login: Swift.String,
                 id: Swift.Int64,
-                node_id: Swift.String,
-                avatar_url: Swift.String,
-                gravatar_id: Swift.String? = nil,
+                nodeId: Swift.String,
+                avatarUrl: Swift.String,
+                gravatarId: Swift.String? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                followers_url: Swift.String,
-                following_url: Swift.String,
-                gists_url: Swift.String,
-                starred_url: Swift.String,
-                subscriptions_url: Swift.String,
-                organizations_url: Swift.String,
-                repos_url: Swift.String,
-                events_url: Swift.String,
-                received_events_url: Swift.String,
+                htmlUrl: Swift.String,
+                followersUrl: Swift.String,
+                followingUrl: Swift.String,
+                gistsUrl: Swift.String,
+                starredUrl: Swift.String,
+                subscriptionsUrl: Swift.String,
+                organizationsUrl: Swift.String,
+                reposUrl: Swift.String,
+                eventsUrl: Swift.String,
+                receivedEventsUrl: Swift.String,
                 _type: Swift.String,
-                site_admin: Swift.Bool,
-                starred_at: Swift.String? = nil,
-                user_view_type: Swift.String? = nil
+                siteAdmin: Swift.Bool,
+                starredAt: Swift.String? = nil,
+                userViewType: Swift.String? = nil
             ) {
                 self.name = name
                 self.email = email
                 self.login = login
                 self.id = id
-                self.node_id = node_id
-                self.avatar_url = avatar_url
-                self.gravatar_id = gravatar_id
+                self.nodeId = nodeId
+                self.avatarUrl = avatarUrl
+                self.gravatarId = gravatarId
                 self.url = url
-                self.html_url = html_url
-                self.followers_url = followers_url
-                self.following_url = following_url
-                self.gists_url = gists_url
-                self.starred_url = starred_url
-                self.subscriptions_url = subscriptions_url
-                self.organizations_url = organizations_url
-                self.repos_url = repos_url
-                self.events_url = events_url
-                self.received_events_url = received_events_url
+                self.htmlUrl = htmlUrl
+                self.followersUrl = followersUrl
+                self.followingUrl = followingUrl
+                self.gistsUrl = gistsUrl
+                self.starredUrl = starredUrl
+                self.subscriptionsUrl = subscriptionsUrl
+                self.organizationsUrl = organizationsUrl
+                self.reposUrl = reposUrl
+                self.eventsUrl = eventsUrl
+                self.receivedEventsUrl = receivedEventsUrl
                 self._type = _type
-                self.site_admin = site_admin
-                self.starred_at = starred_at
-                self.user_view_type = user_view_type
+                self.siteAdmin = siteAdmin
+                self.starredAt = starredAt
+                self.userViewType = userViewType
             }
             public enum CodingKeys: String, CodingKey {
                 case name
                 case email
                 case login
                 case id
-                case node_id
-                case avatar_url
-                case gravatar_id
+                case nodeId = "node_id"
+                case avatarUrl = "avatar_url"
+                case gravatarId = "gravatar_id"
                 case url
-                case html_url
-                case followers_url
-                case following_url
-                case gists_url
-                case starred_url
-                case subscriptions_url
-                case organizations_url
-                case repos_url
-                case events_url
-                case received_events_url
+                case htmlUrl = "html_url"
+                case followersUrl = "followers_url"
+                case followingUrl = "following_url"
+                case gistsUrl = "gists_url"
+                case starredUrl = "starred_url"
+                case subscriptionsUrl = "subscriptions_url"
+                case organizationsUrl = "organizations_url"
+                case reposUrl = "repos_url"
+                case eventsUrl = "events_url"
+                case receivedEventsUrl = "received_events_url"
                 case _type = "type"
-                case site_admin
-                case starred_at
-                case user_view_type
+                case siteAdmin = "site_admin"
+                case starredAt = "starred_at"
+                case userViewType = "user_view_type"
             }
         }
         /// License Simple
         ///
         /// - Remark: Generated from `#/components/schemas/nullable-license-simple`.
-        public struct nullable_hyphen_license_hyphen_simple: Codable, Hashable, Sendable {
+        public struct NullableLicenseSimple: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/name`.
@@ -1230,66 +1239,66 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/url`.
             public var url: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/spdx_id`.
-            public var spdx_id: Swift.String?
+            public var spdxId: Swift.String?
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/nullable-license-simple/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `nullable_hyphen_license_hyphen_simple`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `NullableLicenseSimple`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
-            ///   - spdx_id:
-            ///   - node_id:
-            ///   - html_url:
+            ///   - spdxId:
+            ///   - nodeId:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String? = nil,
-                spdx_id: Swift.String? = nil,
-                node_id: Swift.String,
-                html_url: Swift.String? = nil
+                spdxId: Swift.String? = nil,
+                nodeId: Swift.String,
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
-                self.spdx_id = spdx_id
-                self.node_id = node_id
-                self.html_url = html_url
+                self.spdxId = spdxId
+                self.nodeId = nodeId
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
-                case spdx_id
-                case node_id
-                case html_url
+                case spdxId = "spdx_id"
+                case nodeId = "node_id"
+                case htmlUrl = "html_url"
             }
         }
         /// A repository on GitHub.
         ///
         /// - Remark: Generated from `#/components/schemas/repository`.
-        public struct repository: Codable, Hashable, Sendable {
+        public struct Repository: Codable, Hashable, Sendable {
             /// Unique identifier of the repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// The name of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/license`.
-            public var license: Components.Schemas.nullable_hyphen_license_hyphen_simple?
+            public var license: Components.Schemas.NullableLicenseSimple?
             /// - Remark: Generated from `#/components/schemas/repository/forks`.
             public var forks: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/admin`.
                 public var admin: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/pull`.
@@ -1300,7 +1309,7 @@ public enum Components {
                 public var push: Swift.Bool
                 /// - Remark: Generated from `#/components/schemas/repository/permissions/maintain`.
                 public var maintain: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -1330,15 +1339,15 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository/permissions`.
-            public var permissions: Components.Schemas.repository.permissionsPayload?
+            public var permissions: Components.Schemas.Repository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// Whether the repository is private or public.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/fork`.
@@ -1346,97 +1355,97 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/git_url`.
-            public var git_url: Swift.String
+            public var gitUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/ssh_url`.
-            public var ssh_url: Swift.String
+            public var sshUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/clone_url`.
-            public var clone_url: Swift.String
+            public var cloneUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/svn_url`.
-            public var svn_url: Swift.String
+            public var svnUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/forks_count`.
-            public var forks_count: Swift.Int
+            public var forksCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/stargazers_count`.
-            public var stargazers_count: Swift.Int
+            public var stargazersCount: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers_count`.
-            public var watchers_count: Swift.Int
+            public var watchersCount: Swift.Int
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/size`.
@@ -1444,38 +1453,38 @@ public enum Components {
             /// The default branch of the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/default_branch`.
-            public var default_branch: Swift.String
+            public var defaultBranch: Swift.String
             /// - Remark: Generated from `#/components/schemas/repository/open_issues_count`.
-            public var open_issues_count: Swift.Int
+            public var openIssuesCount: Swift.Int
             /// Whether this repository acts as a template that can be used to generate new repositories.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/topics`.
             public var topics: [Swift.String]?
             /// Whether issues are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_issues`.
-            public var has_issues: Swift.Bool
+            public var hasIssues: Swift.Bool
             /// Whether projects are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_projects`.
-            public var has_projects: Swift.Bool
+            public var hasProjects: Swift.Bool
             /// Whether the wiki is enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_wiki`.
-            public var has_wiki: Swift.Bool
+            public var hasWiki: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/repository/has_pages`.
-            public var has_pages: Swift.Bool
+            public var hasPages: Swift.Bool
             /// Whether downloads are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_downloads`.
             @available(*, deprecated)
-            public var has_downloads: Swift.Bool
+            public var hasDownloads: Swift.Bool
             /// Whether discussions are enabled.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// Whether the repository is archived.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/archived`.
@@ -1489,47 +1498,47 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// Whether to allow rebase merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_rebase_merge`.
-            public var allow_rebase_merge: Swift.Bool?
+            public var allowRebaseMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// Whether to allow squash merges for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_squash_merge`.
-            public var allow_squash_merge: Swift.Bool?
+            public var allowSquashMerge: Swift.Bool?
             /// Whether to allow Auto-merge to be used on pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_auto_merge`.
-            public var allow_auto_merge: Swift.Bool?
+            public var allowAutoMerge: Swift.Bool?
             /// Whether to delete head branches when pull requests are merged
             ///
             /// - Remark: Generated from `#/components/schemas/repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_update_branch`.
-            public var allow_update_branch: Swift.Bool?
+            public var allowUpdateBranch: Swift.Bool?
             /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/use_squash_pr_title_as_default`.
             @available(*, deprecated)
-            public var use_squash_pr_title_as_default: Swift.Bool?
+            public var useSquashPrTitleAsDefault: Swift.Bool?
             /// The default value for a squash merge commit title:
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
+            @frozen public enum SquashMergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case commitOrPrTitle = "COMMIT_OR_PR_TITLE"
             }
             /// The default value for a squash merge commit title:
             ///
@@ -1537,7 +1546,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            public var squash_merge_commit_title: Components.Schemas.repository.squash_merge_commit_titlePayload?
+            public var squashMergeCommitTitle: Components.Schemas.Repository.SquashMergeCommitTitlePayload?
             /// The default value for a squash merge commit message:
             ///
             /// - `PR_BODY` - default to the pull request's body.
@@ -1545,10 +1554,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case COMMIT_MESSAGES = "COMMIT_MESSAGES"
-                case BLANK = "BLANK"
+            @frozen public enum SquashMergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case commitMessages = "COMMIT_MESSAGES"
+                case blank = "BLANK"
             }
             /// The default value for a squash merge commit message:
             ///
@@ -1557,16 +1566,16 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            public var squash_merge_commit_message: Components.Schemas.repository.squash_merge_commit_messagePayload?
+            public var squashMergeCommitMessage: Components.Schemas.Repository.SquashMergeCommitMessagePayload?
             /// The default value for a merge commit title.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
-                case PR_TITLE = "PR_TITLE"
-                case MERGE_MESSAGE = "MERGE_MESSAGE"
+            @frozen public enum MergeCommitTitlePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prTitle = "PR_TITLE"
+                case mergeMessage = "MERGE_MESSAGE"
             }
             /// The default value for a merge commit title.
             ///
@@ -1574,7 +1583,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            public var merge_commit_title: Components.Schemas.repository.merge_commit_titlePayload?
+            public var mergeCommitTitle: Components.Schemas.Repository.MergeCommitTitlePayload?
             /// The default value for a merge commit message.
             ///
             /// - `PR_TITLE` - default to the pull request's title.
@@ -1582,10 +1591,10 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
-                case PR_BODY = "PR_BODY"
-                case PR_TITLE = "PR_TITLE"
-                case BLANK = "BLANK"
+            @frozen public enum MergeCommitMessagePayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case prBody = "PR_BODY"
+                case prTitle = "PR_TITLE"
+                case blank = "BLANK"
             }
             /// The default value for a merge commit message.
             ///
@@ -1594,424 +1603,424 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            public var merge_commit_message: Components.Schemas.repository.merge_commit_messagePayload?
+            public var mergeCommitMessage: Components.Schemas.Repository.MergeCommitMessagePayload?
             /// Whether to allow merge commits for pull requests.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_merge_commit`.
-            public var allow_merge_commit: Swift.Bool?
+            public var allowMergeCommit: Swift.Bool?
             /// Whether to allow forking this repo
             ///
             /// - Remark: Generated from `#/components/schemas/repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// Whether to require contributors to sign off on web-based commits
             ///
             /// - Remark: Generated from `#/components/schemas/repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/repository/open_issues`.
-            public var open_issues: Swift.Int
+            public var openIssues: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/watchers`.
             public var watchers: Swift.Int
             /// - Remark: Generated from `#/components/schemas/repository/master_branch`.
-            public var master_branch: Swift.String?
+            public var masterBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/repository/starred_at`.
-            public var starred_at: Swift.String?
+            public var starredAt: Swift.String?
             /// Whether anonymous git access is enabled for this repository
             ///
             /// - Remark: Generated from `#/components/schemas/repository/anonymous_access_enabled`.
-            public var anonymous_access_enabled: Swift.Bool?
-            /// Creates a new `repository`.
+            public var anonymousAccessEnabled: Swift.Bool?
+            /// Creates a new `Repository`.
             ///
             /// - Parameters:
             ///   - id: Unique identifier of the repository
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name: The name of the repository.
-            ///   - full_name:
+            ///   - fullName:
             ///   - license:
             ///   - forks:
             ///   - permissions:
             ///   - owner:
             ///   - _private: Whether the repository is private or public.
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch: The default branch of the repository.
-            ///   - open_issues_count:
-            ///   - is_template: Whether this repository acts as a template that can be used to generate new repositories.
+            ///   - defaultBranch: The default branch of the repository.
+            ///   - openIssuesCount:
+            ///   - isTemplate: Whether this repository acts as a template that can be used to generate new repositories.
             ///   - topics:
-            ///   - has_issues: Whether issues are enabled.
-            ///   - has_projects: Whether projects are enabled.
-            ///   - has_wiki: Whether the wiki is enabled.
-            ///   - has_pages:
-            ///   - has_downloads: Whether downloads are enabled.
-            ///   - has_discussions: Whether discussions are enabled.
+            ///   - hasIssues: Whether issues are enabled.
+            ///   - hasProjects: Whether projects are enabled.
+            ///   - hasWiki: Whether the wiki is enabled.
+            ///   - hasPages:
+            ///   - hasDownloads: Whether downloads are enabled.
+            ///   - hasDiscussions: Whether discussions are enabled.
             ///   - archived: Whether the repository is archived.
             ///   - disabled: Returns whether or not this repository disabled.
             ///   - visibility: The repository visibility: public, private, or internal.
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - allow_rebase_merge: Whether to allow rebase merges for pull requests.
-            ///   - temp_clone_token:
-            ///   - allow_squash_merge: Whether to allow squash merges for pull requests.
-            ///   - allow_auto_merge: Whether to allow Auto-merge to be used on pull requests.
-            ///   - delete_branch_on_merge: Whether to delete head branches when pull requests are merged
-            ///   - allow_update_branch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
-            ///   - use_squash_pr_title_as_default: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
-            ///   - squash_merge_commit_title: The default value for a squash merge commit title:
-            ///   - squash_merge_commit_message: The default value for a squash merge commit message:
-            ///   - merge_commit_title: The default value for a merge commit title.
-            ///   - merge_commit_message: The default value for a merge commit message.
-            ///   - allow_merge_commit: Whether to allow merge commits for pull requests.
-            ///   - allow_forking: Whether to allow forking this repo
-            ///   - web_commit_signoff_required: Whether to require contributors to sign off on web-based commits
-            ///   - open_issues:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - allowRebaseMerge: Whether to allow rebase merges for pull requests.
+            ///   - tempCloneToken:
+            ///   - allowSquashMerge: Whether to allow squash merges for pull requests.
+            ///   - allowAutoMerge: Whether to allow Auto-merge to be used on pull requests.
+            ///   - deleteBranchOnMerge: Whether to delete head branches when pull requests are merged
+            ///   - allowUpdateBranch: Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.
+            ///   - useSquashPrTitleAsDefault: Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
+            ///   - squashMergeCommitTitle: The default value for a squash merge commit title:
+            ///   - squashMergeCommitMessage: The default value for a squash merge commit message:
+            ///   - mergeCommitTitle: The default value for a merge commit title.
+            ///   - mergeCommitMessage: The default value for a merge commit message.
+            ///   - allowMergeCommit: Whether to allow merge commits for pull requests.
+            ///   - allowForking: Whether to allow forking this repo
+            ///   - webCommitSignoffRequired: Whether to require contributors to sign off on web-based commits
+            ///   - openIssues:
             ///   - watchers:
-            ///   - master_branch:
-            ///   - starred_at:
-            ///   - anonymous_access_enabled: Whether anonymous git access is enabled for this repository
+            ///   - masterBranch:
+            ///   - starredAt:
+            ///   - anonymousAccessEnabled: Whether anonymous git access is enabled for this repository
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                license: Components.Schemas.nullable_hyphen_license_hyphen_simple? = nil,
+                fullName: Swift.String,
+                license: Components.Schemas.NullableLicenseSimple? = nil,
                 forks: Swift.Int,
-                permissions: Components.Schemas.repository.permissionsPayload? = nil,
-                owner: Components.Schemas.simple_hyphen_user,
+                permissions: Components.Schemas.Repository.PermissionsPayload? = nil,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int,
-                stargazers_count: Swift.Int,
-                watchers_count: Swift.Int,
+                forksCount: Swift.Int,
+                stargazersCount: Swift.Int,
+                watchersCount: Swift.Int,
                 size: Swift.Int,
-                default_branch: Swift.String,
-                open_issues_count: Swift.Int,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String,
+                openIssuesCount: Swift.Int,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool,
-                has_projects: Swift.Bool,
-                has_wiki: Swift.Bool,
-                has_pages: Swift.Bool,
-                has_downloads: Swift.Bool,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool,
+                hasProjects: Swift.Bool,
+                hasWiki: Swift.Bool,
+                hasPages: Swift.Bool,
+                hasDownloads: Swift.Bool,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool,
                 disabled: Swift.Bool,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                allow_rebase_merge: Swift.Bool? = nil,
-                temp_clone_token: Swift.String? = nil,
-                allow_squash_merge: Swift.Bool? = nil,
-                allow_auto_merge: Swift.Bool? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                allow_update_branch: Swift.Bool? = nil,
-                use_squash_pr_title_as_default: Swift.Bool? = nil,
-                squash_merge_commit_title: Components.Schemas.repository.squash_merge_commit_titlePayload? = nil,
-                squash_merge_commit_message: Components.Schemas.repository.squash_merge_commit_messagePayload? = nil,
-                merge_commit_title: Components.Schemas.repository.merge_commit_titlePayload? = nil,
-                merge_commit_message: Components.Schemas.repository.merge_commit_messagePayload? = nil,
-                allow_merge_commit: Swift.Bool? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                open_issues: Swift.Int,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                allowRebaseMerge: Swift.Bool? = nil,
+                tempCloneToken: Swift.String? = nil,
+                allowSquashMerge: Swift.Bool? = nil,
+                allowAutoMerge: Swift.Bool? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                allowUpdateBranch: Swift.Bool? = nil,
+                useSquashPrTitleAsDefault: Swift.Bool? = nil,
+                squashMergeCommitTitle: Components.Schemas.Repository.SquashMergeCommitTitlePayload? = nil,
+                squashMergeCommitMessage: Components.Schemas.Repository.SquashMergeCommitMessagePayload? = nil,
+                mergeCommitTitle: Components.Schemas.Repository.MergeCommitTitlePayload? = nil,
+                mergeCommitMessage: Components.Schemas.Repository.MergeCommitMessagePayload? = nil,
+                allowMergeCommit: Swift.Bool? = nil,
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                openIssues: Swift.Int,
                 watchers: Swift.Int,
-                master_branch: Swift.String? = nil,
-                starred_at: Swift.String? = nil,
-                anonymous_access_enabled: Swift.Bool? = nil
+                masterBranch: Swift.String? = nil,
+                starredAt: Swift.String? = nil,
+                anonymousAccessEnabled: Swift.Bool? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.license = license
                 self.forks = forks
                 self.permissions = permissions
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.allow_rebase_merge = allow_rebase_merge
-                self.temp_clone_token = temp_clone_token
-                self.allow_squash_merge = allow_squash_merge
-                self.allow_auto_merge = allow_auto_merge
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.allow_update_branch = allow_update_branch
-                self.use_squash_pr_title_as_default = use_squash_pr_title_as_default
-                self.squash_merge_commit_title = squash_merge_commit_title
-                self.squash_merge_commit_message = squash_merge_commit_message
-                self.merge_commit_title = merge_commit_title
-                self.merge_commit_message = merge_commit_message
-                self.allow_merge_commit = allow_merge_commit
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.open_issues = open_issues
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.allowRebaseMerge = allowRebaseMerge
+                self.tempCloneToken = tempCloneToken
+                self.allowSquashMerge = allowSquashMerge
+                self.allowAutoMerge = allowAutoMerge
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.allowUpdateBranch = allowUpdateBranch
+                self.useSquashPrTitleAsDefault = useSquashPrTitleAsDefault
+                self.squashMergeCommitTitle = squashMergeCommitTitle
+                self.squashMergeCommitMessage = squashMergeCommitMessage
+                self.mergeCommitTitle = mergeCommitTitle
+                self.mergeCommitMessage = mergeCommitMessage
+                self.allowMergeCommit = allowMergeCommit
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.master_branch = master_branch
-                self.starred_at = starred_at
-                self.anonymous_access_enabled = anonymous_access_enabled
+                self.masterBranch = masterBranch
+                self.starredAt = starredAt
+                self.anonymousAccessEnabled = anonymousAccessEnabled
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case license
                 case forks
                 case permissions
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
-                case allow_rebase_merge
-                case temp_clone_token
-                case allow_squash_merge
-                case allow_auto_merge
-                case delete_branch_on_merge
-                case allow_update_branch
-                case use_squash_pr_title_as_default
-                case squash_merge_commit_title
-                case squash_merge_commit_message
-                case merge_commit_title
-                case merge_commit_message
-                case allow_merge_commit
-                case allow_forking
-                case web_commit_signoff_required
-                case open_issues
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case allowRebaseMerge = "allow_rebase_merge"
+                case tempCloneToken = "temp_clone_token"
+                case allowSquashMerge = "allow_squash_merge"
+                case allowAutoMerge = "allow_auto_merge"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case allowUpdateBranch = "allow_update_branch"
+                case useSquashPrTitleAsDefault = "use_squash_pr_title_as_default"
+                case squashMergeCommitTitle = "squash_merge_commit_title"
+                case squashMergeCommitMessage = "squash_merge_commit_message"
+                case mergeCommitTitle = "merge_commit_title"
+                case mergeCommitMessage = "merge_commit_message"
+                case allowMergeCommit = "allow_merge_commit"
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case openIssues = "open_issues"
                 case watchers
-                case master_branch
-                case starred_at
-                case anonymous_access_enabled
+                case masterBranch = "master_branch"
+                case starredAt = "starred_at"
+                case anonymousAccessEnabled = "anonymous_access_enabled"
             }
         }
         /// Code Of Conduct
         ///
         /// - Remark: Generated from `#/components/schemas/code-of-conduct`.
-        public struct code_hyphen_of_hyphen_conduct: Codable, Hashable, Sendable {
+        public struct CodeOfConduct: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/key`.
             public var key: Swift.String
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/name`.
@@ -2021,52 +2030,52 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/body`.
             public var body: Swift.String?
             /// - Remark: Generated from `#/components/schemas/code-of-conduct/html_url`.
-            public var html_url: Swift.String?
-            /// Creates a new `code_hyphen_of_hyphen_conduct`.
+            public var htmlUrl: Swift.String?
+            /// Creates a new `CodeOfConduct`.
             ///
             /// - Parameters:
             ///   - key:
             ///   - name:
             ///   - url:
             ///   - body:
-            ///   - html_url:
+            ///   - htmlUrl:
             public init(
                 key: Swift.String,
                 name: Swift.String,
                 url: Swift.String,
                 body: Swift.String? = nil,
-                html_url: Swift.String? = nil
+                htmlUrl: Swift.String? = nil
             ) {
                 self.key = key
                 self.name = name
                 self.url = url
                 self.body = body
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case key
                 case name
                 case url
                 case body
-                case html_url
+                case htmlUrl = "html_url"
             }
         }
         /// - Remark: Generated from `#/components/schemas/security-and-analysis`.
-        public struct security_hyphen_and_hyphen_analysis: Codable, Hashable, Sendable {
+        public struct SecurityAndAnalysis: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public struct advanced_securityPayload: Codable, Hashable, Sendable {
+            public struct AdvancedSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload?
-                /// Creates a new `advanced_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload?
+                /// Creates a new `AdvancedSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2074,21 +2083,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
-            public var advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload?
+            public var advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public struct code_securityPayload: Codable, Hashable, Sendable {
+            public struct CodeSecurityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload?
-                /// Creates a new `code_securityPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload?
+                /// Creates a new `CodeSecurityPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2096,27 +2105,27 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
-            public var code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload?
+            public var codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload?
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public struct dependabot_security_updatesPayload: Codable, Hashable, Sendable {
+            public struct DependabotSecurityUpdatesPayload: Codable, Hashable, Sendable {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload?
-                /// Creates a new `dependabot_security_updatesPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload?
+                /// Creates a new `DependabotSecurityUpdatesPayload`.
                 ///
                 /// - Parameters:
                 ///   - status: The enablement status of Dependabot security updates for the repository.
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2126,21 +2135,21 @@ public enum Components {
             /// Enable or disable Dependabot security updates for the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates`.
-            public var dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload?
+            public var dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public struct secret_scanningPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload?
-                /// Creates a new `secret_scanningPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload?
+                /// Creates a new `SecretScanningPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2148,21 +2157,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
-            public var secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload?
+            public var secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningPushProtectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_push_protectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningPushProtectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2170,21 +2179,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
-            public var secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload?
+            public var secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningNonProviderPatternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload?
-                /// Creates a new `secret_scanning_non_provider_patternsPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload?
+                /// Creates a new `SecretScanningNonProviderPatternsPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2192,21 +2201,21 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
-            public var secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload?
+            public var secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload?
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
+            public struct SecretScanningAiDetectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                public var status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload?
-                /// Creates a new `secret_scanning_ai_detectionPayload`.
+                public var status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload?
+                /// Creates a new `SecretScanningAiDetectionPayload`.
                 ///
                 /// - Parameters:
                 ///   - status:
-                public init(status: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload.statusPayload? = nil) {
+                public init(status: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload.StatusPayload? = nil) {
                     self.status = status
                 }
                 public enum CodingKeys: String, CodingKey {
@@ -2214,62 +2223,62 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
-            public var secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload?
-            /// Creates a new `security_hyphen_and_hyphen_analysis`.
+            public var secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload?
+            /// Creates a new `SecurityAndAnalysis`.
             ///
             /// - Parameters:
-            ///   - advanced_security:
-            ///   - code_security:
-            ///   - dependabot_security_updates: Enable or disable Dependabot security updates for the repository.
-            ///   - secret_scanning:
-            ///   - secret_scanning_push_protection:
-            ///   - secret_scanning_non_provider_patterns:
-            ///   - secret_scanning_ai_detection:
+            ///   - advancedSecurity:
+            ///   - codeSecurity:
+            ///   - dependabotSecurityUpdates: Enable or disable Dependabot security updates for the repository.
+            ///   - secretScanning:
+            ///   - secretScanningPushProtection:
+            ///   - secretScanningNonProviderPatterns:
+            ///   - secretScanningAiDetection:
             public init(
-                advanced_security: Components.Schemas.security_hyphen_and_hyphen_analysis.advanced_securityPayload? = nil,
-                code_security: Components.Schemas.security_hyphen_and_hyphen_analysis.code_securityPayload? = nil,
-                dependabot_security_updates: Components.Schemas.security_hyphen_and_hyphen_analysis.dependabot_security_updatesPayload? = nil,
-                secret_scanning: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanningPayload? = nil,
-                secret_scanning_push_protection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_push_protectionPayload? = nil,
-                secret_scanning_non_provider_patterns: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_non_provider_patternsPayload? = nil,
-                secret_scanning_ai_detection: Components.Schemas.security_hyphen_and_hyphen_analysis.secret_scanning_ai_detectionPayload? = nil
+                advancedSecurity: Components.Schemas.SecurityAndAnalysis.AdvancedSecurityPayload? = nil,
+                codeSecurity: Components.Schemas.SecurityAndAnalysis.CodeSecurityPayload? = nil,
+                dependabotSecurityUpdates: Components.Schemas.SecurityAndAnalysis.DependabotSecurityUpdatesPayload? = nil,
+                secretScanning: Components.Schemas.SecurityAndAnalysis.SecretScanningPayload? = nil,
+                secretScanningPushProtection: Components.Schemas.SecurityAndAnalysis.SecretScanningPushProtectionPayload? = nil,
+                secretScanningNonProviderPatterns: Components.Schemas.SecurityAndAnalysis.SecretScanningNonProviderPatternsPayload? = nil,
+                secretScanningAiDetection: Components.Schemas.SecurityAndAnalysis.SecretScanningAiDetectionPayload? = nil
             ) {
-                self.advanced_security = advanced_security
-                self.code_security = code_security
-                self.dependabot_security_updates = dependabot_security_updates
-                self.secret_scanning = secret_scanning
-                self.secret_scanning_push_protection = secret_scanning_push_protection
-                self.secret_scanning_non_provider_patterns = secret_scanning_non_provider_patterns
-                self.secret_scanning_ai_detection = secret_scanning_ai_detection
+                self.advancedSecurity = advancedSecurity
+                self.codeSecurity = codeSecurity
+                self.dependabotSecurityUpdates = dependabotSecurityUpdates
+                self.secretScanning = secretScanning
+                self.secretScanningPushProtection = secretScanningPushProtection
+                self.secretScanningNonProviderPatterns = secretScanningNonProviderPatterns
+                self.secretScanningAiDetection = secretScanningAiDetection
             }
             public enum CodingKeys: String, CodingKey {
-                case advanced_security
-                case code_security
-                case dependabot_security_updates
-                case secret_scanning
-                case secret_scanning_push_protection
-                case secret_scanning_non_provider_patterns
-                case secret_scanning_ai_detection
+                case advancedSecurity = "advanced_security"
+                case codeSecurity = "code_security"
+                case dependabotSecurityUpdates = "dependabot_security_updates"
+                case secretScanning = "secret_scanning"
+                case secretScanningPushProtection = "secret_scanning_push_protection"
+                case secretScanningNonProviderPatterns = "secret_scanning_non_provider_patterns"
+                case secretScanningAiDetection = "secret_scanning_ai_detection"
             }
         }
         /// Minimal Repository
         ///
         /// - Remark: Generated from `#/components/schemas/minimal-repository`.
-        public struct minimal_hyphen_repository: Codable, Hashable, Sendable {
+        public struct MinimalRepository: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/minimal-repository/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/full_name`.
-            public var full_name: Swift.String
+            public var fullName: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/owner`.
-            public var owner: Components.Schemas.simple_hyphen_user
+            public var owner: Components.Schemas.SimpleUser
             /// - Remark: Generated from `#/components/schemas/minimal-repository/private`.
             public var _private: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/minimal-repository/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/description`.
             public var description: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/fork`.
@@ -2277,121 +2286,121 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/archive_url`.
-            public var archive_url: Swift.String
+            public var archiveUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/assignees_url`.
-            public var assignees_url: Swift.String
+            public var assigneesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/blobs_url`.
-            public var blobs_url: Swift.String
+            public var blobsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/branches_url`.
-            public var branches_url: Swift.String
+            public var branchesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/collaborators_url`.
-            public var collaborators_url: Swift.String
+            public var collaboratorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/comments_url`.
-            public var comments_url: Swift.String
+            public var commentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/commits_url`.
-            public var commits_url: Swift.String
+            public var commitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/compare_url`.
-            public var compare_url: Swift.String
+            public var compareUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/contents_url`.
-            public var contents_url: Swift.String
+            public var contentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/contributors_url`.
-            public var contributors_url: Swift.String
+            public var contributorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/deployments_url`.
-            public var deployments_url: Swift.String
+            public var deploymentsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/downloads_url`.
-            public var downloads_url: Swift.String
+            public var downloadsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/events_url`.
-            public var events_url: Swift.String
+            public var eventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks_url`.
-            public var forks_url: Swift.String
+            public var forksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_commits_url`.
-            public var git_commits_url: Swift.String
+            public var gitCommitsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_refs_url`.
-            public var git_refs_url: Swift.String
+            public var gitRefsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_tags_url`.
-            public var git_tags_url: Swift.String
+            public var gitTagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/git_url`.
-            public var git_url: Swift.String?
+            public var gitUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issue_comment_url`.
-            public var issue_comment_url: Swift.String
+            public var issueCommentUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issue_events_url`.
-            public var issue_events_url: Swift.String
+            public var issueEventsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/issues_url`.
-            public var issues_url: Swift.String
+            public var issuesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/keys_url`.
-            public var keys_url: Swift.String
+            public var keysUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/labels_url`.
-            public var labels_url: Swift.String
+            public var labelsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/languages_url`.
-            public var languages_url: Swift.String
+            public var languagesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/merges_url`.
-            public var merges_url: Swift.String
+            public var mergesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/milestones_url`.
-            public var milestones_url: Swift.String
+            public var milestonesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/notifications_url`.
-            public var notifications_url: Swift.String
+            public var notificationsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/pulls_url`.
-            public var pulls_url: Swift.String
+            public var pullsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/releases_url`.
-            public var releases_url: Swift.String
+            public var releasesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/ssh_url`.
-            public var ssh_url: Swift.String?
+            public var sshUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/stargazers_url`.
-            public var stargazers_url: Swift.String
+            public var stargazersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/statuses_url`.
-            public var statuses_url: Swift.String
+            public var statusesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscribers_url`.
-            public var subscribers_url: Swift.String
+            public var subscribersUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscription_url`.
-            public var subscription_url: Swift.String
+            public var subscriptionUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/tags_url`.
-            public var tags_url: Swift.String
+            public var tagsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/teams_url`.
-            public var teams_url: Swift.String
+            public var teamsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/trees_url`.
-            public var trees_url: Swift.String
+            public var treesUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/clone_url`.
-            public var clone_url: Swift.String?
+            public var cloneUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/mirror_url`.
-            public var mirror_url: Swift.String?
+            public var mirrorUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/hooks_url`.
-            public var hooks_url: Swift.String
+            public var hooksUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/minimal-repository/svn_url`.
-            public var svn_url: Swift.String?
+            public var svnUrl: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/homepage`.
             public var homepage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/language`.
             public var language: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks_count`.
-            public var forks_count: Swift.Int?
+            public var forksCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/stargazers_count`.
-            public var stargazers_count: Swift.Int?
+            public var stargazersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/watchers_count`.
-            public var watchers_count: Swift.Int?
+            public var watchersCount: Swift.Int?
             /// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
             ///
             /// - Remark: Generated from `#/components/schemas/minimal-repository/size`.
             public var size: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/default_branch`.
-            public var default_branch: Swift.String?
+            public var defaultBranch: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/open_issues_count`.
-            public var open_issues_count: Swift.Int?
+            public var openIssuesCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/is_template`.
-            public var is_template: Swift.Bool?
+            public var isTemplate: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/topics`.
             public var topics: [Swift.String]?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_issues`.
-            public var has_issues: Swift.Bool?
+            public var hasIssues: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_projects`.
-            public var has_projects: Swift.Bool?
+            public var hasProjects: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_wiki`.
-            public var has_wiki: Swift.Bool?
+            public var hasWiki: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_pages`.
-            public var has_pages: Swift.Bool?
+            public var hasPages: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_downloads`.
-            public var has_downloads: Swift.Bool?
+            public var hasDownloads: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/has_discussions`.
-            public var has_discussions: Swift.Bool?
+            public var hasDiscussions: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/archived`.
             public var archived: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/disabled`.
@@ -2399,13 +2408,13 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/minimal-repository/visibility`.
             public var visibility: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/pushed_at`.
-            public var pushed_at: Foundation.Date?
+            public var pushedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/created_at`.
-            public var created_at: Foundation.Date?
+            public var createdAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/updated_at`.
-            public var updated_at: Foundation.Date?
+            public var updatedAt: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions`.
-            public struct permissionsPayload: Codable, Hashable, Sendable {
+            public struct PermissionsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/admin`.
                 public var admin: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/maintain`.
@@ -2416,7 +2425,7 @@ public enum Components {
                 public var triage: Swift.Bool?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions/pull`.
                 public var pull: Swift.Bool?
-                /// Creates a new `permissionsPayload`.
+                /// Creates a new `PermissionsPayload`.
                 ///
                 /// - Parameters:
                 ///   - admin:
@@ -2446,533 +2455,533 @@ public enum Components {
                 }
             }
             /// - Remark: Generated from `#/components/schemas/minimal-repository/permissions`.
-            public var permissions: Components.Schemas.minimal_hyphen_repository.permissionsPayload?
+            public var permissions: Components.Schemas.MinimalRepository.PermissionsPayload?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/role_name`.
-            public var role_name: Swift.String?
+            public var roleName: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/temp_clone_token`.
-            public var temp_clone_token: Swift.String?
+            public var tempCloneToken: Swift.String?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/delete_branch_on_merge`.
-            public var delete_branch_on_merge: Swift.Bool?
+            public var deleteBranchOnMerge: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/subscribers_count`.
-            public var subscribers_count: Swift.Int?
+            public var subscribersCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/network_count`.
-            public var network_count: Swift.Int?
+            public var networkCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/code_of_conduct`.
-            public var code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct?
+            public var codeOfConduct: Components.Schemas.CodeOfConduct?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/license`.
-            public struct licensePayload: Codable, Hashable, Sendable {
+            public struct LicensePayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/key`.
                 public var key: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/name`.
                 public var name: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/spdx_id`.
-                public var spdx_id: Swift.String?
+                public var spdxId: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/url`.
                 public var url: Swift.String?
                 /// - Remark: Generated from `#/components/schemas/minimal-repository/license/node_id`.
-                public var node_id: Swift.String?
-                /// Creates a new `licensePayload`.
+                public var nodeId: Swift.String?
+                /// Creates a new `LicensePayload`.
                 ///
                 /// - Parameters:
                 ///   - key:
                 ///   - name:
-                ///   - spdx_id:
+                ///   - spdxId:
                 ///   - url:
-                ///   - node_id:
+                ///   - nodeId:
                 public init(
                     key: Swift.String? = nil,
                     name: Swift.String? = nil,
-                    spdx_id: Swift.String? = nil,
+                    spdxId: Swift.String? = nil,
                     url: Swift.String? = nil,
-                    node_id: Swift.String? = nil
+                    nodeId: Swift.String? = nil
                 ) {
                     self.key = key
                     self.name = name
-                    self.spdx_id = spdx_id
+                    self.spdxId = spdxId
                     self.url = url
-                    self.node_id = node_id
+                    self.nodeId = nodeId
                 }
                 public enum CodingKeys: String, CodingKey {
                     case key
                     case name
-                    case spdx_id
+                    case spdxId = "spdx_id"
                     case url
-                    case node_id
+                    case nodeId = "node_id"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/minimal-repository/license`.
-            public var license: Components.Schemas.minimal_hyphen_repository.licensePayload?
+            public var license: Components.Schemas.MinimalRepository.LicensePayload?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/forks`.
             public var forks: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/open_issues`.
-            public var open_issues: Swift.Int?
+            public var openIssues: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/watchers`.
             public var watchers: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/allow_forking`.
-            public var allow_forking: Swift.Bool?
+            public var allowForking: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/web_commit_signoff_required`.
-            public var web_commit_signoff_required: Swift.Bool?
+            public var webCommitSignoffRequired: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/minimal-repository/security_and_analysis`.
-            public var security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis?
-            /// Creates a new `minimal_hyphen_repository`.
+            public var securityAndAnalysis: Components.Schemas.SecurityAndAnalysis?
+            /// Creates a new `MinimalRepository`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - node_id:
+            ///   - nodeId:
             ///   - name:
-            ///   - full_name:
+            ///   - fullName:
             ///   - owner:
             ///   - _private:
-            ///   - html_url:
+            ///   - htmlUrl:
             ///   - description:
             ///   - fork:
             ///   - url:
-            ///   - archive_url:
-            ///   - assignees_url:
-            ///   - blobs_url:
-            ///   - branches_url:
-            ///   - collaborators_url:
-            ///   - comments_url:
-            ///   - commits_url:
-            ///   - compare_url:
-            ///   - contents_url:
-            ///   - contributors_url:
-            ///   - deployments_url:
-            ///   - downloads_url:
-            ///   - events_url:
-            ///   - forks_url:
-            ///   - git_commits_url:
-            ///   - git_refs_url:
-            ///   - git_tags_url:
-            ///   - git_url:
-            ///   - issue_comment_url:
-            ///   - issue_events_url:
-            ///   - issues_url:
-            ///   - keys_url:
-            ///   - labels_url:
-            ///   - languages_url:
-            ///   - merges_url:
-            ///   - milestones_url:
-            ///   - notifications_url:
-            ///   - pulls_url:
-            ///   - releases_url:
-            ///   - ssh_url:
-            ///   - stargazers_url:
-            ///   - statuses_url:
-            ///   - subscribers_url:
-            ///   - subscription_url:
-            ///   - tags_url:
-            ///   - teams_url:
-            ///   - trees_url:
-            ///   - clone_url:
-            ///   - mirror_url:
-            ///   - hooks_url:
-            ///   - svn_url:
+            ///   - archiveUrl:
+            ///   - assigneesUrl:
+            ///   - blobsUrl:
+            ///   - branchesUrl:
+            ///   - collaboratorsUrl:
+            ///   - commentsUrl:
+            ///   - commitsUrl:
+            ///   - compareUrl:
+            ///   - contentsUrl:
+            ///   - contributorsUrl:
+            ///   - deploymentsUrl:
+            ///   - downloadsUrl:
+            ///   - eventsUrl:
+            ///   - forksUrl:
+            ///   - gitCommitsUrl:
+            ///   - gitRefsUrl:
+            ///   - gitTagsUrl:
+            ///   - gitUrl:
+            ///   - issueCommentUrl:
+            ///   - issueEventsUrl:
+            ///   - issuesUrl:
+            ///   - keysUrl:
+            ///   - labelsUrl:
+            ///   - languagesUrl:
+            ///   - mergesUrl:
+            ///   - milestonesUrl:
+            ///   - notificationsUrl:
+            ///   - pullsUrl:
+            ///   - releasesUrl:
+            ///   - sshUrl:
+            ///   - stargazersUrl:
+            ///   - statusesUrl:
+            ///   - subscribersUrl:
+            ///   - subscriptionUrl:
+            ///   - tagsUrl:
+            ///   - teamsUrl:
+            ///   - treesUrl:
+            ///   - cloneUrl:
+            ///   - mirrorUrl:
+            ///   - hooksUrl:
+            ///   - svnUrl:
             ///   - homepage:
             ///   - language:
-            ///   - forks_count:
-            ///   - stargazers_count:
-            ///   - watchers_count:
+            ///   - forksCount:
+            ///   - stargazersCount:
+            ///   - watchersCount:
             ///   - size: The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-            ///   - default_branch:
-            ///   - open_issues_count:
-            ///   - is_template:
+            ///   - defaultBranch:
+            ///   - openIssuesCount:
+            ///   - isTemplate:
             ///   - topics:
-            ///   - has_issues:
-            ///   - has_projects:
-            ///   - has_wiki:
-            ///   - has_pages:
-            ///   - has_downloads:
-            ///   - has_discussions:
+            ///   - hasIssues:
+            ///   - hasProjects:
+            ///   - hasWiki:
+            ///   - hasPages:
+            ///   - hasDownloads:
+            ///   - hasDiscussions:
             ///   - archived:
             ///   - disabled:
             ///   - visibility:
-            ///   - pushed_at:
-            ///   - created_at:
-            ///   - updated_at:
+            ///   - pushedAt:
+            ///   - createdAt:
+            ///   - updatedAt:
             ///   - permissions:
-            ///   - role_name:
-            ///   - temp_clone_token:
-            ///   - delete_branch_on_merge:
-            ///   - subscribers_count:
-            ///   - network_count:
-            ///   - code_of_conduct:
+            ///   - roleName:
+            ///   - tempCloneToken:
+            ///   - deleteBranchOnMerge:
+            ///   - subscribersCount:
+            ///   - networkCount:
+            ///   - codeOfConduct:
             ///   - license:
             ///   - forks:
-            ///   - open_issues:
+            ///   - openIssues:
             ///   - watchers:
-            ///   - allow_forking:
-            ///   - web_commit_signoff_required:
-            ///   - security_and_analysis:
+            ///   - allowForking:
+            ///   - webCommitSignoffRequired:
+            ///   - securityAndAnalysis:
             public init(
                 id: Swift.Int64,
-                node_id: Swift.String,
+                nodeId: Swift.String,
                 name: Swift.String,
-                full_name: Swift.String,
-                owner: Components.Schemas.simple_hyphen_user,
+                fullName: Swift.String,
+                owner: Components.Schemas.SimpleUser,
                 _private: Swift.Bool,
-                html_url: Swift.String,
+                htmlUrl: Swift.String,
                 description: Swift.String? = nil,
                 fork: Swift.Bool,
                 url: Swift.String,
-                archive_url: Swift.String,
-                assignees_url: Swift.String,
-                blobs_url: Swift.String,
-                branches_url: Swift.String,
-                collaborators_url: Swift.String,
-                comments_url: Swift.String,
-                commits_url: Swift.String,
-                compare_url: Swift.String,
-                contents_url: Swift.String,
-                contributors_url: Swift.String,
-                deployments_url: Swift.String,
-                downloads_url: Swift.String,
-                events_url: Swift.String,
-                forks_url: Swift.String,
-                git_commits_url: Swift.String,
-                git_refs_url: Swift.String,
-                git_tags_url: Swift.String,
-                git_url: Swift.String? = nil,
-                issue_comment_url: Swift.String,
-                issue_events_url: Swift.String,
-                issues_url: Swift.String,
-                keys_url: Swift.String,
-                labels_url: Swift.String,
-                languages_url: Swift.String,
-                merges_url: Swift.String,
-                milestones_url: Swift.String,
-                notifications_url: Swift.String,
-                pulls_url: Swift.String,
-                releases_url: Swift.String,
-                ssh_url: Swift.String? = nil,
-                stargazers_url: Swift.String,
-                statuses_url: Swift.String,
-                subscribers_url: Swift.String,
-                subscription_url: Swift.String,
-                tags_url: Swift.String,
-                teams_url: Swift.String,
-                trees_url: Swift.String,
-                clone_url: Swift.String? = nil,
-                mirror_url: Swift.String? = nil,
-                hooks_url: Swift.String,
-                svn_url: Swift.String? = nil,
+                archiveUrl: Swift.String,
+                assigneesUrl: Swift.String,
+                blobsUrl: Swift.String,
+                branchesUrl: Swift.String,
+                collaboratorsUrl: Swift.String,
+                commentsUrl: Swift.String,
+                commitsUrl: Swift.String,
+                compareUrl: Swift.String,
+                contentsUrl: Swift.String,
+                contributorsUrl: Swift.String,
+                deploymentsUrl: Swift.String,
+                downloadsUrl: Swift.String,
+                eventsUrl: Swift.String,
+                forksUrl: Swift.String,
+                gitCommitsUrl: Swift.String,
+                gitRefsUrl: Swift.String,
+                gitTagsUrl: Swift.String,
+                gitUrl: Swift.String? = nil,
+                issueCommentUrl: Swift.String,
+                issueEventsUrl: Swift.String,
+                issuesUrl: Swift.String,
+                keysUrl: Swift.String,
+                labelsUrl: Swift.String,
+                languagesUrl: Swift.String,
+                mergesUrl: Swift.String,
+                milestonesUrl: Swift.String,
+                notificationsUrl: Swift.String,
+                pullsUrl: Swift.String,
+                releasesUrl: Swift.String,
+                sshUrl: Swift.String? = nil,
+                stargazersUrl: Swift.String,
+                statusesUrl: Swift.String,
+                subscribersUrl: Swift.String,
+                subscriptionUrl: Swift.String,
+                tagsUrl: Swift.String,
+                teamsUrl: Swift.String,
+                treesUrl: Swift.String,
+                cloneUrl: Swift.String? = nil,
+                mirrorUrl: Swift.String? = nil,
+                hooksUrl: Swift.String,
+                svnUrl: Swift.String? = nil,
                 homepage: Swift.String? = nil,
                 language: Swift.String? = nil,
-                forks_count: Swift.Int? = nil,
-                stargazers_count: Swift.Int? = nil,
-                watchers_count: Swift.Int? = nil,
+                forksCount: Swift.Int? = nil,
+                stargazersCount: Swift.Int? = nil,
+                watchersCount: Swift.Int? = nil,
                 size: Swift.Int? = nil,
-                default_branch: Swift.String? = nil,
-                open_issues_count: Swift.Int? = nil,
-                is_template: Swift.Bool? = nil,
+                defaultBranch: Swift.String? = nil,
+                openIssuesCount: Swift.Int? = nil,
+                isTemplate: Swift.Bool? = nil,
                 topics: [Swift.String]? = nil,
-                has_issues: Swift.Bool? = nil,
-                has_projects: Swift.Bool? = nil,
-                has_wiki: Swift.Bool? = nil,
-                has_pages: Swift.Bool? = nil,
-                has_downloads: Swift.Bool? = nil,
-                has_discussions: Swift.Bool? = nil,
+                hasIssues: Swift.Bool? = nil,
+                hasProjects: Swift.Bool? = nil,
+                hasWiki: Swift.Bool? = nil,
+                hasPages: Swift.Bool? = nil,
+                hasDownloads: Swift.Bool? = nil,
+                hasDiscussions: Swift.Bool? = nil,
                 archived: Swift.Bool? = nil,
                 disabled: Swift.Bool? = nil,
                 visibility: Swift.String? = nil,
-                pushed_at: Foundation.Date? = nil,
-                created_at: Foundation.Date? = nil,
-                updated_at: Foundation.Date? = nil,
-                permissions: Components.Schemas.minimal_hyphen_repository.permissionsPayload? = nil,
-                role_name: Swift.String? = nil,
-                temp_clone_token: Swift.String? = nil,
-                delete_branch_on_merge: Swift.Bool? = nil,
-                subscribers_count: Swift.Int? = nil,
-                network_count: Swift.Int? = nil,
-                code_of_conduct: Components.Schemas.code_hyphen_of_hyphen_conduct? = nil,
-                license: Components.Schemas.minimal_hyphen_repository.licensePayload? = nil,
+                pushedAt: Foundation.Date? = nil,
+                createdAt: Foundation.Date? = nil,
+                updatedAt: Foundation.Date? = nil,
+                permissions: Components.Schemas.MinimalRepository.PermissionsPayload? = nil,
+                roleName: Swift.String? = nil,
+                tempCloneToken: Swift.String? = nil,
+                deleteBranchOnMerge: Swift.Bool? = nil,
+                subscribersCount: Swift.Int? = nil,
+                networkCount: Swift.Int? = nil,
+                codeOfConduct: Components.Schemas.CodeOfConduct? = nil,
+                license: Components.Schemas.MinimalRepository.LicensePayload? = nil,
                 forks: Swift.Int? = nil,
-                open_issues: Swift.Int? = nil,
+                openIssues: Swift.Int? = nil,
                 watchers: Swift.Int? = nil,
-                allow_forking: Swift.Bool? = nil,
-                web_commit_signoff_required: Swift.Bool? = nil,
-                security_and_analysis: Components.Schemas.security_hyphen_and_hyphen_analysis? = nil
+                allowForking: Swift.Bool? = nil,
+                webCommitSignoffRequired: Swift.Bool? = nil,
+                securityAndAnalysis: Components.Schemas.SecurityAndAnalysis? = nil
             ) {
                 self.id = id
-                self.node_id = node_id
+                self.nodeId = nodeId
                 self.name = name
-                self.full_name = full_name
+                self.fullName = fullName
                 self.owner = owner
                 self._private = _private
-                self.html_url = html_url
+                self.htmlUrl = htmlUrl
                 self.description = description
                 self.fork = fork
                 self.url = url
-                self.archive_url = archive_url
-                self.assignees_url = assignees_url
-                self.blobs_url = blobs_url
-                self.branches_url = branches_url
-                self.collaborators_url = collaborators_url
-                self.comments_url = comments_url
-                self.commits_url = commits_url
-                self.compare_url = compare_url
-                self.contents_url = contents_url
-                self.contributors_url = contributors_url
-                self.deployments_url = deployments_url
-                self.downloads_url = downloads_url
-                self.events_url = events_url
-                self.forks_url = forks_url
-                self.git_commits_url = git_commits_url
-                self.git_refs_url = git_refs_url
-                self.git_tags_url = git_tags_url
-                self.git_url = git_url
-                self.issue_comment_url = issue_comment_url
-                self.issue_events_url = issue_events_url
-                self.issues_url = issues_url
-                self.keys_url = keys_url
-                self.labels_url = labels_url
-                self.languages_url = languages_url
-                self.merges_url = merges_url
-                self.milestones_url = milestones_url
-                self.notifications_url = notifications_url
-                self.pulls_url = pulls_url
-                self.releases_url = releases_url
-                self.ssh_url = ssh_url
-                self.stargazers_url = stargazers_url
-                self.statuses_url = statuses_url
-                self.subscribers_url = subscribers_url
-                self.subscription_url = subscription_url
-                self.tags_url = tags_url
-                self.teams_url = teams_url
-                self.trees_url = trees_url
-                self.clone_url = clone_url
-                self.mirror_url = mirror_url
-                self.hooks_url = hooks_url
-                self.svn_url = svn_url
+                self.archiveUrl = archiveUrl
+                self.assigneesUrl = assigneesUrl
+                self.blobsUrl = blobsUrl
+                self.branchesUrl = branchesUrl
+                self.collaboratorsUrl = collaboratorsUrl
+                self.commentsUrl = commentsUrl
+                self.commitsUrl = commitsUrl
+                self.compareUrl = compareUrl
+                self.contentsUrl = contentsUrl
+                self.contributorsUrl = contributorsUrl
+                self.deploymentsUrl = deploymentsUrl
+                self.downloadsUrl = downloadsUrl
+                self.eventsUrl = eventsUrl
+                self.forksUrl = forksUrl
+                self.gitCommitsUrl = gitCommitsUrl
+                self.gitRefsUrl = gitRefsUrl
+                self.gitTagsUrl = gitTagsUrl
+                self.gitUrl = gitUrl
+                self.issueCommentUrl = issueCommentUrl
+                self.issueEventsUrl = issueEventsUrl
+                self.issuesUrl = issuesUrl
+                self.keysUrl = keysUrl
+                self.labelsUrl = labelsUrl
+                self.languagesUrl = languagesUrl
+                self.mergesUrl = mergesUrl
+                self.milestonesUrl = milestonesUrl
+                self.notificationsUrl = notificationsUrl
+                self.pullsUrl = pullsUrl
+                self.releasesUrl = releasesUrl
+                self.sshUrl = sshUrl
+                self.stargazersUrl = stargazersUrl
+                self.statusesUrl = statusesUrl
+                self.subscribersUrl = subscribersUrl
+                self.subscriptionUrl = subscriptionUrl
+                self.tagsUrl = tagsUrl
+                self.teamsUrl = teamsUrl
+                self.treesUrl = treesUrl
+                self.cloneUrl = cloneUrl
+                self.mirrorUrl = mirrorUrl
+                self.hooksUrl = hooksUrl
+                self.svnUrl = svnUrl
                 self.homepage = homepage
                 self.language = language
-                self.forks_count = forks_count
-                self.stargazers_count = stargazers_count
-                self.watchers_count = watchers_count
+                self.forksCount = forksCount
+                self.stargazersCount = stargazersCount
+                self.watchersCount = watchersCount
                 self.size = size
-                self.default_branch = default_branch
-                self.open_issues_count = open_issues_count
-                self.is_template = is_template
+                self.defaultBranch = defaultBranch
+                self.openIssuesCount = openIssuesCount
+                self.isTemplate = isTemplate
                 self.topics = topics
-                self.has_issues = has_issues
-                self.has_projects = has_projects
-                self.has_wiki = has_wiki
-                self.has_pages = has_pages
-                self.has_downloads = has_downloads
-                self.has_discussions = has_discussions
+                self.hasIssues = hasIssues
+                self.hasProjects = hasProjects
+                self.hasWiki = hasWiki
+                self.hasPages = hasPages
+                self.hasDownloads = hasDownloads
+                self.hasDiscussions = hasDiscussions
                 self.archived = archived
                 self.disabled = disabled
                 self.visibility = visibility
-                self.pushed_at = pushed_at
-                self.created_at = created_at
-                self.updated_at = updated_at
+                self.pushedAt = pushedAt
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
                 self.permissions = permissions
-                self.role_name = role_name
-                self.temp_clone_token = temp_clone_token
-                self.delete_branch_on_merge = delete_branch_on_merge
-                self.subscribers_count = subscribers_count
-                self.network_count = network_count
-                self.code_of_conduct = code_of_conduct
+                self.roleName = roleName
+                self.tempCloneToken = tempCloneToken
+                self.deleteBranchOnMerge = deleteBranchOnMerge
+                self.subscribersCount = subscribersCount
+                self.networkCount = networkCount
+                self.codeOfConduct = codeOfConduct
                 self.license = license
                 self.forks = forks
-                self.open_issues = open_issues
+                self.openIssues = openIssues
                 self.watchers = watchers
-                self.allow_forking = allow_forking
-                self.web_commit_signoff_required = web_commit_signoff_required
-                self.security_and_analysis = security_and_analysis
+                self.allowForking = allowForking
+                self.webCommitSignoffRequired = webCommitSignoffRequired
+                self.securityAndAnalysis = securityAndAnalysis
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case node_id
+                case nodeId = "node_id"
                 case name
-                case full_name
+                case fullName = "full_name"
                 case owner
                 case _private = "private"
-                case html_url
+                case htmlUrl = "html_url"
                 case description
                 case fork
                 case url
-                case archive_url
-                case assignees_url
-                case blobs_url
-                case branches_url
-                case collaborators_url
-                case comments_url
-                case commits_url
-                case compare_url
-                case contents_url
-                case contributors_url
-                case deployments_url
-                case downloads_url
-                case events_url
-                case forks_url
-                case git_commits_url
-                case git_refs_url
-                case git_tags_url
-                case git_url
-                case issue_comment_url
-                case issue_events_url
-                case issues_url
-                case keys_url
-                case labels_url
-                case languages_url
-                case merges_url
-                case milestones_url
-                case notifications_url
-                case pulls_url
-                case releases_url
-                case ssh_url
-                case stargazers_url
-                case statuses_url
-                case subscribers_url
-                case subscription_url
-                case tags_url
-                case teams_url
-                case trees_url
-                case clone_url
-                case mirror_url
-                case hooks_url
-                case svn_url
+                case archiveUrl = "archive_url"
+                case assigneesUrl = "assignees_url"
+                case blobsUrl = "blobs_url"
+                case branchesUrl = "branches_url"
+                case collaboratorsUrl = "collaborators_url"
+                case commentsUrl = "comments_url"
+                case commitsUrl = "commits_url"
+                case compareUrl = "compare_url"
+                case contentsUrl = "contents_url"
+                case contributorsUrl = "contributors_url"
+                case deploymentsUrl = "deployments_url"
+                case downloadsUrl = "downloads_url"
+                case eventsUrl = "events_url"
+                case forksUrl = "forks_url"
+                case gitCommitsUrl = "git_commits_url"
+                case gitRefsUrl = "git_refs_url"
+                case gitTagsUrl = "git_tags_url"
+                case gitUrl = "git_url"
+                case issueCommentUrl = "issue_comment_url"
+                case issueEventsUrl = "issue_events_url"
+                case issuesUrl = "issues_url"
+                case keysUrl = "keys_url"
+                case labelsUrl = "labels_url"
+                case languagesUrl = "languages_url"
+                case mergesUrl = "merges_url"
+                case milestonesUrl = "milestones_url"
+                case notificationsUrl = "notifications_url"
+                case pullsUrl = "pulls_url"
+                case releasesUrl = "releases_url"
+                case sshUrl = "ssh_url"
+                case stargazersUrl = "stargazers_url"
+                case statusesUrl = "statuses_url"
+                case subscribersUrl = "subscribers_url"
+                case subscriptionUrl = "subscription_url"
+                case tagsUrl = "tags_url"
+                case teamsUrl = "teams_url"
+                case treesUrl = "trees_url"
+                case cloneUrl = "clone_url"
+                case mirrorUrl = "mirror_url"
+                case hooksUrl = "hooks_url"
+                case svnUrl = "svn_url"
                 case homepage
                 case language
-                case forks_count
-                case stargazers_count
-                case watchers_count
+                case forksCount = "forks_count"
+                case stargazersCount = "stargazers_count"
+                case watchersCount = "watchers_count"
                 case size
-                case default_branch
-                case open_issues_count
-                case is_template
+                case defaultBranch = "default_branch"
+                case openIssuesCount = "open_issues_count"
+                case isTemplate = "is_template"
                 case topics
-                case has_issues
-                case has_projects
-                case has_wiki
-                case has_pages
-                case has_downloads
-                case has_discussions
+                case hasIssues = "has_issues"
+                case hasProjects = "has_projects"
+                case hasWiki = "has_wiki"
+                case hasPages = "has_pages"
+                case hasDownloads = "has_downloads"
+                case hasDiscussions = "has_discussions"
                 case archived
                 case disabled
                 case visibility
-                case pushed_at
-                case created_at
-                case updated_at
+                case pushedAt = "pushed_at"
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
                 case permissions
-                case role_name
-                case temp_clone_token
-                case delete_branch_on_merge
-                case subscribers_count
-                case network_count
-                case code_of_conduct
+                case roleName = "role_name"
+                case tempCloneToken = "temp_clone_token"
+                case deleteBranchOnMerge = "delete_branch_on_merge"
+                case subscribersCount = "subscribers_count"
+                case networkCount = "network_count"
+                case codeOfConduct = "code_of_conduct"
                 case license
                 case forks
-                case open_issues
+                case openIssues = "open_issues"
                 case watchers
-                case allow_forking
-                case web_commit_signoff_required
-                case security_and_analysis
+                case allowForking = "allow_forking"
+                case webCommitSignoffRequired = "web_commit_signoff_required"
+                case securityAndAnalysis = "security_and_analysis"
             }
         }
         /// A migration.
         ///
         /// - Remark: Generated from `#/components/schemas/migration`.
-        public struct migration: Codable, Hashable, Sendable {
+        public struct Migration: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/migration/id`.
             public var id: Swift.Int64
             /// - Remark: Generated from `#/components/schemas/migration/owner`.
-            public var owner: Components.Schemas.nullable_hyphen_simple_hyphen_user?
+            public var owner: Components.Schemas.NullableSimpleUser?
             /// - Remark: Generated from `#/components/schemas/migration/guid`.
             public var guid: Swift.String
             /// - Remark: Generated from `#/components/schemas/migration/state`.
             public var state: Swift.String
             /// - Remark: Generated from `#/components/schemas/migration/lock_repositories`.
-            public var lock_repositories: Swift.Bool
+            public var lockRepositories: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/migration/exclude_metadata`.
-            public var exclude_metadata: Swift.Bool
+            public var excludeMetadata: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/migration/exclude_git_data`.
-            public var exclude_git_data: Swift.Bool
+            public var excludeGitData: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/migration/exclude_attachments`.
-            public var exclude_attachments: Swift.Bool
+            public var excludeAttachments: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/migration/exclude_releases`.
-            public var exclude_releases: Swift.Bool
+            public var excludeReleases: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/migration/exclude_owner_projects`.
-            public var exclude_owner_projects: Swift.Bool
+            public var excludeOwnerProjects: Swift.Bool
             /// - Remark: Generated from `#/components/schemas/migration/org_metadata_only`.
-            public var org_metadata_only: Swift.Bool
+            public var orgMetadataOnly: Swift.Bool
             /// The repositories included in the migration. Only returned for export migrations.
             ///
             /// - Remark: Generated from `#/components/schemas/migration/repositories`.
-            public var repositories: [Components.Schemas.repository]
+            public var repositories: [Components.Schemas.Repository]
             /// - Remark: Generated from `#/components/schemas/migration/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/migration/created_at`.
-            public var created_at: Foundation.Date
+            public var createdAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/migration/updated_at`.
-            public var updated_at: Foundation.Date
+            public var updatedAt: Foundation.Date
             /// - Remark: Generated from `#/components/schemas/migration/node_id`.
-            public var node_id: Swift.String
+            public var nodeId: Swift.String
             /// - Remark: Generated from `#/components/schemas/migration/archive_url`.
-            public var archive_url: Swift.String?
+            public var archiveUrl: Swift.String?
             /// Exclude related items from being returned in the response in order to improve performance of the request. The array can include any of: `"repositories"`.
             ///
             /// - Remark: Generated from `#/components/schemas/migration/exclude`.
             public var exclude: [Swift.String]?
-            /// Creates a new `migration`.
+            /// Creates a new `Migration`.
             ///
             /// - Parameters:
             ///   - id:
             ///   - owner:
             ///   - guid:
             ///   - state:
-            ///   - lock_repositories:
-            ///   - exclude_metadata:
-            ///   - exclude_git_data:
-            ///   - exclude_attachments:
-            ///   - exclude_releases:
-            ///   - exclude_owner_projects:
-            ///   - org_metadata_only:
+            ///   - lockRepositories:
+            ///   - excludeMetadata:
+            ///   - excludeGitData:
+            ///   - excludeAttachments:
+            ///   - excludeReleases:
+            ///   - excludeOwnerProjects:
+            ///   - orgMetadataOnly:
             ///   - repositories: The repositories included in the migration. Only returned for export migrations.
             ///   - url:
-            ///   - created_at:
-            ///   - updated_at:
-            ///   - node_id:
-            ///   - archive_url:
+            ///   - createdAt:
+            ///   - updatedAt:
+            ///   - nodeId:
+            ///   - archiveUrl:
             ///   - exclude: Exclude related items from being returned in the response in order to improve performance of the request. The array can include any of: `"repositories"`.
             public init(
                 id: Swift.Int64,
-                owner: Components.Schemas.nullable_hyphen_simple_hyphen_user? = nil,
+                owner: Components.Schemas.NullableSimpleUser? = nil,
                 guid: Swift.String,
                 state: Swift.String,
-                lock_repositories: Swift.Bool,
-                exclude_metadata: Swift.Bool,
-                exclude_git_data: Swift.Bool,
-                exclude_attachments: Swift.Bool,
-                exclude_releases: Swift.Bool,
-                exclude_owner_projects: Swift.Bool,
-                org_metadata_only: Swift.Bool,
-                repositories: [Components.Schemas.repository],
+                lockRepositories: Swift.Bool,
+                excludeMetadata: Swift.Bool,
+                excludeGitData: Swift.Bool,
+                excludeAttachments: Swift.Bool,
+                excludeReleases: Swift.Bool,
+                excludeOwnerProjects: Swift.Bool,
+                orgMetadataOnly: Swift.Bool,
+                repositories: [Components.Schemas.Repository],
                 url: Swift.String,
-                created_at: Foundation.Date,
-                updated_at: Foundation.Date,
-                node_id: Swift.String,
-                archive_url: Swift.String? = nil,
+                createdAt: Foundation.Date,
+                updatedAt: Foundation.Date,
+                nodeId: Swift.String,
+                archiveUrl: Swift.String? = nil,
                 exclude: [Swift.String]? = nil
             ) {
                 self.id = id
                 self.owner = owner
                 self.guid = guid
                 self.state = state
-                self.lock_repositories = lock_repositories
-                self.exclude_metadata = exclude_metadata
-                self.exclude_git_data = exclude_git_data
-                self.exclude_attachments = exclude_attachments
-                self.exclude_releases = exclude_releases
-                self.exclude_owner_projects = exclude_owner_projects
-                self.org_metadata_only = org_metadata_only
+                self.lockRepositories = lockRepositories
+                self.excludeMetadata = excludeMetadata
+                self.excludeGitData = excludeGitData
+                self.excludeAttachments = excludeAttachments
+                self.excludeReleases = excludeReleases
+                self.excludeOwnerProjects = excludeOwnerProjects
+                self.orgMetadataOnly = orgMetadataOnly
                 self.repositories = repositories
                 self.url = url
-                self.created_at = created_at
-                self.updated_at = updated_at
-                self.node_id = node_id
-                self.archive_url = archive_url
+                self.createdAt = createdAt
+                self.updatedAt = updatedAt
+                self.nodeId = nodeId
+                self.archiveUrl = archiveUrl
                 self.exclude = exclude
             }
             public enum CodingKeys: String, CodingKey {
@@ -2980,235 +2989,235 @@ public enum Components {
                 case owner
                 case guid
                 case state
-                case lock_repositories
-                case exclude_metadata
-                case exclude_git_data
-                case exclude_attachments
-                case exclude_releases
-                case exclude_owner_projects
-                case org_metadata_only
+                case lockRepositories = "lock_repositories"
+                case excludeMetadata = "exclude_metadata"
+                case excludeGitData = "exclude_git_data"
+                case excludeAttachments = "exclude_attachments"
+                case excludeReleases = "exclude_releases"
+                case excludeOwnerProjects = "exclude_owner_projects"
+                case orgMetadataOnly = "org_metadata_only"
                 case repositories
                 case url
-                case created_at
-                case updated_at
-                case node_id
-                case archive_url
+                case createdAt = "created_at"
+                case updatedAt = "updated_at"
+                case nodeId = "node_id"
+                case archiveUrl = "archive_url"
                 case exclude
             }
         }
         /// A repository import from an external source.
         ///
         /// - Remark: Generated from `#/components/schemas/import`.
-        public struct _import: Codable, Hashable, Sendable {
+        public struct Import: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/import/vcs`.
             public var vcs: Swift.String?
             /// - Remark: Generated from `#/components/schemas/import/use_lfs`.
-            public var use_lfs: Swift.Bool?
+            public var useLfs: Swift.Bool?
             /// The URL of the originating repository.
             ///
             /// - Remark: Generated from `#/components/schemas/import/vcs_url`.
-            public var vcs_url: Swift.String
+            public var vcsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/import/svc_root`.
-            public var svc_root: Swift.String?
+            public var svcRoot: Swift.String?
             /// - Remark: Generated from `#/components/schemas/import/tfvc_project`.
-            public var tfvc_project: Swift.String?
+            public var tfvcProject: Swift.String?
             /// - Remark: Generated from `#/components/schemas/import/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum StatusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case auth = "auth"
                 case error = "error"
                 case none = "none"
                 case detecting = "detecting"
                 case choose = "choose"
-                case auth_failed = "auth_failed"
+                case authFailed = "auth_failed"
                 case importing = "importing"
                 case mapping = "mapping"
-                case waiting_to_push = "waiting_to_push"
+                case waitingToPush = "waiting_to_push"
                 case pushing = "pushing"
                 case complete = "complete"
                 case setup = "setup"
                 case unknown = "unknown"
-                case detection_found_multiple = "detection_found_multiple"
-                case detection_found_nothing = "detection_found_nothing"
-                case detection_needs_auth = "detection_needs_auth"
+                case detectionFoundMultiple = "detection_found_multiple"
+                case detectionFoundNothing = "detection_found_nothing"
+                case detectionNeedsAuth = "detection_needs_auth"
             }
             /// - Remark: Generated from `#/components/schemas/import/status`.
-            public var status: Components.Schemas._import.statusPayload
+            public var status: Components.Schemas.Import.StatusPayload
             /// - Remark: Generated from `#/components/schemas/import/status_text`.
-            public var status_text: Swift.String?
+            public var statusText: Swift.String?
             /// - Remark: Generated from `#/components/schemas/import/failed_step`.
-            public var failed_step: Swift.String?
+            public var failedStep: Swift.String?
             /// - Remark: Generated from `#/components/schemas/import/error_message`.
-            public var error_message: Swift.String?
+            public var errorMessage: Swift.String?
             /// - Remark: Generated from `#/components/schemas/import/import_percent`.
-            public var import_percent: Swift.Int?
+            public var importPercent: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/import/commit_count`.
-            public var commit_count: Swift.Int?
+            public var commitCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/import/push_percent`.
-            public var push_percent: Swift.Int?
+            public var pushPercent: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/import/has_large_files`.
-            public var has_large_files: Swift.Bool?
+            public var hasLargeFiles: Swift.Bool?
             /// - Remark: Generated from `#/components/schemas/import/large_files_size`.
-            public var large_files_size: Swift.Int?
+            public var largeFilesSize: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/import/large_files_count`.
-            public var large_files_count: Swift.Int?
-            /// - Remark: Generated from `#/components/schemas/import/project_choicesPayload`.
-            public struct project_choicesPayloadPayload: Codable, Hashable, Sendable {
-                /// - Remark: Generated from `#/components/schemas/import/project_choicesPayload/vcs`.
+            public var largeFilesCount: Swift.Int?
+            /// - Remark: Generated from `#/components/schemas/import/ProjectChoicesPayload`.
+            public struct ProjectChoicesPayloadPayload: Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/components/schemas/import/ProjectChoicesPayload/vcs`.
                 public var vcs: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/import/project_choicesPayload/tfvc_project`.
-                public var tfvc_project: Swift.String?
-                /// - Remark: Generated from `#/components/schemas/import/project_choicesPayload/human_name`.
-                public var human_name: Swift.String?
-                /// Creates a new `project_choicesPayloadPayload`.
+                /// - Remark: Generated from `#/components/schemas/import/ProjectChoicesPayload/tfvc_project`.
+                public var tfvcProject: Swift.String?
+                /// - Remark: Generated from `#/components/schemas/import/ProjectChoicesPayload/human_name`.
+                public var humanName: Swift.String?
+                /// Creates a new `ProjectChoicesPayloadPayload`.
                 ///
                 /// - Parameters:
                 ///   - vcs:
-                ///   - tfvc_project:
-                ///   - human_name:
+                ///   - tfvcProject:
+                ///   - humanName:
                 public init(
                     vcs: Swift.String? = nil,
-                    tfvc_project: Swift.String? = nil,
-                    human_name: Swift.String? = nil
+                    tfvcProject: Swift.String? = nil,
+                    humanName: Swift.String? = nil
                 ) {
                     self.vcs = vcs
-                    self.tfvc_project = tfvc_project
-                    self.human_name = human_name
+                    self.tfvcProject = tfvcProject
+                    self.humanName = humanName
                 }
                 public enum CodingKeys: String, CodingKey {
                     case vcs
-                    case tfvc_project
-                    case human_name
+                    case tfvcProject = "tfvc_project"
+                    case humanName = "human_name"
                 }
             }
             /// - Remark: Generated from `#/components/schemas/import/project_choices`.
-            public typealias project_choicesPayload = [Components.Schemas._import.project_choicesPayloadPayload]
+            public typealias ProjectChoicesPayload = [Components.Schemas.Import.ProjectChoicesPayloadPayload]
             /// - Remark: Generated from `#/components/schemas/import/project_choices`.
-            public var project_choices: Components.Schemas._import.project_choicesPayload?
+            public var projectChoices: Components.Schemas.Import.ProjectChoicesPayload?
             /// - Remark: Generated from `#/components/schemas/import/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/import/authors_count`.
-            public var authors_count: Swift.Int?
+            public var authorsCount: Swift.Int?
             /// - Remark: Generated from `#/components/schemas/import/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/import/html_url`.
-            public var html_url: Swift.String
+            public var htmlUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/import/authors_url`.
-            public var authors_url: Swift.String
+            public var authorsUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/import/repository_url`.
-            public var repository_url: Swift.String
+            public var repositoryUrl: Swift.String
             /// - Remark: Generated from `#/components/schemas/import/svn_root`.
-            public var svn_root: Swift.String?
-            /// Creates a new `_import`.
+            public var svnRoot: Swift.String?
+            /// Creates a new `Import`.
             ///
             /// - Parameters:
             ///   - vcs:
-            ///   - use_lfs:
-            ///   - vcs_url: The URL of the originating repository.
-            ///   - svc_root:
-            ///   - tfvc_project:
+            ///   - useLfs:
+            ///   - vcsUrl: The URL of the originating repository.
+            ///   - svcRoot:
+            ///   - tfvcProject:
             ///   - status:
-            ///   - status_text:
-            ///   - failed_step:
-            ///   - error_message:
-            ///   - import_percent:
-            ///   - commit_count:
-            ///   - push_percent:
-            ///   - has_large_files:
-            ///   - large_files_size:
-            ///   - large_files_count:
-            ///   - project_choices:
+            ///   - statusText:
+            ///   - failedStep:
+            ///   - errorMessage:
+            ///   - importPercent:
+            ///   - commitCount:
+            ///   - pushPercent:
+            ///   - hasLargeFiles:
+            ///   - largeFilesSize:
+            ///   - largeFilesCount:
+            ///   - projectChoices:
             ///   - message:
-            ///   - authors_count:
+            ///   - authorsCount:
             ///   - url:
-            ///   - html_url:
-            ///   - authors_url:
-            ///   - repository_url:
-            ///   - svn_root:
+            ///   - htmlUrl:
+            ///   - authorsUrl:
+            ///   - repositoryUrl:
+            ///   - svnRoot:
             public init(
                 vcs: Swift.String? = nil,
-                use_lfs: Swift.Bool? = nil,
-                vcs_url: Swift.String,
-                svc_root: Swift.String? = nil,
-                tfvc_project: Swift.String? = nil,
-                status: Components.Schemas._import.statusPayload,
-                status_text: Swift.String? = nil,
-                failed_step: Swift.String? = nil,
-                error_message: Swift.String? = nil,
-                import_percent: Swift.Int? = nil,
-                commit_count: Swift.Int? = nil,
-                push_percent: Swift.Int? = nil,
-                has_large_files: Swift.Bool? = nil,
-                large_files_size: Swift.Int? = nil,
-                large_files_count: Swift.Int? = nil,
-                project_choices: Components.Schemas._import.project_choicesPayload? = nil,
+                useLfs: Swift.Bool? = nil,
+                vcsUrl: Swift.String,
+                svcRoot: Swift.String? = nil,
+                tfvcProject: Swift.String? = nil,
+                status: Components.Schemas.Import.StatusPayload,
+                statusText: Swift.String? = nil,
+                failedStep: Swift.String? = nil,
+                errorMessage: Swift.String? = nil,
+                importPercent: Swift.Int? = nil,
+                commitCount: Swift.Int? = nil,
+                pushPercent: Swift.Int? = nil,
+                hasLargeFiles: Swift.Bool? = nil,
+                largeFilesSize: Swift.Int? = nil,
+                largeFilesCount: Swift.Int? = nil,
+                projectChoices: Components.Schemas.Import.ProjectChoicesPayload? = nil,
                 message: Swift.String? = nil,
-                authors_count: Swift.Int? = nil,
+                authorsCount: Swift.Int? = nil,
                 url: Swift.String,
-                html_url: Swift.String,
-                authors_url: Swift.String,
-                repository_url: Swift.String,
-                svn_root: Swift.String? = nil
+                htmlUrl: Swift.String,
+                authorsUrl: Swift.String,
+                repositoryUrl: Swift.String,
+                svnRoot: Swift.String? = nil
             ) {
                 self.vcs = vcs
-                self.use_lfs = use_lfs
-                self.vcs_url = vcs_url
-                self.svc_root = svc_root
-                self.tfvc_project = tfvc_project
+                self.useLfs = useLfs
+                self.vcsUrl = vcsUrl
+                self.svcRoot = svcRoot
+                self.tfvcProject = tfvcProject
                 self.status = status
-                self.status_text = status_text
-                self.failed_step = failed_step
-                self.error_message = error_message
-                self.import_percent = import_percent
-                self.commit_count = commit_count
-                self.push_percent = push_percent
-                self.has_large_files = has_large_files
-                self.large_files_size = large_files_size
-                self.large_files_count = large_files_count
-                self.project_choices = project_choices
+                self.statusText = statusText
+                self.failedStep = failedStep
+                self.errorMessage = errorMessage
+                self.importPercent = importPercent
+                self.commitCount = commitCount
+                self.pushPercent = pushPercent
+                self.hasLargeFiles = hasLargeFiles
+                self.largeFilesSize = largeFilesSize
+                self.largeFilesCount = largeFilesCount
+                self.projectChoices = projectChoices
                 self.message = message
-                self.authors_count = authors_count
+                self.authorsCount = authorsCount
                 self.url = url
-                self.html_url = html_url
-                self.authors_url = authors_url
-                self.repository_url = repository_url
-                self.svn_root = svn_root
+                self.htmlUrl = htmlUrl
+                self.authorsUrl = authorsUrl
+                self.repositoryUrl = repositoryUrl
+                self.svnRoot = svnRoot
             }
             public enum CodingKeys: String, CodingKey {
                 case vcs
-                case use_lfs
-                case vcs_url
-                case svc_root
-                case tfvc_project
+                case useLfs = "use_lfs"
+                case vcsUrl = "vcs_url"
+                case svcRoot = "svc_root"
+                case tfvcProject = "tfvc_project"
                 case status
-                case status_text
-                case failed_step
-                case error_message
-                case import_percent
-                case commit_count
-                case push_percent
-                case has_large_files
-                case large_files_size
-                case large_files_count
-                case project_choices
+                case statusText = "status_text"
+                case failedStep = "failed_step"
+                case errorMessage = "error_message"
+                case importPercent = "import_percent"
+                case commitCount = "commit_count"
+                case pushPercent = "push_percent"
+                case hasLargeFiles = "has_large_files"
+                case largeFilesSize = "large_files_size"
+                case largeFilesCount = "large_files_count"
+                case projectChoices = "project_choices"
                 case message
-                case authors_count
+                case authorsCount = "authors_count"
                 case url
-                case html_url
-                case authors_url
-                case repository_url
-                case svn_root
+                case htmlUrl = "html_url"
+                case authorsUrl = "authors_url"
+                case repositoryUrl = "repository_url"
+                case svnRoot = "svn_root"
             }
         }
         /// Porter Author
         ///
         /// - Remark: Generated from `#/components/schemas/porter-author`.
-        public struct porter_hyphen_author: Codable, Hashable, Sendable {
+        public struct PorterAuthor: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/porter-author/id`.
             public var id: Swift.Int
             /// - Remark: Generated from `#/components/schemas/porter-author/remote_id`.
-            public var remote_id: Swift.String
+            public var remoteId: Swift.String
             /// - Remark: Generated from `#/components/schemas/porter-author/remote_name`.
-            public var remote_name: Swift.String
+            public var remoteName: Swift.String
             /// - Remark: Generated from `#/components/schemas/porter-author/email`.
             public var email: Swift.String
             /// - Remark: Generated from `#/components/schemas/porter-author/name`.
@@ -3216,76 +3225,76 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/porter-author/url`.
             public var url: Swift.String
             /// - Remark: Generated from `#/components/schemas/porter-author/import_url`.
-            public var import_url: Swift.String
-            /// Creates a new `porter_hyphen_author`.
+            public var importUrl: Swift.String
+            /// Creates a new `PorterAuthor`.
             ///
             /// - Parameters:
             ///   - id:
-            ///   - remote_id:
-            ///   - remote_name:
+            ///   - remoteId:
+            ///   - remoteName:
             ///   - email:
             ///   - name:
             ///   - url:
-            ///   - import_url:
+            ///   - importUrl:
             public init(
                 id: Swift.Int,
-                remote_id: Swift.String,
-                remote_name: Swift.String,
+                remoteId: Swift.String,
+                remoteName: Swift.String,
                 email: Swift.String,
                 name: Swift.String,
                 url: Swift.String,
-                import_url: Swift.String
+                importUrl: Swift.String
             ) {
                 self.id = id
-                self.remote_id = remote_id
-                self.remote_name = remote_name
+                self.remoteId = remoteId
+                self.remoteName = remoteName
                 self.email = email
                 self.name = name
                 self.url = url
-                self.import_url = import_url
+                self.importUrl = importUrl
             }
             public enum CodingKeys: String, CodingKey {
                 case id
-                case remote_id
-                case remote_name
+                case remoteId = "remote_id"
+                case remoteName = "remote_name"
                 case email
                 case name
                 case url
-                case import_url
+                case importUrl = "import_url"
             }
         }
         /// Porter Large File
         ///
         /// - Remark: Generated from `#/components/schemas/porter-large-file`.
-        public struct porter_hyphen_large_hyphen_file: Codable, Hashable, Sendable {
+        public struct PorterLargeFile: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/porter-large-file/ref_name`.
-            public var ref_name: Swift.String
+            public var refName: Swift.String
             /// - Remark: Generated from `#/components/schemas/porter-large-file/path`.
             public var path: Swift.String
             /// - Remark: Generated from `#/components/schemas/porter-large-file/oid`.
             public var oid: Swift.String
             /// - Remark: Generated from `#/components/schemas/porter-large-file/size`.
             public var size: Swift.Int
-            /// Creates a new `porter_hyphen_large_hyphen_file`.
+            /// Creates a new `PorterLargeFile`.
             ///
             /// - Parameters:
-            ///   - ref_name:
+            ///   - refName:
             ///   - path:
             ///   - oid:
             ///   - size:
             public init(
-                ref_name: Swift.String,
+                refName: Swift.String,
                 path: Swift.String,
                 oid: Swift.String,
                 size: Swift.Int
             ) {
-                self.ref_name = ref_name
+                self.refName = refName
                 self.path = path
                 self.oid = oid
                 self.size = size
             }
             public enum CodingKeys: String, CodingKey {
-                case ref_name
+                case refName = "ref_name"
                 case path
                 case oid
                 case size
@@ -3297,50 +3306,50 @@ public enum Components {
         /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/per-page`.
-        public typealias per_hyphen_page = Swift.Int
+        public typealias PerPage = Swift.Int
         /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
         ///
         /// - Remark: Generated from `#/components/parameters/page`.
-        public typealias page = Swift.Int
+        public typealias Page = Swift.Int
         /// The account owner of the repository. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/owner`.
-        public typealias owner = Swift.String
+        public typealias Owner = Swift.String
         /// The name of the repository without the `.git` extension. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/repo`.
-        public typealias repo = Swift.String
+        public typealias Repo = Swift.String
         /// The organization name. The name is not case sensitive.
         ///
         /// - Remark: Generated from `#/components/parameters/org`.
-        public typealias org = Swift.String
+        public typealias Org = Swift.String
         /// The unique identifier of the migration.
         ///
         /// - Remark: Generated from `#/components/parameters/migration-id`.
-        public typealias migration_hyphen_id = Swift.Int
+        public typealias MigrationId = Swift.Int
         /// repo_name parameter
         ///
         /// - Remark: Generated from `#/components/parameters/repo-name`.
-        public typealias repo_hyphen_name = Swift.String
+        public typealias RepoName = Swift.String
         /// A user ID. Only return users with an ID greater than this ID.
         ///
         /// - Remark: Generated from `#/components/parameters/since-user`.
-        public typealias since_hyphen_user = Swift.Int
+        public typealias SinceUser = Swift.Int
     }
     /// Types generated from the `#/components/requestBodies` section of the OpenAPI document.
     public enum RequestBodies {}
     /// Types generated from the `#/components/responses` section of the OpenAPI document.
     public enum Responses {
-        public struct not_found: Sendable, Hashable {
+        public struct NotFound: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/not_found/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/not_found/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3350,25 +3359,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.not_found.Body
-            /// Creates a new `not_found`.
+            public var body: Components.Responses.NotFound.Body
+            /// Creates a new `NotFound`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.not_found.Body) {
+            public init(body: Components.Responses.NotFound.Body) {
                 self.body = body
             }
         }
-        public struct validation_failed: Sendable, Hashable {
+        public struct ValidationFailed: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/validation_failed/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/validation_failed/content/application\/json`.
-                case json(Components.Schemas.validation_hyphen_error)
+                case json(Components.Schemas.ValidationError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.validation_hyphen_error {
+                public var json: Components.Schemas.ValidationError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3378,29 +3387,29 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.validation_failed.Body
-            /// Creates a new `validation_failed`.
+            public var body: Components.Responses.ValidationFailed.Body
+            /// Creates a new `ValidationFailed`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.validation_failed.Body) {
+            public init(body: Components.Responses.ValidationFailed.Body) {
                 self.body = body
             }
         }
-        public struct not_modified: Sendable, Hashable {
-            /// Creates a new `not_modified`.
+        public struct NotModified: Sendable, Hashable {
+            /// Creates a new `NotModified`.
             public init() {}
         }
-        public struct requires_authentication: Sendable, Hashable {
+        public struct RequiresAuthentication: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/requires_authentication/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/requires_authentication/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3410,25 +3419,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.requires_authentication.Body
-            /// Creates a new `requires_authentication`.
+            public var body: Components.Responses.RequiresAuthentication.Body
+            /// Creates a new `RequiresAuthentication`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.requires_authentication.Body) {
+            public init(body: Components.Responses.RequiresAuthentication.Body) {
                 self.body = body
             }
         }
-        public struct forbidden: Sendable, Hashable {
+        public struct Forbidden: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/forbidden/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/forbidden/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3438,25 +3447,25 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.forbidden.Body
-            /// Creates a new `forbidden`.
+            public var body: Components.Responses.Forbidden.Body
+            /// Creates a new `Forbidden`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.forbidden.Body) {
+            public init(body: Components.Responses.Forbidden.Body) {
                 self.body = body
             }
         }
-        public struct porter_maintenance: Sendable, Hashable {
+        public struct PorterMaintenance: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/porter_maintenance/content`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/responses/porter_maintenance/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
+                case json(Components.Schemas.BasicError)
                 /// The associated value of the enum case if `self` is `.json`.
                 ///
                 /// - Throws: An error if `self` is not `.json`.
                 /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
+                public var json: Components.Schemas.BasicError {
                     get throws {
                         switch self {
                         case let .json(body):
@@ -3466,12 +3475,12 @@ public enum Components {
                 }
             }
             /// Received HTTP response body
-            public var body: Components.Responses.porter_maintenance.Body
-            /// Creates a new `porter_maintenance`.
+            public var body: Components.Responses.PorterMaintenance.Body
+            /// Creates a new `PorterMaintenance`.
             ///
             /// - Parameters:
             ///   - body: Received HTTP response body
-            public init(body: Components.Responses.porter_maintenance.Body) {
+            public init(body: Components.Responses.PorterMaintenance.Body) {
                 self.body = body
             }
         }
@@ -3479,7 +3488,7 @@ public enum Components {
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
     public enum Headers {
         /// - Remark: Generated from `#/components/headers/link`.
-        public typealias link = Swift.String
+        public typealias Link = Swift.String
     }
 }
 
@@ -3493,7 +3502,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/get(migrations/list-for-org)`.
-    public enum migrations_sol_list_hyphen_for_hyphen_org {
+    public enum MigrationsListForOrg {
         public static let id: Swift.String = "migrations/list-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/path`.
@@ -3501,67 +3510,67 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.MigrationsListForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Allowed values that can be passed to the exclude param.
                 ///
-                /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query/excludePayload`.
-                @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query/ExcludePayload`.
+                @frozen public enum ExcludePayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case repositories = "repositories"
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query/exclude`.
-                public typealias excludePayload = [Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Query.excludePayloadPayload]
+                public typealias ExcludePayload = [Operations.MigrationsListForOrg.Input.Query.ExcludePayloadPayload]
                 /// Exclude attributes from the API response to improve performance
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query/exclude`.
-                public var exclude: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Query.excludePayload?
+                public var exclude: Operations.MigrationsListForOrg.Input.Query.ExcludePayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - exclude: Exclude attributes from the API response to improve performance
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil,
-                    exclude: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Query.excludePayload? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil,
+                    exclude: Operations.MigrationsListForOrg.Input.Query.ExcludePayload? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                     self.exclude = exclude
                 }
             }
-            public var query: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.MigrationsListForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_list_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsListForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_list_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsListForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.MigrationsListForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3569,9 +3578,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.migrations_sol_list_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.MigrationsListForOrg.Input.Path,
+                query: Operations.MigrationsListForOrg.Input.Query = .init(),
+                headers: Operations.MigrationsListForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -3583,26 +3592,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.migrations_sol_list_hyphen_for_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.MigrationsListForOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.migration])
+                    case json([Components.Schemas.Migration])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.migration] {
+                    public var json: [Components.Schemas.Migration] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3612,15 +3621,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_list_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.MigrationsListForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.migrations_sol_list_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.migrations_sol_list_hyphen_for_hyphen_org.Output.Ok.Body
+                    headers: Operations.MigrationsListForOrg.Output.Ok.Headers = .init(),
+                    body: Operations.MigrationsListForOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -3631,12 +3640,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/get(migrations/list-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_list_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.MigrationsListForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_list_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.MigrationsListForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -3686,7 +3695,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /orgs/{org}/migrations`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/post(migrations/start-for-org)`.
-    public enum migrations_sol_start_hyphen_for_hyphen_org {
+    public enum MigrationsStartForOrg {
         public static let id: Swift.String = "migrations/start-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/path`.
@@ -3694,32 +3703,32 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                public init(org: Components.Parameters.org) {
+                public init(org: Components.Parameters.Org) {
                     self.org = org
                 }
             }
-            public var path: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.MigrationsStartForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_start_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsStartForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_start_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsStartForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.MigrationsStartForOrg.Input.Headers
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// A list of arrays indicating which repositories should be migrated.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/repositories`.
@@ -3727,92 +3736,92 @@ public enum Operations {
                     /// Indicates whether repositories should be locked (to prevent manipulation) while migrating data.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/lock_repositories`.
-                    public var lock_repositories: Swift.Bool?
+                    public var lockRepositories: Swift.Bool?
                     /// Indicates whether metadata should be excluded and only git source should be included for the migration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/exclude_metadata`.
-                    public var exclude_metadata: Swift.Bool?
+                    public var excludeMetadata: Swift.Bool?
                     /// Indicates whether the repository git data should be excluded from the migration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/exclude_git_data`.
-                    public var exclude_git_data: Swift.Bool?
+                    public var excludeGitData: Swift.Bool?
                     /// Indicates whether attachments should be excluded from the migration (to reduce migration archive file size).
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/exclude_attachments`.
-                    public var exclude_attachments: Swift.Bool?
+                    public var excludeAttachments: Swift.Bool?
                     /// Indicates whether releases should be excluded from the migration (to reduce migration archive file size).
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/exclude_releases`.
-                    public var exclude_releases: Swift.Bool?
+                    public var excludeReleases: Swift.Bool?
                     /// Indicates whether projects owned by the organization or users should be excluded. from the migration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/exclude_owner_projects`.
-                    public var exclude_owner_projects: Swift.Bool?
+                    public var excludeOwnerProjects: Swift.Bool?
                     /// Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/org_metadata_only`.
-                    public var org_metadata_only: Swift.Bool?
-                    /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/excludePayload`.
-                    @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable {
+                    public var orgMetadataOnly: Swift.Bool?
+                    /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/ExcludePayload`.
+                    @frozen public enum ExcludePayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case repositories = "repositories"
                     }
                     /// Exclude related items from being returned in the response in order to improve performance of the request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/exclude`.
-                    public typealias excludePayload = [Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Body.jsonPayload.excludePayloadPayload]
+                    public typealias ExcludePayload = [Operations.MigrationsStartForOrg.Input.Body.JsonPayload.ExcludePayloadPayload]
                     /// Exclude related items from being returned in the response in order to improve performance of the request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/exclude`.
-                    public var exclude: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Body.jsonPayload.excludePayload?
-                    /// Creates a new `jsonPayload`.
+                    public var exclude: Operations.MigrationsStartForOrg.Input.Body.JsonPayload.ExcludePayload?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - repositories: A list of arrays indicating which repositories should be migrated.
-                    ///   - lock_repositories: Indicates whether repositories should be locked (to prevent manipulation) while migrating data.
-                    ///   - exclude_metadata: Indicates whether metadata should be excluded and only git source should be included for the migration.
-                    ///   - exclude_git_data: Indicates whether the repository git data should be excluded from the migration.
-                    ///   - exclude_attachments: Indicates whether attachments should be excluded from the migration (to reduce migration archive file size).
-                    ///   - exclude_releases: Indicates whether releases should be excluded from the migration (to reduce migration archive file size).
-                    ///   - exclude_owner_projects: Indicates whether projects owned by the organization or users should be excluded. from the migration.
-                    ///   - org_metadata_only: Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
+                    ///   - lockRepositories: Indicates whether repositories should be locked (to prevent manipulation) while migrating data.
+                    ///   - excludeMetadata: Indicates whether metadata should be excluded and only git source should be included for the migration.
+                    ///   - excludeGitData: Indicates whether the repository git data should be excluded from the migration.
+                    ///   - excludeAttachments: Indicates whether attachments should be excluded from the migration (to reduce migration archive file size).
+                    ///   - excludeReleases: Indicates whether releases should be excluded from the migration (to reduce migration archive file size).
+                    ///   - excludeOwnerProjects: Indicates whether projects owned by the organization or users should be excluded. from the migration.
+                    ///   - orgMetadataOnly: Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
                     ///   - exclude: Exclude related items from being returned in the response in order to improve performance of the request.
                     public init(
                         repositories: [Swift.String],
-                        lock_repositories: Swift.Bool? = nil,
-                        exclude_metadata: Swift.Bool? = nil,
-                        exclude_git_data: Swift.Bool? = nil,
-                        exclude_attachments: Swift.Bool? = nil,
-                        exclude_releases: Swift.Bool? = nil,
-                        exclude_owner_projects: Swift.Bool? = nil,
-                        org_metadata_only: Swift.Bool? = nil,
-                        exclude: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Body.jsonPayload.excludePayload? = nil
+                        lockRepositories: Swift.Bool? = nil,
+                        excludeMetadata: Swift.Bool? = nil,
+                        excludeGitData: Swift.Bool? = nil,
+                        excludeAttachments: Swift.Bool? = nil,
+                        excludeReleases: Swift.Bool? = nil,
+                        excludeOwnerProjects: Swift.Bool? = nil,
+                        orgMetadataOnly: Swift.Bool? = nil,
+                        exclude: Operations.MigrationsStartForOrg.Input.Body.JsonPayload.ExcludePayload? = nil
                     ) {
                         self.repositories = repositories
-                        self.lock_repositories = lock_repositories
-                        self.exclude_metadata = exclude_metadata
-                        self.exclude_git_data = exclude_git_data
-                        self.exclude_attachments = exclude_attachments
-                        self.exclude_releases = exclude_releases
-                        self.exclude_owner_projects = exclude_owner_projects
-                        self.org_metadata_only = org_metadata_only
+                        self.lockRepositories = lockRepositories
+                        self.excludeMetadata = excludeMetadata
+                        self.excludeGitData = excludeGitData
+                        self.excludeAttachments = excludeAttachments
+                        self.excludeReleases = excludeReleases
+                        self.excludeOwnerProjects = excludeOwnerProjects
+                        self.orgMetadataOnly = orgMetadataOnly
                         self.exclude = exclude
                     }
                     public enum CodingKeys: String, CodingKey {
                         case repositories
-                        case lock_repositories
-                        case exclude_metadata
-                        case exclude_git_data
-                        case exclude_attachments
-                        case exclude_releases
-                        case exclude_owner_projects
-                        case org_metadata_only
+                        case lockRepositories = "lock_repositories"
+                        case excludeMetadata = "exclude_metadata"
+                        case excludeGitData = "exclude_git_data"
+                        case excludeAttachments = "exclude_attachments"
+                        case excludeReleases = "exclude_releases"
+                        case excludeOwnerProjects = "exclude_owner_projects"
+                        case orgMetadataOnly = "org_metadata_only"
                         case exclude
                     }
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/content/application\/json`.
-                case json(Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Body.jsonPayload)
+                case json(Operations.MigrationsStartForOrg.Input.Body.JsonPayload)
             }
-            public var body: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Body
+            public var body: Operations.MigrationsStartForOrg.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -3820,9 +3829,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Headers = .init(),
-                body: Operations.migrations_sol_start_hyphen_for_hyphen_org.Input.Body
+                path: Operations.MigrationsStartForOrg.Input.Path,
+                headers: Operations.MigrationsStartForOrg.Input.Headers = .init(),
+                body: Operations.MigrationsStartForOrg.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -3834,12 +3843,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.migration)
+                    case json(Components.Schemas.Migration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.migration {
+                    public var json: Components.Schemas.Migration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -3849,12 +3858,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_start_hyphen_for_hyphen_org.Output.Created.Body
+                public var body: Operations.MigrationsStartForOrg.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_start_hyphen_for_hyphen_org.Output.Created.Body) {
+                public init(body: Operations.MigrationsStartForOrg.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -3863,12 +3872,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/post(migrations/start-for-org)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.migrations_sol_start_hyphen_for_hyphen_org.Output.Created)
+            case created(Operations.MigrationsStartForOrg.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.migrations_sol_start_hyphen_for_hyphen_org.Output.Created {
+            public var created: Operations.MigrationsStartForOrg.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -3886,12 +3895,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/post(migrations/start-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -3909,12 +3918,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/post(migrations/start-for-org)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -3971,7 +3980,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/get(migrations/get-status-for-org)`.
-    public enum migrations_sol_get_hyphen_status_hyphen_for_hyphen_org {
+    public enum MigrationsGetStatusForOrg {
         public static let id: Swift.String = "migrations/get-status-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/path`.
@@ -3979,60 +3988,60 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - migration_id: The unique identifier of the migration.
+                ///   - migrationId: The unique identifier of the migration.
                 public init(
-                    org: Components.Parameters.org,
-                    migration_id: Components.Parameters.migration_hyphen_id
+                    org: Components.Parameters.Org,
+                    migrationId: Components.Parameters.MigrationId
                 ) {
                     self.org = org
-                    self.migration_id = migration_id
+                    self.migrationId = migrationId
                 }
             }
-            public var path: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.MigrationsGetStatusForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// Allowed values that can be passed to the exclude param.
                 ///
-                /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/query/excludePayload`.
-                @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable {
+                /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/query/ExcludePayload`.
+                @frozen public enum ExcludePayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case repositories = "repositories"
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/query/exclude`.
-                public typealias excludePayload = [Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Query.excludePayloadPayload]
+                public typealias ExcludePayload = [Operations.MigrationsGetStatusForOrg.Input.Query.ExcludePayloadPayload]
                 /// Exclude attributes from the API response to improve performance
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/query/exclude`.
-                public var exclude: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Query.excludePayload?
+                public var exclude: Operations.MigrationsGetStatusForOrg.Input.Query.ExcludePayload?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - exclude: Exclude attributes from the API response to improve performance
-                public init(exclude: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Query.excludePayload? = nil) {
+                public init(exclude: Operations.MigrationsGetStatusForOrg.Input.Query.ExcludePayload? = nil) {
                     self.exclude = exclude
                 }
             }
-            public var query: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.MigrationsGetStatusForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetStatusForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetStatusForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.MigrationsGetStatusForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4040,9 +4049,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.MigrationsGetStatusForOrg.Input.Path,
+                query: Operations.MigrationsGetStatusForOrg.Input.Query = .init(),
+                headers: Operations.MigrationsGetStatusForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4054,12 +4063,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.migration)
+                    case json(Components.Schemas.Migration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.migration {
+                    public var json: Components.Schemas.Migration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4069,12 +4078,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.MigrationsGetStatusForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Output.Ok.Body) {
+                public init(body: Operations.MigrationsGetStatusForOrg.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4086,12 +4095,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/get(migrations/get-status-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.MigrationsGetStatusForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.MigrationsGetStatusForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4109,12 +4118,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/get(migrations/get-status-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4164,7 +4173,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/get(migrations/download-archive-for-org)`.
-    public enum migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org {
+    public enum MigrationsDownloadArchiveForOrg {
         public static let id: Swift.String = "migrations/download-archive-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/archive/GET/path`.
@@ -4172,45 +4181,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/archive/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/archive/GET/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - migration_id: The unique identifier of the migration.
+                ///   - migrationId: The unique identifier of the migration.
                 public init(
-                    org: Components.Parameters.org,
-                    migration_id: Components.Parameters.migration_hyphen_id
+                    org: Components.Parameters.Org,
+                    migrationId: Components.Parameters.MigrationId
                 ) {
                     self.org = org
-                    self.migration_id = migration_id
+                    self.migrationId = migrationId
                 }
             }
-            public var path: Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.MigrationsDownloadArchiveForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/archive/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsDownloadArchiveForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsDownloadArchiveForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.MigrationsDownloadArchiveForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.MigrationsDownloadArchiveForOrg.Input.Path,
+                headers: Operations.MigrationsDownloadArchiveForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4226,12 +4235,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/get(migrations/download-archive-for-org)/responses/302`.
             ///
             /// HTTP response code: `302 found`.
-            case found(Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Output.Found)
+            case found(Operations.MigrationsDownloadArchiveForOrg.Output.Found)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/get(migrations/download-archive-for-org)/responses/302`.
+            ///
+            /// HTTP response code: `302 found`.
+            public static var found: Self {
+                .found(.init())
+            }
             /// The associated value of the enum case if `self` is `.found`.
             ///
             /// - Throws: An error if `self` is not `.found`.
             /// - SeeAlso: `.found`.
-            public var found: Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Output.Found {
+            public var found: Operations.MigrationsDownloadArchiveForOrg.Output.Found {
                 get throws {
                     switch self {
                     case let .found(response):
@@ -4249,12 +4266,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/get(migrations/download-archive-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4304,7 +4321,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-org)`.
-    public enum migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org {
+    public enum MigrationsDeleteArchiveForOrg {
         public static let id: Swift.String = "migrations/delete-archive-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/archive/DELETE/path`.
@@ -4312,45 +4329,45 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/archive/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/archive/DELETE/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - migration_id: The unique identifier of the migration.
+                ///   - migrationId: The unique identifier of the migration.
                 public init(
-                    org: Components.Parameters.org,
-                    migration_id: Components.Parameters.migration_hyphen_id
+                    org: Components.Parameters.Org,
+                    migrationId: Components.Parameters.MigrationId
                 ) {
                     self.org = org
-                    self.migration_id = migration_id
+                    self.migrationId = migrationId
                 }
             }
-            public var path: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.MigrationsDeleteArchiveForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/archive/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsDeleteArchiveForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsDeleteArchiveForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.MigrationsDeleteArchiveForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.MigrationsDeleteArchiveForOrg.Input.Path,
+                headers: Operations.MigrationsDeleteArchiveForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4366,12 +4383,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Output.NoContent)
+            case noContent(Operations.MigrationsDeleteArchiveForOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Output.NoContent {
+            public var noContent: Operations.MigrationsDeleteArchiveForOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4389,12 +4414,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4444,7 +4469,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-org)`.
-    public enum migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org {
+    public enum MigrationsUnlockRepoForOrg {
         public static let id: Swift.String = "migrations/unlock-repo-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/path`.
@@ -4452,52 +4477,52 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// repo_name parameter
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/path/repo_name`.
-                public var repo_name: Components.Parameters.repo_hyphen_name
+                public var repoName: Components.Parameters.RepoName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - migration_id: The unique identifier of the migration.
-                ///   - repo_name: repo_name parameter
+                ///   - migrationId: The unique identifier of the migration.
+                ///   - repoName: repo_name parameter
                 public init(
-                    org: Components.Parameters.org,
-                    migration_id: Components.Parameters.migration_hyphen_id,
-                    repo_name: Components.Parameters.repo_hyphen_name
+                    org: Components.Parameters.Org,
+                    migrationId: Components.Parameters.MigrationId,
+                    repoName: Components.Parameters.RepoName
                 ) {
                     self.org = org
-                    self.migration_id = migration_id
-                    self.repo_name = repo_name
+                    self.migrationId = migrationId
+                    self.repoName = repoName
                 }
             }
-            public var path: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.MigrationsUnlockRepoForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsUnlockRepoForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsUnlockRepoForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.MigrationsUnlockRepoForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Input.Path,
-                headers: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.MigrationsUnlockRepoForOrg.Input.Path,
+                headers: Operations.MigrationsUnlockRepoForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4513,12 +4538,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-org)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Output.NoContent)
+            case noContent(Operations.MigrationsUnlockRepoForOrg.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Output.NoContent {
+            public var noContent: Operations.MigrationsUnlockRepoForOrg.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -4536,12 +4569,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4591,7 +4624,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /orgs/{org}/migrations/{migration_id}/repositories`.
     /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repositories/get(migrations/list-repos-for-org)`.
-    public enum migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org {
+    public enum MigrationsListReposForOrg {
         public static let id: Swift.String = "migrations/list-repos-for-org"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/path`.
@@ -4599,61 +4632,61 @@ public enum Operations {
                 /// The organization name. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/path/org`.
-                public var org: Components.Parameters.org
+                public var org: Components.Parameters.Org
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - org: The organization name. The name is not case sensitive.
-                ///   - migration_id: The unique identifier of the migration.
+                ///   - migrationId: The unique identifier of the migration.
                 public init(
-                    org: Components.Parameters.org,
-                    migration_id: Components.Parameters.migration_hyphen_id
+                    org: Components.Parameters.Org,
+                    migrationId: Components.Parameters.MigrationId
                 ) {
                     self.org = org
-                    self.migration_id = migration_id
+                    self.migrationId = migrationId
                 }
             }
-            public var path: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Path
+            public var path: Operations.MigrationsListReposForOrg.Input.Path
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Query
+            public var query: Operations.MigrationsListReposForOrg.Input.Query
             /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsListReposForOrg.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsListReposForOrg.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Headers
+            public var headers: Operations.MigrationsListReposForOrg.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -4661,9 +4694,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Path,
-                query: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Query = .init(),
-                headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Input.Headers = .init()
+                path: Operations.MigrationsListReposForOrg.Input.Path,
+                query: Operations.MigrationsListReposForOrg.Input.Query = .init(),
+                headers: Operations.MigrationsListReposForOrg.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -4675,26 +4708,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Output.Ok.Headers
+                public var headers: Operations.MigrationsListReposForOrg.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/repositories/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.minimal_hyphen_repository])
+                    case json([Components.Schemas.MinimalRepository])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.minimal_hyphen_repository] {
+                    public var json: [Components.Schemas.MinimalRepository] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4704,15 +4737,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Output.Ok.Body
+                public var body: Operations.MigrationsListReposForOrg.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Output.Ok.Headers = .init(),
-                    body: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Output.Ok.Body
+                    headers: Operations.MigrationsListReposForOrg.Output.Ok.Headers = .init(),
+                    body: Operations.MigrationsListReposForOrg.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -4723,12 +4756,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repositories/get(migrations/list-repos-for-org)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Output.Ok)
+            case ok(Operations.MigrationsListReposForOrg.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_org.Output.Ok {
+            public var ok: Operations.MigrationsListReposForOrg.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4746,12 +4779,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repositories/get(migrations/list-repos-for-org)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4837,7 +4870,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/get(migrations/get-import-status)`.
-    public enum migrations_sol_get_hyphen_import_hyphen_status {
+    public enum MigrationsGetImportStatus {
         public static let id: Swift.String = "migrations/get-import-status"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/GET/path`.
@@ -4845,45 +4878,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.migrations_sol_get_hyphen_import_hyphen_status.Input.Path
+            public var path: Operations.MigrationsGetImportStatus.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_import_hyphen_status.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetImportStatus.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_import_hyphen_status.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetImportStatus.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_get_hyphen_import_hyphen_status.Input.Headers
+            public var headers: Operations.MigrationsGetImportStatus.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_get_hyphen_import_hyphen_status.Input.Path,
-                headers: Operations.migrations_sol_get_hyphen_import_hyphen_status.Input.Headers = .init()
+                path: Operations.MigrationsGetImportStatus.Input.Path,
+                headers: Operations.MigrationsGetImportStatus.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -4894,12 +4927,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas._import)
+                    case json(Components.Schemas.Import)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas._import {
+                    public var json: Components.Schemas.Import {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -4909,12 +4942,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_get_hyphen_import_hyphen_status.Output.Ok.Body
+                public var body: Operations.MigrationsGetImportStatus.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_get_hyphen_import_hyphen_status.Output.Ok.Body) {
+                public init(body: Operations.MigrationsGetImportStatus.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -4923,12 +4956,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/get(migrations/get-import-status)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_get_hyphen_import_hyphen_status.Output.Ok)
+            case ok(Operations.MigrationsGetImportStatus.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_get_hyphen_import_hyphen_status.Output.Ok {
+            public var ok: Operations.MigrationsGetImportStatus.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -4946,12 +4979,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/get(migrations/get-import-status)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -4969,12 +5002,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/get(migrations/get-import-status)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.porter_maintenance)
+            case serviceUnavailable(Components.Responses.PorterMaintenance)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.porter_maintenance {
+            public var serviceUnavailable: Components.Responses.PorterMaintenance {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5032,7 +5065,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)`.
-    public enum migrations_sol_update_hyphen_import {
+    public enum MigrationsUpdateImport {
         public static let id: Swift.String = "migrations/update-import"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/path`.
@@ -5040,53 +5073,53 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.migrations_sol_update_hyphen_import.Input.Path
+            public var path: Operations.MigrationsUpdateImport.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_update_hyphen_import.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsUpdateImport.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_update_hyphen_import.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsUpdateImport.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_update_hyphen_import.Input.Headers
+            public var headers: Operations.MigrationsUpdateImport.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The username to provide to the originating repository.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody/json/vcs_username`.
-                    public var vcs_username: Swift.String?
+                    public var vcsUsername: Swift.String?
                     /// The password to provide to the originating repository.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody/json/vcs_password`.
-                    public var vcs_password: Swift.String?
+                    public var vcsPassword: Swift.String?
                     /// The type of version control system you are migrating from.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody/json/vcs`.
-                    @frozen public enum vcsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum VcsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case subversion = "subversion"
                         case tfvc = "tfvc"
                         case git = "git"
@@ -5095,40 +5128,40 @@ public enum Operations {
                     /// The type of version control system you are migrating from.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody/json/vcs`.
-                    public var vcs: Operations.migrations_sol_update_hyphen_import.Input.Body.jsonPayload.vcsPayload?
+                    public var vcs: Operations.MigrationsUpdateImport.Input.Body.JsonPayload.VcsPayload?
                     /// For a tfvc import, the name of the project that is being imported.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody/json/tfvc_project`.
-                    public var tfvc_project: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var tfvcProject: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - vcs_username: The username to provide to the originating repository.
-                    ///   - vcs_password: The password to provide to the originating repository.
+                    ///   - vcsUsername: The username to provide to the originating repository.
+                    ///   - vcsPassword: The password to provide to the originating repository.
                     ///   - vcs: The type of version control system you are migrating from.
-                    ///   - tfvc_project: For a tfvc import, the name of the project that is being imported.
+                    ///   - tfvcProject: For a tfvc import, the name of the project that is being imported.
                     public init(
-                        vcs_username: Swift.String? = nil,
-                        vcs_password: Swift.String? = nil,
-                        vcs: Operations.migrations_sol_update_hyphen_import.Input.Body.jsonPayload.vcsPayload? = nil,
-                        tfvc_project: Swift.String? = nil
+                        vcsUsername: Swift.String? = nil,
+                        vcsPassword: Swift.String? = nil,
+                        vcs: Operations.MigrationsUpdateImport.Input.Body.JsonPayload.VcsPayload? = nil,
+                        tfvcProject: Swift.String? = nil
                     ) {
-                        self.vcs_username = vcs_username
-                        self.vcs_password = vcs_password
+                        self.vcsUsername = vcsUsername
+                        self.vcsPassword = vcsPassword
                         self.vcs = vcs
-                        self.tfvc_project = tfvc_project
+                        self.tfvcProject = tfvcProject
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case vcs_username
-                        case vcs_password
+                        case vcsUsername = "vcs_username"
+                        case vcsPassword = "vcs_password"
                         case vcs
-                        case tfvc_project
+                        case tfvcProject = "tfvc_project"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody/content/application\/json`.
-                case json(Operations.migrations_sol_update_hyphen_import.Input.Body.jsonPayload)
+                case json(Operations.MigrationsUpdateImport.Input.Body.JsonPayload)
             }
-            public var body: Operations.migrations_sol_update_hyphen_import.Input.Body?
+            public var body: Operations.MigrationsUpdateImport.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5136,9 +5169,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.migrations_sol_update_hyphen_import.Input.Path,
-                headers: Operations.migrations_sol_update_hyphen_import.Input.Headers = .init(),
-                body: Operations.migrations_sol_update_hyphen_import.Input.Body? = nil
+                path: Operations.MigrationsUpdateImport.Input.Path,
+                headers: Operations.MigrationsUpdateImport.Input.Headers = .init(),
+                body: Operations.MigrationsUpdateImport.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -5150,12 +5183,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas._import)
+                    case json(Components.Schemas.Import)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas._import {
+                    public var json: Components.Schemas.Import {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5165,12 +5198,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_update_hyphen_import.Output.Ok.Body
+                public var body: Operations.MigrationsUpdateImport.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_update_hyphen_import.Output.Ok.Body) {
+                public init(body: Operations.MigrationsUpdateImport.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5179,12 +5212,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_update_hyphen_import.Output.Ok)
+            case ok(Operations.MigrationsUpdateImport.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_update_hyphen_import.Output.Ok {
+            public var ok: Operations.MigrationsUpdateImport.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5202,12 +5235,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/patch(migrations/update-import)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.porter_maintenance)
+            case serviceUnavailable(Components.Responses.PorterMaintenance)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.porter_maintenance {
+            public var serviceUnavailable: Components.Responses.PorterMaintenance {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5262,7 +5295,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PUT /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)`.
-    public enum migrations_sol_start_hyphen_import {
+    public enum MigrationsStartImport {
         public static let id: Swift.String = "migrations/start-import"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/path`.
@@ -5270,49 +5303,49 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.migrations_sol_start_hyphen_import.Input.Path
+            public var path: Operations.MigrationsStartImport.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_start_hyphen_import.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsStartImport.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_start_hyphen_import.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsStartImport.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_start_hyphen_import.Input.Headers
+            public var headers: Operations.MigrationsStartImport.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The URL of the originating repository.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/json/vcs_url`.
-                    public var vcs_url: Swift.String
+                    public var vcsUrl: Swift.String
                     /// The originating VCS type. Without this parameter, the import job will take additional time to detect the VCS type before beginning the import. This detection step will be reflected in the response.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/json/vcs`.
-                    @frozen public enum vcsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum VcsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case subversion = "subversion"
                         case git = "git"
                         case mercurial = "mercurial"
@@ -5321,52 +5354,52 @@ public enum Operations {
                     /// The originating VCS type. Without this parameter, the import job will take additional time to detect the VCS type before beginning the import. This detection step will be reflected in the response.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/json/vcs`.
-                    public var vcs: Operations.migrations_sol_start_hyphen_import.Input.Body.jsonPayload.vcsPayload?
+                    public var vcs: Operations.MigrationsStartImport.Input.Body.JsonPayload.VcsPayload?
                     /// If authentication is required, the username to provide to `vcs_url`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/json/vcs_username`.
-                    public var vcs_username: Swift.String?
+                    public var vcsUsername: Swift.String?
                     /// If authentication is required, the password to provide to `vcs_url`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/json/vcs_password`.
-                    public var vcs_password: Swift.String?
+                    public var vcsPassword: Swift.String?
                     /// For a tfvc import, the name of the project that is being imported.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/json/tfvc_project`.
-                    public var tfvc_project: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    public var tfvcProject: Swift.String?
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - vcs_url: The URL of the originating repository.
+                    ///   - vcsUrl: The URL of the originating repository.
                     ///   - vcs: The originating VCS type. Without this parameter, the import job will take additional time to detect the VCS type before beginning the import. This detection step will be reflected in the response.
-                    ///   - vcs_username: If authentication is required, the username to provide to `vcs_url`.
-                    ///   - vcs_password: If authentication is required, the password to provide to `vcs_url`.
-                    ///   - tfvc_project: For a tfvc import, the name of the project that is being imported.
+                    ///   - vcsUsername: If authentication is required, the username to provide to `vcs_url`.
+                    ///   - vcsPassword: If authentication is required, the password to provide to `vcs_url`.
+                    ///   - tfvcProject: For a tfvc import, the name of the project that is being imported.
                     public init(
-                        vcs_url: Swift.String,
-                        vcs: Operations.migrations_sol_start_hyphen_import.Input.Body.jsonPayload.vcsPayload? = nil,
-                        vcs_username: Swift.String? = nil,
-                        vcs_password: Swift.String? = nil,
-                        tfvc_project: Swift.String? = nil
+                        vcsUrl: Swift.String,
+                        vcs: Operations.MigrationsStartImport.Input.Body.JsonPayload.VcsPayload? = nil,
+                        vcsUsername: Swift.String? = nil,
+                        vcsPassword: Swift.String? = nil,
+                        tfvcProject: Swift.String? = nil
                     ) {
-                        self.vcs_url = vcs_url
+                        self.vcsUrl = vcsUrl
                         self.vcs = vcs
-                        self.vcs_username = vcs_username
-                        self.vcs_password = vcs_password
-                        self.tfvc_project = tfvc_project
+                        self.vcsUsername = vcsUsername
+                        self.vcsPassword = vcsPassword
+                        self.tfvcProject = tfvcProject
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case vcs_url
+                        case vcsUrl = "vcs_url"
                         case vcs
-                        case vcs_username
-                        case vcs_password
-                        case tfvc_project
+                        case vcsUsername = "vcs_username"
+                        case vcsPassword = "vcs_password"
+                        case tfvcProject = "tfvc_project"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/content/application\/json`.
-                case json(Operations.migrations_sol_start_hyphen_import.Input.Body.jsonPayload)
+                case json(Operations.MigrationsStartImport.Input.Body.JsonPayload)
             }
-            public var body: Operations.migrations_sol_start_hyphen_import.Input.Body
+            public var body: Operations.MigrationsStartImport.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5374,9 +5407,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.migrations_sol_start_hyphen_import.Input.Path,
-                headers: Operations.migrations_sol_start_hyphen_import.Input.Headers = .init(),
-                body: Operations.migrations_sol_start_hyphen_import.Input.Body
+                path: Operations.MigrationsStartImport.Input.Path,
+                headers: Operations.MigrationsStartImport.Input.Headers = .init(),
+                body: Operations.MigrationsStartImport.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -5388,26 +5421,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/responses/201/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/responses/201/headers/Location`.
-                    public var Location: Swift.String?
+                    public var location: Swift.String?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Location:
-                    public init(Location: Swift.String? = nil) {
-                        self.Location = Location
+                    ///   - location:
+                    public init(location: Swift.String? = nil) {
+                        self.location = location
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.migrations_sol_start_hyphen_import.Output.Created.Headers
+                public var headers: Operations.MigrationsStartImport.Output.Created.Headers
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/responses/201/content/application\/json`.
-                    case json(Components.Schemas._import)
+                    case json(Components.Schemas.Import)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas._import {
+                    public var json: Components.Schemas.Import {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5417,15 +5450,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_start_hyphen_import.Output.Created.Body
+                public var body: Operations.MigrationsStartImport.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.migrations_sol_start_hyphen_import.Output.Created.Headers = .init(),
-                    body: Operations.migrations_sol_start_hyphen_import.Output.Created.Body
+                    headers: Operations.MigrationsStartImport.Output.Created.Headers = .init(),
+                    body: Operations.MigrationsStartImport.Output.Created.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -5436,12 +5469,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.migrations_sol_start_hyphen_import.Output.Created)
+            case created(Operations.MigrationsStartImport.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.migrations_sol_start_hyphen_import.Output.Created {
+            public var created: Operations.MigrationsStartImport.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -5459,12 +5492,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -5482,12 +5515,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5505,12 +5538,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/put(migrations/start-import)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.porter_maintenance)
+            case serviceUnavailable(Components.Responses.PorterMaintenance)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.porter_maintenance {
+            public var serviceUnavailable: Components.Responses.PorterMaintenance {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5563,7 +5596,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /repos/{owner}/{repo}/import`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)`.
-    public enum migrations_sol_cancel_hyphen_import {
+    public enum MigrationsCancelImport {
         public static let id: Swift.String = "migrations/cancel-import"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/DELETE/path`.
@@ -5571,45 +5604,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/DELETE/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/DELETE/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.migrations_sol_cancel_hyphen_import.Input.Path
+            public var path: Operations.MigrationsCancelImport.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_cancel_hyphen_import.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsCancelImport.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_cancel_hyphen_import.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsCancelImport.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_cancel_hyphen_import.Input.Headers
+            public var headers: Operations.MigrationsCancelImport.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_cancel_hyphen_import.Input.Path,
-                headers: Operations.migrations_sol_cancel_hyphen_import.Input.Headers = .init()
+                path: Operations.MigrationsCancelImport.Input.Path,
+                headers: Operations.MigrationsCancelImport.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -5625,12 +5658,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.migrations_sol_cancel_hyphen_import.Output.NoContent)
+            case noContent(Operations.MigrationsCancelImport.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.migrations_sol_cancel_hyphen_import.Output.NoContent {
+            public var noContent: Operations.MigrationsCancelImport.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -5648,12 +5689,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.porter_maintenance)
+            case serviceUnavailable(Components.Responses.PorterMaintenance)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.porter_maintenance {
+            public var serviceUnavailable: Components.Responses.PorterMaintenance {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5708,7 +5749,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/authors`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)`.
-    public enum migrations_sol_get_hyphen_commit_hyphen_authors {
+    public enum MigrationsGetCommitAuthors {
         public static let id: Swift.String = "migrations/get-commit-authors"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/GET/path`.
@@ -5716,52 +5757,52 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Path
+            public var path: Operations.MigrationsGetCommitAuthors.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// A user ID. Only return users with an ID greater than this ID.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/GET/query/since`.
-                public var since: Components.Parameters.since_hyphen_user?
+                public var since: Components.Parameters.SinceUser?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
                 ///   - since: A user ID. Only return users with an ID greater than this ID.
-                public init(since: Components.Parameters.since_hyphen_user? = nil) {
+                public init(since: Components.Parameters.SinceUser? = nil) {
                     self.since = since
                 }
             }
-            public var query: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Query
+            public var query: Operations.MigrationsGetCommitAuthors.Input.Query
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_commit_hyphen_authors.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetCommitAuthors.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_commit_hyphen_authors.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetCommitAuthors.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Headers
+            public var headers: Operations.MigrationsGetCommitAuthors.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -5769,9 +5810,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Path,
-                query: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Query = .init(),
-                headers: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Input.Headers = .init()
+                path: Operations.MigrationsGetCommitAuthors.Input.Path,
+                query: Operations.MigrationsGetCommitAuthors.Input.Query = .init(),
+                headers: Operations.MigrationsGetCommitAuthors.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -5783,12 +5824,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.porter_hyphen_author])
+                    case json([Components.Schemas.PorterAuthor])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.porter_hyphen_author] {
+                    public var json: [Components.Schemas.PorterAuthor] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -5798,12 +5839,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Output.Ok.Body
+                public var body: Operations.MigrationsGetCommitAuthors.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Output.Ok.Body) {
+                public init(body: Operations.MigrationsGetCommitAuthors.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -5812,12 +5853,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Output.Ok)
+            case ok(Operations.MigrationsGetCommitAuthors.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_get_hyphen_commit_hyphen_authors.Output.Ok {
+            public var ok: Operations.MigrationsGetCommitAuthors.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -5835,12 +5876,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -5858,12 +5899,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/get(migrations/get-commit-authors)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.porter_maintenance)
+            case serviceUnavailable(Components.Responses.PorterMaintenance)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.porter_maintenance {
+            public var serviceUnavailable: Components.Responses.PorterMaintenance {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -5917,7 +5958,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/authors/{author_id}`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)`.
-    public enum migrations_sol_map_hyphen_commit_hyphen_author {
+    public enum MigrationsMapCommitAuthor {
         public static let id: Swift.String = "migrations/map-commit-author"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/path`.
@@ -5925,46 +5966,46 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/path/author_id`.
-                public var author_id: Swift.Int
+                public var authorId: Swift.Int
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
-                ///   - author_id:
+                ///   - authorId:
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo,
-                    author_id: Swift.Int
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo,
+                    authorId: Swift.Int
                 ) {
                     self.owner = owner
                     self.repo = repo
-                    self.author_id = author_id
+                    self.authorId = authorId
                 }
             }
-            public var path: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Path
+            public var path: Operations.MigrationsMapCommitAuthor.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_map_hyphen_commit_hyphen_author.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsMapCommitAuthor.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_map_hyphen_commit_hyphen_author.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsMapCommitAuthor.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Headers
+            public var headers: Operations.MigrationsMapCommitAuthor.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// The new Git author email.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/requestBody/json/email`.
@@ -5973,7 +6014,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/requestBody/json/name`.
                     public var name: Swift.String?
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
                     ///   - email: The new Git author email.
@@ -5991,11 +6032,11 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        email = try container.decodeIfPresent(
+                        self.email = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .email
                         )
-                        name = try container.decodeIfPresent(
+                        self.name = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .name
                         )
@@ -6006,9 +6047,9 @@ public enum Operations {
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/requestBody/content/application\/json`.
-                case json(Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Body.jsonPayload)
+                case json(Operations.MigrationsMapCommitAuthor.Input.Body.JsonPayload)
             }
-            public var body: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Body?
+            public var body: Operations.MigrationsMapCommitAuthor.Input.Body?
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6016,9 +6057,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Path,
-                headers: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Headers = .init(),
-                body: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Input.Body? = nil
+                path: Operations.MigrationsMapCommitAuthor.Input.Path,
+                headers: Operations.MigrationsMapCommitAuthor.Input.Headers = .init(),
+                body: Operations.MigrationsMapCommitAuthor.Input.Body? = nil
             ) {
                 self.path = path
                 self.headers = headers
@@ -6030,12 +6071,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/authors/{author_id}/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas.porter_hyphen_author)
+                    case json(Components.Schemas.PorterAuthor)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.porter_hyphen_author {
+                    public var json: Components.Schemas.PorterAuthor {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6045,12 +6086,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Output.Ok.Body
+                public var body: Operations.MigrationsMapCommitAuthor.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Output.Ok.Body) {
+                public init(body: Operations.MigrationsMapCommitAuthor.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6059,12 +6100,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_map_hyphen_commit_hyphen_author.Output.Ok)
+            case ok(Operations.MigrationsMapCommitAuthor.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_map_hyphen_commit_hyphen_author.Output.Ok {
+            public var ok: Operations.MigrationsMapCommitAuthor.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6082,12 +6123,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6105,12 +6146,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -6128,12 +6169,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/authors/{author_id}/patch(migrations/map-commit-author)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.porter_maintenance)
+            case serviceUnavailable(Components.Responses.PorterMaintenance)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.porter_maintenance {
+            public var serviceUnavailable: Components.Responses.PorterMaintenance {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -6186,7 +6227,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/import/large_files`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)`.
-    public enum migrations_sol_get_hyphen_large_hyphen_files {
+    public enum MigrationsGetLargeFiles {
         public static let id: Swift.String = "migrations/get-large-files"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/large_files/GET/path`.
@@ -6194,45 +6235,45 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/large_files/GET/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/large_files/GET/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.migrations_sol_get_hyphen_large_hyphen_files.Input.Path
+            public var path: Operations.MigrationsGetLargeFiles.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/large_files/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_large_hyphen_files.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetLargeFiles.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_large_hyphen_files.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetLargeFiles.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_get_hyphen_large_hyphen_files.Input.Headers
+            public var headers: Operations.MigrationsGetLargeFiles.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_get_hyphen_large_hyphen_files.Input.Path,
-                headers: Operations.migrations_sol_get_hyphen_large_hyphen_files.Input.Headers = .init()
+                path: Operations.MigrationsGetLargeFiles.Input.Path,
+                headers: Operations.MigrationsGetLargeFiles.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -6243,12 +6284,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/large_files/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/large_files/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.porter_hyphen_large_hyphen_file])
+                    case json([Components.Schemas.PorterLargeFile])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.porter_hyphen_large_hyphen_file] {
+                    public var json: [Components.Schemas.PorterLargeFile] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6258,12 +6299,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_get_hyphen_large_hyphen_files.Output.Ok.Body
+                public var body: Operations.MigrationsGetLargeFiles.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_get_hyphen_large_hyphen_files.Output.Ok.Body) {
+                public init(body: Operations.MigrationsGetLargeFiles.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6272,12 +6313,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_get_hyphen_large_hyphen_files.Output.Ok)
+            case ok(Operations.MigrationsGetLargeFiles.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_get_hyphen_large_hyphen_files.Output.Ok {
+            public var ok: Operations.MigrationsGetLargeFiles.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6295,12 +6336,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/large_files/get(migrations/get-large-files)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.porter_maintenance)
+            case serviceUnavailable(Components.Responses.PorterMaintenance)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.porter_maintenance {
+            public var serviceUnavailable: Components.Responses.PorterMaintenance {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -6357,7 +6398,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `PATCH /repos/{owner}/{repo}/import/lfs`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)`.
-    public enum migrations_sol_set_hyphen_lfs_hyphen_preference {
+    public enum MigrationsSetLfsPreference {
         public static let id: Swift.String = "migrations/set-lfs-preference"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/path`.
@@ -6365,67 +6406,67 @@ public enum Operations {
                 /// The account owner of the repository. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/path/owner`.
-                public var owner: Components.Parameters.owner
+                public var owner: Components.Parameters.Owner
                 /// The name of the repository without the `.git` extension. The name is not case sensitive.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/path/repo`.
-                public var repo: Components.Parameters.repo
+                public var repo: Components.Parameters.Repo
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
                 ///   - owner: The account owner of the repository. The name is not case sensitive.
                 ///   - repo: The name of the repository without the `.git` extension. The name is not case sensitive.
                 public init(
-                    owner: Components.Parameters.owner,
-                    repo: Components.Parameters.repo
+                    owner: Components.Parameters.Owner,
+                    repo: Components.Parameters.Repo
                 ) {
                     self.owner = owner
                     self.repo = repo
                 }
             }
-            public var path: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Path
+            public var path: Operations.MigrationsSetLfsPreference.Input.Path
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsSetLfsPreference.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsSetLfsPreference.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Headers
+            public var headers: Operations.MigrationsSetLfsPreference.Input.Headers
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Whether to store large files during the import. `opt_in` means large files will be stored using Git LFS. `opt_out` means large files will be removed during the import.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/requestBody/json/use_lfs`.
-                    @frozen public enum use_lfsPayload: String, Codable, Hashable, Sendable {
-                        case opt_in = "opt_in"
-                        case opt_out = "opt_out"
+                    @frozen public enum UseLfsPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                        case optIn = "opt_in"
+                        case optOut = "opt_out"
                     }
                     /// Whether to store large files during the import. `opt_in` means large files will be stored using Git LFS. `opt_out` means large files will be removed during the import.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/requestBody/json/use_lfs`.
-                    public var use_lfs: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Body.jsonPayload.use_lfsPayload
-                    /// Creates a new `jsonPayload`.
+                    public var useLfs: Operations.MigrationsSetLfsPreference.Input.Body.JsonPayload.UseLfsPayload
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - use_lfs: Whether to store large files during the import. `opt_in` means large files will be stored using Git LFS. `opt_out` means large files will be removed during the import.
-                    public init(use_lfs: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Body.jsonPayload.use_lfsPayload) {
-                        self.use_lfs = use_lfs
+                    ///   - useLfs: Whether to store large files during the import. `opt_in` means large files will be stored using Git LFS. `opt_out` means large files will be removed during the import.
+                    public init(useLfs: Operations.MigrationsSetLfsPreference.Input.Body.JsonPayload.UseLfsPayload) {
+                        self.useLfs = useLfs
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case use_lfs
+                        case useLfs = "use_lfs"
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/requestBody/content/application\/json`.
-                case json(Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Body.jsonPayload)
+                case json(Operations.MigrationsSetLfsPreference.Input.Body.JsonPayload)
             }
-            public var body: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Body
+            public var body: Operations.MigrationsSetLfsPreference.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -6433,9 +6474,9 @@ public enum Operations {
             ///   - headers:
             ///   - body:
             public init(
-                path: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Path,
-                headers: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Headers = .init(),
-                body: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input.Body
+                path: Operations.MigrationsSetLfsPreference.Input.Path,
+                headers: Operations.MigrationsSetLfsPreference.Input.Headers = .init(),
+                body: Operations.MigrationsSetLfsPreference.Input.Body
             ) {
                 self.path = path
                 self.headers = headers
@@ -6447,12 +6488,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/responses/200/content/application\/json`.
-                    case json(Components.Schemas._import)
+                    case json(Components.Schemas.Import)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas._import {
+                    public var json: Components.Schemas.Import {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6462,12 +6503,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Output.Ok.Body
+                public var body: Operations.MigrationsSetLfsPreference.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Output.Ok.Body) {
+                public init(body: Operations.MigrationsSetLfsPreference.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -6476,12 +6517,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Output.Ok)
+            case ok(Operations.MigrationsSetLfsPreference.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Output.Ok {
+            public var ok: Operations.MigrationsSetLfsPreference.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6499,12 +6540,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -6522,12 +6563,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/lfs/patch(migrations/set-lfs-preference)/responses/503`.
             ///
             /// HTTP response code: `503 serviceUnavailable`.
-            case serviceUnavailable(Components.Responses.porter_maintenance)
+            case serviceUnavailable(Components.Responses.PorterMaintenance)
             /// The associated value of the enum case if `self` is `.serviceUnavailable`.
             ///
             /// - Throws: An error if `self` is not `.serviceUnavailable`.
             /// - SeeAlso: `.serviceUnavailable`.
-            public var serviceUnavailable: Components.Responses.porter_maintenance {
+            public var serviceUnavailable: Components.Responses.PorterMaintenance {
                 get throws {
                     switch self {
                     case let .serviceUnavailable(response):
@@ -6577,7 +6618,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/migrations`.
     /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)`.
-    public enum migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum MigrationsListForAuthenticatedUser {
         public static let id: Swift.String = "migrations/list-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/migrations/GET/query`.
@@ -6585,45 +6626,45 @@ public enum Operations {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.MigrationsListForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/migrations/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsListForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsListForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.MigrationsListForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - query:
             ///   - headers:
             public init(
-                query: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                query: Operations.MigrationsListForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.MigrationsListForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.query = query
                 self.headers = headers
@@ -6634,26 +6675,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/migrations/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/migrations/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.MigrationsListForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/migrations/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/migrations/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.migration])
+                    case json([Components.Schemas.Migration])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.migration] {
+                    public var json: [Components.Schemas.Migration] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6663,15 +6704,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.MigrationsListForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.MigrationsListForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.MigrationsListForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -6682,12 +6723,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.MigrationsListForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.MigrationsListForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -6705,12 +6746,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -6728,12 +6777,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -6751,12 +6800,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -6806,126 +6855,126 @@ public enum Operations {
     ///
     /// - Remark: HTTP `POST /user/migrations`.
     /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)`.
-    public enum migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum MigrationsStartForAuthenticatedUser {
         public static let id: Swift.String = "migrations/start-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/migrations/POST/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsStartForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsStartForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.MigrationsStartForAuthenticatedUser.Input.Headers
             /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody`.
             @frozen public enum Body: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json`.
-                public struct jsonPayload: Codable, Hashable, Sendable {
+                public struct JsonPayload: Codable, Hashable, Sendable {
                     /// Lock the repositories being migrated at the start of the migration
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/lock_repositories`.
-                    public var lock_repositories: Swift.Bool?
+                    public var lockRepositories: Swift.Bool?
                     /// Indicates whether metadata should be excluded and only git source should be included for the migration.
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/exclude_metadata`.
-                    public var exclude_metadata: Swift.Bool?
+                    public var excludeMetadata: Swift.Bool?
                     /// Indicates whether the repository git data should be excluded from the migration.
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/exclude_git_data`.
-                    public var exclude_git_data: Swift.Bool?
+                    public var excludeGitData: Swift.Bool?
                     /// Do not include attachments in the migration
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/exclude_attachments`.
-                    public var exclude_attachments: Swift.Bool?
+                    public var excludeAttachments: Swift.Bool?
                     /// Do not include releases in the migration
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/exclude_releases`.
-                    public var exclude_releases: Swift.Bool?
+                    public var excludeReleases: Swift.Bool?
                     /// Indicates whether projects owned by the organization or users should be excluded.
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/exclude_owner_projects`.
-                    public var exclude_owner_projects: Swift.Bool?
+                    public var excludeOwnerProjects: Swift.Bool?
                     /// Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/org_metadata_only`.
-                    public var org_metadata_only: Swift.Bool?
+                    public var orgMetadataOnly: Swift.Bool?
                     /// Allowed values that can be passed to the exclude param.
                     ///
-                    /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/excludePayload`.
-                    @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable {
+                    /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/ExcludePayload`.
+                    @frozen public enum ExcludePayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case repositories = "repositories"
                     }
                     /// Exclude attributes from the API response to improve performance
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/exclude`.
-                    public typealias excludePayload = [Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.excludePayloadPayload]
+                    public typealias ExcludePayload = [Operations.MigrationsStartForAuthenticatedUser.Input.Body.JsonPayload.ExcludePayloadPayload]
                     /// Exclude attributes from the API response to improve performance
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/exclude`.
-                    public var exclude: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.excludePayload?
+                    public var exclude: Operations.MigrationsStartForAuthenticatedUser.Input.Body.JsonPayload.ExcludePayload?
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/repositories`.
                     public var repositories: [Swift.String]
-                    /// Creates a new `jsonPayload`.
+                    /// Creates a new `JsonPayload`.
                     ///
                     /// - Parameters:
-                    ///   - lock_repositories: Lock the repositories being migrated at the start of the migration
-                    ///   - exclude_metadata: Indicates whether metadata should be excluded and only git source should be included for the migration.
-                    ///   - exclude_git_data: Indicates whether the repository git data should be excluded from the migration.
-                    ///   - exclude_attachments: Do not include attachments in the migration
-                    ///   - exclude_releases: Do not include releases in the migration
-                    ///   - exclude_owner_projects: Indicates whether projects owned by the organization or users should be excluded.
-                    ///   - org_metadata_only: Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
+                    ///   - lockRepositories: Lock the repositories being migrated at the start of the migration
+                    ///   - excludeMetadata: Indicates whether metadata should be excluded and only git source should be included for the migration.
+                    ///   - excludeGitData: Indicates whether the repository git data should be excluded from the migration.
+                    ///   - excludeAttachments: Do not include attachments in the migration
+                    ///   - excludeReleases: Do not include releases in the migration
+                    ///   - excludeOwnerProjects: Indicates whether projects owned by the organization or users should be excluded.
+                    ///   - orgMetadataOnly: Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
                     ///   - exclude: Exclude attributes from the API response to improve performance
                     ///   - repositories:
                     public init(
-                        lock_repositories: Swift.Bool? = nil,
-                        exclude_metadata: Swift.Bool? = nil,
-                        exclude_git_data: Swift.Bool? = nil,
-                        exclude_attachments: Swift.Bool? = nil,
-                        exclude_releases: Swift.Bool? = nil,
-                        exclude_owner_projects: Swift.Bool? = nil,
-                        org_metadata_only: Swift.Bool? = nil,
-                        exclude: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.excludePayload? = nil,
+                        lockRepositories: Swift.Bool? = nil,
+                        excludeMetadata: Swift.Bool? = nil,
+                        excludeGitData: Swift.Bool? = nil,
+                        excludeAttachments: Swift.Bool? = nil,
+                        excludeReleases: Swift.Bool? = nil,
+                        excludeOwnerProjects: Swift.Bool? = nil,
+                        orgMetadataOnly: Swift.Bool? = nil,
+                        exclude: Operations.MigrationsStartForAuthenticatedUser.Input.Body.JsonPayload.ExcludePayload? = nil,
                         repositories: [Swift.String]
                     ) {
-                        self.lock_repositories = lock_repositories
-                        self.exclude_metadata = exclude_metadata
-                        self.exclude_git_data = exclude_git_data
-                        self.exclude_attachments = exclude_attachments
-                        self.exclude_releases = exclude_releases
-                        self.exclude_owner_projects = exclude_owner_projects
-                        self.org_metadata_only = org_metadata_only
+                        self.lockRepositories = lockRepositories
+                        self.excludeMetadata = excludeMetadata
+                        self.excludeGitData = excludeGitData
+                        self.excludeAttachments = excludeAttachments
+                        self.excludeReleases = excludeReleases
+                        self.excludeOwnerProjects = excludeOwnerProjects
+                        self.orgMetadataOnly = orgMetadataOnly
                         self.exclude = exclude
                         self.repositories = repositories
                     }
                     public enum CodingKeys: String, CodingKey {
-                        case lock_repositories
-                        case exclude_metadata
-                        case exclude_git_data
-                        case exclude_attachments
-                        case exclude_releases
-                        case exclude_owner_projects
-                        case org_metadata_only
+                        case lockRepositories = "lock_repositories"
+                        case excludeMetadata = "exclude_metadata"
+                        case excludeGitData = "exclude_git_data"
+                        case excludeAttachments = "exclude_attachments"
+                        case excludeReleases = "exclude_releases"
+                        case excludeOwnerProjects = "exclude_owner_projects"
+                        case orgMetadataOnly = "org_metadata_only"
                         case exclude
                         case repositories
                     }
                 }
                 /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/content/application\/json`.
-                case json(Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload)
+                case json(Operations.MigrationsStartForAuthenticatedUser.Input.Body.JsonPayload)
             }
-            public var body: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+            public var body: Operations.MigrationsStartForAuthenticatedUser.Input.Body
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - headers:
             ///   - body:
             public init(
-                headers: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init(),
-                body: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body
+                headers: Operations.MigrationsStartForAuthenticatedUser.Input.Headers = .init(),
+                body: Operations.MigrationsStartForAuthenticatedUser.Input.Body
             ) {
                 self.headers = headers
                 self.body = body
@@ -6936,12 +6985,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/migrations/POST/responses/201/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/migrations/POST/responses/201/content/application\/json`.
-                    case json(Components.Schemas.migration)
+                    case json(Components.Schemas.Migration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.migration {
+                    public var json: Components.Schemas.Migration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -6951,12 +7000,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body
+                public var body: Operations.MigrationsStartForAuthenticatedUser.Output.Created.Body
                 /// Creates a new `Created`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created.Body) {
+                public init(body: Operations.MigrationsStartForAuthenticatedUser.Output.Created.Body) {
                     self.body = body
                 }
             }
@@ -6965,12 +7014,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)/responses/201`.
             ///
             /// HTTP response code: `201 created`.
-            case created(Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created)
+            case created(Operations.MigrationsStartForAuthenticatedUser.Output.Created)
             /// The associated value of the enum case if `self` is `.created`.
             ///
             /// - Throws: An error if `self` is not `.created`.
             /// - SeeAlso: `.created`.
-            public var created: Operations.migrations_sol_start_hyphen_for_hyphen_authenticated_hyphen_user.Output.Created {
+            public var created: Operations.MigrationsStartForAuthenticatedUser.Output.Created {
                 get throws {
                     switch self {
                     case let .created(response):
@@ -6988,12 +7037,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Components.Responses.ValidationFailed)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Components.Responses.ValidationFailed {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -7011,12 +7060,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7034,12 +7091,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7057,12 +7114,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7119,7 +7176,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)`.
-    public enum migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum MigrationsGetStatusForAuthenticatedUser {
         public static let id: Swift.String = "migrations/get-status-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/GET/path`.
@@ -7127,16 +7184,16 @@ public enum Operations {
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/GET/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - migration_id: The unique identifier of the migration.
-                public init(migration_id: Components.Parameters.migration_hyphen_id) {
-                    self.migration_id = migration_id
+                ///   - migrationId: The unique identifier of the migration.
+                public init(migrationId: Components.Parameters.MigrationId) {
+                    self.migrationId = migrationId
                 }
             }
-            public var path: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/GET/query/exclude`.
@@ -7149,19 +7206,19 @@ public enum Operations {
                     self.exclude = exclude
                 }
             }
-            public var query: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetStatusForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetStatusForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -7169,9 +7226,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                query: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Path,
+                query: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.MigrationsGetStatusForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -7183,12 +7240,12 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/GET/responses/200/content/application\/json`.
-                    case json(Components.Schemas.migration)
+                    case json(Components.Schemas.Migration)
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: Components.Schemas.migration {
+                    public var json: Components.Schemas.Migration {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -7198,12 +7255,12 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.MigrationsGetStatusForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - body: Received HTTP response body
-                public init(body: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body) {
+                public init(body: Operations.MigrationsGetStatusForAuthenticatedUser.Output.Ok.Body) {
                     self.body = body
                 }
             }
@@ -7212,12 +7269,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.MigrationsGetStatusForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_get_hyphen_status_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.MigrationsGetStatusForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -7235,12 +7292,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7258,12 +7315,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7281,12 +7346,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7304,12 +7369,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7379,7 +7444,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)`.
-    public enum migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum MigrationsGetArchiveForAuthenticatedUser {
         public static let id: Swift.String = "migrations/get-archive-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/archive/GET/path`.
@@ -7387,36 +7452,36 @@ public enum Operations {
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/archive/GET/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - migration_id: The unique identifier of the migration.
-                public init(migration_id: Components.Parameters.migration_hyphen_id) {
-                    self.migration_id = migration_id
+                ///   - migrationId: The unique identifier of the migration.
+                public init(migrationId: Components.Parameters.MigrationId) {
+                    self.migrationId = migrationId
                 }
             }
-            public var path: Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.MigrationsGetArchiveForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/archive/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetArchiveForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsGetArchiveForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.MigrationsGetArchiveForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.MigrationsGetArchiveForAuthenticatedUser.Input.Path,
+                headers: Operations.MigrationsGetArchiveForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7432,12 +7497,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)/responses/302`.
             ///
             /// HTTP response code: `302 found`.
-            case found(Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output.Found)
+            case found(Operations.MigrationsGetArchiveForAuthenticatedUser.Output.Found)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)/responses/302`.
+            ///
+            /// HTTP response code: `302 found`.
+            public static var found: Self {
+                .found(.init())
+            }
             /// The associated value of the enum case if `self` is `.found`.
             ///
             /// - Throws: An error if `self` is not `.found`.
             /// - SeeAlso: `.found`.
-            public var found: Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output.Found {
+            public var found: Operations.MigrationsGetArchiveForAuthenticatedUser.Output.Found {
                 get throws {
                     switch self {
                     case let .found(response):
@@ -7455,12 +7528,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7478,12 +7559,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7501,12 +7582,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7556,7 +7637,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/migrations/{migration_id}/archive`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)`.
-    public enum migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum MigrationsDeleteArchiveForAuthenticatedUser {
         public static let id: Swift.String = "migrations/delete-archive-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/archive/DELETE/path`.
@@ -7564,36 +7645,36 @@ public enum Operations {
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/archive/DELETE/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - migration_id: The unique identifier of the migration.
-                public init(migration_id: Components.Parameters.migration_hyphen_id) {
-                    self.migration_id = migration_id
+                ///   - migrationId: The unique identifier of the migration.
+                public init(migrationId: Components.Parameters.MigrationId) {
+                    self.migrationId = migrationId
                 }
             }
-            public var path: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.MigrationsDeleteArchiveForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/archive/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsDeleteArchiveForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsDeleteArchiveForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.MigrationsDeleteArchiveForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.MigrationsDeleteArchiveForAuthenticatedUser.Input.Path,
+                headers: Operations.MigrationsDeleteArchiveForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7609,12 +7690,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.MigrationsDeleteArchiveForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.MigrationsDeleteArchiveForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7632,12 +7721,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7655,12 +7744,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7678,12 +7775,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7701,12 +7798,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7756,7 +7853,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `DELETE /user/migrations/{migration_id}/repos/{repo_name}/lock`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)`.
-    public enum migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum MigrationsUnlockRepoForAuthenticatedUser {
         public static let id: Swift.String = "migrations/unlock-repo-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/path`.
@@ -7764,45 +7861,45 @@ public enum Operations {
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// repo_name parameter
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/path/repo_name`.
-                public var repo_name: Components.Parameters.repo_hyphen_name
+                public var repoName: Components.Parameters.RepoName
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - migration_id: The unique identifier of the migration.
-                ///   - repo_name: repo_name parameter
+                ///   - migrationId: The unique identifier of the migration.
+                ///   - repoName: repo_name parameter
                 public init(
-                    migration_id: Components.Parameters.migration_hyphen_id,
-                    repo_name: Components.Parameters.repo_hyphen_name
+                    migrationId: Components.Parameters.MigrationId,
+                    repoName: Components.Parameters.RepoName
                 ) {
-                    self.migration_id = migration_id
-                    self.repo_name = repo_name
+                    self.migrationId = migrationId
+                    self.repoName = repoName
                 }
             }
-            public var path: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.MigrationsUnlockRepoForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repos/{repo_name}/lock/DELETE/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsUnlockRepoForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsUnlockRepoForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.MigrationsUnlockRepoForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
             ///   - path:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                headers: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.MigrationsUnlockRepoForAuthenticatedUser.Input.Path,
+                headers: Operations.MigrationsUnlockRepoForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.headers = headers
@@ -7818,12 +7915,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/204`.
             ///
             /// HTTP response code: `204 noContent`.
-            case noContent(Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            case noContent(Operations.MigrationsUnlockRepoForAuthenticatedUser.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
             /// - SeeAlso: `.noContent`.
-            public var noContent: Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent {
+            public var noContent: Operations.MigrationsUnlockRepoForAuthenticatedUser.Output.NoContent {
                 get throws {
                     switch self {
                     case let .noContent(response):
@@ -7841,12 +7946,20 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/304`.
             ///
             /// HTTP response code: `304 notModified`.
-            case notModified(Components.Responses.not_modified)
+            case notModified(Components.Responses.NotModified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
             /// - SeeAlso: `.notModified`.
-            public var notModified: Components.Responses.not_modified {
+            public var notModified: Components.Responses.NotModified {
                 get throws {
                     switch self {
                     case let .notModified(response):
@@ -7864,12 +7977,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
@@ -7887,12 +8000,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/403`.
             ///
             /// HTTP response code: `403 forbidden`.
-            case forbidden(Components.Responses.forbidden)
+            case forbidden(Components.Responses.Forbidden)
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
             /// - SeeAlso: `.forbidden`.
-            public var forbidden: Components.Responses.forbidden {
+            public var forbidden: Components.Responses.Forbidden {
                 get throws {
                     switch self {
                     case let .forbidden(response):
@@ -7910,12 +8023,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/401`.
             ///
             /// HTTP response code: `401 unauthorized`.
-            case unauthorized(Components.Responses.requires_authentication)
+            case unauthorized(Components.Responses.RequiresAuthentication)
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
             /// - SeeAlso: `.unauthorized`.
-            public var unauthorized: Components.Responses.requires_authentication {
+            public var unauthorized: Components.Responses.RequiresAuthentication {
                 get throws {
                     switch self {
                     case let .unauthorized(response):
@@ -7965,7 +8078,7 @@ public enum Operations {
     ///
     /// - Remark: HTTP `GET /user/migrations/{migration_id}/repositories`.
     /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repositories/get(migrations/list-repos-for-authenticated-user)`.
-    public enum migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user {
+    public enum MigrationsListReposForAuthenticatedUser {
         public static let id: Swift.String = "migrations/list-repos-for-authenticated-user"
         public struct Input: Sendable, Hashable {
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/path`.
@@ -7973,52 +8086,52 @@ public enum Operations {
                 /// The unique identifier of the migration.
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/path/migration_id`.
-                public var migration_id: Components.Parameters.migration_hyphen_id
+                public var migrationId: Components.Parameters.MigrationId
                 /// Creates a new `Path`.
                 ///
                 /// - Parameters:
-                ///   - migration_id: The unique identifier of the migration.
-                public init(migration_id: Components.Parameters.migration_hyphen_id) {
-                    self.migration_id = migration_id
+                ///   - migrationId: The unique identifier of the migration.
+                public init(migrationId: Components.Parameters.MigrationId) {
+                    self.migrationId = migrationId
                 }
             }
-            public var path: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path
+            public var path: Operations.MigrationsListReposForAuthenticatedUser.Input.Path
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/query/per_page`.
-                public var per_page: Components.Parameters.per_hyphen_page?
+                public var perPage: Components.Parameters.PerPage?
                 /// The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/query/page`.
-                public var page: Components.Parameters.page?
+                public var page: Components.Parameters.Page?
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
+                ///   - perPage: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
-                    per_page: Components.Parameters.per_hyphen_page? = nil,
-                    page: Components.Parameters.page? = nil
+                    perPage: Components.Parameters.PerPage? = nil,
+                    page: Components.Parameters.Page? = nil
                 ) {
-                    self.per_page = per_page
+                    self.perPage = perPage
                     self.page = page
                 }
             }
-            public var query: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query
+            public var query: Operations.MigrationsListReposForAuthenticatedUser.Input.Query
             /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/header`.
             public struct Headers: Sendable, Hashable {
-                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>]
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsListReposForAuthenticatedUser.AcceptableContentType>]
                 /// Creates a new `Headers`.
                 ///
                 /// - Parameters:
                 ///   - accept:
-                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.AcceptableContentType>] = .defaultValues()) {
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.MigrationsListReposForAuthenticatedUser.AcceptableContentType>] = .defaultValues()) {
                     self.accept = accept
                 }
             }
-            public var headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers
+            public var headers: Operations.MigrationsListReposForAuthenticatedUser.Input.Headers
             /// Creates a new `Input`.
             ///
             /// - Parameters:
@@ -8026,9 +8139,9 @@ public enum Operations {
             ///   - query:
             ///   - headers:
             public init(
-                path: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Path,
-                query: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query = .init(),
-                headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Input.Headers = .init()
+                path: Operations.MigrationsListReposForAuthenticatedUser.Input.Path,
+                query: Operations.MigrationsListReposForAuthenticatedUser.Input.Query = .init(),
+                headers: Operations.MigrationsListReposForAuthenticatedUser.Input.Headers = .init()
             ) {
                 self.path = path
                 self.query = query
@@ -8040,26 +8153,26 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/responses/200/headers`.
                 public struct Headers: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/responses/200/headers/Link`.
-                    public var Link: Components.Headers.link?
+                    public var link: Components.Headers.Link?
                     /// Creates a new `Headers`.
                     ///
                     /// - Parameters:
-                    ///   - Link:
-                    public init(Link: Components.Headers.link? = nil) {
-                        self.Link = Link
+                    ///   - link:
+                    public init(link: Components.Headers.Link? = nil) {
+                        self.link = link
                     }
                 }
                 /// Received HTTP response headers
-                public var headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers
+                public var headers: Operations.MigrationsListReposForAuthenticatedUser.Output.Ok.Headers
                 /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/responses/200/content`.
                 @frozen public enum Body: Sendable, Hashable {
                     /// - Remark: Generated from `#/paths/user/migrations/{migration_id}/repositories/GET/responses/200/content/application\/json`.
-                    case json([Components.Schemas.minimal_hyphen_repository])
+                    case json([Components.Schemas.MinimalRepository])
                     /// The associated value of the enum case if `self` is `.json`.
                     ///
                     /// - Throws: An error if `self` is not `.json`.
                     /// - SeeAlso: `.json`.
-                    public var json: [Components.Schemas.minimal_hyphen_repository] {
+                    public var json: [Components.Schemas.MinimalRepository] {
                         get throws {
                             switch self {
                             case let .json(body):
@@ -8069,15 +8182,15 @@ public enum Operations {
                     }
                 }
                 /// Received HTTP response body
-                public var body: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                public var body: Operations.MigrationsListReposForAuthenticatedUser.Output.Ok.Body
                 /// Creates a new `Ok`.
                 ///
                 /// - Parameters:
                 ///   - headers: Received HTTP response headers
                 ///   - body: Received HTTP response body
                 public init(
-                    headers: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Headers = .init(),
-                    body: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body
+                    headers: Operations.MigrationsListReposForAuthenticatedUser.Output.Ok.Headers = .init(),
+                    body: Operations.MigrationsListReposForAuthenticatedUser.Output.Ok.Body
                 ) {
                     self.headers = headers
                     self.body = body
@@ -8088,12 +8201,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repositories/get(migrations/list-repos-for-authenticated-user)/responses/200`.
             ///
             /// HTTP response code: `200 ok`.
-            case ok(Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok)
+            case ok(Operations.MigrationsListReposForAuthenticatedUser.Output.Ok)
             /// The associated value of the enum case if `self` is `.ok`.
             ///
             /// - Throws: An error if `self` is not `.ok`.
             /// - SeeAlso: `.ok`.
-            public var ok: Operations.migrations_sol_list_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok {
+            public var ok: Operations.MigrationsListReposForAuthenticatedUser.Output.Ok {
                 get throws {
                     switch self {
                     case let .ok(response):
@@ -8111,12 +8224,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repositories/get(migrations/list-repos-for-authenticated-user)/responses/404`.
             ///
             /// HTTP response code: `404 notFound`.
-            case notFound(Components.Responses.not_found)
+            case notFound(Components.Responses.NotFound)
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
             /// - SeeAlso: `.notFound`.
-            public var notFound: Components.Responses.not_found {
+            public var notFound: Components.Responses.NotFound {
                 get throws {
                     switch self {
                     case let .notFound(response):
