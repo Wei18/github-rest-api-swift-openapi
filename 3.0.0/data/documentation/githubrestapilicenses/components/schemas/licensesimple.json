@@ -1,0 +1,772 @@
+{
+  "abstract" : [
+    {
+      "text" : "License Simple",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPILicenses10ComponentsO7SchemasO13LicenseSimpleV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "LicenseSimple"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPILicenses"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "LicenseSimple"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/licenses\/Types.swift#L210"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.LicenseSimple"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "LicenseSimple"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/license-simple",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPILicenses\/Se",
+        "doc:\/\/GitHubRestAPILicenses\/SE",
+        "doc:\/\/GitHubRestAPILicenses\/SQ",
+        "doc:\/\/GitHubRestAPILicenses\/SH",
+        "doc:\/\/GitHubRestAPILicenses\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/init(from:)",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/init(key:name:url:spdxId:nodeId:htmlUrl:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/htmlUrl",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/key",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/name",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/nodeId",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/spdxId",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/url"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPILicenses/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPILicenses/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPILicenses/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPILicenses/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPILicenses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple": {
+  "abstract" : [
+    {
+      "text" : "License Simple",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LicenseSimple"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LicenseSimple"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.LicenseSimple",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.LicenseSimple.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/codingkeys"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/equatable-implementations"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/htmlUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "htmlUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/htmlUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "htmlUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/htmlurl"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/init(from:)"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/init(key:name:url:spdxId:nodeId:htmlUrl:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "LicenseSimple",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "key"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "spdxId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "nodeId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "htmlUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/init(key:name:url:spdxId:nodeId:htmlUrl:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(key:name:url:spdxId:nodeId:htmlUrl:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/init(key:name:url:spdxid:nodeid:htmlurl:)"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/key": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "key"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/key",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/key"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/name": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/name"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/nodeId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "nodeId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/nodeId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "nodeId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/nodeid"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/spdxId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "spdxId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/spdxId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "spdxId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/spdxid"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components/Schemas/LicenseSimple/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components\/Schemas\/LicenseSimple\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components\/schemas\/licensesimple\/url"
+},
+"doc://GitHubRestAPILicenses/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

@@ -1,0 +1,912 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "JsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum\/JsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum\/JsonPayload\/init(encryptedValue:keyId:visibility:selectedRepositoryIds:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO11JsonPayloadV14encryptedValue5keyId10visibility21selectedRepositoryIdsAKSSSg_ApK010VisibilityO0OSaySSGSgtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "encryptedValue"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "keyId"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "visibility"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO",
+        "text" : "DependabotCreateOrUpdateOrgSecret"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO",
+        "text" : "Body"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO11JsonPayloadV",
+        "text" : "JsonPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO11JsonPayloadV010VisibilityO0O",
+        "text" : "VisibilityPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "selectedRepositoryIds"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "]?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependabot\/Types.swift#L5371"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(encryptedValue:keyId:visibility:selectedRepositoryIds:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "encryptedValue"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "keyId"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "visibility"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO",
+              "text" : "DependabotCreateOrUpdateOrgSecret"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO",
+              "text" : "Body"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum\/JsonPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO11JsonPayloadV",
+              "text" : "JsonPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum\/JsonPayload\/VisibilityPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO11JsonPayloadV010VisibilityO0O",
+              "text" : "VisibilityPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "selectedRepositoryIds"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "]? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Value for your secret, encrypted with ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/libsodium.gitbook.io\/doc\/bindings_for_other_languages",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " using the public key retrieved from the ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#get-an-organization-public-key",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " endpoint.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "encryptedValue"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "ID of the key you used to encrypt the secret.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "keyId"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Which type of organization repositories have access to the organization secret. ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "selected",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " means only the repositories specified by ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "selected_repository_ids",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " can access the secret.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "visibility"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "visibility",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " is set to ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "selected",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ". You can manage the list of selected repositories using the ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#list-selected-repositories-for-an-organization-secret",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ", ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#set-selected-repositories-for-an-organization-secret",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ", and ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#remove-selected-repository-from-an-organization-secret",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " endpoints.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "selectedRepositoryIds"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/operations\/dependabotcreateorupdateorgsecret\/input\/body-swift.enum\/jsonpayload\/init(encryptedvalue:keyid:visibility:selectedrepositoryids:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/DependabotCreateOrUpdateOrgSecret": {
+  "abstract" : [
+    {
+      "text" : "Create or update an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DependabotCreateOrUpdateOrgSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DependabotCreateOrUpdateOrgSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.DependabotCreateOrUpdateOrgSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabotcreateorupdateorgsecret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/DependabotCreateOrUpdateOrgSecret/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.DependabotCreateOrUpdateOrgSecret.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabotcreateorupdateorgsecret\/input"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/DependabotCreateOrUpdateOrgSecret/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.DependabotCreateOrUpdateOrgSecret.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabotcreateorupdateorgsecret\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/DependabotCreateOrUpdateOrgSecret/Input/Body-swift.enum/JsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum\/JsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.DependabotCreateOrUpdateOrgSecret.Input.Body.JsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabotcreateorupdateorgsecret\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/DependabotCreateOrUpdateOrgSecret/Input/Body-swift.enum/JsonPayload/VisibilityPayload": {
+  "abstract" : [
+    {
+      "text" : "Which type of organization repositories have access to the organization secret. ",
+      "type" : "text"
+    },
+    {
+      "code" : "selected",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means only the repositories specified by ",
+      "type" : "text"
+    },
+    {
+      "code" : "selected_repository_ids",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " can access the secret.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "VisibilityPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum\/JsonPayload\/VisibilityPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "VisibilityPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.DependabotCreateOrUpdateOrgSecret.Input.Body.JsonPayload.VisibilityPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabotcreateorupdateorgsecret\/input\/body-swift.enum\/jsonpayload\/visibilitypayload"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/DependabotCreateOrUpdateOrgSecret/Input/Body-swift.enum/JsonPayload/init(encryptedValue:keyId:visibility:selectedRepositoryIds:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "JsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "encryptedValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "keyId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "visibility"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO",
+      "text" : "DependabotCreateOrUpdateOrgSecret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10OperationsO33DependabotCreateOrUpdateOrgSecretO5InputV4BodyO11JsonPayloadV010VisibilityO0O",
+      "text" : "VisibilityPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "selectedRepositoryIds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/DependabotCreateOrUpdateOrgSecret\/Input\/Body-swift.enum\/JsonPayload\/init(encryptedValue:keyId:visibility:selectedRepositoryIds:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(encryptedValue:keyId:visibility:selectedRepositoryIds:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabotcreateorupdateorgsecret\/input\/body-swift.enum\/jsonpayload\/init(encryptedvalue:keyid:visibility:selectedrepositoryids:)"
+},
+"https://docs.github.com/rest/dependabot/secrets#get-an-organization-public-key": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#get-an-organization-public-key",
+  "title" : "Get an organization public key",
+  "titleInlineContent" : [
+    {
+      "text" : "Get an organization public key",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#get-an-organization-public-key"
+},
+"https://docs.github.com/rest/dependabot/secrets#list-selected-repositories-for-an-organization-secret": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#list-selected-repositories-for-an-organization-secret",
+  "title" : "List selected repositories for an organization secret",
+  "titleInlineContent" : [
+    {
+      "text" : "List selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#list-selected-repositories-for-an-organization-secret"
+},
+"https://docs.github.com/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#remove-selected-repository-from-an-organization-secret",
+  "title" : "Remove selected repository from an organization secret",
+  "titleInlineContent" : [
+    {
+      "text" : "Remove selected repository from an organization secret",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#remove-selected-repository-from-an-organization-secret"
+},
+"https://docs.github.com/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#set-selected-repositories-for-an-organization-secret",
+  "title" : "Set selected repositories for an organization secret",
+  "titleInlineContent" : [
+    {
+      "text" : "Set selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/dependabot\/secrets#set-selected-repositories-for-an-organization-secret"
+},
+"https://libsodium.gitbook.io/doc/bindings_for_other_languages": {
+  "identifier" : "https:\/\/libsodium.gitbook.io\/doc\/bindings_for_other_languages",
+  "title" : "LibSodium",
+  "titleInlineContent" : [
+    {
+      "text" : "LibSodium",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/libsodium.gitbook.io\/doc\/bindings_for_other_languages"
+}
+}
+}

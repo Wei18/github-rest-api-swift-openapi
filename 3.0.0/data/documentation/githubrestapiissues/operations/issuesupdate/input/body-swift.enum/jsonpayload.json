@@ -1,0 +1,1325 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "JsonPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIIssues"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "JsonPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/issues\/Types.swift#L12226"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "JsonPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/issues\/{issue_number}\/PATCH\/requestBody\/json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/Se",
+        "doc:\/\/GitHubRestAPIIssues\/SE",
+        "doc:\/\/GitHubRestAPIIssues\/SQ",
+        "doc:\/\/GitHubRestAPIIssues\/SH",
+        "doc:\/\/GitHubRestAPIIssues\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/assignee",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/assignees",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/body",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/labels",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/milestone",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/state",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/stateReason",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/title"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/LabelsPayload"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/CodingKeys",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/LabelsPayloadPayload",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/MilestonePayload",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/StatePayload",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/StateReasonPayload",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/TitlePayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIIssues/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIIssues",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate": {
+  "abstract" : [
+    {
+      "text" : "Update an issue",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "IssuesUpdate"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "IssuesUpdate"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/codingkeys"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/LabelsPayload": {
+  "abstract" : [
+    {
+      "text" : "Labels to associate with this issue. Pass one or more labels to ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "replace",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " the set of labels on this issue. Send an empty array (",
+      "type" : "text"
+    },
+    {
+      "code" : "[]",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") to clear all labels from the issue. Only users with push access can set labels for issues. Without push access to the repository, label changes are silently dropped.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LabelsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/LabelsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LabelsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload.LabelsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/labelspayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/LabelsPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LabelsPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/LabelsPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "LabelsPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload.LabelsPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/labelspayloadpayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/MilestonePayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MilestonePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/MilestonePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MilestonePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload.MilestonePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/milestonepayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/StatePayload": {
+  "abstract" : [
+    {
+      "text" : "The open or closed state of the issue.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "StatePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/StatePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StatePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload.StatePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/statepayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/StateReasonPayload": {
+  "abstract" : [
+    {
+      "text" : "The reason for the state change. Ignored unless ",
+      "type" : "text"
+    },
+    {
+      "code" : "state",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is changed.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "StateReasonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/StateReasonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StateReasonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload.StateReasonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/statereasonpayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/TitlePayload": {
+  "abstract" : [
+    {
+      "text" : "The title of the issue.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TitlePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/TitlePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TitlePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.IssuesUpdate.Input.Body.JsonPayload.TitlePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/titlepayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/assignee": {
+  "abstract" : [
+    {
+      "text" : "Username to assign to this issue. ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "This field is closing down.",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "assignee"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/assignee",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "assignee",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/assignee"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/assignees": {
+  "abstract" : [
+    {
+      "text" : "Usernames to assign to this issue. Pass one or more user logins to ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "replace",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " the set of assignees on this issue. Send an empty array (",
+      "type" : "text"
+    },
+    {
+      "code" : "[]",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") to clear all assignees from the issue. Only users with push access can set assignees for new issues. Without push access to the repository, assignee changes are silently dropped.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "assignees"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/assignees",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "assignees",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/assignees"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/body": {
+  "abstract" : [
+    {
+      "text" : "The contents of the issue.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/body",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/body"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/init(from:)"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/labels": {
+  "abstract" : [
+    {
+      "text" : "Labels to associate with this issue. Pass one or more labels to ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "replace",
+          "type" : "text"
+        }
+      ],
+      "type" : "emphasis"
+    },
+    {
+      "text" : " the set of labels on this issue. Send an empty array (",
+      "type" : "text"
+    },
+    {
+      "code" : "[]",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") to clear all labels from the issue. Only users with push access can set labels for issues. Without push access to the repository, label changes are silently dropped.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "labels"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO",
+      "text" : "IssuesUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV06LabelsK0a",
+      "text" : "LabelsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/labels",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "labels",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/labels"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/milestone": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "milestone"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO",
+      "text" : "IssuesUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV09MilestoneK0O",
+      "text" : "MilestonePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/milestone",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "milestone",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/milestone"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/state": {
+  "abstract" : [
+    {
+      "text" : "The open or closed state of the issue.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "state"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO",
+      "text" : "IssuesUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV05StateK0O",
+      "text" : "StatePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/state",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "state",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/state"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/stateReason": {
+  "abstract" : [
+    {
+      "text" : "The reason for the state change. Ignored unless ",
+      "type" : "text"
+    },
+    {
+      "code" : "state",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is changed.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "stateReason"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO",
+      "text" : "IssuesUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV011StateReasonK0O",
+      "text" : "StateReasonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/stateReason",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "stateReason",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/statereason"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/IssuesUpdate/Input/Body-swift.enum/JsonPayload/title": {
+  "abstract" : [
+    {
+      "text" : "The title of the issue.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "title"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO",
+      "text" : "IssuesUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO12IssuesUpdateO5InputV4BodyO11JsonPayloadV05TitleK0O",
+      "text" : "TitlePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/IssuesUpdate\/Input\/Body-swift.enum\/JsonPayload\/title",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "title",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issuesupdate\/input\/body-swift.enum\/jsonpayload\/title"
+},
+"doc://GitHubRestAPIIssues/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

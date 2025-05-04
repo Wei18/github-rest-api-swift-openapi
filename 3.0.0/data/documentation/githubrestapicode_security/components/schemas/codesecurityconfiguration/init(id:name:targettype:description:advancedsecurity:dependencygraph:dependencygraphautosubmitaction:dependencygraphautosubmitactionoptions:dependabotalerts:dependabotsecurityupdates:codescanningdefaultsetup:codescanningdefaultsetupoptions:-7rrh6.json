@@ -1,0 +1,4398 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "CodeSecurityConfiguration",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/init(id:name:targetType:description:advancedSecurity:dependencyGraph:dependencyGraphAutosubmitAction:dependencyGraphAutosubmitActionOptions:dependabotAlerts:dependabotSecurityUpdates:codeScanningDefaultSetup:codeScanningDefaultSetupOptions:codeScanningDelegatedAlertDismissal:secretScanning:secretScanningPushProtection:secretScanningDelegatedBypass:secretScanningDelegatedBypassOptions:secretScanningValidityChecks:secretScanningNonProviderPatterns:secretScanningGenericSecrets:secretScanningDelegatedAlertDismissal:privateVulnerabilityReporting:enforcement:url:htmlUrl:createdAt:updatedAt:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV2id4name10targetType11description08advancedE015dependencyGraph0pQ16AutosubmitAction0pqrS7Options16dependabotAlerts0uE7Updates24codeScanningDefaultSetup0xyz5SetupT00xY23DelegatedAlertDismissal06secretY006secretY14PushProtection06secretY15DelegatedBypass06secrety15DelegatedBypassT006secretY14ValidityChecks06secretY19NonProviderPatterns06secretY14GenericSecrets06secretY23DelegatedAlertDismissal29privateVulnerabilityReporting11enforcement3url7htmlUrl9createdAt9updatedAtAGSiSg_SSSgAG06TargetM7PayloadOSgA8_AG08AdvancedE7PayloadOSgAG010DependencyQ7PayloadOSgAG010DependencyqrS7PayloadOSgAG010DependencyqrsT7PayloadVSgAG010DependabotV7PayloadOSgAG010DependaboteW7PayloadOSgAG0hyZ12SetupPayloadOSgAG0hyz5SetupT7PayloadVSgAG0hY30DelegatedAlertDismissalPayloadOSgAG06SecretY7PayloadOSgAG06SecretY21PushProtectionPayloadOSgAG06SecretY22DelegatedBypassPayloadOSgAG06Secrety15DelegatedBypassT7PayloadVSgAG06SecretY21ValidityChecksPayloadOSgAG06SecretY26NonProviderPatternsPayloadOSgAG06SecretY21GenericSecretsPayloadOSgAG06SecretY30DelegatedAlertDismissalPayloadOSgAG36PrivateVulnerabilityReportingPayloadOSgAG18EnforcementPayloadOSgA8_A8_10Foundation4DateVSgA72_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "targetType"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV17TargetTypePayloadO",
+        "text" : "TargetTypePayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "description"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "advancedSecurity"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV08AdvancedE7PayloadO",
+        "text" : "AdvancedSecurityPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "dependencyGraph"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV22DependencyGraphPayloadO",
+        "text" : "DependencyGraphPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "dependencyGraphAutosubmitAction"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV38DependencyGraphAutosubmitActionPayloadO",
+        "text" : "DependencyGraphAutosubmitActionPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "dependencyGraphAutosubmitActionOptions"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV45DependencyGraphAutosubmitActionOptionsPayloadV",
+        "text" : "DependencyGraphAutosubmitActionOptionsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "dependabotAlerts"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV23DependabotAlertsPayloadO",
+        "text" : "DependabotAlertsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "dependabotSecurityUpdates"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV010DependabotE14UpdatesPayloadO",
+        "text" : "DependabotSecurityUpdatesPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "codeScanningDefaultSetup"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H27ScanningDefaultSetupPayloadO",
+        "text" : "CodeScanningDefaultSetupPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "codeScanningDefaultSetupOptions"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H34ScanningDefaultSetupOptionsPayloadV",
+        "text" : "CodeScanningDefaultSetupOptionsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "codeScanningDelegatedAlertDismissal"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H38ScanningDelegatedAlertDismissalPayloadO",
+        "text" : "CodeScanningDelegatedAlertDismissalPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "secretScanning"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV21SecretScanningPayloadO",
+        "text" : "SecretScanningPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "secretScanningPushProtection"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningPushProtectionPayloadO",
+        "text" : "SecretScanningPushProtectionPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "secretScanningDelegatedBypass"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV36SecretScanningDelegatedBypassPayloadO",
+        "text" : "SecretScanningDelegatedBypassPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "secretScanningDelegatedBypassOptions"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV43SecretScanningDelegatedBypassOptionsPayloadV",
+        "text" : "SecretScanningDelegatedBypassOptionsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "secretScanningValidityChecks"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningValidityChecksPayloadO",
+        "text" : "SecretScanningValidityChecksPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "secretScanningNonProviderPatterns"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV40SecretScanningNonProviderPatternsPayloadO",
+        "text" : "SecretScanningNonProviderPatternsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "secretScanningGenericSecrets"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningGenericSecretsPayloadO",
+        "text" : "SecretScanningGenericSecretsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "secretScanningDelegatedAlertDismissal"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV44SecretScanningDelegatedAlertDismissalPayloadO",
+        "text" : "SecretScanningDelegatedAlertDismissalPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "privateVulnerabilityReporting"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV36PrivateVulnerabilityReportingPayloadO",
+        "text" : "PrivateVulnerabilityReportingPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "enforcement"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+        "text" : "CodeSecurityConfiguration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV18EnforcementPayloadO",
+        "text" : "EnforcementPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "url"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "htmlUrl"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "createdAt"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "updatedAt"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Security"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/code-security\/Types.swift#L1313"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(id:name:targetType:description:advancedSecurity:dependencyGraph:dependencyGraphAutosubmitAction:dependencyGraphAutosubmitActionOptions:dependabotAlerts:dependabotSecurityUpdates:codeScanningDefaultSetup:codeScanningDefaultSetupOptions:codeScanningDelegatedAlertDismissal:secretScanning:secretScanningPushProtection:secretScanningDelegatedBypass:secretScanningDelegatedBypassOptions:secretScanningValidityChecks:secretScanningNonProviderPatterns:secretScanningGenericSecrets:secretScanningDelegatedAlertDismissal:privateVulnerabilityReporting:enforcement:url:htmlUrl:createdAt:updatedAt:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "id"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "targetType"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/TargetTypePayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV17TargetTypePayloadO",
+              "text" : "TargetTypePayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "description"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "advancedSecurity"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/AdvancedSecurityPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV08AdvancedE7PayloadO",
+              "text" : "AdvancedSecurityPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "dependencyGraph"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependencyGraphPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV22DependencyGraphPayloadO",
+              "text" : "DependencyGraphPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "dependencyGraphAutosubmitAction"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependencyGraphAutosubmitActionPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV38DependencyGraphAutosubmitActionPayloadO",
+              "text" : "DependencyGraphAutosubmitActionPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "dependencyGraphAutosubmitActionOptions"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependencyGraphAutosubmitActionOptionsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV45DependencyGraphAutosubmitActionOptionsPayloadV",
+              "text" : "DependencyGraphAutosubmitActionOptionsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "dependabotAlerts"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependabotAlertsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV23DependabotAlertsPayloadO",
+              "text" : "DependabotAlertsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "dependabotSecurityUpdates"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependabotSecurityUpdatesPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV010DependabotE14UpdatesPayloadO",
+              "text" : "DependabotSecurityUpdatesPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "codeScanningDefaultSetup"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H27ScanningDefaultSetupPayloadO",
+              "text" : "CodeScanningDefaultSetupPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "codeScanningDefaultSetupOptions"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H34ScanningDefaultSetupOptionsPayloadV",
+              "text" : "CodeScanningDefaultSetupOptionsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "codeScanningDelegatedAlertDismissal"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDelegatedAlertDismissalPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H38ScanningDelegatedAlertDismissalPayloadO",
+              "text" : "CodeScanningDelegatedAlertDismissalPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "secretScanning"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV21SecretScanningPayloadO",
+              "text" : "SecretScanningPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "secretScanningPushProtection"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningPushProtectionPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningPushProtectionPayloadO",
+              "text" : "SecretScanningPushProtectionPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "secretScanningDelegatedBypass"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningDelegatedBypassPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV36SecretScanningDelegatedBypassPayloadO",
+              "text" : "SecretScanningDelegatedBypassPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "secretScanningDelegatedBypassOptions"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningDelegatedBypassOptionsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV43SecretScanningDelegatedBypassOptionsPayloadV",
+              "text" : "SecretScanningDelegatedBypassOptionsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "secretScanningValidityChecks"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningValidityChecksPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningValidityChecksPayloadO",
+              "text" : "SecretScanningValidityChecksPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "secretScanningNonProviderPatterns"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningNonProviderPatternsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV40SecretScanningNonProviderPatternsPayloadO",
+              "text" : "SecretScanningNonProviderPatternsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "secretScanningGenericSecrets"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningGenericSecretsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningGenericSecretsPayloadO",
+              "text" : "SecretScanningGenericSecretsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "secretScanningDelegatedAlertDismissal"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningDelegatedAlertDismissalPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV44SecretScanningDelegatedAlertDismissalPayloadO",
+              "text" : "SecretScanningDelegatedAlertDismissalPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "privateVulnerabilityReporting"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/PrivateVulnerabilityReportingPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV36PrivateVulnerabilityReportingPayloadO",
+              "text" : "PrivateVulnerabilityReportingPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "enforcement"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+              "text" : "CodeSecurityConfiguration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/EnforcementPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV18EnforcementPayloadO",
+              "text" : "EnforcementPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "url"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "htmlUrl"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "createdAt"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "updatedAt"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The ID of the code security configuration",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "id"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of the code security configuration. Must be unique within the organization.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The type of the code security configuration.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "targetType"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A description of the code security configuration",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "description"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of GitHub Advanced Security",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "advancedSecurity"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of Dependency Graph",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "dependencyGraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of Automatic dependency submission",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "dependencyGraphAutosubmitAction"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Feature options for Automatic dependency submission",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "dependencyGraphAutosubmitActionOptions"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of Dependabot alerts",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "dependabotAlerts"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of Dependabot security updates",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "dependabotSecurityUpdates"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of code scanning default setup",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "codeScanningDefaultSetup"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Feature options for code scanning default setup",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "codeScanningDefaultSetupOptions"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of code scanning delegated alert dismissal",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "codeScanningDelegatedAlertDismissal"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of secret scanning",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "secretScanning"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of secret scanning push protection",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "secretScanningPushProtection"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of secret scanning delegated bypass",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "secretScanningDelegatedBypass"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Feature options for secret scanning delegated bypass",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "secretScanningDelegatedBypassOptions"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of secret scanning validity checks",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "secretScanningValidityChecks"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of secret scanning non-provider patterns",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "secretScanningNonProviderPatterns"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of Copilot secret scanning",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "secretScanningGenericSecrets"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of secret scanning delegated alert dismissal",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "secretScanningDelegatedAlertDismissal"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enablement status of private vulnerability reporting",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "privateVulnerabilityReporting"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The enforcement status for a security configuration",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "enforcement"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The URL of the configuration",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "url"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The URL of the configuration",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "htmlUrl"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "createdAt"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "updatedAt"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/init(id:name:targettype:description:advancedsecurity:dependencygraph:dependencygraphautosubmitaction:dependencygraphautosubmitactionoptions:dependabotalerts:dependabotsecurityupdates:codescanningdefaultsetup:codescanningdefaultsetupoptions:-7rrh6"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Security",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration": {
+  "abstract" : [
+    {
+      "text" : "A code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodeSecurityConfiguration"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodeSecurityConfiguration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/AdvancedSecurityPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of GitHub Advanced Security",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AdvancedSecurityPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/AdvancedSecurityPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AdvancedSecurityPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.AdvancedSecurityPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/advancedsecuritypayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload": {
+  "abstract" : [
+    {
+      "text" : "Feature options for code scanning default setup",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodeScanningDefaultSetupOptionsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodeScanningDefaultSetupOptionsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.CodeScanningDefaultSetupOptionsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of code scanning default setup",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodeScanningDefaultSetupPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodeScanningDefaultSetupPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.CodeScanningDefaultSetupPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetuppayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDelegatedAlertDismissalPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of code scanning delegated alert dismissal",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodeScanningDelegatedAlertDismissalPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDelegatedAlertDismissalPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodeScanningDelegatedAlertDismissalPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.CodeScanningDelegatedAlertDismissalPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdelegatedalertdismissalpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/DependabotAlertsPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of Dependabot alerts",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DependabotAlertsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependabotAlertsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DependabotAlertsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.DependabotAlertsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/dependabotalertspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/DependabotSecurityUpdatesPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of Dependabot security updates",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DependabotSecurityUpdatesPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependabotSecurityUpdatesPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DependabotSecurityUpdatesPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.DependabotSecurityUpdatesPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/dependabotsecurityupdatespayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/DependencyGraphAutosubmitActionOptionsPayload": {
+  "abstract" : [
+    {
+      "text" : "Feature options for Automatic dependency submission",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DependencyGraphAutosubmitActionOptionsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependencyGraphAutosubmitActionOptionsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DependencyGraphAutosubmitActionOptionsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.DependencyGraphAutosubmitActionOptionsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/dependencygraphautosubmitactionoptionspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/DependencyGraphAutosubmitActionPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of Automatic dependency submission",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DependencyGraphAutosubmitActionPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependencyGraphAutosubmitActionPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DependencyGraphAutosubmitActionPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.DependencyGraphAutosubmitActionPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/dependencygraphautosubmitactionpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/DependencyGraphPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of Dependency Graph",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DependencyGraphPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/DependencyGraphPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DependencyGraphPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.DependencyGraphPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/dependencygraphpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/EnforcementPayload": {
+  "abstract" : [
+    {
+      "text" : "The enforcement status for a security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EnforcementPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/EnforcementPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EnforcementPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.EnforcementPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/enforcementpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/PrivateVulnerabilityReportingPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of private vulnerability reporting",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PrivateVulnerabilityReportingPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/PrivateVulnerabilityReportingPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PrivateVulnerabilityReportingPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.PrivateVulnerabilityReportingPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/privatevulnerabilityreportingpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/SecretScanningDelegatedAlertDismissalPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of secret scanning delegated alert dismissal",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningDelegatedAlertDismissalPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningDelegatedAlertDismissalPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningDelegatedAlertDismissalPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.SecretScanningDelegatedAlertDismissalPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/secretscanningdelegatedalertdismissalpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/SecretScanningDelegatedBypassOptionsPayload": {
+  "abstract" : [
+    {
+      "text" : "Feature options for secret scanning delegated bypass",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningDelegatedBypassOptionsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningDelegatedBypassOptionsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningDelegatedBypassOptionsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.SecretScanningDelegatedBypassOptionsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/secretscanningdelegatedbypassoptionspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/SecretScanningDelegatedBypassPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of secret scanning delegated bypass",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningDelegatedBypassPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningDelegatedBypassPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningDelegatedBypassPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.SecretScanningDelegatedBypassPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/secretscanningdelegatedbypasspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/SecretScanningGenericSecretsPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of Copilot secret scanning",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningGenericSecretsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningGenericSecretsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningGenericSecretsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.SecretScanningGenericSecretsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/secretscanninggenericsecretspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/SecretScanningNonProviderPatternsPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of secret scanning non-provider patterns",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningNonProviderPatternsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningNonProviderPatternsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningNonProviderPatternsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.SecretScanningNonProviderPatternsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/secretscanningnonproviderpatternspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/SecretScanningPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of secret scanning",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.SecretScanningPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/secretscanningpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/SecretScanningPushProtectionPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of secret scanning push protection",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningPushProtectionPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningPushProtectionPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningPushProtectionPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.SecretScanningPushProtectionPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/secretscanningpushprotectionpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/SecretScanningValidityChecksPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of secret scanning validity checks",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningValidityChecksPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/SecretScanningValidityChecksPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SecretScanningValidityChecksPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.SecretScanningValidityChecksPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/secretscanningvaliditycheckspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/TargetTypePayload": {
+  "abstract" : [
+    {
+      "text" : "The type of the code security configuration.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TargetTypePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/TargetTypePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TargetTypePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.TargetTypePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/targettypepayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/init(id:name:targetType:description:advancedSecurity:dependencyGraph:dependencyGraphAutosubmitAction:dependencyGraphAutosubmitActionOptions:dependabotAlerts:dependabotSecurityUpdates:codeScanningDefaultSetup:codeScanningDefaultSetupOptions:codeScanningDelegatedAlertDismissal:secretScanning:secretScanningPushProtection:secretScanningDelegatedBypass:secretScanningDelegatedBypassOptions:secretScanningValidityChecks:secretScanningNonProviderPatterns:secretScanningGenericSecrets:secretScanningDelegatedAlertDismissal:privateVulnerabilityReporting:enforcement:url:htmlUrl:createdAt:updatedAt:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "CodeSecurityConfiguration",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "targetType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV17TargetTypePayloadO",
+      "text" : "TargetTypePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "advancedSecurity"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV08AdvancedE7PayloadO",
+      "text" : "AdvancedSecurityPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependencyGraph"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV22DependencyGraphPayloadO",
+      "text" : "DependencyGraphPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependencyGraphAutosubmitAction"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV38DependencyGraphAutosubmitActionPayloadO",
+      "text" : "DependencyGraphAutosubmitActionPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependencyGraphAutosubmitActionOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV45DependencyGraphAutosubmitActionOptionsPayloadV",
+      "text" : "DependencyGraphAutosubmitActionOptionsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependabotAlerts"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV23DependabotAlertsPayloadO",
+      "text" : "DependabotAlertsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependabotSecurityUpdates"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV010DependabotE14UpdatesPayloadO",
+      "text" : "DependabotSecurityUpdatesPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "codeScanningDefaultSetup"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H27ScanningDefaultSetupPayloadO",
+      "text" : "CodeScanningDefaultSetupPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "codeScanningDefaultSetupOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H34ScanningDefaultSetupOptionsPayloadV",
+      "text" : "CodeScanningDefaultSetupOptionsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "codeScanningDelegatedAlertDismissal"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H38ScanningDelegatedAlertDismissalPayloadO",
+      "text" : "CodeScanningDelegatedAlertDismissalPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanning"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV21SecretScanningPayloadO",
+      "text" : "SecretScanningPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningPushProtection"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningPushProtectionPayloadO",
+      "text" : "SecretScanningPushProtectionPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningDelegatedBypass"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV36SecretScanningDelegatedBypassPayloadO",
+      "text" : "SecretScanningDelegatedBypassPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningDelegatedBypassOptions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV43SecretScanningDelegatedBypassOptionsPayloadV",
+      "text" : "SecretScanningDelegatedBypassOptionsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningValidityChecks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningValidityChecksPayloadO",
+      "text" : "SecretScanningValidityChecksPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningNonProviderPatterns"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV40SecretScanningNonProviderPatternsPayloadO",
+      "text" : "SecretScanningNonProviderPatternsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningGenericSecrets"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV35SecretScanningGenericSecretsPayloadO",
+      "text" : "SecretScanningGenericSecretsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningDelegatedAlertDismissal"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV44SecretScanningDelegatedAlertDismissalPayloadO",
+      "text" : "SecretScanningDelegatedAlertDismissalPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "privateVulnerabilityReporting"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV36PrivateVulnerabilityReportingPayloadO",
+      "text" : "PrivateVulnerabilityReportingPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "enforcement"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV18EnforcementPayloadO",
+      "text" : "EnforcementPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "htmlUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "createdAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "updatedAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/init(id:name:targetType:description:advancedSecurity:dependencyGraph:dependencyGraphAutosubmitAction:dependencyGraphAutosubmitActionOptions:dependabotAlerts:dependabotSecurityUpdates:codeScanningDefaultSetup:codeScanningDefaultSetupOptions:codeScanningDelegatedAlertDismissal:secretScanning:secretScanningPushProtection:secretScanningDelegatedBypass:secretScanningDelegatedBypassOptions:secretScanningValidityChecks:secretScanningNonProviderPatterns:secretScanningGenericSecrets:secretScanningDelegatedAlertDismissal:privateVulnerabilityReporting:enforcement:url:htmlUrl:createdAt:updatedAt:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(id:name:targetType:description:advancedSecurity:dependencyGraph:dependencyGraphAutosubmitAction:dependencyGraphAutosubmitActionOptions:dependabotAlerts:dependabotSecurityUpdates:codeScanningDefaultSetup:codeScanningDefaultSetupOptions:codeScanningDelegatedAlertDismissal:secretScanning:secretScanningPushProtection:secretScanningDelegatedBypass:secretScanningDelegatedBypassOptions:secretScanningValidityChecks:secretScanningNonProviderPatterns:secretScanningGenericSecrets:secretScanningDelegatedAlertDismissal:privateVulnerabilityReporting:enforcement:url:htmlUrl:createdAt:updatedAt:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/init(id:name:targettype:description:advancedsecurity:dependencygraph:dependencygraphautosubmitaction:dependencygraphautosubmitactionoptions:dependabotalerts:dependabotsecurityupdates:codescanningdefaultsetup:codescanningdefaultsetupoptions:-7rrh6"
+}
+}
+}

@@ -1,0 +1,454 @@
+{
+  "abstract" : [
+    {
+      "text" : "Received HTTP response headers",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output\/Ok-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output\/Ok-swift.struct\/headers-swift.property"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO2OkV7headersAI7HeadersVvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO",
+        "text" : "TeamsListPendingInvitationsLegacy"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO",
+        "text" : "Output"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO2OkV",
+        "text" : "Ok"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO2OkV7HeadersV",
+        "text" : "Headers"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPITeams"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/teams\/Types.swift#L13189"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "headers"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "headers"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO",
+              "text" : "TeamsListPendingInvitationsLegacy"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO",
+              "text" : "Output"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output\/Ok-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO2OkV",
+              "text" : "Ok"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output\/Ok-swift.struct\/Headers-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO2OkV7HeadersV",
+              "text" : "Headers"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiteams\/operations\/teamslistpendinginvitationslegacy\/output\/ok-swift.struct\/headers-swift.property"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPITeams",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/TeamsListPendingInvitationsLegacy": {
+  "abstract" : [
+    {
+      "text" : "List pending team invitations (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TeamsListPendingInvitationsLegacy"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TeamsListPendingInvitationsLegacy"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.TeamsListPendingInvitationsLegacy",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teamslistpendinginvitationslegacy"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/TeamsListPendingInvitationsLegacy/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.TeamsListPendingInvitationsLegacy.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teamslistpendinginvitationslegacy\/output"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/TeamsListPendingInvitationsLegacy/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.TeamsListPendingInvitationsLegacy.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teamslistpendinginvitationslegacy\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/TeamsListPendingInvitationsLegacy/Output/Ok-swift.struct/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output\/Ok-swift.struct\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.TeamsListPendingInvitationsLegacy.Output.Ok.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teamslistpendinginvitationslegacy\/output\/ok-swift.struct\/headers-swift.struct"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/TeamsListPendingInvitationsLegacy/Output/Ok-swift.struct/headers-swift.property": {
+  "abstract" : [
+    {
+      "text" : "Received HTTP response headers",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO",
+      "text" : "TeamsListPendingInvitationsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO2OkV",
+      "text" : "Ok"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO2OkV7HeadersV",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/TeamsListPendingInvitationsLegacy\/Output\/Ok-swift.struct\/headers-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teamslistpendinginvitationslegacy\/output\/ok-swift.struct\/headers-swift.property"
+}
+}
+}

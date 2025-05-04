@@ -1,0 +1,1287 @@
+{
+  "abstract" : [
+    {
+      "text" : "Gist",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO10GistSimpleV13ForkOfPayloadV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ForkOfPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGists"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ForkOfPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/gists\/Types.swift#L1877"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.GistSimple.ForkOfPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ForkOfPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/gist-simple\/fork_of",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/Se",
+        "doc:\/\/GitHubRestAPIGists\/SE",
+        "doc:\/\/GitHubRestAPIGists\/SQ",
+        "doc:\/\/GitHubRestAPIGists\/SH",
+        "doc:\/\/GitHubRestAPIGists\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/FilesPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/comments",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/commentsEnabled",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/commentsUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/commitsUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/createdAt",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/description",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/files",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/forks",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/forksUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/gitPullUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/gitPushUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/history",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/htmlUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/id",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/nodeId",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/owner",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/truncated",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/updatedAt",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/user"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGists/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGists",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple": {
+  "abstract" : [
+    {
+      "text" : "Gist Simple",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistSimple"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistSimple"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.GistSimple",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload": {
+  "abstract" : [
+    {
+      "text" : "Gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ForkOfPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ForkOfPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.GistSimple.ForkOfPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.GistSimple.ForkOfPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/codingkeys"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/FilesPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "FilesPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/FilesPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "FilesPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.GistSimple.ForkOfPayload.FilesPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/filespayload"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/comments": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "comments"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/comments",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "comments",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/comments"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/commentsEnabled": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commentsEnabled"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/commentsEnabled",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "commentsEnabled",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/commentsenabled"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/commentsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commentsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/commentsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "commentsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/commentsurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/commitsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commitsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/commitsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "commitsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/commitsurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/createdAt": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "createdAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/createdAt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "createdAt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/createdat"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/description"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/files": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "files"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO10GistSimpleV",
+      "text" : "GistSimple"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO10GistSimpleV13ForkOfPayloadV",
+      "text" : "ForkOfPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO10GistSimpleV13ForkOfPayloadV05FilesK0V",
+      "text" : "FilesPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/files",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "files",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/files"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/forks": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime0A17APIValueContainerV",
+      "text" : "OpenAPIValueContainer"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/forks",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "forks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/forks"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/forksUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forksUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/forksUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "forksUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/forksurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/gitPullUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitPullUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/gitPullUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gitPullUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/gitpullurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/gitPushUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitPushUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/gitPushUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gitPushUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/gitpushurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/history": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "history"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime0A17APIValueContainerV",
+      "text" : "OpenAPIValueContainer"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/history",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "history",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/history"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/htmlUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "htmlUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/htmlUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "htmlUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/htmlurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/id"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/init(from:)"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/nodeId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "nodeId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/nodeId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "nodeId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/nodeid"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/owner": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "owner"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18NullableSimpleUserV",
+      "text" : "NullableSimpleUser"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/owner",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/owner"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/truncated": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "truncated"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/truncated",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "truncated",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/truncated"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/updatedAt": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updatedAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/updatedAt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updatedAt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/updatedat"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/GistSimple/ForkOfPayload/user": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "user"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18NullableSimpleUserV",
+      "text" : "NullableSimpleUser"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/GistSimple\/ForkOfPayload\/user",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gistsimple\/forkofpayload\/user"
+},
+"doc://GitHubRestAPIGists/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

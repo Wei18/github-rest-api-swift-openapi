@@ -1,0 +1,544 @@
+{
+  "abstract" : [
+    {
+      "text" : "The duration of the interaction restriction. Default: ",
+      "type" : "text"
+    },
+    {
+      "code" : "one_day",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:25GitHubRestAPIInteractions10ComponentsO7SchemasO17InteractionExpiryO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "InteractionExpiry"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIInteractions"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "InteractionExpiry"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/interactions\/Types.swift#L388"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.InteractionExpiry"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "InteractionExpiry"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/interaction-expiry",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/s12CaseIterableP",
+        "doc:\/\/GitHubRestAPIInteractions\/Se",
+        "doc:\/\/GitHubRestAPIInteractions\/SE",
+        "doc:\/\/GitHubRestAPIInteractions\/SQ",
+        "doc:\/\/GitHubRestAPIInteractions\/SH",
+        "doc:\/\/GitHubRestAPIInteractions\/SY",
+        "doc:\/\/GitHubRestAPIInteractions\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/oneDay",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/oneMonth",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/oneWeek",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/sixMonths",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/threeDays"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIInteractions/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIInteractions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry": {
+  "abstract" : [
+    {
+      "text" : "The duration of the interaction restriction. Default: ",
+      "type" : "text"
+    },
+    {
+      "code" : "one_day",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "InteractionExpiry"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "InteractionExpiry"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.InteractionExpiry",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry\/equatable-implementations"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry/oneDay": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "oneDay"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/oneDay",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.InteractionExpiry.oneDay",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry\/oneday"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry/oneMonth": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "oneMonth"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/oneMonth",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.InteractionExpiry.oneMonth",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry\/onemonth"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry/oneWeek": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "oneWeek"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/oneWeek",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.InteractionExpiry.oneWeek",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry\/oneweek"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry/sixMonths": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sixMonths"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/sixMonths",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.InteractionExpiry.sixMonths",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry\/sixmonths"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/InteractionExpiry/threeDays": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "threeDays"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/InteractionExpiry\/threeDays",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.InteractionExpiry.threeDays",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interactionexpiry\/threedays"
+},
+"doc://GitHubRestAPIInteractions/s12CaseIterableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

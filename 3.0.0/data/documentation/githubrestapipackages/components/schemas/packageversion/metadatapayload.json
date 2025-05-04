@@ -1,0 +1,955 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "MetadataPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPackages"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "MetadataPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/packages\/Types.swift#L2155"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.PackageVersion.MetadataPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "MetadataPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/package-version\/metadata",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/Se",
+        "doc:\/\/GitHubRestAPIPackages\/SE",
+        "doc:\/\/GitHubRestAPIPackages\/SQ",
+        "doc:\/\/GitHubRestAPIPackages\/SH",
+        "doc:\/\/GitHubRestAPIPackages\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/ContainerPayload",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/DockerPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/init(from:)",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/init(packageType:container:docker:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/container",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/docker",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/packageType"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/CodingKeys",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/PackageTypePayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPackages/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIPackages/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIPackages/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIPackages/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPackages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion": {
+  "abstract" : [
+    {
+      "text" : "A version of a software package",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackageVersion"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackageVersion"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PackageVersion",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MetadataPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MetadataPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PackageVersion.MetadataPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PackageVersion.MetadataPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/codingkeys"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/ContainerPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContainerPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/ContainerPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContainerPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PackageVersion.MetadataPayload.ContainerPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/containerpayload"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/DockerPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DockerPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/DockerPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DockerPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PackageVersion.MetadataPayload.DockerPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/dockerpayload"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/PackageTypePayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackageTypePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/PackageTypePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackageTypePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PackageVersion.MetadataPayload.PackageTypePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/packagetypepayload"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/container": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "container"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV",
+      "text" : "PackageVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV",
+      "text" : "MetadataPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV09ContainerJ0V",
+      "text" : "ContainerPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/container",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "container",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/container"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/docker": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "docker"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV",
+      "text" : "PackageVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV",
+      "text" : "MetadataPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV06DockerJ0V",
+      "text" : "DockerPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/docker",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "docker",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/docker"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/init(from:)"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/init(packageType:container:docker:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "MetadataPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "packageType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV",
+      "text" : "PackageVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV",
+      "text" : "MetadataPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV0g4TypeJ0O",
+      "text" : "PackageTypePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "container"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV",
+      "text" : "PackageVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV",
+      "text" : "MetadataPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV09ContainerJ0V",
+      "text" : "ContainerPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "docker"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV",
+      "text" : "PackageVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV",
+      "text" : "MetadataPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV06DockerJ0V",
+      "text" : "DockerPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/init(packageType:container:docker:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(packageType:container:docker:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/init(packagetype:container:docker:)"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Schemas/PackageVersion/MetadataPayload/packageType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "packageType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV",
+      "text" : "PackageVersion"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV",
+      "text" : "MetadataPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO7SchemasO14PackageVersionV15MetadataPayloadV0g4TypeJ0O",
+      "text" : "PackageTypePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Schemas\/PackageVersion\/MetadataPayload\/packageType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "packageType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/schemas\/packageversion\/metadatapayload\/packagetype"
+},
+"doc://GitHubRestAPIPackages/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

@@ -1,0 +1,6300 @@
+{
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPITeams6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPITeams"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/teams\/Client.swift#L14"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Client"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Client"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/APIProtocol",
+        "doc:\/\/GitHubRestAPITeams\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/init(serverURL:configuration:transport:middlewares:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddMemberLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateMembershipForUserInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateMembershipForUserLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateProjectPermissionsInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateProjectPermissionsLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateRepoPermissionsInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateRepoPermissionsLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCheckPermissionsForProjectInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCheckPermissionsForProjectLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCheckPermissionsForRepoInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCheckPermissionsForRepoLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreate(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreateDiscussionCommentInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreateDiscussionCommentLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreateDiscussionInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreateDiscussionLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteDiscussionCommentInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteDiscussionCommentLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteDiscussionInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteDiscussionLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetByName(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetDiscussionCommentInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetDiscussionCommentLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetDiscussionInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetDiscussionLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetMemberLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetMembershipForUserInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetMembershipForUserLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsList(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListChildInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListChildLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListDiscussionCommentsInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListDiscussionCommentsLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListDiscussionsInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListDiscussionsLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListForAuthenticatedUser(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListMembersInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListMembersLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListPendingInvitationsInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListPendingInvitationsLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListProjectsInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListProjectsLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListReposInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListReposLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveMemberLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveMembershipForUserInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveMembershipForUserLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveProjectInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveProjectLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveRepoInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveRepoLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateDiscussionCommentInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateDiscussionCommentLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateDiscussionInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateDiscussionLegacy(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateInOrg(_:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateLegacy(_:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/APIProtocol-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiteams\/client"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPITeams",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/apiprotocol"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/init(serverURL:configuration:transport:middlewares:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new client.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "serverURL"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation3URLV",
+      "text" : "URL"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime13ConfigurationV",
+      "text" : "Configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transport"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime15ClientTransportP",
+      "text" : "ClientTransport"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "middlewares"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime16ClientMiddlewareP",
+      "text" : "ClientMiddleware"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/init(serverURL:configuration:transport:middlewares:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(serverURL:configuration:transport:middlewares:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/init(serverurl:configuration:transport:middlewares:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsAddMemberLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add team member (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsAddMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsAddMemberLegacyO",
+      "text" : "TeamsAddMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsAddMemberLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsAddMemberLegacyO",
+      "text" : "TeamsAddMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsAddMemberLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddMemberLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsAddMemberLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsaddmemberlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsAddOrUpdateMembershipForUserInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add or update team membership for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsAddOrUpdateMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO38TeamsAddOrUpdateMembershipForUserInOrgO",
+      "text" : "TeamsAddOrUpdateMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO38TeamsAddOrUpdateMembershipForUserInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO38TeamsAddOrUpdateMembershipForUserInOrgO",
+      "text" : "TeamsAddOrUpdateMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO38TeamsAddOrUpdateMembershipForUserInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateMembershipForUserInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsAddOrUpdateMembershipForUserInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsaddorupdatemembershipforuserinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsAddOrUpdateMembershipForUserLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add or update team membership for a user (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsAddOrUpdateMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO39TeamsAddOrUpdateMembershipForUserLegacyO",
+      "text" : "TeamsAddOrUpdateMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO39TeamsAddOrUpdateMembershipForUserLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO39TeamsAddOrUpdateMembershipForUserLegacyO",
+      "text" : "TeamsAddOrUpdateMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO39TeamsAddOrUpdateMembershipForUserLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateMembershipForUserLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsAddOrUpdateMembershipForUserLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsaddorupdatemembershipforuserlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsAddOrUpdateProjectPermissionsInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add or update team project permissions",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsAddOrUpdateProjectPermissionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO39TeamsAddOrUpdateProjectPermissionsInOrgO",
+      "text" : "TeamsAddOrUpdateProjectPermissionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO39TeamsAddOrUpdateProjectPermissionsInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO39TeamsAddOrUpdateProjectPermissionsInOrgO",
+      "text" : "TeamsAddOrUpdateProjectPermissionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO39TeamsAddOrUpdateProjectPermissionsInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateProjectPermissionsInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsAddOrUpdateProjectPermissionsInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsaddorupdateprojectpermissionsinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsAddOrUpdateProjectPermissionsLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add or update team project permissions (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsAddOrUpdateProjectPermissionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO40TeamsAddOrUpdateProjectPermissionsLegacyO",
+      "text" : "TeamsAddOrUpdateProjectPermissionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO40TeamsAddOrUpdateProjectPermissionsLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO40TeamsAddOrUpdateProjectPermissionsLegacyO",
+      "text" : "TeamsAddOrUpdateProjectPermissionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO40TeamsAddOrUpdateProjectPermissionsLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateProjectPermissionsLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsAddOrUpdateProjectPermissionsLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsaddorupdateprojectpermissionslegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsAddOrUpdateRepoPermissionsInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add or update team repository permissions",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsAddOrUpdateRepoPermissionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO36TeamsAddOrUpdateRepoPermissionsInOrgO",
+      "text" : "TeamsAddOrUpdateRepoPermissionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO36TeamsAddOrUpdateRepoPermissionsInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO36TeamsAddOrUpdateRepoPermissionsInOrgO",
+      "text" : "TeamsAddOrUpdateRepoPermissionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO36TeamsAddOrUpdateRepoPermissionsInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateRepoPermissionsInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsAddOrUpdateRepoPermissionsInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsaddorupdaterepopermissionsinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsAddOrUpdateRepoPermissionsLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add or update team repository permissions (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsAddOrUpdateRepoPermissionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO37TeamsAddOrUpdateRepoPermissionsLegacyO",
+      "text" : "TeamsAddOrUpdateRepoPermissionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO37TeamsAddOrUpdateRepoPermissionsLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO37TeamsAddOrUpdateRepoPermissionsLegacyO",
+      "text" : "TeamsAddOrUpdateRepoPermissionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO37TeamsAddOrUpdateRepoPermissionsLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsAddOrUpdateRepoPermissionsLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsAddOrUpdateRepoPermissionsLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsaddorupdaterepopermissionslegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCheckPermissionsForProjectInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Check team permissions for a project",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCheckPermissionsForProjectInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO36TeamsCheckPermissionsForProjectInOrgO",
+      "text" : "TeamsCheckPermissionsForProjectInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO36TeamsCheckPermissionsForProjectInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO36TeamsCheckPermissionsForProjectInOrgO",
+      "text" : "TeamsCheckPermissionsForProjectInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO36TeamsCheckPermissionsForProjectInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCheckPermissionsForProjectInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCheckPermissionsForProjectInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscheckpermissionsforprojectinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCheckPermissionsForProjectLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Check team permissions for a project (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCheckPermissionsForProjectLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO37TeamsCheckPermissionsForProjectLegacyO",
+      "text" : "TeamsCheckPermissionsForProjectLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO37TeamsCheckPermissionsForProjectLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO37TeamsCheckPermissionsForProjectLegacyO",
+      "text" : "TeamsCheckPermissionsForProjectLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO37TeamsCheckPermissionsForProjectLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCheckPermissionsForProjectLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCheckPermissionsForProjectLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscheckpermissionsforprojectlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCheckPermissionsForRepoInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Check team permissions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCheckPermissionsForRepoInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsCheckPermissionsForRepoInOrgO",
+      "text" : "TeamsCheckPermissionsForRepoInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsCheckPermissionsForRepoInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsCheckPermissionsForRepoInOrgO",
+      "text" : "TeamsCheckPermissionsForRepoInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsCheckPermissionsForRepoInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCheckPermissionsForRepoInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCheckPermissionsForRepoInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscheckpermissionsforrepoinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCheckPermissionsForRepoLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Check team permissions for a repository (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCheckPermissionsForRepoLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsCheckPermissionsForRepoLegacyO",
+      "text" : "TeamsCheckPermissionsForRepoLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsCheckPermissionsForRepoLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsCheckPermissionsForRepoLegacyO",
+      "text" : "TeamsCheckPermissionsForRepoLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsCheckPermissionsForRepoLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCheckPermissionsForRepoLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCheckPermissionsForRepoLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscheckpermissionsforrepolegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCreate(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCreate"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO11TeamsCreateO",
+      "text" : "TeamsCreate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO11TeamsCreateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO11TeamsCreateO",
+      "text" : "TeamsCreate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO11TeamsCreateO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreate(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCreate(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscreate(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCreateDiscussionCommentInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a discussion comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCreateDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsCreateDiscussionCommentInOrgO",
+      "text" : "TeamsCreateDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsCreateDiscussionCommentInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsCreateDiscussionCommentInOrgO",
+      "text" : "TeamsCreateDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsCreateDiscussionCommentInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreateDiscussionCommentInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCreateDiscussionCommentInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscreatediscussioncommentinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCreateDiscussionCommentLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a discussion comment (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCreateDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsCreateDiscussionCommentLegacyO",
+      "text" : "TeamsCreateDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsCreateDiscussionCommentLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsCreateDiscussionCommentLegacyO",
+      "text" : "TeamsCreateDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsCreateDiscussionCommentLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreateDiscussionCommentLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCreateDiscussionCommentLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscreatediscussioncommentlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCreateDiscussionInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a discussion",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCreateDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsCreateDiscussionInOrgO",
+      "text" : "TeamsCreateDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsCreateDiscussionInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsCreateDiscussionInOrgO",
+      "text" : "TeamsCreateDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsCreateDiscussionInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreateDiscussionInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCreateDiscussionInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscreatediscussioninorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsCreateDiscussionLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a discussion (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsCreateDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsCreateDiscussionLegacyO",
+      "text" : "TeamsCreateDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsCreateDiscussionLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsCreateDiscussionLegacyO",
+      "text" : "TeamsCreateDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsCreateDiscussionLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsCreateDiscussionLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsCreateDiscussionLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamscreatediscussionlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsDeleteDiscussionCommentInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a discussion comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsDeleteDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsDeleteDiscussionCommentInOrgO",
+      "text" : "TeamsDeleteDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsDeleteDiscussionCommentInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsDeleteDiscussionCommentInOrgO",
+      "text" : "TeamsDeleteDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsDeleteDiscussionCommentInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteDiscussionCommentInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsDeleteDiscussionCommentInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsdeletediscussioncommentinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsDeleteDiscussionCommentLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a discussion comment (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsDeleteDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsDeleteDiscussionCommentLegacyO",
+      "text" : "TeamsDeleteDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsDeleteDiscussionCommentLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsDeleteDiscussionCommentLegacyO",
+      "text" : "TeamsDeleteDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsDeleteDiscussionCommentLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteDiscussionCommentLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsDeleteDiscussionCommentLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsdeletediscussioncommentlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsDeleteDiscussionInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a discussion",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsDeleteDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsDeleteDiscussionInOrgO",
+      "text" : "TeamsDeleteDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsDeleteDiscussionInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsDeleteDiscussionInOrgO",
+      "text" : "TeamsDeleteDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsDeleteDiscussionInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteDiscussionInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsDeleteDiscussionInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsdeletediscussioninorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsDeleteDiscussionLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a discussion (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsDeleteDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsDeleteDiscussionLegacyO",
+      "text" : "TeamsDeleteDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsDeleteDiscussionLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsDeleteDiscussionLegacyO",
+      "text" : "TeamsDeleteDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsDeleteDiscussionLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteDiscussionLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsDeleteDiscussionLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsdeletediscussionlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsDeleteInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsDeleteInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO16TeamsDeleteInOrgO",
+      "text" : "TeamsDeleteInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO16TeamsDeleteInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO16TeamsDeleteInOrgO",
+      "text" : "TeamsDeleteInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO16TeamsDeleteInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsDeleteInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsdeleteinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsDeleteLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a team (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsDeleteLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO17TeamsDeleteLegacyO",
+      "text" : "TeamsDeleteLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO17TeamsDeleteLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO17TeamsDeleteLegacyO",
+      "text" : "TeamsDeleteLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO17TeamsDeleteLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsDeleteLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsDeleteLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsdeletelegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetByName(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a team by name",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetByName"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO14TeamsGetByNameO",
+      "text" : "TeamsGetByName"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO14TeamsGetByNameO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO14TeamsGetByNameO",
+      "text" : "TeamsGetByName"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO14TeamsGetByNameO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetByName(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetByName(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetbyname(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetDiscussionCommentInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a discussion comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO30TeamsGetDiscussionCommentInOrgO",
+      "text" : "TeamsGetDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO30TeamsGetDiscussionCommentInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO30TeamsGetDiscussionCommentInOrgO",
+      "text" : "TeamsGetDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO30TeamsGetDiscussionCommentInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetDiscussionCommentInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetDiscussionCommentInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetdiscussioncommentinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetDiscussionCommentLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a discussion comment (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO31TeamsGetDiscussionCommentLegacyO",
+      "text" : "TeamsGetDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO31TeamsGetDiscussionCommentLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO31TeamsGetDiscussionCommentLegacyO",
+      "text" : "TeamsGetDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO31TeamsGetDiscussionCommentLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetDiscussionCommentLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetDiscussionCommentLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetdiscussioncommentlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetDiscussionInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a discussion",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsGetDiscussionInOrgO",
+      "text" : "TeamsGetDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsGetDiscussionInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsGetDiscussionInOrgO",
+      "text" : "TeamsGetDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsGetDiscussionInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetDiscussionInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetDiscussionInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetdiscussioninorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetDiscussionLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a discussion (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO24TeamsGetDiscussionLegacyO",
+      "text" : "TeamsGetDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO24TeamsGetDiscussionLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO24TeamsGetDiscussionLegacyO",
+      "text" : "TeamsGetDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO24TeamsGetDiscussionLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetDiscussionLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetDiscussionLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetdiscussionlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a team (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO14TeamsGetLegacyO",
+      "text" : "TeamsGetLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO14TeamsGetLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO14TeamsGetLegacyO",
+      "text" : "TeamsGetLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO14TeamsGetLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetMemberLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get team member (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsGetMemberLegacyO",
+      "text" : "TeamsGetMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsGetMemberLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsGetMemberLegacyO",
+      "text" : "TeamsGetMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsGetMemberLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetMemberLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetMemberLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetmemberlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetMembershipForUserInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get team membership for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO30TeamsGetMembershipForUserInOrgO",
+      "text" : "TeamsGetMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO30TeamsGetMembershipForUserInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO30TeamsGetMembershipForUserInOrgO",
+      "text" : "TeamsGetMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO30TeamsGetMembershipForUserInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetMembershipForUserInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetMembershipForUserInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetmembershipforuserinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsGetMembershipForUserLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get team membership for a user (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsGetMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO31TeamsGetMembershipForUserLegacyO",
+      "text" : "TeamsGetMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO31TeamsGetMembershipForUserLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO31TeamsGetMembershipForUserLegacyO",
+      "text" : "TeamsGetMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO31TeamsGetMembershipForUserLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsGetMembershipForUserLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsGetMembershipForUserLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsgetmembershipforuserlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsList(_:)": {
+  "abstract" : [
+    {
+      "text" : "List teams",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsList"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO9TeamsListO",
+      "text" : "TeamsList"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO9TeamsListO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO9TeamsListO",
+      "text" : "TeamsList"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO9TeamsListO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsList(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsList(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslist(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListChildInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "List child teams",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListChildInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO19TeamsListChildInOrgO",
+      "text" : "TeamsListChildInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO19TeamsListChildInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO19TeamsListChildInOrgO",
+      "text" : "TeamsListChildInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO19TeamsListChildInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListChildInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListChildInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistchildinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListChildLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "List child teams (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListChildLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsListChildLegacyO",
+      "text" : "TeamsListChildLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsListChildLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsListChildLegacyO",
+      "text" : "TeamsListChildLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsListChildLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListChildLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListChildLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistchildlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListDiscussionCommentsInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "List discussion comments",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListDiscussionCommentsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO32TeamsListDiscussionCommentsInOrgO",
+      "text" : "TeamsListDiscussionCommentsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO32TeamsListDiscussionCommentsInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO32TeamsListDiscussionCommentsInOrgO",
+      "text" : "TeamsListDiscussionCommentsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO32TeamsListDiscussionCommentsInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListDiscussionCommentsInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListDiscussionCommentsInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistdiscussioncommentsinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListDiscussionCommentsLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "List discussion comments (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListDiscussionCommentsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListDiscussionCommentsLegacyO",
+      "text" : "TeamsListDiscussionCommentsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListDiscussionCommentsLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListDiscussionCommentsLegacyO",
+      "text" : "TeamsListDiscussionCommentsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListDiscussionCommentsLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListDiscussionCommentsLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListDiscussionCommentsLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistdiscussioncommentslegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListDiscussionsInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "List discussions",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListDiscussionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO25TeamsListDiscussionsInOrgO",
+      "text" : "TeamsListDiscussionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO25TeamsListDiscussionsInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO25TeamsListDiscussionsInOrgO",
+      "text" : "TeamsListDiscussionsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO25TeamsListDiscussionsInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListDiscussionsInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListDiscussionsInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistdiscussionsinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListDiscussionsLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "List discussions (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListDiscussionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsListDiscussionsLegacyO",
+      "text" : "TeamsListDiscussionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsListDiscussionsLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsListDiscussionsLegacyO",
+      "text" : "TeamsListDiscussionsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsListDiscussionsLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListDiscussionsLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListDiscussionsLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistdiscussionslegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListForAuthenticatedUser(_:)": {
+  "abstract" : [
+    {
+      "text" : "List teams for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListForAuthenticatedUser"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO29TeamsListForAuthenticatedUserO",
+      "text" : "TeamsListForAuthenticatedUser"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO29TeamsListForAuthenticatedUserO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO29TeamsListForAuthenticatedUserO",
+      "text" : "TeamsListForAuthenticatedUser"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO29TeamsListForAuthenticatedUserO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListForAuthenticatedUser(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListForAuthenticatedUser(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistforauthenticateduser(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListMembersInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "List team members",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListMembersInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO21TeamsListMembersInOrgO",
+      "text" : "TeamsListMembersInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO21TeamsListMembersInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO21TeamsListMembersInOrgO",
+      "text" : "TeamsListMembersInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO21TeamsListMembersInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListMembersInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListMembersInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistmembersinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListMembersLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "List team members (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListMembersLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO22TeamsListMembersLegacyO",
+      "text" : "TeamsListMembersLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO22TeamsListMembersLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO22TeamsListMembersLegacyO",
+      "text" : "TeamsListMembersLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO22TeamsListMembersLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListMembersLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListMembersLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistmemberslegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListPendingInvitationsInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "List pending team invitations",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListPendingInvitationsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO32TeamsListPendingInvitationsInOrgO",
+      "text" : "TeamsListPendingInvitationsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO32TeamsListPendingInvitationsInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO32TeamsListPendingInvitationsInOrgO",
+      "text" : "TeamsListPendingInvitationsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO32TeamsListPendingInvitationsInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListPendingInvitationsInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListPendingInvitationsInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistpendinginvitationsinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListPendingInvitationsLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "List pending team invitations (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListPendingInvitationsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO",
+      "text" : "TeamsListPendingInvitationsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO",
+      "text" : "TeamsListPendingInvitationsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsListPendingInvitationsLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListPendingInvitationsLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListPendingInvitationsLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistpendinginvitationslegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListProjectsInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "List team projects",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListProjectsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO22TeamsListProjectsInOrgO",
+      "text" : "TeamsListProjectsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO22TeamsListProjectsInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO22TeamsListProjectsInOrgO",
+      "text" : "TeamsListProjectsInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO22TeamsListProjectsInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListProjectsInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListProjectsInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistprojectsinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListProjectsLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "List team projects (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListProjectsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsListProjectsLegacyO",
+      "text" : "TeamsListProjectsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsListProjectsLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsListProjectsLegacyO",
+      "text" : "TeamsListProjectsLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsListProjectsLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListProjectsLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListProjectsLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistprojectslegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListReposInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "List team repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListReposInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO19TeamsListReposInOrgO",
+      "text" : "TeamsListReposInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO19TeamsListReposInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO19TeamsListReposInOrgO",
+      "text" : "TeamsListReposInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO19TeamsListReposInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListReposInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListReposInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistreposinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsListReposLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "List team repositories (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsListReposLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsListReposLegacyO",
+      "text" : "TeamsListReposLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsListReposLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsListReposLegacyO",
+      "text" : "TeamsListReposLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsListReposLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsListReposLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsListReposLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamslistreposlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsRemoveMemberLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove team member (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsRemoveMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsRemoveMemberLegacyO",
+      "text" : "TeamsRemoveMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsRemoveMemberLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsRemoveMemberLegacyO",
+      "text" : "TeamsRemoveMemberLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsRemoveMemberLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveMemberLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsRemoveMemberLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsremovememberlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsRemoveMembershipForUserInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove team membership for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsRemoveMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsRemoveMembershipForUserInOrgO",
+      "text" : "TeamsRemoveMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsRemoveMembershipForUserInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsRemoveMembershipForUserInOrgO",
+      "text" : "TeamsRemoveMembershipForUserInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsRemoveMembershipForUserInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveMembershipForUserInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsRemoveMembershipForUserInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsremovemembershipforuserinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsRemoveMembershipForUserLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove team membership for a user (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsRemoveMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsRemoveMembershipForUserLegacyO",
+      "text" : "TeamsRemoveMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsRemoveMembershipForUserLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsRemoveMembershipForUserLegacyO",
+      "text" : "TeamsRemoveMembershipForUserLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsRemoveMembershipForUserLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveMembershipForUserLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsRemoveMembershipForUserLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsremovemembershipforuserlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsRemoveProjectInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove a project from a team",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsRemoveProjectInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsRemoveProjectInOrgO",
+      "text" : "TeamsRemoveProjectInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsRemoveProjectInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsRemoveProjectInOrgO",
+      "text" : "TeamsRemoveProjectInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO23TeamsRemoveProjectInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveProjectInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsRemoveProjectInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsremoveprojectinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsRemoveProjectLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove a project from a team (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsRemoveProjectLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO24TeamsRemoveProjectLegacyO",
+      "text" : "TeamsRemoveProjectLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO24TeamsRemoveProjectLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO24TeamsRemoveProjectLegacyO",
+      "text" : "TeamsRemoveProjectLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO24TeamsRemoveProjectLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveProjectLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsRemoveProjectLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsremoveprojectlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsRemoveRepoInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove a repository from a team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsRemoveRepoInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsRemoveRepoInOrgO",
+      "text" : "TeamsRemoveRepoInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsRemoveRepoInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsRemoveRepoInOrgO",
+      "text" : "TeamsRemoveRepoInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO20TeamsRemoveRepoInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveRepoInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsRemoveRepoInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsremoverepoinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsRemoveRepoLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove a repository from a team (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsRemoveRepoLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO21TeamsRemoveRepoLegacyO",
+      "text" : "TeamsRemoveRepoLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO21TeamsRemoveRepoLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO21TeamsRemoveRepoLegacyO",
+      "text" : "TeamsRemoveRepoLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO21TeamsRemoveRepoLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsRemoveRepoLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsRemoveRepoLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsremoverepolegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsUpdateDiscussionCommentInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a discussion comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsUpdateDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsUpdateDiscussionCommentInOrgO",
+      "text" : "TeamsUpdateDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsUpdateDiscussionCommentInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsUpdateDiscussionCommentInOrgO",
+      "text" : "TeamsUpdateDiscussionCommentInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO33TeamsUpdateDiscussionCommentInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateDiscussionCommentInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsUpdateDiscussionCommentInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsupdatediscussioncommentinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsUpdateDiscussionCommentLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a discussion comment (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsUpdateDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsUpdateDiscussionCommentLegacyO",
+      "text" : "TeamsUpdateDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsUpdateDiscussionCommentLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsUpdateDiscussionCommentLegacyO",
+      "text" : "TeamsUpdateDiscussionCommentLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO34TeamsUpdateDiscussionCommentLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateDiscussionCommentLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsUpdateDiscussionCommentLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsupdatediscussioncommentlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsUpdateDiscussionInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a discussion",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsUpdateDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsUpdateDiscussionInOrgO",
+      "text" : "TeamsUpdateDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsUpdateDiscussionInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsUpdateDiscussionInOrgO",
+      "text" : "TeamsUpdateDiscussionInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO26TeamsUpdateDiscussionInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateDiscussionInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsUpdateDiscussionInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsupdatediscussioninorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsUpdateDiscussionLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a discussion (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsUpdateDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsUpdateDiscussionLegacyO",
+      "text" : "TeamsUpdateDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsUpdateDiscussionLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsUpdateDiscussionLegacyO",
+      "text" : "TeamsUpdateDiscussionLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO27TeamsUpdateDiscussionLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateDiscussionLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsUpdateDiscussionLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsupdatediscussionlegacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsUpdateInOrg(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsUpdateInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO16TeamsUpdateInOrgO",
+      "text" : "TeamsUpdateInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO16TeamsUpdateInOrgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO16TeamsUpdateInOrgO",
+      "text" : "TeamsUpdateInOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO16TeamsUpdateInOrgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateInOrg(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsUpdateInOrg(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsupdateinorg(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teamsUpdateLegacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a team (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsUpdateLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO17TeamsUpdateLegacyO",
+      "text" : "TeamsUpdateLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO17TeamsUpdateLegacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO17TeamsUpdateLegacyO",
+      "text" : "TeamsUpdateLegacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO17TeamsUpdateLegacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teamsUpdateLegacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsUpdateLegacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teamsupdatelegacy(_:)"
+},
+"doc://GitHubRestAPITeams/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

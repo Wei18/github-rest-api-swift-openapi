@@ -1,0 +1,726 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO6OutputO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMarkdown"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Output"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/markdown\/Types.swift#L378"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.MarkdownRenderRaw.Output"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/SQ",
+        "doc:\/\/GitHubRestAPIMarkdown\/SH",
+        "doc:\/\/GitHubRestAPIMarkdown\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/Ok-swift.struct"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/notModified(_:)",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/ok(_:)",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/undocumented(statusCode:_:)"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/notModified-swift.property",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/ok-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/notModified-swift.type.property"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMarkdown/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMarkdown/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMarkdown",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw": {
+  "abstract" : [
+    {
+      "text" : "Render a Markdown document in raw mode",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MarkdownRenderRaw"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MarkdownRenderRaw"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRenderRaw",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRenderRaw.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output\/equatable-implementations"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRenderRaw.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output/notModified(_:)": {
+  "abstract" : [
+    {
+      "text" : "Not modified",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notModified"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO11NotModifiedV",
+      "text" : "NotModified"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/notModified(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRenderRaw.Output.notModified(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output\/notmodified(_:)"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output/notModified-swift.property": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".notModified",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notModified"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO11NotModifiedV",
+      "text" : "NotModified"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/notModified-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notModified",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output\/notmodified-swift.property"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output/notModified-swift.type.property": {
+  "abstract" : [
+    {
+      "text" : "Not modified",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notModified"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO",
+      "text" : "MarkdownRenderRaw"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/notModified-swift.type.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notModified",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output\/notmodified-swift.type.property"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output/ok(_:)": {
+  "abstract" : [
+    {
+      "text" : "Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ok"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO",
+      "text" : "MarkdownRenderRaw"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO6OutputO2OkV",
+      "text" : "Ok"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/ok(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRenderRaw.Output.ok(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output\/ok(_:)"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output/ok-swift.property": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".ok",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ok"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO",
+      "text" : "MarkdownRenderRaw"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO17MarkdownRenderRawO6OutputO2OkV",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/ok-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output\/ok-swift.property"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRenderRaw/Output/undocumented(statusCode:_:)": {
+  "abstract" : [
+    {
+      "text" : "Undocumented response.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "undocumented"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "statusCode"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime19UndocumentedPayloadV",
+      "text" : "UndocumentedPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRenderRaw\/Output\/undocumented(statusCode:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRenderRaw.Output.undocumented(statusCode:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrenderraw\/output\/undocumented(statuscode:_:)"
+},
+"doc://GitHubRestAPIMarkdown/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

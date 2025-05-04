@@ -1,0 +1,641 @@
+{
+  "abstract" : [
+    {
+      "text" : "The attachment status of the code security configuration on the repository.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE26ConfigurationForRepositoryV13StatusPayloadO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "StatusPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Security"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "StatusPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/code-security\/Types.swift#L1892"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "StatusPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/code-security-configuration-for-repository\/status",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/s12CaseIterableP",
+        "doc:\/\/GitHubRestAPICode_Security\/Se",
+        "doc:\/\/GitHubRestAPICode_Security\/SE",
+        "doc:\/\/GitHubRestAPICode_Security\/SQ",
+        "doc:\/\/GitHubRestAPICode_Security\/SH",
+        "doc:\/\/GitHubRestAPICode_Security\/SY",
+        "doc:\/\/GitHubRestAPICode_Security\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/attached",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/attaching",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/detached",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/enforced",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/failed",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/removed",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/removedByEnterprise",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/updating"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Security/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Security",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository": {
+  "abstract" : [
+    {
+      "text" : "Code security configuration associated with a repository and attachment status",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodeSecurityConfigurationForRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodeSecurityConfigurationForRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload": {
+  "abstract" : [
+    {
+      "text" : "The attachment status of the code security configuration on the repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "StatusPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StatusPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/equatable-implementations"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/attached": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "attached"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/attached",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload.attached",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/attached"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/attaching": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "attaching"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/attaching",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload.attaching",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/attaching"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/detached": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "detached"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/detached",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload.detached",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/detached"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/enforced": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "enforced"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/enforced",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload.enforced",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/enforced"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/failed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "failed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/failed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload.failed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/failed"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/removed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/removed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload.removed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/removed"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/removedByEnterprise": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removedByEnterprise"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/removedByEnterprise",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload.removedByEnterprise",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/removedbyenterprise"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfigurationForRepository/StatusPayload/updating": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updating"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfigurationForRepository\/StatusPayload\/updating",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfigurationForRepository.StatusPayload.updating",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfigurationforrepository\/statuspayload\/updating"
+},
+"doc://GitHubRestAPICode_Security/s12CaseIterableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

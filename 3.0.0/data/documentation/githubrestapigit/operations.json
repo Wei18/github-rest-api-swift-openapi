@@ -1,0 +1,631 @@
+{
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16GitHubRestAPIGit10OperationsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/git\/Types.swift#L1696"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Operations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateBlob",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateCommit",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateRef",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateTag",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateTree",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitDeleteRef",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetBlob",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetCommit",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetRef",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetTag",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetTree",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitListMatchingRefs",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitUpdateRef"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigit\/operations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitCreateBlob": {
+  "abstract" : [
+    {
+      "text" : "Create a blob",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateBlob"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateBlob",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateBlob"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitCreateBlob",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitcreateblob"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitCreateCommit": {
+  "abstract" : [
+    {
+      "text" : "Create a commit",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateCommit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateCommit",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateCommit"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitCreateCommit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitcreatecommit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitCreateRef": {
+  "abstract" : [
+    {
+      "text" : "Create a reference",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateRef"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateRef",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateRef"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitCreateRef",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitcreateref"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitCreateTag": {
+  "abstract" : [
+    {
+      "text" : "Create a tag object",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateTag"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateTag",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateTag"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitCreateTag",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitcreatetag"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitCreateTree": {
+  "abstract" : [
+    {
+      "text" : "Create a tree",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateTree"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitCreateTree",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitCreateTree"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitCreateTree",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitcreatetree"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitDeleteRef": {
+  "abstract" : [
+    {
+      "text" : "Delete a reference",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitDeleteRef"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitDeleteRef",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitDeleteRef"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitDeleteRef",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitdeleteref"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitGetBlob": {
+  "abstract" : [
+    {
+      "text" : "Get a blob",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitGetBlob"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetBlob",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitGetBlob"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitGetBlob",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitgetblob"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitGetCommit": {
+  "abstract" : [
+    {
+      "text" : "Get a commit object",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitGetCommit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetCommit",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitGetCommit"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitGetCommit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitgetcommit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitGetRef": {
+  "abstract" : [
+    {
+      "text" : "Get a reference",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitGetRef"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetRef",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitGetRef"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitGetRef",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitgetref"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitGetTag": {
+  "abstract" : [
+    {
+      "text" : "Get a tag",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitGetTag"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetTag",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitGetTag"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitGetTag",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitgettag"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitGetTree": {
+  "abstract" : [
+    {
+      "text" : "Get a tree",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitGetTree"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitGetTree",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitGetTree"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitGetTree",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitgettree"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitListMatchingRefs": {
+  "abstract" : [
+    {
+      "text" : "List matching references",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitListMatchingRefs"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitListMatchingRefs",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitListMatchingRefs"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitListMatchingRefs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitlistmatchingrefs"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/GitUpdateRef": {
+  "abstract" : [
+    {
+      "text" : "Update a reference",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitUpdateRef"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/GitUpdateRef",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitUpdateRef"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitUpdateRef",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/gitupdateref"
+}
+}
+}

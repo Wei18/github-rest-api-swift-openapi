@@ -1,0 +1,3703 @@
+{
+  "abstract" : [
+    {
+      "text" : "Repo Search Result Item",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO20RepoSearchResultItemV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "RepoSearchResultItem"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISearch"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "RepoSearchResultItem"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/search\/Types.swift#L3952"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.RepoSearchResultItem"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "RepoSearchResultItem"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/repo-search-result-item",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/Se",
+        "doc:\/\/GitHubRestAPISearch\/SE",
+        "doc:\/\/GitHubRestAPISearch\/SQ",
+        "doc:\/\/GitHubRestAPISearch\/SH",
+        "doc:\/\/GitHubRestAPISearch\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/PermissionsPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowAutoMerge",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowForking",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowMergeCommit",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowRebaseMerge",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowSquashMerge",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/archiveUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/archived",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/assigneesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/blobsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/branchesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/cloneUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/collaboratorsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/commentsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/commitsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/compareUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/contentsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/contributorsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/createdAt",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/defaultBranch",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/deleteBranchOnMerge",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/deploymentsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/description",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/disabled",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/downloadsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/eventsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/fork",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/forks",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/forksCount",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/forksUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/fullName",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/gitCommitsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/gitRefsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/gitTagsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/gitUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasDiscussions",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasDownloads",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasIssues",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasPages",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasProjects",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasWiki",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/homepage",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hooksUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/htmlUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/id",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/isTemplate",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/issueCommentUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/issueEventsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/issuesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/keysUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/labelsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/language",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/languagesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/license",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/masterBranch",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/mergesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/milestonesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/mirrorUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/name",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/nodeId",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/notificationsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/openIssues",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/openIssuesCount",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/owner",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/permissions",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/pullsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/pushedAt",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/releasesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/score",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/size",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/sshUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/stargazersCount",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/stargazersUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/statusesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/subscribersUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/subscriptionUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/svnUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/tagsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/teamsUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/tempCloneToken",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/textMatches",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/topics",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/treesUrl",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/updatedAt",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/url",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/visibility",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/watchers",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/watchersCount",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/webCommitSignoffRequired"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISearch/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISearch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem": {
+  "abstract" : [
+    {
+      "text" : "Repo Search Result Item",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RepoSearchResultItem"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RepoSearchResultItem"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RepoSearchResultItem",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RepoSearchResultItem.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/codingkeys"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/equatable-implementations"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/PermissionsPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PermissionsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/PermissionsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PermissionsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RepoSearchResultItem.PermissionsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/permissionspayload"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/allowAutoMerge": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "allowAutoMerge"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowAutoMerge",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "allowAutoMerge",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/allowautomerge"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/allowForking": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "allowForking"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowForking",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "allowForking",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/allowforking"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/allowMergeCommit": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "allowMergeCommit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowMergeCommit",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "allowMergeCommit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/allowmergecommit"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/allowRebaseMerge": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "allowRebaseMerge"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowRebaseMerge",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "allowRebaseMerge",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/allowrebasemerge"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/allowSquashMerge": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "allowSquashMerge"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/allowSquashMerge",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "allowSquashMerge",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/allowsquashmerge"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/archiveUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "archiveUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/archiveUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "archiveUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/archiveurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/archived": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "archived"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/archived",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "archived",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/archived"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/assigneesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "assigneesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/assigneesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "assigneesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/assigneesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/blobsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "blobsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/blobsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "blobsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/blobsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/branchesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "branchesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/branchesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "branchesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/branchesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/cloneUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "cloneUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/cloneUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "cloneUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/cloneurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/collaboratorsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "collaboratorsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/collaboratorsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "collaboratorsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/collaboratorsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/commentsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commentsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/commentsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "commentsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/commentsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/commitsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commitsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/commitsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "commitsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/commitsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/compareUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "compareUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/compareUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "compareUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/compareurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/contentsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contentsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/contentsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "contentsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/contentsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/contributorsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contributorsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/contributorsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "contributorsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/contributorsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/createdAt": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "createdAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/createdAt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "createdAt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/createdat"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/defaultBranch": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "defaultBranch"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/defaultBranch",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "defaultBranch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/defaultbranch"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/deleteBranchOnMerge": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "deleteBranchOnMerge"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/deleteBranchOnMerge",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "deleteBranchOnMerge",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/deletebranchonmerge"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/deploymentsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "deploymentsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/deploymentsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "deploymentsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/deploymentsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/description"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/disabled": {
+  "abstract" : [
+    {
+      "text" : "Returns whether or not this repository disabled.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "disabled"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/disabled",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "disabled",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/disabled"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/downloadsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "downloadsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/downloadsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "downloadsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/downloadsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/eventsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "eventsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/eventsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "eventsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/eventsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/fork": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fork"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/fork",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "fork",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/fork"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/forks": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/forks",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "forks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/forks"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/forksCount": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forksCount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/forksCount",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "forksCount",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/forkscount"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/forksUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forksUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/forksUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "forksUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/forksurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/fullName": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fullName"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/fullName",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "fullName",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/fullname"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/gitCommitsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitCommitsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/gitCommitsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gitCommitsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/gitcommitsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/gitRefsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitRefsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/gitRefsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gitRefsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/gitrefsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/gitTagsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitTagsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/gitTagsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gitTagsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/gittagsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/gitUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/gitUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gitUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/giturl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/hasDiscussions": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hasDiscussions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasDiscussions",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hasDiscussions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/hasdiscussions"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/hasDownloads": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hasDownloads"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasDownloads",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hasDownloads",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/hasdownloads"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/hasIssues": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hasIssues"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasIssues",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hasIssues",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/hasissues"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/hasPages": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hasPages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasPages",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hasPages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/haspages"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/hasProjects": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hasProjects"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasProjects",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hasProjects",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/hasprojects"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/hasWiki": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hasWiki"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hasWiki",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hasWiki",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/haswiki"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/homepage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "homepage"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/homepage",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "homepage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/homepage"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/hooksUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hooksUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/hooksUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hooksUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/hooksurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/htmlUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "htmlUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/htmlUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "htmlUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/htmlurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/id"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/init(from:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/isTemplate": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isTemplate"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/isTemplate",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isTemplate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/istemplate"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/issueCommentUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "issueCommentUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/issueCommentUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "issueCommentUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/issuecommenturl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/issueEventsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "issueEventsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/issueEventsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "issueEventsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/issueeventsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/issuesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "issuesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/issuesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "issuesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/issuesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/keysUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "keysUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/keysUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "keysUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/keysurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/labelsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "labelsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/labelsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "labelsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/labelsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/language": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "language"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/language",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "language",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/language"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/languagesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "languagesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/languagesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "languagesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/languagesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/license": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "license"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO21NullableLicenseSimpleV",
+      "text" : "NullableLicenseSimple"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/license",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "license",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/license"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/masterBranch": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "masterBranch"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/masterBranch",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "masterBranch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/masterbranch"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/mergesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "mergesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/mergesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "mergesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/mergesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/milestonesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "milestonesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/milestonesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "milestonesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/milestonesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/mirrorUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "mirrorUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/mirrorUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "mirrorUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/mirrorurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/name": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/name"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/nodeId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "nodeId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/nodeId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "nodeId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/nodeid"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/notificationsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notificationsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/notificationsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notificationsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/notificationsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/openIssues": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "openIssues"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/openIssues",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "openIssues",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/openissues"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/openIssuesCount": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "openIssuesCount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/openIssuesCount",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "openIssuesCount",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/openissuescount"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/owner": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "owner"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO18NullableSimpleUserV",
+      "text" : "NullableSimpleUser"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/owner",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/owner"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/permissions": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "permissions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO20RepoSearchResultItemV",
+      "text" : "RepoSearchResultItem"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO20RepoSearchResultItemV18PermissionsPayloadV",
+      "text" : "PermissionsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/permissions",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "permissions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/permissions"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/pullsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pullsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/pullsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "pullsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/pullsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/pushedAt": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pushedAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/pushedAt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "pushedAt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/pushedat"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/releasesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "releasesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/releasesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "releasesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/releasesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/score": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "score"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/score",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "score",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/score"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/size": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "size"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/size",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "size",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/size"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/sshUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sshUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/sshUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sshUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/sshurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/stargazersCount": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "stargazersCount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/stargazersCount",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "stargazersCount",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/stargazerscount"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/stargazersUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "stargazersUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/stargazersUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "stargazersUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/stargazersurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/statusesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "statusesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/statusesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "statusesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/statusesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/subscribersUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subscribersUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/subscribersUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "subscribersUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/subscribersurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/subscriptionUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subscriptionUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/subscriptionUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "subscriptionUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/subscriptionurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/svnUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "svnUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/svnUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "svnUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/svnurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/tagsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tagsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/tagsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "tagsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/tagsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/teamsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teamsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/teamsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teamsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/teamsurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/tempCloneToken": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tempCloneToken"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/tempCloneToken",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "tempCloneToken",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/tempclonetoken"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/textMatches": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "textMatches"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO7SchemasO23SearchResultTextMatchesa",
+      "text" : "SearchResultTextMatches"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/textMatches",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "textMatches",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/textmatches"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/topics": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "topics"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/topics",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "topics",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/topics"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/treesUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "treesUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/treesUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "treesUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/treesurl"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/updatedAt": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updatedAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/updatedAt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updatedAt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/updatedat"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/url"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/visibility": {
+  "abstract" : [
+    {
+      "text" : "The repository visibility: public, private, or internal.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "visibility"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/visibility",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "visibility",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/visibility"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/watchers": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "watchers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/watchers",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "watchers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/watchers"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/watchersCount": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "watchersCount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/watchersCount",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "watchersCount",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/watcherscount"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Components/Schemas/RepoSearchResultItem/webCommitSignoffRequired": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "webCommitSignoffRequired"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Components\/Schemas\/RepoSearchResultItem\/webCommitSignoffRequired",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "webCommitSignoffRequired",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/components\/schemas\/reposearchresultitem\/webcommitsignoffrequired"
+},
+"doc://GitHubRestAPISearch/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

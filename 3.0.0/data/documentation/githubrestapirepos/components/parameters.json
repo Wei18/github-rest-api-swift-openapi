@@ -1,0 +1,1855 @@
+{
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIRepos10ComponentsO10ParametersO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Parameters"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRepos"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Parameters"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/repos\/Types.swift#L22679"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Parameters"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Parameters"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/ActorNameInQuery",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/AssetId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/AutolinkId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/BeforeRepoDate",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Branch",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/BranchPolicyId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/CommentId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/CommitRef",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/CommitSha",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Cursor",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/DeliveryId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/DeploymentId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/EnvironmentName",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/HookId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/InvitationId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/KeyId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Org",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Owner",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Page",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/PaginationAfter",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/PaginationBefore",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/PerPage",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/ProtectionRuleId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RefInQuery",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/ReleaseId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Repo",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RepositoryNameInQuery",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RuleSuiteId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RulesetTargets",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/SinceRepo",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/SinceRepoDate",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/TagProtectionId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Username"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Direction",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/PagesDeploymentId",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Per",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RuleSuiteResult",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/TimePeriod"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirepos\/components\/parameters"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/ActorNameInQuery": {
+  "abstract" : [
+    {
+      "text" : "The handle for the GitHub user account to filter on. When specified, only rule evaluations triggered by this actor will be returned.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActorNameInQuery"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/ActorNameInQuery",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActorNameInQuery"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.ActorNameInQuery",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/actornameinquery"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/AssetId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the asset.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AssetId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/AssetId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AssetId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.AssetId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/assetid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/AutolinkId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the autolink.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AutolinkId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/AutolinkId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AutolinkId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.AutolinkId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/autolinkid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/BeforeRepoDate": {
+  "abstract" : [
+    {
+      "text" : "Only show repositories updated before the given time. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format: ",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BeforeRepoDate"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/BeforeRepoDate",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BeforeRepoDate"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.BeforeRepoDate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/beforerepodate"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Branch": {
+  "abstract" : [
+    {
+      "text" : "The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/graphql",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Branch"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Branch",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Branch"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Branch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/branch"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/BranchPolicyId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the branch policy.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BranchPolicyId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/BranchPolicyId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BranchPolicyId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.BranchPolicyId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/branchpolicyid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/CommentId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the comment.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CommentId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/CommentId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CommentId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.CommentId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/commentid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/CommitRef": {
+  "abstract" : [
+    {
+      "text" : "The commit reference. Can be a commit SHA, branch name (",
+      "type" : "text"
+    },
+    {
+      "code" : "heads\/BRANCH_NAME",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "), or tag name (",
+      "type" : "text"
+    },
+    {
+      "code" : "tags\/TAG_NAME",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "). For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/git-scm.com\/book\/en\/v2\/Git-Internals-Git-References",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "” in the Git documentation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CommitRef"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/CommitRef",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CommitRef"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.CommitRef",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/commitref"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/CommitSha": {
+  "abstract" : [
+    {
+      "text" : "The SHA of the commit.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CommitSha"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/CommitSha",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CommitSha"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.CommitSha",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/commitsha"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Cursor": {
+  "abstract" : [
+    {
+      "text" : "Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the ",
+      "type" : "text"
+    },
+    {
+      "code" : "link",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " header for the next and previous page cursors.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Cursor"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Cursor",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Cursor"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Cursor",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/cursor"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/DeliveryId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DeliveryId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/DeliveryId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DeliveryId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.DeliveryId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/deliveryid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/DeploymentId": {
+  "abstract" : [
+    {
+      "text" : "deployment_id parameter",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DeploymentId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/DeploymentId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DeploymentId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.DeploymentId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/deploymentid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Direction": {
+  "abstract" : [
+    {
+      "text" : "The direction to sort the results by.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Direction"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Direction",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Direction"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Direction",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/direction"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/EnvironmentName": {
+  "abstract" : [
+    {
+      "text" : "The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with ",
+      "type" : "text"
+    },
+    {
+      "code" : "%2F",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "EnvironmentName"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/EnvironmentName",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "EnvironmentName"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.EnvironmentName",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/environmentname"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/HookId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the hook. You can find this value in the ",
+      "type" : "text"
+    },
+    {
+      "code" : "X-GitHub-Hook-ID",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " header of a webhook delivery.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "HookId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/HookId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "HookId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.HookId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/hookid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/InvitationId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the invitation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "InvitationId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/InvitationId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "InvitationId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.InvitationId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/invitationid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/KeyId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the key.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "KeyId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/KeyId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "KeyId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.KeyId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/keyid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Org": {
+  "abstract" : [
+    {
+      "text" : "The organization name. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/org"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Owner": {
+  "abstract" : [
+    {
+      "text" : "The account owner of the repository. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Owner"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Owner",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Owner"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/owner"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Page": {
+  "abstract" : [
+    {
+      "text" : "The page number of the results to fetch. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/page"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/PagesDeploymentId": {
+  "abstract" : [
+    {
+      "text" : "The ID of the Pages deployment. You can also give the commit SHA of the deployment.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PagesDeploymentId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/PagesDeploymentId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PagesDeploymentId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.PagesDeploymentId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/pagesdeploymentid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/PaginationAfter": {
+  "abstract" : [
+    {
+      "text" : "A cursor, as given in the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". If specified, the query only searches for results after this cursor. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PaginationAfter"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/PaginationAfter",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PaginationAfter"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.PaginationAfter",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/paginationafter"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/PaginationBefore": {
+  "abstract" : [
+    {
+      "text" : "A cursor, as given in the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". If specified, the query only searches for results before this cursor. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PaginationBefore"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/PaginationBefore",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PaginationBefore"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.PaginationBefore",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/paginationbefore"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Per": {
+  "abstract" : [
+    {
+      "text" : "The time frame to display results for.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Per"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Per",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Per"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Per",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/per"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/PerPage": {
+  "abstract" : [
+    {
+      "text" : "The number of results per page (max 100). For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PerPage"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/PerPage",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PerPage"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.PerPage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/perpage"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/ProtectionRuleId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the protection rule.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ProtectionRuleId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/ProtectionRuleId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ProtectionRuleId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.ProtectionRuleId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/protectionruleid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/RefInQuery": {
+  "abstract" : [
+    {
+      "text" : "The name of the ref. Cannot contain wildcard characters. Optionally prefix with ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/heads\/",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to limit to branches or ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/tags\/",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to limit to tags. Omit the prefix to search across all refs. When specified, only rule evaluations triggered for this ref will be returned.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RefInQuery"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RefInQuery",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RefInQuery"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.RefInQuery",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/refinquery"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/ReleaseId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the release.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ReleaseId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/ReleaseId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ReleaseId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.ReleaseId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/releaseid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Repo": {
+  "abstract" : [
+    {
+      "text" : "The name of the repository without the ",
+      "type" : "text"
+    },
+    {
+      "code" : ".git",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " extension. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Repo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Repo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Repo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Repo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/repo"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/RepositoryNameInQuery": {
+  "abstract" : [
+    {
+      "text" : "The name of the repository to filter on.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RepositoryNameInQuery"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RepositoryNameInQuery",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RepositoryNameInQuery"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.RepositoryNameInQuery",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/repositorynameinquery"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/RuleSuiteId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the rule suite result.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "To get this ID, you can use ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/repos\/rule-suites#list-repository-rule-suites",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "for repositories and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/orgs\/rule-suites#list-organization-rule-suites",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "for organizations.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RuleSuiteId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RuleSuiteId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RuleSuiteId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.RuleSuiteId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/rulesuiteid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/RuleSuiteResult": {
+  "abstract" : [
+    {
+      "text" : "The rule results to filter on. When specified, only suites with this result will be returned.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RuleSuiteResult"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RuleSuiteResult",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RuleSuiteResult"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.RuleSuiteResult",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/rulesuiteresult"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/RulesetTargets": {
+  "abstract" : [
+    {
+      "text" : "A comma-separated list of rule targets to filter by.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "If provided, only rulesets that apply to the specified targets will be returned.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "For example, ",
+      "type" : "text"
+    },
+    {
+      "code" : "branch,tag,push",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RulesetTargets"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/RulesetTargets",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RulesetTargets"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.RulesetTargets",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/rulesettargets"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/SinceRepo": {
+  "abstract" : [
+    {
+      "text" : "A repository ID. Only return repositories with an ID greater than this ID.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SinceRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/SinceRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SinceRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.SinceRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/sincerepo"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/SinceRepoDate": {
+  "abstract" : [
+    {
+      "text" : "Only show repositories updated after the given time. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format: ",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "SinceRepoDate"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/SinceRepoDate",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "SinceRepoDate"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.SinceRepoDate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/sincerepodate"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/TagProtectionId": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the tag protection.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TagProtectionId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/TagProtectionId",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TagProtectionId"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.TagProtectionId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/tagprotectionid"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/TimePeriod": {
+  "abstract" : [
+    {
+      "text" : "The time period to filter by.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "TimePeriod"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/TimePeriod",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "TimePeriod"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.TimePeriod",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/timeperiod"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Parameters/Username": {
+  "abstract" : [
+    {
+      "text" : "The handle for the GitHub user account.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Username"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Parameters\/Username",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Username"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Username",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/parameters\/username"
+},
+"https://docs.github.com/graphql": {
+  "identifier" : "https:\/\/docs.github.com\/graphql",
+  "title" : "the GraphQL API",
+  "titleInlineContent" : [
+    {
+      "text" : "the GraphQL API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/graphql"
+},
+"https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+  "title" : "Link header",
+  "titleInlineContent" : [
+    {
+      "text" : "Link header",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers"
+},
+"https://docs.github.com/rest/orgs/rule-suites#list-organization-rule-suites": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/orgs\/rule-suites#list-organization-rule-suites",
+  "title" : "GET \/orgs\/{org}\/rulesets\/rule-suites",
+  "titleInlineContent" : [
+    {
+      "text" : "GET \/orgs\/{org}\/rulesets\/rule-suites",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/orgs\/rule-suites#list-organization-rule-suites"
+},
+"https://docs.github.com/rest/repos/rule-suites#list-repository-rule-suites": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/repos\/rule-suites#list-repository-rule-suites",
+  "title" : "GET \/repos\/{owner}\/{repo}\/rulesets\/rule-suites",
+  "titleInlineContent" : [
+    {
+      "text" : "GET \/repos\/{owner}\/{repo}\/rulesets\/rule-suites",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/repos\/rule-suites#list-repository-rule-suites"
+},
+"https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+  "title" : "Using pagination in the REST API",
+  "titleInlineContent" : [
+    {
+      "text" : "Using pagination in the REST API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api"
+},
+"https://en.wikipedia.org/wiki/ISO_8601": {
+  "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+  "title" : "ISO 8601",
+  "titleInlineContent" : [
+    {
+      "text" : "ISO 8601",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601"
+},
+"https://git-scm.com/book/en/v2/Git-Internals-Git-References": {
+  "identifier" : "https:\/\/git-scm.com\/book\/en\/v2\/Git-Internals-Git-References",
+  "title" : "Git References",
+  "titleInlineContent" : [
+    {
+      "text" : "Git References",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/git-scm.com\/book\/en\/v2\/Git-Internals-Git-References"
+}
+}
+}

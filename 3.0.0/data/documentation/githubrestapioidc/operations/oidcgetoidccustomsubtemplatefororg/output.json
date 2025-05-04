@@ -1,0 +1,525 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOidc10OperationsO07OidcGetF23CustomSubTemplateForOrgO6OutputO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOidc"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Output"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/oidc\/Types.swift#L289"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.OidcGetOidcCustomSubTemplateForOrg.Output"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/SQ",
+        "doc:\/\/GitHubRestAPIOidc\/SH",
+        "doc:\/\/GitHubRestAPIOidc\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/Ok-swift.struct"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/ok(_:)",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/undocumented(statusCode:_:)"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/ok-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/output"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOidc/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOidc/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOidc",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get the customization template for an OIDC subject claim for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OidcGetOidcCustomSubTemplateForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "OidcGetOidcCustomSubTemplateForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OidcGetOidcCustomSubTemplateForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OidcGetOidcCustomSubTemplateForOrg.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/output"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg/Output/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/output\/equatable-implementations"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OidcGetOidcCustomSubTemplateForOrg.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg/Output/ok(_:)": {
+  "abstract" : [
+    {
+      "text" : "A JSON serialized template for OIDC subject claim customization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ok"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10OperationsO07OidcGetF23CustomSubTemplateForOrgO",
+      "text" : "OidcGetOidcCustomSubTemplateForOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10OperationsO07OidcGetF23CustomSubTemplateForOrgO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10OperationsO07OidcGetF23CustomSubTemplateForOrgO6OutputO2OkV",
+      "text" : "Ok"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/ok(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.OidcGetOidcCustomSubTemplateForOrg.Output.ok(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/output\/ok(_:)"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg/Output/ok-swift.property": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".ok",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ok"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10OperationsO07OidcGetF23CustomSubTemplateForOrgO",
+      "text" : "OidcGetOidcCustomSubTemplateForOrg"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10OperationsO07OidcGetF23CustomSubTemplateForOrgO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10OperationsO07OidcGetF23CustomSubTemplateForOrgO6OutputO2OkV",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/ok-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/output\/ok-swift.property"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg/Output/undocumented(statusCode:_:)": {
+  "abstract" : [
+    {
+      "text" : "Undocumented response.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "undocumented"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "statusCode"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime19UndocumentedPayloadV",
+      "text" : "UndocumentedPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/Output\/undocumented(statusCode:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.OidcGetOidcCustomSubTemplateForOrg.Output.undocumented(statusCode:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/output\/undocumented(statuscode:_:)"
+},
+"doc://GitHubRestAPIOidc/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

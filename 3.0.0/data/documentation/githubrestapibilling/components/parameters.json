@@ -1,0 +1,597 @@
+{
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIBilling10ComponentsO10ParametersO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Parameters"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIBilling"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Parameters"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/billing\/Types.swift#L697"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Parameters"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Parameters"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/BillingUsageReportDay",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/BillingUsageReportHour",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/BillingUsageReportMonth",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/BillingUsageReportYear",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/Org",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/Username"
+      ],
+      "title" : "Type Aliases"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapibilling\/components\/parameters"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIBilling",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters/BillingUsageReportDay": {
+  "abstract" : [
+    {
+      "text" : "If specified, only return results for a single day. The value of ",
+      "type" : "text"
+    },
+    {
+      "code" : "day",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is an integer between ",
+      "type" : "text"
+    },
+    {
+      "code" : "1",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "code" : "31",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". If no ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "month",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is specified, the default ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "code" : "month",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " are used.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BillingUsageReportDay"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/BillingUsageReportDay",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BillingUsageReportDay"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.BillingUsageReportDay",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters\/billingusagereportday"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters/BillingUsageReportHour": {
+  "abstract" : [
+    {
+      "text" : "If specified, only return results for a single hour. The value of ",
+      "type" : "text"
+    },
+    {
+      "code" : "hour",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is an integer between ",
+      "type" : "text"
+    },
+    {
+      "code" : "0",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "code" : "23",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". If no ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "month",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", or ",
+      "type" : "text"
+    },
+    {
+      "code" : "day",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is specified, the default ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "month",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", and ",
+      "type" : "text"
+    },
+    {
+      "code" : "day",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " are used.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BillingUsageReportHour"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/BillingUsageReportHour",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BillingUsageReportHour"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.BillingUsageReportHour",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters\/billingusagereporthour"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters/BillingUsageReportMonth": {
+  "abstract" : [
+    {
+      "text" : "If specified, only return results for a single month. The value of ",
+      "type" : "text"
+    },
+    {
+      "code" : "month",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is an integer between ",
+      "type" : "text"
+    },
+    {
+      "code" : "1",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "code" : "12",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". If no year is specified the default ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is used.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BillingUsageReportMonth"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/BillingUsageReportMonth",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BillingUsageReportMonth"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.BillingUsageReportMonth",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters\/billingusagereportmonth"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters/BillingUsageReportYear": {
+  "abstract" : [
+    {
+      "text" : "If specified, only return results for a single year. The value of ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is an integer with four digits representing a year. For example, ",
+      "type" : "text"
+    },
+    {
+      "code" : "2025",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". Default value is the current year.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "BillingUsageReportYear"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/BillingUsageReportYear",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BillingUsageReportYear"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.BillingUsageReportYear",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters\/billingusagereportyear"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters/Org": {
+  "abstract" : [
+    {
+      "text" : "The organization name. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/Org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters\/org"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters/Username": {
+  "abstract" : [
+    {
+      "text" : "The handle for the GitHub user account.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Username"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/Username",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Username"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.Username",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters\/username"
+}
+}
+}

@@ -1,0 +1,281 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/AcceptableContentType"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/AcceptableContentType\/rawValue"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOidc10OperationsO07OidcGetF23CustomSubTemplateForOrgO21AcceptableContentTypeO8rawValueSSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rawValue"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOidc"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/oidc\/Types.swift#L357"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "rawValue"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "rawValue"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/acceptablecontenttype\/rawvalue"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOidc",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get the customization template for an OIDC subject claim for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OidcGetOidcCustomSubTemplateForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "OidcGetOidcCustomSubTemplateForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OidcGetOidcCustomSubTemplateForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OidcGetOidcCustomSubTemplateForOrg.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/OidcGetOidcCustomSubTemplateForOrg/AcceptableContentType/rawValue": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/OidcGetOidcCustomSubTemplateForOrg\/AcceptableContentType\/rawValue",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "rawValue",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidcgetoidccustomsubtemplatefororg\/acceptablecontenttype\/rawvalue"
+}
+}
+}

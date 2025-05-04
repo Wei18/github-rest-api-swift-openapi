@@ -1,0 +1,469 @@
+{
+  "abstract" : [
+    {
+      "text" : "The repository context to use when creating references in ",
+      "type" : "text"
+    },
+    {
+      "code" : "gfm",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " mode.  For example, setting ",
+      "type" : "text"
+    },
+    {
+      "code" : "context",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to ",
+      "type" : "text"
+    },
+    {
+      "code" : "octo-org\/octo-repo",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " will change the text ",
+      "type" : "text"
+    },
+    {
+      "code" : "#42",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " into an HTML link to issue 42 in the ",
+      "type" : "text"
+    },
+    {
+      "code" : "octo-org\/octo-repo",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " repository.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender\/Input",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender\/Input\/Body-swift.enum\/JsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender\/Input\/Body-swift.enum\/JsonPayload\/context"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIMarkdown10OperationsO14MarkdownRenderO5InputV4BodyO11JsonPayloadV7contextSSSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "context"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMarkdown"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/markdown\/Types.swift#L152"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "context"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "context"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/markdown\/POST\/requestBody\/json\/context",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimarkdown\/operations\/markdownrender\/input\/body-swift.enum\/jsonpayload\/context"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMarkdown",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRender": {
+  "abstract" : [
+    {
+      "text" : "Render a Markdown document",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MarkdownRender"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MarkdownRender"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRender",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrender"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRender/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRender.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrender\/input"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRender/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRender.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrender\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRender/Input/Body-swift.enum/JsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender\/Input\/Body-swift.enum\/JsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.MarkdownRender.Input.Body.JsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrender\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/MarkdownRender/Input/Body-swift.enum/JsonPayload/context": {
+  "abstract" : [
+    {
+      "text" : "The repository context to use when creating references in ",
+      "type" : "text"
+    },
+    {
+      "code" : "gfm",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " mode.  For example, setting ",
+      "type" : "text"
+    },
+    {
+      "code" : "context",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to ",
+      "type" : "text"
+    },
+    {
+      "code" : "octo-org\/octo-repo",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " will change the text ",
+      "type" : "text"
+    },
+    {
+      "code" : "#42",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " into an HTML link to issue 42 in the ",
+      "type" : "text"
+    },
+    {
+      "code" : "octo-org\/octo-repo",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "context"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/MarkdownRender\/Input\/Body-swift.enum\/JsonPayload\/context",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "context",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdownrender\/input\/body-swift.enum\/jsonpayload\/context"
+}
+}
+}

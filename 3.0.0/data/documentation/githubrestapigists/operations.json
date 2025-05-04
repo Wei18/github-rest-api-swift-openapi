@@ -1,0 +1,876 @@
+{
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIGists10OperationsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGists"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/gists\/Types.swift#L2668"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Operations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsCheckIsStarred",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsCreate",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsCreateComment",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsDelete",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsDeleteComment",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsFork",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsGet",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsGetComment",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsGetRevision",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsList",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListComments",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListCommits",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListForUser",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListForks",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListPublic",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListStarred",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsStar",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsUnstar",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsUpdate",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsUpdateComment"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigists\/operations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGists",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsCheckIsStarred": {
+  "abstract" : [
+    {
+      "text" : "Check if a gist is starred",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsCheckIsStarred"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsCheckIsStarred",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsCheckIsStarred"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsCheckIsStarred",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistscheckisstarred"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsCreate": {
+  "abstract" : [
+    {
+      "text" : "Create a gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsCreate"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsCreate",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsCreate"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsCreate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistscreate"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsCreateComment": {
+  "abstract" : [
+    {
+      "text" : "Create a gist comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsCreateComment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsCreateComment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsCreateComment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsCreateComment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistscreatecomment"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsDelete": {
+  "abstract" : [
+    {
+      "text" : "Delete a gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsDelete"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsDelete",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsDelete"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsDelete",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsdelete"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsDeleteComment": {
+  "abstract" : [
+    {
+      "text" : "Delete a gist comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsDeleteComment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsDeleteComment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsDeleteComment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsDeleteComment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsdeletecomment"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsFork": {
+  "abstract" : [
+    {
+      "text" : "Fork a gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsFork"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsFork",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsFork"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsFork",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsfork"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsGet": {
+  "abstract" : [
+    {
+      "text" : "Get a gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsGet"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsGet",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsGet"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsGet",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsget"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsGetComment": {
+  "abstract" : [
+    {
+      "text" : "Get a gist comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsGetComment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsGetComment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsGetComment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsGetComment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsgetcomment"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsGetRevision": {
+  "abstract" : [
+    {
+      "text" : "Get a gist revision",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsGetRevision"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsGetRevision",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsGetRevision"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsGetRevision",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsgetrevision"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsList": {
+  "abstract" : [
+    {
+      "text" : "List gists for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsList"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsList",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsList"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsList",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistslist"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsListComments": {
+  "abstract" : [
+    {
+      "text" : "List gist comments",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsListComments"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListComments",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsListComments"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsListComments",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistslistcomments"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsListCommits": {
+  "abstract" : [
+    {
+      "text" : "List gist commits",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsListCommits"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListCommits",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsListCommits"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsListCommits",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistslistcommits"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsListForUser": {
+  "abstract" : [
+    {
+      "text" : "List gists for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsListForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsListForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsListForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistslistforuser"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsListForks": {
+  "abstract" : [
+    {
+      "text" : "List gist forks",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsListForks"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListForks",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsListForks"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsListForks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistslistforks"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsListPublic": {
+  "abstract" : [
+    {
+      "text" : "List public gists",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsListPublic"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListPublic",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsListPublic"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsListPublic",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistslistpublic"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsListStarred": {
+  "abstract" : [
+    {
+      "text" : "List starred gists",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsListStarred"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsListStarred",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsListStarred"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsListStarred",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsliststarred"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsStar": {
+  "abstract" : [
+    {
+      "text" : "Star a gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsStar"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsStar",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsStar"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsStar",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsstar"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsUnstar": {
+  "abstract" : [
+    {
+      "text" : "Unstar a gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsUnstar"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsUnstar",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsUnstar"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsUnstar",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsunstar"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsUpdate": {
+  "abstract" : [
+    {
+      "text" : "Update a gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsUpdate"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsUpdate",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsUpdate"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsUpdate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsupdate"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Operations/GistsUpdateComment": {
+  "abstract" : [
+    {
+      "text" : "Update a gist comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GistsUpdateComment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Operations\/GistsUpdateComment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GistsUpdateComment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GistsUpdateComment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/operations\/gistsupdatecomment"
+}
+}
+}

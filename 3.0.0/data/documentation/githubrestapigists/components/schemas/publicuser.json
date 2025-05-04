@@ -1,0 +1,1912 @@
+{
+  "abstract" : [
+    {
+      "text" : "Public User",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO10PublicUserV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "PublicUser"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGists"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "PublicUser"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/gists\/Types.swift#L1259"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.PublicUser"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "PublicUser"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/public-user",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/Se",
+        "doc:\/\/GitHubRestAPIGists\/SE",
+        "doc:\/\/GitHubRestAPIGists\/SQ",
+        "doc:\/\/GitHubRestAPIGists\/SH",
+        "doc:\/\/GitHubRestAPIGists\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/PlanPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/avatarUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/bio",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/blog",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/collaborators",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/company",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/createdAt",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/diskUsage",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/email",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/eventsUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/followers",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/followersUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/following",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/followingUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/gistsUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/gravatarId",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/hireable",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/htmlUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/id",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/location",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/login",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/name",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/nodeId",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/notificationEmail",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/organizationsUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/ownedPrivateRepos",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/plan",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/privateGists",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/publicGists",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/publicRepos",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/receivedEventsUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/reposUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/siteAdmin",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/starredUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/subscriptionsUrl",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/totalPrivateRepos",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/twitterUsername",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/updatedAt",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/userViewType"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigists\/components\/schemas\/publicuser"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGists/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGists",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser": {
+  "abstract" : [
+    {
+      "text" : "Public User",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PublicUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PublicUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PublicUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PublicUser.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/codingkeys"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/equatable-implementations"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/PlanPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PlanPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/PlanPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PlanPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.PublicUser.PlanPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/planpayload"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/avatarUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "avatarUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/avatarUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "avatarUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/avatarurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/bio": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "bio"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/bio",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "bio",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/bio"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/blog": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "blog"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/blog",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "blog",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/blog"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/collaborators": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "collaborators"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/collaborators",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "collaborators",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/collaborators"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/company": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "company"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/company",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "company",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/company"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/createdAt": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "createdAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/createdAt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "createdAt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/createdat"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/diskUsage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "diskUsage"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/diskUsage",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "diskUsage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/diskusage"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/email": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "email"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/email",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "email",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/email"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/eventsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "eventsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/eventsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "eventsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/eventsurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/followers": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "followers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/followers",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "followers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/followers"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/followersUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "followersUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/followersUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "followersUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/followersurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/following": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "following"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/following",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "following",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/following"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/followingUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "followingUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/followingUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "followingUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/followingurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/gistsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gistsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/gistsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gistsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/gistsurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/gravatarId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gravatarId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/gravatarId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "gravatarId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/gravatarid"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/hireable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hireable"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/hireable",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hireable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/hireable"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/htmlUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "htmlUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/htmlUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "htmlUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/htmlurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s5Int64V",
+      "text" : "Int64"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/id"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/init(from:)"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/location": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "location"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/location",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "location",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/location"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/login": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "login"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/login",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "login",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/login"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/name": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/name"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/nodeId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "nodeId"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/nodeId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "nodeId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/nodeid"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/notificationEmail": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notificationEmail"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/notificationEmail",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notificationEmail",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/notificationemail"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/organizationsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organizationsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/organizationsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "organizationsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/organizationsurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/ownedPrivateRepos": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ownedPrivateRepos"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/ownedPrivateRepos",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ownedPrivateRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/ownedprivaterepos"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/plan": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "plan"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO10PublicUserV",
+      "text" : "PublicUser"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO10PublicUserV11PlanPayloadV",
+      "text" : "PlanPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/plan",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "plan",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/plan"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/privateGists": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "privateGists"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/privateGists",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "privateGists",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/privategists"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/publicGists": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "publicGists"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/publicGists",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "publicGists",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/publicgists"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/publicRepos": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "publicRepos"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/publicRepos",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "publicRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/publicrepos"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/receivedEventsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "receivedEventsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/receivedEventsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "receivedEventsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/receivedeventsurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/reposUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reposUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/reposUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reposUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/reposurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/siteAdmin": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "siteAdmin"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/siteAdmin",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "siteAdmin",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/siteadmin"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/starredUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "starredUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/starredUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "starredUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/starredurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/subscriptionsUrl": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subscriptionsUrl"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/subscriptionsUrl",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "subscriptionsUrl",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/subscriptionsurl"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/totalPrivateRepos": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "totalPrivateRepos"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/totalPrivateRepos",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "totalPrivateRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/totalprivaterepos"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/twitterUsername": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "twitterUsername"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/twitterUsername",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "twitterUsername",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/twitterusername"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/updatedAt": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updatedAt"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/updatedAt",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updatedAt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/updatedat"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/PublicUser/userViewType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "userViewType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/PublicUser\/userViewType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "userViewType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/publicuser\/userviewtype"
+},
+"doc://GitHubRestAPIGists/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

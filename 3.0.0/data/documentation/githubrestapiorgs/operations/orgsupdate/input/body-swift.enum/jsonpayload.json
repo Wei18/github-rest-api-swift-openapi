@@ -1,0 +1,2780 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "JsonPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "JsonPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Types.swift#L9133"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Operations.OrgsUpdate.Input.Body.JsonPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "JsonPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/PATCH\/requestBody\/json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/Se",
+        "doc:\/\/GitHubRestAPIOrgs\/SE",
+        "doc:\/\/GitHubRestAPIOrgs\/SQ",
+        "doc:\/\/GitHubRestAPIOrgs\/SH",
+        "doc:\/\/GitHubRestAPIOrgs\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/init(billingEmail:company:email:twitterUsername:location:name:description:hasOrganizationProjects:hasRepositoryProjects:defaultRepositoryPermission:membersCanCreateRepositories:membersCanCreateInternalRepositories:membersCanCreatePrivateRepositories:membersCanCreatePublicRepositories:membersAllowedRepositoryCreationType:membersCanCreatePages:membersCanCreatePublicPages:membersCanCreatePrivatePages:membersCanForkPrivateRepositories:webCommitSignoffRequired:blog:advancedSecurityEnabledForNewRepositories:dependabotAlertsEnabledForNewRepositories:dependabotSecurityUpdatesEnabledForNewRepositories:dependencyGraphEnabledForNewRepositories:secretScanningEnabledForNewRepositories:secretScanningPushProtectionEnabledForNewRepositories:secretScanningPushProtectionCustomLinkEnabled:secretScanningPushProtectionCustomLink:deployKeysEnabledForRepositories:)",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/advancedSecurityEnabledForNewRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/billingEmail",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/blog",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/company",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/defaultRepositoryPermission",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/dependabotAlertsEnabledForNewRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/dependabotSecurityUpdatesEnabledForNewRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/dependencyGraphEnabledForNewRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/deployKeysEnabledForRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/description",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/email",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/hasOrganizationProjects",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/hasRepositoryProjects",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/location",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersAllowedRepositoryCreationType",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreateInternalRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePages",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePrivatePages",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePrivateRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePublicPages",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePublicRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreateRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanForkPrivateRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/name",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/secretScanningEnabledForNewRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/secretScanningPushProtectionCustomLink",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/secretScanningPushProtectionCustomLinkEnabled",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/secretScanningPushProtectionEnabledForNewRepositories",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/twitterUsername",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/webCommitSignoffRequired"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/CodingKeys",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/DefaultRepositoryPermissionPayload",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/MembersAllowedRepositoryCreationTypePayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate": {
+  "abstract" : [
+    {
+      "text" : "Update an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OrgsUpdate"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "OrgsUpdate"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OrgsUpdate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OrgsUpdate.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OrgsUpdate.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OrgsUpdate.Input.Body.JsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OrgsUpdate.Input.Body.JsonPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/codingkeys"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/DefaultRepositoryPermissionPayload": {
+  "abstract" : [
+    {
+      "text" : "Default permission level members have for organization repositories.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "DefaultRepositoryPermissionPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/DefaultRepositoryPermissionPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "DefaultRepositoryPermissionPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OrgsUpdate.Input.Body.JsonPayload.DefaultRepositoryPermissionPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/defaultrepositorypermissionpayload"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/MembersAllowedRepositoryCreationTypePayload": {
+  "abstract" : [
+    {
+      "text" : "Specifies which types of repositories non-admin organization members can create. ",
+      "type" : "text"
+    },
+    {
+      "code" : "private",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is only available to repositories that are part of an organization on GitHub Enterprise Cloud.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "Note:",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " This parameter is closing down and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in ",
+      "type" : "text"
+    },
+    {
+      "code" : "members_can_create_repositories",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". See the parameter deprecation notice in the operation description for details.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MembersAllowedRepositoryCreationTypePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/MembersAllowedRepositoryCreationTypePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "MembersAllowedRepositoryCreationTypePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.OrgsUpdate.Input.Body.JsonPayload.MembersAllowedRepositoryCreationTypePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/membersallowedrepositorycreationtypepayload"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/advancedSecurityEnabledForNewRepositories": {
+  "abstract" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Endpoint closing down notice.",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " Please use ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/code-security\/configurations",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " instead.",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "advancedSecurityEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/advancedSecurityEnabledForNewRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "advancedSecurityEnabledForNewRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/advancedsecurityenabledfornewrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/billingEmail": {
+  "abstract" : [
+    {
+      "text" : "Billing email address. This address is not publicized.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billingEmail"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/billingEmail",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "billingEmail",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/billingemail"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/blog": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "blog"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/blog",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "blog",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/blog"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/company": {
+  "abstract" : [
+    {
+      "text" : "The company name.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "company"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/company",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "company",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/company"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/defaultRepositoryPermission": {
+  "abstract" : [
+    {
+      "text" : "Default permission level members have for organization repositories.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "defaultRepositoryPermission"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO",
+      "text" : "OrgsUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV027DefaultRepositoryPermissionK0O",
+      "text" : "DefaultRepositoryPermissionPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/defaultRepositoryPermission",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "defaultRepositoryPermission",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/defaultrepositorypermission"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/dependabotAlertsEnabledForNewRepositories": {
+  "abstract" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Endpoint closing down notice.",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " Please use ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/code-security\/configurations",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " instead.",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabotAlertsEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/dependabotAlertsEnabledForNewRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabotAlertsEnabledForNewRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/dependabotalertsenabledfornewrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/dependabotSecurityUpdatesEnabledForNewRepositories": {
+  "abstract" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Endpoint closing down notice.",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " Please use ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/code-security\/configurations",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " instead.",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabotSecurityUpdatesEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/dependabotSecurityUpdatesEnabledForNewRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependabotSecurityUpdatesEnabledForNewRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/dependabotsecurityupdatesenabledfornewrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/dependencyGraphEnabledForNewRepositories": {
+  "abstract" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Endpoint closing down notice.",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " Please use ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/code-security\/configurations",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " instead.",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependencyGraphEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/dependencyGraphEnabledForNewRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependencyGraphEnabledForNewRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/dependencygraphenabledfornewrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/deployKeysEnabledForRepositories": {
+  "abstract" : [
+    {
+      "text" : "Controls whether or not deploy keys may be added and used for repositories in the organization.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "deployKeysEnabledForRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/deployKeysEnabledForRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "deployKeysEnabledForRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/deploykeysenabledforrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/description": {
+  "abstract" : [
+    {
+      "text" : "The description of the company. The maximum size is 160 characters.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/description"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/email": {
+  "abstract" : [
+    {
+      "text" : "The publicly visible email address.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "email"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/email",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "email",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/email"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/hasOrganizationProjects": {
+  "abstract" : [
+    {
+      "text" : "Whether an organization can use organization projects.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hasOrganizationProjects"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/hasOrganizationProjects",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hasOrganizationProjects",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/hasorganizationprojects"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/hasRepositoryProjects": {
+  "abstract" : [
+    {
+      "text" : "Whether repositories that belong to the organization can use repository projects.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hasRepositoryProjects"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/hasRepositoryProjects",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hasRepositoryProjects",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/hasrepositoryprojects"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/init(billingEmail:company:email:twitterUsername:location:name:description:hasOrganizationProjects:hasRepositoryProjects:defaultRepositoryPermission:membersCanCreateRepositories:membersCanCreateInternalRepositories:membersCanCreatePrivateRepositories:membersCanCreatePublicRepositories:membersAllowedRepositoryCreationType:membersCanCreatePages:membersCanCreatePublicPages:membersCanCreatePrivatePages:membersCanForkPrivateRepositories:webCommitSignoffRequired:blog:advancedSecurityEnabledForNewRepositories:dependabotAlertsEnabledForNewRepositories:dependabotSecurityUpdatesEnabledForNewRepositories:dependencyGraphEnabledForNewRepositories:secretScanningEnabledForNewRepositories:secretScanningPushProtectionEnabledForNewRepositories:secretScanningPushProtectionCustomLinkEnabled:secretScanningPushProtectionCustomLink:deployKeysEnabledForRepositories:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "JsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "billingEmail"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "company"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "email"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "twitterUsername"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "location"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hasOrganizationProjects"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hasRepositoryProjects"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "defaultRepositoryPermission"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO",
+      "text" : "OrgsUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV027DefaultRepositoryPermissionK0O",
+      "text" : "DefaultRepositoryPermissionPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersCanCreateRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersCanCreateInternalRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersCanCreatePrivateRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersCanCreatePublicRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersAllowedRepositoryCreationType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO",
+      "text" : "OrgsUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV036MembersAllowedRepositoryCreationTypeK0O",
+      "text" : "MembersAllowedRepositoryCreationTypePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersCanCreatePages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersCanCreatePublicPages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersCanCreatePrivatePages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "membersCanForkPrivateRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "webCommitSignoffRequired"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "blog"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "advancedSecurityEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependabotAlertsEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependabotSecurityUpdatesEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependencyGraphEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningPushProtectionEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningPushProtectionCustomLinkEnabled"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secretScanningPushProtectionCustomLink"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "deployKeysEnabledForRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/init(billingEmail:company:email:twitterUsername:location:name:description:hasOrganizationProjects:hasRepositoryProjects:defaultRepositoryPermission:membersCanCreateRepositories:membersCanCreateInternalRepositories:membersCanCreatePrivateRepositories:membersCanCreatePublicRepositories:membersAllowedRepositoryCreationType:membersCanCreatePages:membersCanCreatePublicPages:membersCanCreatePrivatePages:membersCanForkPrivateRepositories:webCommitSignoffRequired:blog:advancedSecurityEnabledForNewRepositories:dependabotAlertsEnabledForNewRepositories:dependabotSecurityUpdatesEnabledForNewRepositories:dependencyGraphEnabledForNewRepositories:secretScanningEnabledForNewRepositories:secretScanningPushProtectionEnabledForNewRepositories:secretScanningPushProtectionCustomLinkEnabled:secretScanningPushProtectionCustomLink:deployKeysEnabledForRepositories:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(billingEmail:company:email:twitterUsername:location:name:description:hasOrganizationProjects:hasRepositoryProjects:defaultRepositoryPermission:membersCanCreateRepositories:membersCanCreateInternalRepositories:membersCanCreatePrivateRepositories:membersCanCreatePublicRepositories:membersAllowedRepositoryCreationType:membersCanCreatePages:membersCanCreatePublicPages:membersCanCreatePrivatePages:membersCanForkPrivateRepositories:webCommitSignoffRequired:blog:advancedSecurityEnabledForNewRepositories:dependabotAlertsEnabledForNewRepositories:dependabotSecurityUpdatesEnabledForNewRepositories:dependencyGraphEnabledForNewRepositories:secretScanningEnabledForNewRepositories:secretScanningPushProtectionEnabledForNewRepositories:secretScanningPushProtectionCustomLinkEnabled:secretScanningPushProtectionCustomLink:deployKeysEnabledForRepositories:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/init(billingemail:company:email:twitterusername:location:name:description:hasorganizationprojects:hasrepositoryprojects:defaultrepositorypermission:memberscancreaterepositories:memberscancreateinternalrepositories:memberscancreateprivaterep-9wah1"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/init(from:)"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/location": {
+  "abstract" : [
+    {
+      "text" : "The location.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "location"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/location",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "location",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/location"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersAllowedRepositoryCreationType": {
+  "abstract" : [
+    {
+      "text" : "Specifies which types of repositories non-admin organization members can create. ",
+      "type" : "text"
+    },
+    {
+      "code" : "private",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is only available to repositories that are part of an organization on GitHub Enterprise Cloud.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "Note:",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " This parameter is closing down and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in ",
+      "type" : "text"
+    },
+    {
+      "code" : "members_can_create_repositories",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". See the parameter deprecation notice in the operation description for details.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersAllowedRepositoryCreationType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO",
+      "text" : "OrgsUpdate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV",
+      "text" : "JsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO10OrgsUpdateO5InputV4BodyO11JsonPayloadV036MembersAllowedRepositoryCreationTypeK0O",
+      "text" : "MembersAllowedRepositoryCreationTypePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersAllowedRepositoryCreationType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersAllowedRepositoryCreationType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/membersallowedrepositorycreationtype"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersCanCreateInternalRepositories": {
+  "abstract" : [
+    {
+      "text" : "Whether organization members can create internal repositories, which are visible to all enterprise members. You can only allow members to create internal repositories if your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/github\/setting-up-and-managing-organizations-and-teams\/restricting-repository-creation-in-your-organization",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "” in the GitHub Help documentation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersCanCreateInternalRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreateInternalRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersCanCreateInternalRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/memberscancreateinternalrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersCanCreatePages": {
+  "abstract" : [
+    {
+      "text" : "Whether organization members can create GitHub Pages sites. Existing published sites will not be impacted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersCanCreatePages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePages",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersCanCreatePages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/memberscancreatepages"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersCanCreatePrivatePages": {
+  "abstract" : [
+    {
+      "text" : "Whether organization members can create private GitHub Pages sites. Existing published sites will not be impacted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersCanCreatePrivatePages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePrivatePages",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersCanCreatePrivatePages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/memberscancreateprivatepages"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersCanCreatePrivateRepositories": {
+  "abstract" : [
+    {
+      "text" : "Whether organization members can create private repositories, which are visible to organization members with permission. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/github\/setting-up-and-managing-organizations-and-teams\/restricting-repository-creation-in-your-organization",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "” in the GitHub Help documentation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersCanCreatePrivateRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePrivateRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersCanCreatePrivateRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/memberscancreateprivaterepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersCanCreatePublicPages": {
+  "abstract" : [
+    {
+      "text" : "Whether organization members can create public GitHub Pages sites. Existing published sites will not be impacted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersCanCreatePublicPages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePublicPages",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersCanCreatePublicPages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/memberscancreatepublicpages"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersCanCreatePublicRepositories": {
+  "abstract" : [
+    {
+      "text" : "Whether organization members can create public repositories, which are visible to anyone. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/github\/setting-up-and-managing-organizations-and-teams\/restricting-repository-creation-in-your-organization",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "” in the GitHub Help documentation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersCanCreatePublicRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreatePublicRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersCanCreatePublicRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/memberscancreatepublicrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersCanCreateRepositories": {
+  "abstract" : [
+    {
+      "text" : "Whether of non-admin organization members can create repositories. ",
+      "type" : "text"
+    },
+    {
+      "inlineContent" : [
+        {
+          "text" : "Note:",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " A parameter can override this parameter. See ",
+      "type" : "text"
+    },
+    {
+      "code" : "members_allowed_repository_creation_type",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in this table for details.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersCanCreateRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanCreateRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersCanCreateRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/memberscancreaterepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/membersCanForkPrivateRepositories": {
+  "abstract" : [
+    {
+      "text" : "Whether organization members can fork private organization repositories.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "membersCanForkPrivateRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/membersCanForkPrivateRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "membersCanForkPrivateRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/memberscanforkprivaterepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/name": {
+  "abstract" : [
+    {
+      "text" : "The shorthand name of the company.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/name"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/secretScanningEnabledForNewRepositories": {
+  "abstract" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Endpoint closing down notice.",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " Please use ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/code-security\/configurations",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " instead.",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secretScanningEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/secretScanningEnabledForNewRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "secretScanningEnabledForNewRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/secretscanningenabledfornewrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/secretScanningPushProtectionCustomLink": {
+  "abstract" : [
+    {
+      "text" : "If ",
+      "type" : "text"
+    },
+    {
+      "code" : "secret_scanning_push_protection_custom_link_enabled",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is true, the URL that will be displayed to contributors who are blocked from pushing a secret.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secretScanningPushProtectionCustomLink"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/secretScanningPushProtectionCustomLink",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "secretScanningPushProtectionCustomLink",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/secretscanningpushprotectioncustomlink"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/secretScanningPushProtectionCustomLinkEnabled": {
+  "abstract" : [
+    {
+      "text" : "Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secretScanningPushProtectionCustomLinkEnabled"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/secretScanningPushProtectionCustomLinkEnabled",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "secretScanningPushProtectionCustomLinkEnabled",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/secretscanningpushprotectioncustomlinkenabled"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/secretScanningPushProtectionEnabledForNewRepositories": {
+  "abstract" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Endpoint closing down notice.",
+          "type" : "text"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : " Please use ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/code-security\/configurations",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " instead.",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secretScanningPushProtectionEnabledForNewRepositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/secretScanningPushProtectionEnabledForNewRepositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "secretScanningPushProtectionEnabledForNewRepositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/secretscanningpushprotectionenabledfornewrepositories"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/twitterUsername": {
+  "abstract" : [
+    {
+      "text" : "The Twitter username of the company.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "twitterUsername"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/twitterUsername",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "twitterUsername",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/twitterusername"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/OrgsUpdate/Input/Body-swift.enum/JsonPayload/webCommitSignoffRequired": {
+  "abstract" : [
+    {
+      "text" : "Whether contributors to organization repositories are required to sign off on commits they make through GitHub’s web interface.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "webCommitSignoffRequired"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/OrgsUpdate\/Input\/Body-swift.enum\/JsonPayload\/webCommitSignoffRequired",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "webCommitSignoffRequired",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgsupdate\/input\/body-swift.enum\/jsonpayload\/webcommitsignoffrequired"
+},
+"doc://GitHubRestAPIOrgs/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization": {
+  "identifier" : "https:\/\/docs.github.com\/github\/setting-up-and-managing-organizations-and-teams\/restricting-repository-creation-in-your-organization",
+  "title" : "Restricting repository creation in your organization",
+  "titleInlineContent" : [
+    {
+      "text" : "Restricting repository creation in your organization",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/github\/setting-up-and-managing-organizations-and-teams\/restricting-repository-creation-in-your-organization"
+},
+"https://docs.github.com/rest/code-security/configurations": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/code-security\/configurations",
+  "title" : "code security configurations",
+  "titleInlineContent" : [
+    {
+      "text" : "code security configurations",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/code-security\/configurations"
+}
+}
+}

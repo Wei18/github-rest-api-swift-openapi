@@ -1,0 +1,458 @@
+{
+  "abstract" : [
+    {
+      "text" : "Response",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate\/Output\/ok(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO6OutputO2okyA2G2OkVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ok"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO",
+        "text" : "GitignoreGetTemplate"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO6OutputO",
+        "text" : "Output"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO6OutputO2OkV",
+        "text" : "Ok"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGitignore"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/gitignore\/Types.swift#L360"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.GitignoreGetTemplate.Output.ok(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ok"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO",
+              "text" : "GitignoreGetTemplate"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO6OutputO",
+              "text" : "Output"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate\/Output\/Ok-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO6OutputO2OkV",
+              "text" : "Ok"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/gitignore\/templates\/{name}\/get(gitignore\/get-template)\/responses\/200",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "200 ok",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigitignore\/operations\/gitignoregettemplate\/output\/ok(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGitignore",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations/GitignoreGetTemplate": {
+  "abstract" : [
+    {
+      "text" : "Get a gitignore template",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "GitignoreGetTemplate"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "GitignoreGetTemplate"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitignoreGetTemplate",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations\/gitignoregettemplate"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations/GitignoreGetTemplate/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitignoreGetTemplate.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations\/gitignoregettemplate\/output"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations/GitignoreGetTemplate/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.GitignoreGetTemplate.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations\/gitignoregettemplate\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations/GitignoreGetTemplate/Output/ok(_:)": {
+  "abstract" : [
+    {
+      "text" : "Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ok"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO",
+      "text" : "GitignoreGetTemplate"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10OperationsO20GitignoreGetTemplateO6OutputO2OkV",
+      "text" : "Ok"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/GitignoreGetTemplate\/Output\/ok(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.GitignoreGetTemplate.Output.ok(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations\/gitignoregettemplate\/output\/ok(_:)"
+}
+}
+}

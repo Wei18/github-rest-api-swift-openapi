@@ -1,0 +1,1478 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE8OverviewV16ResourcesPayloadV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ResourcesPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRate_Limit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ResourcesPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/rate-limit\/Types.swift#L166"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ResourcesPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/rate-limit-overview\/resources",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/Se",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SE",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SQ",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SH",
+        "doc:\/\/GitHubRestAPIRate_Limit\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/init(core:graphql:search:codeSearch:sourceImport:integrationManifest:codeScanningUpload:actionsRunnerRegistration:scim:dependencySnapshots:codeScanningAutofix:)",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/actionsRunnerRegistration",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/codeScanningAutofix",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/codeScanningUpload",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/codeSearch",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/core",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/dependencySnapshots",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/graphql",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/integrationManifest",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/scim",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/search",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/sourceImport"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRate_Limit/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRate_Limit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview": {
+  "abstract" : [
+    {
+      "text" : "Rate Limit Overview",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RateLimitOverview"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RateLimitOverview"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ResourcesPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ResourcesPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/actionsRunnerRegistration": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "actionsRunnerRegistration"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/actionsRunnerRegistration",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "actionsRunnerRegistration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/actionsrunnerregistration"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/codeScanningAutofix": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codeScanningAutofix"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/codeScanningAutofix",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codeScanningAutofix",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codescanningautofix"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/codeScanningUpload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codeScanningUpload"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/codeScanningUpload",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codeScanningUpload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codescanningupload"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/codeSearch": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codeSearch"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/codeSearch",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "codeSearch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codesearch"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/core": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "core"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/core",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "core",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/core"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/dependencySnapshots": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependencySnapshots"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/dependencySnapshots",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependencySnapshots",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/dependencysnapshots"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/graphql": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "graphql"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/graphql",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "graphql",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/graphql"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/init(core:graphql:search:codeSearch:sourceImport:integrationManifest:codeScanningUpload:actionsRunnerRegistration:scim:dependencySnapshots:codeScanningAutofix:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "ResourcesPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "core"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "graphql"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "search"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "codeSearch"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sourceImport"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "integrationManifest"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "codeScanningUpload"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "actionsRunnerRegistration"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "scim"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "dependencySnapshots"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "codeScanningAutofix"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/init(core:graphql:search:codeSearch:sourceImport:integrationManifest:codeScanningUpload:actionsRunnerRegistration:scim:dependencySnapshots:codeScanningAutofix:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(core:graphql:search:codeSearch:sourceImport:integrationManifest:codeScanningUpload:actionsRunnerRegistration:scim:dependencySnapshots:codeScanningAutofix:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/init(core:graphql:search:codesearch:sourceimport:integrationmanifest:codescanningupload:actionsrunnerregistration:scim:dependencysnapshots:codescanningautofix:)"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/init(from:)"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/integrationManifest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "integrationManifest"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/integrationManifest",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "integrationManifest",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/integrationmanifest"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/scim": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scim"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/scim",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "scim",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/scim"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/search": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/search",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/search"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/sourceImport": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sourceImport"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE0V",
+      "text" : "RateLimit"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/sourceImport",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sourceImport",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/sourceimport"
+},
+"doc://GitHubRestAPIRate_Limit/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

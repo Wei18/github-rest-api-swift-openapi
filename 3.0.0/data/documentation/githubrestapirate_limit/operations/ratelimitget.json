@@ -1,0 +1,886 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get rate limit status for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIRate_Limit10OperationsO04RateE3GetO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "RateLimitGet"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRate_Limit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "RateLimitGet"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/rate-limit\/Types.swift#L337"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.RateLimitGet"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "RateLimitGet"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!NOTE]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "Accessing this endpoint does not count against your REST API rate limit.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Some categories of endpoints have custom rate limits that are separate from the rate limit governing the other REST API endpoints. For this reason, the API response categorizes your rate limit. Under ",
+              "type" : "text"
+            },
+            {
+              "code" : "resources",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", you’ll see objects relating to different categories:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "core",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for all non-search-related resources in the REST API.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "search",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for the REST API for searching (excluding code searches). For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/search\/search",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "code_search",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for the REST API for searching code. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#search-code",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "graphql",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for the GraphQL API. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/graphql\/overview\/resource-limitations#rate-limit",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "integration_manifest",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for the ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "POST \/app-manifests\/{code}\/conversions",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " operation. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/apps\/creating-github-apps\/setting-up-a-github-app\/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "dependency_snapshots",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for submitting snapshots to the dependency graph. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/dependency-graph",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "code_scanning_upload",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for uploading SARIF results to code scanning. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/code-security\/code-scanning\/integrating-with-code-scanning\/uploading-a-sarif-file-to-github",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "actions_runner_registration",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object provides your rate limit status for registering self-hosted runners in GitHub Actions. For more information, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/actions\/self-hosted-runners",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "The ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "source_import",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " object is no longer in use for any API endpoints, and it will be removed in the next API version. For more information about API versions, see “",
+                      "type" : "text"
+                    },
+                    {
+                      "identifier" : "https:\/\/docs.github.com\/rest\/about-the-rest-api\/api-versions",
+                      "isActive" : true,
+                      "type" : "reference"
+                    },
+                    {
+                      "text" : ".”",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!NOTE]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "The ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "rate",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " object is closing down. If you’re writing new API client code or updating existing code, you should use the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "core",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " object instead of the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "rate",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " object. The ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "core",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " object contains the same information that is present in the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "rate",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " object.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/rate_limit",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/rate_limit\/get(rate-limit\/get)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirate_limit\/operations\/ratelimitget"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRate_Limit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations/RateLimitGet": {
+  "abstract" : [
+    {
+      "text" : "Get rate limit status for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RateLimitGet"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RateLimitGet"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.RateLimitGet",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations\/ratelimitget"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations/RateLimitGet/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.RateLimitGet.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations\/ratelimitget\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations/RateLimitGet/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.RateLimitGet.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations\/ratelimitget\/input"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations/RateLimitGet/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.RateLimitGet.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations\/ratelimitget\/output"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Operations/RateLimitGet/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Operations\/RateLimitGet\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/operations\/ratelimitget\/id"
+},
+"https://docs.github.com/apps/creating-github-apps/setting-up-a-github-app/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration": {
+  "identifier" : "https:\/\/docs.github.com\/apps\/creating-github-apps\/setting-up-a-github-app\/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration",
+  "title" : "Creating a GitHub App from a manifest",
+  "titleInlineContent" : [
+    {
+      "text" : "Creating a GitHub App from a manifest",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/apps\/creating-github-apps\/setting-up-a-github-app\/creating-a-github-app-from-a-manifest#3-you-exchange-the-temporary-code-to-retrieve-the-app-configuration"
+},
+"https://docs.github.com/code-security/code-scanning/integrating-with-code-scanning/uploading-a-sarif-file-to-github": {
+  "identifier" : "https:\/\/docs.github.com\/code-security\/code-scanning\/integrating-with-code-scanning\/uploading-a-sarif-file-to-github",
+  "title" : "Uploading a SARIF file to GitHub",
+  "titleInlineContent" : [
+    {
+      "text" : "Uploading a SARIF file to GitHub",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/code-security\/code-scanning\/integrating-with-code-scanning\/uploading-a-sarif-file-to-github"
+},
+"https://docs.github.com/graphql/overview/resource-limitations#rate-limit": {
+  "identifier" : "https:\/\/docs.github.com\/graphql\/overview\/resource-limitations#rate-limit",
+  "title" : "Resource limitations",
+  "titleInlineContent" : [
+    {
+      "text" : "Resource limitations",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/graphql\/overview\/resource-limitations#rate-limit"
+},
+"https://docs.github.com/rest/about-the-rest-api/api-versions": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/about-the-rest-api\/api-versions",
+  "title" : "API Versions",
+  "titleInlineContent" : [
+    {
+      "text" : "API Versions",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/about-the-rest-api\/api-versions"
+},
+"https://docs.github.com/rest/actions/self-hosted-runners": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/actions\/self-hosted-runners",
+  "title" : "Self-hosted runners",
+  "titleInlineContent" : [
+    {
+      "text" : "Self-hosted runners",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/actions\/self-hosted-runners"
+},
+"https://docs.github.com/rest/dependency-graph": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/dependency-graph",
+  "title" : "Dependency graph",
+  "titleInlineContent" : [
+    {
+      "text" : "Dependency graph",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/dependency-graph"
+},
+"https://docs.github.com/rest/search/search": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/search\/search",
+  "title" : "Search",
+  "titleInlineContent" : [
+    {
+      "text" : "Search",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/search\/search"
+},
+"https://docs.github.com/rest/search/search#search-code": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#search-code",
+  "title" : "Search code",
+  "titleInlineContent" : [
+    {
+      "text" : "Search code",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/search\/search#search-code"
+}
+}
+}

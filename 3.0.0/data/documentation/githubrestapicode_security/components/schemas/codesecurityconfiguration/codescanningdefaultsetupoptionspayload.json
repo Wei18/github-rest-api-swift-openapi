@@ -1,0 +1,708 @@
+{
+  "abstract" : [
+    {
+      "text" : "Feature options for code scanning default setup",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H34ScanningDefaultSetupOptionsPayloadV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "CodeScanningDefaultSetupOptionsPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Security"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "CodeScanningDefaultSetupOptionsPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/code-security\/Types.swift#L1053"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.CodeSecurityConfiguration.CodeScanningDefaultSetupOptionsPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "CodeScanningDefaultSetupOptionsPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/code-security-configuration\/code_scanning_default_setup_options",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/Se",
+        "doc:\/\/GitHubRestAPICode_Security\/SE",
+        "doc:\/\/GitHubRestAPICode_Security\/SQ",
+        "doc:\/\/GitHubRestAPICode_Security\/SH",
+        "doc:\/\/GitHubRestAPICode_Security\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/init(from:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/init(runnerType:runnerLabel:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/runnerLabel",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/runnerType"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/CodingKeys",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/RunnerTypePayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Security/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Security",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration": {
+  "abstract" : [
+    {
+      "text" : "A code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodeSecurityConfiguration"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodeSecurityConfiguration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload": {
+  "abstract" : [
+    {
+      "text" : "Feature options for code scanning default setup",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodeScanningDefaultSetupOptionsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodeScanningDefaultSetupOptionsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.CodeScanningDefaultSetupOptionsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.CodeScanningDefaultSetupOptionsPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload\/codingkeys"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload\/equatable-implementations"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload/RunnerTypePayload": {
+  "abstract" : [
+    {
+      "text" : "Whether to use labeled runners or standard GitHub runners.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RunnerTypePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/RunnerTypePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RunnerTypePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.CodeSecurityConfiguration.CodeScanningDefaultSetupOptionsPayload.RunnerTypePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload\/runnertypepayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload\/init(from:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload/init(runnerType:runnerLabel:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "CodeScanningDefaultSetupOptionsPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "runnerType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H34ScanningDefaultSetupOptionsPayloadV",
+      "text" : "CodeScanningDefaultSetupOptionsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H34ScanningDefaultSetupOptionsPayloadV010RunnerTypeN0O",
+      "text" : "RunnerTypePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "runnerLabel"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/init(runnerType:runnerLabel:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(runnerType:runnerLabel:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload\/init(runnertype:runnerlabel:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload/runnerLabel": {
+  "abstract" : [
+    {
+      "text" : "The label of the runner to use for code scanning when runner_type is ‘labeled’.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "runnerLabel"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/runnerLabel",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "runnerLabel",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload\/runnerlabel"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Components/Schemas/CodeSecurityConfiguration/CodeScanningDefaultSetupOptionsPayload/runnerType": {
+  "abstract" : [
+    {
+      "text" : "Whether to use labeled runners or standard GitHub runners.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "runnerType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV",
+      "text" : "CodeSecurityConfiguration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H34ScanningDefaultSetupOptionsPayloadV",
+      "text" : "CodeScanningDefaultSetupOptionsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10ComponentsO7SchemasO04CodeE13ConfigurationV0H34ScanningDefaultSetupOptionsPayloadV010RunnerTypeN0O",
+      "text" : "RunnerTypePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Components\/Schemas\/CodeSecurityConfiguration\/CodeScanningDefaultSetupOptionsPayload\/runnerType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "runnerType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/components\/schemas\/codesecurityconfiguration\/codescanningdefaultsetupoptionspayload\/runnertype"
+},
+"doc://GitHubRestAPICode_Security/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

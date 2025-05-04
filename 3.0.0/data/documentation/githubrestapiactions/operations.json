@@ -1,0 +1,5356 @@
+{
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIActions10OperationsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActions"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/actions\/Types.swift#L10852"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Operations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddCustomLabelsToSelfHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddCustomLabelsToSelfHostedRunnerForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddSelectedRepoToOrgSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddSelectedRepoToOrgVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddSelfHostedRunnerToGroupForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsApproveWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCancelWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateEnvironmentVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateOrUpdateEnvironmentSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateOrUpdateOrgSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateOrUpdateRepoSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateOrgVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRegistrationTokenForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRegistrationTokenForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRemoveTokenForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRemoveTokenForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRepoVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateSelfHostedRunnerGroupForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateWorkflowDispatch",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteActionsCacheById",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteActionsCacheByKey",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteArtifact",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteEnvironmentSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteEnvironmentVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteOrgSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteOrgVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteRepoSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteRepoVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteSelfHostedRunnerFromOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteSelfHostedRunnerFromRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteSelfHostedRunnerGroupFromOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteWorkflowRunLogs",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDisableSelectedRepositoryGithubActionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDisableWorkflow",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDownloadArtifact",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDownloadJobLogsForWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDownloadWorkflowRunAttemptLogs",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDownloadWorkflowRunLogs",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsEnableSelectedRepositoryGithubActionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsEnableWorkflow",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsForceCancelWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGenerateRunnerJitconfigForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGenerateRunnerJitconfigForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetActionsCacheList",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetActionsCacheUsage",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetActionsCacheUsageByRepoForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetActionsCacheUsageForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetAllowedActionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetAllowedActionsRepository",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetArtifact",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetCustomOidcSubClaimForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetEnvironmentPublicKey",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetEnvironmentSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetEnvironmentVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetGithubActionsDefaultWorkflowPermissionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetGithubActionsDefaultWorkflowPermissionsRepository",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetGithubActionsPermissionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetGithubActionsPermissionsRepository",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersGithubOwnedImagesForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersLimitsForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersMachineSpecsForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersPartnerImagesForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersPlatformsForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetJobForWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetOrgPublicKey",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetOrgSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetOrgVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetPendingDeploymentsForRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetRepoPublicKey",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetRepoSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetRepoVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetReviewsForRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetSelfHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetSelfHostedRunnerForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetSelfHostedRunnerGroupForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflow",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowAccessToRepository",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowRunAttempt",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowRunUsage",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowUsage",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListArtifactsForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListEnvironmentSecrets",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListEnvironmentVariables",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListGithubHostedRunnersInGroupForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListHostedRunnersForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListJobsForWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListJobsForWorkflowRunAttempt",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListLabelsForSelfHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListLabelsForSelfHostedRunnerForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListOrgSecrets",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListOrgVariables",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoAccessToSelfHostedRunnerGroupInOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoOrganizationSecrets",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoOrganizationVariables",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoSecrets",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoVariables",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoWorkflows",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRunnerApplicationsForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRunnerApplicationsForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelectedReposForOrgSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelectedReposForOrgVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelectedRepositoriesEnabledGithubActionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelfHostedRunnerGroupsForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelfHostedRunnersForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelfHostedRunnersForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelfHostedRunnersInGroupForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListWorkflowRunArtifacts",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListWorkflowRuns",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListWorkflowRunsForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReRunJobForWorkflowRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReRunWorkflow",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReRunWorkflowFailedJobs",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveCustomLabelFromSelfHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveCustomLabelFromSelfHostedRunnerForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveSelectedRepoFromOrgSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveSelectedRepoFromOrgVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveSelfHostedRunnerFromGroupForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReviewCustomGatesForRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReviewPendingDeploymentsForRun",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetAllowedActionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetAllowedActionsRepository",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetCustomLabelsForSelfHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetCustomLabelsForSelfHostedRunnerForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetCustomOidcSubClaimForRepo",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetGithubActionsDefaultWorkflowPermissionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetGithubActionsDefaultWorkflowPermissionsRepository",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetGithubActionsPermissionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetGithubActionsPermissionsRepository",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetSelectedReposForOrgSecret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetSelectedReposForOrgVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetSelfHostedRunnersInGroupForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetWorkflowAccessToRepository",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateEnvironmentVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateHostedRunnerForOrg",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateOrgVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateRepoVariable",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateSelfHostedRunnerGroupForOrg"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactions\/operations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsAddCustomLabelsToSelfHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Add custom labels to a self-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddCustomLabelsToSelfHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddCustomLabelsToSelfHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddCustomLabelsToSelfHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsaddcustomlabelstoselfhostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsAddCustomLabelsToSelfHostedRunnerForRepo": {
+  "abstract" : [
+    {
+      "text" : "Add custom labels to a self-hosted runner for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddCustomLabelsToSelfHostedRunnerForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddCustomLabelsToSelfHostedRunnerForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddCustomLabelsToSelfHostedRunnerForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsAddCustomLabelsToSelfHostedRunnerForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsaddcustomlabelstoselfhostedrunnerforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg": {
+  "abstract" : [
+    {
+      "text" : "Add repository access to a self-hosted runner group in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsaddrepoaccesstoselfhostedrunnergroupinorg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsAddSelectedRepoToOrgSecret": {
+  "abstract" : [
+    {
+      "text" : "Add selected repository to an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddSelectedRepoToOrgSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddSelectedRepoToOrgSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddSelectedRepoToOrgSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsAddSelectedRepoToOrgSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsaddselectedrepotoorgsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsAddSelectedRepoToOrgVariable": {
+  "abstract" : [
+    {
+      "text" : "Add selected repository to an organization variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddSelectedRepoToOrgVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddSelectedRepoToOrgVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddSelectedRepoToOrgVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsAddSelectedRepoToOrgVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsaddselectedrepotoorgvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsAddSelfHostedRunnerToGroupForOrg": {
+  "abstract" : [
+    {
+      "text" : "Add a self-hosted runner to a group for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddSelfHostedRunnerToGroupForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsAddSelfHostedRunnerToGroupForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsAddSelfHostedRunnerToGroupForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsAddSelfHostedRunnerToGroupForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsaddselfhostedrunnertogroupfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsApproveWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "Approve a workflow run for a fork pull request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsApproveWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsApproveWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsApproveWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsApproveWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsapproveworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCancelWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "Cancel a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCancelWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCancelWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCancelWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCancelWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscancelworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateEnvironmentVariable": {
+  "abstract" : [
+    {
+      "text" : "Create an environment variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateEnvironmentVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateEnvironmentVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateEnvironmentVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateEnvironmentVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateenvironmentvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Create a GitHub-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreatehostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateOrUpdateEnvironmentSecret": {
+  "abstract" : [
+    {
+      "text" : "Create or update an environment secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateOrUpdateEnvironmentSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateOrUpdateEnvironmentSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateOrUpdateEnvironmentSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateOrUpdateEnvironmentSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateorupdateenvironmentsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateOrUpdateOrgSecret": {
+  "abstract" : [
+    {
+      "text" : "Create or update an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateOrUpdateOrgSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateOrUpdateOrgSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateOrUpdateOrgSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateOrUpdateOrgSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateorupdateorgsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateOrUpdateRepoSecret": {
+  "abstract" : [
+    {
+      "text" : "Create or update a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateOrUpdateRepoSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateOrUpdateRepoSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateOrUpdateRepoSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateOrUpdateRepoSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateorupdatereposecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateOrgVariable": {
+  "abstract" : [
+    {
+      "text" : "Create an organization variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateOrgVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateOrgVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateOrgVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateOrgVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateorgvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateRegistrationTokenForOrg": {
+  "abstract" : [
+    {
+      "text" : "Create a registration token for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRegistrationTokenForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRegistrationTokenForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRegistrationTokenForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateRegistrationTokenForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateregistrationtokenfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateRegistrationTokenForRepo": {
+  "abstract" : [
+    {
+      "text" : "Create a registration token for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRegistrationTokenForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRegistrationTokenForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRegistrationTokenForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateRegistrationTokenForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateregistrationtokenforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateRemoveTokenForOrg": {
+  "abstract" : [
+    {
+      "text" : "Create a remove token for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRemoveTokenForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRemoveTokenForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRemoveTokenForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateRemoveTokenForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateremovetokenfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateRemoveTokenForRepo": {
+  "abstract" : [
+    {
+      "text" : "Create a remove token for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRemoveTokenForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRemoveTokenForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRemoveTokenForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateRemoveTokenForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateremovetokenforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateRepoVariable": {
+  "abstract" : [
+    {
+      "text" : "Create a repository variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRepoVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateRepoVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateRepoVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateRepoVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreaterepovariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateSelfHostedRunnerGroupForOrg": {
+  "abstract" : [
+    {
+      "text" : "Create a self-hosted runner group for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateSelfHostedRunnerGroupForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateSelfHostedRunnerGroupForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateSelfHostedRunnerGroupForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateSelfHostedRunnerGroupForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateselfhostedrunnergroupfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsCreateWorkflowDispatch": {
+  "abstract" : [
+    {
+      "text" : "Create a workflow dispatch event",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateWorkflowDispatch"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsCreateWorkflowDispatch",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsCreateWorkflowDispatch"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsCreateWorkflowDispatch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionscreateworkflowdispatch"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteActionsCacheById": {
+  "abstract" : [
+    {
+      "text" : "Delete a GitHub Actions cache for a repository (using a cache ID)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteActionsCacheById"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteActionsCacheById",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteActionsCacheById"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteActionsCacheById",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteactionscachebyid"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteActionsCacheByKey": {
+  "abstract" : [
+    {
+      "text" : "Delete GitHub Actions caches for a repository (using a cache key)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteActionsCacheByKey"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteActionsCacheByKey",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteActionsCacheByKey"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteActionsCacheByKey",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteactionscachebykey"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteArtifact": {
+  "abstract" : [
+    {
+      "text" : "Delete an artifact",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteArtifact"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteArtifact",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteArtifact"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteArtifact",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteartifact"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteEnvironmentSecret": {
+  "abstract" : [
+    {
+      "text" : "Delete an environment secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteEnvironmentSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteEnvironmentSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteEnvironmentSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteEnvironmentSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteenvironmentsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteEnvironmentVariable": {
+  "abstract" : [
+    {
+      "text" : "Delete an environment variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteEnvironmentVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteEnvironmentVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteEnvironmentVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteEnvironmentVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteenvironmentvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Delete a GitHub-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeletehostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteOrgSecret": {
+  "abstract" : [
+    {
+      "text" : "Delete an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteOrgSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteOrgSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteOrgSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteOrgSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteorgsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteOrgVariable": {
+  "abstract" : [
+    {
+      "text" : "Delete an organization variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteOrgVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteOrgVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteOrgVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteOrgVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteorgvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteRepoSecret": {
+  "abstract" : [
+    {
+      "text" : "Delete a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteRepoSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteRepoSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteRepoSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteRepoSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeletereposecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteRepoVariable": {
+  "abstract" : [
+    {
+      "text" : "Delete a repository variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteRepoVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteRepoVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteRepoVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteRepoVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleterepovariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteSelfHostedRunnerFromOrg": {
+  "abstract" : [
+    {
+      "text" : "Delete a self-hosted runner from an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteSelfHostedRunnerFromOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteSelfHostedRunnerFromOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteSelfHostedRunnerFromOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteSelfHostedRunnerFromOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteselfhostedrunnerfromorg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteSelfHostedRunnerFromRepo": {
+  "abstract" : [
+    {
+      "text" : "Delete a self-hosted runner from a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteSelfHostedRunnerFromRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteSelfHostedRunnerFromRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteSelfHostedRunnerFromRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteSelfHostedRunnerFromRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteselfhostedrunnerfromrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteSelfHostedRunnerGroupFromOrg": {
+  "abstract" : [
+    {
+      "text" : "Delete a self-hosted runner group from an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteSelfHostedRunnerGroupFromOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteSelfHostedRunnerGroupFromOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteSelfHostedRunnerGroupFromOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteSelfHostedRunnerGroupFromOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteselfhostedrunnergroupfromorg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "Delete a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDeleteWorkflowRunLogs": {
+  "abstract" : [
+    {
+      "text" : "Delete workflow run logs",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteWorkflowRunLogs"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDeleteWorkflowRunLogs",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDeleteWorkflowRunLogs"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDeleteWorkflowRunLogs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdeleteworkflowrunlogs"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDisableSelectedRepositoryGithubActionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Disable a selected repository for GitHub Actions in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDisableSelectedRepositoryGithubActionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDisableSelectedRepositoryGithubActionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDisableSelectedRepositoryGithubActionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDisableSelectedRepositoryGithubActionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdisableselectedrepositorygithubactionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDisableWorkflow": {
+  "abstract" : [
+    {
+      "text" : "Disable a workflow",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDisableWorkflow"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDisableWorkflow",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDisableWorkflow"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDisableWorkflow",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdisableworkflow"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDownloadArtifact": {
+  "abstract" : [
+    {
+      "text" : "Download an artifact",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDownloadArtifact"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDownloadArtifact",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDownloadArtifact"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDownloadArtifact",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdownloadartifact"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDownloadJobLogsForWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "Download job logs for a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDownloadJobLogsForWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDownloadJobLogsForWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDownloadJobLogsForWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDownloadJobLogsForWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdownloadjoblogsforworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDownloadWorkflowRunAttemptLogs": {
+  "abstract" : [
+    {
+      "text" : "Download workflow run attempt logs",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDownloadWorkflowRunAttemptLogs"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDownloadWorkflowRunAttemptLogs",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDownloadWorkflowRunAttemptLogs"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDownloadWorkflowRunAttemptLogs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdownloadworkflowrunattemptlogs"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsDownloadWorkflowRunLogs": {
+  "abstract" : [
+    {
+      "text" : "Download workflow run logs",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDownloadWorkflowRunLogs"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsDownloadWorkflowRunLogs",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsDownloadWorkflowRunLogs"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsDownloadWorkflowRunLogs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsdownloadworkflowrunlogs"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsEnableSelectedRepositoryGithubActionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Enable a selected repository for GitHub Actions in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsEnableSelectedRepositoryGithubActionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsEnableSelectedRepositoryGithubActionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsEnableSelectedRepositoryGithubActionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsEnableSelectedRepositoryGithubActionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsenableselectedrepositorygithubactionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsEnableWorkflow": {
+  "abstract" : [
+    {
+      "text" : "Enable a workflow",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsEnableWorkflow"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsEnableWorkflow",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsEnableWorkflow"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsEnableWorkflow",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsenableworkflow"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsForceCancelWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "Force cancel a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsForceCancelWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsForceCancelWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsForceCancelWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsForceCancelWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsforcecancelworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGenerateRunnerJitconfigForOrg": {
+  "abstract" : [
+    {
+      "text" : "Create configuration for a just-in-time runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGenerateRunnerJitconfigForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGenerateRunnerJitconfigForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGenerateRunnerJitconfigForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGenerateRunnerJitconfigForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgeneraterunnerjitconfigfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGenerateRunnerJitconfigForRepo": {
+  "abstract" : [
+    {
+      "text" : "Create configuration for a just-in-time runner for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGenerateRunnerJitconfigForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGenerateRunnerJitconfigForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGenerateRunnerJitconfigForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGenerateRunnerJitconfigForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgeneraterunnerjitconfigforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetActionsCacheList": {
+  "abstract" : [
+    {
+      "text" : "List GitHub Actions caches for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetActionsCacheList"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetActionsCacheList",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetActionsCacheList"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetActionsCacheList",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetactionscachelist"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetActionsCacheUsage": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Actions cache usage for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetActionsCacheUsage"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetActionsCacheUsage",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetActionsCacheUsage"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetActionsCacheUsage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetactionscacheusage"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetActionsCacheUsageByRepoForOrg": {
+  "abstract" : [
+    {
+      "text" : "List repositories with GitHub Actions cache usage for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetActionsCacheUsageByRepoForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetActionsCacheUsageByRepoForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetActionsCacheUsageByRepoForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetActionsCacheUsageByRepoForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetactionscacheusagebyrepofororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetActionsCacheUsageForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Actions cache usage for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetActionsCacheUsageForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetActionsCacheUsageForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetActionsCacheUsageForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetActionsCacheUsageForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetactionscacheusagefororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetAllowedActionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Get allowed actions and reusable workflows for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetAllowedActionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetAllowedActionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetAllowedActionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetAllowedActionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetallowedactionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetAllowedActionsRepository": {
+  "abstract" : [
+    {
+      "text" : "Get allowed actions and reusable workflows for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetAllowedActionsRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetAllowedActionsRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetAllowedActionsRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetAllowedActionsRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetallowedactionsrepository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetArtifact": {
+  "abstract" : [
+    {
+      "text" : "Get an artifact",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetArtifact"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetArtifact",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetArtifact"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetArtifact",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetartifact"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetCustomOidcSubClaimForRepo": {
+  "abstract" : [
+    {
+      "text" : "Get the customization template for an OIDC subject claim for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetCustomOidcSubClaimForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetCustomOidcSubClaimForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetCustomOidcSubClaimForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetCustomOidcSubClaimForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetcustomoidcsubclaimforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetEnvironmentPublicKey": {
+  "abstract" : [
+    {
+      "text" : "Get an environment public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetEnvironmentPublicKey"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetEnvironmentPublicKey",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetEnvironmentPublicKey"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetEnvironmentPublicKey",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetenvironmentpublickey"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetEnvironmentSecret": {
+  "abstract" : [
+    {
+      "text" : "Get an environment secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetEnvironmentSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetEnvironmentSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetEnvironmentSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetEnvironmentSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetenvironmentsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetEnvironmentVariable": {
+  "abstract" : [
+    {
+      "text" : "Get an environment variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetEnvironmentVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetEnvironmentVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetEnvironmentVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetEnvironmentVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetenvironmentvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetGithubActionsDefaultWorkflowPermissionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Get default workflow permissions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetGithubActionsDefaultWorkflowPermissionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetGithubActionsDefaultWorkflowPermissionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetGithubActionsDefaultWorkflowPermissionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetGithubActionsDefaultWorkflowPermissionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetgithubactionsdefaultworkflowpermissionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetGithubActionsDefaultWorkflowPermissionsRepository": {
+  "abstract" : [
+    {
+      "text" : "Get default workflow permissions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetGithubActionsDefaultWorkflowPermissionsRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetGithubActionsDefaultWorkflowPermissionsRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetGithubActionsDefaultWorkflowPermissionsRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetGithubActionsDefaultWorkflowPermissionsRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetgithubactionsdefaultworkflowpermissionsrepository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetGithubActionsPermissionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Actions permissions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetGithubActionsPermissionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetGithubActionsPermissionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetGithubActionsPermissionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetGithubActionsPermissionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetgithubactionspermissionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetGithubActionsPermissionsRepository": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Actions permissions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetGithubActionsPermissionsRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetGithubActionsPermissionsRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetGithubActionsPermissionsRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetGithubActionsPermissionsRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetgithubactionspermissionsrepository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get a GitHub-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgethostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetHostedRunnersGithubOwnedImagesForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub-owned images for GitHub-hosted runners in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersGithubOwnedImagesForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersGithubOwnedImagesForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersGithubOwnedImagesForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetHostedRunnersGithubOwnedImagesForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgethostedrunnersgithubownedimagesfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetHostedRunnersLimitsForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get limits on GitHub-hosted runners for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersLimitsForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersLimitsForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersLimitsForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetHostedRunnersLimitsForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgethostedrunnerslimitsfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetHostedRunnersMachineSpecsForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub-hosted runners machine specs for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersMachineSpecsForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersMachineSpecsForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersMachineSpecsForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetHostedRunnersMachineSpecsForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgethostedrunnersmachinespecsfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetHostedRunnersPartnerImagesForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get partner images for GitHub-hosted runners in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersPartnerImagesForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersPartnerImagesForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersPartnerImagesForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetHostedRunnersPartnerImagesForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgethostedrunnerspartnerimagesfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetHostedRunnersPlatformsForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get platforms for GitHub-hosted runners in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersPlatformsForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetHostedRunnersPlatformsForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetHostedRunnersPlatformsForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetHostedRunnersPlatformsForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgethostedrunnersplatformsfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetJobForWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "Get a job for a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetJobForWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetJobForWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetJobForWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetJobForWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetjobforworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetOrgPublicKey": {
+  "abstract" : [
+    {
+      "text" : "Get an organization public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetOrgPublicKey"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetOrgPublicKey",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetOrgPublicKey"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetOrgPublicKey",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetorgpublickey"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetOrgSecret": {
+  "abstract" : [
+    {
+      "text" : "Get an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetOrgSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetOrgSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetOrgSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetOrgSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetorgsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetOrgVariable": {
+  "abstract" : [
+    {
+      "text" : "Get an organization variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetOrgVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetOrgVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetOrgVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetOrgVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetorgvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetPendingDeploymentsForRun": {
+  "abstract" : [
+    {
+      "text" : "Get pending deployments for a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetPendingDeploymentsForRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetPendingDeploymentsForRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetPendingDeploymentsForRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetPendingDeploymentsForRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetpendingdeploymentsforrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetRepoPublicKey": {
+  "abstract" : [
+    {
+      "text" : "Get a repository public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetRepoPublicKey"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetRepoPublicKey",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetRepoPublicKey"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetRepoPublicKey",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetrepopublickey"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetRepoSecret": {
+  "abstract" : [
+    {
+      "text" : "Get a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetRepoSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetRepoSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetRepoSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetRepoSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetreposecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetRepoVariable": {
+  "abstract" : [
+    {
+      "text" : "Get a repository variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetRepoVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetRepoVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetRepoVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetRepoVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetrepovariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetReviewsForRun": {
+  "abstract" : [
+    {
+      "text" : "Get the review history for a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetReviewsForRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetReviewsForRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetReviewsForRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetReviewsForRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetreviewsforrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetSelfHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get a self-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetSelfHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetSelfHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetSelfHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetSelfHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetselfhostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetSelfHostedRunnerForRepo": {
+  "abstract" : [
+    {
+      "text" : "Get a self-hosted runner for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetSelfHostedRunnerForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetSelfHostedRunnerForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetSelfHostedRunnerForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetSelfHostedRunnerForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetselfhostedrunnerforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetSelfHostedRunnerGroupForOrg": {
+  "abstract" : [
+    {
+      "text" : "Get a self-hosted runner group for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetSelfHostedRunnerGroupForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetSelfHostedRunnerGroupForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetSelfHostedRunnerGroupForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetSelfHostedRunnerGroupForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetselfhostedrunnergroupfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetWorkflow": {
+  "abstract" : [
+    {
+      "text" : "Get a workflow",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflow"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflow",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflow"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetWorkflow",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetworkflow"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetWorkflowAccessToRepository": {
+  "abstract" : [
+    {
+      "text" : "Get the level of access for workflows outside of the repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowAccessToRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowAccessToRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowAccessToRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetWorkflowAccessToRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetworkflowaccesstorepository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "Get a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetWorkflowRunAttempt": {
+  "abstract" : [
+    {
+      "text" : "Get a workflow run attempt",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowRunAttempt"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowRunAttempt",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowRunAttempt"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetWorkflowRunAttempt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetworkflowrunattempt"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetWorkflowRunUsage": {
+  "abstract" : [
+    {
+      "text" : "Get workflow run usage",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowRunUsage"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowRunUsage",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowRunUsage"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetWorkflowRunUsage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetworkflowrunusage"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsGetWorkflowUsage": {
+  "abstract" : [
+    {
+      "text" : "Get workflow usage",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowUsage"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsGetWorkflowUsage",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsGetWorkflowUsage"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsGetWorkflowUsage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsgetworkflowusage"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListArtifactsForRepo": {
+  "abstract" : [
+    {
+      "text" : "List artifacts for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListArtifactsForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListArtifactsForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListArtifactsForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListArtifactsForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistartifactsforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListEnvironmentSecrets": {
+  "abstract" : [
+    {
+      "text" : "List environment secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListEnvironmentSecrets"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListEnvironmentSecrets",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListEnvironmentSecrets"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListEnvironmentSecrets",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistenvironmentsecrets"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListEnvironmentVariables": {
+  "abstract" : [
+    {
+      "text" : "List environment variables",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListEnvironmentVariables"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListEnvironmentVariables",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListEnvironmentVariables"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListEnvironmentVariables",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistenvironmentvariables"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListGithubHostedRunnersInGroupForOrg": {
+  "abstract" : [
+    {
+      "text" : "List GitHub-hosted runners in a group for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListGithubHostedRunnersInGroupForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListGithubHostedRunnersInGroupForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListGithubHostedRunnersInGroupForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListGithubHostedRunnersInGroupForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistgithubhostedrunnersingroupfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListHostedRunnersForOrg": {
+  "abstract" : [
+    {
+      "text" : "List GitHub-hosted runners for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListHostedRunnersForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListHostedRunnersForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListHostedRunnersForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListHostedRunnersForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslisthostedrunnersfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListJobsForWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "List jobs for a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListJobsForWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListJobsForWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListJobsForWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListJobsForWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistjobsforworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListJobsForWorkflowRunAttempt": {
+  "abstract" : [
+    {
+      "text" : "List jobs for a workflow run attempt",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListJobsForWorkflowRunAttempt"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListJobsForWorkflowRunAttempt",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListJobsForWorkflowRunAttempt"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListJobsForWorkflowRunAttempt",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistjobsforworkflowrunattempt"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListLabelsForSelfHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "List labels for a self-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListLabelsForSelfHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListLabelsForSelfHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListLabelsForSelfHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListLabelsForSelfHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistlabelsforselfhostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListLabelsForSelfHostedRunnerForRepo": {
+  "abstract" : [
+    {
+      "text" : "List labels for a self-hosted runner for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListLabelsForSelfHostedRunnerForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListLabelsForSelfHostedRunnerForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListLabelsForSelfHostedRunnerForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListLabelsForSelfHostedRunnerForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistlabelsforselfhostedrunnerforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListOrgSecrets": {
+  "abstract" : [
+    {
+      "text" : "List organization secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListOrgSecrets"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListOrgSecrets",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListOrgSecrets"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListOrgSecrets",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistorgsecrets"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListOrgVariables": {
+  "abstract" : [
+    {
+      "text" : "List organization variables",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListOrgVariables"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListOrgVariables",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListOrgVariables"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListOrgVariables",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistorgvariables"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListRepoAccessToSelfHostedRunnerGroupInOrg": {
+  "abstract" : [
+    {
+      "text" : "List repository access to a self-hosted runner group in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoAccessToSelfHostedRunnerGroupInOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoAccessToSelfHostedRunnerGroupInOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoAccessToSelfHostedRunnerGroupInOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistrepoaccesstoselfhostedrunnergroupinorg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListRepoOrganizationSecrets": {
+  "abstract" : [
+    {
+      "text" : "List repository organization secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoOrganizationSecrets"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoOrganizationSecrets",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoOrganizationSecrets"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListRepoOrganizationSecrets",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistrepoorganizationsecrets"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListRepoOrganizationVariables": {
+  "abstract" : [
+    {
+      "text" : "List repository organization variables",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoOrganizationVariables"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoOrganizationVariables",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoOrganizationVariables"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListRepoOrganizationVariables",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistrepoorganizationvariables"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListRepoSecrets": {
+  "abstract" : [
+    {
+      "text" : "List repository secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoSecrets"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoSecrets",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoSecrets"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListRepoSecrets",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistreposecrets"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListRepoVariables": {
+  "abstract" : [
+    {
+      "text" : "List repository variables",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoVariables"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoVariables",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoVariables"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListRepoVariables",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistrepovariables"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListRepoWorkflows": {
+  "abstract" : [
+    {
+      "text" : "List repository workflows",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoWorkflows"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRepoWorkflows",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRepoWorkflows"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListRepoWorkflows",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistrepoworkflows"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListRunnerApplicationsForOrg": {
+  "abstract" : [
+    {
+      "text" : "List runner applications for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRunnerApplicationsForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRunnerApplicationsForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRunnerApplicationsForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListRunnerApplicationsForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistrunnerapplicationsfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListRunnerApplicationsForRepo": {
+  "abstract" : [
+    {
+      "text" : "List runner applications for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRunnerApplicationsForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListRunnerApplicationsForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListRunnerApplicationsForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListRunnerApplicationsForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistrunnerapplicationsforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListSelectedReposForOrgSecret": {
+  "abstract" : [
+    {
+      "text" : "List selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelectedReposForOrgSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelectedReposForOrgSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelectedReposForOrgSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListSelectedReposForOrgSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistselectedreposfororgsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListSelectedReposForOrgVariable": {
+  "abstract" : [
+    {
+      "text" : "List selected repositories for an organization variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelectedReposForOrgVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelectedReposForOrgVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelectedReposForOrgVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListSelectedReposForOrgVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistselectedreposfororgvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListSelectedRepositoriesEnabledGithubActionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "List selected repositories enabled for GitHub Actions in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelectedRepositoriesEnabledGithubActionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelectedRepositoriesEnabledGithubActionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelectedRepositoriesEnabledGithubActionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListSelectedRepositoriesEnabledGithubActionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistselectedrepositoriesenabledgithubactionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListSelfHostedRunnerGroupsForOrg": {
+  "abstract" : [
+    {
+      "text" : "List self-hosted runner groups for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelfHostedRunnerGroupsForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelfHostedRunnerGroupsForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelfHostedRunnerGroupsForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListSelfHostedRunnerGroupsForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistselfhostedrunnergroupsfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListSelfHostedRunnersForOrg": {
+  "abstract" : [
+    {
+      "text" : "List self-hosted runners for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelfHostedRunnersForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelfHostedRunnersForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelfHostedRunnersForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListSelfHostedRunnersForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistselfhostedrunnersfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListSelfHostedRunnersForRepo": {
+  "abstract" : [
+    {
+      "text" : "List self-hosted runners for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelfHostedRunnersForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelfHostedRunnersForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelfHostedRunnersForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListSelfHostedRunnersForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistselfhostedrunnersforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListSelfHostedRunnersInGroupForOrg": {
+  "abstract" : [
+    {
+      "text" : "List self-hosted runners in a group for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelfHostedRunnersInGroupForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListSelfHostedRunnersInGroupForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListSelfHostedRunnersInGroupForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListSelfHostedRunnersInGroupForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistselfhostedrunnersingroupfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListWorkflowRunArtifacts": {
+  "abstract" : [
+    {
+      "text" : "List workflow run artifacts",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListWorkflowRunArtifacts"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListWorkflowRunArtifacts",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListWorkflowRunArtifacts"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListWorkflowRunArtifacts",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistworkflowrunartifacts"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListWorkflowRuns": {
+  "abstract" : [
+    {
+      "text" : "List workflow runs for a workflow",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListWorkflowRuns"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListWorkflowRuns",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListWorkflowRuns"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListWorkflowRuns",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistworkflowruns"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsListWorkflowRunsForRepo": {
+  "abstract" : [
+    {
+      "text" : "List workflow runs for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListWorkflowRunsForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsListWorkflowRunsForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsListWorkflowRunsForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsListWorkflowRunsForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionslistworkflowrunsforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsReRunJobForWorkflowRun": {
+  "abstract" : [
+    {
+      "text" : "Re-run a job from a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReRunJobForWorkflowRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReRunJobForWorkflowRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReRunJobForWorkflowRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsReRunJobForWorkflowRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsrerunjobforworkflowrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsReRunWorkflow": {
+  "abstract" : [
+    {
+      "text" : "Re-run a workflow",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReRunWorkflow"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReRunWorkflow",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReRunWorkflow"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsReRunWorkflow",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsrerunworkflow"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsReRunWorkflowFailedJobs": {
+  "abstract" : [
+    {
+      "text" : "Re-run failed jobs from a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReRunWorkflowFailedJobs"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReRunWorkflowFailedJobs",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReRunWorkflowFailedJobs"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsReRunWorkflowFailedJobs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsrerunworkflowfailedjobs"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Remove all custom labels from a self-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsremoveallcustomlabelsfromselfhostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo": {
+  "abstract" : [
+    {
+      "text" : "Remove all custom labels from a self-hosted runner for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsremoveallcustomlabelsfromselfhostedrunnerforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsRemoveCustomLabelFromSelfHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Remove a custom label from a self-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveCustomLabelFromSelfHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveCustomLabelFromSelfHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveCustomLabelFromSelfHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsremovecustomlabelfromselfhostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsRemoveCustomLabelFromSelfHostedRunnerForRepo": {
+  "abstract" : [
+    {
+      "text" : "Remove a custom label from a self-hosted runner for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveCustomLabelFromSelfHostedRunnerForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveCustomLabelFromSelfHostedRunnerForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveCustomLabelFromSelfHostedRunnerForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsremovecustomlabelfromselfhostedrunnerforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg": {
+  "abstract" : [
+    {
+      "text" : "Remove repository access to a self-hosted runner group in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsremoverepoaccesstoselfhostedrunnergroupinorg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsRemoveSelectedRepoFromOrgSecret": {
+  "abstract" : [
+    {
+      "text" : "Remove selected repository from an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveSelectedRepoFromOrgSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveSelectedRepoFromOrgSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveSelectedRepoFromOrgSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsRemoveSelectedRepoFromOrgSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsremoveselectedrepofromorgsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsRemoveSelectedRepoFromOrgVariable": {
+  "abstract" : [
+    {
+      "text" : "Remove selected repository from an organization variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveSelectedRepoFromOrgVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveSelectedRepoFromOrgVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveSelectedRepoFromOrgVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsRemoveSelectedRepoFromOrgVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsremoveselectedrepofromorgvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsRemoveSelfHostedRunnerFromGroupForOrg": {
+  "abstract" : [
+    {
+      "text" : "Remove a self-hosted runner from a group for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveSelfHostedRunnerFromGroupForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsRemoveSelfHostedRunnerFromGroupForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsRemoveSelfHostedRunnerFromGroupForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsRemoveSelfHostedRunnerFromGroupForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsremoveselfhostedrunnerfromgroupfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsReviewCustomGatesForRun": {
+  "abstract" : [
+    {
+      "text" : "Review custom deployment protection rules for a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReviewCustomGatesForRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReviewCustomGatesForRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReviewCustomGatesForRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsReviewCustomGatesForRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsreviewcustomgatesforrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsReviewPendingDeploymentsForRun": {
+  "abstract" : [
+    {
+      "text" : "Review pending deployments for a workflow run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReviewPendingDeploymentsForRun"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsReviewPendingDeploymentsForRun",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsReviewPendingDeploymentsForRun"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsReviewPendingDeploymentsForRun",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsreviewpendingdeploymentsforrun"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetAllowedActionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Set allowed actions and reusable workflows for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetAllowedActionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetAllowedActionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetAllowedActionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetAllowedActionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetallowedactionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetAllowedActionsRepository": {
+  "abstract" : [
+    {
+      "text" : "Set allowed actions and reusable workflows for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetAllowedActionsRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetAllowedActionsRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetAllowedActionsRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetAllowedActionsRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetallowedactionsrepository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetCustomLabelsForSelfHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Set custom labels for a self-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetCustomLabelsForSelfHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetCustomLabelsForSelfHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetCustomLabelsForSelfHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetCustomLabelsForSelfHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetcustomlabelsforselfhostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetCustomLabelsForSelfHostedRunnerForRepo": {
+  "abstract" : [
+    {
+      "text" : "Set custom labels for a self-hosted runner for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetCustomLabelsForSelfHostedRunnerForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetCustomLabelsForSelfHostedRunnerForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetCustomLabelsForSelfHostedRunnerForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetCustomLabelsForSelfHostedRunnerForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetcustomlabelsforselfhostedrunnerforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetCustomOidcSubClaimForRepo": {
+  "abstract" : [
+    {
+      "text" : "Set the customization template for an OIDC subject claim for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetCustomOidcSubClaimForRepo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetCustomOidcSubClaimForRepo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetCustomOidcSubClaimForRepo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetCustomOidcSubClaimForRepo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetcustomoidcsubclaimforrepo"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetGithubActionsDefaultWorkflowPermissionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Set default workflow permissions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetGithubActionsDefaultWorkflowPermissionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetGithubActionsDefaultWorkflowPermissionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetGithubActionsDefaultWorkflowPermissionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetGithubActionsDefaultWorkflowPermissionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetgithubactionsdefaultworkflowpermissionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetGithubActionsDefaultWorkflowPermissionsRepository": {
+  "abstract" : [
+    {
+      "text" : "Set default workflow permissions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetGithubActionsDefaultWorkflowPermissionsRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetGithubActionsDefaultWorkflowPermissionsRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetGithubActionsDefaultWorkflowPermissionsRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetGithubActionsDefaultWorkflowPermissionsRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetgithubactionsdefaultworkflowpermissionsrepository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetGithubActionsPermissionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Set GitHub Actions permissions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetGithubActionsPermissionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetGithubActionsPermissionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetGithubActionsPermissionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetGithubActionsPermissionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetgithubactionspermissionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetGithubActionsPermissionsRepository": {
+  "abstract" : [
+    {
+      "text" : "Set GitHub Actions permissions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetGithubActionsPermissionsRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetGithubActionsPermissionsRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetGithubActionsPermissionsRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetGithubActionsPermissionsRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetgithubactionspermissionsrepository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg": {
+  "abstract" : [
+    {
+      "text" : "Set repository access for a self-hosted runner group in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetrepoaccesstoselfhostedrunnergroupinorg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetSelectedReposForOrgSecret": {
+  "abstract" : [
+    {
+      "text" : "Set selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetSelectedReposForOrgSecret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetSelectedReposForOrgSecret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetSelectedReposForOrgSecret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetSelectedReposForOrgSecret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetselectedreposfororgsecret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetSelectedReposForOrgVariable": {
+  "abstract" : [
+    {
+      "text" : "Set selected repositories for an organization variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetSelectedReposForOrgVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetSelectedReposForOrgVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetSelectedReposForOrgVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetSelectedReposForOrgVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetselectedreposfororgvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization": {
+  "abstract" : [
+    {
+      "text" : "Set selected repositories enabled for GitHub Actions in an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetselectedrepositoriesenabledgithubactionsorganization"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetSelfHostedRunnersInGroupForOrg": {
+  "abstract" : [
+    {
+      "text" : "Set self-hosted runners in a group for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetSelfHostedRunnersInGroupForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetSelfHostedRunnersInGroupForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetSelfHostedRunnersInGroupForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetSelfHostedRunnersInGroupForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetselfhostedrunnersingroupfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsSetWorkflowAccessToRepository": {
+  "abstract" : [
+    {
+      "text" : "Set the level of access for workflows outside of the repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetWorkflowAccessToRepository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsSetWorkflowAccessToRepository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsSetWorkflowAccessToRepository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsSetWorkflowAccessToRepository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionssetworkflowaccesstorepository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsUpdateEnvironmentVariable": {
+  "abstract" : [
+    {
+      "text" : "Update an environment variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateEnvironmentVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateEnvironmentVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateEnvironmentVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsUpdateEnvironmentVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsupdateenvironmentvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsUpdateHostedRunnerForOrg": {
+  "abstract" : [
+    {
+      "text" : "Update a GitHub-hosted runner for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateHostedRunnerForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateHostedRunnerForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateHostedRunnerForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsUpdateHostedRunnerForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsupdatehostedrunnerfororg"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsUpdateOrgVariable": {
+  "abstract" : [
+    {
+      "text" : "Update an organization variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateOrgVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateOrgVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateOrgVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsUpdateOrgVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsupdateorgvariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsUpdateRepoVariable": {
+  "abstract" : [
+    {
+      "text" : "Update a repository variable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateRepoVariable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateRepoVariable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateRepoVariable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsUpdateRepoVariable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsupdaterepovariable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/ActionsUpdateSelfHostedRunnerGroupForOrg": {
+  "abstract" : [
+    {
+      "text" : "Update a self-hosted runner group for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateSelfHostedRunnerGroupForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/ActionsUpdateSelfHostedRunnerGroupForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ActionsUpdateSelfHostedRunnerGroupForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ActionsUpdateSelfHostedRunnerGroupForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actionsupdateselfhostedrunnergroupfororg"
+}
+}
+}

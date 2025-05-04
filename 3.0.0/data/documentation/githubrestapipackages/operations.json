@@ -1,0 +1,1121 @@
+{
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIPackages10OperationsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPackages"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/packages\/Types.swift#L2425"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Operations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageForOrg",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageForUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageVersionForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageVersionForOrg",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageVersionForUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetAllPackageVersionsForPackageOwnedByOrg",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetAllPackageVersionsForPackageOwnedByUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageForOrganization",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageForUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageVersionForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageVersionForOrganization",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageVersionForUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListDockerMigrationConflictingPackagesForOrganization",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListDockerMigrationConflictingPackagesForUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListPackagesForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListPackagesForOrganization",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListPackagesForUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageForOrg",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageForUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageVersionForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageVersionForOrg",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageVersionForUser"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipackages\/operations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPackages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesDeletePackageForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Delete a package for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesDeletePackageForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesdeletepackageforauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesDeletePackageForOrg": {
+  "abstract" : [
+    {
+      "text" : "Delete a package for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesDeletePackageForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesdeletepackagefororg"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesDeletePackageForUser": {
+  "abstract" : [
+    {
+      "text" : "Delete a package for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesDeletePackageForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesdeletepackageforuser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesDeletePackageVersionForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Delete a package version for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageVersionForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageVersionForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageVersionForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesDeletePackageVersionForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesdeletepackageversionforauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesDeletePackageVersionForOrg": {
+  "abstract" : [
+    {
+      "text" : "Delete package version for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageVersionForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageVersionForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageVersionForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesDeletePackageVersionForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesdeletepackageversionfororg"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesDeletePackageVersionForUser": {
+  "abstract" : [
+    {
+      "text" : "Delete package version for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageVersionForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesDeletePackageVersionForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesDeletePackageVersionForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesDeletePackageVersionForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesdeletepackageversionforuser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "List package versions for a package owned by the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetallpackageversionsforpackageownedbyauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetAllPackageVersionsForPackageOwnedByOrg": {
+  "abstract" : [
+    {
+      "text" : "List package versions for a package owned by an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetAllPackageVersionsForPackageOwnedByOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetAllPackageVersionsForPackageOwnedByOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetAllPackageVersionsForPackageOwnedByOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetAllPackageVersionsForPackageOwnedByOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetallpackageversionsforpackageownedbyorg"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetAllPackageVersionsForPackageOwnedByUser": {
+  "abstract" : [
+    {
+      "text" : "List package versions for a package owned by a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetAllPackageVersionsForPackageOwnedByUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetAllPackageVersionsForPackageOwnedByUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetAllPackageVersionsForPackageOwnedByUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetAllPackageVersionsForPackageOwnedByUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetallpackageversionsforpackageownedbyuser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetPackageForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Get a package for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetPackageForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetpackageforauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetPackageForOrganization": {
+  "abstract" : [
+    {
+      "text" : "Get a package for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageForOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageForOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageForOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetPackageForOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetpackagefororganization"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetPackageForUser": {
+  "abstract" : [
+    {
+      "text" : "Get a package for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetPackageForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetpackageforuser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetPackageVersionForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Get a package version for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageVersionForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageVersionForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageVersionForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetPackageVersionForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetpackageversionforauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetPackageVersionForOrganization": {
+  "abstract" : [
+    {
+      "text" : "Get a package version for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageVersionForOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageVersionForOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageVersionForOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetPackageVersionForOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetpackageversionfororganization"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesGetPackageVersionForUser": {
+  "abstract" : [
+    {
+      "text" : "Get a package version for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageVersionForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesGetPackageVersionForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesGetPackageVersionForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesGetPackageVersionForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesgetpackageversionforuser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Get list of conflicting packages during Docker migration for authenticated-user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesListDockerMigrationConflictingPackagesForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packageslistdockermigrationconflictingpackagesforauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesListDockerMigrationConflictingPackagesForOrganization": {
+  "abstract" : [
+    {
+      "text" : "Get list of conflicting packages during Docker migration for organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListDockerMigrationConflictingPackagesForOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListDockerMigrationConflictingPackagesForOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListDockerMigrationConflictingPackagesForOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesListDockerMigrationConflictingPackagesForOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packageslistdockermigrationconflictingpackagesfororganization"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesListDockerMigrationConflictingPackagesForUser": {
+  "abstract" : [
+    {
+      "text" : "Get list of conflicting packages during Docker migration for user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListDockerMigrationConflictingPackagesForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListDockerMigrationConflictingPackagesForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListDockerMigrationConflictingPackagesForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesListDockerMigrationConflictingPackagesForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packageslistdockermigrationconflictingpackagesforuser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesListPackagesForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "List packages for the authenticated user’s namespace",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListPackagesForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListPackagesForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListPackagesForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesListPackagesForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packageslistpackagesforauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesListPackagesForOrganization": {
+  "abstract" : [
+    {
+      "text" : "List packages for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListPackagesForOrganization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListPackagesForOrganization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListPackagesForOrganization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesListPackagesForOrganization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packageslistpackagesfororganization"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesListPackagesForUser": {
+  "abstract" : [
+    {
+      "text" : "List packages for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListPackagesForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesListPackagesForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesListPackagesForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesListPackagesForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packageslistpackagesforuser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesRestorePackageForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Restore a package for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesRestorePackageForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesrestorepackageforauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesRestorePackageForOrg": {
+  "abstract" : [
+    {
+      "text" : "Restore a package for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesRestorePackageForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesrestorepackagefororg"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesRestorePackageForUser": {
+  "abstract" : [
+    {
+      "text" : "Restore a package for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesRestorePackageForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesrestorepackageforuser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesRestorePackageVersionForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Restore a package version for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageVersionForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageVersionForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageVersionForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesRestorePackageVersionForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesrestorepackageversionforauthenticateduser"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesRestorePackageVersionForOrg": {
+  "abstract" : [
+    {
+      "text" : "Restore package version for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageVersionForOrg"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageVersionForOrg",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageVersionForOrg"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesRestorePackageVersionForOrg",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesrestorepackageversionfororg"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/PackagesRestorePackageVersionForUser": {
+  "abstract" : [
+    {
+      "text" : "Restore package version for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageVersionForUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/PackagesRestorePackageVersionForUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PackagesRestorePackageVersionForUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PackagesRestorePackageVersionForUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packagesrestorepackageversionforuser"
+}
+}
+}

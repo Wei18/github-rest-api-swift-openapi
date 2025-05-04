@@ -1,0 +1,469 @@
+{
+  "abstract" : [
+    {
+      "text" : "An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when ",
+      "type" : "text"
+    },
+    {
+      "code" : "visibility",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is set to ",
+      "type" : "text"
+    },
+    {
+      "code" : "selected",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". This field should be omitted if ",
+      "type" : "text"
+    },
+    {
+      "code" : "visibility",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is set to ",
+      "type" : "text"
+    },
+    {
+      "code" : "all",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "private",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry\/Input",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry\/Input\/Body-swift.enum\/JsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry\/Input\/Body-swift.enum\/JsonPayload\/selectedRepositoryIds"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:31GitHubRestAPIPrivate_Registries10OperationsO07Privatee9UpdateOrgG8RegistryO5InputV4BodyO11JsonPayloadV21selectedRepositoryIdsSaySiGSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "selectedRepositoryIds"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : "]?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPrivate_Registries"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/private-registries\/Types.swift#L1702"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "selectedRepositoryIds"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "selectedRepositoryIds"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : "]?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/private-registries\/{secret_name}\/PATCH\/requestBody\/json\/selected_repository_ids",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiprivate_registries\/operations\/privateregistriesupdateorgprivateregistry\/input\/body-swift.enum\/jsonpayload\/selectedrepositoryids"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPrivate_Registries",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/PrivateRegistriesUpdateOrgPrivateRegistry": {
+  "abstract" : [
+    {
+      "text" : "Update a private registry for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PrivateRegistriesUpdateOrgPrivateRegistry"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PrivateRegistriesUpdateOrgPrivateRegistry"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PrivateRegistriesUpdateOrgPrivateRegistry",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/privateregistriesupdateorgprivateregistry"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/PrivateRegistriesUpdateOrgPrivateRegistry/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/privateregistriesupdateorgprivateregistry\/input"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/PrivateRegistriesUpdateOrgPrivateRegistry/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/privateregistriesupdateorgprivateregistry\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/PrivateRegistriesUpdateOrgPrivateRegistry/Input/Body-swift.enum/JsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry\/Input\/Body-swift.enum\/JsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.PrivateRegistriesUpdateOrgPrivateRegistry.Input.Body.JsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/privateregistriesupdateorgprivateregistry\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/PrivateRegistriesUpdateOrgPrivateRegistry/Input/Body-swift.enum/JsonPayload/selectedRepositoryIds": {
+  "abstract" : [
+    {
+      "text" : "An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when ",
+      "type" : "text"
+    },
+    {
+      "code" : "visibility",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is set to ",
+      "type" : "text"
+    },
+    {
+      "code" : "selected",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". This field should be omitted if ",
+      "type" : "text"
+    },
+    {
+      "code" : "visibility",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is set to ",
+      "type" : "text"
+    },
+    {
+      "code" : "all",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "private",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "selectedRepositoryIds"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/PrivateRegistriesUpdateOrgPrivateRegistry\/Input\/Body-swift.enum\/JsonPayload\/selectedRepositoryIds",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "selectedRepositoryIds",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/privateregistriesupdateorgprivateregistry\/input\/body-swift.enum\/jsonpayload\/selectedrepositoryids"
+}
+}
+}

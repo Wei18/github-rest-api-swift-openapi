@@ -1,0 +1,680 @@
+{
+  "abstract" : [
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/reactions\/reactions#about-reactions",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " to add to the issue.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIReactions10OperationsO23ReactionsCreateForIssueO5InputV4BodyO11JsonPayloadV07ContentM0O",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ContentPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIReactions"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "ContentPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/reactions\/Types.swift#L3918"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ContentPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/issues\/{issue_number}\/reactions\/POST\/requestBody\/json\/content",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIReactions\/s12CaseIterableP",
+        "doc:\/\/GitHubRestAPIReactions\/Se",
+        "doc:\/\/GitHubRestAPIReactions\/SE",
+        "doc:\/\/GitHubRestAPIReactions\/SQ",
+        "doc:\/\/GitHubRestAPIReactions\/SH",
+        "doc:\/\/GitHubRestAPIReactions\/SY",
+        "doc:\/\/GitHubRestAPIReactions\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/confused",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/eyes",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/heart",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/hooray",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/laugh",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/rocket"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIReactions/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIReactions/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIReactions/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIReactions/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIReactions/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIReactions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue": {
+  "abstract" : [
+    {
+      "text" : "Create reaction for an issue",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ReactionsCreateForIssue"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ReactionsCreateForIssue"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload": {
+  "abstract" : [
+    {
+      "text" : "The ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/reactions\/reactions#about-reactions",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " to add to the issue.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ContentPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ContentPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/confused": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "confused"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/confused",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload.confused",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/confused"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/eyes": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "eyes"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/eyes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload.eyes",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/eyes"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/heart": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "heart"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/heart",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload.heart",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/heart"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/hooray": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hooray"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/hooray",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload.hooray",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/hooray"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/laugh": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "laugh"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/laugh",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload.laugh",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/laugh"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/ReactionsCreateForIssue/Input/Body-swift.enum/JsonPayload/ContentPayload/rocket": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rocket"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/ReactionsCreateForIssue\/Input\/Body-swift.enum\/JsonPayload\/ContentPayload\/rocket",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.ReactionsCreateForIssue.Input.Body.JsonPayload.ContentPayload.rocket",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactionscreateforissue\/input\/body-swift.enum\/jsonpayload\/contentpayload\/rocket"
+},
+"doc://GitHubRestAPIReactions/s12CaseIterableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIReactions/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"https://docs.github.com/rest/reactions/reactions#about-reactions": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/reactions\/reactions#about-reactions",
+  "title" : "reaction type",
+  "titleInlineContent" : [
+    {
+      "text" : "reaction type",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/reactions\/reactions#about-reactions"
+}
+}
+}

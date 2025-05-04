@@ -1,0 +1,884 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10OperationsO36CodespacesCreateForAuthenticatedUserO5InputV4BodyO11JsonPayloadO05Case1N0V10CodingKeysO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/codespaces\/Types.swift#L14063"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "CodingKeys"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/s9CodingKeyP",
+        "doc:\/\/GitHubRestAPICodespaces\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/GitHubRestAPICodespaces\/s23CustomStringConvertibleP",
+        "doc:\/\/GitHubRestAPICodespaces\/SQ",
+        "doc:\/\/GitHubRestAPICodespaces\/SH",
+        "doc:\/\/GitHubRestAPICodespaces\/SY",
+        "doc:\/\/GitHubRestAPICodespaces\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/clientIp",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/devcontainerPath",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/displayName",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/geo",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/idleTimeoutMinutes",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/location",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/machine",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/multiRepoPermissionsOptOut",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/ref",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/repositoryId",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/retentionPeriodMinutes",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/workingDirectory"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/init(intValue:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/init(rawValue:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/init(stringValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/CodingKey-Implementations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Create a codespace for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodespacesCreateForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodespacesCreateForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "JsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Case1Payload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Case1Payload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/CodingKey-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/CodingKey-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CodingKey Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/codingkey-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/equatable-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/clientIp": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "clientIp"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/clientIp",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.clientIp",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/clientip"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/devcontainerPath": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "devcontainerPath"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/devcontainerPath",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.devcontainerPath",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/devcontainerpath"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/displayName": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "displayName"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/displayName",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.displayName",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/displayname"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/geo": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "geo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/geo",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.geo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/geo"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/idleTimeoutMinutes": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "idleTimeoutMinutes"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/idleTimeoutMinutes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.idleTimeoutMinutes",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/idletimeoutminutes"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/init(intValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "intValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/init(intValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(intValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/init(intvalue:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/init(rawvalue:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/init(stringValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/init(stringValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/init(stringvalue:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/location": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "location"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/location",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.location",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/location"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/machine": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "machine"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/machine",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.machine",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/machine"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/multiRepoPermissionsOptOut": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "multiRepoPermissionsOptOut"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/multiRepoPermissionsOptOut",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.multiRepoPermissionsOptOut",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/multirepopermissionsoptout"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/ref": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ref"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/ref",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.ref",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/ref"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/repositoryId": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repositoryId"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/repositoryId",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.repositoryId",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/repositoryid"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/retentionPeriodMinutes": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "retentionPeriodMinutes"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/retentionPeriodMinutes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.retentionPeriodMinutes",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/retentionperiodminutes"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/CodespacesCreateForAuthenticatedUser/Input/Body-swift.enum/JsonPayload/Case1Payload/CodingKeys/workingDirectory": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "workingDirectory"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/CodespacesCreateForAuthenticatedUser\/Input\/Body-swift.enum\/JsonPayload\/Case1Payload\/CodingKeys\/workingDirectory",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.CodespacesCreateForAuthenticatedUser.Input.Body.JsonPayload.Case1Payload.CodingKeys.workingDirectory",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespacescreateforauthenticateduser\/input\/body-swift.enum\/jsonpayload\/case1payload\/codingkeys\/workingdirectory"
+},
+"doc://GitHubRestAPICodespaces/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/s9CodingKeyP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s9CodingKeyP",
+  "title" : "Swift.CodingKey",
+  "type" : "unresolvable"
+}
+}
+}

@@ -1,0 +1,507 @@
+{
+  "abstract" : [
+    {
+      "text" : "Actions OIDC Subject customization",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOidc10ComponentsO7SchemasO13OidcCustomSubV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "OidcCustomSub"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOidc"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "OidcCustomSub"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/oidc\/Types.swift#L137"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.OidcCustomSub"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "OidcCustomSub"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/oidc-custom-sub",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/Se",
+        "doc:\/\/GitHubRestAPIOidc\/SE",
+        "doc:\/\/GitHubRestAPIOidc\/SQ",
+        "doc:\/\/GitHubRestAPIOidc\/SH",
+        "doc:\/\/GitHubRestAPIOidc\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/init(from:)",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/init(includeClaimKeys:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/includeClaimKeys"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapioidc\/components\/schemas\/oidccustomsub"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOidc/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOidc/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOidc/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOidc/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOidc",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas/OidcCustomSub": {
+  "abstract" : [
+    {
+      "text" : "Actions OIDC Subject customization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "OidcCustomSub"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "OidcCustomSub"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.OidcCustomSub",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas\/oidccustomsub"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas/OidcCustomSub/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.OidcCustomSub.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas\/oidccustomsub\/codingkeys"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas/OidcCustomSub/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas\/oidccustomsub\/equatable-implementations"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas/OidcCustomSub/includeClaimKeys": {
+  "abstract" : [
+    {
+      "text" : "Array of unique strings. Each claim key can only contain alphanumeric characters and underscores.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "includeClaimKeys"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/includeClaimKeys",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "includeClaimKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas\/oidccustomsub\/includeclaimkeys"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas/OidcCustomSub/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas\/oidccustomsub\/init(from:)"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas/OidcCustomSub/init(includeClaimKeys:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "OidcCustomSub",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "includeClaimKeys"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/OidcCustomSub\/init(includeClaimKeys:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(includeClaimKeys:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas\/oidccustomsub\/init(includeclaimkeys:)"
+},
+"doc://GitHubRestAPIOidc/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

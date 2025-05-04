@@ -1,0 +1,1471 @@
+{
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIApps10OperationsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIApps"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/apps\/Types.swift#L5073"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Operations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsAddRepoToInstallationForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsCheckToken",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsCreateFromManifest",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsCreateInstallationAccessToken",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsDeleteAuthorization",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsDeleteInstallation",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsDeleteToken",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetAuthenticated",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetBySlug",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetInstallation",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetOrgInstallation",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetRepoInstallation",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetSubscriptionPlanForAccount",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetSubscriptionPlanForAccountStubbed",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetUserInstallation",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetWebhookConfigForApp",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetWebhookDelivery",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListAccountsForPlan",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListAccountsForPlanStubbed",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListInstallationReposForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListInstallationRequestsForAuthenticatedApp",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListInstallations",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListInstallationsForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListPlans",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListPlansStubbed",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListReposAccessibleToInstallation",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListSubscriptionsForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListSubscriptionsForAuthenticatedUserStubbed",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListWebhookDeliveries",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsRedeliverWebhookDelivery",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsRemoveRepoFromInstallationForAuthenticatedUser",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsResetToken",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsRevokeInstallationAccessToken",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsScopeToken",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsSuspendInstallation",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsUnsuspendInstallation",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsUpdateWebhookConfigForApp"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiapps\/operations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIApps",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsAddRepoToInstallationForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Add a repository to an app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsAddRepoToInstallationForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsAddRepoToInstallationForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsAddRepoToInstallationForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsAddRepoToInstallationForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsaddrepotoinstallationforauthenticateduser"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsCheckToken": {
+  "abstract" : [
+    {
+      "text" : "Check a token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsCheckToken"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsCheckToken",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsCheckToken"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsCheckToken",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appschecktoken"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsCreateFromManifest": {
+  "abstract" : [
+    {
+      "text" : "Create a GitHub App from a manifest",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsCreateFromManifest"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsCreateFromManifest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsCreateFromManifest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsCreateFromManifest",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appscreatefrommanifest"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsCreateInstallationAccessToken": {
+  "abstract" : [
+    {
+      "text" : "Create an installation access token for an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsCreateInstallationAccessToken"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsCreateInstallationAccessToken",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsCreateInstallationAccessToken"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsCreateInstallationAccessToken",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appscreateinstallationaccesstoken"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsDeleteAuthorization": {
+  "abstract" : [
+    {
+      "text" : "Delete an app authorization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsDeleteAuthorization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsDeleteAuthorization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsDeleteAuthorization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsDeleteAuthorization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsdeleteauthorization"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsDeleteInstallation": {
+  "abstract" : [
+    {
+      "text" : "Delete an installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsDeleteInstallation"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsDeleteInstallation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsDeleteInstallation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsDeleteInstallation",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsdeleteinstallation"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsDeleteToken": {
+  "abstract" : [
+    {
+      "text" : "Delete an app token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsDeleteToken"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsDeleteToken",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsDeleteToken"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsDeleteToken",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsdeletetoken"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetAuthenticated": {
+  "abstract" : [
+    {
+      "text" : "Get the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetAuthenticated"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetAuthenticated",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetAuthenticated"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetAuthenticated",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetauthenticated"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetBySlug": {
+  "abstract" : [
+    {
+      "text" : "Get an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetBySlug"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetBySlug",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetBySlug"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetBySlug",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetbyslug"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetInstallation": {
+  "abstract" : [
+    {
+      "text" : "Get an installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetInstallation"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetInstallation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetInstallation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetInstallation",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetinstallation"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetOrgInstallation": {
+  "abstract" : [
+    {
+      "text" : "Get an organization installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetOrgInstallation"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetOrgInstallation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetOrgInstallation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetOrgInstallation",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetorginstallation"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetRepoInstallation": {
+  "abstract" : [
+    {
+      "text" : "Get a repository installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetRepoInstallation"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetRepoInstallation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetRepoInstallation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetRepoInstallation",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetrepoinstallation"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetSubscriptionPlanForAccount": {
+  "abstract" : [
+    {
+      "text" : "Get a subscription plan for an account",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetSubscriptionPlanForAccount"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetSubscriptionPlanForAccount",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetSubscriptionPlanForAccount"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetSubscriptionPlanForAccount",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetsubscriptionplanforaccount"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetSubscriptionPlanForAccountStubbed": {
+  "abstract" : [
+    {
+      "text" : "Get a subscription plan for an account (stubbed)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetSubscriptionPlanForAccountStubbed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetSubscriptionPlanForAccountStubbed",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetSubscriptionPlanForAccountStubbed"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetSubscriptionPlanForAccountStubbed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetsubscriptionplanforaccountstubbed"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetUserInstallation": {
+  "abstract" : [
+    {
+      "text" : "Get a user installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetUserInstallation"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetUserInstallation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetUserInstallation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetUserInstallation",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetuserinstallation"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetWebhookConfigForApp": {
+  "abstract" : [
+    {
+      "text" : "Get a webhook configuration for an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetWebhookConfigForApp"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetWebhookConfigForApp",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetWebhookConfigForApp"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetWebhookConfigForApp",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetwebhookconfigforapp"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsGetWebhookDelivery": {
+  "abstract" : [
+    {
+      "text" : "Get a delivery for an app webhook",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetWebhookDelivery"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsGetWebhookDelivery",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsGetWebhookDelivery"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsGetWebhookDelivery",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsgetwebhookdelivery"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListAccountsForPlan": {
+  "abstract" : [
+    {
+      "text" : "List accounts for a plan",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListAccountsForPlan"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListAccountsForPlan",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListAccountsForPlan"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListAccountsForPlan",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistaccountsforplan"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListAccountsForPlanStubbed": {
+  "abstract" : [
+    {
+      "text" : "List accounts for a plan (stubbed)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListAccountsForPlanStubbed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListAccountsForPlanStubbed",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListAccountsForPlanStubbed"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListAccountsForPlanStubbed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistaccountsforplanstubbed"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListInstallationReposForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "List repositories accessible to the user access token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListInstallationReposForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListInstallationReposForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListInstallationReposForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListInstallationReposForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistinstallationreposforauthenticateduser"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListInstallationRequestsForAuthenticatedApp": {
+  "abstract" : [
+    {
+      "text" : "List installation requests for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListInstallationRequestsForAuthenticatedApp"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListInstallationRequestsForAuthenticatedApp",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListInstallationRequestsForAuthenticatedApp"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListInstallationRequestsForAuthenticatedApp",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistinstallationrequestsforauthenticatedapp"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListInstallations": {
+  "abstract" : [
+    {
+      "text" : "List installations for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListInstallations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListInstallations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListInstallations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListInstallations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistinstallations"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListInstallationsForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "List app installations accessible to the user access token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListInstallationsForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListInstallationsForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListInstallationsForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListInstallationsForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistinstallationsforauthenticateduser"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListPlans": {
+  "abstract" : [
+    {
+      "text" : "List plans",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListPlans"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListPlans",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListPlans"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListPlans",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistplans"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListPlansStubbed": {
+  "abstract" : [
+    {
+      "text" : "List plans (stubbed)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListPlansStubbed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListPlansStubbed",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListPlansStubbed"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListPlansStubbed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistplansstubbed"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListReposAccessibleToInstallation": {
+  "abstract" : [
+    {
+      "text" : "List repositories accessible to the app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListReposAccessibleToInstallation"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListReposAccessibleToInstallation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListReposAccessibleToInstallation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListReposAccessibleToInstallation",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistreposaccessibletoinstallation"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListSubscriptionsForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "List subscriptions for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListSubscriptionsForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListSubscriptionsForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListSubscriptionsForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListSubscriptionsForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistsubscriptionsforauthenticateduser"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListSubscriptionsForAuthenticatedUserStubbed": {
+  "abstract" : [
+    {
+      "text" : "List subscriptions for the authenticated user (stubbed)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListSubscriptionsForAuthenticatedUserStubbed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListSubscriptionsForAuthenticatedUserStubbed",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListSubscriptionsForAuthenticatedUserStubbed"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListSubscriptionsForAuthenticatedUserStubbed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistsubscriptionsforauthenticateduserstubbed"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsListWebhookDeliveries": {
+  "abstract" : [
+    {
+      "text" : "List deliveries for an app webhook",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsListWebhookDeliveries"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsListWebhookDeliveries",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsListWebhookDeliveries"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsListWebhookDeliveries",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appslistwebhookdeliveries"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsRedeliverWebhookDelivery": {
+  "abstract" : [
+    {
+      "text" : "Redeliver a delivery for an app webhook",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsRedeliverWebhookDelivery"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsRedeliverWebhookDelivery",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsRedeliverWebhookDelivery"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsRedeliverWebhookDelivery",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsredeliverwebhookdelivery"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsRemoveRepoFromInstallationForAuthenticatedUser": {
+  "abstract" : [
+    {
+      "text" : "Remove a repository from an app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsRemoveRepoFromInstallationForAuthenticatedUser"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsRemoveRepoFromInstallationForAuthenticatedUser",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsRemoveRepoFromInstallationForAuthenticatedUser"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsRemoveRepoFromInstallationForAuthenticatedUser",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsremoverepofrominstallationforauthenticateduser"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsResetToken": {
+  "abstract" : [
+    {
+      "text" : "Reset a token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsResetToken"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsResetToken",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsResetToken"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsResetToken",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsresettoken"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsRevokeInstallationAccessToken": {
+  "abstract" : [
+    {
+      "text" : "Revoke an installation access token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsRevokeInstallationAccessToken"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsRevokeInstallationAccessToken",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsRevokeInstallationAccessToken"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsRevokeInstallationAccessToken",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsrevokeinstallationaccesstoken"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsScopeToken": {
+  "abstract" : [
+    {
+      "text" : "Create a scoped access token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsScopeToken"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsScopeToken",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsScopeToken"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsScopeToken",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsscopetoken"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsSuspendInstallation": {
+  "abstract" : [
+    {
+      "text" : "Suspend an app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsSuspendInstallation"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsSuspendInstallation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsSuspendInstallation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsSuspendInstallation",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appssuspendinstallation"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsUnsuspendInstallation": {
+  "abstract" : [
+    {
+      "text" : "Unsuspend an app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsUnsuspendInstallation"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsUnsuspendInstallation",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsUnsuspendInstallation"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsUnsuspendInstallation",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsunsuspendinstallation"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/AppsUpdateWebhookConfigForApp": {
+  "abstract" : [
+    {
+      "text" : "Update a webhook configuration for an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AppsUpdateWebhookConfigForApp"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/AppsUpdateWebhookConfigForApp",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AppsUpdateWebhookConfigForApp"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.AppsUpdateWebhookConfigForApp",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/appsupdatewebhookconfigforapp"
+}
+}
+}

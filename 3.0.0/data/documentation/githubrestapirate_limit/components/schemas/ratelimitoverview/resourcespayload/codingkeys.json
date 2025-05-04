@@ -1,0 +1,797 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO04RateE8OverviewV16ResourcesPayloadV10CodingKeysO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRate_Limit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/rate-limit\/Types.swift#L228"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "CodingKeys"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/s9CodingKeyP",
+        "doc:\/\/GitHubRestAPIRate_Limit\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/GitHubRestAPIRate_Limit\/s23CustomStringConvertibleP",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SQ",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SH",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SY",
+        "doc:\/\/GitHubRestAPIRate_Limit\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/actionsRunnerRegistration",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/codeScanningAutofix",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/codeScanningUpload",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/codeSearch",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/core",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/dependencySnapshots",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/graphql",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/integrationManifest",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/scim",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/search",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/sourceImport"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/init(intValue:)",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/init(rawValue:)",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/init(stringValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/CodingKey-Implementations",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRate_Limit/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRate_Limit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview": {
+  "abstract" : [
+    {
+      "text" : "Rate Limit Overview",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RateLimitOverview"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RateLimitOverview"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ResourcesPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "ResourcesPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/CodingKey-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/CodingKey-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CodingKey Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/codingkey-implementations"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/equatable-implementations"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/actionsRunnerRegistration": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "actionsRunnerRegistration"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/actionsRunnerRegistration",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.actionsRunnerRegistration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/actionsrunnerregistration"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/codeScanningAutofix": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codeScanningAutofix"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/codeScanningAutofix",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.codeScanningAutofix",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/codescanningautofix"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/codeScanningUpload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codeScanningUpload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/codeScanningUpload",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.codeScanningUpload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/codescanningupload"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/codeSearch": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codeSearch"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/codeSearch",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.codeSearch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/codesearch"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/core": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "core"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/core",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.core",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/core"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/dependencySnapshots": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependencySnapshots"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/dependencySnapshots",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.dependencySnapshots",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/dependencysnapshots"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/graphql": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "graphql"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/graphql",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.graphql",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/graphql"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/init(intValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "intValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/init(intValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(intValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/init(intvalue:)"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/init(stringValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/init(stringValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/init(stringvalue:)"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/integrationManifest": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "integrationManifest"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/integrationManifest",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.integrationManifest",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/integrationmanifest"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/scim": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "scim"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/scim",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.scim",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/scim"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/search": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/search",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.search",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/search"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/RateLimitOverview/ResourcesPayload/CodingKeys/sourceImport": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sourceImport"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/RateLimitOverview\/ResourcesPayload\/CodingKeys\/sourceImport",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.RateLimitOverview.ResourcesPayload.CodingKeys.sourceImport",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/ratelimitoverview\/resourcespayload\/codingkeys\/sourceimport"
+},
+"doc://GitHubRestAPIRate_Limit/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/s9CodingKeyP": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/s9CodingKeyP",
+  "title" : "Swift.CodingKey",
+  "type" : "unresolvable"
+}
+}
+}
