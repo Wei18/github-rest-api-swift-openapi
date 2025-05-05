@@ -86,6 +86,15 @@ public protocol APIProtocol: Sendable {
     /// - Remark: HTTP `GET /users/{username}/settings/billing/shared-storage`.
     /// - Remark: Generated from `#/paths//users/{username}/settings/billing/shared-storage/get(billing/get-shared-storage-billing-user)`.
     func billingGetSharedStorageBillingUser(_ input: Operations.BillingGetSharedStorageBillingUser.Input) async throws -> Operations.BillingGetSharedStorageBillingUser.Output
+    /// Get billing usage report for a user
+    ///
+    /// Gets a report of the total usage for a user.
+    ///
+    /// **Note:** This endpoint is only available to users with access to the enhanced billing platform.
+    ///
+    /// - Remark: HTTP `GET /users/{username}/settings/billing/usage`.
+    /// - Remark: Generated from `#/paths//users/{username}/settings/billing/usage/get(billing/get-github-billing-usage-report-user)`.
+    func billingGetGithubBillingUsageReportUser(_ input: Operations.BillingGetGithubBillingUsageReportUser.Input) async throws -> Operations.BillingGetGithubBillingUsageReportUser.Output
 }
 
 /// Convenience overloads for operation inputs.
@@ -220,6 +229,25 @@ extension APIProtocol {
     ) async throws -> Operations.BillingGetSharedStorageBillingUser.Output {
         try await billingGetSharedStorageBillingUser(Operations.BillingGetSharedStorageBillingUser.Input(
             path: path,
+            headers: headers
+        ))
+    }
+    /// Get billing usage report for a user
+    ///
+    /// Gets a report of the total usage for a user.
+    ///
+    /// **Note:** This endpoint is only available to users with access to the enhanced billing platform.
+    ///
+    /// - Remark: HTTP `GET /users/{username}/settings/billing/usage`.
+    /// - Remark: Generated from `#/paths//users/{username}/settings/billing/usage/get(billing/get-github-billing-usage-report-user)`.
+    public func billingGetGithubBillingUsageReportUser(
+        path: Operations.BillingGetGithubBillingUsageReportUser.Input.Path,
+        query: Operations.BillingGetGithubBillingUsageReportUser.Input.Query = .init(),
+        headers: Operations.BillingGetGithubBillingUsageReportUser.Input.Headers = .init()
+    ) async throws -> Operations.BillingGetGithubBillingUsageReportUser.Output {
+        try await billingGetGithubBillingUsageReportUser(Operations.BillingGetGithubBillingUsageReportUser.Input(
+            path: path,
+            query: query,
             headers: headers
         ))
     }
@@ -692,6 +720,114 @@ public enum Components {
                 case estimatedStorageForMonth = "estimated_storage_for_month"
             }
         }
+        /// - Remark: Generated from `#/components/schemas/billing-usage-report-user`.
+        public struct BillingUsageReportUser: Codable, Hashable, Sendable {
+            /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload`.
+            public struct UsageItemsPayloadPayload: Codable, Hashable, Sendable {
+                /// Date of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/date`.
+                public var date: Swift.String
+                /// Product name.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/product`.
+                public var product: Swift.String
+                /// SKU name.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/sku`.
+                public var sku: Swift.String
+                /// Quantity of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/quantity`.
+                public var quantity: Swift.Int
+                /// Unit type of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/unitType`.
+                public var unitType: Swift.String
+                /// Price per unit of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/pricePerUnit`.
+                public var pricePerUnit: Swift.Double
+                /// Gross amount of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/grossAmount`.
+                public var grossAmount: Swift.Double
+                /// Discount amount of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/discountAmount`.
+                public var discountAmount: Swift.Double
+                /// Net amount of the usage line item.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/netAmount`.
+                public var netAmount: Swift.Double
+                /// Name of the repository.
+                ///
+                /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/UsageItemsPayload/repositoryName`.
+                public var repositoryName: Swift.String?
+                /// Creates a new `UsageItemsPayloadPayload`.
+                ///
+                /// - Parameters:
+                ///   - date: Date of the usage line item.
+                ///   - product: Product name.
+                ///   - sku: SKU name.
+                ///   - quantity: Quantity of the usage line item.
+                ///   - unitType: Unit type of the usage line item.
+                ///   - pricePerUnit: Price per unit of the usage line item.
+                ///   - grossAmount: Gross amount of the usage line item.
+                ///   - discountAmount: Discount amount of the usage line item.
+                ///   - netAmount: Net amount of the usage line item.
+                ///   - repositoryName: Name of the repository.
+                public init(
+                    date: Swift.String,
+                    product: Swift.String,
+                    sku: Swift.String,
+                    quantity: Swift.Int,
+                    unitType: Swift.String,
+                    pricePerUnit: Swift.Double,
+                    grossAmount: Swift.Double,
+                    discountAmount: Swift.Double,
+                    netAmount: Swift.Double,
+                    repositoryName: Swift.String? = nil
+                ) {
+                    self.date = date
+                    self.product = product
+                    self.sku = sku
+                    self.quantity = quantity
+                    self.unitType = unitType
+                    self.pricePerUnit = pricePerUnit
+                    self.grossAmount = grossAmount
+                    self.discountAmount = discountAmount
+                    self.netAmount = netAmount
+                    self.repositoryName = repositoryName
+                }
+                public enum CodingKeys: String, CodingKey {
+                    case date
+                    case product
+                    case sku
+                    case quantity
+                    case unitType
+                    case pricePerUnit
+                    case grossAmount
+                    case discountAmount
+                    case netAmount
+                    case repositoryName
+                }
+            }
+            /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/usageItems`.
+            public typealias UsageItemsPayload = [Components.Schemas.BillingUsageReportUser.UsageItemsPayloadPayload]
+            /// - Remark: Generated from `#/components/schemas/billing-usage-report-user/usageItems`.
+            public var usageItems: Components.Schemas.BillingUsageReportUser.UsageItemsPayload?
+            /// Creates a new `BillingUsageReportUser`.
+            ///
+            /// - Parameters:
+            ///   - usageItems:
+            public init(usageItems: Components.Schemas.BillingUsageReportUser.UsageItemsPayload? = nil) {
+                self.usageItems = usageItems
+            }
+            public enum CodingKeys: String, CodingKey {
+                case usageItems
+            }
+        }
     }
     /// Types generated from the `#/components/parameters` section of the OpenAPI document.
     public enum Parameters {
@@ -914,6 +1050,34 @@ public enum Components {
             /// - Parameters:
             ///   - body: Received HTTP response body
             public init(body: Components.Responses.BillingUsageReportOrg.Body) {
+                self.body = body
+            }
+        }
+        public struct BillingUsageReportUser: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/billing_usage_report_user/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/billing_usage_report_user/content/application\/json`.
+                case json(Components.Schemas.BillingUsageReportUser)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.BillingUsageReportUser {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.BillingUsageReportUser.Body
+            /// Creates a new `BillingUsageReportUser`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.BillingUsageReportUser.Body) {
                 self.body = body
             }
         }
@@ -1981,6 +2145,251 @@ public enum Operations {
             public static var allCases: [Self] {
                 [
                     .json
+                ]
+            }
+        }
+    }
+    /// Get billing usage report for a user
+    ///
+    /// Gets a report of the total usage for a user.
+    ///
+    /// **Note:** This endpoint is only available to users with access to the enhanced billing platform.
+    ///
+    /// - Remark: HTTP `GET /users/{username}/settings/billing/usage`.
+    /// - Remark: Generated from `#/paths//users/{username}/settings/billing/usage/get(billing/get-github-billing-usage-report-user)`.
+    public enum BillingGetGithubBillingUsageReportUser {
+        public static let id: Swift.String = "billing/get-github-billing-usage-report-user"
+        public struct Input: Sendable, Hashable {
+            /// - Remark: Generated from `#/paths/users/{username}/settings/billing/usage/GET/path`.
+            public struct Path: Sendable, Hashable {
+                /// The handle for the GitHub user account.
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/settings/billing/usage/GET/path/username`.
+                public var username: Components.Parameters.Username
+                /// Creates a new `Path`.
+                ///
+                /// - Parameters:
+                ///   - username: The handle for the GitHub user account.
+                public init(username: Components.Parameters.Username) {
+                    self.username = username
+                }
+            }
+            public var path: Operations.BillingGetGithubBillingUsageReportUser.Input.Path
+            /// - Remark: Generated from `#/paths/users/{username}/settings/billing/usage/GET/query`.
+            public struct Query: Sendable, Hashable {
+                /// If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2025`. Default value is the current year.
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/settings/billing/usage/GET/query/year`.
+                public var year: Components.Parameters.BillingUsageReportYear?
+                /// If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`. If no year is specified the default `year` is used.
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/settings/billing/usage/GET/query/month`.
+                public var month: Components.Parameters.BillingUsageReportMonth?
+                /// If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`. If no `year` or `month` is specified, the default `year` and `month` are used.
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/settings/billing/usage/GET/query/day`.
+                public var day: Components.Parameters.BillingUsageReportDay?
+                /// If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`. If no `year`, `month`, or `day` is specified, the default `year`, `month`, and `day` are used.
+                ///
+                /// - Remark: Generated from `#/paths/users/{username}/settings/billing/usage/GET/query/hour`.
+                public var hour: Components.Parameters.BillingUsageReportHour?
+                /// Creates a new `Query`.
+                ///
+                /// - Parameters:
+                ///   - year: If specified, only return results for a single year. The value of `year` is an integer with four digits representing a year. For example, `2025`. Default value is the current year.
+                ///   - month: If specified, only return results for a single month. The value of `month` is an integer between `1` and `12`. If no year is specified the default `year` is used.
+                ///   - day: If specified, only return results for a single day. The value of `day` is an integer between `1` and `31`. If no `year` or `month` is specified, the default `year` and `month` are used.
+                ///   - hour: If specified, only return results for a single hour. The value of `hour` is an integer between `0` and `23`. If no `year`, `month`, or `day` is specified, the default `year`, `month`, and `day` are used.
+                public init(
+                    year: Components.Parameters.BillingUsageReportYear? = nil,
+                    month: Components.Parameters.BillingUsageReportMonth? = nil,
+                    day: Components.Parameters.BillingUsageReportDay? = nil,
+                    hour: Components.Parameters.BillingUsageReportHour? = nil
+                ) {
+                    self.year = year
+                    self.month = month
+                    self.day = day
+                    self.hour = hour
+                }
+            }
+            public var query: Operations.BillingGetGithubBillingUsageReportUser.Input.Query
+            /// - Remark: Generated from `#/paths/users/{username}/settings/billing/usage/GET/header`.
+            public struct Headers: Sendable, Hashable {
+                public var accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.BillingGetGithubBillingUsageReportUser.AcceptableContentType>]
+                /// Creates a new `Headers`.
+                ///
+                /// - Parameters:
+                ///   - accept:
+                public init(accept: [OpenAPIRuntime.AcceptHeaderContentType<Operations.BillingGetGithubBillingUsageReportUser.AcceptableContentType>] = .defaultValues()) {
+                    self.accept = accept
+                }
+            }
+            public var headers: Operations.BillingGetGithubBillingUsageReportUser.Input.Headers
+            /// Creates a new `Input`.
+            ///
+            /// - Parameters:
+            ///   - path:
+            ///   - query:
+            ///   - headers:
+            public init(
+                path: Operations.BillingGetGithubBillingUsageReportUser.Input.Path,
+                query: Operations.BillingGetGithubBillingUsageReportUser.Input.Query = .init(),
+                headers: Operations.BillingGetGithubBillingUsageReportUser.Input.Headers = .init()
+            ) {
+                self.path = path
+                self.query = query
+                self.headers = headers
+            }
+        }
+        @frozen public enum Output: Sendable, Hashable {
+            /// Response when getting a billing usage report
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/settings/billing/usage/get(billing/get-github-billing-usage-report-user)/responses/200`.
+            ///
+            /// HTTP response code: `200 ok`.
+            case ok(Components.Responses.BillingUsageReportUser)
+            /// The associated value of the enum case if `self` is `.ok`.
+            ///
+            /// - Throws: An error if `self` is not `.ok`.
+            /// - SeeAlso: `.ok`.
+            public var ok: Components.Responses.BillingUsageReportUser {
+                get throws {
+                    switch self {
+                    case let .ok(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "ok",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Bad Request
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/settings/billing/usage/get(billing/get-github-billing-usage-report-user)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            case badRequest(Components.Responses.BadRequest)
+            /// The associated value of the enum case if `self` is `.badRequest`.
+            ///
+            /// - Throws: An error if `self` is not `.badRequest`.
+            /// - SeeAlso: `.badRequest`.
+            public var badRequest: Components.Responses.BadRequest {
+                get throws {
+                    switch self {
+                    case let .badRequest(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "badRequest",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Forbidden
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/settings/billing/usage/get(billing/get-github-billing-usage-report-user)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            case forbidden(Components.Responses.Forbidden)
+            /// The associated value of the enum case if `self` is `.forbidden`.
+            ///
+            /// - Throws: An error if `self` is not `.forbidden`.
+            /// - SeeAlso: `.forbidden`.
+            public var forbidden: Components.Responses.Forbidden {
+                get throws {
+                    switch self {
+                    case let .forbidden(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "forbidden",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Internal Error
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/settings/billing/usage/get(billing/get-github-billing-usage-report-user)/responses/500`.
+            ///
+            /// HTTP response code: `500 internalServerError`.
+            case internalServerError(Components.Responses.InternalError)
+            /// The associated value of the enum case if `self` is `.internalServerError`.
+            ///
+            /// - Throws: An error if `self` is not `.internalServerError`.
+            /// - SeeAlso: `.internalServerError`.
+            public var internalServerError: Components.Responses.InternalError {
+                get throws {
+                    switch self {
+                    case let .internalServerError(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "internalServerError",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Service unavailable
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/settings/billing/usage/get(billing/get-github-billing-usage-report-user)/responses/503`.
+            ///
+            /// HTTP response code: `503 serviceUnavailable`.
+            case serviceUnavailable(Components.Responses.ServiceUnavailable)
+            /// The associated value of the enum case if `self` is `.serviceUnavailable`.
+            ///
+            /// - Throws: An error if `self` is not `.serviceUnavailable`.
+            /// - SeeAlso: `.serviceUnavailable`.
+            public var serviceUnavailable: Components.Responses.ServiceUnavailable {
+                get throws {
+                    switch self {
+                    case let .serviceUnavailable(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "serviceUnavailable",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Undocumented response.
+            ///
+            /// A response with a code that is not documented in the OpenAPI document.
+            case undocumented(statusCode: Swift.Int, OpenAPIRuntime.UndocumentedPayload)
+        }
+        @frozen public enum AcceptableContentType: AcceptableProtocol {
+            case json
+            case applicationScimJson
+            case other(Swift.String)
+            public init?(rawValue: Swift.String) {
+                switch rawValue.lowercased() {
+                case "application/json":
+                    self = .json
+                case "application/scim+json":
+                    self = .applicationScimJson
+                default:
+                    self = .other(rawValue)
+                }
+            }
+            public var rawValue: Swift.String {
+                switch self {
+                case let .other(string):
+                    return string
+                case .json:
+                    return "application/json"
+                case .applicationScimJson:
+                    return "application/scim+json"
+                }
+            }
+            public static var allCases: [Self] {
+                [
+                    .json,
+                    .applicationScimJson
                 ]
             }
         }
