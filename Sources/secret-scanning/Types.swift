@@ -1444,7 +1444,7 @@ public enum Components {
                 case isBase64Encoded = "is_base64_encoded"
             }
         }
-        /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
+        /// An optional comment when closing or reopening an alert. Cannot be updated or deleted.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert-resolution-comment`.
         public typealias SecretScanningAlertResolutionComment = Swift.String
