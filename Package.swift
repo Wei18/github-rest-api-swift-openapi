@@ -23,6 +23,7 @@ let package = Package(
         .library(name: "GitHubRestAPICodes_Of_Conduct", targets: ["GitHubRestAPICodes_Of_Conduct"]),
         .library(name: "GitHubRestAPICodespaces", targets: ["GitHubRestAPICodespaces"]),
         .library(name: "GitHubRestAPICopilot", targets: ["GitHubRestAPICopilot"]),
+        .library(name: "GitHubRestAPICredentials", targets: ["GitHubRestAPICredentials"]),
         .library(name: "GitHubRestAPIDependabot", targets: ["GitHubRestAPIDependabot"]),
         .library(name: "GitHubRestAPIDependency_Graph", targets: ["GitHubRestAPIDependency_Graph"]),
         .library(name: "GitHubRestAPIDesktop", targets: ["GitHubRestAPIDesktop"]),
@@ -154,6 +155,14 @@ let package = Package(
                 .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
             ],
             path: "Sources/copilot"
+        ),
+        .target(
+            name: "GitHubRestAPICredentials",
+            dependencies: [
+                .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime"),
+                .product(name: "OpenAPIURLSession", package: "swift-openapi-urlsession"),
+            ],
+            path: "Sources/credentials"
         ),
         .target(
             name: "GitHubRestAPIDependabot",
