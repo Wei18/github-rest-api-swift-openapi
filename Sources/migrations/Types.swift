@@ -755,6 +755,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1527,7 +1536,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -1545,7 +1554,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -1564,7 +1573,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -1582,7 +1591,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -2056,7 +2065,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2078,7 +2087,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2104,7 +2113,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2130,7 +2139,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2152,7 +2161,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2174,7 +2183,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2196,7 +2205,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3013,7 +3022,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/import/tfvc_project`.
             public var tfvc_project: Swift.String?
             /// - Remark: Generated from `#/components/schemas/import/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case auth = "auth"
                 case error = "error"
                 case none = "none"
@@ -3524,7 +3533,7 @@ public enum Operations {
                 /// Allowed values that can be passed to the exclude param.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query/excludePayload`.
-                @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case repositories = "repositories"
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/GET/query/exclude`.
@@ -3753,7 +3762,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/org_metadata_only`.
                     public var org_metadata_only: Swift.Bool?
                     /// - Remark: Generated from `#/paths/orgs/{org}/migrations/POST/requestBody/json/excludePayload`.
-                    @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case repositories = "repositories"
                     }
                     /// Exclude related items from being returned in the response in order to improve performance of the request.
@@ -4003,7 +4012,7 @@ public enum Operations {
                 /// Allowed values that can be passed to the exclude param.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/query/excludePayload`.
-                @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case repositories = "repositories"
                 }
                 /// - Remark: Generated from `#/paths/orgs/{org}/migrations/{migration_id}/GET/query/exclude`.
@@ -4227,6 +4236,14 @@ public enum Operations {
             ///
             /// HTTP response code: `302 found`.
             case found(Operations.migrations_sol_download_hyphen_archive_hyphen_for_hyphen_org.Output.Found)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/get(migrations/download-archive-for-org)/responses/302`.
+            ///
+            /// HTTP response code: `302 found`.
+            public static var found: Self {
+                .found(.init())
+            }
             /// The associated value of the enum case if `self` is `.found`.
             ///
             /// - Throws: An error if `self` is not `.found`.
@@ -4367,6 +4384,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -4514,6 +4539,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5086,7 +5119,7 @@ public enum Operations {
                     /// The type of version control system you are migrating from.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PATCH/requestBody/json/vcs`.
-                    @frozen public enum vcsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum vcsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case subversion = "subversion"
                         case tfvc = "tfvc"
                         case git = "git"
@@ -5312,7 +5345,7 @@ public enum Operations {
                     /// The originating VCS type. Without this parameter, the import job will take additional time to detect the VCS type before beginning the import. This detection step will be reflected in the response.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/PUT/requestBody/json/vcs`.
-                    @frozen public enum vcsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum vcsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case subversion = "subversion"
                         case git = "git"
                         case mercurial = "mercurial"
@@ -5626,6 +5659,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.migrations_sol_cancel_hyphen_import.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/import/delete(migrations/cancel-import)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5991,11 +6032,11 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        email = try container.decodeIfPresent(
+                        self.email = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .email
                         )
-                        name = try container.decodeIfPresent(
+                        self.name = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .name
                         )
@@ -6403,7 +6444,7 @@ public enum Operations {
                     /// Whether to store large files during the import. `opt_in` means large files will be stored using Git LFS. `opt_out` means large files will be removed during the import.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/import/lfs/PATCH/requestBody/json/use_lfs`.
-                    @frozen public enum use_lfsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum use_lfsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case opt_in = "opt_in"
                         case opt_out = "opt_out"
                     }
@@ -6706,6 +6747,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/get(migrations/list-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6856,7 +6905,7 @@ public enum Operations {
                     /// Allowed values that can be passed to the exclude param.
                     ///
                     /// - Remark: Generated from `#/paths/user/migrations/POST/requestBody/json/excludePayload`.
-                    @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum excludePayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case repositories = "repositories"
                     }
                     /// Exclude attributes from the API response to improve performance
@@ -7012,6 +7061,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/post(migrations/start-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7259,6 +7316,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/get(migrations/get-status-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7433,6 +7498,14 @@ public enum Operations {
             ///
             /// HTTP response code: `302 found`.
             case found(Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output.Found)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)/responses/302`.
+            ///
+            /// HTTP response code: `302 found`.
+            public static var found: Self {
+                .found(.init())
+            }
             /// The associated value of the enum case if `self` is `.found`.
             ///
             /// - Throws: An error if `self` is not `.found`.
@@ -7456,6 +7529,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/get(migrations/get-archive-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7610,6 +7691,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.migrations_sol_delete_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7656,6 +7745,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/archive/delete(migrations/delete-archive-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7819,6 +7916,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.migrations_sol_unlock_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7842,6 +7947,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/migrations/{migration_id}/repos/{repo_name}/lock/delete(migrations/unlock-repo-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
