@@ -1341,6 +1341,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1765,23 +1774,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -1796,23 +1805,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -2540,7 +2549,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -2558,7 +2567,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -2577,7 +2586,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -2595,7 +2604,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -3042,7 +3051,7 @@ public enum Components {
             /// The state of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case open = "open"
                 case closed = "closed"
             }
@@ -3166,7 +3175,7 @@ public enum Components {
             /// The color of the issue type.
             ///
             /// - Remark: Generated from `#/components/schemas/issue-type/color`.
-            @frozen public enum colorPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum colorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case gray = "gray"
                 case blue = "blue"
                 case green = "green"
@@ -3349,23 +3358,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -3380,23 +3389,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -3500,7 +3509,7 @@ public enum Components {
         /// How the author is associated with the repository.
         ///
         /// - Remark: Generated from `#/components/schemas/author-association`.
-        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable {
+        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable, CaseIterable {
             case COLLABORATOR = "COLLABORATOR"
             case CONTRIBUTOR = "CONTRIBUTOR"
             case FIRST_TIMER = "FIRST_TIMER"
@@ -3643,7 +3652,7 @@ public enum Components {
             /// The reason for the current state
             ///
             /// - Remark: Generated from `#/components/schemas/issue/state_reason`.
-            @frozen public enum state_reasonPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum state_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case completed = "completed"
                 case reopened = "reopened"
                 case not_planned = "not_planned"
@@ -4472,7 +4481,7 @@ public enum Components {
             /// The reason for the current state
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-issue/state_reason`.
-            @frozen public enum state_reasonPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum state_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case completed = "completed"
                 case reopened = "reopened"
                 case not_planned = "not_planned"
@@ -6660,97 +6669,97 @@ public enum Components {
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
                 do {
-                    value1 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value2 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value3 = try .init(from: decoder)
+                    self.value3 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value4 = try .init(from: decoder)
+                    self.value4 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value5 = try .init(from: decoder)
+                    self.value5 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value6 = try .init(from: decoder)
+                    self.value6 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value7 = try .init(from: decoder)
+                    self.value7 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value8 = try .init(from: decoder)
+                    self.value8 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value9 = try .init(from: decoder)
+                    self.value9 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value10 = try .init(from: decoder)
+                    self.value10 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value11 = try .init(from: decoder)
+                    self.value11 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value12 = try .init(from: decoder)
+                    self.value12 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value13 = try .init(from: decoder)
+                    self.value13 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value14 = try .init(from: decoder)
+                    self.value14 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value15 = try .init(from: decoder)
+                    self.value15 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                     [
-                        value1,
-                        value2,
-                        value3,
-                        value4,
-                        value5,
-                        value6,
-                        value7,
-                        value8,
-                        value9,
-                        value10,
-                        value11,
-                        value12,
-                        value13,
-                        value14,
-                        value15
+                        self.value1,
+                        self.value2,
+                        self.value3,
+                        self.value4,
+                        self.value5,
+                        self.value6,
+                        self.value7,
+                        self.value8,
+                        self.value9,
+                        self.value10,
+                        self.value11,
+                        self.value12,
+                        self.value13,
+                        self.value14,
+                        self.value15
                     ],
                     type: Self.self,
                     codingPath: decoder.codingPath,
@@ -6758,21 +6767,21 @@ public enum Components {
                 )
             }
             public func encode(to encoder: any Encoder) throws {
-                try value1?.encode(to: encoder)
-                try value2?.encode(to: encoder)
-                try value3?.encode(to: encoder)
-                try value4?.encode(to: encoder)
-                try value5?.encode(to: encoder)
-                try value6?.encode(to: encoder)
-                try value7?.encode(to: encoder)
-                try value8?.encode(to: encoder)
-                try value9?.encode(to: encoder)
-                try value10?.encode(to: encoder)
-                try value11?.encode(to: encoder)
-                try value12?.encode(to: encoder)
-                try value13?.encode(to: encoder)
-                try value14?.encode(to: encoder)
-                try value15?.encode(to: encoder)
+                try self.value1?.encode(to: encoder)
+                try self.value2?.encode(to: encoder)
+                try self.value3?.encode(to: encoder)
+                try self.value4?.encode(to: encoder)
+                try self.value5?.encode(to: encoder)
+                try self.value6?.encode(to: encoder)
+                try self.value7?.encode(to: encoder)
+                try self.value8?.encode(to: encoder)
+                try self.value9?.encode(to: encoder)
+                try self.value10?.encode(to: encoder)
+                try self.value11?.encode(to: encoder)
+                try self.value12?.encode(to: encoder)
+                try self.value13?.encode(to: encoder)
+                try self.value14?.encode(to: encoder)
+                try self.value15?.encode(to: encoder)
             }
         }
         /// Color-coded labels help you categorize and filter your issues (just like labels in Gmail).
@@ -7594,7 +7603,7 @@ public enum Components {
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/start_side`.
-            @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case LEFT = "LEFT"
                 case RIGHT = "RIGHT"
             }
@@ -7613,7 +7622,7 @@ public enum Components {
             /// The side of the diff to which the comment applies. The side of the last line of the range for a multi-line comment
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/side`.
-            @frozen public enum sidePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum sidePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case LEFT = "LEFT"
                 case RIGHT = "RIGHT"
             }
@@ -7624,7 +7633,7 @@ public enum Components {
             /// The level at which the comment is targeted, can be a diff line or a file.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/subject_type`.
-            @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case line = "line"
                 case file = "file"
             }
@@ -8173,139 +8182,139 @@ public enum Components {
             public init(from decoder: any Decoder) throws {
                 var errors: [any Error] = []
                 do {
-                    value1 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value2 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value3 = try .init(from: decoder)
+                    self.value3 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value4 = try .init(from: decoder)
+                    self.value4 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value5 = try .init(from: decoder)
+                    self.value5 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value6 = try .init(from: decoder)
+                    self.value6 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value7 = try .init(from: decoder)
+                    self.value7 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value8 = try .init(from: decoder)
+                    self.value8 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value9 = try .init(from: decoder)
+                    self.value9 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value10 = try .init(from: decoder)
+                    self.value10 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value11 = try .init(from: decoder)
+                    self.value11 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value12 = try .init(from: decoder)
+                    self.value12 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value13 = try .init(from: decoder)
+                    self.value13 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value14 = try .init(from: decoder)
+                    self.value14 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value15 = try .init(from: decoder)
+                    self.value15 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value16 = try .init(from: decoder)
+                    self.value16 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value17 = try .init(from: decoder)
+                    self.value17 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value18 = try .init(from: decoder)
+                    self.value18 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value19 = try .init(from: decoder)
+                    self.value19 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value20 = try .init(from: decoder)
+                    self.value20 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value21 = try .init(from: decoder)
+                    self.value21 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 do {
-                    value22 = try .init(from: decoder)
+                    self.value22 = try .init(from: decoder)
                 } catch {
                     errors.append(error)
                 }
                 try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                     [
-                        value1,
-                        value2,
-                        value3,
-                        value4,
-                        value5,
-                        value6,
-                        value7,
-                        value8,
-                        value9,
-                        value10,
-                        value11,
-                        value12,
-                        value13,
-                        value14,
-                        value15,
-                        value16,
-                        value17,
-                        value18,
-                        value19,
-                        value20,
-                        value21,
-                        value22
+                        self.value1,
+                        self.value2,
+                        self.value3,
+                        self.value4,
+                        self.value5,
+                        self.value6,
+                        self.value7,
+                        self.value8,
+                        self.value9,
+                        self.value10,
+                        self.value11,
+                        self.value12,
+                        self.value13,
+                        self.value14,
+                        self.value15,
+                        self.value16,
+                        self.value17,
+                        self.value18,
+                        self.value19,
+                        self.value20,
+                        self.value21,
+                        self.value22
                     ],
                     type: Self.self,
                     codingPath: decoder.codingPath,
@@ -8313,28 +8322,28 @@ public enum Components {
                 )
             }
             public func encode(to encoder: any Encoder) throws {
-                try value1?.encode(to: encoder)
-                try value2?.encode(to: encoder)
-                try value3?.encode(to: encoder)
-                try value4?.encode(to: encoder)
-                try value5?.encode(to: encoder)
-                try value6?.encode(to: encoder)
-                try value7?.encode(to: encoder)
-                try value8?.encode(to: encoder)
-                try value9?.encode(to: encoder)
-                try value10?.encode(to: encoder)
-                try value11?.encode(to: encoder)
-                try value12?.encode(to: encoder)
-                try value13?.encode(to: encoder)
-                try value14?.encode(to: encoder)
-                try value15?.encode(to: encoder)
-                try value16?.encode(to: encoder)
-                try value17?.encode(to: encoder)
-                try value18?.encode(to: encoder)
-                try value19?.encode(to: encoder)
-                try value20?.encode(to: encoder)
-                try value21?.encode(to: encoder)
-                try value22?.encode(to: encoder)
+                try self.value1?.encode(to: encoder)
+                try self.value2?.encode(to: encoder)
+                try self.value3?.encode(to: encoder)
+                try self.value4?.encode(to: encoder)
+                try self.value5?.encode(to: encoder)
+                try self.value6?.encode(to: encoder)
+                try self.value7?.encode(to: encoder)
+                try self.value8?.encode(to: encoder)
+                try self.value9?.encode(to: encoder)
+                try self.value10?.encode(to: encoder)
+                try self.value11?.encode(to: encoder)
+                try self.value12?.encode(to: encoder)
+                try self.value13?.encode(to: encoder)
+                try self.value14?.encode(to: encoder)
+                try self.value15?.encode(to: encoder)
+                try self.value16?.encode(to: encoder)
+                try self.value17?.encode(to: encoder)
+                try self.value18?.encode(to: encoder)
+                try self.value19?.encode(to: encoder)
+                try self.value20?.encode(to: encoder)
+                try self.value21?.encode(to: encoder)
+                try self.value22?.encode(to: encoder)
             }
         }
         /// A collection of related issues and pull requests.
@@ -8358,7 +8367,7 @@ public enum Components {
             /// The state of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/milestone/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case open = "open"
                 case closed = "closed"
             }
@@ -8465,7 +8474,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -8492,7 +8501,7 @@ public enum Components {
         /// The property to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/sort`.
-        @frozen public enum sort: String, Codable, Hashable, Sendable {
+        @frozen public enum sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
         }
@@ -8836,7 +8845,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/issues/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/issues/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum filterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case assigned = "assigned"
                     case created = "created"
                     case mentioned = "mentioned"
@@ -8849,7 +8858,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/issues/GET/query/filter`.
                 public var filter: Operations.issues_sol_list.Input.Query.filterPayload?
                 /// - Remark: Generated from `#/paths/issues/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -8863,7 +8872,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/issues/GET/query/labels`.
                 public var labels: Components.Parameters.labels?
                 /// - Remark: Generated from `#/paths/issues/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case comments = "comments"
@@ -8873,7 +8882,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/issues/GET/query/sort`.
                 public var sort: Operations.issues_sol_list.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -9070,6 +9079,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//issues/get(issues/list)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9178,7 +9195,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/issues/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/issues/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum filterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case assigned = "assigned"
                     case created = "created"
                     case mentioned = "mentioned"
@@ -9191,7 +9208,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/issues/GET/query/filter`.
                 public var filter: Operations.issues_sol_list_hyphen_for_hyphen_org.Input.Query.filterPayload?
                 /// - Remark: Generated from `#/paths/orgs/{org}/issues/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -9209,7 +9226,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/issues/GET/query/type`.
                 public var _type: Swift.String?
                 /// - Remark: Generated from `#/paths/orgs/{org}/issues/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case comments = "comments"
@@ -9219,7 +9236,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/issues/GET/query/sort`.
                 public var sort: Operations.issues_sol_list_hyphen_for_hyphen_org.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -9715,6 +9732,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.issues_sol_check_hyphen_user_hyphen_can_hyphen_be_hyphen_assigned.Output.NoContent)
+            /// If the `assignee` can be assigned to issues in the repository, a `204` header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/assignees/{assignee}/get(issues/check-user-can-be-assigned)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9864,7 +9889,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/GET/query/milestone`.
                 public var milestone: Swift.String?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -9894,7 +9919,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/GET/query/labels`.
                 public var labels: Components.Parameters.labels?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case comments = "comments"
@@ -9904,7 +9929,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/GET/query/sort`.
                 public var sort: Operations.issues_sol_list_hyphen_for_hyphen_repo.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -10748,7 +10773,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort`.
-                @frozen public enum sort: String, Codable, Hashable, Sendable {
+                @frozen public enum sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -10757,7 +10782,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/GET/query/sort`.
                 public var sort: Components.Parameters.sort?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -11417,6 +11442,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.issues_sol_delete_hyphen_comment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/delete(issues/delete-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -12072,6 +12105,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/get(issues/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -12235,7 +12276,7 @@ public enum Operations {
                     /// The open or closed state of the issue.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/PATCH/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case open = "open"
                         case closed = "closed"
                     }
@@ -12246,7 +12287,7 @@ public enum Operations {
                     /// The reason for the state change. Ignored unless `state` is changed.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/PATCH/requestBody/json/state_reason`.
-                    @frozen public enum state_reasonPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum state_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case completed = "completed"
                         case not_planned = "not_planned"
                         case reopened = "reopened"
@@ -13099,6 +13140,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.issues_sol_check_hyphen_user_hyphen_can_hyphen_be_hyphen_assigned_hyphen_to_hyphen_issue.Output.NoContent)
+            /// Response if `assignee` can be assigned to `issue_number`
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}/get(issues/check-user-can-be-assigned-to-issue)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15067,6 +15116,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.issues_sol_remove_hyphen_all_hyphen_labels.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/labels/delete(issues/remove-all-labels)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15471,7 +15528,7 @@ public enum Operations {
                     ///  * `spam`
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/lock/PUT/requestBody/json/lock_reason`.
-                    @frozen public enum lock_reasonPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum lock_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case off_hyphen_topic = "off-topic"
                         case too_space_heated = "too heated"
                         case resolved = "resolved"
@@ -15527,6 +15584,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.issues_sol_lock.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/lock/put(issues/lock)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15743,6 +15808,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.issues_sol_unlock.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/lock/delete(issues/unlock)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -18043,6 +18116,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.issues_sol_delete_hyphen_label.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/labels/{name}/delete(issues/delete-label)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -18102,7 +18183,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/milestones/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/milestones/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -18112,7 +18193,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/milestones/GET/query/state`.
                 public var state: Operations.issues_sol_list_hyphen_milestones.Input.Query.statePayload?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/milestones/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case due_on = "due_on"
                     case completeness = "completeness"
                 }
@@ -18121,7 +18202,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/milestones/GET/query/sort`.
                 public var sort: Operations.issues_sol_list_hyphen_milestones.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/milestones/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -18369,7 +18450,7 @@ public enum Operations {
                     /// The state of the milestone. Either `open` or `closed`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/milestones/POST/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case open = "open"
                         case closed = "closed"
                     }
@@ -18812,7 +18893,7 @@ public enum Operations {
                     /// The state of the milestone. Either `open` or `closed`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/milestones/{milestone_number}/PATCH/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case open = "open"
                         case closed = "closed"
                     }
@@ -19032,6 +19113,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.issues_sol_delete_hyphen_milestone.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/milestones/{milestone_number}/delete(issues/delete-milestone)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -19319,7 +19408,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/issues/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/issues/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum filterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case assigned = "assigned"
                     case created = "created"
                     case mentioned = "mentioned"
@@ -19332,7 +19421,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/issues/GET/query/filter`.
                 public var filter: Operations.issues_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query.filterPayload?
                 /// - Remark: Generated from `#/paths/user/issues/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -19346,7 +19435,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/issues/GET/query/labels`.
                 public var labels: Components.Parameters.labels?
                 /// - Remark: Generated from `#/paths/user/issues/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case comments = "comments"
@@ -19356,7 +19445,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/issues/GET/query/sort`.
                 public var sort: Operations.issues_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -19533,6 +19622,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/issues/get(issues/list-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
