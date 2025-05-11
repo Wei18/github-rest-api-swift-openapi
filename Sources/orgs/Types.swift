@@ -2461,6 +2461,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -3388,7 +3397,7 @@ public enum Components {
             /// The level of permission to grant the access token for GitHub Actions workflows, workflow runs, and artifacts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/actions`.
-            @frozen public enum actionsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum actionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3399,7 +3408,7 @@ public enum Components {
             /// The level of permission to grant the access token for repository creation, deletion, settings, teams, and collaborators creation.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/administration`.
-            @frozen public enum administrationPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum administrationPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3410,7 +3419,7 @@ public enum Components {
             /// The level of permission to grant the access token for checks on code.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/checks`.
-            @frozen public enum checksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum checksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3421,7 +3430,7 @@ public enum Components {
             /// The level of permission to grant the access token to create, edit, delete, and list Codespaces.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/codespaces`.
-            @frozen public enum codespacesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum codespacesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3432,7 +3441,7 @@ public enum Components {
             /// The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/contents`.
-            @frozen public enum contentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum contentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3443,7 +3452,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage Dependabot secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/dependabot_secrets`.
-            @frozen public enum dependabot_secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum dependabot_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3454,7 +3463,7 @@ public enum Components {
             /// The level of permission to grant the access token for deployments and deployment statuses.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/deployments`.
-            @frozen public enum deploymentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum deploymentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3465,7 +3474,7 @@ public enum Components {
             /// The level of permission to grant the access token for managing repository environments.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/environments`.
-            @frozen public enum environmentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum environmentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3476,7 +3485,7 @@ public enum Components {
             /// The level of permission to grant the access token for issues and related comments, assignees, labels, and milestones.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/issues`.
-            @frozen public enum issuesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum issuesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3487,7 +3496,7 @@ public enum Components {
             /// The level of permission to grant the access token to search repositories, list collaborators, and access repository metadata.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/metadata`.
-            @frozen public enum metadataPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum metadataPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3498,7 +3507,7 @@ public enum Components {
             /// The level of permission to grant the access token for packages published to GitHub Packages.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/packages`.
-            @frozen public enum packagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum packagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3509,7 +3518,7 @@ public enum Components {
             /// The level of permission to grant the access token to retrieve Pages statuses, configuration, and builds, as well as create new builds.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/pages`.
-            @frozen public enum pagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum pagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3520,7 +3529,7 @@ public enum Components {
             /// The level of permission to grant the access token for pull requests and related comments, assignees, labels, milestones, and merges.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/pull_requests`.
-            @frozen public enum pull_requestsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum pull_requestsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3531,7 +3540,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and edit custom properties for a repository, when allowed by the property.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_custom_properties`.
-            @frozen public enum repository_custom_propertiesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_custom_propertiesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3542,7 +3551,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the post-receive hooks for a repository.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_hooks`.
-            @frozen public enum repository_hooksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_hooksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3553,7 +3562,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage repository projects, columns, and cards.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_projects`.
-            @frozen public enum repository_projectsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_projectsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -3565,7 +3574,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage secret scanning alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/secret_scanning_alerts`.
-            @frozen public enum secret_scanning_alertsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanning_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3576,7 +3585,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage repository secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/secrets`.
-            @frozen public enum secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3587,7 +3596,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage security events like code scanning alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/security_events`.
-            @frozen public enum security_eventsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum security_eventsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3598,7 +3607,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage just a single file.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/single_file`.
-            @frozen public enum single_filePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum single_filePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3609,7 +3618,7 @@ public enum Components {
             /// The level of permission to grant the access token for commit statuses.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/statuses`.
-            @frozen public enum statusesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3620,7 +3629,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage Dependabot alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/vulnerability_alerts`.
-            @frozen public enum vulnerability_alertsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum vulnerability_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3631,7 +3640,7 @@ public enum Components {
             /// The level of permission to grant the access token to update GitHub Actions workflow files.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/workflows`.
-            @frozen public enum workflowsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum workflowsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token to update GitHub Actions workflow files.
@@ -3641,7 +3650,7 @@ public enum Components {
             /// The level of permission to grant the access token for organization teams and members.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/members`.
-            @frozen public enum membersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum membersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3652,7 +3661,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage access to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_administration`.
-            @frozen public enum organization_administrationPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_administrationPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3663,7 +3672,7 @@ public enum Components {
             /// The level of permission to grant the access token for custom repository roles management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_roles`.
-            @frozen public enum organization_custom_rolesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_custom_rolesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3674,7 +3683,7 @@ public enum Components {
             /// The level of permission to grant the access token for custom organization roles management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_org_roles`.
-            @frozen public enum organization_custom_org_rolesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_custom_org_rolesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3685,7 +3694,7 @@ public enum Components {
             /// The level of permission to grant the access token for custom property management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_properties`.
-            @frozen public enum organization_custom_propertiesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_custom_propertiesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -3697,7 +3706,7 @@ public enum Components {
             /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_copilot_seat_management`.
-            @frozen public enum organization_copilot_seat_managementPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_copilot_seat_managementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
@@ -3707,7 +3716,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage announcement banners for an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_announcement_banners`.
-            @frozen public enum organization_announcement_bannersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_announcement_bannersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3718,7 +3727,7 @@ public enum Components {
             /// The level of permission to grant the access token to view events triggered by an activity in an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_events`.
-            @frozen public enum organization_eventsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_eventsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
             }
             /// The level of permission to grant the access token to view events triggered by an activity in an organization.
@@ -3728,7 +3737,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the post-receive hooks for an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_hooks`.
-            @frozen public enum organization_hooksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_hooksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3739,7 +3748,7 @@ public enum Components {
             /// The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_personal_access_tokens`.
-            @frozen public enum organization_personal_access_tokensPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_personal_access_tokensPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3750,7 +3759,7 @@ public enum Components {
             /// The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_personal_access_token_requests`.
-            @frozen public enum organization_personal_access_token_requestsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_personal_access_token_requestsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3761,7 +3770,7 @@ public enum Components {
             /// The level of permission to grant the access token for viewing an organization's plan.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_plan`.
-            @frozen public enum organization_planPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_planPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
             }
             /// The level of permission to grant the access token for viewing an organization's plan.
@@ -3771,7 +3780,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_projects`.
-            @frozen public enum organization_projectsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_projectsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -3783,7 +3792,7 @@ public enum Components {
             /// The level of permission to grant the access token for organization packages published to GitHub Packages.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_packages`.
-            @frozen public enum organization_packagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_packagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3794,7 +3803,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage organization secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_secrets`.
-            @frozen public enum organization_secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3805,7 +3814,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_self_hosted_runners`.
-            @frozen public enum organization_self_hosted_runnersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_self_hosted_runnersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3816,7 +3825,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage users blocked by the organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_user_blocking`.
-            @frozen public enum organization_user_blockingPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_user_blockingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3827,7 +3836,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage team discussions and related comments.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/team_discussions`.
-            @frozen public enum team_discussionsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum team_discussionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3838,7 +3847,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the email addresses belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/email_addresses`.
-            @frozen public enum email_addressesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum email_addressesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3849,7 +3858,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the followers belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/followers`.
-            @frozen public enum followersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum followersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3860,7 +3869,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage git SSH keys.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/git_ssh_keys`.
-            @frozen public enum git_ssh_keysPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum git_ssh_keysPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3871,7 +3880,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage GPG keys belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/gpg_keys`.
-            @frozen public enum gpg_keysPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum gpg_keysPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3882,7 +3891,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage interaction limits on a repository.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/interaction_limits`.
-            @frozen public enum interaction_limitsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum interaction_limitsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3893,7 +3902,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the profile settings belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/profile`.
-            @frozen public enum profilePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum profilePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage the profile settings belonging to a user.
@@ -3903,7 +3912,7 @@ public enum Components {
             /// The level of permission to grant the access token to list and manage repositories a user is starring.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/starring`.
-            @frozen public enum starringPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum starringPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -4286,19 +4295,19 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try .init(from: decoder)
+                        self.value1 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try .init(from: decoder)
+                        self.value2 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2
+                            self.value1,
+                            self.value2
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -4306,8 +4315,8 @@ public enum Components {
                     )
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1?.encode(to: encoder)
-                    try value2?.encode(to: encoder)
+                    try self.value1?.encode(to: encoder)
+                    try self.value2?.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/installation/account`.
@@ -4315,7 +4324,7 @@ public enum Components {
             /// Describe whether all repositories have been selected or there's a selection involved
             ///
             /// - Remark: Generated from `#/components/schemas/installation/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case selected = "selected"
             }
@@ -4514,7 +4523,7 @@ public enum Components {
             /// The color of the issue type.
             ///
             /// - Remark: Generated from `#/components/schemas/issue-type/color`.
-            @frozen public enum colorPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum colorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case gray = "gray"
                 case blue = "blue"
                 case green = "green"
@@ -4586,7 +4595,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -4608,7 +4617,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -4634,7 +4643,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -4660,7 +4669,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -4682,7 +4691,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -4704,7 +4713,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -4726,7 +4735,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -6648,7 +6657,7 @@ public enum Components {
             /// Color for the issue type.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-create-issue-type/color`.
-            @frozen public enum colorPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum colorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case gray = "gray"
                 case blue = "blue"
                 case green = "green"
@@ -6704,7 +6713,7 @@ public enum Components {
             /// Color for the issue type.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-update-issue-type/color`.
-            @frozen public enum colorPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum colorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case gray = "gray"
                 case blue = "blue"
                 case green = "green"
@@ -6752,7 +6761,7 @@ public enum Components {
             /// The state of the member in the organization. The `pending` state indicates the user has not yet accepted an invitation.
             ///
             /// - Remark: Generated from `#/components/schemas/org-membership/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case active = "active"
                 case pending = "pending"
             }
@@ -6763,7 +6772,7 @@ public enum Components {
             /// The user's membership type in the organization.
             ///
             /// - Remark: Generated from `#/components/schemas/org-membership/role`.
-            @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case admin = "admin"
                 case member = "member"
                 case billing_manager = "billing_manager"
@@ -6851,7 +6860,7 @@ public enum Components {
             /// The system role from which this role inherits permissions.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-role/base_role`.
-            @frozen public enum base_rolePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum base_rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case triage = "triage"
                 case write = "write"
@@ -6865,7 +6874,7 @@ public enum Components {
             /// Source answers the question, "where did this role come from?"
             ///
             /// - Remark: Generated from `#/components/schemas/organization-role/source`.
-            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case Organization = "Organization"
                 case Enterprise = "Enterprise"
                 case Predefined = "Predefined"
@@ -6940,7 +6949,7 @@ public enum Components {
             /// Determines if the team has a direct, indirect, or mixed relationship to a role
             ///
             /// - Remark: Generated from `#/components/schemas/team-role-assignment/assignment`.
-            @frozen public enum assignmentPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum assignmentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case direct = "direct"
                 case indirect = "indirect"
                 case mixed = "mixed"
@@ -7201,7 +7210,7 @@ public enum Components {
             /// Determines if the user has a direct, indirect, or mixed relationship to a role
             ///
             /// - Remark: Generated from `#/components/schemas/user-role-assignment/assignment`.
-            @frozen public enum assignmentPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum assignmentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case direct = "direct"
                 case indirect = "indirect"
                 case mixed = "mixed"
@@ -7380,7 +7389,7 @@ public enum Components {
             /// Type of repository selection requested.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant-request/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case all = "all"
                 case subset = "subset"
@@ -7576,7 +7585,7 @@ public enum Components {
             /// Type of repository selection requested.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-programmatic-access-grant/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case all = "all"
                 case subset = "subset"
@@ -7770,7 +7779,7 @@ public enum Components {
             /// The source type of the property
             ///
             /// - Remark: Generated from `#/components/schemas/custom-property/source_type`.
-            @frozen public enum source_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum source_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case organization = "organization"
                 case enterprise = "enterprise"
             }
@@ -7781,7 +7790,7 @@ public enum Components {
             /// The type of the value for the property
             ///
             /// - Remark: Generated from `#/components/schemas/custom-property/value_type`.
-            @frozen public enum value_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum value_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case string = "string"
                 case single_select = "single_select"
                 case multi_select = "multi_select"
@@ -7848,7 +7857,7 @@ public enum Components {
             /// Who can edit the values of the property
             ///
             /// - Remark: Generated from `#/components/schemas/custom-property/values_editable_by`.
-            @frozen public enum values_editable_byPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum values_editable_byPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case org_actors = "org_actors"
                 case org_and_repo_actors = "org_and_repo_actors"
             }
@@ -7908,7 +7917,7 @@ public enum Components {
             /// The type of the value for the property
             ///
             /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/value_type`.
-            @frozen public enum value_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum value_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case string = "string"
                 case single_select = "single_select"
                 case multi_select = "multi_select"
@@ -7975,7 +7984,7 @@ public enum Components {
             /// Who can edit the values of the property
             ///
             /// - Remark: Generated from `#/components/schemas/custom-property-set-payload/values_editable_by`.
-            @frozen public enum values_editable_byPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum values_editable_byPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case org_actors = "org_actors"
                 case org_and_repo_actors = "org_and_repo_actors"
             }
@@ -8217,12 +8226,12 @@ public enum Components {
                 self.value2 = value2
             }
             public init(from decoder: any Decoder) throws {
-                value1 = try .init(from: decoder)
-                value2 = try .init(from: decoder)
+                self.value1 = try .init(from: decoder)
+                self.value2 = try .init(from: decoder)
             }
             public func encode(to encoder: any Encoder) throws {
-                try value1.encode(to: encoder)
-                try value2.encode(to: encoder)
+                try self.value1.encode(to: encoder)
+                try self.value2.encode(to: encoder)
             }
         }
     }
@@ -8239,7 +8248,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -8276,7 +8285,7 @@ public enum Components {
         /// The type of the actor
         ///
         /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
-        @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
+        @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
             case installation = "installation"
             case classic_pat = "classic_pat"
             case fine_grained_pat = "fine_grained_pat"
@@ -8296,7 +8305,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/parameters/api-insights-max-timestamp`.
         public typealias api_hyphen_insights_hyphen_max_hyphen_timestamp = Swift.String
         /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort`.
-        @frozen public enum api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+        @frozen public enum api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
             case last_rate_limited_timestamp = "last_rate_limited_timestamp"
             case last_request_timestamp = "last_request_timestamp"
             case rate_limited_request_count = "rate_limited_request_count"
@@ -8313,7 +8322,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/parameters/api-insights-api-route-substring`.
         public typealias api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring = Swift.String
         /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_sort`.
-        @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+        @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
             case last_rate_limited_timestamp = "last_rate_limited_timestamp"
             case last_request_timestamp = "last_request_timestamp"
             case rate_limited_request_count = "rate_limited_request_count"
@@ -8359,7 +8368,7 @@ public enum Components {
         /// The property by which to sort the results.
         ///
         /// - Remark: Generated from `#/components/parameters/personal-access-token-sort`.
-        @frozen public enum personal_hyphen_access_hyphen_token_hyphen_sort: String, Codable, Hashable, Sendable {
+        @frozen public enum personal_hyphen_access_hyphen_token_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created_at = "created_at"
         }
         /// A list of owner usernames to use to filter the results.
@@ -8397,7 +8406,7 @@ public enum Components {
         /// The security feature to enable or disable.
         ///
         /// - Remark: Generated from `#/components/parameters/security-product`.
-        @frozen public enum security_hyphen_product: String, Codable, Hashable, Sendable {
+        @frozen public enum security_hyphen_product: String, Codable, Hashable, Sendable, CaseIterable {
             case dependency_graph = "dependency_graph"
             case dependabot_alerts = "dependabot_alerts"
             case dependabot_security_updates = "dependabot_security_updates"
@@ -8412,7 +8421,7 @@ public enum Components {
         /// `disable_all` means to disable the specified security feature for all repositories in the organization.
         ///
         /// - Remark: Generated from `#/components/parameters/org-security-product-enablement`.
-        @frozen public enum org_hyphen_security_hyphen_product_hyphen_enablement: String, Codable, Hashable, Sendable {
+        @frozen public enum org_hyphen_security_hyphen_product_hyphen_enablement: String, Codable, Hashable, Sendable, CaseIterable {
             case enable_all = "enable_all"
             case disable_all = "disable_all"
         }
@@ -8645,6 +8654,34 @@ public enum Components {
                 self.body = body
             }
         }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
         public struct conflict: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/conflict/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -8676,34 +8713,6 @@ public enum Components {
         public struct no_content: Sendable, Hashable {
             /// Creates a new `no_content`.
             public init() {}
-        }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
-                self.body = body
-            }
         }
     }
     /// Types generated from the `#/components/headers` section of the OpenAPI document.
@@ -8853,6 +8862,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//organizations/get(orgs/list)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9153,7 +9170,7 @@ public enum Operations {
                     /// Default permission level members have for organization repositories.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/default_repository_permission`.
-                    @frozen public enum default_repository_permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum default_repository_permissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case read = "read"
                         case write = "write"
                         case admin = "admin"
@@ -9183,7 +9200,7 @@ public enum Operations {
                     /// **Note:** This parameter is closing down and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/PATCH/requestBody/json/members_allowed_repository_creation_type`.
-                    @frozen public enum members_allowed_repository_creation_typePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum members_allowed_repository_creation_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case none = "none"
@@ -10322,6 +10339,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_check_hyphen_blocked_hyphen_user.Output.NoContent)
+            /// If the user is blocked
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/blocks/{username}/get(orgs/check-blocked-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -10490,6 +10515,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_block_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/blocks/{username}/put(orgs/block-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -10613,6 +10646,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_unblock_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/blocks/{username}/delete(orgs/unblock-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -11873,6 +11914,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_delete_hyphen_webhook.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/delete(orgs/delete-webhook)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -12958,6 +13007,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_ping_hyphen_webhook.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/hooks/{hook_id}/pings/post(orgs/ping-webhook)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13045,7 +13102,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/path/org`.
                 public var org: Components.Parameters.org
                 /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
-                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case installation = "installation"
                     case classic_pat = "classic_pat"
                     case fine_grained_pat = "fine_grained_pat"
@@ -13096,7 +13153,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -13105,7 +13162,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
                 /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort`.
-                @frozen public enum api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case last_rate_limited_timestamp = "last_rate_limited_timestamp"
                     case last_request_timestamp = "last_request_timestamp"
                     case rate_limited_request_count = "rate_limited_request_count"
@@ -13306,7 +13363,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -13315,7 +13372,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/subject-stats/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
                 /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_sort`.
-                @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case last_rate_limited_timestamp = "last_rate_limited_timestamp"
                     case last_request_timestamp = "last_request_timestamp"
                     case rate_limited_request_count = "rate_limited_request_count"
@@ -13815,7 +13872,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}/GET/path/org`.
                 public var org: Components.Parameters.org
                 /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
-                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case installation = "installation"
                     case classic_pat = "classic_pat"
                     case fine_grained_pat = "fine_grained_pat"
@@ -14339,7 +14396,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}/GET/path/org`.
                 public var org: Components.Parameters.org
                 /// - Remark: Generated from `#/components/parameters/api-insights-actor-type`.
-                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum api_hyphen_insights_hyphen_actor_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case installation = "installation"
                     case classic_pat = "classic_pat"
                     case fine_grained_pat = "fine_grained_pat"
@@ -14565,7 +14622,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -14574,7 +14631,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/insights/api/user-stats/{user_id}/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
                 /// - Remark: Generated from `#/components/parameters/api_hyphen_insights_hyphen_sort`.
-                @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum api_hyphen_insights_hyphen_sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case last_rate_limited_timestamp = "last_rate_limited_timestamp"
                     case last_request_timestamp = "last_request_timestamp"
                     case rate_limited_request_count = "rate_limited_request_count"
@@ -14975,7 +15032,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/invitations/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// - Remark: Generated from `#/paths/orgs/{org}/invitations/GET/query/role`.
-                @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case all = "all"
                     case admin = "admin"
                     case direct_member = "direct_member"
@@ -14987,7 +15044,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/invitations/GET/query/role`.
                 public var role: Operations.orgs_sol_list_hyphen_pending_hyphen_invitations.Input.Query.rolePayload?
                 /// - Remark: Generated from `#/paths/orgs/{org}/invitations/GET/query/invitation_source`.
-                @frozen public enum invitation_sourcePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum invitation_sourcePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case all = "all"
                     case member = "member"
                     case scim = "scim"
@@ -15227,7 +15284,7 @@ public enum Operations {
                     ///  * `reinstate` - The previous role assigned to the invitee before they were removed from your organization. Can be one of the roles listed above. Only works if the invitee was previously part of your organization.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/invitations/POST/requestBody/json/role`.
-                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case admin = "admin"
                         case direct_member = "direct_member"
                         case billing_manager = "billing_manager"
@@ -15490,6 +15547,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_cancel_hyphen_invitation.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/invitations/{invitation_id}/delete(orgs/cancel-invitation)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -16416,6 +16481,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_delete_hyphen_issue_hyphen_type.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/issue-types/{issue_type_id}/delete(orgs/delete-issue-type)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -16537,16 +16610,17 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/members/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/members/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum filterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _2fa_disabled = "2fa_disabled"
+                    case _2fa_insecure = "2fa_insecure"
                     case all = "all"
                 }
-                /// Filter members returned in the list. `2fa_disabled` means that only members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. This options is only available for organization owners.
+                /// Filter members returned in the list. `2fa_disabled` means that only members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. `2fa_insecure` means that only members with [insecure 2FA methods](https://docs.github.com/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization#requiring-secure-methods-of-two-factor-authentication-in-your-organization) will be returned. These options are only available for organization owners.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/members/GET/query/filter`.
                 public var filter: Operations.orgs_sol_list_hyphen_members.Input.Query.filterPayload?
                 /// - Remark: Generated from `#/paths/orgs/{org}/members/GET/query/role`.
-                @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case all = "all"
                     case admin = "admin"
                     case member = "member"
@@ -16566,7 +16640,7 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - filter: Filter members returned in the list. `2fa_disabled` means that only members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. This options is only available for organization owners.
+                ///   - filter: Filter members returned in the list. `2fa_disabled` means that only members without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. `2fa_insecure` means that only members with [insecure 2FA methods](https://docs.github.com/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization#requiring-secure-methods-of-two-factor-authentication-in-your-organization) will be returned. These options are only available for organization owners.
                 ///   - role: Filter members returned by their role.
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
@@ -16788,6 +16862,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_check_hyphen_membership_hyphen_for_hyphen_user.Output.NoContent)
+            /// Response if requester is an organization member and user is a member
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/get(orgs/check-membership-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -16861,6 +16943,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.orgs_sol_check_hyphen_membership_hyphen_for_hyphen_user.Output.NotFound)
+            /// Not Found if requester is an organization member and user is not a member
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/get(orgs/check-membership-for-user)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -16953,6 +17043,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_remove_hyphen_member.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/delete(orgs/remove-member)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -17273,7 +17371,7 @@ public enum Operations {
                     ///  * `member` - The user will become a non-owner member of the organization.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/memberships/{username}/PUT/requestBody/json/role`.
-                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case admin = "admin"
                         case member = "member"
                     }
@@ -17514,6 +17612,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_remove_hyphen_membership_hyphen_for_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/memberships/{username}/delete(orgs/remove-membership-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -17876,6 +17982,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_revoke_hyphen_all_hyphen_org_hyphen_roles_hyphen_team.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/teams/{team_slug}/delete(orgs/revoke-all-org-roles-team)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -17962,6 +18076,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_assign_hyphen_team_hyphen_to_hyphen_org_hyphen_role.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/teams/{team_slug}/{role_id}/put(orgs/assign-team-to-org-role)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -17989,6 +18111,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.orgs_sol_assign_hyphen_team_hyphen_to_hyphen_org_hyphen_role.Output.NotFound)
+            /// Response if the organization, team or role does not exist.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/teams/{team_slug}/{role_id}/put(orgs/assign-team-to-org-role)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -18016,6 +18146,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.orgs_sol_assign_hyphen_team_hyphen_to_hyphen_org_hyphen_role.Output.UnprocessableContent)
+            /// Response if the organization roles feature is not enabled for the organization, or validation failed.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/teams/{team_slug}/{role_id}/put(orgs/assign-team-to-org-role)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -18102,6 +18240,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_revoke_hyphen_org_hyphen_role_hyphen_team.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/teams/{team_slug}/{role_id}/delete(orgs/revoke-org-role-team)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -18181,6 +18327,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_revoke_hyphen_all_hyphen_org_hyphen_roles_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/users/{username}/delete(orgs/revoke-all-org-roles-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -18267,6 +18421,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_assign_hyphen_user_hyphen_to_hyphen_org_hyphen_role.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/users/{username}/{role_id}/put(orgs/assign-user-to-org-role)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -18294,6 +18456,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.orgs_sol_assign_hyphen_user_hyphen_to_hyphen_org_hyphen_role.Output.NotFound)
+            /// Response if the organization, user or role does not exist.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/users/{username}/{role_id}/put(orgs/assign-user-to-org-role)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -18321,6 +18491,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.orgs_sol_assign_hyphen_user_hyphen_to_hyphen_org_hyphen_role.Output.UnprocessableContent)
+            /// Response if the organization roles feature is not enabled enabled for the organization, the validation failed, or the user is not an organization member.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/users/{username}/{role_id}/put(orgs/assign-user-to-org-role)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -18407,6 +18585,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_revoke_hyphen_org_hyphen_role_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/users/{username}/{role_id}/delete(orgs/revoke-org-role-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -18794,6 +18980,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.orgs_sol_list_hyphen_org_hyphen_role_hyphen_teams.Output.NotFound)
+            /// Response if the organization or role does not exist.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/teams/get(orgs/list-org-role-teams)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -18821,6 +19015,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.orgs_sol_list_hyphen_org_hyphen_role_hyphen_teams.Output.UnprocessableContent)
+            /// Response if the organization roles feature is not enabled or validation failed.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/teams/get(orgs/list-org-role-teams)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -19039,6 +19241,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.orgs_sol_list_hyphen_org_hyphen_role_hyphen_users.Output.NotFound)
+            /// Response if the organization or role does not exist.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/users/get(orgs/list-org-role-users)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -19066,6 +19276,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.orgs_sol_list_hyphen_org_hyphen_role_hyphen_users.Output.UnprocessableContent)
+            /// Response if the organization roles feature is not enabled or validation failed.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/organization-roles/{role_id}/users/get(orgs/list-org-role-users)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -19141,11 +19359,12 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/outside_collaborators/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/outside_collaborators/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum filterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _2fa_disabled = "2fa_disabled"
+                    case _2fa_insecure = "2fa_insecure"
                     case all = "all"
                 }
-                /// Filter the list of outside collaborators. `2fa_disabled` means that only outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned.
+                /// Filter the list of outside collaborators. `2fa_disabled` means that only outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. `2fa_insecure` means that only outside collaborators with [insecure 2FA methods](https://docs.github.com/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization#requiring-secure-methods-of-two-factor-authentication-in-your-organization) will be returned.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/outside_collaborators/GET/query/filter`.
                 public var filter: Operations.orgs_sol_list_hyphen_outside_hyphen_collaborators.Input.Query.filterPayload?
@@ -19160,7 +19379,7 @@ public enum Operations {
                 /// Creates a new `Query`.
                 ///
                 /// - Parameters:
-                ///   - filter: Filter the list of outside collaborators. `2fa_disabled` means that only outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned.
+                ///   - filter: Filter the list of outside collaborators. `2fa_disabled` means that only outside collaborators without [two-factor authentication](https://github.com/blog/1614-two-factor-authentication) enabled will be returned. `2fa_insecure` means that only outside collaborators with [insecure 2FA methods](https://docs.github.com/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization#requiring-secure-methods-of-two-factor-authentication-in-your-organization) will be returned.
                 ///   - per_page: The number of results per page (max 100). For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 ///   - page: The page number of the results to fetch. For more information, see "[Using pagination in the REST API](https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api)."
                 public init(
@@ -19458,6 +19677,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator.Output.NoContent)
+            /// User was converted
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/outside_collaborators/{username}/put(orgs/convert-member-to-outside-collaborator)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -19485,6 +19712,14 @@ public enum Operations {
             ///
             /// HTTP response code: `403 forbidden`.
             case forbidden(Operations.orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator.Output.Forbidden)
+            /// Forbidden if user is the last owner of the organization, not a member of the organization, or if the enterprise enforces a policy for inviting outside collaborators. For more information, see "[Enforcing repository management policies in your enterprise](https://docs.github.com/admin/policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories)."
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/outside_collaborators/{username}/put(orgs/convert-member-to-outside-collaborator)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
@@ -19625,6 +19860,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_remove_hyphen_outside_hyphen_collaborator.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/outside_collaborators/{username}/delete(orgs/remove-outside-collaborator)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -19784,7 +20027,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-token-requests/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// - Remark: Generated from `#/components/parameters/personal-access-token-sort`.
-                @frozen public enum personal_hyphen_access_hyphen_token_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum personal_hyphen_access_hyphen_token_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created_at = "created_at"
                 }
                 /// The property by which to sort the results.
@@ -19792,7 +20035,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-token-requests/GET/query/sort`.
                 public var sort: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -20133,7 +20376,7 @@ public enum Operations {
                     /// Action to apply to the requests.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-token-requests/POST/requestBody/json/action`.
-                    @frozen public enum actionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case approve = "approve"
                         case deny = "deny"
                     }
@@ -20387,7 +20630,7 @@ public enum Operations {
                     /// Action to apply to the request.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-token-requests/{pat_request_id}/POST/requestBody/json/action`.
-                    @frozen public enum actionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case approve = "approve"
                         case deny = "deny"
                     }
@@ -20535,6 +20778,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-token-requests/{pat_request_id}/post(orgs/review-pat-grant-request)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -20878,7 +21129,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-tokens/GET/query/page`.
                 public var page: Components.Parameters.page?
                 /// - Remark: Generated from `#/components/parameters/personal-access-token-sort`.
-                @frozen public enum personal_hyphen_access_hyphen_token_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum personal_hyphen_access_hyphen_token_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created_at = "created_at"
                 }
                 /// The property by which to sort the results.
@@ -20886,7 +21137,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-tokens/GET/query/sort`.
                 public var sort: Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -21223,7 +21474,7 @@ public enum Operations {
                     /// Action to apply to the fine-grained personal access token.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-tokens/POST/requestBody/json/action`.
-                    @frozen public enum actionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case revoke = "revoke"
                     }
                     /// Action to apply to the fine-grained personal access token.
@@ -21472,7 +21723,7 @@ public enum Operations {
                     /// Action to apply to the fine-grained personal access token.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/personal-access-tokens/{pat_id}/POST/requestBody/json/action`.
-                    @frozen public enum actionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case revoke = "revoke"
                     }
                     /// Action to apply to the fine-grained personal access token.
@@ -21563,6 +21814,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/personal-access-tokens/{pat_id}/post(orgs/update-pat-access)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -22763,6 +23022,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/properties/schema/{custom_property_name}/delete(orgs/remove-custom-property)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -23194,6 +23461,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values_hyphen_for_hyphen_repos.Output.NoContent)
+            /// No Content when custom property values are successfully created or updated
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/properties/values/patch(orgs/create-or-update-custom-properties-values-for-repos)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -23541,6 +23816,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_check_hyphen_public_hyphen_membership_hyphen_for_hyphen_user.Output.NoContent)
+            /// Response if user is a public member
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/public_members/{username}/get(orgs/check-public-membership-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -23568,6 +23851,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.orgs_sol_check_hyphen_public_hyphen_membership_hyphen_for_hyphen_user.Output.NotFound)
+            /// Not Found if user is not a public member
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/public_members/{username}/get(orgs/check-public-membership-for-user)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -23662,6 +23953,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_set_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/public_members/{username}/put(orgs/set-public-membership-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -23785,6 +24084,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_remove_hyphen_public_hyphen_membership_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/public_members/{username}/delete(orgs/remove-public-membership-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -24402,6 +24709,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_add_hyphen_security_hyphen_manager_hyphen_team.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/put(orgs/add-security-manager-team)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -24478,6 +24793,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_remove_hyphen_security_hyphen_manager_hyphen_team.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/security-managers/teams/{team_slug}/delete(orgs/remove-security-manager-team)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -24524,7 +24847,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/{security_product}/{enablement}/POST/path/org`.
                 public var org: Components.Parameters.org
                 /// - Remark: Generated from `#/components/parameters/security-product`.
-                @frozen public enum security_hyphen_product: String, Codable, Hashable, Sendable {
+                @frozen public enum security_hyphen_product: String, Codable, Hashable, Sendable, CaseIterable {
                     case dependency_graph = "dependency_graph"
                     case dependabot_alerts = "dependabot_alerts"
                     case dependabot_security_updates = "dependabot_security_updates"
@@ -24538,7 +24861,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/{security_product}/{enablement}/POST/path/security_product`.
                 public var security_product: Components.Parameters.security_hyphen_product
                 /// - Remark: Generated from `#/components/parameters/org-security-product-enablement`.
-                @frozen public enum org_hyphen_security_hyphen_product_hyphen_enablement: String, Codable, Hashable, Sendable {
+                @frozen public enum org_hyphen_security_hyphen_product_hyphen_enablement: String, Codable, Hashable, Sendable, CaseIterable {
                     case enable_all = "enable_all"
                     case disable_all = "disable_all"
                 }
@@ -24574,7 +24897,7 @@ public enum Operations {
                     /// If you don't specify any `query_suite` in your request, the preferred query suite of the organization will be applied.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/{security_product}/{enablement}/POST/requestBody/json/query_suite`.
-                    @frozen public enum query_suitePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum query_suitePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _default = "default"
                         case extended = "extended"
                     }
@@ -24622,6 +24945,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos.Output.NoContent)
+            /// Action started
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -24649,6 +24980,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.orgs_sol_enable_hyphen_or_hyphen_disable_hyphen_security_hyphen_product_hyphen_on_hyphen_all_hyphen_org_hyphen_repos.Output.UnprocessableContent)
+            /// The action could not be taken due to an in progress enablement, or a policy is preventing enablement
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/{security_product}/{enablement}/post(orgs/enable-or-disable-security-product-on-all-org-repos)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -24684,7 +25023,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/memberships/orgs/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/memberships/orgs/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case active = "active"
                     case pending = "pending"
                 }
@@ -24819,6 +25158,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/memberships/orgs/get(orgs/list-memberships-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -25157,7 +25504,7 @@ public enum Operations {
                     /// The state that the membership should be in. Only `"active"` will be accepted.
                     ///
                     /// - Remark: Generated from `#/paths/user/memberships/orgs/{org}/PATCH/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case active = "active"
                     }
                     /// The state that the membership should be in. Only `"active"` will be accepted.
@@ -25487,6 +25834,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/orgs/get(orgs/list-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
