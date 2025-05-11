@@ -29,6 +29,12 @@ jobs:
         with:
           swift: ${{ matrix.swift }}
           os: ${{ matrix.os }}
+
+      - name: "Update Mintfile"
+        run: |
+          swift .github/dependabot-mintfile/MintfileBuilder.swift
+          git add Mintfile
+
       - name: "Sync code base"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
