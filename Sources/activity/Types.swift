@@ -831,6 +831,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1686,7 +1695,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -1704,7 +1713,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -1723,7 +1732,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -1741,7 +1750,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -2280,7 +2289,7 @@ public enum Components {
             /// The state of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case open = "open"
                 case closed = "closed"
             }
@@ -2404,7 +2413,7 @@ public enum Components {
             /// The color of the issue type.
             ///
             /// - Remark: Generated from `#/components/schemas/issue-type/color`.
-            @frozen public enum colorPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum colorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case gray = "gray"
                 case blue = "blue"
                 case green = "green"
@@ -2587,23 +2596,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -2618,23 +2627,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -2738,7 +2747,7 @@ public enum Components {
         /// How the author is associated with the repository.
         ///
         /// - Remark: Generated from `#/components/schemas/author-association`.
-        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable {
+        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable, CaseIterable {
             case COLLABORATOR = "COLLABORATOR"
             case CONTRIBUTOR = "CONTRIBUTOR"
             case FIRST_TIMER = "FIRST_TIMER"
@@ -2881,7 +2890,7 @@ public enum Components {
             /// The reason for the current state
             ///
             /// - Remark: Generated from `#/components/schemas/issue/state_reason`.
-            @frozen public enum state_reasonPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum state_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case completed = "completed"
                 case reopened = "reopened"
                 case not_planned = "not_planned"
@@ -3693,7 +3702,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3715,7 +3724,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3741,7 +3750,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3767,7 +3776,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3789,7 +3798,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3811,7 +3820,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3833,7 +3842,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -4774,7 +4783,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -4825,7 +4834,7 @@ public enum Components {
         /// The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to.
         ///
         /// - Remark: Generated from `#/components/parameters/sort-starred`.
-        @frozen public enum sort_hyphen_starred: String, Codable, Hashable, Sendable {
+        @frozen public enum sort_hyphen_starred: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
         }
@@ -5162,6 +5171,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//events/get(activity/list-public-events)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -5571,6 +5588,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//networks/{owner}/{repo}/events/get(activity/list-public-events-for-repo-network)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -5805,6 +5830,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//notifications/get(activity/list-notifications-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6066,6 +6099,14 @@ public enum Operations {
             ///
             /// HTTP response code: `205 resetContent`.
             case resetContent(Operations.activity_sol_mark_hyphen_notifications_hyphen_as_hyphen_read.Output.ResetContent)
+            /// Reset Content
+            ///
+            /// - Remark: Generated from `#/paths//notifications/put(activity/mark-notifications-as-read)/responses/205`.
+            ///
+            /// HTTP response code: `205 resetContent`.
+            public static var resetContent: Self {
+                .resetContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.resetContent`.
             ///
             /// - Throws: An error if `self` is not `.resetContent`.
@@ -6089,6 +6130,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//notifications/put(activity/mark-notifications-as-read)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6290,6 +6339,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/get(activity/get-thread)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6444,6 +6501,14 @@ public enum Operations {
             ///
             /// HTTP response code: `205 resetContent`.
             case resetContent(Operations.activity_sol_mark_hyphen_thread_hyphen_as_hyphen_read.Output.ResetContent)
+            /// Reset Content
+            ///
+            /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/patch(activity/mark-thread-as-read)/responses/205`.
+            ///
+            /// HTTP response code: `205 resetContent`.
+            public static var resetContent: Self {
+                .resetContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.resetContent`.
             ///
             /// - Throws: An error if `self` is not `.resetContent`.
@@ -6467,6 +6532,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/patch(activity/mark-thread-as-read)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6581,6 +6654,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.activity_sol_mark_hyphen_thread_hyphen_as_hyphen_done.Output.NoContent)
+            /// No content
+            ///
+            /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/delete(activity/mark-thread-as-done)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6713,6 +6794,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/subscription/get(activity/get-thread-subscription-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6944,6 +7033,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/subscription/put(activity/set-thread-subscription)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7098,6 +7195,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.activity_sol_delete_hyphen_thread_hyphen_subscription.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/subscription/delete(activity/delete-thread-subscription)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7121,6 +7226,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//notifications/threads/{thread_id}/subscription/delete(activity/delete-thread-subscription)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7928,6 +8041,14 @@ public enum Operations {
             ///
             /// HTTP response code: `205 resetContent`.
             case resetContent(Operations.activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read.Output.ResetContent)
+            /// Reset Content
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/notifications/put(activity/mark-repo-notifications-as-read)/responses/205`.
+            ///
+            /// HTTP response code: `205 resetContent`.
+            public static var resetContent: Self {
+                .resetContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.resetContent`.
             ///
             /// - Throws: An error if `self` is not `.resetContent`.
@@ -8104,19 +8225,19 @@ public enum Operations {
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                value1 = try decoder.decodeFromSingleValueContainer()
+                                self.value1 = try decoder.decodeFromSingleValueContainer()
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                value2 = try decoder.decodeFromSingleValueContainer()
+                                self.value2 = try decoder.decodeFromSingleValueContainer()
                             } catch {
                                 errors.append(error)
                             }
                             try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                 [
-                                    value1,
-                                    value2
+                                    self.value1,
+                                    self.value2
                                 ],
                                 type: Self.self,
                                 codingPath: decoder.codingPath,
@@ -8125,8 +8246,8 @@ public enum Operations {
                         }
                         public func encode(to encoder: any Encoder) throws {
                             try encoder.encodeFirstNonNilValueToSingleValueContainer([
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ])
                         }
                     }
@@ -8544,6 +8665,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.activity_sol_get_hyphen_repo_hyphen_subscription.Output.NotFound)
+            /// Not Found if you don't subscribe to the repository
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/subscription/get(activity/get-repo-subscription)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -8844,6 +8973,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.activity_sol_delete_hyphen_repo_hyphen_subscription.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/subscription/delete(activity/delete-repo-subscription)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -8883,7 +9020,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/starred/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort-starred`.
-                @frozen public enum sort_hyphen_starred: String, Codable, Hashable, Sendable {
+                @frozen public enum sort_hyphen_starred: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -8892,7 +9029,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/starred/GET/query/sort`.
                 public var sort: Components.Parameters.sort_hyphen_starred?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -9054,6 +9191,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/starred/get(activity/list-repos-starred-by-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9223,6 +9368,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.activity_sol_check_hyphen_repo_hyphen_is_hyphen_starred_hyphen_by_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response if this repository is starred by you
+            ///
+            /// - Remark: Generated from `#/paths//user/starred/{owner}/{repo}/get(activity/check-repo-is-starred-by-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9320,6 +9473,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/starred/{owner}/{repo}/get(activity/check-repo-is-starred-by-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9460,6 +9621,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.activity_sol_star_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/starred/{owner}/{repo}/put(activity/star-repo-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9552,6 +9721,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/starred/{owner}/{repo}/put(activity/star-repo-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9669,6 +9846,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.activity_sol_unstar_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/starred/{owner}/{repo}/delete(activity/unstar-repo-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9738,6 +9923,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/starred/{owner}/{repo}/delete(activity/unstar-repo-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9944,6 +10137,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/subscriptions/get(activity/list-watched-repos-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -10885,7 +11086,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/starred/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort-starred`.
-                @frozen public enum sort_hyphen_starred: String, Codable, Hashable, Sendable {
+                @frozen public enum sort_hyphen_starred: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -10894,7 +11095,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/starred/GET/query/sort`.
                 public var sort: Components.Parameters.sort_hyphen_starred?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -10997,19 +11198,19 @@ public enum Operations {
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                value1 = try decoder.decodeFromSingleValueContainer()
+                                self.value1 = try decoder.decodeFromSingleValueContainer()
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                value2 = try decoder.decodeFromSingleValueContainer()
+                                self.value2 = try decoder.decodeFromSingleValueContainer()
                             } catch {
                                 errors.append(error)
                             }
                             try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                 [
-                                    value1,
-                                    value2
+                                    self.value1,
+                                    self.value2
                                 ],
                                 type: Self.self,
                                 codingPath: decoder.codingPath,
@@ -11018,8 +11219,8 @@ public enum Operations {
                         }
                         public func encode(to encoder: any Encoder) throws {
                             try encoder.encodeFirstNonNilValueToSingleValueContainer([
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ])
                         }
                     }
