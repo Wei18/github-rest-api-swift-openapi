@@ -611,6 +611,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -3850,6 +3859,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.git_sol_delete_hyphen_ref.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -3877,6 +3894,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.git_sol_delete_hyphen_ref.Output.UnprocessableContent)
+            /// Validation failed, an attempt was made to delete the default branch, or the endpoint has been spammed.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/git/refs/{ref}/delete(git/delete-ref)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -4042,7 +4067,7 @@ public enum Operations {
                     /// The type of the object we're tagging. Normally this is a `commit` but it can also be a `tree` or a `blob`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/tags/POST/requestBody/json/type`.
-                    @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case commit = "commit"
                         case tree = "tree"
                         case blob = "blob"
@@ -4571,7 +4596,7 @@ public enum Operations {
                         /// The file mode; one of `100644` for file (blob), `100755` for executable (blob), `040000` for subdirectory (tree), `160000` for submodule (commit), or `120000` for a blob that specifies the path of a symlink.
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/mode`.
-                        @frozen public enum modePayload: String, Codable, Hashable, Sendable {
+                        @frozen public enum modePayload: String, Codable, Hashable, Sendable, CaseIterable {
                             case _100644 = "100644"
                             case _100755 = "100755"
                             case _040000 = "040000"
@@ -4585,7 +4610,7 @@ public enum Operations {
                         /// Either `blob`, `tree`, or `commit`.
                         ///
                         /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/git/trees/POST/requestBody/json/treePayload/type`.
-                        @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                        @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                             case blob = "blob"
                             case tree = "tree"
                             case commit = "commit"
