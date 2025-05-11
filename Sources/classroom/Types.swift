@@ -155,6 +155,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -384,7 +393,7 @@ public enum Components {
             /// Whether it's a group assignment or individual assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/classroom-assignment/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case individual = "individual"
                 case group = "group"
             }
@@ -634,7 +643,7 @@ public enum Components {
             /// Whether it's a Group Assignment or Individual Assignment.
             ///
             /// - Remark: Generated from `#/components/schemas/simple-classroom-assignment/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case individual = "individual"
                 case group = "group"
             }
