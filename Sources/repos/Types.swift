@@ -544,12 +544,12 @@ public protocol APIProtocol: Sendable {
     /// List repository collaborators
     ///
     /// For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.
-    /// Organization members with write, maintain, or admin privileges on the organization-owned repository can use this endpoint.
+    /// The `permissions` hash returned in the response contains the base role permissions of the collaborator. The `role_name` is the highest role assigned to the collaborator after considering all sources of grants, including: repo, teams, organization, and enterprise.
+    /// There is presently not a way to differentiate between an organization level grant and a repository level grant from this endpoint response.
     ///
     /// Team members will include the members of child teams.
     ///
-    /// The authenticated user must have push access to the repository to use this endpoint.
-    ///
+    /// The authenticated user must have write, maintain, or admin privileges on the repository to use this endpoint. For organization-owned repositories, the authenticated user needs to be a member of the organization.
     /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators`.
@@ -570,11 +570,13 @@ public protocol APIProtocol: Sendable {
     func repos_sol_check_hyphen_collaborator(_ input: Operations.repos_sol_check_hyphen_collaborator.Input) async throws -> Operations.repos_sol_check_hyphen_collaborator.Output
     /// Add a repository collaborator
     ///
-    /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    /// Add a user to a repository with a specified level of access. If the repository is owned by an organization, this API does not add the user to the organization - a user that has repository access without being an organization member is called an "outside collaborator" (if they are not an Enterprise Managed User) or a "repository collaborator" if they are an Enterprise Managed User. These users are exempt from some organization policies - see "[Adding outside collaborators to repositories](https://docs.github.com/organizations/managing-user-access-to-your-organizations-repositories/managing-outside-collaborators/adding-outside-collaborators-to-repositories-in-your-organization)" to learn more about these collaborator types.
     ///
-    /// Adding an outside collaborator may be restricted by enterprise administrators. For more information, see "[Enforcing repository management policies in your enterprise](https://docs.github.com/admin/policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories)."
+    /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications).
     ///
-    /// For more information on permission levels, see "[Repository permission levels for an organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)". There are restrictions on which permissions can be granted to organization members when an organization base role is in place. In this case, the permission being given must be equal to or higher than the org base permission. Otherwise, the request will fail with:
+    /// Adding an outside collaborator may be restricted by enterprise and organization administrators. For more information, see "[Enforcing repository management policies in your enterprise](https://docs.github.com/admin/policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories)" and "[Setting permissions for adding outside collaborators](https://docs.github.com/organizations/managing-organization-settings/setting-permissions-for-adding-outside-collaborators)" for organization settings.
+    ///
+    /// For more information on permission levels, see "[Repository permission levels for an organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)". There are restrictions on which permissions can be granted to organization members when an organization base role is in place. In this case, the role being given must be equal to or higher than the org base permission. Otherwise, the request will fail with:
     ///
     /// ```
     /// Cannot assign {member} permission of {role name}
@@ -583,6 +585,8 @@ public protocol APIProtocol: Sendable {
     /// Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
     ///
     /// The invitee will receive a notification that they have been invited to the repository, which they must accept or decline. They may do this via the notifications page, the email they receive, or by using the [API](https://docs.github.com/rest/collaborators/invitations).
+    ///
+    /// For Enterprise Managed Users, this endpoint does not send invitations - these users are automatically added to organizations and repositories. Enterprise Managed Users can only be added to organizations and repositories within their enterprise.
     ///
     /// **Updating an existing collaborator's permission level**
     ///
@@ -625,13 +629,15 @@ public protocol APIProtocol: Sendable {
     func repos_sol_remove_hyphen_collaborator(_ input: Operations.repos_sol_remove_hyphen_collaborator.Input) async throws -> Operations.repos_sol_remove_hyphen_collaborator.Output
     /// Get repository permissions for a user
     ///
-    /// Checks the repository permission of a collaborator. The possible repository
-    /// permissions are `admin`, `write`, `read`, and `none`.
+    /// Checks the repository permission and role of a collaborator.
     ///
-    /// *Note*: The `permission` attribute provides the legacy base roles of `admin`, `write`, `read`, and `none`, where the
-    /// `maintain` role is mapped to `write` and the `triage` role is mapped to `read`. To determine the role assigned to the
-    /// collaborator, see the `role_name` attribute, which will provide the full role name, including custom roles. The
-    /// `permissions` hash can also be used to determine which base level of access the collaborator has to the repository.
+    /// The `permission` attribute provides the legacy base roles of `admin`, `write`, `read`, and `none`, where the
+    /// `maintain` role is mapped to `write` and the `triage` role is mapped to `read`.
+    /// The `role_name` attribute provides the name of the assigned role, including custom roles. The
+    /// `permission` can also be used to determine which base level of access the collaborator has to the repository.
+    ///
+    /// The calculated permissions are the highest role assigned to the collaborator after considering all sources of grants, including: repo, teams, organization, and enterprise.
+    /// There is presently not a way to differentiate between an organization level grant and a repository level grant from this endpoint response.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators/{username}/permission`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/permission/get(repos/get-collaborator-permission-level)`.
@@ -3147,12 +3153,12 @@ extension APIProtocol {
     /// List repository collaborators
     ///
     /// For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.
-    /// Organization members with write, maintain, or admin privileges on the organization-owned repository can use this endpoint.
+    /// The `permissions` hash returned in the response contains the base role permissions of the collaborator. The `role_name` is the highest role assigned to the collaborator after considering all sources of grants, including: repo, teams, organization, and enterprise.
+    /// There is presently not a way to differentiate between an organization level grant and a repository level grant from this endpoint response.
     ///
     /// Team members will include the members of child teams.
     ///
-    /// The authenticated user must have push access to the repository to use this endpoint.
-    ///
+    /// The authenticated user must have write, maintain, or admin privileges on the repository to use this endpoint. For organization-owned repositories, the authenticated user needs to be a member of the organization.
     /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators`.
@@ -3185,11 +3191,13 @@ extension APIProtocol {
     }
     /// Add a repository collaborator
     ///
-    /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    /// Add a user to a repository with a specified level of access. If the repository is owned by an organization, this API does not add the user to the organization - a user that has repository access without being an organization member is called an "outside collaborator" (if they are not an Enterprise Managed User) or a "repository collaborator" if they are an Enterprise Managed User. These users are exempt from some organization policies - see "[Adding outside collaborators to repositories](https://docs.github.com/organizations/managing-user-access-to-your-organizations-repositories/managing-outside-collaborators/adding-outside-collaborators-to-repositories-in-your-organization)" to learn more about these collaborator types.
     ///
-    /// Adding an outside collaborator may be restricted by enterprise administrators. For more information, see "[Enforcing repository management policies in your enterprise](https://docs.github.com/admin/policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories)."
+    /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications).
     ///
-    /// For more information on permission levels, see "[Repository permission levels for an organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)". There are restrictions on which permissions can be granted to organization members when an organization base role is in place. In this case, the permission being given must be equal to or higher than the org base permission. Otherwise, the request will fail with:
+    /// Adding an outside collaborator may be restricted by enterprise and organization administrators. For more information, see "[Enforcing repository management policies in your enterprise](https://docs.github.com/admin/policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories)" and "[Setting permissions for adding outside collaborators](https://docs.github.com/organizations/managing-organization-settings/setting-permissions-for-adding-outside-collaborators)" for organization settings.
+    ///
+    /// For more information on permission levels, see "[Repository permission levels for an organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)". There are restrictions on which permissions can be granted to organization members when an organization base role is in place. In this case, the role being given must be equal to or higher than the org base permission. Otherwise, the request will fail with:
     ///
     /// ```
     /// Cannot assign {member} permission of {role name}
@@ -3198,6 +3206,8 @@ extension APIProtocol {
     /// Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
     ///
     /// The invitee will receive a notification that they have been invited to the repository, which they must accept or decline. They may do this via the notifications page, the email they receive, or by using the [API](https://docs.github.com/rest/collaborators/invitations).
+    ///
+    /// For Enterprise Managed Users, this endpoint does not send invitations - these users are automatically added to organizations and repositories. Enterprise Managed Users can only be added to organizations and repositories within their enterprise.
     ///
     /// **Updating an existing collaborator's permission level**
     ///
@@ -3258,13 +3268,15 @@ extension APIProtocol {
     }
     /// Get repository permissions for a user
     ///
-    /// Checks the repository permission of a collaborator. The possible repository
-    /// permissions are `admin`, `write`, `read`, and `none`.
+    /// Checks the repository permission and role of a collaborator.
     ///
-    /// *Note*: The `permission` attribute provides the legacy base roles of `admin`, `write`, `read`, and `none`, where the
-    /// `maintain` role is mapped to `write` and the `triage` role is mapped to `read`. To determine the role assigned to the
-    /// collaborator, see the `role_name` attribute, which will provide the full role name, including custom roles. The
-    /// `permissions` hash can also be used to determine which base level of access the collaborator has to the repository.
+    /// The `permission` attribute provides the legacy base roles of `admin`, `write`, `read`, and `none`, where the
+    /// `maintain` role is mapped to `write` and the `triage` role is mapped to `read`.
+    /// The `role_name` attribute provides the name of the assigned role, including custom roles. The
+    /// `permission` can also be used to determine which base level of access the collaborator has to the repository.
+    ///
+    /// The calculated permissions are the highest role assigned to the collaborator after considering all sources of grants, including: repo, teams, organization, and enterprise.
+    /// There is presently not a way to differentiate between an organization level grant and a repository level grant from this endpoint response.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators/{username}/permission`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/permission/get(repos/get-collaborator-permission-level)`.
@@ -5917,6 +5929,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -6341,23 +6362,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -6372,23 +6393,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -7554,7 +7575,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -7572,7 +7593,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -7591,7 +7612,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -7609,7 +7630,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -8099,7 +8120,7 @@ public enum Components {
             /// The state of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case open = "open"
                 case closed = "closed"
             }
@@ -8316,23 +8337,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -8347,23 +8368,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -8467,7 +8488,7 @@ public enum Components {
         /// How the author is associated with the repository.
         ///
         /// - Remark: Generated from `#/components/schemas/author-association`.
-        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable {
+        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable, CaseIterable {
             case COLLABORATOR = "COLLABORATOR"
             case CONTRIBUTOR = "CONTRIBUTOR"
             case FIRST_TIMER = "FIRST_TIMER"
@@ -8553,7 +8574,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -8575,7 +8596,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -8601,7 +8622,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -8627,7 +8648,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -8649,7 +8670,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -8671,7 +8692,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -8693,7 +8714,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -9948,7 +9969,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -9966,7 +9987,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -9985,7 +10006,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -10003,7 +10024,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -10689,7 +10710,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -10707,7 +10728,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -10726,7 +10747,7 @@ public enum Components {
             ///   - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -10744,7 +10765,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -11237,7 +11258,7 @@ public enum Components {
         /// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise).
         ///
         /// - Remark: Generated from `#/components/schemas/repository-rule-enforcement`.
-        @frozen public enum repository_hyphen_rule_hyphen_enforcement: String, Codable, Hashable, Sendable {
+        @frozen public enum repository_hyphen_rule_hyphen_enforcement: String, Codable, Hashable, Sendable, CaseIterable {
             case disabled = "disabled"
             case active = "active"
             case evaluate = "evaluate"
@@ -11253,7 +11274,7 @@ public enum Components {
             /// The type of actor that can bypass a ruleset.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/actor_type`.
-            @frozen public enum actor_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum actor_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case Integration = "Integration"
                 case OrganizationAdmin = "OrganizationAdmin"
                 case RepositoryRole = "RepositoryRole"
@@ -11267,7 +11288,7 @@ public enum Components {
             /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-bypass-actor/bypass_mode`.
-            @frozen public enum bypass_modePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum bypass_modePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case always = "always"
                 case pull_request = "pull_request"
             }
@@ -11441,7 +11462,7 @@ public enum Components {
             /// The source of the repository property. Defaults to 'custom' if not specified.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset-conditions-repository-property-spec/source`.
-            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case custom = "custom"
                 case system = "system"
             }
@@ -11542,12 +11563,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// Conditions to target repositories by name and refs by name
@@ -11575,12 +11596,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// Conditions to target repositories by id and refs by name
@@ -11608,12 +11629,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// Conditions to target repositories by property and refs by name
@@ -11662,7 +11683,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-creation`.
         public struct repository_hyphen_rule_hyphen_creation: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-creation/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case creation = "creation"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-creation/type`.
@@ -11683,7 +11704,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-update`.
         public struct repository_hyphen_rule_hyphen_update: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-update/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case update = "update"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-update/type`.
@@ -11729,7 +11750,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-deletion`.
         public struct repository_hyphen_rule_hyphen_deletion: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-deletion/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case deletion = "deletion"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-deletion/type`.
@@ -11750,7 +11771,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-required-linear-history`.
         public struct repository_hyphen_rule_hyphen_required_hyphen_linear_hyphen_history: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-linear-history/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case required_linear_history = "required_linear_history"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-linear-history/type`.
@@ -11771,7 +11792,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue`.
         public struct repository_hyphen_rule_hyphen_merge_hyphen_queue: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case merge_queue = "merge_queue"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/type`.
@@ -11785,7 +11806,7 @@ public enum Components {
                 /// When set to ALLGREEN, the merge commit created by merge queue for each PR in the group must pass all required checks to merge. When set to HEADGREEN, only the commit at the head of the merge group, i.e. the commit containing changes from all of the PRs in the group, must pass its required checks to merge.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/grouping_strategy`.
-                @frozen public enum grouping_strategyPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum grouping_strategyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case ALLGREEN = "ALLGREEN"
                     case HEADGREEN = "HEADGREEN"
                 }
@@ -11804,7 +11825,7 @@ public enum Components {
                 /// Method to use when merging changes from queued pull requests.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-merge-queue/parameters/merge_method`.
-                @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case MERGE = "MERGE"
                     case SQUASH = "SQUASH"
                     case REBASE = "REBASE"
@@ -11882,7 +11903,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-required-deployments`.
         public struct repository_hyphen_rule_hyphen_required_hyphen_deployments: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-deployments/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case required_deployments = "required_deployments"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-deployments/type`.
@@ -11928,7 +11949,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-required-signatures`.
         public struct repository_hyphen_rule_hyphen_required_hyphen_signatures: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-signatures/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case required_signatures = "required_signatures"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-signatures/type`.
@@ -11949,7 +11970,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-pull-request`.
         public struct repository_hyphen_rule_hyphen_pull_hyphen_request: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-pull-request/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case pull_request = "pull_request"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-pull-request/type`.
@@ -11957,7 +11978,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/repository-rule-pull-request/parameters`.
             public struct parametersPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/repository-rule-pull-request/parameters/allowed_merge_methodsPayload`.
-                @frozen public enum allowed_merge_methodsPayloadPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum allowed_merge_methodsPayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case merge = "merge"
                     case squash = "squash"
                     case rebase = "rebase"
@@ -12084,7 +12105,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-required-status-checks`.
         public struct repository_hyphen_rule_hyphen_required_hyphen_status_hyphen_checks: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-status-checks/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case required_status_checks = "required_status_checks"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-required-status-checks/type`.
@@ -12148,7 +12169,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-non-fast-forward`.
         public struct repository_hyphen_rule_hyphen_non_hyphen_fast_hyphen_forward: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-non-fast-forward/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case non_fast_forward = "non_fast_forward"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-non-fast-forward/type`.
@@ -12169,7 +12190,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-commit-message-pattern`.
         public struct repository_hyphen_rule_hyphen_commit_hyphen_message_hyphen_pattern: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-commit-message-pattern/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case commit_message_pattern = "commit_message_pattern"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-commit-message-pattern/type`.
@@ -12187,7 +12208,7 @@ public enum Components {
                 /// The operator to use for matching.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-commit-message-pattern/parameters/operator`.
-                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case starts_with = "starts_with"
                     case ends_with = "ends_with"
                     case contains = "contains"
@@ -12250,7 +12271,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-commit-author-email-pattern`.
         public struct repository_hyphen_rule_hyphen_commit_hyphen_author_hyphen_email_hyphen_pattern: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-commit-author-email-pattern/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case commit_author_email_pattern = "commit_author_email_pattern"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-commit-author-email-pattern/type`.
@@ -12268,7 +12289,7 @@ public enum Components {
                 /// The operator to use for matching.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-commit-author-email-pattern/parameters/operator`.
-                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case starts_with = "starts_with"
                     case ends_with = "ends_with"
                     case contains = "contains"
@@ -12331,7 +12352,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-committer-email-pattern`.
         public struct repository_hyphen_rule_hyphen_committer_hyphen_email_hyphen_pattern: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-committer-email-pattern/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case committer_email_pattern = "committer_email_pattern"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-committer-email-pattern/type`.
@@ -12349,7 +12370,7 @@ public enum Components {
                 /// The operator to use for matching.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-committer-email-pattern/parameters/operator`.
-                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case starts_with = "starts_with"
                     case ends_with = "ends_with"
                     case contains = "contains"
@@ -12412,7 +12433,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-branch-name-pattern`.
         public struct repository_hyphen_rule_hyphen_branch_hyphen_name_hyphen_pattern: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-branch-name-pattern/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case branch_name_pattern = "branch_name_pattern"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-branch-name-pattern/type`.
@@ -12430,7 +12451,7 @@ public enum Components {
                 /// The operator to use for matching.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-branch-name-pattern/parameters/operator`.
-                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case starts_with = "starts_with"
                     case ends_with = "ends_with"
                     case contains = "contains"
@@ -12493,7 +12514,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-tag-name-pattern`.
         public struct repository_hyphen_rule_hyphen_tag_hyphen_name_hyphen_pattern: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-tag-name-pattern/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case tag_name_pattern = "tag_name_pattern"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-tag-name-pattern/type`.
@@ -12511,7 +12532,7 @@ public enum Components {
                 /// The operator to use for matching.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-rule-tag-name-pattern/parameters/operator`.
-                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _operatorPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case starts_with = "starts_with"
                     case ends_with = "ends_with"
                     case contains = "contains"
@@ -12574,7 +12595,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-file-path-restriction`.
         public struct repository_hyphen_rule_hyphen_file_hyphen_path_hyphen_restriction: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-file-path-restriction/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case file_path_restriction = "file_path_restriction"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-file-path-restriction/type`.
@@ -12620,7 +12641,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-max-file-path-length`.
         public struct repository_hyphen_rule_hyphen_max_hyphen_file_hyphen_path_hyphen_length: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-max-file-path-length/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case max_file_path_length = "max_file_path_length"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-max-file-path-length/type`.
@@ -12666,7 +12687,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-file-extension-restriction`.
         public struct repository_hyphen_rule_hyphen_file_hyphen_extension_hyphen_restriction: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-file-extension-restriction/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case file_extension_restriction = "file_extension_restriction"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-file-extension-restriction/type`.
@@ -12712,7 +12733,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-max-file-size`.
         public struct repository_hyphen_rule_hyphen_max_hyphen_file_hyphen_size: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-max-file-size/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case max_file_size = "max_file_size"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-max-file-size/type`.
@@ -12803,7 +12824,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-workflows`.
         public struct repository_hyphen_rule_hyphen_workflows: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-workflows/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case workflows = "workflows"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-workflows/type`.
@@ -12861,7 +12882,7 @@ public enum Components {
             /// The severity level at which code scanning results that raise alerts block a reference update. For more information on alert severity levels, see "[About code scanning alerts](https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-code-scanning-alerts#about-alert-severity-and-security-severity-levels)."
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule-params-code-scanning-tool/alerts_threshold`.
-            @frozen public enum alerts_thresholdPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum alerts_thresholdPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case errors = "errors"
                 case errors_and_warnings = "errors_and_warnings"
@@ -12874,7 +12895,7 @@ public enum Components {
             /// The severity level at which code scanning results that raise security alerts block a reference update. For more information on security severity levels, see "[About code scanning alerts](https://docs.github.com/code-security/code-scanning/managing-code-scanning-alerts/about-code-scanning-alerts#about-alert-severity-and-security-severity-levels)."
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule-params-code-scanning-tool/security_alerts_threshold`.
-            @frozen public enum security_alerts_thresholdPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum security_alerts_thresholdPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case critical = "critical"
                 case high_or_higher = "high_or_higher"
@@ -12915,7 +12936,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning`.
         public struct repository_hyphen_rule_hyphen_code_hyphen_scanning: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case code_scanning = "code_scanning"
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-code-scanning/type`.
@@ -13198,7 +13219,7 @@ public enum Components {
             /// The target of the ruleset
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/target`.
-            @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum targetPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case branch = "branch"
                 case tag = "tag"
                 case push = "push"
@@ -13211,7 +13232,7 @@ public enum Components {
             /// The type of the source of the ruleset
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/source_type`.
-            @frozen public enum source_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum source_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case Repository = "Repository"
                 case Organization = "Organization"
                 case Enterprise = "Enterprise"
@@ -13234,7 +13255,7 @@ public enum Components {
             /// querying the repository-level endpoint.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/current_user_can_bypass`.
-            @frozen public enum current_user_can_bypassPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum current_user_can_bypassPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case always = "always"
                 case pull_requests_only = "pull_requests_only"
                 case never = "never"
@@ -13326,19 +13347,19 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try .init(from: decoder)
+                        self.value1 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try .init(from: decoder)
+                        self.value2 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2
+                            self.value1,
+                            self.value2
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -13346,8 +13367,8 @@ public enum Components {
                     )
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1?.encode(to: encoder)
-                    try value2?.encode(to: encoder)
+                    try self.value1?.encode(to: encoder)
+                    try self.value2?.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-ruleset/conditions`.
@@ -13462,7 +13483,7 @@ public enum Components {
             /// The result of the rule evaluations for rules with the `active` enforcement status.
             ///
             /// - Remark: Generated from `#/components/schemas/rule_hyphen_suites/result`.
-            @frozen public enum resultPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum resultPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case pass = "pass"
                 case fail = "fail"
                 case bypass = "bypass"
@@ -13474,7 +13495,7 @@ public enum Components {
             /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`.
             ///
             /// - Remark: Generated from `#/components/schemas/rule_hyphen_suites/evaluation_result`.
-            @frozen public enum evaluation_resultPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum evaluation_resultPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case pass = "pass"
                 case fail = "fail"
                 case bypass = "bypass"
@@ -13581,7 +13602,7 @@ public enum Components {
             /// The result of the rule evaluations for rules with the `active` enforcement status.
             ///
             /// - Remark: Generated from `#/components/schemas/rule-suite/result`.
-            @frozen public enum resultPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum resultPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case pass = "pass"
                 case fail = "fail"
                 case bypass = "bypass"
@@ -13593,7 +13614,7 @@ public enum Components {
             /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`. Null if no rules with `evaluate` enforcement status were run.
             ///
             /// - Remark: Generated from `#/components/schemas/rule-suite/evaluation_result`.
-            @frozen public enum evaluation_resultPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum evaluation_resultPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case pass = "pass"
                 case fail = "fail"
                 case bypass = "bypass"
@@ -13644,7 +13665,7 @@ public enum Components {
                 /// The enforcement level of this rule source.
                 ///
                 /// - Remark: Generated from `#/components/schemas/rule-suite/rule_evaluationsPayload/enforcement`.
-                @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case active = "active"
                     case evaluate = "evaluate"
                     case deleted_space_ruleset = "deleted ruleset"
@@ -13656,7 +13677,7 @@ public enum Components {
                 /// The result of the evaluation of the individual rule.
                 ///
                 /// - Remark: Generated from `#/components/schemas/rule-suite/rule_evaluationsPayload/result`.
-                @frozen public enum resultPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum resultPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case pass = "pass"
                     case fail = "fail"
                 }
@@ -13862,18 +13883,18 @@ public enum Components {
                 self.value2 = value2
             }
             public init(from decoder: any Decoder) throws {
-                value1 = try .init(from: decoder)
-                value2 = try .init(from: decoder)
+                self.value1 = try .init(from: decoder)
+                self.value2 = try .init(from: decoder)
             }
             public func encode(to encoder: any Encoder) throws {
-                try value1.encode(to: encoder)
-                try value2.encode(to: encoder)
+                try self.value1.encode(to: encoder)
+                try self.value2.encode(to: encoder)
             }
         }
         /// The type of reviewer.
         ///
         /// - Remark: Generated from `#/components/schemas/deployment-reviewer-type`.
-        @frozen public enum deployment_hyphen_reviewer_hyphen_type: String, Codable, Hashable, Sendable {
+        @frozen public enum deployment_hyphen_reviewer_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
             case User = "User"
             case Team = "Team"
         }
@@ -14090,7 +14111,7 @@ public enum Components {
             /// The type of the activity that was performed.
             ///
             /// - Remark: Generated from `#/components/schemas/activity/activity_type`.
-            @frozen public enum activity_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum activity_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case push = "push"
                 case force_push = "force_push"
                 case branch_deletion = "branch_deletion"
@@ -15411,7 +15432,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/diff-entry/filename`.
             public var filename: Swift.String
             /// - Remark: Generated from `#/components/schemas/diff-entry/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case added = "added"
                 case removed = "removed"
                 case modified = "modified"
@@ -16118,11 +16139,11 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    url = try container.decode(
+                    self.url = try container.decode(
                         Swift.String.self,
                         forKey: .url
                     )
-                    enabled = try container.decode(
+                    self.enabled = try container.decode(
                         Swift.Bool.self,
                         forKey: .enabled
                     )
@@ -16150,7 +16171,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    enabled = try container.decode(
+                    self.enabled = try container.decode(
                         Swift.Bool.self,
                         forKey: .enabled
                     )
@@ -16177,7 +16198,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    enabled = try container.decode(
+                    self.enabled = try container.decode(
                         Swift.Bool.self,
                         forKey: .enabled
                     )
@@ -16204,7 +16225,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    enabled = try container.decode(
+                    self.enabled = try container.decode(
                         Swift.Bool.self,
                         forKey: .enabled
                     )
@@ -16233,7 +16254,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    enabled = try container.decodeIfPresent(
+                    self.enabled = try container.decodeIfPresent(
                         Swift.Bool.self,
                         forKey: .enabled
                     )
@@ -16260,7 +16281,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    enabled = try container.decode(
+                    self.enabled = try container.decode(
                         Swift.Bool.self,
                         forKey: .enabled
                     )
@@ -16289,7 +16310,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    enabled = try container.decodeIfPresent(
+                    self.enabled = try container.decodeIfPresent(
                         Swift.Bool.self,
                         forKey: .enabled
                     )
@@ -16320,7 +16341,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    enabled = try container.decodeIfPresent(
+                    self.enabled = try container.decodeIfPresent(
                         Swift.Bool.self,
                         forKey: .enabled
                     )
@@ -16689,7 +16710,7 @@ public enum Components {
             /// The permission associated with the invitation.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-invitation/permissions`.
-            @frozen public enum permissionsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum permissionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -17163,7 +17184,7 @@ public enum Components {
             /// The merge method to use.
             ///
             /// - Remark: Generated from `#/components/schemas/auto-merge/merge_method`.
-            @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case merge = "merge"
                 case squash = "squash"
                 case rebase = "rebase"
@@ -18024,7 +18045,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/commit-comparison/merge_base_commit`.
             public var merge_base_commit: Components.Schemas.commit
             /// - Remark: Generated from `#/components/schemas/commit-comparison/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case diverged = "diverged"
                 case ahead = "ahead"
                 case behind = "behind"
@@ -18328,7 +18349,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/content_hyphen_directory`.
         public struct content_hyphen_directoryPayload: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/content_hyphen_directory/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case dir = "dir"
                 case file = "file"
                 case submodule = "submodule"
@@ -18447,7 +18468,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/content-file`.
         public struct content_hyphen_file: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/content-file/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case file = "file"
             }
             /// - Remark: Generated from `#/components/schemas/content-file/type`.
@@ -18577,7 +18598,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/content-symlink`.
         public struct content_hyphen_symlink: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/content-symlink/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case symlink = "symlink"
             }
             /// - Remark: Generated from `#/components/schemas/content-symlink/type`.
@@ -18689,7 +18710,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/content-submodule`.
         public struct content_hyphen_submodule: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/content-submodule/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case submodule = "submodule"
             }
             /// - Remark: Generated from `#/components/schemas/content-submodule/type`.
@@ -19399,7 +19420,7 @@ public enum Components {
             /// The state of the status.
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-status/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case error = "error"
                 case failure = "failure"
                 case inactive = "inactive"
@@ -19648,19 +19669,19 @@ public enum Components {
                             public init(from decoder: any Decoder) throws {
                                 var errors: [any Error] = []
                                 do {
-                                    value1 = try .init(from: decoder)
+                                    self.value1 = try .init(from: decoder)
                                 } catch {
                                     errors.append(error)
                                 }
                                 do {
-                                    value2 = try .init(from: decoder)
+                                    self.value2 = try .init(from: decoder)
                                 } catch {
                                     errors.append(error)
                                 }
                                 try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                     [
-                                        value1,
-                                        value2
+                                        self.value1,
+                                        self.value2
                                     ],
                                     type: Self.self,
                                     codingPath: decoder.codingPath,
@@ -19668,8 +19689,8 @@ public enum Components {
                                 )
                             }
                             public func encode(to encoder: any Encoder) throws {
-                                try value1?.encode(to: encoder)
-                                try value2?.encode(to: encoder)
+                                try self.value1?.encode(to: encoder)
+                                try self.value2?.encode(to: encoder)
                             }
                         }
                         /// - Remark: Generated from `#/components/schemas/environment/protection_rulesPayload/value2/reviewersPayload/reviewer`.
@@ -19779,25 +19800,25 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try .init(from: decoder)
+                        self.value1 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try .init(from: decoder)
+                        self.value2 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value3 = try .init(from: decoder)
+                        self.value3 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2,
-                            value3
+                            self.value1,
+                            self.value2,
+                            self.value3
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -19805,9 +19826,9 @@ public enum Components {
                     )
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1?.encode(to: encoder)
-                    try value2?.encode(to: encoder)
-                    try value3?.encode(to: encoder)
+                    try self.value1?.encode(to: encoder)
+                    try self.value2?.encode(to: encoder)
+                    try self.value3?.encode(to: encoder)
                 }
             }
             /// Built-in deployment protection rules for the environment.
@@ -19886,7 +19907,7 @@ public enum Components {
             /// Whether this rule targets a branch or tag.
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-branch-policy/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case branch = "branch"
                 case tag = "tag"
             }
@@ -19931,7 +19952,7 @@ public enum Components {
             /// Whether this rule targets a branch or tag
             ///
             /// - Remark: Generated from `#/components/schemas/deployment-branch-policy-name-pattern-with-type/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case branch = "branch"
                 case tag = "tag"
             }
@@ -20292,7 +20313,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/merged-upstream/message`.
             public var message: Swift.String?
             /// - Remark: Generated from `#/components/schemas/merged-upstream/merge_type`.
-            @frozen public enum merge_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case merge = "merge"
                 case fast_hyphen_forward = "fast-forward"
                 case none = "none"
@@ -20348,7 +20369,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/pages-https-certificate`.
         public struct pages_hyphen_https_hyphen_certificate: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/pages-https-certificate/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case new = "new"
                 case authorization_created = "authorization_created"
                 case authorization_pending = "authorization_pending"
@@ -20408,7 +20429,7 @@ public enum Components {
             /// The status of the most recent build of the Page.
             ///
             /// - Remark: Generated from `#/components/schemas/page/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case built = "built"
                 case building = "building"
                 case errored = "errored"
@@ -20424,7 +20445,7 @@ public enum Components {
             /// The state if the domain is verified
             ///
             /// - Remark: Generated from `#/components/schemas/page/protected_domain_state`.
-            @frozen public enum protected_domain_statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum protected_domain_statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case pending = "pending"
                 case verified = "verified"
                 case unverified = "unverified"
@@ -20448,7 +20469,7 @@ public enum Components {
             /// The process in which the Page will be built.
             ///
             /// - Remark: Generated from `#/components/schemas/page/build_type`.
-            @frozen public enum build_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum build_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case legacy = "legacy"
                 case workflow = "workflow"
             }
@@ -20713,7 +20734,7 @@ public enum Components {
             /// The current status of the deployment.
             ///
             /// - Remark: Generated from `#/components/schemas/pages-deployment-status/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case deployment_in_progress = "deployment_in_progress"
                 case syncing_files = "syncing_files"
                 case finished_file_sync = "finished_file_sync"
@@ -21145,7 +21166,7 @@ public enum Components {
             /// State of the release asset.
             ///
             /// - Remark: Generated from `#/components/schemas/release-asset/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case uploaded = "uploaded"
                 case open = "open"
             }
@@ -21423,7 +21444,7 @@ public enum Components {
             /// The type of source for the ruleset that includes this rule.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-rule-ruleset-info/ruleset_source_type`.
-            @frozen public enum ruleset_source_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ruleset_source_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case Repository = "Repository"
                 case Organization = "Organization"
             }
@@ -21483,12 +21504,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case1`.
@@ -21512,12 +21533,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case2`.
@@ -21541,12 +21562,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case3`.
@@ -21570,12 +21591,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case4`.
@@ -21599,12 +21620,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case5`.
@@ -21628,12 +21649,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case6`.
@@ -21657,12 +21678,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case7`.
@@ -21686,12 +21707,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case8`.
@@ -21715,12 +21736,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case9`.
@@ -21744,12 +21765,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case10`.
@@ -21773,12 +21794,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case11`.
@@ -21802,12 +21823,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case12`.
@@ -21831,12 +21852,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case13`.
@@ -21860,12 +21881,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case14`.
@@ -21889,12 +21910,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case15`.
@@ -21918,12 +21939,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case16`.
@@ -21947,12 +21968,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case17`.
@@ -21976,12 +21997,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case18`.
@@ -22005,12 +22026,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case19`.
@@ -22034,12 +22055,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case20`.
@@ -22063,12 +22084,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/repository-rule-detailed/case21`.
@@ -22679,7 +22700,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -22745,7 +22766,7 @@ public enum Components {
         /// For example, `day` will filter for rule suites that occurred in the past 24 hours, and `week` will filter for insights that occurred in the past 7 days (168 hours).
         ///
         /// - Remark: Generated from `#/components/parameters/time-period`.
-        @frozen public enum time_hyphen_period: String, Codable, Hashable, Sendable {
+        @frozen public enum time_hyphen_period: String, Codable, Hashable, Sendable, CaseIterable {
             case hour = "hour"
             case day = "day"
             case week = "week"
@@ -22758,7 +22779,7 @@ public enum Components {
         /// The rule results to filter on. When specified, only suites with this result will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/rule-suite-result`.
-        @frozen public enum rule_hyphen_suite_hyphen_result: String, Codable, Hashable, Sendable {
+        @frozen public enum rule_hyphen_suite_hyphen_result: String, Codable, Hashable, Sendable, CaseIterable {
             case pass = "pass"
             case fail = "fail"
             case bypass = "bypass"
@@ -22859,7 +22880,7 @@ public enum Components {
         /// The time frame to display results for.
         ///
         /// - Remark: Generated from `#/components/parameters/per`.
-        @frozen public enum per: String, Codable, Hashable, Sendable {
+        @frozen public enum per: String, Codable, Hashable, Sendable, CaseIterable {
             case day = "day"
             case week = "week"
         }
@@ -23104,6 +23125,34 @@ public enum Components {
                 self.body = body
             }
         }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
         public struct conflict: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/conflict/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -23221,34 +23270,6 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
-                self.body = body
-            }
-        }
         public struct temporary_redirect: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/temporary_redirect/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -23321,7 +23342,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case all = "all"
                     case _public = "public"
                     case _private = "private"
@@ -23334,7 +23355,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query/type`.
                 public var _type: Operations.repos_sol_list_hyphen_for_hyphen_org.Input.Query._typePayload?
                 /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case pushed = "pushed"
@@ -23345,7 +23366,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query/sort`.
                 public var sort: Operations.repos_sol_list_hyphen_for_hyphen_org.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/paths/orgs/{org}/repos/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -23575,7 +23596,7 @@ public enum Operations {
                     /// The visibility of the repository.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _public = "public"
                         case _private = "private"
                     }
@@ -23652,7 +23673,7 @@ public enum Operations {
                     /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/squash_merge_commit_title`.
-                    @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_TITLE = "PR_TITLE"
                         case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
                     }
@@ -23672,7 +23693,7 @@ public enum Operations {
                     /// - `BLANK` - default to a blank commit message.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/squash_merge_commit_message`.
-                    @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_BODY = "PR_BODY"
                         case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                         case BLANK = "BLANK"
@@ -23693,7 +23714,7 @@ public enum Operations {
                     /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/merge_commit_title`.
-                    @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_TITLE = "PR_TITLE"
                         case MERGE_MESSAGE = "MERGE_MESSAGE"
                     }
@@ -23713,7 +23734,7 @@ public enum Operations {
                     /// - `BLANK` - default to a blank commit message.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/repos/POST/requestBody/json/merge_commit_message`.
-                    @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_BODY = "PR_BODY"
                         case PR_TITLE = "PR_TITLE"
                         case BLANK = "BLANK"
@@ -24289,7 +24310,7 @@ public enum Operations {
                     /// The target of the ruleset
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/POST/requestBody/json/target`.
-                    @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum targetPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case branch = "branch"
                         case tag = "tag"
                         case push = "push"
@@ -24529,7 +24550,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/repository_name`.
                 public var repository_name: Components.Parameters.repository_hyphen_name_hyphen_in_hyphen_query?
                 /// - Remark: Generated from `#/components/parameters/time-period`.
-                @frozen public enum time_hyphen_period: String, Codable, Hashable, Sendable {
+                @frozen public enum time_hyphen_period: String, Codable, Hashable, Sendable, CaseIterable {
                     case hour = "hour"
                     case day = "day"
                     case week = "week"
@@ -24546,7 +24567,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/rule-suites/GET/query/actor_name`.
                 public var actor_name: Components.Parameters.actor_hyphen_name_hyphen_in_hyphen_query?
                 /// - Remark: Generated from `#/components/parameters/rule-suite-result`.
-                @frozen public enum rule_hyphen_suite_hyphen_result: String, Codable, Hashable, Sendable {
+                @frozen public enum rule_hyphen_suite_hyphen_result: String, Codable, Hashable, Sendable, CaseIterable {
                     case pass = "pass"
                     case fail = "fail"
                     case bypass = "bypass"
@@ -25187,7 +25208,7 @@ public enum Operations {
                     /// The target of the ruleset
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
-                    @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum targetPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case branch = "branch"
                         case tag = "tag"
                         case push = "push"
@@ -25460,6 +25481,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_org_hyphen_ruleset.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/rulesets/{ruleset_id}/delete(repos/delete-org-ruleset)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -25836,7 +25865,7 @@ public enum Operations {
                     /// The visibility of the repository.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _public = "public"
                         case _private = "private"
                     }
@@ -26094,7 +26123,7 @@ public enum Operations {
                     /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/squash_merge_commit_title`.
-                    @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_TITLE = "PR_TITLE"
                         case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
                     }
@@ -26114,7 +26143,7 @@ public enum Operations {
                     /// - `BLANK` - default to a blank commit message.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/squash_merge_commit_message`.
-                    @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_BODY = "PR_BODY"
                         case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                         case BLANK = "BLANK"
@@ -26135,7 +26164,7 @@ public enum Operations {
                     /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/merge_commit_title`.
-                    @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_TITLE = "PR_TITLE"
                         case MERGE_MESSAGE = "MERGE_MESSAGE"
                     }
@@ -26155,7 +26184,7 @@ public enum Operations {
                     /// - `BLANK` - default to a blank commit message.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/PATCH/requestBody/json/merge_commit_message`.
-                    @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_BODY = "PR_BODY"
                         case PR_TITLE = "PR_TITLE"
                         case BLANK = "BLANK"
@@ -26558,6 +26587,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/delete(repos/delete)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -26765,7 +26802,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -26796,7 +26833,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query/actor`.
                 public var actor: Swift.String?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query/time_period`.
-                @frozen public enum time_periodPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum time_periodPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case day = "day"
                     case week = "week"
                     case month = "month"
@@ -26810,7 +26847,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query/time_period`.
                 public var time_period: Operations.repos_sol_list_hyphen_activities.Input.Query.time_periodPayload?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/activity/GET/query/activity_type`.
-                @frozen public enum activity_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum activity_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case push = "push"
                     case force_push = "force_push"
                     case branch_creation = "branch_creation"
@@ -28244,6 +28281,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_autolink.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/autolinks/{autolink_id}/delete(repos/delete-autolink)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -28435,6 +28480,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.repos_sol_check_hyphen_automated_hyphen_security_hyphen_fixes.Output.NotFound)
+            /// Not Found if Dependabot is not enabled for the repository
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/automated-security-fixes/get(repos/check-automated-security-fixes)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -28535,6 +28588,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_enable_hyphen_automated_hyphen_security_hyphen_fixes.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/automated-security-fixes/put(repos/enable-automated-security-fixes)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -28610,6 +28671,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_disable_hyphen_automated_hyphen_security_hyphen_fixes.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/automated-security-fixes/delete(repos/disable-automated-security-fixes)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -29865,6 +29934,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_branch_hyphen_protection.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/delete(repos/delete-branch-protection)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -30312,6 +30389,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_admin_hyphen_branch_hyphen_protection.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins/delete(repos/delete-admin-branch-protection)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -30925,6 +31010,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_pull_hyphen_request_hyphen_review_hyphen_protection.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews/delete(repos/delete-pull-request-review-protection)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -31423,6 +31516,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_commit_hyphen_signature_hyphen_protection.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_signatures/delete(repos/delete-commit-signature-protection)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -31996,6 +32097,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_remove_hyphen_status_hyphen_check_hyphen_protection.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/delete(repos/remove-status-check-protection)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -33221,6 +33330,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_access_hyphen_restrictions.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/branches/{branch}/protection/restrictions/delete(repos/delete-access-restrictions)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -36069,6 +36186,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.repos_sol_codeowners_hyphen_errors.Output.NotFound)
+            /// Resource not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/codeowners/errors/get(repos/codeowners-errors)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -36120,12 +36245,12 @@ public enum Operations {
     /// List repository collaborators
     ///
     /// For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.
-    /// Organization members with write, maintain, or admin privileges on the organization-owned repository can use this endpoint.
+    /// The `permissions` hash returned in the response contains the base role permissions of the collaborator. The `role_name` is the highest role assigned to the collaborator after considering all sources of grants, including: repo, teams, organization, and enterprise.
+    /// There is presently not a way to differentiate between an organization level grant and a repository level grant from this endpoint response.
     ///
     /// Team members will include the members of child teams.
     ///
-    /// The authenticated user must have push access to the repository to use this endpoint.
-    ///
+    /// The authenticated user must have write, maintain, or admin privileges on the repository to use this endpoint. For organization-owned repositories, the authenticated user needs to be a member of the organization.
     /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators`.
@@ -36160,7 +36285,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/GET/query/affiliation`.
-                @frozen public enum affiliationPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum affiliationPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case outside = "outside"
                     case direct = "direct"
                     case all = "all"
@@ -36170,7 +36295,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/GET/query/affiliation`.
                 public var affiliation: Operations.repos_sol_list_hyphen_collaborators.Input.Query.affiliationPayload?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/GET/query/permission`.
-                @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum permissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case pull = "pull"
                     case triage = "triage"
                     case push = "push"
@@ -36427,6 +36552,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_check_hyphen_collaborator.Output.NoContent)
+            /// Response if user is a collaborator
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/get(repos/check-collaborator)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -36454,6 +36587,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.repos_sol_check_hyphen_collaborator.Output.NotFound)
+            /// Not Found if user is not a collaborator
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/get(repos/check-collaborator)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -36479,11 +36620,13 @@ public enum Operations {
     }
     /// Add a repository collaborator
     ///
-    /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. For more information, see "[Rate limits for the API](https://docs.github.com/rest/using-the-rest-api/rate-limits-for-the-rest-api#about-secondary-rate-limits)" and "[Best practices for using the REST API](https://docs.github.com/rest/guides/best-practices-for-using-the-rest-api)."
+    /// Add a user to a repository with a specified level of access. If the repository is owned by an organization, this API does not add the user to the organization - a user that has repository access without being an organization member is called an "outside collaborator" (if they are not an Enterprise Managed User) or a "repository collaborator" if they are an Enterprise Managed User. These users are exempt from some organization policies - see "[Adding outside collaborators to repositories](https://docs.github.com/organizations/managing-user-access-to-your-organizations-repositories/managing-outside-collaborators/adding-outside-collaborators-to-repositories-in-your-organization)" to learn more about these collaborator types.
     ///
-    /// Adding an outside collaborator may be restricted by enterprise administrators. For more information, see "[Enforcing repository management policies in your enterprise](https://docs.github.com/admin/policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories)."
+    /// This endpoint triggers [notifications](https://docs.github.com/github/managing-subscriptions-and-notifications-on-github/about-notifications).
     ///
-    /// For more information on permission levels, see "[Repository permission levels for an organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)". There are restrictions on which permissions can be granted to organization members when an organization base role is in place. In this case, the permission being given must be equal to or higher than the org base permission. Otherwise, the request will fail with:
+    /// Adding an outside collaborator may be restricted by enterprise and organization administrators. For more information, see "[Enforcing repository management policies in your enterprise](https://docs.github.com/admin/policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories)" and "[Setting permissions for adding outside collaborators](https://docs.github.com/organizations/managing-organization-settings/setting-permissions-for-adding-outside-collaborators)" for organization settings.
+    ///
+    /// For more information on permission levels, see "[Repository permission levels for an organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization#permission-levels-for-repositories-owned-by-an-organization)". There are restrictions on which permissions can be granted to organization members when an organization base role is in place. In this case, the role being given must be equal to or higher than the org base permission. Otherwise, the request will fail with:
     ///
     /// ```
     /// Cannot assign {member} permission of {role name}
@@ -36492,6 +36635,8 @@ public enum Operations {
     /// Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
     ///
     /// The invitee will receive a notification that they have been invited to the repository, which they must accept or decline. They may do this via the notifications page, the email they receive, or by using the [API](https://docs.github.com/rest/collaborators/invitations).
+    ///
+    /// For Enterprise Managed Users, this endpoint does not send invitations - these users are automatically added to organizations and repositories. Enterprise Managed Users can only be added to organizations and repositories within their enterprise.
     ///
     /// **Updating an existing collaborator's permission level**
     ///
@@ -36653,6 +36798,17 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_add_hyphen_collaborator.Output.NoContent)
+            /// Response when:
+            /// - an existing collaborator is added as a collaborator
+            /// - an organization member is added as an individual collaborator
+            /// - an existing team member (whose team is also a repository collaborator) is added as an individual collaborator
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/put(repos/add-collaborator)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -36670,17 +36826,47 @@ public enum Operations {
                     }
                 }
             }
-            /// Validation failed, or the endpoint has been spammed.
+            public struct UnprocessableContent: Sendable, Hashable {
+                /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/{username}/PUT/responses/422/content`.
+                @frozen public enum Body: Sendable, Hashable {
+                    /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/collaborators/{username}/PUT/responses/422/content/application\/json`.
+                    case json(Components.Schemas.validation_hyphen_error)
+                    /// The associated value of the enum case if `self` is `.json`.
+                    ///
+                    /// - Throws: An error if `self` is not `.json`.
+                    /// - SeeAlso: `.json`.
+                    public var json: Components.Schemas.validation_hyphen_error {
+                        get throws {
+                            switch self {
+                            case let .json(body):
+                                return body
+                            }
+                        }
+                    }
+                }
+                /// Received HTTP response body
+                public var body: Operations.repos_sol_add_hyphen_collaborator.Output.UnprocessableContent.Body
+                /// Creates a new `UnprocessableContent`.
+                ///
+                /// - Parameters:
+                ///   - body: Received HTTP response body
+                public init(body: Operations.repos_sol_add_hyphen_collaborator.Output.UnprocessableContent.Body) {
+                    self.body = body
+                }
+            }
+            /// Response when:
+            /// - validation failed, or the endpoint has been spammed
+            /// - an Enterprise Managed User (EMU) account was invited to a repository in an enterprise with personal user accounts
             ///
             /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/put(repos/add-collaborator)/responses/422`.
             ///
             /// HTTP response code: `422 unprocessableContent`.
-            case unprocessableContent(Components.Responses.validation_failed)
+            case unprocessableContent(Operations.repos_sol_add_hyphen_collaborator.Output.UnprocessableContent)
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
             /// - SeeAlso: `.unprocessableContent`.
-            public var unprocessableContent: Components.Responses.validation_failed {
+            public var unprocessableContent: Operations.repos_sol_add_hyphen_collaborator.Output.UnprocessableContent {
                 get throws {
                     switch self {
                     case let .unprocessableContent(response):
@@ -36844,6 +37030,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_remove_hyphen_collaborator.Output.NoContent)
+            /// No Content when collaborator was removed from the repository.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/delete(repos/remove-collaborator)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -36940,13 +37134,15 @@ public enum Operations {
     }
     /// Get repository permissions for a user
     ///
-    /// Checks the repository permission of a collaborator. The possible repository
-    /// permissions are `admin`, `write`, `read`, and `none`.
+    /// Checks the repository permission and role of a collaborator.
     ///
-    /// *Note*: The `permission` attribute provides the legacy base roles of `admin`, `write`, `read`, and `none`, where the
-    /// `maintain` role is mapped to `write` and the `triage` role is mapped to `read`. To determine the role assigned to the
-    /// collaborator, see the `role_name` attribute, which will provide the full role name, including custom roles. The
-    /// `permissions` hash can also be used to determine which base level of access the collaborator has to the repository.
+    /// The `permission` attribute provides the legacy base roles of `admin`, `write`, `read`, and `none`, where the
+    /// `maintain` role is mapped to `write` and the `triage` role is mapped to `read`.
+    /// The `role_name` attribute provides the name of the assigned role, including custom roles. The
+    /// `permission` can also be used to determine which base level of access the collaborator has to the repository.
+    ///
+    /// The calculated permissions are the highest role assigned to the collaborator after considering all sources of grants, including: repo, teams, organization, and enterprise.
+    /// There is presently not a way to differentiate between an organization level grant and a repository level grant from this endpoint response.
     ///
     /// - Remark: HTTP `GET /repos/{owner}/{repo}/collaborators/{username}/permission`.
     /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/collaborators/{username}/permission/get(repos/get-collaborator-permission-level)`.
@@ -37767,6 +37963,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_commit_hyphen_comment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/delete(repos/delete-commit-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -40492,6 +40696,14 @@ public enum Operations {
             ///
             /// HTTP response code: `302 found`.
             case found(Components.Responses.found)
+            /// Found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/get(repos/get-content)/responses/302`.
+            ///
+            /// HTTP response code: `302 found`.
+            public static var found: Self {
+                .found(.init())
+            }
             /// The associated value of the enum case if `self` is `.found`.
             ///
             /// - Throws: An error if `self` is not `.found`.
@@ -40515,6 +40727,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contents/{path}/get(repos/get-content)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -41585,6 +41805,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_list_hyphen_contributors.Output.NoContent)
+            /// Response if repository is empty
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/contributors/get(repos/list-contributors)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -42272,6 +42500,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.repos_sol_create_hyphen_deployment.Output.Conflict)
+            /// Conflict when there is a merge conflict or the commit's status checks failed
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/post(repos/create-deployment)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -42599,6 +42835,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_deployment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/deployments/{deployment_id}/delete(repos/delete-deployment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -42971,7 +43215,7 @@ public enum Operations {
                     /// The state of the status. When you set a transient deployment to `inactive`, the deployment will be shown as `destroyed` in GitHub.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/POST/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case error = "error"
                         case failure = "failure"
                         case inactive = "inactive"
@@ -43500,6 +43744,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_create_hyphen_dispatch_hyphen_event.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dispatches/post(repos/create-dispatch-event)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -44073,19 +44325,19 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        wait_timer = try container.decodeIfPresent(
+                        self.wait_timer = try container.decodeIfPresent(
                             Components.Schemas.wait_hyphen_timer.self,
                             forKey: .wait_timer
                         )
-                        prevent_self_review = try container.decodeIfPresent(
+                        self.prevent_self_review = try container.decodeIfPresent(
                             Components.Schemas.prevent_hyphen_self_hyphen_review.self,
                             forKey: .prevent_self_review
                         )
-                        reviewers = try container.decodeIfPresent(
+                        self.reviewers = try container.decodeIfPresent(
                             Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_environment.Input.Body.jsonPayload.reviewersPayload.self,
                             forKey: .reviewers
                         )
-                        deployment_branch_policy = try container.decodeIfPresent(
+                        self.deployment_branch_policy = try container.decodeIfPresent(
                             Components.Schemas.deployment_hyphen_branch_hyphen_policy_hyphen_settings.self,
                             forKey: .deployment_branch_policy
                         )
@@ -44310,6 +44562,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_an_hyphen_environment.Output.NoContent)
+            /// Default response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/delete(repos/delete-an-environment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -44675,6 +44935,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.repos_sol_create_hyphen_deployment_hyphen_branch_hyphen_policy.Output.NotFound)
+            /// Not Found or `deployment_branch_policy.custom_branch_policies` property for the environment is set to false
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/post(repos/create-deployment-branch-policy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -44702,6 +44970,14 @@ public enum Operations {
             ///
             /// HTTP response code: `303 seeOther`.
             case seeOther(Operations.repos_sol_create_hyphen_deployment_hyphen_branch_hyphen_policy.Output.SeeOther)
+            /// Response if the same branch name pattern already exists
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/post(repos/create-deployment-branch-policy)/responses/303`.
+            ///
+            /// HTTP response code: `303 seeOther`.
+            public static var seeOther: Self {
+                .seeOther(.init())
+            }
             /// The associated value of the enum case if `self` is `.seeOther`.
             ///
             /// - Throws: An error if `self` is not `.seeOther`.
@@ -45143,6 +45419,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_deployment_hyphen_branch_hyphen_policy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}/delete(repos/delete-deployment-branch-policy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -45960,6 +46244,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_disable_hyphen_deployment_hyphen_protection_hyphen_rule.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}/delete(repos/disable-deployment-protection-rule)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -46019,7 +46311,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/forks/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/forks/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case newest = "newest"
                     case oldest = "oldest"
                     case stargazers = "stargazers"
@@ -46841,19 +47133,19 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decodeIfPresent(
+                        self.name = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .name
                         )
-                        config = try container.decodeIfPresent(
+                        self.config = try container.decodeIfPresent(
                             Operations.repos_sol_create_hyphen_webhook.Input.Body.jsonPayload.configPayload.self,
                             forKey: .config
                         )
-                        events = try container.decodeIfPresent(
+                        self.events = try container.decodeIfPresent(
                             [Swift.String].self,
                             forKey: .events
                         )
-                        active = try container.decodeIfPresent(
+                        self.active = try container.decodeIfPresent(
                             Swift.Bool.self,
                             forKey: .active
                         )
@@ -47557,6 +47849,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_webhook.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/delete(repos/delete-webhook)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -47870,19 +48170,19 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        url = try container.decodeIfPresent(
+                        self.url = try container.decodeIfPresent(
                             Components.Schemas.webhook_hyphen_config_hyphen_url.self,
                             forKey: .url
                         )
-                        content_type = try container.decodeIfPresent(
+                        self.content_type = try container.decodeIfPresent(
                             Components.Schemas.webhook_hyphen_config_hyphen_content_hyphen_type.self,
                             forKey: .content_type
                         )
-                        secret = try container.decodeIfPresent(
+                        self.secret = try container.decodeIfPresent(
                             Components.Schemas.webhook_hyphen_config_hyphen_secret.self,
                             forKey: .secret
                         )
-                        insecure_ssl = try container.decodeIfPresent(
+                        self.insecure_ssl = try container.decodeIfPresent(
                             Components.Schemas.webhook_hyphen_config_hyphen_insecure_hyphen_ssl.self,
                             forKey: .insecure_ssl
                         )
@@ -48682,6 +48982,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_ping_hyphen_webhook.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/pings/post(repos/ping-webhook)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -48832,6 +49140,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_test_hyphen_push_hyphen_webhook.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/hooks/{hook_id}/tests/post(repos/test-push-webhook)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -49149,7 +49465,7 @@ public enum Operations {
                     /// The permissions that the associated user will have on the repository. Valid values are `read`, `write`, `maintain`, `triage`, and `admin`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/invitations/{invitation_id}/PATCH/requestBody/json/permissions`.
-                    @frozen public enum permissionsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum permissionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case read = "read"
                         case write = "write"
                         case maintain = "maintain"
@@ -49333,6 +49649,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_invitation.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/invitations/{invitation_id}/delete(repos/delete-invitation)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -50002,6 +50326,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_deploy_hyphen_key.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/keys/{key_id}/delete(repos/delete-deploy-key)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -50312,6 +50644,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.repos_sol_merge_hyphen_upstream.Output.Conflict)
+            /// The branch could not be synced because of a merge conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/merge-upstream/post(repos/merge-upstream)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -50339,6 +50679,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.repos_sol_merge_hyphen_upstream.Output.UnprocessableContent)
+            /// The branch could not be synced for some other reason
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/merge-upstream/post(repos/merge-upstream)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -50551,6 +50899,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_merge.Output.NoContent)
+            /// Response when already merged
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/merges/post(repos/merge)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -50578,6 +50934,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.repos_sol_merge.Output.NotFound)
+            /// Not Found when the base or head does not exist
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/merges/post(repos/merge)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -50605,6 +50969,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.repos_sol_merge.Output.Conflict)
+            /// Conflict when there is a merge conflict
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/merges/post(repos/merge)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -50949,19 +51321,19 @@ public enum Operations {
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
-                            value1 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value2 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                             [
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ],
                             type: Self.self,
                             codingPath: decoder.codingPath,
@@ -50969,8 +51341,8 @@ public enum Operations {
                         )
                     }
                     public func encode(to encoder: any Encoder) throws {
-                        try value1?.encode(to: encoder)
-                        try value2?.encode(to: encoder)
+                        try self.value1?.encode(to: encoder)
+                        try self.value2?.encode(to: encoder)
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/POST/requestBody/content/application\/json`.
@@ -51234,37 +51606,37 @@ public enum Operations {
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
-                            value1 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value2 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value3 = try .init(from: decoder)
+                            self.value3 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value4 = try .init(from: decoder)
+                            self.value4 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value5 = try .init(from: decoder)
+                            self.value5 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                             [
-                                value1,
-                                value2,
-                                value3,
-                                value4,
-                                value5
+                                self.value1,
+                                self.value2,
+                                self.value3,
+                                self.value4,
+                                self.value5
                             ],
                             type: Self.self,
                             codingPath: decoder.codingPath,
@@ -51272,11 +51644,11 @@ public enum Operations {
                         )
                     }
                     public func encode(to encoder: any Encoder) throws {
-                        try value1?.encode(to: encoder)
-                        try value2?.encode(to: encoder)
-                        try value3?.encode(to: encoder)
-                        try value4?.encode(to: encoder)
-                        try value5?.encode(to: encoder)
+                        try self.value1?.encode(to: encoder)
+                        try self.value2?.encode(to: encoder)
+                        try self.value3?.encode(to: encoder)
+                        try self.value4?.encode(to: encoder)
+                        try self.value5?.encode(to: encoder)
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pages/PUT/requestBody/content/application\/json`.
@@ -51310,6 +51682,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_update_hyphen_information_hyphen_about_hyphen_pages_hyphen_site.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/put(repos/update-information-about-pages-site)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -51506,6 +51886,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_pages_hyphen_site.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/delete(repos/delete-pages-site)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -52843,6 +53231,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel/post(repos/cancel-pages-deployment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -53091,6 +53487,14 @@ public enum Operations {
             ///
             /// HTTP response code: `400 badRequest`.
             case badRequest(Operations.repos_sol_get_hyphen_pages_hyphen_health_hyphen_check.Output.BadRequest)
+            /// Custom domains are not available for GitHub Pages
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/health/get(repos/get-pages-health-check)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
@@ -53118,6 +53522,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.repos_sol_get_hyphen_pages_hyphen_health_hyphen_check.Output.UnprocessableContent)
+            /// There isn't a CNAME for this page
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pages/health/get(repos/get-pages-health-check)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -53441,6 +53853,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/private-vulnerability-reporting/put(repos/enable-private-vulnerability-reporting)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -53583,6 +54003,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/private-vulnerability-reporting/delete(repos/disable-private-vulnerability-reporting)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -53946,6 +54374,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_custom_hyphen_properties_hyphen_values.Output.NoContent)
+            /// No Content when custom property values are successfully created or updated
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/properties/values/patch(repos/create-or-update-custom-properties-values)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -54202,6 +54638,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/readme/get(repos/get-readme)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -54811,7 +55255,7 @@ public enum Operations {
                     /// Specifies whether this release should be set as the latest release for the repository. Drafts and prereleases cannot be set as latest. Defaults to `true` for newly published releases. `legacy` specifies that the latest release should be determined based on the release creation date and higher semantic version.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/POST/requestBody/json/make_latest`.
-                    @frozen public enum make_latestPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum make_latestPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _true = "true"
                         case _false = "false"
                         case legacy = "legacy"
@@ -55213,6 +55657,14 @@ public enum Operations {
             ///
             /// HTTP response code: `302 found`.
             case found(Components.Responses.found)
+            /// Found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/assets/{asset_id}/get(repos/get-release-asset)/responses/302`.
+            ///
+            /// HTTP response code: `302 found`.
+            public static var found: Self {
+                .found(.init())
+            }
             /// The associated value of the enum case if `self` is `.found`.
             ///
             /// - Throws: An error if `self` is not `.found`.
@@ -55510,6 +55962,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_release_hyphen_asset.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/assets/{asset_id}/delete(repos/delete-release-asset)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -56193,6 +56653,14 @@ public enum Operations {
             ///
             /// HTTP response code: `401 unauthorized`.
             case unauthorized(Operations.repos_sol_get_hyphen_release.Output.Unauthorized)
+            /// Unauthorized
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/get(repos/get-release)/responses/401`.
+            ///
+            /// HTTP response code: `401 unauthorized`.
+            public static var unauthorized: Self {
+                .unauthorized(.init())
+            }
             /// The associated value of the enum case if `self` is `.unauthorized`.
             ///
             /// - Throws: An error if `self` is not `.unauthorized`.
@@ -56324,7 +56792,7 @@ public enum Operations {
                     /// Specifies whether this release should be set as the latest release for the repository. Drafts and prereleases cannot be set as latest. Defaults to `true` for newly published releases. `legacy` specifies that the latest release should be determined based on the release creation date and higher semantic version.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/PATCH/requestBody/json/make_latest`.
-                    @frozen public enum make_latestPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum make_latestPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _true = "true"
                         case _false = "false"
                         case legacy = "legacy"
@@ -56591,6 +57059,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_release.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/delete(repos/delete-release)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -56985,6 +57461,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.repos_sol_upload_hyphen_release_hyphen_asset.Output.UnprocessableContent)
+            /// Response if you upload an asset with the same filename as another uploaded asset
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/assets/post(repos/upload-release-asset)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -57498,7 +57982,7 @@ public enum Operations {
                     /// The target of the ruleset
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/POST/requestBody/json/target`.
-                    @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum targetPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case branch = "branch"
                         case tag = "tag"
                         case push = "push"
@@ -57742,7 +58226,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query/ref`.
                 public var ref: Components.Parameters.ref_hyphen_in_hyphen_query?
                 /// - Remark: Generated from `#/components/parameters/time-period`.
-                @frozen public enum time_hyphen_period: String, Codable, Hashable, Sendable {
+                @frozen public enum time_hyphen_period: String, Codable, Hashable, Sendable, CaseIterable {
                     case hour = "hour"
                     case day = "day"
                     case week = "week"
@@ -57759,7 +58243,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/rule-suites/GET/query/actor_name`.
                 public var actor_name: Components.Parameters.actor_hyphen_name_hyphen_in_hyphen_query?
                 /// - Remark: Generated from `#/components/parameters/rule-suite-result`.
-                @frozen public enum rule_hyphen_suite_hyphen_result: String, Codable, Hashable, Sendable {
+                @frozen public enum rule_hyphen_suite_hyphen_result: String, Codable, Hashable, Sendable, CaseIterable {
                     case pass = "pass"
                     case fail = "fail"
                     case bypass = "bypass"
@@ -58436,7 +58920,7 @@ public enum Operations {
                     /// The target of the ruleset
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/rulesets/{ruleset_id}/PUT/requestBody/json/target`.
-                    @frozen public enum targetPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum targetPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case branch = "branch"
                         case tag = "tag"
                         case push = "push"
@@ -58715,6 +59199,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_repo_hyphen_ruleset.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/rulesets/{ruleset_id}/delete(repos/delete-repo-ruleset)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -59373,6 +59865,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -59400,6 +59900,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.repos_sol_get_hyphen_code_hyphen_frequency_hyphen_stats.Output.UnprocessableContent)
+            /// Repository contains more than 10,000 commits
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/code_frequency/get(repos/get-code-frequency-stats)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -59587,6 +60095,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/commit_activity/get(repos/get-commit-activity-stats)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -59783,6 +60299,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/contributors/get(repos/get-contributors-stats)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -60121,6 +60645,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/stats/punch_card/get(repos/get-punch-card-stats)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -60228,7 +60760,7 @@ public enum Operations {
                     /// The state of the status.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/statuses/{sha}/POST/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case error = "error"
                         case failure = "failure"
                         case pending = "pending"
@@ -61075,6 +61607,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_delete_hyphen_tag_hyphen_protection.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/tags/protection/{tag_protection_id}/delete(repos/delete-tag-protection)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -61927,7 +62467,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/traffic/clones/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/per`.
-                @frozen public enum per: String, Codable, Hashable, Sendable {
+                @frozen public enum per: String, Codable, Hashable, Sendable, CaseIterable {
                     case day = "day"
                     case week = "week"
                 }
@@ -62442,7 +62982,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/traffic/views/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/per`.
-                @frozen public enum per: String, Codable, Hashable, Sendable {
+                @frozen public enum per: String, Codable, Hashable, Sendable, CaseIterable {
                     case day = "day"
                     case week = "week"
                 }
@@ -62830,6 +63370,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_check_hyphen_vulnerability_hyphen_alerts.Output.NoContent)
+            /// Response if repository is enabled with vulnerability alerts
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/vulnerability-alerts/get(repos/check-vulnerability-alerts)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -62857,6 +63405,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.repos_sol_check_hyphen_vulnerability_hyphen_alerts.Output.NotFound)
+            /// Not Found if repository is not enabled with vulnerability alerts
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/vulnerability-alerts/get(repos/check-vulnerability-alerts)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -62932,6 +63488,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_enable_hyphen_vulnerability_hyphen_alerts.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/vulnerability-alerts/put(repos/enable-vulnerability-alerts)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -63009,6 +63573,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_disable_hyphen_vulnerability_hyphen_alerts.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/vulnerability-alerts/delete(repos/disable-vulnerability-alerts)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -63511,6 +64083,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repositories/get(repos/list-public)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -63573,7 +64153,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/repos/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/visibility`.
-                @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case all = "all"
                     case _public = "public"
                     case _private = "private"
@@ -63590,7 +64170,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/affiliation`.
                 public var affiliation: Swift.String?
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case all = "all"
                     case owner = "owner"
                     case _public = "public"
@@ -63602,7 +64182,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/type`.
                 public var _type: Operations.repos_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query._typePayload?
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case pushed = "pushed"
@@ -63613,7 +64193,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/sort`.
                 public var sort: Operations.repos_sol_list_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/paths/user/repos/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -63797,6 +64377,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/repos/get(repos/list-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -63994,7 +64582,7 @@ public enum Operations {
                     /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
                     ///
                     /// - Remark: Generated from `#/paths/user/repos/POST/requestBody/json/squash_merge_commit_title`.
-                    @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_TITLE = "PR_TITLE"
                         case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
                     }
@@ -64014,7 +64602,7 @@ public enum Operations {
                     /// - `BLANK` - default to a blank commit message.
                     ///
                     /// - Remark: Generated from `#/paths/user/repos/POST/requestBody/json/squash_merge_commit_message`.
-                    @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_BODY = "PR_BODY"
                         case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                         case BLANK = "BLANK"
@@ -64035,7 +64623,7 @@ public enum Operations {
                     /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
                     ///
                     /// - Remark: Generated from `#/paths/user/repos/POST/requestBody/json/merge_commit_title`.
-                    @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_TITLE = "PR_TITLE"
                         case MERGE_MESSAGE = "MERGE_MESSAGE"
                     }
@@ -64055,7 +64643,7 @@ public enum Operations {
                     /// - `BLANK` - default to a blank commit message.
                     ///
                     /// - Remark: Generated from `#/paths/user/repos/POST/requestBody/json/merge_commit_message`.
-                    @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case PR_BODY = "PR_BODY"
                         case PR_TITLE = "PR_TITLE"
                         case BLANK = "BLANK"
@@ -64294,6 +64882,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/repos/post(repos/create-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -64575,6 +65171,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/repository_invitations/get(repos/list-invitations-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -64752,6 +65356,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_accept_hyphen_invitation_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/repository_invitations/{invitation_id}/patch(repos/accept-invitation-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -64844,6 +65456,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/repository_invitations/{invitation_id}/patch(repos/accept-invitation-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -64952,6 +65572,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.repos_sol_decline_hyphen_invitation_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/repository_invitations/{invitation_id}/delete(repos/decline-invitation-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -64998,6 +65626,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/repository_invitations/{invitation_id}/delete(repos/decline-invitation-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -65119,7 +65755,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case all = "all"
                     case owner = "owner"
                     case member = "member"
@@ -65129,7 +65765,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query/type`.
                 public var _type: Operations.repos_sol_list_hyphen_for_hyphen_user.Input.Query._typePayload?
                 /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case pushed = "pushed"
@@ -65140,7 +65776,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query/sort`.
                 public var sort: Operations.repos_sol_list_hyphen_for_hyphen_user.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/paths/users/{username}/repos/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
