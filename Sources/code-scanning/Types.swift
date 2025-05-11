@@ -863,6 +863,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1679,7 +1688,7 @@ public enum Components {
         /// State of a code scanning alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-state-query`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case closed = "closed"
             case dismissed = "dismissed"
@@ -1688,7 +1697,7 @@ public enum Components {
         /// Severity of a code scanning alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-severity`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_severity: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_severity: String, Codable, Hashable, Sendable, CaseIterable {
             case critical = "critical"
             case high = "high"
             case medium = "medium"
@@ -1704,7 +1713,7 @@ public enum Components {
         /// State of a code scanning alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-state`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case dismissed = "dismissed"
             case fixed = "fixed"
@@ -1712,7 +1721,7 @@ public enum Components {
         /// **Required when the state is dismissed.** The reason for dismissing or closing the alert.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-dismissed-reason`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_dismissed_hyphen_reason: String, Codable, Hashable, Sendable, CaseIterable {
             case false_space_positive = "false positive"
             case won_apos_t_space_fix = "won't fix"
             case used_space_in_space_tests = "used in tests"
@@ -1734,7 +1743,7 @@ public enum Components {
             /// The severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case note = "note"
                 case warning = "warning"
@@ -1747,7 +1756,7 @@ public enum Components {
             /// The security severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule-summary/security_severity_level`.
-            @frozen public enum security_severity_levelPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum security_severity_levelPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case low = "low"
                 case medium = "medium"
                 case high = "high"
@@ -1918,7 +1927,7 @@ public enum Components {
         /// A classification of the file. For example to identify it as generated.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-classification`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_classification: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_classification: String, Codable, Hashable, Sendable, CaseIterable {
             case source = "source"
             case generated = "generated"
             case test = "test"
@@ -2246,7 +2255,7 @@ public enum Components {
             /// The severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case note = "note"
                 case warning = "warning"
@@ -2259,7 +2268,7 @@ public enum Components {
             /// The security severity of the alert.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-alert-rule/security_severity_level`.
-            @frozen public enum security_severity_levelPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum security_severity_levelPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case low = "low"
                 case medium = "medium"
                 case high = "high"
@@ -2444,7 +2453,7 @@ public enum Components {
         /// Sets the state of the code scanning alert. You must provide `dismissed_reason` when you set the state to `dismissed`.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-alert-set-state`.
-        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_set_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_alert_hyphen_set_hyphen_state: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case dismissed = "dismissed"
         }
@@ -2455,7 +2464,7 @@ public enum Components {
         /// The status of an autofix.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-autofix-status`.
-        @frozen public enum code_hyphen_scanning_hyphen_autofix_hyphen_status: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_autofix_hyphen_status: String, Codable, Hashable, Sendable, CaseIterable {
             case pending = "pending"
             case error = "error"
             case success = "success"
@@ -2806,7 +2815,7 @@ public enum Components {
         /// The language targeted by the CodeQL query
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-language`.
-        @frozen public enum code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_language: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_language: String, Codable, Hashable, Sendable, CaseIterable {
             case cpp = "cpp"
             case csharp = "csharp"
             case go = "go"
@@ -2877,7 +2886,7 @@ public enum Components {
         /// The new status of the CodeQL variant analysis repository task.
         ///
         /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis-status`.
-        @frozen public enum code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status: String, Codable, Hashable, Sendable {
+        @frozen public enum code_hyphen_scanning_hyphen_variant_hyphen_analysis_hyphen_status: String, Codable, Hashable, Sendable, CaseIterable {
             case pending = "pending"
             case in_progress = "in_progress"
             case succeeded = "succeeded"
@@ -2943,7 +2952,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/completed_at`.
             public var completed_at: Foundation.Date?
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case in_progress = "in_progress"
                 case succeeded = "succeeded"
                 case failed = "failed"
@@ -2958,7 +2967,7 @@ public enum Components {
             /// The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-variant-analysis/failure_reason`.
-            @frozen public enum failure_reasonPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum failure_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case no_repos_queried = "no_repos_queried"
                 case actions_workflow_run_failed = "actions_workflow_run_failed"
                 case internal_error = "internal_error"
@@ -3225,7 +3234,7 @@ public enum Components {
             /// Code scanning default setup has been configured or not.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case configured = "configured"
                 case not_hyphen_configured = "not-configured"
             }
@@ -3234,7 +3243,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/state`.
             public var state: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup.statePayload?
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/languagesPayload`.
-            @frozen public enum languagesPayloadPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum languagesPayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case actions = "actions"
                 case c_hyphen_cpp = "c-cpp"
                 case csharp = "csharp"
@@ -3258,7 +3267,7 @@ public enum Components {
             /// Runner type to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/runner_type`.
-            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case standard = "standard"
                 case labeled = "labeled"
             }
@@ -3273,7 +3282,7 @@ public enum Components {
             /// CodeQL query suite to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/query_suite`.
-            @frozen public enum query_suitePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum query_suitePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case _default = "default"
                 case extended = "extended"
             }
@@ -3288,7 +3297,7 @@ public enum Components {
             /// The frequency of the periodic analysis.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup/schedule`.
-            @frozen public enum schedulePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum schedulePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case weekly = "weekly"
             }
             /// The frequency of the periodic analysis.
@@ -3339,7 +3348,7 @@ public enum Components {
             /// The desired state of code scanning default setup.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case configured = "configured"
                 case not_hyphen_configured = "not-configured"
             }
@@ -3350,7 +3359,7 @@ public enum Components {
             /// Runner type to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/runner_type`.
-            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case standard = "standard"
                 case labeled = "labeled"
             }
@@ -3365,7 +3374,7 @@ public enum Components {
             /// CodeQL query suite to be used.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/query_suite`.
-            @frozen public enum query_suitePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum query_suitePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case _default = "default"
                 case extended = "extended"
             }
@@ -3374,7 +3383,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/query_suite`.
             public var query_suite: Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.query_suitePayload?
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-update/languagesPayload`.
-            @frozen public enum languagesPayloadPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum languagesPayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case actions = "actions"
                 case c_hyphen_cpp = "c-cpp"
                 case csharp = "csharp"
@@ -3423,23 +3432,23 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                state = try container.decodeIfPresent(
+                self.state = try container.decodeIfPresent(
                     Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.statePayload.self,
                     forKey: .state
                 )
-                runner_type = try container.decodeIfPresent(
+                self.runner_type = try container.decodeIfPresent(
                     Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.runner_typePayload.self,
                     forKey: .runner_type
                 )
-                runner_label = try container.decodeIfPresent(
+                self.runner_label = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .runner_label
                 )
-                query_suite = try container.decodeIfPresent(
+                self.query_suite = try container.decodeIfPresent(
                     Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.query_suitePayload.self,
                     forKey: .query_suite
                 )
-                languages = try container.decodeIfPresent(
+                self.languages = try container.decodeIfPresent(
                     Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_update.languagesPayload.self,
                     forKey: .languages
                 )
@@ -3521,7 +3530,7 @@ public enum Components {
             /// `pending` files have not yet been processed, while `complete` means results from the SARIF have been stored. `failed` files have either not been processed at all, or could only be partially processed.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-sarifs-status/processing_status`.
-            @frozen public enum processing_statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum processing_statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case pending = "pending"
                 case complete = "complete"
                 case failed = "failed"
@@ -3573,7 +3582,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -3875,6 +3884,34 @@ public enum Components {
                 self.body = body
             }
         }
+        public struct unprocessable_analysis: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/unprocessable_analysis/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/unprocessable_analysis/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.unprocessable_analysis.Body
+            /// Creates a new `unprocessable_analysis`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.unprocessable_analysis.Body) {
+                self.body = body
+            }
+        }
         public struct found: Sendable, Hashable {
             /// Creates a new `found`.
             public init() {}
@@ -3972,7 +4009,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -3985,7 +4022,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/state`.
                 public var state: Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query?
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-scanning/alerts/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -4277,7 +4314,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/pr`.
                 public var pr: Components.Parameters.pr_hyphen_alias?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -4294,7 +4331,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/after`.
                 public var after: Components.Parameters.pagination_hyphen_after?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/alerts/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -4440,6 +4477,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/get(code-scanning/list-alerts-for-repo)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -4682,6 +4727,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/get(code-scanning/get-alert)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -5585,6 +5638,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.code_hyphen_scanning_sol_create_hyphen_autofix.Output.UnprocessableContent)
+            /// Unprocessable Entity
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/post(code-scanning/create-autofix)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -5865,6 +5926,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Output.UnprocessableContent)
+            /// Unprocessable Entity
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix/commits/post(code-scanning/commit-autofix)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -6274,7 +6343,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/sarif_id`.
                 public var sarif_id: Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_id?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -6283,7 +6352,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/code-scanning/analyses/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                 }
                 /// The property by which to sort the results.
@@ -6703,6 +6772,29 @@ public enum Operations {
                     default:
                         try throwUnexpectedResponseStatus(
                             expectedStatus: "notFound",
+                            response: self
+                        )
+                    }
+                }
+            }
+            /// Response if analysis could not be processed
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}/get(code-scanning/get-analysis)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            case unprocessableContent(Components.Responses.unprocessable_analysis)
+            /// The associated value of the enum case if `self` is `.unprocessableContent`.
+            ///
+            /// - Throws: An error if `self` is not `.unprocessableContent`.
+            /// - SeeAlso: `.unprocessableContent`.
+            public var unprocessableContent: Components.Responses.unprocessable_analysis {
+                get throws {
+                    switch self {
+                    case let .unprocessableContent(response):
+                        return response
+                    default:
+                        try throwUnexpectedResponseStatus(
+                            expectedStatus: "unprocessableContent",
                             response: self
                         )
                     }
@@ -7438,6 +7530,14 @@ public enum Operations {
             ///
             /// HTTP response code: `302 found`.
             case found(Components.Responses.found)
+            /// Found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/get(code-scanning/get-codeql-database)/responses/302`.
+            ///
+            /// HTTP response code: `302 found`.
+            public static var found: Self {
+                .found(.init())
+            }
             /// The associated value of the enum case if `self` is `.found`.
             ///
             /// - Throws: An error if `self` is not `.found`.
@@ -7633,6 +7733,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.code_hyphen_scanning_sol_delete_hyphen_codeql_hyphen_database.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/codeql/databases/{language}/delete(code-scanning/delete-codeql-database)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9121,31 +9229,31 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        commit_sha = try container.decode(
+                        self.commit_sha = try container.decode(
                             Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_commit_hyphen_sha.self,
                             forKey: .commit_sha
                         )
-                        ref = try container.decode(
+                        self.ref = try container.decode(
                             Components.Schemas.code_hyphen_scanning_hyphen_ref_hyphen_full.self,
                             forKey: .ref
                         )
-                        sarif = try container.decode(
+                        self.sarif = try container.decode(
                             Components.Schemas.code_hyphen_scanning_hyphen_analysis_hyphen_sarif_hyphen_file.self,
                             forKey: .sarif
                         )
-                        checkout_uri = try container.decodeIfPresent(
+                        self.checkout_uri = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .checkout_uri
                         )
-                        started_at = try container.decodeIfPresent(
+                        self.started_at = try container.decodeIfPresent(
                             Foundation.Date.self,
                             forKey: .started_at
                         )
-                        tool_name = try container.decodeIfPresent(
+                        self.tool_name = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .tool_name
                         )
-                        validate = try container.decodeIfPresent(
+                        self.validate = try container.decodeIfPresent(
                             Swift.Bool.self,
                             forKey: .validate
                         )
@@ -9242,6 +9350,14 @@ public enum Operations {
             ///
             /// HTTP response code: `400 badRequest`.
             case badRequest(Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.BadRequest)
+            /// Bad Request if the sarif field is invalid
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
@@ -9315,6 +9431,14 @@ public enum Operations {
             ///
             /// HTTP response code: `413 contentTooLarge`.
             case contentTooLarge(Operations.code_hyphen_scanning_sol_upload_hyphen_sarif.Output.ContentTooLarge)
+            /// Payload Too Large if the sarif field is too large
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/post(code-scanning/upload-sarif)/responses/413`.
+            ///
+            /// HTTP response code: `413 contentTooLarge`.
+            public static var contentTooLarge: Self {
+                .contentTooLarge(.init())
+            }
             /// The associated value of the enum case if `self` is `.contentTooLarge`.
             ///
             /// - Throws: An error if `self` is not `.contentTooLarge`.
@@ -9537,6 +9661,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.code_hyphen_scanning_sol_get_hyphen_sarif.Output.NotFound)
+            /// Not Found if the sarif id does not match any upload
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}/get(code-scanning/get-sarif)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
