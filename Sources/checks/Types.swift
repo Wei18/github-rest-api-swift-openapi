@@ -397,6 +397,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -833,23 +842,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -864,23 +873,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -986,7 +995,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1008,7 +1017,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1034,7 +1043,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1060,7 +1069,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1082,7 +1091,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1104,7 +1113,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1126,7 +1135,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2100,7 +2109,7 @@ public enum Components {
             /// The phase of the lifecycle that the check is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check runs.
             ///
             /// - Remark: Generated from `#/components/schemas/check-run/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case queued = "queued"
                 case in_progress = "in_progress"
                 case completed = "completed"
@@ -2113,7 +2122,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/check-run/status`.
             public var status: Components.Schemas.check_hyphen_run.statusPayload
             /// - Remark: Generated from `#/components/schemas/check-run/conclusion`.
-            @frozen public enum conclusionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum conclusionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case success = "success"
                 case failure = "failure"
                 case neutral = "neutral"
@@ -2486,7 +2495,7 @@ public enum Components {
             /// The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites.
             ///
             /// - Remark: Generated from `#/components/schemas/check-suite/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case queued = "queued"
                 case in_progress = "in_progress"
                 case completed = "completed"
@@ -2499,7 +2508,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/check-suite/status`.
             public var status: Components.Schemas.check_hyphen_suite.statusPayload?
             /// - Remark: Generated from `#/components/schemas/check-suite/conclusion`.
-            @frozen public enum conclusionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum conclusionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case success = "success"
                 case failure = "failure"
                 case neutral = "neutral"
@@ -2723,7 +2732,7 @@ public enum Components {
         /// Returns check runs with the specified `status`.
         ///
         /// - Remark: Generated from `#/components/parameters/status`.
-        @frozen public enum status: String, Codable, Hashable, Sendable {
+        @frozen public enum status: String, Codable, Hashable, Sendable, CaseIterable {
             case queued = "queued"
             case in_progress = "in_progress"
             case completed = "completed"
@@ -3194,7 +3203,7 @@ public enum Operations {
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
-                            status = try container.decodeIfPresent(
+                            self.status = try container.decodeIfPresent(
                                 OpenAPIRuntime.OpenAPIValueContainer.self,
                                 forKey: .status
                             )
@@ -3205,7 +3214,7 @@ public enum Operations {
                         public func encode(to encoder: any Encoder) throws {
                             var container = encoder.container(keyedBy: CodingKeys.self)
                             try container.encodeIfPresent(
-                                status,
+                                self.status,
                                 forKey: .status
                             )
                             try encoder.encodeAdditionalProperties(additionalProperties)
@@ -3236,7 +3245,7 @@ public enum Operations {
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
-                            status = try container.decodeIfPresent(
+                            self.status = try container.decodeIfPresent(
                                 OpenAPIRuntime.OpenAPIValueContainer.self,
                                 forKey: .status
                             )
@@ -3247,7 +3256,7 @@ public enum Operations {
                         public func encode(to encoder: any Encoder) throws {
                             var container = encoder.container(keyedBy: CodingKeys.self)
                             try container.encodeIfPresent(
-                                status,
+                                self.status,
                                 forKey: .status
                             )
                             try encoder.encodeAdditionalProperties(additionalProperties)
@@ -3270,19 +3279,19 @@ public enum Operations {
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
-                            value1 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value2 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                             [
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ],
                             type: Self.self,
                             codingPath: decoder.codingPath,
@@ -3290,8 +3299,8 @@ public enum Operations {
                         )
                     }
                     public func encode(to encoder: any Encoder) throws {
-                        try value1?.encode(to: encoder)
-                        try value2?.encode(to: encoder)
+                        try self.value1?.encode(to: encoder)
+                        try self.value2?.encode(to: encoder)
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-runs/{check_run_id}/PATCH/requestBody/content/application\/json`.
@@ -4495,7 +4504,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/check_name`.
                 public var check_name: Components.Parameters.check_hyphen_name?
                 /// - Remark: Generated from `#/components/parameters/status`.
-                @frozen public enum status: String, Codable, Hashable, Sendable {
+                @frozen public enum status: String, Codable, Hashable, Sendable, CaseIterable {
                     case queued = "queued"
                     case in_progress = "in_progress"
                     case completed = "completed"
@@ -4505,7 +4514,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/status`.
                 public var status: Components.Parameters.status?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum filterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case latest = "latest"
                     case all = "all"
                 }
@@ -4899,7 +4908,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/check_name`.
                 public var check_name: Components.Parameters.check_hyphen_name?
                 /// - Remark: Generated from `#/components/parameters/status`.
-                @frozen public enum status: String, Codable, Hashable, Sendable {
+                @frozen public enum status: String, Codable, Hashable, Sendable, CaseIterable {
                     case queued = "queued"
                     case in_progress = "in_progress"
                     case completed = "completed"
@@ -4909,7 +4918,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/status`.
                 public var status: Components.Parameters.status?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/commits/{ref}/check-runs/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum filterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case latest = "latest"
                     case all = "all"
                 }
