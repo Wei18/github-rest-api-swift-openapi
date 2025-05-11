@@ -1045,6 +1045,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1848,7 +1857,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -1866,7 +1875,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -1885,7 +1894,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -1903,7 +1912,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -2350,7 +2359,7 @@ public enum Components {
             /// The state of the milestone.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-milestone/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case open = "open"
                 case closed = "closed"
             }
@@ -2454,7 +2463,7 @@ public enum Components {
         /// How the author is associated with the repository.
         ///
         /// - Remark: Generated from `#/components/schemas/author-association`.
-        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable {
+        @frozen public enum author_hyphen_association: String, Codable, Hashable, Sendable, CaseIterable {
             case COLLABORATOR = "COLLABORATOR"
             case CONTRIBUTOR = "CONTRIBUTOR"
             case FIRST_TIMER = "FIRST_TIMER"
@@ -2978,7 +2987,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/diff-entry/filename`.
             public var filename: Swift.String
             /// - Remark: Generated from `#/components/schemas/diff-entry/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case added = "added"
                 case removed = "removed"
                 case modified = "modified"
@@ -3369,7 +3378,7 @@ public enum Components {
             /// The merge method to use.
             ///
             /// - Remark: Generated from `#/components/schemas/auto-merge/merge_method`.
-            @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case merge = "merge"
                 case squash = "squash"
                 case rebase = "rebase"
@@ -3993,7 +4002,7 @@ public enum Components {
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/start_side`.
-            @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case LEFT = "LEFT"
                 case RIGHT = "RIGHT"
             }
@@ -4012,7 +4021,7 @@ public enum Components {
             /// The side of the diff to which the comment applies. The side of the last line of the range for a multi-line comment
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/side`.
-            @frozen public enum sidePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum sidePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case LEFT = "LEFT"
                 case RIGHT = "RIGHT"
             }
@@ -4023,7 +4032,7 @@ public enum Components {
             /// The level at which the comment is targeted, can be a diff line or a file.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request-review-comment/subject_type`.
-            @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case line = "line"
                 case file = "file"
             }
@@ -4197,7 +4206,7 @@ public enum Components {
             /// State of this Pull Request. Either `open` or `closed`.
             ///
             /// - Remark: Generated from `#/components/schemas/pull-request/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case open = "open"
                 case closed = "closed"
             }
@@ -4962,7 +4971,7 @@ public enum Components {
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/side`.
-            @frozen public enum sidePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum sidePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case LEFT = "LEFT"
                 case RIGHT = "RIGHT"
             }
@@ -4973,7 +4982,7 @@ public enum Components {
             /// The side of the first line of the range for a multi-line comment.
             ///
             /// - Remark: Generated from `#/components/schemas/review-comment/start_side`.
-            @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case LEFT = "LEFT"
                 case RIGHT = "RIGHT"
             }
@@ -5140,7 +5149,7 @@ public enum Components {
         /// The property to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/sort`.
-        @frozen public enum sort: String, Codable, Hashable, Sendable {
+        @frozen public enum sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
         }
@@ -5281,6 +5290,34 @@ public enum Components {
                 self.body = body
             }
         }
+        public struct internal_error: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/internal_error/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.internal_error.Body
+            /// Creates a new `internal_error`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
         public struct service_unavailable: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/service_unavailable/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -5335,34 +5372,6 @@ public enum Components {
             /// - Parameters:
             ///   - body: Received HTTP response body
             public init(body: Components.Responses.service_unavailable.Body) {
-                self.body = body
-            }
-        }
-        public struct internal_error: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/internal_error/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/internal_error/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.internal_error.Body
-            /// Creates a new `internal_error`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.internal_error.Body) {
                 self.body = body
             }
         }
@@ -5453,7 +5462,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case closed = "closed"
                     case all = "all"
@@ -5471,7 +5480,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/base`.
                 public var base: Swift.String?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case popularity = "popularity"
@@ -5482,7 +5491,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/sort`.
                 public var sort: Operations.pulls_sol_list.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -5632,6 +5641,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/get(pulls/list)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6048,7 +6065,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case created_at = "created_at"
@@ -6056,7 +6073,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/sort`.
                 public var sort: Operations.pulls_sol_list_hyphen_review_hyphen_comments_hyphen_for_hyphen_repo.Input.Query.sortPayload?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -6664,6 +6681,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.pulls_sol_delete_hyphen_review_hyphen_comment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/delete(pulls/delete-review-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6880,6 +6905,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/get(pulls/get)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7096,7 +7129,7 @@ public enum Operations {
                     /// State of this Pull Request. Either `open` or `closed`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/PATCH/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case open = "open"
                         case closed = "closed"
                     }
@@ -7341,7 +7374,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort`.
-                @frozen public enum sort: String, Codable, Hashable, Sendable {
+                @frozen public enum sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -7350,7 +7383,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query/sort`.
                 public var sort: Components.Parameters.sort?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -7613,7 +7646,7 @@ public enum Operations {
                     /// In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/side`.
-                    @frozen public enum sidePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum sidePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case LEFT = "LEFT"
                         case RIGHT = "RIGHT"
                     }
@@ -7632,7 +7665,7 @@ public enum Operations {
                     /// **Required when using multi-line comments unless using `in_reply_to`**. The `start_side` is the starting side of the diff that the comment applies to. Can be `LEFT` or `RIGHT`. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation. See `side` in this table for additional context.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/start_side`.
-                    @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum start_sidePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case LEFT = "LEFT"
                         case RIGHT = "RIGHT"
                         case side = "side"
@@ -7648,7 +7681,7 @@ public enum Operations {
                     /// The level at which the comment is targeted.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/comments/POST/requestBody/json/subject_type`.
-                    @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case line = "line"
                         case file = "file"
                     }
@@ -8641,6 +8674,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output.NoContent)
+            /// Response if pull request has been merged
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -8668,6 +8709,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.pulls_sol_check_hyphen_if_hyphen_merged.Output.NotFound)
+            /// Not Found if pull request has not been merged
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/merge/get(pulls/check-if-merged)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -8763,7 +8812,7 @@ public enum Operations {
                     /// The merge method to use.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/merge/PUT/requestBody/json/merge_method`.
-                    @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum merge_methodPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case merge = "merge"
                         case squash = "squash"
                         case rebase = "rebase"
@@ -9370,19 +9419,19 @@ public enum Operations {
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
-                            value1 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value2 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                             [
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ],
                             type: Self.self,
                             codingPath: decoder.codingPath,
@@ -9390,8 +9439,8 @@ public enum Operations {
                         )
                     }
                     public func encode(to encoder: any Encoder) throws {
-                        try value1?.encode(to: encoder)
-                        try value2?.encode(to: encoder)
+                        try self.value1?.encode(to: encoder)
+                        try self.value2?.encode(to: encoder)
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/POST/requestBody/content/application\/json`.
@@ -9476,6 +9525,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.pulls_sol_request_hyphen_reviewers.Output.UnprocessableContent)
+            /// Unprocessable Entity if user is not a collaborator
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers/post(pulls/request-reviewers)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -10038,7 +10095,7 @@ public enum Operations {
                     /// The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/POST/requestBody/json/event`.
-                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case APPROVE = "APPROVE"
                         case REQUEST_CHANGES = "REQUEST_CHANGES"
                         case COMMENT = "COMMENT"
@@ -11201,7 +11258,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody/json/message`.
                     public var message: Swift.String
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody/json/event`.
-                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case DISMISS = "DISMISS"
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/dismissals/PUT/requestBody/json/event`.
@@ -11449,7 +11506,7 @@ public enum Operations {
                     /// The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. When you leave this blank, the API returns _HTTP 422 (Unrecognizable entity)_ and sets the review action state to `PENDING`, which means you will need to re-submit the pull request review using a review action.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/events/POST/requestBody/json/event`.
-                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum eventPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case APPROVE = "APPROVE"
                         case REQUEST_CHANGES = "REQUEST_CHANGES"
                         case COMMENT = "COMMENT"
